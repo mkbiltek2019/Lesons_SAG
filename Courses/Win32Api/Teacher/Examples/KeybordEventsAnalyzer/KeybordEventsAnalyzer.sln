@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KeybordEventsAnalyzer", "KeybordEventsAnalyzer\KeybordEventsAnalyzer.vcproj", "{9F41637D-B381-4748-BC02-D06C354987DD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PixelMoving", "PixelMoving\PixelMoving.vcproj", "{1D9D3394-6C4E-43EB-A36F-D7C930FDFEA4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F41637D-B381-4748-BC02-D06C354987DD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9F41637D-B381-4748-BC02-D06C354987DD}.Debug|Win32.Build.0 = Debug|Win32
+		{9F41637D-B381-4748-BC02-D06C354987DD}.Release|Win32.ActiveCfg = Release|Win32
+		{9F41637D-B381-4748-BC02-D06C354987DD}.Release|Win32.Build.0 = Release|Win32
+		{1D9D3394-6C4E-43EB-A36F-D7C930FDFEA4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1D9D3394-6C4E-43EB-A36F-D7C930FDFEA4}.Debug|Win32.Build.0 = Debug|Win32
+		{1D9D3394-6C4E-43EB-A36F-D7C930FDFEA4}.Release|Win32.ActiveCfg = Release|Win32
+		{1D9D3394-6C4E-43EB-A36F-D7C930FDFEA4}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
