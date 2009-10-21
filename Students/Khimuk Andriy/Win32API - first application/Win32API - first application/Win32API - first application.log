@@ -1,0 +1,27 @@
+﻿Build started 20.10.2009 11:45:43.
+     1>Project "E:\Study Rivne STEP\SVN\Students\Khimuk Andriy\Win32API - first application\Win32API - first application\Win32API - first application.vcxproj" on node 4 (build target(s)).
+       Skipping target "IsProjectFileNewer" because all output files are up-to-date with respect to the input files.
+     1>_PrepareForBuild:
+         Touching "Debug\lastbuild.timestamp".
+       ClCompile:
+         WinMain.cpp
+     1>FileTracker : warning : Attempt to load UI satellite dll from C:\WINDOWS\Microsoft.NET\Framework\v4.0.20506\1049\FileTrackerUI.dll failed.
+     1>FileTracker : warning : Attempt to load UI satellite dll from C:\WINDOWS\Microsoft.NET\Framework\v4.0.20506\1049\TrackerUI.dll failed.
+       ManifestResourceCompile:
+         Skipping task because its outputs are up-to-date.
+     1>FileTracker : warning : Attempt to load UI satellite dll from C:\WINDOWS\Microsoft.NET\Framework\v4.0.20506\1049\FileTrackerUI.dll failed.
+     1>FileTracker : warning : Attempt to load UI satellite dll from C:\WINDOWS\Microsoft.NET\Framework\v4.0.20506\1049\TrackerUI.dll failed.
+     1>FileTracker : warning : Attempt to load UI satellite dll from C:\WINDOWS\Microsoft.NET\Framework\v4.0.20506\1049\FileTrackerUI.dll failed.
+     1>FileTracker : warning : Attempt to load UI satellite dll from C:\WINDOWS\Microsoft.NET\Framework\v4.0.20506\1049\TrackerUI.dll failed.
+         Skipping task because its outputs are up-to-date.
+     1>FileTracker : warning : Attempt to load UI satellite dll from C:\WINDOWS\Microsoft.NET\Framework\v4.0.20506\1049\FileTrackerUI.dll failed.
+     1>FileTracker : warning : Attempt to load UI satellite dll from C:\WINDOWS\Microsoft.NET\Framework\v4.0.20506\1049\FileTrackerUI.dll failed.
+     1>FileTracker : warning : Attempt to load UI satellite dll from C:\WINDOWS\Microsoft.NET\Framework\v4.0.20506\1049\TrackerUI.dll failed.
+         Win32API - first application.vcxproj -> E:\Study Rivne STEP\SVN\Students\Khimuk Andriy\Win32API - first application\Debug\Win32API - first application.exe
+       _AfterBuild:
+         Touching "Debug\LastSuccessfulBuild.timestamp".
+     1>Done Building Project "E:\Study Rivne STEP\SVN\Students\Khimuk Andriy\Win32API - first application\Win32API - first application\Win32API - first application.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:03:15.34
