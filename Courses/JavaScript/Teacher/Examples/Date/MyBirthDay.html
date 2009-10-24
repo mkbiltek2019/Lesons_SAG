@@ -1,0 +1,45 @@
+<html>
+
+<head>
+
+	<title>My birth day</title>
+
+	<script>
+	
+		setInterval("refreshCurentTime()", 50);
+	
+		function getWeekDay() {
+			var days = ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота"];
+			var dateStr = document.getElementById("enteredDate").value;
+			var d = new Date(dateStr);
+			var weekDayElement = document.getElementById("weekDay");
+			weekDayElement.innerText = days[d.getDay()];
+		}
+		
+		function onKeyDown() {
+			if (event.keyCode == 13) {
+				getWeekDay();
+			}
+		}
+		
+		function refreshCurentTime() {
+			var currentTimeElement = document.getElementById("currentTime");
+			var d = new Date();
+			currentTimeElement.innerText = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() + ":" + d.getMilliseconds();
+		}
+		
+	</script>
+	
+</head>
+
+<body>
+
+	<input type="text" id="enteredDate" onkeydown='onKeyDown()' />
+	
+	<div id="weekDay"></div>
+	
+	<div id="currentTime"></div>
+	
+</body>
+
+<html>
