@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>(CSS) Каскадные таблицы стилей</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="CSS.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="logo">
+  <h1>Справочник по CSS</h1>
+  <h2>Каскадные таблици стилей</h2>
+</div>
+<div id="content">
+  <div id="sidebar">
+    <div id="menu">
+      <ul>
+        <li><a href="Page_1.html">Что такое CSS и как применить</a></li>
+        <li class="active"><a href="Page_2.html">Свойства шрифта</a></li>
+        <li><a href="Page_3.html">Цветовая гамма</a></li>
+        <li><a href="Page_4.html">Свойства текста</a></li>
+        <li><a href="Page_5.html">Свойства текста, содержащего иероглифы</a></li>
+        <li><a href="Page_6.html">Расположение элементов</a></li>
+        <li><a href="Page_7.html">Границы элементов</a></li>
+        <li><a href="Page_8.html">Классификации</a></li>
+        <li><a href="Page_9.html">Принтер</a></li>
+        <li><a href="Page_10.html">Псевдостили гиперссылок</a></li>
+        <li><a href="Page_11.html">Псевдостили текста</a></li>
+        <li><a href="Page_12.html">Правила</a></li>
+        <li><a href="Page_13.html">Единицы измерения CSS</a></li>
+      </ul>
+    </div>
+    
+  </div>
+  <div id="main">
+    <div id="welcome" class="post">
+      <h2 class="title"><a href="#">Свойства шрифта</a></h2>
+      <div class="story">
+        <div>
+          <dl>
+            <dt><a name="font" id="font"></a><strong>font</strong> - задает параметры шрифта элемента страницы. </dt>
+              <dd>Заменяет атрибуты <em>font-family, font-height, font-size, font-style,   font-variant</em> и <em>font-weight</em>. Значения этих атрибутов могут   располагаться в любом порядке. </dd>
+              <dt>font: {<em>font-family</em>} [{<em>font-height</em>}] [{<em>font-size</em>}]   [{<em>font-style</em>}] [{<em>font-variant</em>}] [{<em>font-weight</em>}]; </dt>
+              <dd>Значение по умолчанию - <em>normal normal normal medium normal &quot;Times New   Roman&quot;</em>. </dd>
+              <dt>Альтернативный формат: </dt>
+              <dt>font: <em>caption|icon|menu|message-box|small-caption|status-bar</em>; </dt>
+              <dd>В этом случае доступны шесть предопределенных значений, задающие один из   стандартных шрифтов, используемых в элементах интерфейса Windows: </dd>
+              <dd><U>font: <em>caption;</em></U> - шрифт заголовка кнопок, текстовых меток и   т.п.; </dd>
+              <dd><U>font: <em>icon;</em></U> - шрифт подписей под пиктограммами; </dd>
+              <dd><U>font: <em>menu;</em></U> - шрифт пунктов меню; </dd>
+              <dd><U>font: <em>message-box;</em></U> - шрифт содержимого стандартных   окон-предупреждений; </dd>
+              <dd><U>font: <em>small-caption;</em></U> - мелкий шрифт заголовков; </dd>
+              <dd><U>font: <em>status-bar;</em></U> - шрифт содержимого строки состояния. </dd>
+              <dt>Поддерживается IE начиная с 4.0 </dt>
+              <dt><a name="font_family" id="font_family"><strong>font-family</strong></a> - указывает имя шрифта или   шрифтового семейства, используемого в элементе страницы. </dt>
+              <dt>font-family: <em>{Имя шрифта}|serif|san-serif|cursive|fantasy|monospace</em>; </dt>
+              <dd>В качестве значения этого атрибута задается либо непосредственно имя нужного   шрифта, либо одно из пяти предопределенных значений, задающих имя шрифтового   семейства. Можно задавать одновременно несколько шрифтов, разделив их имена   запятыми; в этом случае Web-обозреватель сможет выбрать из них тот, который   установлен на компьютере клиента. Если имя шрифта содержит пробелы, его следует   взять в кавычки. </dd>
+              <dd>font-family: &quot;Times New Roman&quot;,sans-serif; </dd>
+              <dt>Поддерживается IE начиная с 3.02 для текстовых элементов и начиная с 4.0 для   нетекстовых. </dt>
+              <dt>Поддерживается NN начиная с 4.0 </dt>
+              <dt><a name="font_weight" id="font_weight"><strong>font-weight</strong></a> - задает &quot;жирность&quot; шрифта,   используемого в элементе страницы. </dt>
+              <dt>font-weight: <em>normal|bold|bolder|lighter|100..900</em>; </dt>
+              <dd>&quot;Жирность&quot; может быть задана тремя способами. Во-первых, предопределенными   значениями <U><em>normal</em></U> и <U><em>bold</em></U>, задающими обычное и жирное   начертание соответственно. Во-вторых, относительными значениями <U><em>bolder</em></U> и <U><em>lighter</em></U>, делающими шрифт элемента страницы   жирнее и светлее шрифта родителя. И, в-третьих, одним из девяти значений от 100   до 900; здесь нормальному начертанию соответствует значение 400, а жирному -   700. </dd>
+              <dd><U>font-weight: <em>normal;</em></U> - обычный; </dd>
+              <dd><U>font-weight: <em>lighter;</em></U> - светлее; </dd>
+              <dd><U>font-weight: <em>bold;</em></U> - жирный; </dd>
+              <dd><U>font-weight: <em>bolder;</em></U> - жирнее; </dd>
+              <dd><U>font-weight: <em>от 100 до 900</em></U> - любое значение, кратное 100   (200,700). </dd>
+              <dd>Значение по умолчанию <em>normal</em>. </dd>
+              <dt>Поддерживается IE начиная с 3.02 для текстовых элементов и начиная с 4.0 для   нетекстовых. При этом IE 4.0 и более старые версии распознавали только значения   normal и bold этого атрибута. </dt>
+              <dt>Поддерживается NN начиная с 4.0 </dt>
+              <dt><a name="font_size" id="font_size"><strong>font-size</strong></a> - задает размер шрифта, используемого   в элементе страницы. </dt>
+              <dt>font-size: <em>xx-small|x-small|small|medium|large|x-large|xx-large|larger|smaller|{Абсолютный   размер}|{Относительный размер}%</em>; </dt>
+              <dd>Возможно задание либо абсолютного размера шрифта в одной из поддерживаемых   CSS единиц измерения, либо как процент от размера шрифта родителя. Также   доступны девять определенных значений. </dd>
+              <dd><U>font-size: <em>200%</em></U> - относительная величина (проценты) </dd>
+              <dd><U>font-size: <em>150px</em></U> - размер в пикселях </dd>
+              <dd><U>font-size: <em>300pt</em></U> - размер в пунктах </dd>
+              <dd><U>font-size: <em>{xx-small,small,medium,large,x-large,xx-large}</em></U> -   задают один из семи размеров шрифтов, поддерживаемых HTML </dd>
+              <dd><U>font-size: <em>{smaller,larger}</em></U> - задают размер шрифта, который на   размер либо больше, либо меньше родительского шрифта соответственно </dd>
+              <dt>Поддерживается IE начиная с 3.02 для текстовых элементов и начиная с 4.0 для   нетекстовых. </dt>
+              <dt>Поддерживается NN начиная с 4.0 </dt>
+              <dt><a name="font_style" id="font_style"><strong>font-style</strong></a> - задает начертание шрифта. </dt>
+              <dt>font-style: <em>normal|italic|oblique</em>; </dt>
+              <dd><U>font-style: <em>normal;</em></U> - задает обычный вид шрифта (используется   по умолчанию); </dd>
+              <dd><U>font-style: <em>italic</em></U> - курсивное начертание; </dd>
+              <dd><U>font-style: <em>obligue</em></U> - наклонное начертание (легкий наклон   нормального шрифта) (IE отображает как курсив, а NN не поддерживает). </dd>
+              <dt>Поддерживается IE начиная с 3.02 для текстовых элементов и начиная с 4.0 для   нетекстовых. </dt>
+              <dt>Поддерживается NN начиная с 4.0 </dt>
+              <dt><a name="font_variant" id="font_variant"><strong>font-variant</strong></a> - задает вид малых букв шрифта,   используемого в элементе страницы. </dt>
+              <dd>font-variant: <em>normal|small-caps</em>; </dd>
+              <dd>font-variant: <em><strong>normal;</strong></em> - задает обычный вид малых букв шрифта   (используется по умолчанию); </dd>
+              <dd>font-variant: <em><strong>small-caps;</strong></em> - делает их такими же, как большие   буквы, только меньшего размера (капитель). </dd>
+              <dt>Поддерживается IE начиная с 4.0 </dt>
+            <dt>&nbsp;</dt>
+            </dl>
+        </div>
+        <p></p>
+      </div>
+    </div>
+    <div id="example" class="post">
+      <h2 class="title"><a href="index.html">Пред...</a>|||<a href="Page_2.html">Начало страницы</a>|||<a href="Page_3.html">След...</a></h2>
+      
+    </div>
+  </div>
+  <div id="extra" style="clear: both;"></div>
+</div>
+<div id="footer">
+  <p id="legal">Copyright &copy; 2009 All Rights Reserved. Designed by 4rSt.</p>
+  <p id="links"><a href=index.html>Home</a> | <a href=mailto:4rasta@gmail.com>Webmaster</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>(CSS) Каскадные таблицы стилей</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="CSS.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="logo">
+  <h1>Справочник по CSS</h1>
+  <h2>Каскадные таблици стилей</h2>
+</div>
+<div id="content">
+  <div id="sidebar">
+    <div id="menu">
+      <ul>
+        <li><a href="Page_1.html">Что такое CSS и как применить</a></li>
+        <li><a href="Page_2.html">Свойства шрифта</a></li>
+        <li><a href="Page_3.html">Цветовая гамма</a></li>
+        <li><a href="Page_4.html">Свойства текста</a></li>
+        <li><a href="Page_5.html">Свойства текста, содержащего иероглифы</a></li>
+        <li><a href="Page_6.html">Расположение элементов</a></li>
+        <li><a href="Page_7.html">Границы элементов</a></li>
+        <li class="active"><a href="Page_8.html">Классификации</a></li>
+        <li><a href="Page_9.html">Принтер</a></li>
+        <li><a href="Page_10.html">Псевдостили гиперссылок</a></li>
+        <li><a href="Page_11.html">Псевдостили текста</a></li>
+        <li><a href="Page_12.html">Правила</a></li>
+        <li><a href="Page_13.html">Единицы измерения CSS</a></li>
+      </ul>
+    </div>
+    
+  </div>
+  <div id="main">
+    <div id="welcome" class="post">
+      <h2 class="title"><a href="#">Классификации</a></h2>
+      <div class="story">
+        <div>
+          <dl><dt><a name="display" id="display"></a><strong>display</strong> - определяет, как будет отображаться   элемент. </dt>
+            <dt>display: <em>inline|block|none|inline-block|list-item|table-header-group|table-footer-group</em>; </dt>
+            <dd><U>display: <em>inline;</em></U> - (значение по умолчанию) заставляет элемент   страницы вести себя как встроенный. При этом он располагается внутри текста, его   позиция и размеры рассчитываются согласно позиции и размерам текста. Пример   встроенного элемента - &lt;I&gt;; </dd>
+            <dd><U>display: <em>block;</em></U> - делает элемент страницы блочным. При этом   его можно свободно позиционировать. Пример блочного элемента - &lt;DIV&gt;; </dd>
+            <dd><U>display: <em>none;</em></U> - делает элемент страницы невидимым. При этом   страница отображается так, будто этого элемента вообще не существует; </dd>
+            <dd><U>display: <em>inline-block;</em></U> - аналогично <em>inline</em>, но   содержимое страницы ведет себя как блочный элемент (не поддерживается NN); </dd>
+            <dd><U>display: <em>list-item;</em></U> - аналогично <em>block</em>, но при этом   элемент страницы считается позицией списка (ставится маркер); </dd>
+            <dd><U>display: <em>table-header-group;</em></U> - заставляет элемент страницы   отображаться после верхнего заголовка таблицы и перед всеми строками данных   (аналогично тегу &lt;THEAD&gt;) (не поддерживается NN); </dd>
+            <dd><U>display: <em>table-footer-group;</em></U> - заставляет элемент страницы   отображаться перед основанием таблицы и после всех строк данных (аналогично тегу   &lt;TFOOT&gt;) (не поддерживается NN); </dd>
+            <dt>Поддерживается IE и NN начиная с 4.0 </dt>
+            <dt><a name="position" id="position"></a><strong>position</strong> - устанавливает, каким образом   вычисляется положение элемента в плоскости экрана. </dt>
+            <dt>position: <em>static|absolute|relative</em>; </dt>
+            <dd><U>position: <em>static;</em></U> - (значение по умолчанию) задает статическое   позиционирование, при котором элемент страницы отображается внутри общего   &quot;потока&quot; текста, т.е. не свободно. Значения атрибутов <em>bottom, left, right</em> и <em>top</em> при этом не принимаются Web-обозревателем во внимание; </dd>
+            <dd><U>position: <em>absolute;</em></U> - задает абсолютное свободное   позиционирование. Значения атрибутов <em>bottom, left, right</em> и <em>top</em> при   этом задают абсолютные координаты элемента страницы относительно родителя; </dd>
+            <dd><U>position: <em>relative;</em></U> - задает относительное свободное   позиционирование. Значения атрибутов <em>bottom, left, right</em> и <em>top</em> при   этом задают смещение координат элемента страницы от точки, в которой он был   отображен, будь атрибут <em>position</em> установлен в <em>static</em>. </dd>
+            <dt>Поддерживается IE и NN начиная с 4.0 </dt>
+            <dt><a name="z_index" id="z_index"></a><strong>z-index</strong> - задает порядок перекрытия свободно   позиционированными объектами друг друга. </dt>
+            <dt>z-index: <em>auto|{Порядок перекрытия}|</em>; </dt>
+            <dd>Порядок перекрытия задается положительными или отрицательным целым числом.   При этом элементы с большим значением этого атрибута будут перекрывать элементы   с меньшим значением. Предопределенное значение <U><em>auto</em></U> задает порядок   перекрытия по умолчанию, когда элементы, определенные в HTML-коде раньше,   перекрываются заданными позже. </dd>
+            <dd>Значение по умолчанию <em>auto</em>. </dd>
+            <dt>Поддерживается IE и NN начиная с 4.0 </dt>
+            <dt><a name="visibility" id="visibility"></a><strong>visibility</strong> - позволяет элементу быть видимым   или невидимым на странице. </dt>
+            <dt>visibility: <em>inherit|visible|hidden</em>; </dt>
+            <dd><U>visibility: <em>inherit</em></U> - (значение по умолчанию) элемент виден,   если его родительский элемент является видимым (наследует видимость); </dd>
+            <dd><U>visibility: <em>visible</em></U> - делает элемент страницы видимым; </dd>
+            <dd><U>visibility: <em>hidden</em></U> - невидимым. </dd>
+            <dt>Поддерживается IE и NN начиная с 4.0 </dt>
+            <dt><a name="clip" id="clip"></a><strong>clip</strong> - задает прямоугольный фрагмент элемента   страницы, который будет видим. </dt>
+            <dt>clip: <em>auto|rect({Верхняя граница} {Правая граница} {Нижняя граница}   {Левая граница})</em>; </dt>
+            <dd>Предопределенное значение <U><em>auto</em></U> задает видимость всего элемента   страницы. Оно же является значением по умолчанию. Для того чтобы ограничить   видимую часть элемента страницы прямоугольным фрагментом, задаются четыре   координаты границ этого прямоугольника, разделенные пробелами. </dd>
+            <dt>Поддерживается IE и NN начиная с 4.0 </dt>
+            <dt><a name="white_space" id="white_space"></a><strong>white-space</strong> - задает, будут ли строки текста,   содержащегося в элементе страницы, автоматически переноситься, если они не   помещаются в нем по ширине. </dt>
+            <dt>white-space: <em>normal|nowrap|pre</em>; </dt>
+            <dd><U>white-space: <em>normal;</em></U> - (значение по умолчанию) включает   автоматический перенос длинных строк; </dd>
+            <dd><U>white-space: <em>nowrap;</em></U> - отключает автоматический перенос строк.   Чтобы &quot;разорвать&quot; строку вручную, вставьте в нужном месте тег &lt;BR&gt; (NN не   поддерживается); </dd>
+            <dd><U>white-spice: <em>pre;</em></U> - не поддерживается; </dd>
+            <dt>Поддерживается IE начиная с 5.5 и NN начиная с 4.0 </dt>
+            <dt><a name="cursor" id="cursor"></a><strong>cursor</strong> - определяет форму курсора мыши, которую он   принимает при наведении на элемент страницы. </dt>
+            <dt>cursor: <em>auto|crosshair|default|hand|move|*-resize|text|wait|help</em>; </dt>
+            <dd>cursor: <em><strong>auto</strong></em> - (значение по умолчанию)   заставляет Web-обозреватель самому определять нужную форму курсора мыши; </dd>
+            <dd>cursor: <em><strong>crosshair</strong></em> - крестообразный   курсор; </dd>
+            <dd>cursor: <em><strong>default</strong></em> - курсор по умолчанию,   обычно стрелка; </dd>
+            <dd>cursor: <em><strong>hand</strong></em> - &quot;указывающий перст&quot;; </dd>
+            <dd>cursor: <em><strong>move</strong></em> - стрелка, указывающая &quot;на   все четыре стороны&quot;; </dd>
+            <dd>cursor: <em><strong>e-resize</strong></em> </dd>
+            <dd>cursor: <em><strong>ne-resize</strong></em> </dd>
+            <dd>cursor: <em><strong>nw-resize</strong></em> </dd>
+            <dd>cursor: <em><strong>n-resize</strong></em> </dd>
+            <dd>cursor: <em><strong>se-resize</strong></em> </dd>
+            <dd>cursor: <em><strong>sw-resize</strong></em> </dd>
+            <dd>cursor: <em><strong>s-resize</strong></em> </dd>
+            <dd>cursor: <em><strong>w-resize</strong></em> </dd>
+            <dd>cursor: <em><strong>text</strong></em> - текстовой курсор; </dd>
+            <dd>cursor: <em><strong>wait</strong></em> - &quot;песочные часы&quot;, курсор   ожидания; </dd>
+            <dd>cursor: <em><strong>help</strong></em> - стрелка с вопросительным   знаком. </dd>
+            <dt>Поддерживается IE начиная с 4.0 </dt>
+            <dt><a name="list_style" id="list_style"></a><strong>list-style</strong> - задает параметры маркера или   номера позиции списка. </dt>
+            <dt>Заменяет атрибуты <em>list-style-image, list-style-position</em> и <em>list-style-type</em>. </dt>
+            <dt>Значения этих атрибутов могут располагаться в любом порядке. </dt>
+            <dd>list-style: <em>[{list-style-image}] [{list-style-position}]   [{list-style-type}]</em>; </dd>
+            <dd>Значение по умолчанию <em>disk outside none</em>. </dd>
+            <dt>Поддерживается IE начиная с 4.0 </dt>
+            <dt><a name="list_style_image" id="list_style_image"></a><strong>list-style-image</strong> - задает графическое   изображение, отображаемое в качестве маркера позиции списка. Имеет приоритет над   атрибутом <em>list-style-type</em>. </dt>
+            <dd>list-style-image: <em>none|url({Интернет-адрес файла изображения})</em>; </dd>
+            <dd>Если задано предопределенное значение <U><em>none</em></U>, то стиль маркера   берется из установок атрибута <em>list-style-type</em>, если он задан, или   отображается маркер по умолчанию. Если задан интернет-адрес файла изображения,   то оно отображается в качестве маркера, перекрывая установки атрибута <em>list-style-type</em>. </dd>
+            <dd>Значение по умолчанию <em>none</em>. </dd>
+            <dt>Поддерживается IE начиная с 4.0 </dt>
+            <dt><a name="list_style_position" id="list_style_position"></a><strong>list-style-position</strong> - задает   местонахождение маркера позиции списка: в тексте позиции или вне его. </dt>
+            <dd>list-style-position: <em>outside|inside</em>; </dd>
+            <dd>Доступны два значения. Значение <em><U>outside</U></em> (по умолчанию) задает   отображение маркера позиции списка вне текста позиции. Значение же <U><em>inside</em></U> заставляет Web-обозреватель отобразить маркер позиции в ее   тексте в качестве первого символа. </dd>
+            <dt>Поддерживается IE начиная с 4.0 </dt>
+            <dt><a name="list_style_type" id="list_style_type"></a><strong>list-style-type</strong> - задает тип маркера или   номер позиции списка. </dt>
+            <dd>list-style-type: <em>disc|circle|square|decimal|lower|roman|upper-roman|lower-alpha|upper-alpha|none</em>; </dd>
+            <dd><U>list-style-type: <em>disc;</em></U> - (значение по умолчанию) отображает   сплошной кружок; </dd>
+            <dd><U>list-style-type: <em>circle;</em></U> - окружность; </dd>
+            <dd><U>list-style-type: <em>square;</em></U> - сплошной квадрат; </dd>
+            <dd><U>list-style-type: <em>decimal;</em></U> - нумерует позиции арабскими   цифрами; </dd>
+            <dd><U>list-style-type: <em>lower-roman;</em></U> - малыми римскими; </dd>
+            <dd><U>list-style-type: <em>upper-roman;</em></U> - большими римскими; </dd>
+            <dd><U>list-style-type: <em>lower-alpha;</em></U> - помечает позиции малыми   латинскими буквами; </dd>
+            <dd><U>list-style-type: <em>upper-alpha;</em></U> - большими латинскими; </dd>
+            <dd><U>list-style-type: <em>none;</em></U> - вообще убирает маркер или нумерацию. </dd>
+            <dt>Поддерживается IE и NN начиная с 4.0</dt>
+          </dl>
+        </div>
+        
+      </div>
+    </div>
+    <div id="example" class="post">
+      <h2 class="title"><a href="Page_7.html">Пред...</a>|||<a href="Page_8.html">Начало страницы</a>|||<a href="Page_9.html">След...</a></h2>
+      
+    </div>
+  </div>
+  <div id="extra" style="clear: both;"></div>
+</div>
+<div id="footer">
+  <p id="legal">Copyright &copy; 2009 All Rights Reserved. Designed by 4rSt.</p>
+  <p id="links"><a href=index.html>Home</a> | <a href=mailto:4rasta@gmail.com>Webmaster</a></p>
+</div>
+</body>
+</html>
