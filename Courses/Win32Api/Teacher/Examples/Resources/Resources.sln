@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UAAPP", "UAAPP\UAAPP.vcproj", "{006EC240-A35C-4319-B442-2E4B31F5B18D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{006EC240-A35C-4319-B442-2E4B31F5B18D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{006EC240-A35C-4319-B442-2E4B31F5B18D}.Debug|Win32.Build.0 = Debug|Win32
+		{006EC240-A35C-4319-B442-2E4B31F5B18D}.Release|Win32.ActiveCfg = Release|Win32
+		{006EC240-A35C-4319-B442-2E4B31F5B18D}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
