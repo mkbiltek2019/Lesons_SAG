@@ -1,0 +1,7 @@
+<woman>
+<firstname> Маша </firstname>
+<secodname> Потьомкіна </secodname>
+<thirdname> Олесандрівна </thirdname>
+<birthday> 03.04.1983 </birthday>
+<gender> Ж</gender>
+</woman>

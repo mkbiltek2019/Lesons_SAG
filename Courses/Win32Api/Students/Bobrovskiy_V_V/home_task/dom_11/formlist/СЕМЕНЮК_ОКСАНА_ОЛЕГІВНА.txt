@@ -1,0 +1,8 @@
+<woman>
+<firstname> Оксана</firstname>
+<secodname> Семенюк</secodname>
+<thirdname> Олегівна</thirdname>
+<birthday> 03.12.1981 </birthday>
+<gender>Ж </gender>
+</woman>
+	
