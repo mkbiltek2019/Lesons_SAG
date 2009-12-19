@@ -5,6 +5,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleThreadMatrixSum", "Si
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleThreadWinMatrixSum", "SimpleThreadWinMatrixSum\SimpleThreadWinMatrixSum.vcproj", "{39861E97-A6AC-4CC7-BC1F-89AD91E9108C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MultiThreadWinMatrixSum", "MultiThreadWinMatrixSum\MultiThreadWinMatrixSum.vcproj", "{117D8EA9-3DCD-4BAB-A13E-CF154829B81E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -19,6 +21,10 @@ Global
 		{39861E97-A6AC-4CC7-BC1F-89AD91E9108C}.Debug|Win32.Build.0 = Debug|Win32
 		{39861E97-A6AC-4CC7-BC1F-89AD91E9108C}.Release|Win32.ActiveCfg = Release|Win32
 		{39861E97-A6AC-4CC7-BC1F-89AD91E9108C}.Release|Win32.Build.0 = Release|Win32
+		{117D8EA9-3DCD-4BAB-A13E-CF154829B81E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{117D8EA9-3DCD-4BAB-A13E-CF154829B81E}.Debug|Win32.Build.0 = Debug|Win32
+		{117D8EA9-3DCD-4BAB-A13E-CF154829B81E}.Release|Win32.ActiveCfg = Release|Win32
+		{117D8EA9-3DCD-4BAB-A13E-CF154829B81E}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
