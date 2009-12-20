@@ -57,6 +57,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
+				AdditionalDependencies="odbc32.lib odbccp32.lib winmm.lib"
 				GenerateDebugInformation="true"
 				TargetMachine="1"
 			/>

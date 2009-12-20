@@ -55,6 +55,14 @@ END
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
 IDI_ICON1               ICON                    "icon1.ico"
+ 
+/////////////////////////////////////////////////////////////////////////////
+//
+// WAVE
+//
+
+MY_SOUND                 WAVE    DISCARDABLE   "4.wav"
+
 #endif    // русский resources
 /////////////////////////////////////////////////////////////////////////////
 
