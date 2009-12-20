@@ -69,7 +69,7 @@ IDB_BITMAP2             BITMAP                  "UkraineFlag.bmp"
 // DISCARDABLE
 //
 
-WAVE                    DISCARDABLE             "Himn.wav"
+MY_SOUND                 WAVE     DISCARDABLE   "Himn.wav"
 
 /////////////////////////////////////////////////////////////////////////////
 //

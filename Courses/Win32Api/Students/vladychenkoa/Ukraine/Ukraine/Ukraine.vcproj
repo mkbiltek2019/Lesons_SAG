@@ -57,6 +57,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
+				AdditionalDependencies="winmm.lib"
 				AdditionalLibraryDirectories=""
 				GenerateDebugInformation="true"
 				TargetMachine="1"
@@ -191,10 +192,6 @@
 			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
 			>
 			<File
-				RelativePath=".\Himn.wav"
-				>
-			</File>
-			<File
 				RelativePath=".\icon1.ico"
 				>
 			</File>
@@ -208,10 +205,6 @@
 			</File>
 			<File
 				RelativePath=".\UkraineFlag.bmp"
-				>
-			</File>
-			<File
-				RelativePath=".\wav1.bin"
 				>
 			</File>
 		</Filter>
