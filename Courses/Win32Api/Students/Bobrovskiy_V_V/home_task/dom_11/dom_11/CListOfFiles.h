@@ -1,7 +1,7 @@
 #ifndef _C_MY_LISTOF_FILES_
 #define _C_MY_LISTOF_FILES_
 //-------------------------
-const int len = 40;
+const int len = 60;
 #include <stdio.h>
 #include <io.h>       
 #include <string.h>
@@ -22,7 +22,7 @@ struct inputedData{
 	 //----
 	 TCHAR Gender[len];
 	 TCHAR Nationality[len];
-	 //TCHAR Comment[len*10]; 
+	 TCHAR PhotoPath[len]; 
 	//------
 	// TCHAR FileName[len*10];	
 };
@@ -41,7 +41,7 @@ public:
 	void createListOfFiles(std::string dirName);
 	//------
 	void writedatatofile(inStrucData& datastruct);
-	const inStrucData& readdatafromfile(std::string fileName);
+	inputedData& readdatafromfile(std::string fileName);
 	//------
 };
 typedef CListOfFiles* fileList;

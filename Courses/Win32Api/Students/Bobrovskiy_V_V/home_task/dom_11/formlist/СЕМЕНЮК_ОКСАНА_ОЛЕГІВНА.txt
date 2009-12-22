@@ -1,8 +1,9 @@
-<woman>
-<firstname> Оксана</firstname>
-<secodname> Семенюк</secodname>
-<thirdname> Олегівна</thirdname>
-<birthday> 03.12.1981 </birthday>
-<gender>Ж </gender>
-</woman>
+Оксана
+Семенюк
+Олегівна
+Ж 
+23-23-23
+українка
+одружена
+м. Рівне
 	
