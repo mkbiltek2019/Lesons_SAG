@@ -1,0 +1,10 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{059D6162-CD51-11D0-AE1F-00A0C90FFFC3}") = "keygen", "keygen.dsp", "{96315DAC-D171-4489-910F-66D15AD27AD7}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
