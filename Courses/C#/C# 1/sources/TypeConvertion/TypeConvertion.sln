@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RightImplicitTypeConvertion", "TypeConvertion\RightImplicitTypeConvertion.csproj", "{6CE02EF2-407F-4117-ABD8-A34E973A38B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WrongImplicitTypeConversion", "WringImplicitTypeConversion\WrongImplicitTypeConversion.csproj", "{AFB35E13-5602-4C72-BE52-7FBF5C7615C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExplicitCponvertion", "ExplicitCponvertion\ExplicitCponvertion.csproj", "{66D3AD97-5935-4641-8A52-04C1E2017AAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConversionSample", "ConversionSample\ConversionSample.csproj", "{F4ED9170-DC3B-4037-AFCC-4D03423E2448}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CE02EF2-407F-4117-ABD8-A34E973A38B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CE02EF2-407F-4117-ABD8-A34E973A38B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CE02EF2-407F-4117-ABD8-A34E973A38B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CE02EF2-407F-4117-ABD8-A34E973A38B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFB35E13-5602-4C72-BE52-7FBF5C7615C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFB35E13-5602-4C72-BE52-7FBF5C7615C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFB35E13-5602-4C72-BE52-7FBF5C7615C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFB35E13-5602-4C72-BE52-7FBF5C7615C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66D3AD97-5935-4641-8A52-04C1E2017AAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66D3AD97-5935-4641-8A52-04C1E2017AAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66D3AD97-5935-4641-8A52-04C1E2017AAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66D3AD97-5935-4641-8A52-04C1E2017AAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4ED9170-DC3B-4037-AFCC-4D03423E2448}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4ED9170-DC3B-4037-AFCC-4D03423E2448}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4ED9170-DC3B-4037-AFCC-4D03423E2448}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4ED9170-DC3B-4037-AFCC-4D03423E2448}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
