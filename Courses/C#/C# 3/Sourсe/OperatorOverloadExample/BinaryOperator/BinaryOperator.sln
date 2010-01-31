@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryOperator", "BinaryOperator\BinaryOperator.csproj", "{E4685F03-B2D0-408E-B1BF-A75ECB12F51F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4685F03-B2D0-408E-B1BF-A75ECB12F51F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4685F03-B2D0-408E-B1BF-A75ECB12F51F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4685F03-B2D0-408E-B1BF-A75ECB12F51F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4685F03-B2D0-408E-B1BF-A75ECB12F51F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Incrementer1", "Incrementer1\Incrementer1.csproj", "{C119F7CD-F635-4C12-AA08-031821AC5A2F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C119F7CD-F635-4C12-AA08-031821AC5A2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C119F7CD-F635-4C12-AA08-031821AC5A2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C119F7CD-F635-4C12-AA08-031821AC5A2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C119F7CD-F635-4C12-AA08-031821AC5A2F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
