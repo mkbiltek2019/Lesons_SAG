@@ -1,0 +1,5 @@
+D:\Документи\КА ШАГ\REPOSITORIY\C#\Dom\DrawFigure\obj\Debug\ResolveAssemblyReference.cache
+D:\Документи\КА ШАГ\REPOSITORIY\C#\Dom\DrawFigure\bin\Debug\DrawFigure.exe
+D:\Документи\КА ШАГ\REPOSITORIY\C#\Dom\DrawFigure\bin\Debug\DrawFigure.pdb
+D:\Документи\КА ШАГ\REPOSITORIY\C#\Dom\DrawFigure\obj\Debug\DrawFigure.exe
+D:\Документи\КА ШАГ\REPOSITORIY\C#\Dom\DrawFigure\obj\Debug\DrawFigure.pdb
