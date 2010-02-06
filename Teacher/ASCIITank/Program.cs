@@ -9,10 +9,7 @@ namespace ASCIITank
     {
         static void Main(string[] args)
         {
-            Tank tank = new Tank();
-            int currentX = 0;
-            int currentY = 10;
-            tank.DrawForward(currentX, currentY);
+            ASCIITank tank = new ASCIITank();
 
             bool exit = false;
             do
@@ -22,12 +19,10 @@ namespace ASCIITank
                 switch (keyInfo.Key)
                 {
                     case ConsoleKey.LeftArrow :
-                        currentX--;
-                        tank.DrawBackward(currentX, currentY);
+                        tank.Move(MoveDirection.Backward);
                         break;
                     case ConsoleKey.RightArrow :
-                        currentX++;
-                        tank.DrawForward(currentX, currentY);
+                        tank.Move(MoveDirection.Forward);
                         break;
                     case ConsoleKey.Escape :
                         exit = true;
@@ -38,39 +33,126 @@ namespace ASCIITank
         }
     }
 
-    public class Tank
+    public enum MoveDirection
     {
-        private string[] tankForward = new string[] {
+        Forward,
+        Backward
+    }
+
+    public interface IDrawable
+    {
+        int Top
+        {
+            get;
+        }
+        int Left
+        {
+            get;
+        }
+
+        void Draw();
+    }
+
+    public abstract class MilitariMachine
+    {
+        public MoveDirection CurentDirection
+        {
+            get;
+            set;
+        }
+
+        public virtual void Move()
+        {
+            Move(CurentDirection);
+        }
+
+        public abstract void Move(MoveDirection direction);
+        public abstract void Fire();
+    }
+
+    public abstract class Tank : MilitariMachine
+    {
+        public override void Move(MoveDirection direction) { }
+
+        public override void Fire() { }
+    }
+
+    public class ASCIITank : Tank, IDrawable
+    {
+        private string[] tankForwardImageTextLines = new string[] {
             @" |            ",
             @" |/----\      ",
             @" /  453 \====(",
             @" ========     ",             
             @"(0o0o0o0o0)   "};
-        private string[] tankBackward = new string[] {
+        private string[] tankBackwardImageTextLines = new string[] {
             @"            |  ",
             @"      /----\|  ",
             @")====/  453 \  ",
             @"     ========  ",             
             @"    (0o0o0o0o0)"};
 
-        public void DrawForward(int x, int y)
+        public ASCIITank()
         {
-            for (int currentLine = 0; currentLine < tankForward.Length; currentLine++)
+            Top = 0;
+            Left = 0;
+            CurentDirection = MoveDirection.Forward;
+
+            Draw();
+        }
+
+        public override void Move(MoveDirection direction)
+        {
+            switch (direction)
             {
-                Console.CursorLeft = x;
-                Console.CursorTop = y + currentLine;
-                Console.WriteLine(tankForward[currentLine]);
+                case MoveDirection.Backward:
+                    Left--;
+                    break;
+                case MoveDirection.Forward:
+                    Left++;
+                    break;
+            }
+
+            CurentDirection = direction;
+            Draw();
+        }
+
+        #region IDrawable Members
+
+        public int Top
+        {
+            get;
+            set;
+        }
+
+        public int Left
+        {
+            get;
+            set;
+        }
+
+        public void Draw()
+        {
+            string[] tankTextImageLines = new string[] { };
+            switch (CurentDirection)
+	        {
+                case MoveDirection.Forward:
+                    tankTextImageLines = tankForwardImageTextLines;
+                    break;
+                case MoveDirection.Backward:
+                    tankTextImageLines = tankBackwardImageTextLines;
+                    break;
+	        }
+
+            for (int currentLine = 0; currentLine < tankTextImageLines.Length; currentLine++)
+            {
+                Console.CursorLeft = Left;
+                Console.CursorTop = Top + currentLine;
+                Console.WriteLine(tankTextImageLines[currentLine]);
             }
         }
 
-        public void DrawBackward(int x, int y)
-        {
-            for (int currentLine = 0; currentLine < tankForward.Length; currentLine++)
-            {
-                Console.CursorLeft = x;
-                Console.CursorTop = y + currentLine;
-                Console.WriteLine(tankBackward[currentLine]);
-            }
-        }
+        #endregion
     }
+
 }
