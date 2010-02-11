@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+<Cars>
+<Car Image="MyCar.jpeg">
+<Manufactured>La Hispano Suiza de Automovils</Manufactured>
+<Model>Alfonso</Model>
+<Year>1912</Year>
+<Color>Black</Color>
+<Speed>130</Speed>
+</Car>
+</Cars>
+
