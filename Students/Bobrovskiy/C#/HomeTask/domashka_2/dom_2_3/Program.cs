@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using DreamAcademy;
+
 /* створити ієрархію
  *          Людина
  *  Учень                   Співробітник навчального закладу
@@ -21,7 +23,7 @@ namespace dom_2_3
         static void Main(string[] args)
         {
              Application myApp = new Application();
-             myApp.run();           
+             myApp.Run();           
         }
     }
 }

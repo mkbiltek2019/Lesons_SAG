@@ -4,8 +4,149 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
-namespace dom_2
+namespace TankDrawer
 {
+    public static class ConsoleWrapper
+    {
+        public enum Color
+        {
+            Black = 0, DarkBlue = 1, DarkGreen = 2,
+            DarkCyan = 3, DarkRed = 4, DarkMagenta = 5,
+            DarkYellow = 6, Gray = 7, DarkGray = 8,
+            Blue = 9, Green = 10, Cyan = 11,
+            Red = 12, Magenta = 13, Yellow = 14,
+            White = 15,
+        };
+
+        private static int prevTop;
+        private static int prevLeft;
+
+        public static void SetCursorPosition(int left, int top)
+        {
+            prevTop = top;
+            prevLeft = left;
+            SetCursorTop(top);
+            SetCursorLeft(left);
+        }
+
+        public static void SetCursorTop(int top)
+        {
+            System.Console.CursorTop = top;
+        }
+
+        public static void HideCursor()
+        {
+            System.Console.CursorVisible = false;
+        }
+
+        public static void SetCursorLeft(int left)
+        {
+            System.Console.CursorLeft = left;
+        }
+
+        public static int GetCursorLeft()
+        {
+            return System.Console.CursorLeft;
+        }
+
+        public static int GetCursorTop()
+        {
+            return System.Console.CursorTop;
+        }
+
+        public static void RestoreCursorPosition()
+        {
+            System.Console.CursorLeft = prevLeft;
+            System.Console.CursorTop = prevTop;
+        }
+
+        public static void RestoreCursorLeft()
+        {
+            System.Console.CursorLeft = prevLeft;
+        }
+
+        public static void RestoreCursorTop()
+        {
+            System.Console.CursorTop = prevTop;
+        }
+
+        public static void ClearConsole()
+        {
+            System.Console.Clear();
+        }
+
+        public static void WriteMenuLine(string formatedString, int value)
+        {
+            System.Console.WriteLine(formatedString, value);
+        }
+
+        public static void WriteMenuLine(string formatedString, int value1, int value2)
+        {
+            System.Console.WriteLine(formatedString, value1, value2);
+        }
+
+        public static void WriteMenuLine(string formatedString, string someText)
+        {
+            System.Console.WriteLine(formatedString, someText);
+        }
+
+        public static void WriteLine(string text)
+        {
+            System.Console.WriteLine(text);
+        }
+
+        public static void Write(string text)
+        {
+            System.Console.Write(text);
+        }
+
+        public static void Write(char ch)
+        {
+            System.Console.Write(ch);
+        }
+
+        public static void Write(string formatedString, int value1, int value2, int value3)
+        {
+            System.Console.Write(formatedString, value1, value2, value3);
+        }
+
+        public static void Write(int value)
+        {
+            System.Console.Write("{0}", value);
+        }
+
+        public static void ReadKey()
+        {
+            System.Console.ReadKey();
+        }
+
+        public static ConsoleKeyInfo ReadKey(bool value)
+        {
+            return System.Console.ReadKey(value);
+        }
+
+        public static string ReadLine()
+        {
+            return System.Console.ReadLine();
+        }
+
+        public static void SetColor(ConsoleWrapper.Color color)
+        {
+            SetTextColor(color);
+            SetBackgroundColor(color);
+        }
+
+        public static void SetTextColor(ConsoleWrapper.Color color)
+        {
+            System.Console.ForegroundColor = (ConsoleColor)color;
+        }
+
+        public static void SetBackgroundColor(ConsoleWrapper.Color color)
+        {
+            System.Console.BackgroundColor = (ConsoleColor)color;
+        }
+    }
+
     class ConsoleFigure
     {
         public int X
@@ -18,39 +159,29 @@ namespace dom_2
             get;
             set;
         }
-        public string FigureDescription
+
+        protected void SetCursorPosition(int x, int y)
         {
-            get;
-            set;
+            ConsoleWrapper.SetCursorLeft(x);
+            ConsoleWrapper.SetCursorTop(y);
         }
-        protected void setCursorPosition(int x, int y)
+
+        public void Draw(int x, int y, ConsoleColor figureColor)
         {
-            System.Console.CursorLeft = x;
-            System.Console.CursorTop = y;
         }
-        public void draw(int x, int y, ConsoleColor figureColor)
+
+        protected void SetFigureColor(ConsoleWrapper.Color simbolsColor, ConsoleWrapper.Color backgroundColor)
         {
-            setCursorPosition(x, y);
-            setFigureColor(figureColor, figureColor);
-            System.Console.Write("*");
-            System.Console.CursorLeft = X;
-            System.Console.CursorTop = Y;
-            restoreConsoleColor();
+            ConsoleWrapper.SetBackgroundColor(backgroundColor);
+            ConsoleWrapper.SetTextColor(simbolsColor);
         }
-        protected void setFigureColor(ConsoleColor simbolsColor, ConsoleColor backgroundColor)
-        {
-            System.Console.ForegroundColor = simbolsColor;
-            System.Console.BackgroundColor = backgroundColor;
-        }
-        protected void restoreConsoleColor()
-        {
-            System.Console.ResetColor();
-        }
-        protected void wait(int waitTime)
+
+        protected void Wait(int waitTime)
         {
             Thread.Sleep(waitTime);
         }
     }
+
     class ConsoleSquare : ConsoleFigure
     {
         public readonly int Width = 1;
@@ -58,406 +189,217 @@ namespace dom_2
 
         public ConsoleSquare(int width, int height)
         {
-            this.Width = width;
-            this.Heigth = height;
+            Width = width;
+            Heigth = height;
         }
 
-        public void drawSquare(int x, int y, ConsoleColor figureColor)
+        public void DrawSquare(int x, int y, ConsoleWrapper.Color figureColor)
         {
-           // setCursorPosition(x, y);
-            setFigureColor(figureColor, figureColor);
+            SetFigureColor(figureColor, figureColor);
 
-            int prevTop = System.Console.CursorTop;
-            int prevLeft = System.Console.CursorLeft;
+            int prevTop = ConsoleWrapper.GetCursorTop();
+            int prevLeft = ConsoleWrapper.GetCursorLeft();
 
             for (int i = 0; i < this.Width; ++i)
             {
                 for (int j = 0; j < this.Heigth; ++j)
                 {
-                    System.Console.Write("♦");
+                    ConsoleWrapper.Write("♦");
                 }
-                System.Console.CursorTop += 1;
-                System.Console.CursorLeft = prevLeft;
+                ConsoleWrapper.SetCursorTop(ConsoleWrapper.GetCursorTop() + 1);
+                ConsoleWrapper.SetCursorLeft(prevLeft);
             }
-
-            restoreConsoleColor();
         }
 
-        public static void drawSquare(int left, int top, int width, int height, ConsoleColor figureColor)
+        public static void DrawSquare(int left, int top, int width, int height, ConsoleWrapper.Color figureColor)
         {
             ConsoleSquare mySquare = new ConsoleSquare(height, width);
-            mySquare.drawSquare(left, top, figureColor);
+            mySquare.DrawSquare(left, top, figureColor);
         }
 
     };
-    //-----------------
-    class Tank
+
+    class ConsoleTank
     {
-        enum sizes { tankWidth = 7, tankHeight = 7, basePositionX = 40, basePositionY = 40 };
-        enum mooveSpeed { level1 = 1, level2 = 2, level3 = 3, level4 = 4 };
-        enum direction { up = 1, down = 2, left = 3, right = 4 };
-        int curDirection = 1;
+        private enum Sizes { tankWidth = 4, tankHeight = 7, basePositionX = 40, basePositionY = 40 };
+        private enum MooveSpeed { level1 = 1, level2 = 2, level3 = 3, level4 = 4 };
+        private enum Direction { up = 1, down = 2, left = 3, right = 4 };
+        private int curDirection = 1;
 
-        void setBaseTankPosition() {
-            System.Console.CursorLeft = (int)sizes.basePositionX;
-            System.Console.CursorTop = (int)sizes.basePositionY;
-        }
-        //----
-        void drawClearTank(int left) 
-        {//up
-            for (int i = 0; i < (int)sizes.tankWidth; ++i)
-            {
-                for (int j = 0; j < (int)sizes.tankHeight; ++j)
-                {
-                    setColor(System.ConsoleColor.Gray, System.ConsoleColor.Gray);
-                   System.Console.Write("♦");
-                }
-
-                System.Console.CursorTop -= 1;
-                System.Console.CursorLeft = left;
-            }
-
-        }
-        //----
-        void drawColoredTankD(int left)
-        {//down
-            for (int j = 0; j <(int)sizes.tankHeight;  ++j)
-            {
-                for (int i = 0; i < (int)sizes.tankWidth; ++i)
-                {
-                    setColor(System.ConsoleColor.DarkGreen, System.ConsoleColor.DarkGreen);
-                    //-gysenuci-
-                    if (j == 0) 
-                        setColor(System.ConsoleColor.DarkBlue, System.ConsoleColor.DarkBlue);
-                    if (j == (int)sizes.tankHeight - 1) 
-                        setColor(System.ConsoleColor.DarkBlue, System.ConsoleColor.DarkBlue);
-                    //-bashna-
-                    if ((i > 0) && (i < (int)sizes.tankWidth - 2) && (j > 0) && (j < (int)sizes.tankHeight - 1)) 
-                        setColor(System.ConsoleColor.DarkRed, System.ConsoleColor.DarkRed);
-                    //-dylo-
-                    if ((j == (int)sizes.tankHeight / 2) && i > ((int)sizes.tankWidth / 2))
-                        setColor(System.ConsoleColor.DarkRed, System.ConsoleColor.DarkRed);
-                    //--vurizu-
-                    if ((i == (int)sizes.tankWidth - 1) && (j == (int)sizes.tankHeight - 2)) 
-                        setColor(System.ConsoleColor.Gray, System.ConsoleColor.Gray);
-                    if ((i == (int)sizes.tankWidth - 1) && (j == (int)sizes.tankHeight - 3)) 
-                        setColor(System.ConsoleColor.Gray, System.ConsoleColor.Gray);
-                    //-----
-                    if ((i == (int)sizes.tankWidth - 1) && (j == 1)) 
-                        setColor(System.ConsoleColor.Gray, System.ConsoleColor.Gray);
-                    if ((i == (int)sizes.tankWidth - 1) && (j == 2)) 
-                        setColor(System.ConsoleColor.Gray, System.ConsoleColor.Gray);
-                    //-----                 
-                    System.Console.Write("♦");
-                }
-
-                //if (curDirection == (int)direction.up)
-                //    System.Console.CursorTop -= 1;
-                //if (curDirection == (int)direction.down)
-                    System.Console.CursorTop += 1;
-
-                System.Console.CursorLeft = left;
-            }
-
-        }
-        //----
-        void drawColoredTank( int left) {//up
-            for (int i = 0; i < (int)sizes.tankWidth; ++i)
-            {                   
-                for (int j = 0; j < (int)sizes.tankHeight; ++j)
-                {
-                    setColor(System.ConsoleColor.DarkGreen, System.ConsoleColor.DarkGreen);
-                    //-gysenuci-
-                    if (j == 0) setColor(System.ConsoleColor.DarkBlue, System.ConsoleColor.DarkBlue);
-                    if (j == (int)sizes.tankHeight-1) setColor(System.ConsoleColor.DarkBlue, System.ConsoleColor.DarkBlue);
-                    //-bashna-
-                    if ((i > 0) && (i < (int)sizes.tankWidth - 2) && (j > 0) && (j < (int)sizes.tankHeight - 1)) setColor(System.ConsoleColor.DarkRed, System.ConsoleColor.DarkRed);
-                    //-dylo-
-                    if ((j == (int)sizes.tankHeight / 2) && i > ((int)sizes.tankWidth / 2)) setColor(System.ConsoleColor.DarkRed, System.ConsoleColor.DarkRed);
-                    //--vurizu-
-                    if ((i == (int)sizes.tankWidth - 1) && (j == (int)sizes.tankHeight - 2)) setColor(System.ConsoleColor.Gray, System.ConsoleColor.Gray);
-                    if ((i == (int)sizes.tankWidth - 1) && (j == (int)sizes.tankHeight - 3)) setColor(System.ConsoleColor.Gray, System.ConsoleColor.Gray);
-                    //-----
-                    if ((i == (int)sizes.tankWidth - 1) && (j == 1)) setColor(System.ConsoleColor.Gray, System.ConsoleColor.Gray);
-                    if ((i == (int)sizes.tankWidth - 1) && (j == 2)) setColor(System.ConsoleColor.Gray, System.ConsoleColor.Gray);
-                    //-----                 
-                    System.Console.Write("♦");
-                }
-                if (curDirection == (int)direction.up)
-                   System.Console.CursorTop -= 1;
-                if (curDirection == (int)direction.down)
-                   System.Console.CursorTop += 1;
-
-                System.Console.CursorLeft = left;
-            }
-        
-        }
-        void setColor(ConsoleColor textColor, ConsoleColor backgroundColor)
+        private void SetBaseTankPosition()
         {
-            System.Console.ForegroundColor = textColor;
-            System.Console.BackgroundColor = backgroundColor;  
+            SetCursorPosition((int)Sizes.basePositionX, (int)Sizes.basePositionY);
         }
 
-        void setDefaultColors()
+        public void SetCursorPosition(int x, int y)
         {
-            setColor(System.ConsoleColor.DarkBlue, System.ConsoleColor.Gray);
+            ConsoleWrapper.SetCursorLeft(x);
+            ConsoleWrapper.SetCursorTop(y);
         }
 
-        void mooveTank(string key, int side){
+        private void DrawClearTank(int left, int top)
+        {
+            ConsoleSquare.DrawSquare(left - 1, top - 1, 7, 7, ConsoleWrapper.Color.Gray);
+            SetCursorPosition(left, top);
+        }
+
+        private void DrawColoredTankUp(int left, int top)
+        {
+            ConsoleSquare.DrawSquare(left, top, 5, 5, ConsoleWrapper.Color.Red);
+            SetCursorPosition(left, top + 1);
+            ConsoleSquare.DrawSquare(left, top, 1, 4, ConsoleWrapper.Color.DarkGreen);
+            SetCursorPosition(left + 4, top + 1);
+            ConsoleSquare.DrawSquare(left, top, 1, 4, ConsoleWrapper.Color.DarkGreen);
+            SetCursorPosition(left + 2, top);
+            ConsoleSquare.DrawSquare(left, top, 1, 3, ConsoleWrapper.Color.DarkGreen);
+            SetCursorPosition(left + 1, top + 2);
+            ConsoleSquare.DrawSquare(left, top, 3, 2, ConsoleWrapper.Color.DarkBlue);
+            SetCursorPosition(left, top);
+        }
+
+        private void DrawColoredTankDown(int left, int top)
+        {
+            ConsoleSquare.DrawSquare(left, top, 5, 5, ConsoleWrapper.Color.Red);
+            SetCursorPosition(left, top);
+            ConsoleSquare.DrawSquare(left, top, 1, 4, ConsoleWrapper.Color.DarkGreen);
+            SetCursorPosition(left + 4, top);
+            ConsoleSquare.DrawSquare(left, top, 1, 4, ConsoleWrapper.Color.DarkGreen);
+            SetCursorPosition(left + 2, top + 2);
+            ConsoleSquare.DrawSquare(left, top, 1, 3, ConsoleWrapper.Color.DarkGreen);
+            SetCursorPosition(left + 1, top + 1);
+            ConsoleSquare.DrawSquare(left, top, 3, 2, ConsoleWrapper.Color.DarkBlue);
+            SetCursorPosition(left, top);
+        }
+
+        private void DrawColoredTankRight(int left, int top)
+        {
+            ConsoleSquare.DrawSquare(left, top, 7, 5, ConsoleWrapper.Color.Red);
+            SetCursorPosition(left, top);
+            ConsoleSquare.DrawSquare(left, top, 5, 1, ConsoleWrapper.Color.DarkGreen);
+            SetCursorPosition(left, top + 4);
+            ConsoleSquare.DrawSquare(left, top, 5, 1, ConsoleWrapper.Color.DarkGreen);
+            SetCursorPosition(left + 2, top + 2);
+            ConsoleSquare.DrawSquare(left, top, 5, 1, ConsoleWrapper.Color.DarkGreen);
+            SetCursorPosition(left + 1, top + 1);
+            ConsoleSquare.DrawSquare(left, top, 3, 3, ConsoleWrapper.Color.DarkBlue);
+            SetCursorPosition(left, top);
+        }
+
+        private void DrawColoredTankLeft(int left, int top)
+        {
+            ConsoleSquare.DrawSquare(left, top, 7, 5, ConsoleWrapper.Color.Red);
+            SetCursorPosition(left + 2, top);
+            ConsoleSquare.DrawSquare(left, top, 5, 1, ConsoleWrapper.Color.DarkGreen);
+            SetCursorPosition(left + 2, top + 4);
+            ConsoleSquare.DrawSquare(left, top, 5, 1, ConsoleWrapper.Color.DarkGreen);
+            SetCursorPosition(left, top + 2);
+            ConsoleSquare.DrawSquare(left, top, 5, 1, ConsoleWrapper.Color.DarkGreen);
+            SetCursorPosition(left + 3, top + 1);
+            ConsoleSquare.DrawSquare(left, top, 3, 3, ConsoleWrapper.Color.DarkBlue);
+            SetCursorPosition(left, top);
+        }
+
+        private void DrawTank(int dir, int left, int top)
+        {
+            switch ((Direction)dir)
+            {
+                case Direction.up:
+                    {
+                        DrawColoredTankUp(left, top);
+                    } break;
+                case Direction.down:
+                    {
+                        DrawColoredTankDown(left, top);
+                    } break;
+                case Direction.left:
+                    {
+                        DrawColoredTankLeft(left, top);
+                    } break;
+                case Direction.right:
+                    {
+                        DrawColoredTankRight(left, top);
+                    } break;
+            }
+
+        }
+
+        private void SetColor(ConsoleWrapper.Color textColor, ConsoleWrapper.Color backgroundColor)
+        {
+            ConsoleWrapper.SetTextColor(textColor);
+            ConsoleWrapper.SetBackgroundColor(backgroundColor);
+        }
+
+        private void SetDefaultColors()
+        {
+            SetColor(ConsoleWrapper.Color.DarkBlue, ConsoleWrapper.Color.Gray);
+        }
+
+        private void MooveTank(string key, int side)
+        {
+            const int border = 70;
+            const int one = 1;
+
             switch (key)
             {
                 case "W":
                     {
-                        curDirection = (int)direction.up;
-                        if (System.Console.CursorTop > side)
-                            System.Console.CursorTop -= 1;
+                        curDirection = (int)Direction.up;
+                        if (ConsoleWrapper.GetCursorTop() >= side)
+                            ConsoleWrapper.SetCursorTop(ConsoleWrapper.GetCursorTop() - one);
                     } break;
                 case "S":
                     {
-                        curDirection = (int)direction.down;
-                        if (System.Console.CursorTop < (70 - side))
-                            System.Console.CursorTop += 1;
+                        curDirection = (int)Direction.down;
+                        if (ConsoleWrapper.GetCursorTop() < (border - side))
+                            ConsoleWrapper.SetCursorTop(ConsoleWrapper.GetCursorTop() + one);
                     } break;
                 case "A":
                     {
-                        curDirection = (int)direction.left;
-                        if (System.Console.CursorLeft > 1)
-                            System.Console.CursorLeft -= 1;
+                        curDirection = (int)Direction.left;
+                        if (ConsoleWrapper.GetCursorLeft() > one)
+                            ConsoleWrapper.SetCursorLeft(ConsoleWrapper.GetCursorLeft() - one);
                     } break;
                 case "D":
                     {
-                        curDirection = (int)direction.right;
-                        if (System.Console.CursorLeft < (71))
-                            System.Console.CursorLeft += 1;
+                        curDirection = (int)Direction.right;
+                        if (ConsoleWrapper.GetCursorLeft() < (border + one))
+                            ConsoleWrapper.SetCursorLeft(ConsoleWrapper.GetCursorLeft() + one);
                     } break;
             }
         }
 
-        public void draw() {
-            System.Console.Clear();
+        public void Draw()
+        {
+            ConsoleWrapper.ClearConsole();
             ConsoleKeyInfo cki;
-
-            setDefaultColors();
-
-            int side = (int)sizes.tankWidth;
-            //--
-            System.Console.Clear();
+            SetDefaultColors();
+            int side = (int)Sizes.tankWidth;
+            ConsoleWrapper.ClearConsole();
             string key = string.Empty;
-            System.Console.Write("Для виходу натиснiть (ESC) керування (W,S,A,D) ");
-            //--
-            setBaseTankPosition();
-            //--          
-            System.Console.CursorVisible = false;
-            do
-            {                
-                cki = Console.ReadKey(true);
-                key = cki.Key.ToString();
-                //----------               
-                int prevLeft1 = System.Console.CursorLeft;
-                int prevTop1 = System.Console.CursorTop;
-                drawClearTank(prevLeft1);
-                System.Console.CursorTop = prevTop1;             
-                //-----------
-                 mooveTank(key, side);
-                //-----------
-                int prevLeft = System.Console.CursorLeft;
-                int prevTop = System.Console.CursorTop;
+            ConsoleWrapper.Write("Для виходу натиснiть (ESC) керування (W,S,A,D) ");
 
-                drawColoredTank(prevLeft);
+            SetBaseTankPosition();
+            ConsoleWrapper.HideCursor();
 
-                System.Console.CursorTop = prevTop;                      
-                
-            } while (key != "Escape");
-            //--
-            System.Console.ReadKey();
-
-        }
-    }
-    //-----------------
-    class ConsoleTank {
-        enum sizes { tankWidth = 4, tankHeight = 7, basePositionX = 40, basePositionY = 40 };
-        enum mooveSpeed { level1 = 1, level2 = 2, level3 = 3, level4 = 4 };
-        enum direction { up = 1, down = 2, left = 3, right = 4 };
-        int curDirection = 1;
-
-        void setBaseTankPosition()
-        {
-            System.Console.CursorLeft = (int)sizes.basePositionX;
-            System.Console.CursorTop = (int)sizes.basePositionY;
-        }
-        //---- 
-        public void setCursorPosition(int x, int y)
-        {
-            System.Console.CursorLeft = x;
-            System.Console.CursorTop = y;
-        }
-        //--
-        void drawClearTank(int left, int top)
-        {//up
-            ConsoleSquare.drawSquare(left-1, top-1, 7, 7, ConsoleColor.Gray);           
-            setCursorPosition(left, top);         
-        }        
-        //----
-        void drawColoredTankUp(int left,int top)
-        {//up
-            ConsoleSquare.drawSquare(left, top, 5, 5, ConsoleColor.Red);
-            setCursorPosition(left, top+1);
-            ConsoleSquare.drawSquare(left, top, 1, 4, ConsoleColor.DarkGreen);
-            setCursorPosition(left+4, top+1);
-            ConsoleSquare.drawSquare(left, top, 1, 4, ConsoleColor.DarkGreen);
-            setCursorPosition(left + 2, top);
-            ConsoleSquare.drawSquare(left, top, 1, 3, ConsoleColor.DarkGreen);
-            setCursorPosition(left + 1, top + 2);
-            ConsoleSquare.drawSquare(left, top, 3, 2, ConsoleColor.DarkBlue);
-            setCursorPosition(left, top);
-        }
-        void drawColoredTankDown(int left, int top)
-        {
-            ConsoleSquare.drawSquare(left, top, 5, 5, ConsoleColor.Red);
-            setCursorPosition(left, top);
-            ConsoleSquare.drawSquare(left, top, 1, 4, ConsoleColor.DarkGreen);
-            setCursorPosition(left + 4, top);
-            ConsoleSquare.drawSquare(left, top, 1, 4, ConsoleColor.DarkGreen);
-            setCursorPosition(left + 2, top+2);
-            ConsoleSquare.drawSquare(left, top, 1, 3, ConsoleColor.DarkGreen);
-            setCursorPosition(left + 1, top+1);
-            ConsoleSquare.drawSquare(left, top, 3, 2, ConsoleColor.DarkBlue);
-            setCursorPosition(left, top);
-        }
-        void drawColoredTankRight(int left, int top) {
-            
-            ConsoleSquare.drawSquare(left, top, 7, 5, ConsoleColor.Red);
-            setCursorPosition(left, top);
-            ConsoleSquare.drawSquare(left, top, 5, 1, ConsoleColor.DarkGreen);
-
-            setCursorPosition(left , top+4);
-            ConsoleSquare.drawSquare(left, top, 5, 1, ConsoleColor.DarkGreen);
-
-            setCursorPosition(left + 2, top + 2);
-            ConsoleSquare.drawSquare(left, top, 5, 1, ConsoleColor.DarkGreen);
-
-            setCursorPosition(left + 1, top + 1);
-            ConsoleSquare.drawSquare(left, top, 3, 3, ConsoleColor.DarkBlue);
-
-            setCursorPosition(left, top);
-        }
-        void drawColoredTankLeft(int left, int top) {
-
-            ConsoleSquare.drawSquare(left, top, 7, 5, ConsoleColor.Red);
-            setCursorPosition(left+2, top);
-            ConsoleSquare.drawSquare(left, top, 5, 1, ConsoleColor.DarkGreen);
-
-            setCursorPosition(left+2, top + 4);
-            ConsoleSquare.drawSquare(left, top, 5, 1, ConsoleColor.DarkGreen);
-
-            setCursorPosition(left , top + 2);
-            ConsoleSquare.drawSquare(left, top, 5, 1, ConsoleColor.DarkGreen);
-
-            setCursorPosition(left + 3, top + 1);
-            ConsoleSquare.drawSquare(left, top, 3, 3, ConsoleColor.DarkBlue);
-
-            setCursorPosition(left, top);
-        }
-        //------------------
-        void drawTank(int dir, int left, int top) {
-            switch (dir) {
-                case (int)direction.up: {
-                    drawColoredTankUp(left, top);
-                } break;
-                case (int)direction.down: {
-                    drawColoredTankDown(left, top);
-                } break;
-                case (int)direction.left: { 
-                    drawColoredTankLeft(left, top);
-                } break;
-                case (int)direction.right: {
-                    drawColoredTankRight(left, top);
-                } break;
-            }
-        
-        }
-        //------------------
-        void setColor(ConsoleColor textColor, ConsoleColor backgroundColor)
-        {
-            System.Console.ForegroundColor = textColor;
-            System.Console.BackgroundColor = backgroundColor;
-        }
-
-        void setDefaultColors()
-        {
-            setColor(System.ConsoleColor.DarkBlue, System.ConsoleColor.Gray);
-        }
-
-        void mooveTank(string key, int side)
-        {
-            switch (key)
-            {
-                case "W":
-                    {
-                        curDirection = (int)direction.up;
-                        if (System.Console.CursorTop >= side)
-                            System.Console.CursorTop -= 1;
-                    } break;
-                case "S":
-                    {
-                        curDirection = (int)direction.down;
-                        if (System.Console.CursorTop < (70 - side))
-                            System.Console.CursorTop += 1;
-                    } break;
-                case "A":
-                    {
-                        curDirection = (int)direction.left;
-                        if (System.Console.CursorLeft > 1)
-                            System.Console.CursorLeft -= 1;
-                    } break;
-                case "D":
-                    {
-                        curDirection = (int)direction.right;
-                        if (System.Console.CursorLeft < (71))
-                            System.Console.CursorLeft += 1;
-                    } break;
-            }
-        }
-
-        public void draw()
-        {
-            System.Console.Clear();
-            ConsoleKeyInfo cki;
-
-            setDefaultColors();
-
-            int side = (int)sizes.tankWidth;
-            //--
-            System.Console.Clear();
-            string key = string.Empty;
-            System.Console.Write("Для виходу натиснiть (ESC) керування (W,S,A,D) ");
-            //--
-            setBaseTankPosition();
-            //--          
-            System.Console.CursorVisible = false;
             do
             {
-                cki = Console.ReadKey(true);
+                cki = ConsoleWrapper.ReadKey(true);
                 key = cki.Key.ToString();
-                //----------               
-                int prevLeft1 = System.Console.CursorLeft;
-                int prevTop1 = System.Console.CursorTop;
-                drawClearTank(prevLeft1, prevTop1);
-                System.Console.CursorTop = prevTop1;
-                //-----------
-                mooveTank(key, side);
-                //-----------
-                int prevLeft = System.Console.CursorLeft;
-                int prevTop = System.Console.CursorTop;
+                int prevLeft1 = ConsoleWrapper.GetCursorLeft();
+                int prevTop1 = ConsoleWrapper.GetCursorTop();
+                DrawClearTank(prevLeft1, prevTop1);
+                ConsoleWrapper.SetCursorTop(prevTop1);
 
-                drawTank(curDirection, prevLeft, prevTop);
-                
-                System.Console.CursorTop = prevTop;
+                MooveTank(key, side);
+
+                int prevLeft = ConsoleWrapper.GetCursorLeft();
+                int prevTop = ConsoleWrapper.GetCursorTop();
+                DrawTank(curDirection, prevLeft, prevTop);
+                ConsoleWrapper.SetCursorTop(prevTop);
 
             } while (key != "Escape");
-            //--
-            System.Console.ReadKey();
 
+            ConsoleWrapper.ReadKey();
         }
     }
 }

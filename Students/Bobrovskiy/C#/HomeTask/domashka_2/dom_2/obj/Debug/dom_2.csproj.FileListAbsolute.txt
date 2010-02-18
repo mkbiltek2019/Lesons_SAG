@@ -3,5 +3,3 @@ E:\my\!!!Shag_lessons\C#\hometask\domashka_2\dom_2\bin\Debug\dom_2.pdb
 E:\my\!!!Shag_lessons\C#\hometask\domashka_2\dom_2\obj\Debug\ResolveAssemblyReference.cache
 E:\my\!!!Shag_lessons\C#\hometask\domashka_2\dom_2\obj\Debug\dom_2.exe
 E:\my\!!!Shag_lessons\C#\hometask\domashka_2\dom_2\obj\Debug\dom_2.pdb
-E:\my\C#_sharp\hometask\domashka_2\dom_2\obj\Debug\dom_2.exe
-E:\my\C#_sharp\hometask\domashka_2\dom_2\obj\Debug\dom_2.pdb
