@@ -31,705 +31,868 @@ using System.Text;
 * не трогаем, переставляем только сами столбцы)
 15.   Сортировка символов в предложении по алфавиту (пробелы удаляются, 
 * предложение вводится с клавиатуры)*/
-
 //-----------------
 namespace domashka_1
 {
-    //------
-    class flagDraw
+    public enum MenuChoice
     {
-        bool exit = true;
-        enum menuChoice { one = 1, two = 2, exit = 0 };
-        enum flagSize { min = 21, max = 41 };
-        enum flagfont { font = 1, picture = 0 }
-        int flagSide;
-        int[,] flag = new int[41, 41];
-        //---
-        void menu()
+        one = 1, two = 2, three = 3, four = 4, five = 5, six = 6,
+        seven = 7, eigth = 8, nine = 9, ten = 10, eleven = 11, twelve = 12,
+        thirteen = 13, fourteen = 14, fifteen = 15, exit = 0
+    };
+
+    public static class SafeIntegerRead {
+        public static int UserChoice()
         {
-            System.Console.Clear();
-            System.Console.WriteLine("┌────────────────────────────────┐");
-            System.Console.WriteLine("│Ввести сторону прапора <{0}>      │", (int)menuChoice.one);
-            System.Console.WriteLine("│Намалювати прапорa     <{0}>      │", (int)menuChoice.two);
-            System.Console.WriteLine("│Вихiд                  <{0}>      │", (int)menuChoice.exit);
-            System.Console.WriteLine("└────────────────────────────────┘");
-            System.Console.Write("Оберiть пункт меню:: ");
-        }     
-        int userChoice()
-        {
-            ///---- get user input and check it
-            string s = " ";
-            s = System.Console.ReadLine();
-            int res = 0;
+            ///---- safe integer input
+            string inputString = ConsoleWrapper.ReadLine();
+            int result = 0;
+            int defaultValue = 16; // used to return normal value in case of some input error
+            string errorMessage = "Bad input!!!!!!";
             try
             {
-                res = int.Parse(s);
+                result = int.Parse(inputString);
             }
             catch (ArgumentNullException e)
             {
-                System.Console.WriteLine("Bad input!!!!!!");
-                res = 1;
+                ConsoleWrapper.WriteLine(errorMessage);
+                result = defaultValue;
             }
             catch (FormatException e)
             {
-                System.Console.WriteLine("Bad input!!!!!!");
-                res = 1;
+                ConsoleWrapper.WriteLine(errorMessage);
+                result = defaultValue;
             }
             catch (OverflowException e)
             {
-                System.Console.WriteLine("Bad input!!!!!!");
-                res = 1;
+                ConsoleWrapper.WriteLine(errorMessage);
+                result = defaultValue;
             }
-            //finally {                
-            //    //System.Console.Clear();
-            //    //System.Console.ReadKey();
-            //}
-            return res;
+            return result;
         }
-     
-        void exitApp()
+    }
+
+    public static class ConsoleWrapper
+    {
+        public enum Color
         {
-            System.Console.WriteLine("Good bye");
-            System.Console.ReadKey();
-            exit = false;
-        }       
-        void inputFlagSide()
+            Black = 0, DarkBlue = 1, DarkGreen = 2,
+            DarkCyan = 3, DarkRed = 4, DarkMagenta = 5,
+            DarkYellow = 6, Gray = 7, DarkGray = 8,
+            Blue = 9, Green = 10, Cyan = 11,
+            Red = 12, Magenta = 13, Yellow = 14,
+            White = 15,
+        };
+
+        private static int prevTop;
+        private static int prevLeft;
+
+        public static void SetCursorPosition(int left, int top)
         {
+            prevTop = top;
+            prevLeft = left;
+            SetCursorTop(top);
+            SetCursorLeft(left);
+        }
+
+        public static void SetCursorTop(int top)
+        {
+            System.Console.CursorTop = top;
+        }
+
+        public static void SetCursorLeft(int left)
+        {
+            System.Console.CursorLeft = left;
+        }
+
+        public static int GetCursorLeft() {
+            return System.Console.CursorLeft;
+        }
+
+        public static int GetCursorTop()
+        {
+            return System.Console.CursorTop;
+        }
+
+        public static void RestoreCursorPosition()
+        {
+            System.Console.CursorLeft = prevLeft;
+            System.Console.CursorTop = prevTop;
+        }
+
+        public static void RestoreCursorLeft()
+        {
+            System.Console.CursorLeft = prevLeft;
+        }
+
+        public static void RestoreCursorTop()
+        {
+            System.Console.CursorTop = prevTop;
+        }
+
+        public static void ClearConsole() {
             System.Console.Clear();
-            System.Console.Write("Введiть сторону прапора (вiд {0} до {1}): ", (int)flagSize.min, (int)flagSize.max);
-            flagSide = userChoice();
-            if (flagSide < (int)flagSize.min)
+        }
+        
+        public static void WriteMenuLine(string formatedString, int value) {
+            System.Console.WriteLine(formatedString, value);
+        }
+
+        public static void WriteMenuLine(string formatedString, int value1, int value2)
+        {
+            System.Console.WriteLine(formatedString, value1, value2);
+        }
+
+        public static void WriteMenuLine(string formatedString, string someText) {
+            System.Console.WriteLine(formatedString, someText);
+        }
+
+        public static void WriteLine(string text)
+        {
+            System.Console.WriteLine(text);
+        }
+        
+        public static void Write(string text)
+        {
+            System.Console.Write(text);
+        }
+
+        public static void Write(char ch)
+        {
+            System.Console.Write(ch);
+        }
+
+        public static void Write(string formatedString, int value1, int value2, int value3)
+        {
+            System.Console.Write(formatedString, value1, value2, value3);
+        }
+
+        public static void Write(int value)
+        {
+            System.Console.Write("{0}",value);
+        }
+
+        public static void ReadKey() {
+            System.Console.ReadKey();
+        }
+
+        public static ConsoleKeyInfo ReadKey(bool value)
+        {
+           return System.Console.ReadKey(value);
+        }
+
+        public static string ReadLine() {
+            return System.Console.ReadLine();
+        }
+
+        public static void SetColor(ConsoleWrapper.Color color)
+        {
+            SetTextColor(color);
+            SetBackgroundColor(color);
+        }
+
+        public static void SetTextColor(ConsoleWrapper.Color color)
+        {
+            System.Console.ForegroundColor = (ConsoleColor) color;
+        }
+
+        public static void SetBackgroundColor(ConsoleWrapper.Color color)
+        {
+            System.Console.BackgroundColor = (ConsoleColor) color;
+        }
+    }
+
+    class FlagDraw
+    {
+       private bool exit = true;       
+       private enum FlagSize { min = 21, max = 41 };
+       private enum FlagFont { font = 1, picture = 0 }
+       private int flagSide;
+       private int[,] flag = new int[(int)FlagSize.max, (int)FlagSize.max];
+
+       private void Menu()
+        {
+            ConsoleWrapper.ClearConsole();
+            ConsoleWrapper.WriteLine("┌────────────────────────────────┐");
+            ConsoleWrapper.WriteMenuLine("│Ввести сторону прапора <{0}>      │", (int)MenuChoice.one);
+            ConsoleWrapper.WriteMenuLine("│Намалювати прапорa     <{0}>      │", (int)MenuChoice.two);
+            ConsoleWrapper.WriteMenuLine("│Вихiд                  <{0}>      │", (int)MenuChoice.exit);
+            ConsoleWrapper.WriteLine("└────────────────────────────────┘");
+            ConsoleWrapper.Write("Оберiть пункт меню: ");
+        }
+
+       private void ExitApp()
+        {
+            ConsoleWrapper.Write("Good bye");
+            ConsoleWrapper.ReadKey();
+            exit = false;
+        }
+
+       private void InputFlagSide()
+        {
+            ConsoleWrapper.ClearConsole();
+            ConsoleWrapper.WriteMenuLine("Введiть сторону прапора (вiд {0} до {1}): ", (int)FlagSize.min, (int)FlagSize.max);
+            flagSide = SafeIntegerRead.UserChoice();
+
+            if (flagSide < (int)FlagSize.min)
             {
-                flagSide = (int)flagSize.min;
+                flagSide = (int)FlagSize.min;
             }
-            if (flagSide > (int)flagSize.max)
+            if (flagSide > (int)FlagSize.max)
             {
-                flagSide = (int)flagSize.max;
+                flagSide = (int)FlagSize.max;
             }
-        }        
-        void creatFlag()
+        }
+
+       private void CreatFlag()
         {
             for (int i = 0; i < flagSide; ++i)
             {
                 for (int j = 0; j < flagSide; ++j)
+                {
                     flag[i, j] = 0;
+                }
             }
-            int marginTop = flagSide / 10 - 1;
-            int marginBottom = flagSide - (flagSide / 10);
+
+            const int margKeoficient = 10;
+            const int one = 1;
+            const int two = 2;
+            int marginTop = flagSide / margKeoficient - one;
+            int marginBottom = flagSide - (flagSide / margKeoficient);
+
             for (int i = 0; i < flagSide; ++i)
             {
                 for (int j = 0; j < flagSide; ++j)
                 {
                     if ((i > marginTop) && (i < marginBottom) && (j > marginTop) && (j < marginBottom))
                     {
-                        int margBot = (flagSide / 2) - (flagSide / 10 + 1);
-                        int margBot1 = (flagSide / 2) + (flagSide / 10 + 1);
-                        //------
+                        int margBot = (flagSide / two) - (flagSide / margKeoficient + one);
+                        int margBot1 = (flagSide / two) + (flagSide / margKeoficient + one);
+                        
                         if ((i < margBot) && (j < margBot))
                         {
-                            flag[i, j] = (int)flagfont.font;
+                            flag[i, j] = (int)FlagFont.font;
                         }
-                        //------
+                       
                         if ((i < margBot) && (j > margBot1))
                         {
-                            flag[i, j] = (int)flagfont.font;
+                            flag[i, j] = (int)FlagFont.font;
                         }
-                        //------
+                        
                         if ((i > margBot1) && (j < margBot))
                         {
-                            flag[i, j] = (int)flagfont.font;
+                            flag[i, j] = (int)FlagFont.font;
                         }
-                        //------
+                        
                         if ((i > margBot1) && (j > margBot1))
                         {
-                            flag[i, j] = (int)flagfont.font;
+                            flag[i, j] = (int)FlagFont.font;
                         }
 
                     }
                     else
                     {
-                        flag[i, j] = (int)flagfont.font;
+                        flag[i, j] = (int)FlagFont.font;
                     }
                 }
             }
-        }       
-        void drawFlag()
+        }
+
+       private void DrawFlag()
+       {
+           ConsoleWrapper.ClearConsole();
+           for (int i = 0; i < flagSide; ++i)
+           {
+               for (int j = 0; j < flagSide; ++j)
+               {
+                   if (flag[i, j] == (int)FlagFont.font)
+                   {
+                       ConsoleWrapper.SetColor(ConsoleWrapper.Color.Red);
+                       ConsoleWrapper.Write("o");
+                       ConsoleWrapper.SetTextColor(ConsoleWrapper.Color.DarkBlue);
+                       ConsoleWrapper.SetBackgroundColor(ConsoleWrapper.Color.Gray);                    
+                   }
+                   if (flag[i, j] == (int)FlagFont.picture)
+                   {
+                       ConsoleWrapper.SetColor(ConsoleWrapper.Color.White);
+                       ConsoleWrapper.Write("+");
+                       ConsoleWrapper.SetTextColor(ConsoleWrapper.Color.DarkBlue);
+                       ConsoleWrapper.SetBackgroundColor(ConsoleWrapper.Color.Gray);
+                   }
+               }
+               ConsoleWrapper.Write("\n");
+           }
+           ConsoleWrapper.ReadKey();
+       }
+
+       #region Flag class executor
+       private void SetChoice()
         {
-            System.Console.Clear();
-            for (int i = 0; i < flagSide; ++i)
+            switch (SafeIntegerRead.UserChoice())
             {
-                for (int j = 0; j < flagSide; ++j)
-                {
-                    if (flag[i, j] == (int)flagfont.font)
+                case (int)MenuChoice.exit:
                     {
-                        System.Console.ForegroundColor = System.ConsoleColor.Red;
-                        System.Console.BackgroundColor = System.ConsoleColor.Red;
-                        System.Console.Write("o");
-                        System.Console.ResetColor();
-                        System.Console.ForegroundColor = System.ConsoleColor.DarkBlue;
-                        System.Console.BackgroundColor = System.ConsoleColor.Gray;
-                    }
-                    if (flag[i, j] == (int)flagfont.picture)
+                        ExitApp();
+                    } break;               
+                case (int)MenuChoice.one:
                     {
-                        System.Console.ForegroundColor = System.ConsoleColor.White;
-                        System.Console.BackgroundColor = System.ConsoleColor.White;
-                        System.Console.Write("+");
-                        System.Console.ResetColor();
-                        System.Console.ForegroundColor = System.ConsoleColor.DarkBlue;
-                        System.Console.BackgroundColor = System.ConsoleColor.Gray;
-                    }
-                }
-                System.Console.Write("\n");
-            }
-            System.Console.ReadKey();
-        }      
-        void setChoice()
-        {
-            switch (userChoice())
-            {
-                case (int)menuChoice.exit:
+                        InputFlagSide();
+                        CreatFlag();
+                    } break;                
+                case (int)MenuChoice.two:
                     {
-                        exitApp();
-                    } break;
-                //---
-                case (int)menuChoice.one:
-                    {
-                        inputFlagSide();
-                        creatFlag();
-                    } break;
-                //---
-                case (int)menuChoice.two:
-                    {
-                        drawFlag();
-                    } break;
-                //---
+                        DrawFlag();
+                    } break;              
                 default:
                     {
-                        System.Console.WriteLine("Hmm..");
+                       ConsoleWrapper.WriteLine("Hmm..");
                     } break;
             }
-        }     
-        void mainApplication()
+        }
+
+       private void MainApplication()
         {
             while (exit)
             {
-                menu();
-                setChoice();
+                Menu();
+                SetChoice();
             }
-        }       
-        public void run()
-        {
-            mainApplication();
         }
+
+       public void Run()
+       {
+           MainApplication();
+       }
+       #endregion
     }
-    //------
-    class simpleHome
+
+    class SimpleHome
     {
-        bool exit = true;
-        enum menuChoice { one = 1, two = 2, three = 3, four = 4, five = 5, six = 6, 
-            seven = 7, eigth =8, nine =9,  ten =10, eleven = 11, twelve =12, 
-            thirteen = 13, fourteen =14, fifteen =15, exit = 0 };
-        string userName;
-        //---
-        void userNameHello() {
-            System.Console.ForegroundColor = System.ConsoleColor.DarkRed;
-            System.Console.BackgroundColor = System.ConsoleColor.Gray;
-            System.Console.Clear();
-            System.Console.WriteLine("┌──────────────────────────────────────────────────────────┐");
-                System.Console.Write("│Введiть iмя користувача: ");
-            userName = System.Console.ReadLine();
-            System.Console.WriteLine("│                                                          │");
-            System.Console.WriteLine("│Радi вас знову бачити користувачу {0}", userName);
-            System.Console.WriteLine("└──────────────────────────────────────────────────────────┘");
-            System.Console.ReadKey();
-            System.Console.ResetColor();
-        }
-        //---
-        void menu()
+        private bool exit = true;
+        private string userName;
+
+        private void UserNameHello()
         {
-            System.Console.ForegroundColor = System.ConsoleColor.DarkBlue;
-            System.Console.BackgroundColor = System.ConsoleColor.Gray;
-            System.Console.Clear();
-            System.Console.WriteLine("┌──────────────────────────────────────┐");
-            System.Console.WriteLine("│Намалювати ялинку             <{0}>     │", (int)menuChoice.one);
-            System.Console.WriteLine("│Намалювати прямокутник        <{0}>     │", (int)menuChoice.two);
-            System.Console.WriteLine("│Намалювати табличку множення  <{0}>     │", (int)menuChoice.three);
-            System.Console.WriteLine("│Перевiрка стрiчки на симетрiю <{0}>     │", (int)menuChoice.four);
-            System.Console.WriteLine("│Перевiрка числа на симетрiю   <{0}>     │", (int)menuChoice.five);
-            System.Console.WriteLine("│Сума елементiв масиву         <{0}>     │", (int)menuChoice.six);
-            System.Console.WriteLine("│Сума елементiв матрицi        <{0}>     │", (int)menuChoice.seven);
-            System.Console.WriteLine("│Рух прямокутника по екрану    <{0}>     │", (int)menuChoice.eigth);
-            System.Console.WriteLine("│Пiдрахунок кiлькостi слiв     <{0}>     │", (int)menuChoice.nine);
-            System.Console.WriteLine("│Входження слова в реченнi    <{0}>     │", (int)menuChoice.ten);
-            System.Console.WriteLine("│Кодування/декодування        <{0}>     │", (int)menuChoice.eleven);
-            System.Console.WriteLine("│Перевернення стрiчки         <{0}>     │", (int)menuChoice.twelve);
-            System.Console.WriteLine("│Трикутник Паскаля            <{0}>     │", (int)menuChoice.thirteen);
-            System.Console.WriteLine("│Сортування стовпцiв матрицi  <{0}>     │", (int)menuChoice.fourteen);
-            System.Console.WriteLine("│Сортування символiв          <{0}>     │", (int)menuChoice.fifteen);
-            System.Console.WriteLine("│Вихiд                         <{0}>     │", (int)menuChoice.exit);
-            System.Console.WriteLine("└──────────────────────────────────────┘");
-            System.Console.Write("  Оберiть пункт меню: ");           
+            ConsoleWrapper.SetTextColor(ConsoleWrapper.Color.DarkBlue);
+            ConsoleWrapper.SetBackgroundColor(ConsoleWrapper.Color.Gray);
+            ConsoleWrapper.ClearConsole();
+            ConsoleWrapper.WriteLine("┌──────────────────────────────────────────────────────────┐");
+            ConsoleWrapper.Write("│Введiть iмя користувача: ");
+            userName = ConsoleWrapper.ReadLine();
+            ConsoleWrapper.WriteLine("│                                                          │");
+            ConsoleWrapper.WriteMenuLine("│Радi вас знову бачити користувачу {0}", userName);
+            ConsoleWrapper.WriteLine("└──────────────────────────────────────────────────────────┘");
+            ConsoleWrapper.ReadKey();            
         }
-        //---
-        void drawTree() {
-            System.Console.Clear();
-            System.Console.Write(" Введiть висоту ялинки: ");  
-             string s = System.Console.ReadLine();
-             int treeHeight = int.Parse(s);
-             int treeLevel = 3;
-             //--------
-             System.Console.Clear();
-             for (int k = 0; k < 3; ++k ){                 
 
-                 int lowheight = treeHeight / 3 + 2*k;
-                    int lowWidth = lowheight*2 + 2*k;
-                 
-                 for (int i = 0; i < lowheight; ++i)
-                 {
-                     for (int j = 0; j < lowWidth; ++j)
-                     {
-                         if (k == 0&& j==0) {
-                             for (int t = 0; t < 2 * treeLevel; ++t)
-                             System.Console.Write(" ");
-                         }
-                         if (k == 1 && j == 0)
-                         {
-                             for (int t = 0; t < 2 * (treeLevel)-3; ++t)
-                                System.Console.Write(" ");   
-                         }
-                        
-
-                         if ((j >= (lowWidth / 2 - i)) && (j <= (lowWidth / 2 + i)))
-                         {
-                             System.Console.ForegroundColor = System.ConsoleColor.Green;
-                             System.Console.BackgroundColor = System.ConsoleColor.Green;
-                             System.Console.Write("▲");
-                             System.Console.ForegroundColor = System.ConsoleColor.DarkBlue;
-                             System.Console.BackgroundColor = System.ConsoleColor.Gray;
-                         }
-                         else
-                         {
-                             System.Console.Write(" ");
-                         }
-                     }
-                     System.Console.Write("\n");
-                 }
-
-            }
-             //--------      
-             System.Console.ReadKey();
+        private void Menu()
+        {
+            ConsoleWrapper.SetTextColor(ConsoleWrapper.Color.DarkBlue);
+            ConsoleWrapper.SetBackgroundColor(ConsoleWrapper.Color.Gray);
+            ConsoleWrapper.ClearConsole();
+            ConsoleWrapper.WriteLine("┌──────────────────────────────────────┐");
+            ConsoleWrapper.WriteMenuLine("│Намалювати ялинку             <{0}>     │", (int)MenuChoice.one);
+            ConsoleWrapper.WriteMenuLine("│Намалювати прямокутник        <{0}>     │", (int)MenuChoice.two);
+            ConsoleWrapper.WriteMenuLine("│Намалювати табличку множення  <{0}>     │", (int)MenuChoice.three);
+            ConsoleWrapper.WriteMenuLine("│Перевiрка стрiчки на симетрiю <{0}>     │", (int)MenuChoice.four);
+            ConsoleWrapper.WriteMenuLine("│Перевiрка числа на симетрiю   <{0}>     │", (int)MenuChoice.five);
+            ConsoleWrapper.WriteMenuLine("│Сума елементiв масиву         <{0}>     │", (int)MenuChoice.six);
+            ConsoleWrapper.WriteMenuLine("│Сума елементiв матрицi        <{0}>     │", (int)MenuChoice.seven);
+            ConsoleWrapper.WriteMenuLine("│Рух прямокутника по екрану    <{0}>     │", (int)MenuChoice.eigth);
+            ConsoleWrapper.WriteMenuLine("│Пiдрахунок кiлькостi слiв     <{0}>     │", (int)MenuChoice.nine);
+            ConsoleWrapper.WriteMenuLine("│Входження слова в реченнi    <{0}>     │", (int)MenuChoice.ten);
+            ConsoleWrapper.WriteMenuLine("│Кодування/декодування        <{0}>     │", (int)MenuChoice.eleven);
+            ConsoleWrapper.WriteMenuLine("│Перевернення стрiчки         <{0}>     │", (int)MenuChoice.twelve);
+            ConsoleWrapper.WriteMenuLine("│Трикутник Паскаля            <{0}>     │", (int)MenuChoice.thirteen);
+            ConsoleWrapper.WriteMenuLine("│Сортування стовпцiв матрицi  <{0}>     │", (int)MenuChoice.fourteen);
+            ConsoleWrapper.WriteMenuLine("│Сортування символiв          <{0}>     │", (int)MenuChoice.fifteen);
+            ConsoleWrapper.WriteMenuLine("│Вихiд                         <{0}>     │", (int)MenuChoice.exit);
+            ConsoleWrapper.WriteLine("└──────────────────────────────────────┘");
+            ConsoleWrapper.Write("  Оберiть пункт меню: ");
         }
-        //---
-        void drawFlag() {
-            flagDraw myFlag = new flagDraw();
-            myFlag.run();
+
+        private void DrawTree()
+        {
+            ConsoleWrapper.ClearConsole();
+            ConsoleWrapper.Write(" Введiть висоту ялинки: ");
+            int treeHeight = SafeIntegerRead.UserChoice();
+            const int treeLevel = 3; //can't be changed
+            const int two = 2; //can't be changed
+            const int three = 3; //can't be changed
+            ConsoleWrapper.ClearConsole();
+
+            for (int k = 0; k < three; ++k)
+            {
+                int lowheight = treeHeight / three + two * k;
+                int lowWidth = lowheight * two + two * k;
+
+                for (int i = 0; i < lowheight; ++i)
+                {
+                    for (int j = 0; j < lowWidth; ++j)
+                    {
+                        if (k == 0 && j == 0)
+                        {
+                            for (int t = 0; t < two * treeLevel; ++t)
+                                ConsoleWrapper.Write(" ");
+                        }
+                        if (k == 1 && j == 0)
+                        {
+                            for (int t = 0; t < two * (treeLevel) - three; ++t)
+                                ConsoleWrapper.Write(" ");
+                        }
+                        if ((j >= (lowWidth / two - i)) && (j <= (lowWidth / two + i)))
+                        {
+                            ConsoleWrapper.SetColor(ConsoleWrapper.Color.DarkGreen);
+                            ConsoleWrapper.Write("▲");
+                            ConsoleWrapper.SetTextColor(ConsoleWrapper.Color.DarkBlue);
+                            ConsoleWrapper.SetBackgroundColor(ConsoleWrapper.Color.Gray);
+                        }
+                        else
+                        {
+                            ConsoleWrapper.Write(" ");
+                        }
+                    }
+                    ConsoleWrapper.Write("\n");
+                }
+            }
+            ConsoleWrapper.ReadKey();
         }
-        //---
-        void drawMultiplyTable() {
-            System.Console.Clear();
-            System.Console.Write("Введiть максимальне число до якого виводити таблицю: ");
-            string s = System.Console.ReadLine();
-            int second = 0;
-            try
-            {
-                second = int.Parse(s);
-            }
-            catch (ArgumentNullException e)
-            {
-                System.Console.WriteLine("Bad input!!!!!!");
-                second = 1;
-            }
-            catch (FormatException e)
-            {
-                System.Console.WriteLine("Bad input!!!!!!");
-                second = 1;
-            }
-            catch (OverflowException e)
-            {
-                System.Console.WriteLine("Bad input!!!!!!");
-                second = 1;
-            }
+
+        private void DrawFlag()
+        {
+            FlagDraw myFlag = new FlagDraw();
+            myFlag.Run();
+        }
+
+        private void DrawMultiplyTable()
+        {
+            ConsoleWrapper.ClearConsole();
+            ConsoleWrapper.Write("Введiть максимальне число до якого виводити таблицю: ");
+            int second = SafeIntegerRead.UserChoice();
 
             string format = "│{0} * {1} = {2}│";
-            int k1 = 1; int k2 = 2; int k3 = 3; int k4 = 4;
-            int top = 1; int left = 0;
+            int k1 = 1;
+            int k2 = 2;
+            int k3 = 3;
+            int k4 = 4;
+            int top = 1;
+            int left = 0;
             int step = 1;
-            for (int i = 1; i <= second; ++i)
-            {                
-                if (i == k1) { left = 1; }
-                if (i == k2) { left = 20; }
-                if (i == k3) { left = 40; }
-                if (i == k4) { left = 60; top += (second+1); }
-                for (int j = 1; j <= second; ++j)
+            int firstMarg = 20;
+            int secondMarg = 40;
+            int thirdMarg = 60;
+            int one = 1;
+            int four = 4;
+
+            ConsoleWrapper.SetCursorPosition(left, step);
+
+            for (int i = one; i <= second; ++i)
+            {
+                if (i == k1) { left = one; }
+                if (i == k2) { left = firstMarg; }
+                if (i == k3) { left = secondMarg; }
+                if (i == k4) { left = thirdMarg; top += (second + one); }
+                for (int j = one; j <= second; ++j)
                 {
-                    System.Console.CursorLeft = left;
-                    System.Console.CursorTop += step;
-                    System.Console.Write(format, i, j, i * j);
+                    ConsoleWrapper.SetCursorLeft(left);                    
+                    ConsoleWrapper.SetCursorTop(ConsoleWrapper.GetCursorTop() + step);
+                    ConsoleWrapper.Write(format, i, j, i * j);
                 }
-                
-                 System.Console.CursorTop = top;
-                if (i % 4 == 0)
-                {                   
-                    System.Console.CursorLeft = 0;                    
-                    k1 += 4;
-                    k2 += 4;
-                    k3 += 4;
-                    k4 += 4;                   
-                }             
+                ConsoleWrapper.SetCursorTop(top);                
+
+                if (i % four == 0)
+                {
+                    ConsoleWrapper.SetCursorLeft(0); 
+                    k1 += four;
+                    k2 += four;
+                    k3 += four;
+                    k4 += four;
+                }
             }
-            System.Console.ReadKey();
+            ConsoleWrapper.ReadKey();
         }
-        //---
-        void checkStringForSimetry(int n) {
-            System.Console.Clear();
-            if(n==0)
-                System.Console.Write("Введiть стрiчку для перевiрки на симетрiю: ");
+
+        private void CheckStringForSimetry(int n)
+        {
+            ConsoleWrapper.ClearConsole(); 
+
+            if (n == 0)
+                ConsoleWrapper.Write("Введiть стрiчку для перевiрки на симетрiю: ");
             else
-                System.Console.Write("Введiть число для перевiрки на симетрiю: ");
-              string s = System.Console.ReadLine();
-           
-                 char[] tmp = s.ToCharArray();
-                   char[] res = tmp.Reverse().ToArray();
+                ConsoleWrapper.Write("Введiть число для перевiрки на симетрiю: ");
 
-                  string ss = new string(res);
-                  bool b = false;
-                  if (s.Equals(ss) == true) {
-                      b = true;
-                  }         
+            string startString = ConsoleWrapper.ReadLine();
+            char[] tmp = startString.ToCharArray();
+            char[] res = tmp.Reverse().ToArray();
+            string ss = new string(res);
+            bool b = false;
 
-                  if (b)
-                  {
-                      System.Console.WriteLine("Введена стрiчка симетрична.");
-                  }
-                  else
-                  {
-                      System.Console.WriteLine("Введена стрiчка не симетрична.");
-                  }
-             
-            System.Console.ReadKey();
+            if (startString.Equals(ss) == true)
+            {
+                b = true;
+            }
+
+            if (b)
+            {
+                ConsoleWrapper.WriteLine("Введена стрiчка симетрична.");
+            }
+            else
+            {
+                ConsoleWrapper.WriteLine("Введена стрiчка не симетрична.");
+            }
+
+            ConsoleWrapper.ReadKey();
         }
-        //---
-        void sumOfArrayElements() { 
-           System.Console.Clear();
-           System.Console.Write("Введiть кiлькiсть елементiв мaсиву: ");
-             string s = System.Console.ReadLine();
-             int numOfElem = int.Parse(s);
-             System.Console.Write("Для ручного введення масиву введiть 0 (або iнше число): ");
-             string punkt = System.Console.ReadLine();
-              int option = int.Parse(punkt);
-              if (option == 0)
-              {
-                  int sum = 0;
-                  for (int i = 0; i < numOfElem; ++i) {
-                      string s1 = System.Console.ReadLine();
-                      int number = int.Parse(s1);
-                      sum += number;
-                  }
-                  System.Console.WriteLine("Сума елементiв введеного масиву: {0}", sum);
-              }
-              else {
-                  int[] array = new int[numOfElem];
-                  Random rand = new Random();
-                  int sum = 0;
-                  for (int i = 0; i < numOfElem; ++i)
-                  {
-                      array[i] = rand.Next(20);
-                      sum += array[i];
-                  }
-                  System.Console.WriteLine("Сума елементiв введеного масиву: {0}", sum);
-              }
 
-              System.Console.ReadKey();
+        private void SumOfArrayElements()
+        {
+            ConsoleWrapper.ClearConsole();
+            ConsoleWrapper.Write("Введiть кiлькiсть елементiв мaсиву( 1 - 15): ");
+            int numOfElem = SafeIntegerRead.UserChoice();
+            ConsoleWrapper.Write("Для ручного введення масиву введiть 0 (або iнше число): ");
+            int option = SafeIntegerRead.UserChoice();
+
+            if (option == 0)
+            {
+                int sum = 0;
+                for (int i = 0; i < numOfElem; ++i)
+                {
+                    string s1 = ConsoleWrapper.ReadLine();
+                    int number = int.Parse(s1);
+                    sum += number;
+                }
+                ConsoleWrapper.WriteMenuLine("Сума елементiв введеного масиву: {0}", sum);
+            }
+            else
+            {
+                int[] array = new int[numOfElem];
+                Random rand = new Random();
+                int sum = 0;
+                for (int i = 0; i < numOfElem; ++i)
+                {
+                    array[i] = rand.Next(20);
+                    ConsoleWrapper.Write(array[i]); 
+                    ConsoleWrapper.Write('\t');
+                    sum += array[i];
+                }
+                ConsoleWrapper.Write('\n');
+                ConsoleWrapper.WriteMenuLine("Сума елементiв введеного масиву: {0}", sum);
+            }
+            ConsoleWrapper.ReadKey();
         }
-        //---
-        void sumOfMatrixElements() {
-            System.Console.Clear();
-            System.Console.WriteLine("Сума елементів матриці. ");
-            System.Console.Write("Введiть кiлькiсть рядкiв: ");
-             string s1 = System.Console.ReadLine();
-              int rows = int.Parse(s1);
-            System.Console.Write("Введiть кiлькiсть стовпців: ");
-             string s2 = System.Console.ReadLine();
-              int cols = int.Parse(s2);
 
-              System.Console.Write("Для ручного введення матрицi введiть 0 (або iнше число): ");
-            string punkt = System.Console.ReadLine();
-            int option = int.Parse(punkt);
+        private void SumOfMatrixElements()
+        {
+            ConsoleWrapper.ClearConsole();
+            ConsoleWrapper.WriteLine("Сума елементів матриці. ");
+            ConsoleWrapper.Write("Введiть кiлькiсть рядкiв (1-15): ");
+            int rows = SafeIntegerRead.UserChoice();
+            ConsoleWrapper.Write("Введiть кiлькiсть стовпців(1-15): ");
+            int cols = SafeIntegerRead.UserChoice();
+            ConsoleWrapper.Write("Для ручного введення матрицi введiть 0 (або iнше число): ");
+            int option = SafeIntegerRead.UserChoice();
+            
             if (option == 0)
             {
                 int sum = 0;
                 for (int i = 0; i < rows; ++i)
                 {
-                    for (int j = 0; j < cols; ++j){
-                     string s3 = System.Console.ReadLine();
-                     int number = int.Parse(s3);
-                     sum += number;
-                    }                  
+                    for (int j = 0; j < cols; ++j)
+                    {
+                        string s3 = ConsoleWrapper.ReadLine();
+                        int number = int.Parse(s3);
+                        sum += number;
+                    }
                 }
-
-                System.Console.WriteLine("Сума елементiв матрицi: {0}", sum);
+                ConsoleWrapper.WriteMenuLine("Сума елементiв матрицi: {0}", sum);
             }
             else
             {
                 int[,] array = new int[rows, cols];
                 Random rand = new Random();
                 int sum = 0;
-                 for (int i = 0; i < rows; ++i)
+                for (int i = 0; i < rows; ++i)
                 {
-                    for (int j = 0; j < cols; ++j){
-                      array[i,j] = rand.Next(7,42);
-                      sum += array[i, j];
-                    }                  
-                }               
-
-               System.Console.WriteLine("Сума елементiв матрицi: {0}", sum);
-            }
-
-             System.Console.ReadKey();
-        }
-        //---
-        void rectangleMoovment() {
-            System.Console.Clear();
-            ConsoleKeyInfo cki;
-
-            System.Console.Write("Введiть сторону прямокутника: ");
-            string s3 = System.Console.ReadLine();
-            int side = int.Parse(s3);
-            //--
-            System.Console.Clear();
-            string st = " ";
-            System.Console.Write("Для виходу натиснiть (ESC) керування (W,S,A,D) ");
-            //--
-             System.Console.CursorLeft = 40;
-             System.Console.CursorTop = 40;
-            //--
-             System.Console.ForegroundColor = System.ConsoleColor.DarkRed;
-             System.Console.BackgroundColor = System.ConsoleColor.DarkRed;
-            //--
-             for (int i = 0; i < side; ++i) {
-                 for (int j = 0; j < side; ++j)
-                 {
-                     System.Console.Write("♦");                                        
-                 }
-                 System.Console.CursorTop -=1;
-                 System.Console.CursorLeft = 40;
-             }
-            //--
-             System.Console.ForegroundColor = System.ConsoleColor.DarkBlue;
-             System.Console.BackgroundColor = System.ConsoleColor.Gray;
-            do
-            {         
-                cki = Console.ReadKey(true);
-                 st = cki.Key.ToString();
-                //----------
-                 //--
-                 int prevLeft1 = System.Console.CursorLeft;
-                 int prevTop1 = System.Console.CursorTop;
-                 //--
-                 System.Console.ForegroundColor = System.ConsoleColor.Gray;
-                 System.Console.BackgroundColor = System.ConsoleColor.Gray;
-                 for (int i = 0; i < side; ++i)
-                 {
-                     for (int j = 0; j < side; ++j)
-                     {
-                         System.Console.Write("♦");
-                     }
-                     System.Console.CursorTop -= 1;
-                     System.Console.CursorLeft = prevLeft1;
-                 }
-                 System.Console.CursorTop = prevTop1;
-                 //--
-                //-----------
-                switch (st)
-                {
-                    case "W":
-                        {
-                            if (System.Console.CursorTop > side)
-                             System.Console.CursorTop -= 1;
-                        } break;
-                    case "S":
-                        {
-                            if (System.Console.CursorTop <(90-side))
-                            System.Console.CursorTop += 1;
-                        } break;
-                    case "A":
-                        {
-                            if (System.Console.CursorLeft > side)
-                            System.Console.CursorLeft -= 1;
-                        } break;
-                    case "D":
-                        {
-                            if (System.Console.CursorLeft < (72 - side))
-                            System.Console.CursorLeft += 1;
-                        } break;                    
+                    for (int j = 0; j < cols; ++j)
+                    {
+                        array[i, j] = rand.Next(7, 42);
+                        sum += array[i, j];
+                        ConsoleWrapper.Write(array[i, j]);
+                        ConsoleWrapper.Write('\t');
+                    }
+                    ConsoleWrapper.Write('\n');
                 }
-                //--
-                int prevLeft = System.Console.CursorLeft;
-                int prevTop = System.Console.CursorTop;
-                //--                
-                System.Console.ForegroundColor = System.ConsoleColor.DarkRed;
-                System.Console.BackgroundColor = System.ConsoleColor.DarkRed;
+                ConsoleWrapper.WriteMenuLine("Сума елементiв матрицi: {0}", sum);
+            }
+            ConsoleWrapper.ReadKey();
+        }
+
+        private void RectangleMoovment()
+        {
+            ConsoleWrapper.ClearConsole();
+            ConsoleKeyInfo cki;
+            ConsoleWrapper.Write("Введiть сторону прямокутника: ");
+            int side = SafeIntegerRead.UserChoice();
+            ConsoleWrapper.ClearConsole();
+            string st = string.Empty;
+            ConsoleWrapper.Write("Для виходу натиснiть (ESC) керування (W,S,A,D) ");
+            const int startPosTop = 40;
+            const int startPosLeft = 40;
+            const int maxTop = 90;
+            const int maxLeft = 72;
+            const int one = 1;
+
+            ConsoleWrapper.SetCursorTop(startPosTop);
+            ConsoleWrapper.SetCursorLeft(startPosLeft);
+            ConsoleWrapper.SetColor(ConsoleWrapper.Color.DarkRed);     
+                       
+            for (int i = 0; i < side; ++i)
+            {
+                for (int j = 0; j < side; ++j)
+                {
+                    ConsoleWrapper.Write("♦");
+                }
+                ConsoleWrapper.SetCursorTop(ConsoleWrapper.GetCursorTop()-1);
+                ConsoleWrapper.SetCursorLeft(startPosLeft);              
+            }           
+            ConsoleWrapper.SetBackgroundColor(ConsoleWrapper.Color.Gray);
+            ConsoleWrapper.SetTextColor(ConsoleWrapper.Color.DarkBlue);
+          
+            do
+            {
+                cki = ConsoleWrapper.ReadKey(true);
+                st = cki.Key.ToString();
+
+                int prevLeft1 = ConsoleWrapper.GetCursorLeft(); 
+                int prevTop1 = ConsoleWrapper.GetCursorTop();
+
+                ConsoleWrapper.SetBackgroundColor(ConsoleWrapper.Color.Gray);
+                ConsoleWrapper.SetTextColor(ConsoleWrapper.Color.Gray);
                 for (int i = 0; i < side; ++i)
                 {
                     for (int j = 0; j < side; ++j)
                     {
-                        System.Console.Write("♦");                       
-                    }
-                    System.Console.CursorTop -= 1;
-                    System.Console.CursorLeft = prevLeft;
+                        ConsoleWrapper.Write("♦");
+                    }                   
+                    ConsoleWrapper.SetCursorTop(ConsoleWrapper.GetCursorTop() - 1);
+                    ConsoleWrapper.SetCursorLeft(prevLeft1);  
                 }
-                System.Console.CursorTop = prevTop;
-                //--
-                System.Console.ForegroundColor = System.ConsoleColor.Gray;
-                System.Console.BackgroundColor = System.ConsoleColor.Gray;
-            } while (st !=  "Escape");
-            //--
-            System.Console.ReadKey();
+                ConsoleWrapper.SetCursorTop(prevTop1);
+              
+                switch (st)
+                {
+                    case "W":
+                        {
+                            if (ConsoleWrapper.GetCursorTop() > side)
+                                ConsoleWrapper.SetCursorTop(ConsoleWrapper.GetCursorTop() - 1);
+                        } break;
+                    case "S":
+                        {
+                            if (ConsoleWrapper.GetCursorTop() < (maxTop - side))
+                                ConsoleWrapper.SetCursorTop(ConsoleWrapper.GetCursorTop() + 1);
+                        } break;
+                    case "A":
+                        {
+                            if (ConsoleWrapper.GetCursorLeft() > side)
+                                ConsoleWrapper.SetCursorLeft(ConsoleWrapper.GetCursorLeft() - 1);
+                        } break;
+                    case "D":
+                        {
+                            if (ConsoleWrapper.GetCursorLeft() < (maxLeft - side))
+                                ConsoleWrapper.SetCursorLeft(ConsoleWrapper.GetCursorLeft() + 1);
+                        } break;
+                }
+
+                int prevLeft = ConsoleWrapper.GetCursorLeft();
+                int prevTop = ConsoleWrapper.GetCursorTop();
+
+                ConsoleWrapper.SetBackgroundColor(ConsoleWrapper.Color.DarkRed);
+                ConsoleWrapper.SetTextColor(ConsoleWrapper.Color.DarkRed);
+                for (int i = 0; i < side; ++i)
+                {
+                    for (int j = 0; j < side; ++j)
+                    {
+                        ConsoleWrapper.Write("♦");
+                    }
+                    ConsoleWrapper.SetCursorTop(ConsoleWrapper.GetCursorTop() - 1);
+                    ConsoleWrapper.SetCursorLeft(prevLeft);
+                }
+                ConsoleWrapper.SetCursorTop(prevTop);
+
+                ConsoleWrapper.SetBackgroundColor(ConsoleWrapper.Color.Gray);
+                ConsoleWrapper.SetTextColor(ConsoleWrapper.Color.Gray);
+            } while (st != "Escape");
+           
+            ConsoleWrapper.ReadKey();
         }
-        //---
-        void calcNumberOfWordsLongerThen() { 
-            System.Console.Clear();
-            System.Console.Write("Введiть стрiчку: ");
-             string st = System.Console.ReadLine();
-             System.Console.Write("Введiть максимальну довжину слова: ");
-             int max = int.Parse(System.Console.ReadLine());
-            //--
-             string[] arr = st.Split(new Char[] { ' ', ',', '.', ':' });
-              int count = 0;
-              for (int i = 0; i < arr.Length; ++i) {
-                  if (arr[i].Length > max) {
-                      ++count;
-                  }
-              }
-            //---
-              System.Console.Write("Кiлькiсть слiв, що мають довжину бiльше {0} , становить {1}.", max, count);
-              System.Console.ReadKey();
-        }
-        //---
-        void calcNumberOfWordRepeats() {
-            System.Console.Clear();
-            System.Console.Write("Введiть стрiчку: ");
-            string st = System.Console.ReadLine();
-            System.Console.Write("Введiть словo: ");
-            string curWord = System.Console.ReadLine(); 
-            //--
+
+        private void CalcNumberOfWordsLongerThen()
+        {
+            ConsoleWrapper.ClearConsole();
+            ConsoleWrapper.Write("Введiть стрiчку: ");
+            string st = ConsoleWrapper.ReadLine();
+            ConsoleWrapper.Write("Введiть максимальну довжину слова: ");
+            int max = int.Parse(ConsoleWrapper.ReadLine());
             string[] arr = st.Split(new Char[] { ' ', ',', '.', ':' });
             int count = 0;
+
+            for (int i = 0; i < arr.Length; ++i)
+            {
+                if (arr[i].Length > max)
+                {
+                    ++count;
+                }
+            }
+
+            ConsoleWrapper.WriteMenuLine("Кiлькiсть слiв, що мають довжину бiльше {0} , становить {1}.", max, count);
+            ConsoleWrapper.ReadKey();
+        }
+
+        private void CalcNumberOfWordRepeats()
+        {
+            ConsoleWrapper.ClearConsole();
+            ConsoleWrapper.Write("Введiть стрiчку: ");
+            string st = ConsoleWrapper.ReadLine();
+            ConsoleWrapper.Write("Введiть словo: ");
+            string curWord = ConsoleWrapper.ReadLine();
+            string[] arr = st.Split(new Char[] { ' ', ',', '.', ':' });
+            int count = 0;
+
             for (int i = 0; i < arr.Length; ++i)
             {
                 if (arr[i].Equals(curWord))
                 {
                     ++count;
                 }
-            }  
-            //--
-            System.Console.Write("Кiлькiсть повторiв становить {0}.", count);
-            System.Console.ReadKey();
+            }
+
+            ConsoleWrapper.WriteMenuLine("Кiлькiсть повторiв становить {0}.", count);
+            ConsoleWrapper.ReadKey();
         }
-        //---
-        void ceasarShifr() {
+
+        private void CeasarShifr()
+        {
             // CeASAR algo for encrypting using ASCII table 
-            System.Console.Clear();
-            System.Console.Write("Введiть стрiчку: ");
-            string st = System.Console.ReadLine();
-            //---
-            char[] shifr = new char[st.Length]; 
-             int key = 3;
-            //--shifr-           
-           for (int i = 0; i < st.Length; i++)
-              {
-                 int tmp = 0;
-                 tmp = ((int)st[i]  + key);
-                 //--
-                 if (tmp>=256) tmp -= 256;
-                 shifr[i] = (char)tmp;
-             }
-            //----------- 
-            string shifrStr =new string(shifr);
-            System.Console.WriteLine("Закодована стрiчка: {0}", shifrStr);
-            //--de shifr-           
-            char[] deShifr = new char[shifrStr.Length]; 
-            for (int i = 0; i < shifrStr.Length; i++)
-           {
-               int tmp = 0;
-                tmp = (shifrStr[i] - key);
-               //--
-               if (tmp < 0) tmp += 256;
-               deShifr[i] = (char)tmp;
-           }
-           //---
+            ConsoleWrapper.ClearConsole();
+            ConsoleWrapper.Write("Введiть стрiчку: ");
+            string st = ConsoleWrapper.ReadLine();           
+            char[] shifr = new char[st.Length];
+            const int key = 3;
+            const int maxASCII = 256;
+
+            //--encrypt inputed string       
+            for (int i = 0; i < st.Length; ++i)
+            {
+                int tmp = 0;
+                tmp = ((int)st[i] + key);
+                if (tmp >= maxASCII) tmp -= maxASCII;
+                shifr[i] = (char)tmp;
+            }
+            
+            string shifrStr = new string(shifr);
+            ConsoleWrapper.WriteMenuLine("Закодована стрiчка: {0}", shifrStr);
+
+            //--dencrypt inputed string             
+            char[] deShifr = new char[shifrStr.Length];
+            for (int i = 0; i < shifrStr.Length; ++i)
+            {
+                int tmp = 0;
+                tmp = (shifrStr[i] - key);               
+                if (tmp < 0) tmp += maxASCII;
+                deShifr[i] = (char)tmp;
+            }
+            
             string deshifrStr = new string(deShifr);
-            System.Console.WriteLine("Розкодована стрiчка: {0}", deshifrStr);
-            //---
-            System.Console.ReadKey();
+            ConsoleWrapper.WriteMenuLine("Розкодована стрiчка: {0}", deshifrStr);            
+            ConsoleWrapper.ReadKey();
         }
-        //---
-        void stringReverse() {
-            System.Console.Clear();
-            System.Console.Write("Введiть стрiчку: ");
-            string s = System.Console.ReadLine();
+
+        private void StringReverse()
+        {
+            ConsoleWrapper.ClearConsole();
+            ConsoleWrapper.Write("Введiть стрiчку: ");
+            string s = ConsoleWrapper.ReadLine();
             char[] tmp = s.ToCharArray();
             char[] res = tmp.Reverse().ToArray();
             string reversedString = new string(res);
-            System.Console.WriteLine("Оберненa стрiчка: {0}", reversedString);
-            System.Console.ReadKey();
+            ConsoleWrapper.WriteMenuLine("Оберненa стрiчка: {0}", reversedString);
+            ConsoleWrapper.ReadKey();
         }
-        //---
-        void thePascalTriangleDraw() {
-            System.Console.Clear();
 
-            System.Console.Write("Введiть степiнь полiнома: ");
-            string s3 = System.Console.ReadLine();
+        private void ThePascalTriangleDraw()
+        {
+            ConsoleWrapper.ClearConsole();
+            ConsoleWrapper.Write("Введiть степiнь полiнома: ");
+            string s3 = ConsoleWrapper.ReadLine();
             int side = int.Parse(s3);
-            //---
             int n = side;
-            for (int i = 0; i <= n; i++)
+            const int two = 2;
+            const int four = 4;
+            const int nine = 9;
+            const int ninety = 99;
+
+            for (int i = 0; i <= n; ++i)
             {
-                for (int space = 0; space < 4 * (n - i) / 2; space++)
-                    System.Console.Write(" ");
-                for (int j = 0; j <= i; j++) {
+                for (int space = 0; space < four * (n - i) / two; space++)
+                {
+                    System.Console.Write(' ');
+                }
+
+                for (int j = 0; j <= i; ++j)
+                {
                     int k;
                     int ifac = 1;
-                    for (k = 2; k <= i; k++) // i!
+                    for (k = two; k <= i; ++k)
+                    { // i!
                         ifac *= k;
+                    }
 
                     int jfac = 1;
-                    for (k = 2; k <= j; k++) // j!
+                    for (k = two; k <= j; ++k)
+                    { // j!
                         jfac *= k;
+                    }
 
                     int ijfac = 1;
-                    for (k = 2; k <= i - j; k++) // (i-j)!
+                    for (k = two; k <= i - j; ++k)
+                    {// (i-j)!
                         ijfac *= k;
+                    }
 
                     int c = ifac / (jfac * ijfac);
-                    if (c > 99)
-                         System.Console.Write(" {0} ",c);
-                    else if (c > 9)
-                        System.Console.Write(" {0} ",c);
-                    else System.Console.Write(" {0} ", c);
+                    if (c > ninety)
+                    {
+                        ConsoleWrapper.Write(' '); ConsoleWrapper.Write(c); ConsoleWrapper.Write(' ');
+                    }
+                    else if (c > nine)
+                    {
+                        ConsoleWrapper.Write(' '); ConsoleWrapper.Write(c); ConsoleWrapper.Write(' ');
+                    }
+                    else
+                    {
+                        ConsoleWrapper.Write(' '); ConsoleWrapper.Write(c); ConsoleWrapper.Write(' ');
+                    }
                 }
-                System.Console.Write("\n");
+                ConsoleWrapper.Write('\n');
             }
-            //---
-            System.Console.ReadKey();
+            ConsoleWrapper.ReadKey();
         }
-        //---
-        void sortMatrixCols() {
-            System.Console.Clear();
-            System.Console.Write("Введiть кiлькiсть рядкiв: ");
-            string s1 = System.Console.ReadLine();
-            int rows = int.Parse(s1);
-            System.Console.Write("Введiть кiлькiсть стовпців: ");
-            string s2 = System.Console.ReadLine();
-            int cols = int.Parse(s2);
 
-            System.Console.Write("Для ручного введення матрицi введiть 0 (або iнше число): ");
-            string punkt = System.Console.ReadLine();
+        private void SortMatrixCols()
+        {
+            ConsoleWrapper.ClearConsole();
+            ConsoleWrapper.Write("Введiть кiлькiсть рядкiв: ");
+            string numberOfRows = ConsoleWrapper.ReadLine();
+            int rows = int.Parse(numberOfRows);
+            ConsoleWrapper.Write("Введiть кiлькiсть стовпців: ");
+            string numberOfColumns = ConsoleWrapper.ReadLine();
+            int cols = int.Parse(numberOfColumns);
+            ConsoleWrapper.Write("Для ручного введення матрицi введiть 0 (або iнше число): ");
+            string punkt = ConsoleWrapper.ReadLine();
             int option = int.Parse(punkt);
-
             int[,] sortedArray = new int[rows, cols];
 
-            if (option == 0)
+            if (option == 0)// hand array input
             {
                 int[,] array = new int[rows, cols];
 
@@ -737,14 +900,14 @@ namespace domashka_1
                 {
                     for (int j = 0; j < cols; ++j)
                     {
-                        string s3 = System.Console.ReadLine();
+                        string s3 = ConsoleWrapper.ReadLine();
                         int number = int.Parse(s3);
-                        array[i, j] = number; 
+                        array[i, j] = number;
                     }
                 }
-                //--add sorting here-
+
                 int[] buf = new int[rows];
-                //---
+                //  sorting
                 for (int j = 0; j < cols; ++j)
                 {
                     for (int i = 0; i < rows; ++i)
@@ -756,208 +919,180 @@ namespace domashka_1
                     {
                         sortedArray[i, j] = buf[i];
                     }
-
                 }
-                //--- 
-            } else  {
+            }
+            else // automatic array input
+            {
                 int[,] array = new int[rows, cols];
                 Random rand = new Random();
                 int sum = 0;
-
+                // initialize array
                 for (int i = 0; i < rows; ++i)
                 {
                     for (int j = 0; j < cols; ++j)
                     {
-                        array[i, j] = rand.Next(0, 50);                        
+                        array[i, j] = rand.Next(0, 50);
+                        ConsoleWrapper.Write('\t'); ConsoleWrapper.Write(array[i, j]);
                     }
+                    ConsoleWrapper.Write('\n');
                 }
-                //--add sorting here-
-                int[] buf = new int[rows];                
-                //---
-                for (int j = 0; j < cols; ++j )
+                ConsoleWrapper.Write('\n');
+                int[] buffer = new int[rows];
+                //  sorting
+                for (int j = 0; j < cols; ++j)
                 {
                     for (int i = 0; i < rows; ++i)
                     {
-                        buf[i] = array[i, j];                  
+                        buffer[i] = array[i, j];
                     }
-                        Array.Sort(buf);
+                    Array.Sort(buffer);
                     for (int i = 0; i < rows; ++i)
                     {
-                        sortedArray[i, j] = buf[i];
+                        sortedArray[i, j] = buffer[i];
                     }
 
                 }
             }
-            //--
-             System.Console.WriteLine("Матриця сортована по стовпцях.");
-             for (int i = 0; i < cols; ++i)
-             {
-                 for (int j = 0; j < rows; ++j)
-                 {
-                     System.Console.Write("{0}\t", sortedArray[i, j]);
-                 }
-                 System.Console.Write("\n");
-             }
-            //--
-            System.Console.ReadKey(); 
+
+            ConsoleWrapper.WriteLine("Матриця сортована по стовпцях.");
+            for (int i = 0; i < cols; ++i)
+            {
+                for (int j = 0; j < rows; ++j)
+                {
+                    ConsoleWrapper.Write('\t'); ConsoleWrapper.Write(sortedArray[i, j]);
+                }
+                ConsoleWrapper.Write("\n");
+            }
+            ConsoleWrapper.ReadKey();
         }
-        //---
-        void sortSimbolsInString() {
-            System.Console.Clear();
-            System.Console.Write("Введiть стрiчку: ");
-            string s = System.Console.ReadLine();
-            for (int i = 0; i < s.Length; ++i )
+
+        private void SortSimbolsInString()
+        {
+            ConsoleWrapper.ClearConsole();
+            ConsoleWrapper.Write("Введiть стрiчку: ");
+            string s = ConsoleWrapper.ReadLine();
+            for (int i = 0; i < s.Length; ++i)
             {
                 if (s[i] == ' ')
                     s.Remove(i, 1);
             }
+
             char[] tmp = s.ToCharArray();
-
             Array.Sort(tmp);
-
             string sortedString = new string(tmp);
-
-            System.Console.WriteLine("Сортована стрiчка: {0}", sortedString);
-            System.Console.ReadKey();
+            ConsoleWrapper.WriteMenuLine("Сортована стрiчка: {0}", sortedString);
+            ConsoleWrapper.ReadKey();
         }
-        //---
-        int userChoice()
+       
+        #region  SimpleHome class executor
+        private  void ExitApp()
         {
-            ///---- get user input and check it
-            string s = System.Console.ReadLine();
-            int res = 0;
-            try
-            {
-                res = int.Parse(s);
-            }
-            catch (ArgumentNullException e)
-            {
-                System.Console.WriteLine("Bad input!!!!!!");
-                res = 1;
-            }
-            catch (FormatException e)
-            {
-                System.Console.WriteLine("Bad input!!!!!!");
-                res = 1;
-            }
-            catch (OverflowException e)
-            {
-                System.Console.WriteLine("Bad input!!!!!!");
-                res = 1;
-            }
-            //finally {                
-            //    //System.Console.Clear();
-            //    //System.Console.ReadKey();
-            //}
-            return res;
-        }
-        //---
-        void exitApp()
-        {
-            System.Console.WriteLine("Good bye");
-            System.Console.ReadKey();
+            ConsoleWrapper.WriteLine("Good bye");
+            ConsoleWrapper.ReadKey();
             exit = false;
         }
-        //---
-        void setChoice()
-        {
-            switch (userChoice())
-            {
-                case (int)menuChoice.exit:
-                    {
-                        exitApp();
-                    } break;
-               case (int)menuChoice.one:
-                    {
-                        drawTree();
-                    } break;
-               case (int)menuChoice.two:
-                    {
-                        drawFlag();
-                    } break;
-               case (int)menuChoice.three:
-                   {
-                       drawMultiplyTable();
-                   } break;
-               case (int)menuChoice.four:
-                   {
-                       checkStringForSimetry(0);
-                   } break;
-               case (int)menuChoice.five:
-                   {
-                       checkStringForSimetry(1);
-                   } break;
-               case (int)menuChoice.six:
-                   {
-                       sumOfArrayElements();
-                   } break;
-               case (int)menuChoice.seven:
-                   {
-                       sumOfMatrixElements();
-                   } break;
 
-               case (int)menuChoice.eigth:
-                   {
-                       rectangleMoovment();
-                   } break;
-               case (int)menuChoice.nine:
-                   {
-                       calcNumberOfWordsLongerThen(); 
-                   } break;
-               case (int)menuChoice.ten:
-                   {
-                       calcNumberOfWordRepeats(); 
-                   } break;
-               case (int)menuChoice.eleven:
-                   {
-                       ceasarShifr();
-                   } break;
-               case (int)menuChoice.twelve:
-                   {
-                       stringReverse(); 
-                   } break;
-               case (int)menuChoice.thirteen:
-                   {
-                       thePascalTriangleDraw(); 
-                   } break;
-               case (int)menuChoice.fourteen:
-                   {
-                       sortMatrixCols();  
-                   } break;
-               case (int)menuChoice.fifteen:
-                   {
-                       sortSimbolsInString(); 
-                   } break; 
-               default:
+        private void SetChoice()
+        {
+            switch ((MenuChoice)SafeIntegerRead.UserChoice())
+            {
+                case MenuChoice.exit:
                     {
-                        System.Console.WriteLine("Hmm..");
+                        ExitApp();
+                    } break;
+                case MenuChoice.one:
+                    {
+                        DrawTree();
+                    } break;
+                case MenuChoice.two:
+                    {
+                        DrawFlag();
+                    } break;
+                case MenuChoice.three:
+                    {
+                        DrawMultiplyTable();
+                    } break;
+                case MenuChoice.four:
+                    {
+                        int param = 0;
+                        CheckStringForSimetry(param);
+                    } break;
+                case MenuChoice.five:
+                    {
+                        int param = 1;
+                        CheckStringForSimetry(param);
+                    } break;
+                case MenuChoice.six:
+                    {
+                        SumOfArrayElements();
+                    } break;
+                case MenuChoice.seven:
+                    {
+                        SumOfMatrixElements();
+                    } break;
+
+                case MenuChoice.eigth:
+                    {
+                        RectangleMoovment();
+                    } break;
+                case MenuChoice.nine:
+                    {
+                        CalcNumberOfWordsLongerThen();
+                    } break;
+                case MenuChoice.ten:
+                    {
+                        CalcNumberOfWordRepeats();
+                    } break;
+                case MenuChoice.eleven:
+                    {
+                       CeasarShifr();
+                    } break;
+                case MenuChoice.twelve:
+                    {
+                        StringReverse();
+                    } break;
+                case MenuChoice.thirteen:
+                    {
+                        ThePascalTriangleDraw();
+                    } break;
+                case MenuChoice.fourteen:
+                    {
+                        SortMatrixCols();
+                    } break;
+                case MenuChoice.fifteen:
+                    {
+                        SortSimbolsInString();
+                    } break;
+                default:
+                    {
+                       ConsoleWrapper.WriteLine("Hmm..");
                     } break;
             }
         }
-        //---
-        void mainApplication()
+
+        private void MainApplication()
         {
-            userNameHello();
+            UserNameHello();
             while (exit)
             {
-                menu();
-                setChoice();
+                Menu();
+                SetChoice();
             }
         }
-       //---
-        public void run()
+        
+        public void Run()
         {
-            mainApplication();
+            MainApplication();
         }
-    }
-
-    //---
+        #endregion
+    } 
+    
     class Program
     {
         static void Main(string[] args)
         {
-            simpleHome mySimple= new simpleHome();
-            mySimple.run();
+            SimpleHome mySimple = new SimpleHome();
+            mySimple.Run();
         }
     }
 }
