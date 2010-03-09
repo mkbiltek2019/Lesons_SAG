@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="iso-8859-5" ?>
+<menu>
+  <numberOfItems number="4"/>
+  <menuitem key="1" visiable="true" description="Замовити їжу"></menuitem>
+  <menuitem key="2" visiable="true" description="Замовити напiй"></menuitem>
+  <menuitem key="4" visiable="true" description="Повернутись до попереднього"></menuitem>
+</menu>
+
