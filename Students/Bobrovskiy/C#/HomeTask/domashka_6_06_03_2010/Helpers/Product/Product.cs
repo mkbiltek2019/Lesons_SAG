@@ -5,6 +5,8 @@ using System.Text;
 
 namespace Helpers.MyProduct
 {
+    public enum Products { Food = 1, Beverage = 2 };
+
     public class Product
     {
         public string Name
@@ -19,22 +21,15 @@ namespace Helpers.MyProduct
             set;
         }
 
-        public string ProduceTime
-        {
-            get;
-            set;
-        }
-
-        public Product(string name, string price, string produceTime)
+        public Product(string name, string price)
         {
             Name = name;
             Price = price;
-            ProduceTime = produceTime;
         }
 
         public Product()
-            : this(string.Empty, string.Empty, string.Empty)
-        { 
+            : this(string.Empty, string.Empty)
+        {
         }
 
     }

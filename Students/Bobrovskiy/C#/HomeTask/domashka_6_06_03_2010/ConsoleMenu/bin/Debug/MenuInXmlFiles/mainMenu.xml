@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="iso-8859-5" ?>
+<menu>
+  <numberOfItems number="4"/>
+  <menuitem key="1" visiable="true" description="Зрoбити замовлення"></menuitem>
+  <menuitem key="2" visiable="true" description="Переглянути поточне замовлення"></menuitem>
+  <menuitem key="3" visiable="true" description="Адмiнiстратор"></menuitem>
+  <menuitem key="4" visiable="true" description="Вихiд з програми"></menuitem>
+</menu>
+

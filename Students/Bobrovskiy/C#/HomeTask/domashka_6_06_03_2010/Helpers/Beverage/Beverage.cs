@@ -7,7 +7,7 @@ using Helpers.MyProduct;
 
 namespace Helpers.MyBeverage
 {
-    class Beverage : Product
+    public class Beverage : Product
     {
         public string Capacity
         {
@@ -16,12 +16,12 @@ namespace Helpers.MyBeverage
         }
 
         public Beverage()
-            : this(string.Empty, string.Empty, string.Empty, string.Empty)
+            : this(string.Empty, string.Empty, string.Empty)
         {
         }
 
-        public Beverage(string name, string price, string produceTime, string capacity)
-            : base(name, price, produceTime)
+        public Beverage(string name, string price, string capacity)
+            : base(name, price)
         {
             Capacity = capacity;
         }

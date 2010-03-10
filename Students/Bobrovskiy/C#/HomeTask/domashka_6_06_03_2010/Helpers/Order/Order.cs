@@ -4,30 +4,40 @@ using System.Linq;
 using System.Text;
 using System.Collections;
 
-namespace Helpers.Order
+using Helpers.MyProduct;
+
+namespace Helpers.MyOrder
 {
     public class Order
     {
+        public ArrayList ProductList
+        {
+            get;
+            private set;
+        }
+
         public double OrderPrice
         {
             get;
-            set;
+            private set;
         }
 
-        private ArrayList ProductList = new ArrayList();
-
-        public Order(ArrayList productList)
+        public void AddProductToOrder(Product product)
         {
-            OrderPrice = 0.00;
-            ProductList = productList;
+            ProductList.Add(product);
         }
 
         public void ShowOrder()
         {
-            foreach (var obj in ProductList)
+            System.Console.WriteLine("\n");
+            System.Console.WriteLine("┌──────────────────────────────────────────────────────────────┐");
+            foreach (Product obj in ProductList)
             {
-               System.Console.WriteLine(obj.ToString());
+                System.Console.WriteLine("│ {0} │ \t{1}грн. │", obj.Name, obj.Price);
             }
+            System.Console.WriteLine("└──────────────────────────────────────────────────────────────┘");
+            System.Console.WriteLine("\nTotal Order Price: {0}", OrderPrice);
+            System.Console.WriteLine("\n");
         }
     }
 }

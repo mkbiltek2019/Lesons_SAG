@@ -74,6 +74,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Games.ico" />
+    <Content Include="MenuInXmlFiles\Beverage.xml" />
+    <Content Include="MenuInXmlFiles\Food.xml" />
     <Content Include="MenuInXmlFiles\mainMenu.xml" />
     <Content Include="MenuInXmlFiles\menuToOdrerFoodAndBeverage.xml" />
     <Content Include="MenuInXmlFiles\menuToOrderBeverage.xml" />
