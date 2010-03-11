@@ -15,6 +15,11 @@ namespace Helpers.MyOrder
             get;
             private set;
         }
+		
+		public Order()
+		{
+			ProductList = new ArrayList();
+		}
 
         public double OrderPrice
         {
@@ -27,16 +32,53 @@ namespace Helpers.MyOrder
             ProductList.Add(product);
         }
 
+        public string SetWordLength(string word, int length)
+        {
+            string result = word;
+            if (word.Length > length)
+            {
+                result = word.Remove(length);
+            }
+            if (word.Length < length)
+            {
+                StringBuilder str = new StringBuilder(result);
+                while (str.Length < length)
+                {
+                    str.Append(" ");
+                }
+                result = str.ToString();
+            }
+            if (word.Length == length)
+            {
+                result = word;
+            }
+            return result;
+        }
+
+        private void PrintTableHeader()
+        {
+            //---------------------------------------31-------------------14-------------
+            System.Console.WriteLine("┌───────────────────────────────┬──────────────┐");
+            System.Console.WriteLine(@"│          Назва продукту       │   Цiна       │");
+            System.Console.WriteLine("├───────────────────────────────┼──────────────┤");
+        }
+
+        private void PrintTableBottomLine()
+        {
+            //---------------------------------------31-------------------14------------
+            System.Console.WriteLine("└───────────────────────────────┴──────────────┘");
+        }
+
         public void ShowOrder()
         {
-            System.Console.WriteLine("\n");
-            System.Console.WriteLine("┌──────────────────────────────────────────────────────────────┐");
+            PrintTableHeader();
             foreach (Product obj in ProductList)
             {
-                System.Console.WriteLine("│ {0} │ \t{1}грн. │", obj.Name, obj.Price);
+                System.Console.WriteLine("│{0}│{1}грн.│", SetWordLength(obj.Name,31), SetWordLength(obj.Price,10));
+                OrderPrice += double.Parse(obj.Price);
             }
-            System.Console.WriteLine("└──────────────────────────────────────────────────────────────┘");
-            System.Console.WriteLine("\nTotal Order Price: {0}", OrderPrice);
+            PrintTableBottomLine();
+            System.Console.WriteLine("\nВартiсть замовлення: {0}", OrderPrice);
             System.Console.WriteLine("\n");
         }
     }
