@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<!DOCTYPE page [
+<!ENTITY nbsp "&#160;">
+<!ENTITY пробел "&#160;">
+<!ENTITY shy "&#173;">
+<!ENTITY перенос "&#173;">
+]>
+
+<?xml:stylesheet type="text/xsl" href="../common/layout.xsl" ?>
+
+<Урок xmlns="x-schema:Schema.xml" название="Триггеры." 
+предыдущий="section02.xml" следующий="HomeTask.xml" copyright="© 2005 Вадим Волянский, Алексей Туманов.">
+
+<h1 style="color:maroon">Триггеры.</h1>
+
+<p>
+Включите ваше воображение. У вас есть база данных и нужно прописать определенное правило, вернее, проверить набор правил. Например, есть база данным Магазин. Изначально записать и продать можно любое кол-во товара. Вы же можете осуществить проверку, чтобы кол-во взятого товара была меньше либо равна реально существующему. Это самая простая проверка, которую можно сделать при помощи Триггера. Плюс, вы можете отменить действие, которое вам не нужно.
+</p>
+
+<p>
+Триггер не имеет параметров и вызывается неявно. Он сродни капкану, когда вы его настраиваете на определенное действие, и когда это действие наступает, он срабатывает автоматически.
+</p>
+
+<p>
+Триггеры можно поделить на две группы:
+<ol>
+	<li>INSTEAD OF - это те, которые должны сработать вместо указанного действия.</li>
+	<li>FOR | AFTER - те, которые должны сработать во время, либо после указанного действия.</li>
+</ol>
+Возможные варианты действий:
+<ol>
+	<li>INSERT</li>
+	<li>UPDATE</li>
+	<li>DELETE</li>
+</ol>
+</p>
+
+<p>
+Общий синтаксис:
+</p>
+
+<pre style="border-color:#FF0000">
+
+Create Trigger имя_триггера
+
+ON имя_таблицы
+
+FOR {AFTER | INSTEAD OF} {INSERT | UPDATE | DELETE}
+
+[WITH ENCRYPTION]
+
+AS Тело
+
+</pre>
+
+<p>
+Например. При каждом запросе на обновление данных в таблице Books вы хотите видеть сообщение о том, сколько записей было изменено. Для этого понадобится одна системная переменная, в которую автоматически записывается кол-во строк предыдущего запроса. Она называется <b>@@rowcount</b>.
+</p>
+
+<pre>
+
+Create Trigger Show_Upd_Amm
+
+On Books
+
+For Update
+
+As 
+	raiserror('Было изменено %d записей',0,1,@@rowcount)
+
+</pre>
+
+<p>
+Срабатывать этот триггер будет автоматически, при обновлении данных в таблице Books. Для проверки, увеличим кол-во всех книг издательства BHV на 3 экземпляра.
+</p>
+
+<pre>
+
+Update books
+
+Set books.quantity=books.quantity+5
+
+From press
+
+Where books.id_press=press.id
+
+and press.name like '%BHV%'
+
+</pre>
+
+<p>
+Результат:
+</p>
+
+<img src="img\pict8.jpg"></img>
+
+<p>
+В SQL Server существует две таблицы -  <b>INSERTED</b> и <b>DELETED</b>. Их можно и нужно использовать при написании триггеров. В эти таблицы данные попадают следующим образом: Если вы добавляете данные, то с начала они попадают в таблицу INSERTED, а только потом в основную таблицу, Если вы удаляете данные, то в начале они удаляются из основной таблицы, а потом попадают в таблицу DELETED. Структура этих таблиц абсолютно такая же как и у таблицы, над которой производится определенное действие. При <b>обновлении</b> информации производится удаление и последующая вставка данных. Т.о. с помощью данных в этих таблицах можно контролировать производимые изменения.
+</p>
+
+<p>
+Пример 2. Необходимо при занесении данных о товаре выдать ошибку, если с дня производства прошло больше месяца.
+</p>
+
+<pre>
+
+Create Trigger Check_Date_trigger
+
+On shop
+
+for insert
+
+as
+ 
+Declare @InsDate smalldatetime
+
+Select @InsDate=date_in from inserted<span style="color=#008080">/*получаем дату товара, который добавляется
+(date_in - поле таблицы shop, в которую производится вставка данных)*/</span>
+
+if (@InsDate&lt;=getdate()-30)	<span style="color=#008080">/*Проверяем, не прошло ли 30 дней*/</span>
+
+Begin
+
+	raiserror('Это слишком старый товар',0,1)
+	raiserror('Данные о товаре сохранены не будут',0,1)
+
+	Rollback transaction
+
+end
+
+else
+
+Begin
+	Print('Insert Ok!!!')
+end
+
+</pre>
+
+<p>
+Это можно было реализовать, по сути, и с помощью Check. Без триггера не обойтись при проверке данных нескольких таблиц. Например. Нельзя удалить диск (база данных CD), если он на верхушке рейтинга продаж.
+</p>
+
+<pre>
+
+create trigger Check_cd_delete
+
+on cd
+
+for delete
+
+as
+
+Declare @SellAmm int,
+@cd_name varchar(25),
+@best_cd varchar(25)
+
+Select @cd_name=deleted.name from deleted<span style="color=#008080">/*Получаем название удаляемого диска.*/</span>
+
+Declare @Svodka table (imya varchar(25), kolv int)
+
+insert @Svodka<span style="color=#008080">/*Вычитываем информацию о названиях дисков и о их популярности*/</span>
+
+	select cd.name,count(id_cd) from selling,cd
+	where selling.id_cd=cd.id
+	group by cd.name
+
+
+Select @best_cd=s.imya from @Svodka s<span style="color=#008080">/*Находим название самого популярного диска по продажам*/</span>
+where s.kolv=(Select max(kolv) from @Svodka)
+
+if(@best_cd=@cd_name)<span style="color=#008080">/*Проверяем совпадение названий.*/</span>
+begin
+	raiserror('You can not delete this cd!!!',0,1)
+	rollback transaction
+end
+
+else
+
+begin
+	print ('deleting query was successfull!!')
+end
+
+</pre>
+
+<p>
+Также существует указать триггер вместо выполнения определенного запроса. Для этого необходимо указать INSTEAD OF.
+</p>
+
+<p>
+При удалении книги издательства 'BHV Киев' выдать ошибку.
+</p>
+
+<pre>
+
+Create Trigger Not_BHV
+
+On books
+
+Instead of Delete
+
+As
+
+Declare @BHV_id int
+
+Select @BHV_id=id from press where press.name ='BHV Киев'<span style="color=#008080">/*
+Получаем идентификатор издательства BHV Киев*/</span>
+
+if (exists (select * from deleted where id_press=@BHV_id))<span style="color=#008080">/*Проверяем, есть ли такой идентификатор
+в удаляемых книгах.*/</span>
+
+raiserror ('You can not delete BHV Киев!!!',0,1)
+
+</pre>
+
+<p>
+Также, триггеры необходимы, если нужно, например, при вставке сдублировать данные в другую таблицу. Например, при добавлении какого-либо человека, скопировать данные о нем в резервную таблицу.
+</p>
+
+<pre>
+
+Create Trigger People_copy
+
+On People
+
+After Insert
+
+As
+
+Insert into copypeople select * from Inserted
+
+</pre>
+
+<p>
+<b>При создании триггеров существует набор правил:</b>
+<ol>
+	<li>Нельзя создавать триггеры во временных таблицах.</li>
+	<li>Триггеры не могут принимать параметры.</li>
+	<li>Триггер нельзя вызвать явно.</li>
+	<li>Триггеры не могут возвращать значения.</li>
+	<li>Для одного действия в одной таблице не может быть более одного триггера INSTEAD OF.</li>
+	<li>В триггерах нельзя использовать такие операторы:
+	<ul>
+		<li>DROP</li>
+		<li>CREATE</li>
+		<li>ALTER DATABASE</li>
+		<li>ALTER TABLE</li>
+		<li>GRANT</li>
+		<li>REVOKE</li>
+		<li>SELECT INTO</li>
+	</ul>
+	</li>
+</ol>
+</p>
+
+</Урок>

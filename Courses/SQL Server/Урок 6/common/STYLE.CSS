@@ -1,0 +1,144 @@
+body	{
+	cursor: default;
+	font-family: verdana, sans-serif;
+	font-size: 90%;
+	background-color: window;
+	color: windowText;
+	}
+table {
+	font-size: 100%;
+	color: windowText;
+	width: 100%;
+	}
+#testTable {
+	width: 100%;
+	}
+#testTable th {
+	background: buttonHighlight;
+	color: buttonText;
+	padding: 0.1em;
+	text-align: left;
+	}
+#testTable td {
+	width: *;
+	}
+#testTable td.CB {
+	width: 1px;
+	}
+#testTable td.CB {
+	width: 1em;
+	}
+table.headerFooter {
+	margin: 0;
+	border: none;
+	table-layout: fixed;
+	width: 100%;
+	font-size: 75%;
+	}
+table.headerFooter td {
+	text-align: center;
+	border: none;
+	width: *;
+	}
+table.headerFooter a {
+	width: 100%;
+	padding: 0.2em;
+	text-decoration: none;
+	color: buttonFace;
+	cursor: default;
+	border: none;
+	}
+table.headerFooter a:link {
+	color: windowText;
+	cursor: auto;
+	border: none;
+	}
+table.headerFooter a:visited {
+	color: buttonShadow;
+	cursor: auto;
+	border: none;
+	}
+table.headerFooter a:active, table.headerFooter a:hover {
+	background: highlight;
+	color: highlightText;
+	cursor: auto;
+	border: none;
+	}
+li img, p img {
+	float: right;
+	margin-left: 0.75em;
+	margin-bottom: 0.45em;
+	margin-top: 0.45em;
+	clear: both;
+	}
+h1, h2, h3, h4, hr {
+	clear: both;
+	}
+img.right {
+	float: right;
+	margin-left: 0.75em;
+	margin-bottom: 0.45em;
+	margin-top: 0.45em;
+	}
+p {
+	margin: 0.75em 0;
+	text-align: justify;
+	text-justify: newspaper;
+	text-indent: 0.5em;
+	}
+li {
+	margin: 0.75em 0;
+	text-align: justify;
+	text-justify: newspaper;
+	}
+ul, ol {
+	margin-top: 0.75em;
+	margin-bottom: 0.75em;
+	}
+img {
+	border: none;
+	}
+pre, p.pre {
+	margin: 0.75em 0;
+	font-family: monotype.com, lucida console, monospace;
+	border: 0.15em solid buttonFace;
+	padding: 0.45em;
+	text-indent: 0;
+	text-align: left;
+	}
+hr {
+	color: windowText;
+	height: 2px;
+	}
+table.common, table.common td {
+	border: 1px solid windowText;
+	}
+.icon	{
+	font: 135% webdings
+	}
+.note {
+	font-variant: small-caps;
+	}
+.intro {
+	font-size: 90%;
+	padding: 1ex;
+	margin-top: 1ex;
+	margin-bottom: 1ex;
+	border-top: 1px solid buttonFace;
+	border-bottom: 1px solid buttonFace;
+	}
+.hidden {
+	background-color: buttonFace;
+	color: buttonFace;
+	padding: 0.45em;
+	}
+a {
+	text-decoration: none;
+	}
+a:hover, a:active {
+	background-color: buttonHighlight;
+	border: 1px dashed buttonShadow;
+	}
+ul {
+	list-style-type: disc;
+	}

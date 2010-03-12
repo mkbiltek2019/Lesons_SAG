@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<!DOCTYPE page [
+<!ENTITY nbsp "&#160;">
+<!ENTITY пробел "&#160;">
+<!ENTITY shy "&#173;">
+<!ENTITY перенос "&#173;">
+]>
+
+<?xml:stylesheet type="text/xsl" href="../common/layout.xsl" ?>
+
+<Урок xmlns="x-schema:Schema.xml" название="Ограничения."  предыдущий="section01.xml" следующий="section02.xml" copyright="© 2005 Вадим Волянский, Алексей Туманов.">
+
+<h2><font color="#800000">Ограничения.</font></h2>
+
+<p>
+При создании таблиц иногда возникает необходимость указать для поля определенные ограничения. Например, чтобы в поле, хранящее возраст нельзя было сохранить значение больше 100, либо при помощи запроса сзодать связь между двумя таблицами. Все это подпадает под понятие Ограничения и будет рассмотрено в этой главе.
+</p>
+
+<p>
+Ограничения можно поделить на такие группы:
+	<ol>
+		<li>Ограничение Первичный Ключ.</li>
+		<li>Ограничение по Умолчанию.</li>
+		<li>Ограничение на Проверку.</li>
+		<li>Ограничение Уникальности.</li>
+		<li>Ограничение Внешний Ключ.</li>
+	</ol>
+</p>
+
+<p>
+Наверное у вас возник вопрос, а где их можно просмотреть. Все что нужно сделать - это вызвать процедуру sp_help по отношению к интересующей вас таблице и вы получите список ограничений, которые наложены на ее поля.
+</p>
+
+<p>
+Относительно таблицы, которую создавали в предыдущей главе и списка ограничений можно сделать вывод, что автоматически установленных ограничений несколько. Первое - поле id имеет ограничение первичный Ключ. Второе ограничение - поле rights имеет параметр по умолчанию. Давайте посмотрим, что об этом говорит процедура sp_help.
+</p>
+
+<img src="img\pict3.jpg"></img>
+
+<p>
+Поле Constraint_name определяет название ограничения, а поле Constraint_type определяет тип ограничения.
+</p>
+
+<p>
+При работе с базой данных порой возникает ситуация, когда нужно удалить какой либо столбец. Не забывайте, что вы <b>не можете удалить столбец, если у него указано какое-либо ограничение!!!</b>
+</p>
+
+<p>
+Удалить ограничение вы можете, указав его имя. Становиться вопрос, а как можно указать имя для создаваемого ограничения, и как вообще создавать его?
+</p>
+
+<p>
+Для накладывания на столбец ограничения при создании таблицы используется следующий синтаксис:
+</p>
+
+<pre style="border-color=#FF0000">
+
+Create table имя_таблицы
+
+(
+
+	имя_поля1 тип_данных [identity|NULL|NOT NULL] Constraint имя_ограничения Тип_ограничения Имя_поля,
+
+	имя_поля2 тип_данных [NULL|NOT NULL] Constraint имя_ограничения Тип_ограничения Имя_поля,
+
+	...
+
+	имя_поляN тип_данных [NULL|NOT NULL] Constraint имя_ограничения Тип_ограничения Имя_поля
+
+)
+
+</pre>
+
+<p>
+Либо
+</p>
+
+<pre style="border-color=#FF0000">
+
+Create table имя_таблицы
+
+(
+
+	имя_поля1 тип_данных [identity|NULL|NOT NULL] ,
+
+	имя_поля2 тип_данных [NULL|NOT NULL],
+
+	...
+
+	имя_поляN тип_данных [NULL|NOT NULL],
+
+	Constraint имя_ограничения1 Тип_ограничения Имя_поля1,
+
+	Constraint имя_ограничения2 Тип_ограничения Имя_поля2,
+
+	Constraint имя_ограниченияN Тип_ограничения Имя_поляN
+
+)
+
+</pre>
+
+<h3 align='center'><font color="#1925AB">Ограничение Первичный Ключ.</font></h3>
+
+<p>
+Пример создание таблицы и создания ограничения Внешнего Ключа.
+</p>
+
+<pre>
+
+Create table Test_table2(
+
+	id int identity(1,1) not null Constraint PK_1 primary key(id),
+
+	name varchar(25)
+
+)
+
+</pre>
+
+<p>
+Смотрим, что получилось:
+
+Execute sp_help test_table2
+</p>
+
+<img src="img\pict4.jpg"></img>
+
+<p>
+Как раз то, что нам требовалось.
+</p>
+
+<p>
+А создать таблицу при помощи запроса, в которой будет <b>составной первичный ключ</b>, можно только используя ограничение.
+</p>
+
+<pre>
+
+Create table Test_table3(
+
+	name varchar(25) not null,
+
+	project varchar(25) not null,
+
+	date smalldatetime,
+
+	exp_date int,
+
+	Constraint PK_Mult1 primary key(name,project)
+
+)
+
+</pre>
+
+<p>
+Т.о. мы получаем таблицу, у которой составной первичный ключ состоит из полей name и project.
+</p>
+
+<h3 align='center'><font color="#1925AB">Ограничение по Умолчанию.</font></h3>
+
+<p>
+Ограничение по умолчанию можно тоже установить, дав ему при этом указанное вами, а не SQL Server имя.
+</p>
+
+<pre>
+
+Create table Test_table4(
+
+	id int identity(1,1) not null constraint MyPK1 primary key(id),
+
+	name varchar(25),
+
+	rights varchar(25) not null constraint Rights_def1 default('user')
+
+)
+
+</pre>
+
+<h3 align='center'><font color="#1925AB">Ограничение на Проверку.</font></h3>
+
+<p>
+Ограничение на проверку определяет, что прежде чем записать данные в ячейку, будет произведена проверка того условия, которое указано в ограничении.
+</p>
+
+<pre>
+
+Create table Test_table5(
+
+	id int identity(1,1) not null constraint MyPK2 primary key(id),
+
+	name varchar(25),
+
+	age int not null constraint age_chk1 check(age between 1 and 110),
+
+	sex varchar(10) not null constraint sex_chk1 check(sex in('male','female'))
+
+)
+
+</pre>
+
+<p><b>
+При добавлении значений в эту таблицу, при несовпадении условий, указанных в проверках, будет ошибка!!!
+</b></p>
+
+<p>
+Также можно указать ограничение, ссылаясь при этом на значения нескольких полей.
+</p>
+
+<pre>
+
+Create table Test_table6(
+
+	id int identity(1,1) not null constraint MyPK3 primary key(id),
+
+	col1 int not null,
+
+	col2 int not null,
+
+	col3 int,
+
+	Constraint My_Chk1 CHECK (col2&gt;col1 and col2&lt;col3)
+
+)
+
+</pre>
+
+<p>
+Так вы определите, что значение, которое заносится в col2 должно быть больше, чем значение в col1, но меньше, чем значение в col3.
+</p>
+
+<h3 align='center'><font color="#1925AB">Ограничение Уникальности.</font></h3>
+
+<p>
+Существует возможность указать, что значения в поле не должны повторяться.
+</p>
+
+<pre>
+
+Create table Test_table7(
+
+	id int identity(1,1) not null constraint MyPK4 primary key(id),
+
+	genre varchar(25) constraint MyUnique1 unique(genre)
+
+)
+
+</pre>
+
+<h3 align='center'><font color="#1925AB">Ограничение Внешний Ключ.</font></h3>
+
+<p>
+Как уже говорилось, связь нескольких таблиц прописывается при помощи ограничения Внешний Ключ. Для этого после определения типов все полей используется следующий синтаксис:
+</p>
+
+<pre style="border-color=#FF0000">
+
+	Constraint имя_ограничения Foreign key (Имя_поля_внешний_ключ) 
+
+	References Имя_таблицы (Имя_поля_первичный ключ)
+
+	[ON UPDATE {CASCADE | NO ACTION}]
+
+	[ON DELETE {CASCADE | NO ACTION}]
+
+</pre>
+
+<p>
+Например. Создадим две таблицы и их свяжем.
+</p>
+
+<pre>
+
+Create table authors(
+
+	id int identity(1,1) not null constraint MyPK5 primary key(id),
+
+	name varchar(25) not null constraint MyUnique2 unique(name)
+
+)
+
+</pre>
+
+
+<pre>
+
+Create table Books(
+
+	id int identity(1,1) not null constraint MyPK6 primary key(id),
+
+	name varchar(25) not null,
+
+	id_author int,
+
+	Constraint Books_FK1 foreign key (id_author)
+
+	References authors (id)
+
+	On Update Cascade
+
+	On Delete Cascade
+
+)
+
+</pre>
+
+<p>
+Если, после того, как вы выполнили запрос, указав при этом связи, создавать Диаграмму, то прописанные связи будут прорисованы автоматически.
+</p>
+
+
+
+
+
+
+</Урок>

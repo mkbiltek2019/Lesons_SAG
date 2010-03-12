@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<!DOCTYPE page [
+<!ENTITY nbsp "&#160;">
+<!ENTITY пробел "&#160;">
+<!ENTITY shy "&#173;">
+<!ENTITY перенос "&#173;">
+]>
+
+<?xml:stylesheet type="text/xsl" href="../common/layout.xsl" ?>
+
+<Урок xmlns="x-schema:Schema.xml" название="SQL Server"  следующий="section01.xml" copyright="© 2005 Вадим Волянский, Алексей Туманов.">
+<h1>SQL Server </h1>
+
+<ol>
+<li><a href="section01.xml">Модель защиты данных.</a></li>
+<li><a href="section02.xml">Режимы защиты данных.</a></li>
+<li><a href="section03.xml">Пользователи базы данных.</a></li>
+<li><a href="section04.xml">Использование ролей. Роли уровня приложения.</a></li>
+<li><a href="section05.xml">Управление правами доступа.</a>
+	<ul>
+		<li>Специальные права доступа.</li>
+		<li>Объектные права доступа.</li>
+		<li>Командные права доступа.</li>
+		<li>Цепочки подчинения.</li>
+	</ul>
+</li>
+<li><a href="HomeTask.xml">Домашнее задание</a></li>
+</ol>
+
+</Урок>

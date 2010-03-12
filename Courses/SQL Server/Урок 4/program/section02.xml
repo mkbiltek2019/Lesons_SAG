@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<!DOCTYPE page [
+<!ENTITY nbsp "&#160;">
+<!ENTITY пробел "&#160;">
+<!ENTITY shy "&#173;">
+<!ENTITY перенос "&#173;">
+]>
+
+<?xml:stylesheet type="text/xsl" href="../common/layout.xsl" ?>
+
+<Урок xmlns="x-schema:Schema.xml" название="Добавление существующей базы данных." 
+предыдущий="section01.xml" следующий="section03.xml" copyright="© 2005 Вадим Волянский, Алексей Туманов.">
+<h1 style="color=maroon">Добавление существующей базы данных.</h1>
+
+<p>
+Ну что. Снова новая тема и снова нужно использовать новую базу данных. Вы уже изучили 2 способа импортирования данных (из другой СУБД и из другой базы данных). Сейчас вам предстоит рассмотреть еще один способ - подключение уже существующей базы данных.
+</p>
+
+<p>
+Для вас разработана еще одна учебная база данных под названием Library. Она заархивирована и находится в папке
+<a href="Database">Database</a>. Архив называется <a href="Database/database.rar">Library.rar</a>.
+</p>
+
+<p>
+С начала вам нужно распаковать содержимое архива в C:\Program Files\Microsoft SQL Server\MSSQL\Data (рекомендовано, хотя можно использовать любую другую папку).
+</p>
+
+<p>
+У вас должны появиться 2 файла Library.mdf  и Library.ldf. 
+Рассмотрим процесс добавления существующей базы данных с точки зрения различных версий MS SQL Server.
+</p>
+
+<p>
+Начнем с MS SQL Server 2000.
+
+Запускаем Enterprise Manager. 
+</p>
+
+<ol>
+	<li>В контекстном меню папки Databases выбираете <b>Все задачи -> Attach database...</b><img style="float:none" src="img\pict1.jpg"></img></li>
+	<li>В появившемся окне нужно указать путь к существущему файлу (.mdf) базы данных и имя, которое вы хотите дать новой базе. Имя указывается в Attach as:</li><br/>
+<img style="float:none" src="img\pict2.jpg"></img>
+	<li>Нажимаете OK и база данных будет добавлена.</li>	
+</ol>
+
+<p>
+Вот и новая база данных готова для работы.
+</p>
+<p>
+Рассмотрим тот же процесс в рамках MS SQL Server 2005 и MS SQL Server 2008.
+Запускаем SQL Server Management Studio.
+</p>
+<ol>
+<li>В контекстном меню папки Databases выбираете Все задачи -> Attach database...
+<img style="float:none" src="img\SQL2005.png"></img></li>
+<li>В появившемся окне нужно указать путь к существущему файлу (.mdf) базы данных и имя, которое вы хотите дать новой базе. Имя указывается в Attach as:</li><br/>
+<img style="float:none" src="img\SQL2005 2.png"></img>
+<li>Нажимаете OK и база данных будет добавлена.</li>
+</ol>
+<p>
+Эта база данных представляет из себя библиотеку из которой студенты и преподаватели берут книги. Давайте рассмотрим диаграмму.
+</p>
+
+<p>
+Только не надо пугаться. Ничего страшного здесь нет.
+</p>
+
+<img style="float:none" src="img\pict3.jpg"></img>
+
+<p>
+Две главные таблицы - это S_cards  и T_cards. Таблица S_cards хранит информацию о выдаче книг студентам, а T_cards хранит информацию о выдаче книг преподавателям. Таблица Books связана с обеими таблицами и в ней храниться информация о существуюших книгах. С таблицей Books связаны таблицы Authors(Авторы), Themes(Темы), Categories(Категории), Press(Издательства). Все они характеризуют информацию о книге. Students, Groups и Faculties информация о студентах. Teachers и Departments - информация о преподавателях, и таблица Libs - информация о библиотекарях.
+</p>
+
+<p>
+Для повторения многотабличных запросов давайте покажем всю информацию о взятых студентами книгах. Определить, что книга была взята студентом очень просто. Если Id книги есть в таблице S_cards, значит студет брал эту книгу.
+</p>
+
+<pre style="border-color:#8C79FF">
+Select Books.name, Books.pages, Books.yearpress, Authors.firstname, Authors.lastname,
+
+Categories.name, Themes.name, Books.quantity
+
+From Books, Categories, Authors, Themes, S_cards
+
+Where books.id_themes=themes.id and books.id_category=categories.id
+
+and books.id_author=authors.id and s_cards.id_book=books.id
+</pre>
+
+<img style="float:none" src="img\pict4.jpg"></img>
+
+</Урок>

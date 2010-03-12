@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<!DOCTYPE page [
+<!ENTITY nbsp "&#160;">
+<!ENTITY пробел "&#160;">
+<!ENTITY shy "&#173;">
+<!ENTITY перенос "&#173;">
+]>
+
+<?xml:stylesheet type="text/xsl" href="../common/layout.xsl" ?>
+
+<Урок xmlns="x-schema:Schema.xml" название="Пользовательские функции." 
+предыдущий="section01.xml" следующий="section03.xml" copyright="© 2005 Вадим Волянский, Алексей Туманов.">
+<h1 style="color=maroon">Пользовательские функции.</h1>
+
+<p>
+Итак. Смысл хранимых процедур сводится к определенным SQL запросам, заранее скомпилированным, для быстроты работы. Но что делать, если необходимо получить значение, а точнее набор значений из нее, а потом еще и вывести их на экран. ВЫЗЫВАТЬ ЧЕРЕЗ SELECT? Но мы уже определили, что вызывать хранимую процедуру можно только через EXECUTE. Так вот именно для обработки набора данных предоставляется еще один очень мощный инструмент - Функции!
+</p>
+
+<p>
+Функции можно поделить на 3 вида:
+<ol>
+	<li><b>Скалярные</b>.Функции, возвращающие одно значение определенного типа.</li>
+	<li><b>Однозапросные</b>.Функции, имеющие внутри только один Select запрос.</li>
+	<li><b>Многозапросные</b>.Функции, внутрь которых помещен большой кусок кода, включающий операторы ветвления, циклы, запросы и пр.</li>
+</ol>
+</p>
+
+<p>
+Общий синтаксис:
+</p>
+
+<pre style="border-color:#FF0000">
+<pre style="border-color:#00FF00">
+Create Function имя_функции
+(
+@имя_параметра1[=значение_по_умолчанию],
+@имя_параметра2[=значение_по_умолчанию],
+...
+@имя_параметраN[=значение_по_умолчанию]
+)
+
+Returns возвращаемый_тип_данных
+
+[WITH ENCRYPTION]
+
+AS
+Begin
+
+ТЕЛО
+
+Return значение
+
+End
+
+</pre>
+Вызов:
+
+Либо
+<pre style="border-color=#00FF00">
+
+Select имя_базы_данных.имя_владельца.имя_функции (передача_параметров)<span style="color=#008080">--параметры в круглых скобках</span>
+
+</pre>
+
+Либо
+<pre style="border-color=#00FF00">
+
+Declare @имя_переменной тип_данных
+
+Execute @имя_переменной=имя_функции значение1,значение2...значениеN<span style="color=#008080">/*достаточно указать только
+имя функции. Значения передаются без круглых скобок!!!*/</span>
+
+raiserror('значение = спецификатор_типа',0,1,@имя_переменной)
+
+</pre>
+</pre>
+
+<h2 style="color=#0000FF">Скалярные функции.</h2>
+
+<p>
+Изначально хранимые процедуры возвращают значения, чтобы уведомить пользователя о какой-либо ошибке, к примеру. В основном же они используются для администрирования и быстрого выполнения набора запросов. Мы же их использовали для получения значений, которые нужны нам. Это лучше делать при помощи функций.
+</p>
+
+<p>
+Например, необходимо создать функцию, возвращающую слово "Четное", если переданное число четное, "Ноль" - если передали ноль и "Нечетное" - если переданное число нечетное.
+</p>
+
+<pre>
+<pre style="border-color=#00FF00">
+
+Create function Chet (@a int)
+
+returns varchar(25)
+
+As
+
+begin
+
+Declare @res varchar(25)
+
+if(@a=0)
+	begin
+		Set @res='Ноль'
+	end
+
+else if(@a%2=0)
+	begin
+		Set @res='Четное'
+	end
+
+else
+	begin
+		Set @res='Нечетное'
+	end
+
+return @res
+
+end
+
+</pre>
+Вызов:
+<pre style="border-color=#00FF00">
+
+Select dbo.Chet(123)
+
+</pre>
+Либо:
+<pre style="border-color=#00FF00">
+
+Declare @c varchar(25)
+
+Execute @c=Chet 28
+
+raiserror('Число %s',0,1,@c)
+
+</pre>
+</pre>
+
+<p>
+Пример 2. Необходимо написать функцию, которая вернет кол-во подсоединений к серверу в текущий момент. Для этого нам понадобится таблица SYSPROCESSES, которая находится в базе данных Master. Поле LOGINAME сохраняет имена пользователей, подсоединенных к серверу. Все что требуется - их посчитать.
+</p>
+
+<pre>
+<pre style="border-color=#00FF00">
+
+Create function UsersNum ()<span style="color=#008080">/*Если принимаемых параметров нет,
+то круглые скобки все равно должны быть указаны.*/</span>
+
+returns int
+
+as
+
+begin
+
+Declare @c int
+
+Select @c=count(Distinct(loginame)) from sysprocesses
+
+return @c
+
+end
+
+</pre>
+Вызов:
+<pre style="border-color=#00FF00">
+
+Select dbo.UsersNum ()
+
+</pre>
+</pre>
+
+<h2 style="color=#0000FF">Однозапросные функции.</h2>
+
+<p>
+Здесь необходимо вам рассказать о еще одном типе данных. Это не скалярный тип, называемый TABLE. Он используется, когда из функции, к примеру, необходимо вернуть результат, представляющий набор строк и столбцов, что и представляет из себя таблицу. При этом вы обязательно должны помнить, что для каждого поля возвращаемой таблицы, должно указываться свое имя.
+</p>
+
+<p>
+У возвращаемой таблицы должен быть следующий принцип создания: во <b>From указываются псевдонимы для используемых таблиц и во всем запросе используются эти псевдонимы. Результирующим полям также должны быть даны псевдонимы.
+</b></p>
+
+<pre style="border-color:#FF0000">
+<pre style="border-color:#00FF00">
+
+Create function SpisokKnig2 ()
+
+returns table
+
+as
+
+return (
+
+	Select b.name as book,a.firstname+' '+a.lastname as author,
+
+	c.name as Category,t.name as theme<span style="color=#008080">/*Для каждого поля указан псевдоним!!!*/</span>
+
+	from books b,authors a,categories c,themes t<span style="color=#008080">/*Для каждой таблицы указан псевдоним!!!*/</span>
+
+	where b.id_author=a.id and b.id_category=c.id
+
+	and b.id_themes=t.id
+
+       )
+
+</pre>
+Вызов:
+<pre style="border-color:#00FF00">
+
+Select * from dbo.SpisokKnig()
+
+</pre>
+</pre>
+
+<img src="img\pict9.jpg"></img>
+
+<h2 style="color=#0000FF">Многозапросные функции.</h2>
+
+<p>
+Весь смысл этих функций состоит в том, что результирующая таблица не всегда создается при помощи одного запроса. Точнее, более ни менее нужные функции всегда создаются при помощи набора запросов.
+</p>
+
+<p>
+Существует возможность создать переменную, типа Table. Для этого служит следующий синтаксис:
+</p>
+
+<pre>
+
+Declare @имя_переменной (
+
+	имя_поля1 тип_данных спецификаторы,
+
+	имя_поля2 тип_данных спецификаторы,
+
+	 ... 
+
+	имя_поляN тип_данных спецификаторы
+
+                        )
+
+</pre>
+
+<p>
+Общий синтаксис создания многозапросной функции:
+</p>
+
+<pre style="border-color:#FF0000">
+
+Create Function имя_функции
+(
+@имя_параметра1[=значение_по_умолчанию],
+@имя_параметра2[=значение_по_умолчанию],
+...
+@имя_параметраN[=значение_по_умолчанию]
+)
+
+Returns @имя_переменной TABLE {определение полей возвращаемой таблицы}
+
+[WITH ENCRYPTION]
+
+AS
+Begin
+
+ТЕЛО
+
+Сохранение в возвращаемую переменную требуемых значений
+
+RETURN
+
+End
+
+</pre>
+
+<pre>
+<pre style="border-color:#00FF00">
+Create function Books_By_Authors ()
+returns @Books_Authors table (author varchar(25), amm int)<span style="color=#008080">/*Определяем переменную и 
+тип возвращаемой таблицы!!!*/</span>
+
+as
+begin
+Declare @temp_books table (author1 varchar(25), amm1 int)<span style="color=#008080">/*Объявляем временную таблицу!!!*/</span>
+
+insert @temp_Books<span style="color=#008080">/*Записываем в нее список авторов и
+кол-во взятых студентами книг этих авторов!!!*/</span>
+
+	Select authors.firstname+' '+authors.lastname,count(s_cards.id_book)
+	from authors,books,s_cards
+	where authors.id=books.id_author and books.id=s_cards.id_book
+	group by authors.firstname,authors.lastname
+
+insert @temp_Books<span style="color=#008080">/*Дописываем в нее список авторов и
+кол-во взятых преподавателями книг этих авторов!!!*/</span>
+
+	Select authors.firstname+' '+authors.lastname,count(t_cards.id_book)
+	from authors,books,t_cards
+	where authors.id=books.id_author and books.id=t_cards.id_book
+	group by authors.firstname,authors.lastname
+
+Declare @temp_books2 table (author2 varchar(25), amm2 int)<span style="color=#008080">/*Объявляем еще одну временную таблицу!!!*/</span>
+
+insert @temp_books2<span style="color=#008080">/*Записываем в нее содержимое первой временной таблицы, 
+сумируя при этом кол-во книг одного автора!!!*/</span>
+
+	Select t.author1,sum(t.amm1)
+	from @temp_books t
+	group by t.author1
+
+insert @Books_authors<span style="color=#008080">/*Записываем содержимое в возвращаемую переменную!!!*/</span>
+	Select t.author2, t.amm2
+	from @temp_books2 t
+return
+end
+</pre>
+Вызов:
+<pre style="border-color:#00FF00">
+
+Select * from Books_By_Authors()
+
+</pre>
+</pre>
+
+<p>
+Результат:
+</p>
+
+<img src="img\pict10.jpg"></img>
+
+</Урок>

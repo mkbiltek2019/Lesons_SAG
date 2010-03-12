@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<!DOCTYPE page [
+<!ENTITY nbsp "&#160;">
+<!ENTITY пробел "&#160;">
+<!ENTITY shy "&#173;">
+<!ENTITY перенос "&#173;">
+]>
+
+<?xml:stylesheet type="text/xsl" href="../common/layout.xsl" ?>
+
+<Урок xmlns="x-schema:Schema.xml" название="SQL Server"  следующий="section01.xml" copyright="© 2005 Вадим Волянский, Алексей Туманов.">
+<h1>SQL Server </h1>
+
+<ol>
+<li><a href="section01.xml">Язык структурированных запросов SQL(понятия DDL, DML, DCL).</a></li>
+<li><a href="section02.xml">Типы данных в SQL Server.</a></li>
+<li><a href="section03.xml">Создание таблиц с использованием Enterprise Manager.</a></li>
+<li><a href="section11.xml">Импорт данных.</a></li>
+<li><a href="section04.xml">Оператор SELECT.</a>
+	<ul>
+		<li>Предложение SELECT.</li>
+		<li>Предложение FROM.</li>
+		<li>Предложение WHERE.</li>
+		<li>Предложение ORDER BY.</li>
+	</ul>
+</li>
+<li><a href="section05.xml">Ключевые слова  IN, BETWEEN, LIKE.</a></li>
+<li><a href="section07.xml">Оператор  INSERT.</a></li>
+<li><a href="section08.xml">Оператор SELECT INTO.</a></li>
+<li><a href="section09.xml">Оператор  UPDATE.</a></li>
+<li><a href="section10.xml">Оператор  DELETE.</a></li>
+<li><a href="HomeTask.xml">Домашнее задание</a></li>
+</ol>
+
+</Урок>

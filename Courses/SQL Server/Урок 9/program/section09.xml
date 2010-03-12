@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<!DOCTYPE page [
+<!ENTITY nbsp "&#160;">
+<!ENTITY пробел "&#160;">
+<!ENTITY shy "&#173;">
+<!ENTITY перенос "&#173;">
+]>
+
+<?xml:stylesheet type="text/xsl" href="../common/layout.xsl" ?>
+
+<Урок xmlns="x-schema:Schema.xml" название="Пример."  предыдущий="section08.xml" следующий="Hometask.xml" copyright="© 2005 Вадим Волянский, Алексей Туманов.">
+
+<h1 style="color:maroon">Пример.</h1>
+
+<pre style="border-color:863900">
+<pre><span style="color:#008080">/*Создаем два устройства резервного копирования.*/</span>
+Execute sp_addumpdevice 'disk', 'mybackup_log1', 'd:\mybackup_log1.bak'
+Execute sp_addumpdevice 'disk', 'mybackup1', 'd:\mybackup1.bak'
+</pre>
+<pre><span style="color:#008080">/*Проверяем, созданы ли они.*/</span>
+Execute sp_helpdevice
+<img src="img\pict17.jpg"></img>
+</pre>
+<pre><span style="color:#008080">/*Проверяем базу данных на правильность.*/</span>
+DBCC CHECKDB ('library') WITH ALL_ERRORMSGS
+<img src="img\pict18.jpg"></img>
+Внизу указано сообщение о том, что ошибок нет.
+</pre>
+<pre><span style="color:#008080">/*Производим полное резервное копирование базы данных library.*/</span>
+BACKUP DATABASE library TO mybackup1 WITH INIT
+</pre>
+<pre><span style="color:#008080">/*Производим распределенное резервное копирование базы данных library.*/</span>
+BACKUP DATABASE library TO mybackup1 WITH DIFFERENTIAL NOINIT
+</pre>
+<pre><span style="color:#008080">/*Производим резервное копирование журнала транзакций.*/</span>
+BACKUP Log library TO mybackup_log1
+</pre>
+<pre><span style="color:#008080">/*Проверяем устройства резервного копирования на считываемость.*/</span>
+RESTORE VERIFYONLY from mybackup1 
+RESTORE VERIFYONLY from mybackup_log1
+</pre>
+<pre><span style="color:#008080">/*Производим полное восстановление базы данных с возможностью
+дальнейшего восстановления по журналу транзакций.*/</span>
+RESTORE DATABASE library FROM mybackup1 WITH REPLACE, NORECOVERY
+<img src="img\pict19.jpg"></img>
+</pre>
+<pre><span style="color:#008080">/*Производим восстановление по журналу транзакций и переводим базу данных в согласованное состояние.*/</span>
+RESTORE LOG library FROM mybackup_log1 WITH FILE = 1, RECOVERY
+<img src="img\pict20.jpg"></img>
+</pre>
+База данных восстановлена и готова к использованию!!!
+</pre>
+
+</Урок>
