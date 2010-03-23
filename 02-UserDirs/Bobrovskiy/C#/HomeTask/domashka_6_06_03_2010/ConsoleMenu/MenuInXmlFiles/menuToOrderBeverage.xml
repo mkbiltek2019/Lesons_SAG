@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="iso-8859-5" ?>
+<menu>
+  <numberOfItems number="6"/>
+  <menuitem key="1" visiable="true" description="Замовити 'Каву'"></menuitem>
+  <menuitem key="2" visiable="true" description="Замовити 'Чай'"></menuitem>
+  <menuitem key="3" visiable="true" description="Замовити 'Кока колу'"></menuitem>
+  <menuitem key="4" visiable="true" description="Замовити 'Шейк'"></menuitem>
+  <menuitem key="5" visiable="true" description="Замовити 'Мiнеральну воду'"></menuitem>
+  <menuitem key="6" visiable="true" description="Повернутись до попереднього"></menuitem>
+</menu>

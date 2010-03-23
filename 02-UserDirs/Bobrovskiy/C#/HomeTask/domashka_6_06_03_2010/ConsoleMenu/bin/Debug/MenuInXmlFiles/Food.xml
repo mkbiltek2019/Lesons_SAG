@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-5" ?>
+<food>
+  <foodItemNumber number="6"/>
+  <item name="Хот дог" price="45,54" volume="100"></item>
+  <item name="Гамбургер" price="5,54" volume="100"></item>
+  <item name="Чiзбургер" price="4,54" volume="100"></item>
+  <item name="Картопля Фрi" price="5,54" volume="100"></item>
+  <item name="Рiжок морозива" price="9,54" volume="100"></item>
+  <item name="Чiпси" price="6,54" volume="100"></item>
+  <item name="Сухарики" price="5,54" volume="100"></item>
+  <item name="Анчоуси" price="9,54" volume="100"></item>
+  <item name="Пончик з цукровою пудрою" price="5,54" volume="100"></item>
+  <item name="Рогалик" price="15,64" volume="100"></item>
+  <item name="Булочка з сиром" price="52,54" volume="100"></item>
+</food>

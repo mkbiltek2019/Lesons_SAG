@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>(CSS) Каскадные таблицы стилей</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="CSS.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="logo">
+  <h1>Справочник по CSS</h1>
+  <h2>Каскадные таблици стилей</h2>
+</div>
+<div id="content">
+  <div id="sidebar">
+    <div id="menu">
+      <ul>
+        <li><a href="Page_1.html">Что такое CSS и как применить</a></li>
+        <li><a href="Page_2.html">Свойства шрифта</a></li>
+        <li><a href="Page_3.html">Цветовая гамма</a></li>
+        <li><a href="Page_4.html">Свойства текста</a></li>
+        <li class="active"><a href="Page_5.html">Свойства текста, содержащего иероглифы</a></li>
+        <li><a href="Page_6.html">Расположение элементов</a></li>
+        <li><a href="Page_7.html">Границы элементов</a></li>
+        <li><a href="Page_8.html">Классификации</a></li>
+        <li><a href="Page_9.html">Принтер</a></li>
+        <li><a href="Page_10.html">Псевдостили гиперссылок</a></li>
+        <li><a href="Page_11.html">Псевдостили текста</a></li>
+        <li><a href="Page_12.html">Правила</a></li>
+        <li><a href="Page_13.html">Единицы измерения CSS</a></li>
+      </ul>
+    </div>
+    
+  </div>
+  <div id="main">
+    <div id="welcome" class="post">
+      <h2 class="title"><a href="#">Свойства текста, содержащего иероглифы</a></h2>
+      <div class="story">
+        <div>
+          <dl><dt><a name="text_justify" id="text_justify"></a><strong>text-justify</strong> - задает тип текста по ширине.   Значение атрибута <em>text-align</em> при этом должно быть равно <em>justify</em>. </dt>
+            <dt>text-justify: <em>auto|newspaper|distribute|distribute-all-lines|distribute-center-last|inter-word|inter-ideograph|inter-cluster|kashida</em>; </dt>
+            <dd><U>text-justify: <em>auto;</em></U> - отдает управление выравниванием по   ширине на усмотрение Web-обозревателя (используется по умолчанию); </dd>
+            <dd><U>text-justify: <em>newspaper;</em></U> - выравнивает строки, изменяя   расстояние между словами и между символами; </dd>
+            <dd><U>text-justify: <em>distribute;</em></U> - аналогично <em>newspaper</em> и   предназначено для азиатских языков (тайский и пр.); </dd>
+            <dd><U>text-justify: <em>distribute-all-lines;</em></U> - аналогично <em>distribute</em> за тем исключением, что последняя строка абзаца подвергается   полному выравниванию. Предназначено для иероглифических языков; </dd>
+            <dd><U>text-justify: <em>distribute-center-last;</em></U> - не реализовано; </dd>
+            <dd><U>text-justify: <em>inter-word;</em></U> - выравнивает строки, изменяя только   расстояние между словами; </dd>
+            <dd><U>text-justify: <em>inter-ideograph;</em></U> - выравнивает строки   иероглифического текста, изменяя расстояния между словами и между иероглифами; </dd>
+            <dd><U>text-justify: <em>inter-cluster;</em></U> - выравнивает строки текста на   азиатских языках, не содержащих пробелов между словами; </dd>
+            <dd><U>text-justify: <em>kashida;</em></U> - выравнивает строки текста на арабском   языке, изменяя ширину самих символов. </dd>
+            <dt>Поддерживается IE начиная с 5.0 </dt>
+            <dt><a name="text_autospace" id="text_autospace"></a><strong>text-autospace</strong> - позволяет установить,   будет ли добавлять дополнительное пространство между фрагментами текста,   написанными на разных языках. </dt>
+            <dt>text-autospace: <em>none|ideograph-alpha|ideograph-numeric|ideograph-parenthesis|ideograph-space</em>; </dt>
+            <dd><U>text-autospace: <em>none;</em></U> - запрещает добавлять дополнительное   пространство между фрагментами текста (используется по умочанию); </dd>
+            <dd><U>text-autospace: <em>ideograph-alpha;</em></U> - добавляет дополнительное   пространство между иероглифическими и неиероглифическими (литинскими,   кириллистическими, греческими и т.д.) фрагментами текста; </dd>
+            <dd><U>text-autospace: <em>ideograph-numeric;</em></U> - добавляет дополнительное   пространство между иероглифическим текстом и цифрами; </dd>
+            <dd><U>text-autospace: <em>ideograph-parenthesis;</em></U> - добавляет   дополнительное пространство между иероглифическим текстом и круглыми скобками; </dd>
+            <dd><U>text-autospace: <em>ideograph-space;</em></U> - увеличивает ширину   пробелов, граничащих с иероглифическим текстом. </dd>
+            <dt>Поддерживается IE начиная с 5.0 </dt>
+            <dt><a name="text_kashida_space" id="text_kashida_space"></a><strong>text-kashida-space</strong> - задает процент,   на который будут расширяться символы арабского языка при выравнивании текста по   ширине. Можно использовать только, если атрибут <em>text-justify</em> равен <em>auto, distribute, kashida</em> или <em>newspaper</em>. </dt>
+            <dt>text-kashida-space: <em>{Расширение}%|inherit</em>; </dt>
+            <dd>Величина отступа может быть задана как процент свободного пространства между   символами, на которое они могут расширяться. Значение 0% (используется по   умолчанию) означает, что расширение символов недопустимо, а вместо них будет   расширяться свободное пространство; значение 100% - что допустимо расширение   только символов, но не свободного пространства. </dd>
+            <dt>Поддерживается IE начиная с 5.5 </dt>
+            <dt><a name="line_break" id="line_break"></a><strong>line-break</strong> - задает правила разрыва строк для   текста на японском языке. </dt>
+            <dt>line-break: <em>normal|strict</em>; </dt>
+            <dd><U>line-break: <em>normal;</em></U> - задает обычные правила разрыва японского   текста (значение по умолчанию); </dd>
+            <dd><U>line-break: <em>strict;</em></U> - задает строгие правила. </dd>
+            <dt>Поддерживается IE начиная с 5.0 </dt>
+            <dt><a name="word_break" id="word_break"></a><strong>word-break</strong> - включает или отключает поддержку   переноса строк по словам (а не только по пробелам) для текстов, содержащих   фрагменты на разных языках. </dt>
+            <dt>word-break: <em>normal|break-all|keep-all</em>; </dt>
+            <dd><U>word-break: <em>normal;</em></U> - разрешает строкам &quot;разрываться&quot; по слову   (используется по умолчанию); </dd>
+            <dd><U>word-break: <em>break-all;</em></U> - предназначено для текстов на   азиатских языках с небольшими иноязычными фрагментами; </dd>
+            <dd><U>word-break: <em>keep-all;</em></U> - предназначено для текстов, включающих   фрагменты на иероглифических языках. </dd>
+            <dt>Поддерживается IE начиная с 5.0 </dt>
+            <dt><a name="ime_mode" id="ime_mode"></a><strong>ime-mode</strong> - задает состояние IME (Input Method   Editor - редактор способа ввода), с помощью которого вводятся иероглифические   тексты на китайском, корейском и японском языках. Этот атрибут применяется   только для полей ввода. </dt>
+            <dt>ime-mode: <em>auto|active|inactive|disabled</em>; </dt>
+            <dd><U>ime-mode: <em>auto;</em></U> - передает управление IME Web-обозревателю   (значение по умолчанию); </dd>
+            <dd><U>ime-mode: <em>active;</em></U> - активизирует IME. Пользователь может его   деактивизировать; </dd>
+            <dd><U>ime-mode: <em>inactive;</em></U> - деактивизирует IME. Пользователь может   его активизировать; </dd>
+            <dd><U>ime-mode: <em>disabled;</em></U> - отключает IME. </dd>
+            <dt>Поддерживается IE начиная с 5.0 </dt>
+            <dt><a name="layout_flow" id="layout_flow"></a><strong>layout-flow</strong> - задает направление написания   текста: по горизонтали или по вертикали. </dt>
+            <dt>layout-flow: <em>horizontal|vertical-ideographic</em>; </dt>
+            <dd><U>layout-flow: <em>horozontal;</em></U> - задает горизонтальное направление   написания текста (значение по умолчанию); </dd>
+            <dd><U>layout-flow: <em>vertical-ideographic;</em></U> - вертикальное направление   написания текста. </dd>
+            <dt>Поддерживается IE начиная с 5.5. В настоящее время признан устаревшим;   вместо него рекомендуется использовать атрибут <em>writing-mode</em>. </dt>
+            <dt><a name="layout_grid" id="layout_grid"></a><strong>layout-grid</strong> - задает параметры разметки   элемента страницы, используемой для вывода иероглифических текстов на китайском,   корейском и японском языках. Заменяет атрибуты <em>layout-grid-char,   layout-grid-line, layout-grid-mode</em> и <em>layout-grid-type</em>. </dt>
+            <dt>layout-grid: [{<em>layout-grid-char</em>}] [{<em>layout-grid-line</em>}]   [{<em>layout-grid-mode</em>}] [{<em>layout-grid-type</em>}] </dt>
+            <dd>Значения этих атрибутов могут распологаться в любом порядке. </dd>
+            <dd>Значение по умолчанию - <em>both loose none none</em>. </dd>
+            <dt>Поддерживается IE начиная с 5.0 </dt>
+            <dt><a name="layout_grid_char" id="layout_grid_char"></a><strong>layout-grid-char</strong> - задает шаг   горизонтальной разметки элемента страницы, используемой для вывода   иероглифических текстов на китайском, корейском и японском языках. </dt>
+            <dt>layout-grid-char: <em>none|auto|{Y}{Y}%</em>; </dt>
+            <dd>Шаг разметки может быть задан как абсолютной величиной, так и процентом от   шага разметки родителя. Предопределенное значение <U><em>auto</em></U> заставляет   Web-обозреватель устанавливать шаг разметки по максимальному символу текста.   Другое предопределенное значение <U><em>none</em></U> вообще отключает разметку. </dd>
+            <dd>Значение по умолчанию - <em>none</em>. </dd>
+            <dt>Поддерживается IE начиная с 5.0 </dt>
+            <dt><a name="layout_grid_line" id="layout_grid_line"></a><strong>layout-grid-line</strong> - задает шаг   вертикальной разметки элемента страницы, используемой для вывода иероглифических   текстов на китайском, корейском и японском языках. </dt>
+            <dt>layout-grid-line: <em>none|auto|{Y}{Y}%</em>; </dt>
+            <dd>Шаг разметки может быть задан как абсолютной величиной, так и процентом от   шага разметки родителя. Предопределенное значение <U><em>auto</em></U> заставляет   Web-обозреватель устанавливать шаг разметки по максимальному символу текста.   Другое предопределенное значение <U><em>none</em></U> вообще отключает разметку. </dd>
+            <dd>Значение по умолчанию - <em>none</em>. </dd>
+            <dt>Поддерживается IE начиная с 5.0 </dt>
+            <dt><a name="layout_grid_mode" id="layout_grid_mode"></a><strong>layout-grid-mode</strong> - задает тип разметки   элемента страницы, используемой для вывода иероглифических текстов на китайском,   корейском и японском языках. </dt>
+            <dt>layout-grid-mode: <em>both|none|char|line</em>; </dt>
+            <dd><U>layout-grid-mode: <em>both;</em></U> - задает использование и   горизонтальной, и вертикальной разметок (используется по умолчанию); </dd>
+            <dd><U>layout-grid-mode: <em>none;</em></U> - отключает разметку; </dd>
+            <dd><U>layout-grid-mode: <em>char;</em></U> - задает использование горизонтальной   разметки; </dd>
+            <dd><U>layout-grid-mode: <em>line;</em></U> - задает использование вертикальной   разметки. </dd>
+            <dt>Поддерживается IE начиная с 5.0 </dt>
+            <dt><a name="layout_grid_type" id="layout_grid_type"></a><strong>layout-grid-type</strong> - задает режим   форматирования иероглифических текстов на китайском, корейском и японском языках   с использованием разметки элемента страницы. </dt>
+            <dt>layout-grid-type: <em>loose|strict|fixed</em>; </dt>
+            <dd><U>layout-grid-type: <em>loose;</em></U> - задает &quot;гибкое&quot; форматирование,   используемое для корейских и японских текстов (используется по умолчанию); </dd>
+            <dd><U>layout-grid-type: <em>strict;</em></U> - задает более строгое   форматирование, используемое для китайских, корейских и японских текстов; </dd>
+            <dd><U>layout-grid-type: <em>fixed;</em></U> - задает самое строгое   форматирование, когда символы жестко привязываются к разметке. </dd>
+            <dt>Поддерживается IE начиная с 5.0 </dt>
+          </dl>
+        </div>
+        
+      </div>
+    </div>
+    <div id="example" class="post">
+      <h2 class="title"><a href="Page_4.html">Пред...</a>|||<a href="Page_5.html">Начало страницы</a>|||<a href="Page_6.html">След...</a></h2>
+      
+    </div>
+  </div>
+  <div id="extra" style="clear: both;"></div>
+</div>
+<div id="footer">
+  <p id="legal">Copyright &copy; 2009 All Rights Reserved. Designed by 4rSt.</p>
+  <p id="links"><a href=index.html>Home</a> | <a href=mailto:4rasta@gmail.com>Webmaster</a></p>
+</div>
+</body>
+</html>

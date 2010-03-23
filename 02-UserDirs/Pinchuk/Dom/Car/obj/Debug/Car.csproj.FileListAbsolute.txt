@@ -1,0 +1,5 @@
+D:\Документи\КА ШАГ\REPOSITORIY\C#\Dom\Car\bin\Debug\Car.exe
+D:\Документи\КА ШАГ\REPOSITORIY\C#\Dom\Car\bin\Debug\Car.pdb
+D:\Документи\КА ШАГ\REPOSITORIY\C#\Dom\Car\obj\Debug\ResolveAssemblyReference.cache
+D:\Документи\КА ШАГ\REPOSITORIY\C#\Dom\Car\obj\Debug\Car.exe
+D:\Документи\КА ШАГ\REPOSITORIY\C#\Dom\Car\obj\Debug\Car.pdb

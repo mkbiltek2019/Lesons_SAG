@@ -1,0 +1,35 @@
+<html>
+
+<head>
+
+	<title>Math</title>
+
+	<script>		
+	
+		function operation() {
+			var enteredNumberElement = document.getElementById("enteredNumber");
+			var resultNumberElement = document.getElementById("resultNumber");
+			var v1 = enteredNumberElement.value;
+			var v2 = Math.round(v1);
+			resultNumberElement.innerText = v2;
+		}
+		
+		function onKeyDown() {
+			if (event.keyCode == 13) {
+				operation();
+			}
+		}
+				
+	</script>
+	
+</head>
+
+<body>
+
+	<input type="text" id="enteredNumber" onkeydown='onKeyDown()' />
+	
+	<div id="resultNumber"></div>
+	
+</body>
+
+<html>

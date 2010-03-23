@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript" src="image/calc.js"> </script> 
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title> Image Viewer </title>
+<meta name="author" content="Bobrovskiy Valeriy" />
+<link rel="stylesheet" type="text/css" href="image/styles.css" />
+<script type="text/javascript" src="dom.js" > </script> 
+</head>
+<body  onload="resett();" onblur="resett();" >
+<div style="width:100%; height:100%;">
+
+<table width="1178" height="615" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+  <td width="20" align="left" valign="top" class="marg"><img  src="image/header_top_left.jpg" alt="top_left" name="main_16" hspace="0" vspace="0" align="left" id="main_16" /></td>
+  <td width="1138" height="29" align="left" valign="top" class="top_img">&nbsp;</td>
+  <td width="20" align="right" valign="top" class="marg" ><img src="image/header_top_right.jpg" alt="top_right" hspace="0" vspace="0" align="right" id="main_4" /></td>
+</tr>	
+	<tr>
+	  <td height="164"  align="right" valign="top" ><div align="left"><img src="image/header_lr_bg.jpg"  alt="dd" hspace="0" vspace="0" align="left" id="main_2" /></div></td>
+      
+	  <td  align="center" valign="top" class="back_img"><p align="right"  class="cell">Simple Image Gallery</p></td>
+	  
+      <td  align="right" valign="top"  class="marg" ><div align="right"><img src="image/header_r_bg.jpg" alt="kkk" hspace="0" vspace="0" align="right"    id="main_" /></div></td>
+	</tr>
+	<tr>
+	  <td height="360"  align="right" valign="top" >&nbsp;</td>
+	  <td  align="center" valign="top" class="marg">
+	  
+	  <i id="info">Загрузка изображений...</i>
+    <p align="center"><br />
+      
+      <a  href="#" name="mainLink" class="style1" id="imageLink"><img border="0" src="images/gold.gif" name="picture" id="image" onmouseout="smallImage();" onclick="openInWindow();"  onmouseover="changeImage();" /> </a>  </p>
+    <p align="center"><br />
+      
+        <a href="#" onclick="return prevImage();" ><img src="images/prev.gif"  width="83" height="39" border="0" alt="<-Prev->" /> </a>
+      
+        <a href="#" onclick="return nextImage();" ><img src="images/next.gif"  width="60" height="39" border="0" alt="<-Next->" /> </a>
+		
+	  
+	  </td>
+	  <td  align="right" valign="top"  class="marg" >&nbsp;</td>
+	</tr>  
+	<tr >
+	  <td height="51" align="center" valign="top" ><div align="left"><img src="image/top_menu_l_bg.jpg" alt="dd" hspace="0" vspace="0" align="left" id="main_2" /></div></td>
+      <td height="51" align="center" valign="top" class="menu_img">&nbsp;</td>
+      <td height="51" align="center" valign="top" ><div align="right"><img style="margin-top:0em" src="image/top_menu_r_bg.jpg" alt="kkk" hspace="0" vspace="0" align="right" id="main_" /></div></td>
+	</tr>  
+
+</table>
+
+</div>
+
+</body>
+</html>

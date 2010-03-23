@@ -1,0 +1,5 @@
+D:\Projects\Useless Stuff\ASCIITank\bin\Debug\ASCIITank.exe
+D:\Projects\Useless Stuff\ASCIITank\bin\Debug\ASCIITank.pdb
+D:\Projects\Useless Stuff\ASCIITank\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\Useless Stuff\ASCIITank\obj\Debug\ASCIITank.exe
+D:\Projects\Useless Stuff\ASCIITank\obj\Debug\ASCIITank.pdb
