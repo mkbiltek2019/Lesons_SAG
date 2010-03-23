@@ -1,5 +1,0 @@
-C:\Users\Администратор\Documents\Visual Studio 2008\Projects\Cars\Cars\bin\Debug\Cars.exe
-C:\Users\Администратор\Documents\Visual Studio 2008\Projects\Cars\Cars\bin\Debug\Cars.pdb
-C:\Users\Администратор\Documents\Visual Studio 2008\Projects\Cars\Cars\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Администратор\Documents\Visual Studio 2008\Projects\Cars\Cars\obj\Debug\Cars.exe
-C:\Users\Администратор\Documents\Visual Studio 2008\Projects\Cars\Cars\obj\Debug\Cars.pdb

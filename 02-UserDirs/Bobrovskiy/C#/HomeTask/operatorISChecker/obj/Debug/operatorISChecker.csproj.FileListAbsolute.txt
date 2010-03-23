@@ -1,5 +1,0 @@
-E:\my\!!!Shag_lessons\C#\hometask\domashka_3\operatorISChecker\obj\Debug\ResolveAssemblyReference.cache
-E:\my\!!!Shag_lessons\C#\hometask\domashka_3\operatorISChecker\bin\Debug\operatorISChecker.exe
-E:\my\!!!Shag_lessons\C#\hometask\domashka_3\operatorISChecker\bin\Debug\operatorISChecker.pdb
-E:\my\!!!Shag_lessons\C#\hometask\domashka_3\operatorISChecker\obj\Debug\operatorISChecker.exe
-E:\my\!!!Shag_lessons\C#\hometask\domashka_3\operatorISChecker\obj\Debug\operatorISChecker.pdb

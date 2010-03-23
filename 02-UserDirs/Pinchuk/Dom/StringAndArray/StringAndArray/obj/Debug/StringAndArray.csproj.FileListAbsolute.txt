@@ -1,7 +1,0 @@
-D:\Документи\КА ШАГ\REPOSITORIY\C#\Dom\StringAndArray\StringAndArray\bin\Debug\StringAndArray.exe
-D:\Документи\КА ШАГ\REPOSITORIY\C#\Dom\StringAndArray\StringAndArray\bin\Debug\StringAndArray.pdb
-D:\Документи\КА ШАГ\REPOSITORIY\C#\Dom\StringAndArray\StringAndArray\obj\Debug\ResolveAssemblyReference.cache
-D:\Документи\КА ШАГ\REPOSITORIY\C#\Dom\StringAndArray\StringAndArray\obj\Debug\StringAndArray.exe
-D:\Документи\КА ШАГ\REPOSITORIY\C#\Dom\StringAndArray\StringAndArray\obj\Debug\StringAndArray.pdb
-D:\Virtual PC\Pinchuk\C#\Dom\StringAndArray\StringAndArray\obj\Debug\StringAndArray.exe
-D:\Virtual PC\Pinchuk\C#\Dom\StringAndArray\StringAndArray\obj\Debug\StringAndArray.pdb
