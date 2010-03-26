@@ -1,0 +1,5 @@
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\CockroachRaces\bin\Debug\CockroachRaces.exe
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\CockroachRaces\bin\Debug\CockroachRaces.pdb
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\CockroachRaces\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\CockroachRaces\obj\Debug\CockroachRaces.exe
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\CockroachRaces\obj\Debug\CockroachRaces.pdb

@@ -1,0 +1,141 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:PrintConsole.cs" caret="0" fromTop="0" />
+      <File id="d:&amp;/f:ICockroach.cs/l:C!?Users?Admin?Documents?Visual Studio 2008?Projects?CockroachRaces?ICockroach.cs" caret="0" fromTop="0" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:Commentator.cs" caret="0" fromTop="0" />
+      <File id="d:&amp;/f:Statistik.cs/l:C!?Users?Admin?Documents?Visual Studio 2008?Projects?CockroachRaces?Statistik.cs" caret="0" fromTop="0" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:Marathon.cs" caret="649" fromTop="22" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:Cockroach.cs" caret="765" fromTop="32" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:Program.cs" caret="427" fromTop="14" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:Program.cs" caret="228" fromTop="8" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:Marathon.cs" caret="674" fromTop="22" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:PrintConsole.cs" caret="1211" fromTop="31" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:PrintConsole.cs" caret="1666" fromTop="37" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:PrintConsole.cs" caret="1323" fromTop="26" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:PrintConsole.cs" caret="1444" fromTop="30" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:PrintConsole.cs" caret="743" fromTop="11" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:PrintConsole.cs" caret="865" fromTop="15" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:PrintConsole.cs" caret="671" fromTop="9" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:PrintConsole.cs" caret="658" fromTop="12" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:PrintConsole.cs" caret="1016" fromTop="31" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:PrintConsole.cs" caret="538" fromTop="17" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:PrintConsole.cs" caret="1175" fromTop="36" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:PrintConsole.cs" caret="300" fromTop="12" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:PrintConsole.cs" caret="607" fromTop="18" />
+      <File id="d:&amp;/f:ICockroach.cs/l:C!?Users?Admin?Documents?Visual Studio 2008?Projects?CockroachRaces?ICockroach.cs" caret="154" fromTop="7" />
+      <File id="d:&amp;/f:ICockroach.cs/l:C!?Users?Admin?Documents?Visual Studio 2008?Projects?CockroachRaces?ICockroach.cs" caret="152" fromTop="7" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:Marathon.cs" caret="170" fromTop="7" />
+      <File id="d:&amp;/f:Statistik.cs/l:C!?Users?Admin?Documents?Visual Studio 2008?Projects?CockroachRaces?Statistik.cs" caret="170" fromTop="7" />
+      <File id="d:&amp;/f:ICockroach.cs/l:C!?Users?Admin?Documents?Visual Studio 2008?Projects?CockroachRaces?ICockroach.cs" caret="161" fromTop="7" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:Commentator.cs" caret="151" fromTop="7" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:PrintConsole.cs" caret="157" fromTop="7" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:Cockroach.cs" caret="562" fromTop="26" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:Cockroach.cs" caret="754" fromTop="30" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:Cockroach.cs" caret="253" fromTop="11" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:Marathon.cs" caret="928" fromTop="22" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:Marathon.cs" caret="384" fromTop="13" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:Marathon.cs" caret="553" fromTop="20" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:Cockroach.cs" caret="136" fromTop="7" />
+      <File id="125A22F2-025B-435C-B2F6-E352595580D4/f:Program.cs" caret="414" fromTop="14" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="int" priority="10" />
+      <Item value="set" priority="1" />
+      <Item value="get" priority="1" />
+      <Item value="void" priority="7" />
+      <Item value="public" priority="12" />
+      <Item value="List" priority="1" />
+      <Item value="Cockroach" priority="7" />
+      <Item value="event" priority="1" />
+      <Item value="delegate" priority="0" />
+      <Item value="object" priority="0" />
+      <Item value="Marathon" priority="4" />
+      <Item value="marathon" priority="2" />
+      <Item value="new" priority="8" />
+      <Item value="Distance" priority="0" />
+      <Item value="List&lt;Cockroach&gt;" priority="3" />
+      <Item value="static" priority="3" />
+      <Item value="string" priority="2" />
+      <Item value="forr" priority="0" />
+      <Item value="count" priority="0" />
+      <Item value="Console" priority="11" />
+      <Item value="symbol" priority="2" />
+      <Item value="PrintConsole" priority="0" />
+      <Item value="PrintSymbol" priority="0" />
+      <Item value="for" priority="2" />
+      <Item value="WriteSymbolNewLine" priority="0" />
+      <Item value="PositionCursorSet" priority="1" />
+      <Item value="IAppDomainSetup" priority="0" />
+      <Item value="interface" priority="0" />
+      <Item value="ICockroach" priority="0" />
+      <Item value="abstract" priority="0" />
+      <Item value="IMaratpone" priority="0" />
+      <Item value="virtual" priority="0" />
+      <Item value="ICockroachRacesMaratpone" priority="0" />
+      <Item value="foreach" priority="1" />
+      <Item value="var" priority="0" />
+      <Item value="list" priority="2" />
+      <Item value="struct" priority="0" />
+      <Item value="const" priority="0" />
+      <Item value="readonly" priority="0" />
+      <Item value="PositionConcroach" priority="1" />
+      <Item value="positionConcroach" priority="1" />
+      <Item value="Speed" priority="0" />
+      <Item value="Random" priority="1" />
+      <Item value="random" priority="1" />
+      <Item value="CockroachList" priority="1" />
+      <Item value="cockroach" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Console">
+      <Item value="Write" priority="2" />
+      <Item value="WindowWidth" priority="0" />
+      <Item value="CursorTop" priority="3" />
+      <Item value="CursorLeft" priority="0" />
+      <Item value="WriteLine" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@CockroachRaces.PrintConsole">
+      <Item value="PrintRacetrack" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Length" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CockroachRaces.Cockroach">
+      <Item value="Speed" priority="0" />
+      <Item value="VisualCockroch" priority="0" />
+      <Item value="CockroachList" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CockroachRaces.Cockroach+PositionConcroach">
+      <Item value="X" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Random">
+      <Item value="Next" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CockroachRaces.Marathon">
+      <Item value="Cockroach" priority="0" />
+      <Item value="Draw" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Indexer" priority="0" />
+      <Item value="Add" priority="1" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
