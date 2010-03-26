@@ -121,7 +121,7 @@ namespace Helpers.ConsoleMenu
             Console.WriteLine("└───────────────────────────────────────────┘");
         }
 
-        public MenuResult Display()
+        public MenuResult Display(string s)
         {
             Console.CursorVisible = false;
 
@@ -147,7 +147,7 @@ namespace Helpers.ConsoleMenu
                         } break;
                     case MyConsoleKeys.SelectMenuItemKey:
                         {
-                            myRes = ((ConsoleMenuItem)_menuItems[SelectedIndex]).Action();
+                            myRes = ((ConsoleMenuItem)_menuItems[SelectedIndex]).Action(string.Empty);
                         } break;
                 }
 

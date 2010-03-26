@@ -1,6 +1,6 @@
 ﻿namespace Helpers.ConsoleMenu
 {
-    public delegate MenuResult MenuFunctionHandler();
+    public delegate MenuResult MenuFunctionHandler(string s);
 
     public class ConsoleMenuItem
     {

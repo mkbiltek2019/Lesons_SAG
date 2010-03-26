@@ -1,29 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Collections;
+﻿using System.Collections;
+using FastFoodMagazine.Managers.CommanderHierarhy;
+using FastFoodMagazine.Managers.WareHouse;
+using FastFoodMagazine.MyProduct;
+using FastFoodMagazine.XmlReader;
 
-using Helpers.Abstraction;
-using Helpers.Console;
-using Helpers.MyXmlReaderSpace;
-using Helpers.MyProduct;
-using Helpers.MyOrder;
-using Helpers.MyCommand;
+using Helpers.ConsoleMenu;
 
 namespace ConsoleMenuSample
 {
     class Program
     {
-        private static void HandlersToMenuItemsBinding(ArrayList itemsArray, MenuFunctionHandler[] handlersArray)
+        private static void HandlersToMenuItemsBinding(IList itemsArray, MenuFunctionHandler[] handlersArray)
         {
             for (int i = 0; i < itemsArray.Count; i++)
             {
-                ((ConsoleMenuItem)itemsArray[i]).Action = (MenuFunctionHandler)handlersArray[i];
+                ((ConsoleMenuItem)itemsArray[i]).Action = handlersArray[i];
             }
         }
 
-        private static MenuResult MenuExit()
+        private static MenuResult MenuExit(string s)
         {
             System.Console.WriteLine("\n");
             System.Console.WriteLine("┌─────────────────────────────────────────────────────────┐");
@@ -34,23 +29,34 @@ namespace ConsoleMenuSample
             return MenuResult.Exit;
         }
 
-        static void Main(string[] args)
-        {	
-            #region Create product Warehouse			
-			
-			MyXmlReader beverage = new MyXmlReader(@"MenuInXmlFiles\Beverage.xml");
-			MyXmlReader food = new MyXmlReader(@"MenuInXmlFiles\Food.xml");
 
-			ProductWarehouse warehouse = new ProductWarehouse(
+        static void Main()
+        {
+            string[] foodStaff = new string[] { @"Хот", @"Гамб", @"Чiзб", @"Карт", @"Було" };
+
+            string[] beverageStuff = new string[] {@"Кава", @"Чай", @"Кока", @"Шейк", @"Вода" };
+
+            #region Create product Warehouse
+
+            MyXmlReader beverage = new MyXmlReader(@"MenuInXmlFiles\Beverage.xml");
+            MyXmlReader food = new MyXmlReader(@"MenuInXmlFiles\Food.xml");
+
+            ProductWarehouse warehouse = new ProductWarehouse(
             food.ReadProductListFromXmlFileWithSpecificFormatAndReturnItLikeArray(Products.Food),
             beverage.ReadProductListFromXmlFileWithSpecificFormatAndReturnItLikeArray(Products.Beverage));
-			
-			#endregion
 
-            #region Create menu commander
+            #endregion
 
-            Command menuCommander = new Command();
-            menuCommander.InitializeWarehouse(warehouse);           
+            #region Create menu commanders
+
+            Commander menuCommander = new Commander();
+
+            WarehouseCommander warehouseCommander = new WarehouseCommander();
+            warehouseCommander.InitializeWarehouse(warehouse);
+           
+            BeverageCommander menuBeverageCommander = new BeverageCommander();
+
+            FoodCommander menuFoodCommander = new FoodCommander();
 
             #endregion
 
@@ -58,31 +64,31 @@ namespace ConsoleMenuSample
 
             MyXmlReader xmlMenu1 = new MyXmlReader(@"MenuInXmlFiles\AdministratorAddAndShowMenu.xml");
             ArrayList itemsArray1 = xmlMenu1.ReadXmlMenuFileWithSpecificFormatAndReturnListOfMenuItems();
-		           
+
             MenuFunctionHandler[] handlersArray1 = new MenuFunctionHandler[] { 
-                menuCommander.ViewFoodList,//show food list
-                menuCommander.ViewBeverageList,//show beverage list
-                menuCommander.AddToFood,//add to food 
-                menuCommander.AddToBeverage,//add to beverage
+                warehouseCommander.ViewFoodList,//show food list
+                warehouseCommander.ViewBeverageList,//show beverage list
+                warehouseCommander.AddToFood,//add to food 
+                warehouseCommander.AddToBeverage,//add to beverage
                 MenuExit
             };
 
             HandlersToMenuItemsBinding(itemsArray1, handlersArray1);
             ConsoleMenu AdministratorAddAndShowMenu = new ConsoleMenu(itemsArray1);
-           
+
             #endregion
 
             #region menuToOrderFood
 
             MyXmlReader xmlMenu3 = new MyXmlReader(@"MenuInXmlFiles\menuToOrderFood.xml");
-            ArrayList itemsArray3 = xmlMenu3.ReadXmlMenuFileWithSpecificFormatAndReturnListOfMenuItems();            
-			
+            ArrayList itemsArray3 = xmlMenu3.ReadXmlMenuFileWithSpecificFormatAndReturnListOfMenuItems();
+
             MenuFunctionHandler[] handlersArray3 = new MenuFunctionHandler[] { 
-                menuCommander.OrderHotDog,
-                menuCommander.OrderHamburger,
-                menuCommander.OrderCheesburger,
-                menuCommander.OrderFriedPotato,
-                menuCommander.OrderBakery,                
+                delegate(string s) { return menuFoodCommander.OrderFoodByName(foodStaff[0]); },
+                delegate(string s) { return menuFoodCommander.OrderFoodByName(foodStaff[1]); },
+                delegate(string s) { return menuFoodCommander.OrderFoodByName(foodStaff[2]); },
+                delegate(string s) { return menuFoodCommander.OrderFoodByName(foodStaff[3]); },
+                delegate(string s) { return menuFoodCommander.OrderFoodByName(foodStaff[4]); },                
                 MenuExit
             };
 
@@ -94,14 +100,14 @@ namespace ConsoleMenuSample
             #region menuToOrderBeverage
 
             MyXmlReader xmlMenu2 = new MyXmlReader(@"MenuInXmlFiles\menuToOrderBeverage.xml");
-            ArrayList itemsArray2 = xmlMenu2.ReadXmlMenuFileWithSpecificFormatAndReturnListOfMenuItems();			
-			
+            ArrayList itemsArray2 = xmlMenu2.ReadXmlMenuFileWithSpecificFormatAndReturnListOfMenuItems();
+
             MenuFunctionHandler[] handlersArray2 = new MenuFunctionHandler[] { 
-                menuCommander.OrderCoffee,
-                menuCommander.OrderTea,
-                menuCommander.OrderCocaCola,
-                menuCommander.OrderShake,
-                menuCommander.OrderMineralWater,                
+                delegate(string s) { return menuBeverageCommander.OrderBeverageByName(beverageStuff[0]); }, 
+                delegate(string s) { return menuBeverageCommander.OrderBeverageByName(beverageStuff[1]); },                
+                delegate(string s) { return menuBeverageCommander.OrderBeverageByName(beverageStuff[2]); },                
+                delegate(string s) { return menuBeverageCommander.OrderBeverageByName(beverageStuff[3]); },                
+                delegate(string s) { return menuBeverageCommander.OrderBeverageByName(beverageStuff[4]); },
                 MenuExit
             };
 
@@ -135,20 +141,17 @@ namespace ConsoleMenuSample
 
             MenuFunctionHandler[] handlersArray = new MenuFunctionHandler[] { 
                 menuToOrderFoodAndBeverage.Display, //order food and beverage
-                menuCommander.ShowOrder, //show Order
-                menuCommander.ShowAdministratorMenu , // authentificate and go to admin menu
+                menuCommander.ViewOrder, //show Order
+                menuCommander.AdministratorMenuAuthentification , // authentificate and go to admin menu
                 MenuExit
             };
 
             HandlersToMenuItemsBinding(itemsArray0, handlersArray);
             ConsoleMenu mainMenu = new ConsoleMenu(itemsArray0);
 
-            mainMenu.Display();
+            mainMenu.Display(string.Empty);
 
             #endregion
-
         }
-
-
     }
 }

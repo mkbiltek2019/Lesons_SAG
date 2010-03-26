@@ -1,6 +1,7 @@
 ﻿using System;
-
+using System.Collections;
 using FastFoodMagazine.Managers.WareHouse;
+using FastFoodMagazine.MyProduct;
 using FastFoodMagazine.MyProduct.MyBeverage;
 using FastFoodMagazine.MyProduct.Food;
 using Helpers.ConsoleMenu;
@@ -112,7 +113,7 @@ namespace FastFoodMagazine.Managers.CommanderHierarhy
         protected string curentLogin = string.Empty;
         protected string currentPasswd = string.Empty;
         protected static ProductWarehouse productWarehouse = new ProductWarehouse();
-        protected static Order currentOrder = new Order();
+        private static Order currentOrder = new Order();
 
         #region Properties description
 
@@ -142,12 +143,12 @@ namespace FastFoodMagazine.Managers.CommanderHierarhy
             }
         }
 
-        public MenuResult ShowAdministratorMenu()
+        public MenuResult AdministratorMenuAuthentification(string s)
         {
             LoginPasswordCheck();
             if (AuthentificationSuccessful)
             {
-                return MenuHandler.Invoke();
+                return MenuHandler.Invoke(string.Empty);
             }
             else
             {
@@ -159,7 +160,7 @@ namespace FastFoodMagazine.Managers.CommanderHierarhy
         
         #region Order manipulation
 
-        public MenuResult ShowOrder()
+        public MenuResult ViewOrder(string s)
         {
             Console.Clear();
             currentOrder.ShowOrder();
@@ -169,5 +170,45 @@ namespace FastFoodMagazine.Managers.CommanderHierarhy
 
         #endregion
 
+        #region Base methods for BaverageCommander and FoodCommander
+
+        private ConsoleMenu subMenu; //can't be deleted
+
+        private MenuResult GetProductAndAddToOrder(string s)
+        {
+            currentOrder.AddProductToOrder(new Product(subMenu.SelectedMenuItem.Key, subMenu.SelectedMenuItem.Description));
+            return MenuResult.Proceed;
+        }
+
+        protected ArrayList SearchForFoodByNameBase(string productName, ArrayList productListForSearch)
+        {
+            ArrayList result = new ArrayList();
+
+            for (int i = 0; i < productListForSearch.Count; i++)
+            {
+                if (((Product)productListForSearch[i]).Name.Substring(0, productName.Length) == (productName))
+                {
+                    result.Add(new ConsoleMenuItem(((Product)productListForSearch[i]).Price,
+                                                 ((Product)productListForSearch[i]).Name,
+                                                  true, GetProductAndAddToOrder));
+                }
+            }
+
+            ConsoleMenuItem exit = new ConsoleMenuItem(" ",
+                                                       "Повернутись до попереднього меню", true,
+                                                       delegate(string s) { return MenuResult.Exit; });
+
+            result.Add(exit);
+            return result;
+        }
+
+        protected MenuResult DisplaySubMenu(ArrayList temp)
+        {
+            subMenu = new ConsoleMenu(temp);
+            subMenu.Display(string.Empty);
+            return MenuResult.Proceed;
+        }
+
+        #endregion
     }
 }

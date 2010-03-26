@@ -67,6 +67,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FastFoodMagazine\FastFoodMagazine.csproj">
+      <Project>{8FE1A876-9FE7-4F42-8C84-FE79ECF34E2C}</Project>
+      <Name>FastFoodMagazine</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Helpers\Helpers.csproj">
       <Project>{E43B37E3-61F0-4B7B-B3E0-65C86469D7C7}</Project>
       <Name>Helpers</Name>
@@ -81,9 +85,6 @@
     <Content Include="MenuInXmlFiles\menuToOrderBeverage.xml" />
     <Content Include="MenuInXmlFiles\menuToOrderFood.xml" />
     <Content Include="MenuInXmlFiles\AdministratorAddAndShowMenu.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">

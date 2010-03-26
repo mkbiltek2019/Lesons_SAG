@@ -2,6 +2,6 @@
 {
     public interface IMenu
     {
-        MenuResult Display();
+        MenuResult Display(string s);
     }
 }

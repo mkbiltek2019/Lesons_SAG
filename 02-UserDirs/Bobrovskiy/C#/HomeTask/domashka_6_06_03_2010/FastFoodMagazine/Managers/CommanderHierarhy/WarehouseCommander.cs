@@ -14,7 +14,7 @@ namespace FastFoodMagazine.Managers.CommanderHierarhy
             productWarehouse = warehouse;
         }
 
-        public MenuResult ViewFoodList()
+        public MenuResult ViewFoodList(string s)
         {
             Console.Clear();
             productWarehouse.ConsoleShowFoodList();
@@ -22,7 +22,7 @@ namespace FastFoodMagazine.Managers.CommanderHierarhy
             return MenuResult.Proceed;
         }
 
-        public MenuResult ViewBeverageList()
+        public MenuResult ViewBeverageList(string s)
         {
             Console.Clear();
             productWarehouse.ConsoleShowBeverageList();
@@ -30,7 +30,7 @@ namespace FastFoodMagazine.Managers.CommanderHierarhy
             return MenuResult.Proceed;
         }
 
-        public MenuResult AddToFood()
+        public MenuResult AddToFood(string s)
         {
             Console.Clear();
             productWarehouse.AddProductToFood(ConsoleSafeInput.FoodData());
@@ -38,7 +38,7 @@ namespace FastFoodMagazine.Managers.CommanderHierarhy
             return MenuResult.Proceed;
         }
 
-        public MenuResult AddToBeverage()
+        public MenuResult AddToBeverage(string s)
         {
             Console.Clear();
             productWarehouse.AddProductToBeverage(ConsoleSafeInput.BeverageData());
