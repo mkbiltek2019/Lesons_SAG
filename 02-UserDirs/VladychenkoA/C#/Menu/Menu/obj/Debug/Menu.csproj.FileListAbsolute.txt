@@ -1,0 +1,15 @@
+C:\Users\Александр Николаевич\Documents\Visual Studio 2008\Projects\Menu\Menu\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Александр Николаевич\Documents\Visual Studio 2008\Projects\Menu\Menu\bin\Debug\Menu.exe
+C:\Users\Александр Николаевич\Documents\Visual Studio 2008\Projects\Menu\Menu\bin\Debug\Menu.pdb
+C:\Users\Александр Николаевич\Documents\Visual Studio 2008\Projects\Menu\Menu\obj\Debug\Menu.exe
+C:\Users\Александр Николаевич\Documents\Visual Studio 2008\Projects\Menu\Menu\obj\Debug\Menu.pdb
+D:\Учебная\13НС-1СПр\Students\VladychenkoA\C#\Menu\Menu\obj\Debug\Menu.exe
+D:\Учебная\13НС-1СПр\Students\VladychenkoA\C#\Menu\Menu\obj\Debug\Menu.pdb
+D:\Учебная\13НС-1СПр\Students\VladychenkoA\C#\Menu\Menu\obj\Debug\ResolveAssemblyReference.cache
+D:\Учебная\13НС-1СПр\Students\VladychenkoA\C#\Menu\Menu\bin\Debug\Menu.exe
+D:\Учебная\13НС-1СПр\Students\VladychenkoA\C#\Menu\Menu\bin\Debug\Menu.pdb
+D:\Учебная\13НС-1СПр-1\Students\VladychenkoA\C#\Menu\Menu\obj\Debug\Menu.exe
+D:\Учебная\13НС-1СПр-1\Students\VladychenkoA\C#\Menu\Menu\obj\Debug\Menu.pdb
+D:\Учебная\13НС-1СПр-1\Students\VladychenkoA\C#\Menu\Menu\bin\Debug\Menu.exe
+D:\Учебная\13НС-1СПр-1\Students\VladychenkoA\C#\Menu\Menu\bin\Debug\Menu.pdb
+D:\Учебная\13НС-1СПр-1\Students\VladychenkoA\C#\Menu\Menu\obj\Debug\ResolveAssemblyReference.cache
