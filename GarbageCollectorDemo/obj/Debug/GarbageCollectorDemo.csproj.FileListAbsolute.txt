@@ -1,0 +1,5 @@
+C:\Documents and Settings\user\My Documents\Visual Studio 2008\Projects\GarbageCollectorDemo\bin\Debug\GarbageCollectorDemo.exe
+C:\Documents and Settings\user\My Documents\Visual Studio 2008\Projects\GarbageCollectorDemo\bin\Debug\GarbageCollectorDemo.pdb
+C:\Documents and Settings\user\My Documents\Visual Studio 2008\Projects\GarbageCollectorDemo\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\user\My Documents\Visual Studio 2008\Projects\GarbageCollectorDemo\obj\Debug\GarbageCollectorDemo.exe
+C:\Documents and Settings\user\My Documents\Visual Studio 2008\Projects\GarbageCollectorDemo\obj\Debug\GarbageCollectorDemo.pdb
