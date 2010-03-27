@@ -9,8 +9,8 @@ namespace GarbageCollectorDemo
     {
         static void Main(string[] args)
         {
-            //int maxCount = 100000000;
-            //GCVictim[] gcVictim = new GCVictim[maxCount];
+            int maxCount = 100000000;
+            GCVictim[] gcVictim = new GCVictim[maxCount];
             //for (int i = 0; i < maxCount; i++)
             //{
             //    gcVictim[i] = new GCVictim();
