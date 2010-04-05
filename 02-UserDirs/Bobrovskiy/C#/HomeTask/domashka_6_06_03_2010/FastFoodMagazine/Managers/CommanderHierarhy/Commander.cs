@@ -172,11 +172,11 @@ namespace FastFoodMagazine.Managers.CommanderHierarhy
 
         #region Base methods for BaverageCommander and FoodCommander
 
-        private ConsoleMenu subMenu; //can't be deleted
+        private ConsoleMenu subMenu; 
 
         private MenuResult GetProductAndAddToOrder(string s)
         {
-            currentOrder.AddProductToOrder(new Product(subMenu.SelectedMenuItem.Key, subMenu.SelectedMenuItem.Description));
+            currentOrder.AddProductToOrder(new Product(subMenu.SelectedMenuItem.Key, subMenu.SelectedMenuItem.Description, string.Empty));
             return MenuResult.Proceed;
         }
 

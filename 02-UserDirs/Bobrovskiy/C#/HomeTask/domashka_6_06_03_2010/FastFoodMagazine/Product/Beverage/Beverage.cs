@@ -14,7 +14,7 @@
         }
 
         public Beverage(string name, string price, string capacity)
-            : base(name, price)
+            : base(name, price, capacity)
         {
             Capacity = capacity;
         }

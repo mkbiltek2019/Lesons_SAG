@@ -15,7 +15,7 @@ namespace FastFoodMagazine.MyProduct.Food
         }
 
         public Food(string name, string price, string weight)
-            : base(name, price)
+            : base(name, price, weight)
         {
             Weight = weight;
         }

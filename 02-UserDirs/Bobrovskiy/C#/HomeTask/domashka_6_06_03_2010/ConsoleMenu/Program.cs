@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using FastFoodMagazine.Managers.CommanderHierarhy;
 using FastFoodMagazine.Managers.WareHouse;
-using FastFoodMagazine.MyProduct;
 using FastFoodMagazine.XmlReader;
 
 using Helpers.ConsoleMenu;
@@ -29,7 +28,6 @@ namespace ConsoleMenuSample
             return MenuResult.Exit;
         }
 
-
         static void Main()
         {
             string[] foodStaff = new string[] { @"Хот", @"Гамб", @"Чiзб", @"Карт", @"Було" };
@@ -42,8 +40,8 @@ namespace ConsoleMenuSample
             MyXmlReader food = new MyXmlReader(@"MenuInXmlFiles\Food.xml");
 
             ProductWarehouse warehouse = new ProductWarehouse(
-            food.ReadProductListFromXmlFileWithSpecificFormatAndReturnItLikeArray(Products.Food),
-            beverage.ReadProductListFromXmlFileWithSpecificFormatAndReturnItLikeArray(Products.Beverage));
+            food.ReadProductData(),
+            beverage.ReadProductData());
 
             #endregion
 
@@ -63,7 +61,7 @@ namespace ConsoleMenuSample
             #region AdministratorAddAndShowMenu
 
             MyXmlReader xmlMenu1 = new MyXmlReader(@"MenuInXmlFiles\AdministratorAddAndShowMenu.xml");
-            ArrayList itemsArray1 = xmlMenu1.ReadXmlMenuFileWithSpecificFormatAndReturnListOfMenuItems();
+            ArrayList itemsArray1 = xmlMenu1.ReadMenuData();
 
             MenuFunctionHandler[] handlersArray1 = new MenuFunctionHandler[] { 
                 warehouseCommander.ViewFoodList,//show food list
@@ -81,7 +79,7 @@ namespace ConsoleMenuSample
             #region menuToOrderFood
 
             MyXmlReader xmlMenu3 = new MyXmlReader(@"MenuInXmlFiles\menuToOrderFood.xml");
-            ArrayList itemsArray3 = xmlMenu3.ReadXmlMenuFileWithSpecificFormatAndReturnListOfMenuItems();
+            ArrayList itemsArray3 = xmlMenu3.ReadMenuData();
 
             MenuFunctionHandler[] handlersArray3 = new MenuFunctionHandler[] { 
                 delegate(string s) { return menuFoodCommander.OrderFoodByName(foodStaff[0]); },
@@ -100,7 +98,7 @@ namespace ConsoleMenuSample
             #region menuToOrderBeverage
 
             MyXmlReader xmlMenu2 = new MyXmlReader(@"MenuInXmlFiles\menuToOrderBeverage.xml");
-            ArrayList itemsArray2 = xmlMenu2.ReadXmlMenuFileWithSpecificFormatAndReturnListOfMenuItems();
+            ArrayList itemsArray2 = xmlMenu2.ReadMenuData();
 
             MenuFunctionHandler[] handlersArray2 = new MenuFunctionHandler[] { 
                 delegate(string s) { return menuBeverageCommander.OrderBeverageByName(beverageStuff[0]); }, 
@@ -119,7 +117,7 @@ namespace ConsoleMenuSample
             #region menuToOrderFoodAndBeverage
 
             MyXmlReader xmlMenu4 = new MyXmlReader(@"MenuInXmlFiles\menuToOdrerFoodAndBeverage.xml");
-            ArrayList itemsArray4 = xmlMenu4.ReadXmlMenuFileWithSpecificFormatAndReturnListOfMenuItems();
+            ArrayList itemsArray4 = xmlMenu4.ReadMenuData();
 
             MenuFunctionHandler[] handlersArray4 = new MenuFunctionHandler[] { 
                 menuToOrderFood.Display,
@@ -136,7 +134,7 @@ namespace ConsoleMenuSample
             #region mainMenu
 
             MyXmlReader xmlMenu0 = new MyXmlReader(@"MenuInXmlFiles\mainMenu.xml");
-            ArrayList itemsArray0 = xmlMenu0.ReadXmlMenuFileWithSpecificFormatAndReturnListOfMenuItems();
+            ArrayList itemsArray0 = xmlMenu0.ReadMenuData();
             menuCommander.MenuHandler = AdministratorAddAndShowMenu.Display;
 
             MenuFunctionHandler[] handlersArray = new MenuFunctionHandler[] { 

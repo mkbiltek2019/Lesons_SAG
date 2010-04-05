@@ -17,7 +17,7 @@ namespace FastFoodMagazine.Managers.CommanderHierarhy
         public MenuResult ViewFoodList(string s)
         {
             Console.Clear();
-            productWarehouse.ConsoleShowFoodList();
+            productWarehouse.ShowFoodList();
             Console.ReadKey();
             return MenuResult.Proceed;
         }
@@ -25,7 +25,7 @@ namespace FastFoodMagazine.Managers.CommanderHierarhy
         public MenuResult ViewBeverageList(string s)
         {
             Console.Clear();
-            productWarehouse.ConsoleShowBeverageList();
+            productWarehouse.ShowBeverageList();
             Console.ReadKey();
             return MenuResult.Proceed;
         }

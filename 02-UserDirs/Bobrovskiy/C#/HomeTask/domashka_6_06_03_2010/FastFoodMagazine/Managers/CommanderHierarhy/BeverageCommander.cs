@@ -1,6 +1,4 @@
 ﻿using System.Collections;
-using FastFoodMagazine.MyProduct;
-using FastFoodMagazine.MyProduct.MyBeverage;
 using Helpers.ConsoleMenu;
 
 namespace FastFoodMagazine.Managers.CommanderHierarhy

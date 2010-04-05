@@ -17,14 +17,21 @@ namespace FastFoodMagazine.MyProduct
             set;
         }
 
-        public Product(string name, string price)
+        public string Volume
+        {
+            get;
+            set;
+        }
+
+        public Product(string name, string price, string volume)
         {
             Name = name;
             Price = price;
+            Volume = volume;
         }
 
         public Product()
-            : this(string.Empty, string.Empty)
+            : this(string.Empty, string.Empty, string.Empty)
         {
         }
 

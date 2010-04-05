@@ -1,9 +1,40 @@
 ﻿using System.Collections;
-using FastFoodMagazine.MyProduct.MyBeverage;
-using FastFoodMagazine.MyProduct.Food;
+using FastFoodMagazine.MyProduct;
 
 namespace FastFoodMagazine.Managers.WareHouse
 {
+    public static class ConsoleWarehousePrinter
+    { 
+        public static void PrintTableHeader()
+        {
+            //---------------------------------------28-------------------14-------------14---
+            System.Console.WriteLine("┌────────────────────────────┬──────────────┬───────────────┐");
+            System.Console.WriteLine(@"│        Назва продукту      │   Цiна       │  Вага (об'єм) │");
+            System.Console.WriteLine("├────────────────────────────┼──────────────┼───────────────┤");
+        }
+
+        public static void PrintTableBottomLine()
+        {
+            //---------------------------------------28-------------------14-------------14---
+            System.Console.WriteLine("└────────────────────────────┴──────────────┴───────────────┘");
+        }
+
+        public static void ConsoleShowFoodList(ArrayList productList)
+        {
+            if (productList.Count > 0)
+            {
+                PrintTableHeader();
+                const string format = "│{0,-28:G}│{1,-10:G}грн.│{2,-12:G}│";
+                foreach (Product ob in productList)
+                {
+                    System.Console.WriteLine(format, ob.Name, ob.Price, ob.Volume);
+                }
+                PrintTableBottomLine();
+                System.Console.WriteLine("\n");
+            }
+        }
+    }
+
     public class ProductWarehouse
     {
         #region ProductWarehouse properties
@@ -48,57 +79,23 @@ namespace FastFoodMagazine.Managers.WareHouse
 
         #region ProductWarehouse methods
 
-        private void PrintTableHeader()
+        public void ShowFoodList()
         {
-            //---------------------------------------28-------------------14-------------14---
-            System.Console.WriteLine("┌────────────────────────────┬──────────────┬───────────────┐");
-            System.Console.WriteLine(@"│        Назва продукту      │   Цiна       │  Вага (об'єм) │");
-            System.Console.WriteLine("├────────────────────────────┼──────────────┼───────────────┤");
+           ConsoleWarehousePrinter.ConsoleShowFoodList(FoodList);
         }
 
-        private void PrintTableBottomLine()
+        public void ShowBeverageList()
         {
-            //---------------------------------------28-------------------14-------------14---
-            System.Console.WriteLine("└────────────────────────────┴──────────────┴───────────────┘");
+           ConsoleWarehousePrinter.ConsoleShowFoodList(BeverageList);
         }
 
-        public void ConsoleShowFoodList()
-        {
-            if (FoodList.Count > 0)
-            {
-                PrintTableHeader();
-                const string format = "│{0,-28:G}│{1,-10:G}грн.│{2,-12:G}гр.│";
-                foreach (Food ob in FoodList)
-                {
-                    System.Console.WriteLine(format, ob.Name, ob.Price, ob.Weight);
-                }
-                PrintTableBottomLine();
-                System.Console.WriteLine("\n");
-            }
-        }
-
-        public void ConsoleShowBeverageList()
-        {
-            if (BeverageList.Count > 0)
-            {
-                PrintTableHeader();
-                const string format = "│{0,-28:G}│{1,-10:G}грн.│{2,-12:G}мл.│";
-                foreach (Beverage obj in BeverageList)
-                {
-                    System.Console.WriteLine(format, obj.Name, obj.Price, obj.Capacity);
-                }
-                PrintTableBottomLine();
-                System.Console.WriteLine("\n");
-            }
-        }
-
-        public void AddProductToFood(MyProduct.Product product)
+        public void AddProductToFood(Product product)
         {
             FoodList.Add(product);
             Changed = true;
         }
 
-        public void AddProductToBeverage(MyProduct.Product product)
+        public void AddProductToBeverage(Product product)
         {
             BeverageList.Add(product);
             Changed = true;
