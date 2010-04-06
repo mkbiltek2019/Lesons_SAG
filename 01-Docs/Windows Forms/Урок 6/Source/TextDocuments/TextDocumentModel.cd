@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MDIExample.TextDocument">
+    <Position X="3.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIQAAACAIAAAACAAAAAAAIAACACAAAgAA=</HashCode>
+      <FileName>TextDocuments\TextDocument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDIExample.TextDocumentLoader">
+    <Position X="5.75" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>TextDocuments\TextDocumentLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDIExample.TextDocumentSaver">
+    <Position X="5.75" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAgAAABAQAAAAAAAA=</HashCode>
+      <FileName>TextDocuments\TextDocumentSaver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDIExample.TextEditor" Collapsed="true">
+    <Position X="0.5" Y="1.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AZ8KAC0ECCAIAGCAAA+CQAGCGK4QgEIYBgICSAAAAhA=</HashCode>
+      <FileName>TextDocuments\TextEditor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="document" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

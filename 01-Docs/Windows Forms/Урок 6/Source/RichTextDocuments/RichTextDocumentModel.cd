@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MDIExample.RichTextDocument">
+    <Position X="3.25" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAIAAAACAAAAAAAIAACACAAAgAA=</HashCode>
+      <FileName>RichTextDocuments\RichTextDocument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDIExample.RichTextDocumentLoader">
+    <Position X="5.75" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>RichTextDocuments\RichTextDocumentLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDIExample.RichTextDocumentSaver">
+    <Position X="5.75" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAgAAABAAAAAAAAAA=</HashCode>
+      <FileName>RichTextDocuments\RichTextDocumentSaver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDIExample.RichTextEditor" Collapsed="true">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AjliGUmQQigQQCABFACAQIQDCA4QxHSApmHA6QOAAJQ=</HashCode>
+      <FileName>RichTextDocuments\RichTextEditor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="sourceViewer" />
+      <Field Name="document" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MDIExample.RichTextSource" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RichTextDocuments\RichTextSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
