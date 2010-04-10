@@ -11,7 +11,7 @@ namespace StopWatch
 {
     public partial class StopWatch : Form
     {
-        int m, s, ms;
+        int m, s;
 
         public StopWatch()
         {
@@ -23,8 +23,9 @@ namespace StopWatch
 
             m = 0;
             s = 0;
-            ms = 0;
 
+            labelMinutes.Text = "00";
+            labelSeconds.Text = "00";
             labelColon.Visible = true;
 
         }
@@ -50,7 +51,6 @@ namespace StopWatch
         {
             m = 0;
             s = 0;
-            ms = 0;
             labelMinutes.Text = "00";
             labelSeconds.Text = "00";
         }

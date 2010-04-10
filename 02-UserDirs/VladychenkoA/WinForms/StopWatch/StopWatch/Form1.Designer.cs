@@ -42,10 +42,11 @@
             // 
             // labelMinutes
             // 
-            this.labelMinutes.AutoSize = true;
-            this.labelMinutes.Location = new System.Drawing.Point(101, 30);
+            this.labelMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMinutes.ForeColor = System.Drawing.Color.Peru;
+            this.labelMinutes.Location = new System.Drawing.Point(31, 30);
             this.labelMinutes.Name = "labelMinutes";
-            this.labelMinutes.Size = new System.Drawing.Size(19, 13);
+            this.labelMinutes.Size = new System.Drawing.Size(60, 40);
             this.labelMinutes.TabIndex = 0;
             this.labelMinutes.Text = "00";
             // 
@@ -61,6 +62,7 @@
             // 
             // textBoxDateTimeNow
             // 
+            this.textBoxDateTimeNow.ForeColor = System.Drawing.Color.Red;
             this.textBoxDateTimeNow.Location = new System.Drawing.Point(78, 166);
             this.textBoxDateTimeNow.Name = "textBoxDateTimeNow";
             this.textBoxDateTimeNow.Size = new System.Drawing.Size(119, 20);
@@ -68,20 +70,22 @@
             // 
             // labelSeconds
             // 
-            this.labelSeconds.AutoSize = true;
-            this.labelSeconds.Location = new System.Drawing.Point(142, 30);
-            this.labelSeconds.MaximumSize = new System.Drawing.Size(30, 50);
+            this.labelSeconds.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSeconds.ForeColor = System.Drawing.Color.Peru;
+            this.labelSeconds.Location = new System.Drawing.Point(119, 30);
             this.labelSeconds.Name = "labelSeconds";
-            this.labelSeconds.Size = new System.Drawing.Size(19, 13);
-            this.labelSeconds.TabIndex = 3;
+            this.labelSeconds.Size = new System.Drawing.Size(60, 40);
+            this.labelSeconds.TabIndex = 7;
             this.labelSeconds.Text = "00";
             // 
             // labelColon
             // 
-            this.labelColon.AutoSize = true;
-            this.labelColon.Location = new System.Drawing.Point(126, 30);
+            this.labelColon.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelColon.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelColon.ForeColor = System.Drawing.Color.Peru;
+            this.labelColon.Location = new System.Drawing.Point(93, 30);
             this.labelColon.Name = "labelColon";
-            this.labelColon.Size = new System.Drawing.Size(10, 13);
+            this.labelColon.Size = new System.Drawing.Size(20, 40);
             this.labelColon.TabIndex = 4;
             this.labelColon.Text = ":";
             // 
@@ -116,7 +120,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(256, 214);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(251, 214);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.labelColon);
@@ -136,12 +141,13 @@
         private System.Windows.Forms.Label labelMinutes;
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.TextBox textBoxDateTimeNow;
-        private System.Windows.Forms.Label labelSeconds;
+       
         private System.Windows.Forms.Label labelColon;
         private System.Windows.Forms.Button buttonReset;
         private System.Windows.Forms.Timer timerStopWatch;
         private System.Windows.Forms.Timer timerDateTimeNow;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelSeconds;
     }
 }
 
