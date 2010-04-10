@@ -10,8 +10,20 @@
     <NAntPath value="" />
   </NAntValidationSettings>
   <RecentFiles>
-    <RecentFiles />
-    <RecentEdits />
+    <RecentFiles>
+      <File id="997DA295-8EFF-4767-9C9D-1D0DAFE64FC3/f:Form1.Designer.cs" caret="7143" fromTop="15" />
+      <File id="997DA295-8EFF-4767-9C9D-1D0DAFE64FC3/f:Form1.cs" caret="579" fromTop="17" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="997DA295-8EFF-4767-9C9D-1D0DAFE64FC3/f:Form1.Designer.cs" caret="7158" fromTop="138" />
+      <File id="997DA295-8EFF-4767-9C9D-1D0DAFE64FC3/f:Form1.Designer.cs" caret="6574" fromTop="10" />
+      <File id="997DA295-8EFF-4767-9C9D-1D0DAFE64FC3/f:Form1.Designer.cs" caret="6798" fromTop="9" />
+      <File id="997DA295-8EFF-4767-9C9D-1D0DAFE64FC3/f:Form1.Designer.cs" caret="6574" fromTop="6" />
+      <File id="997DA295-8EFF-4767-9C9D-1D0DAFE64FC3/f:Form1.Designer.cs" caret="7143" fromTop="16" />
+      <File id="997DA295-8EFF-4767-9C9D-1D0DAFE64FC3/f:Form1.cs" caret="457" fromTop="11" />
+      <File id="997DA295-8EFF-4767-9C9D-1D0DAFE64FC3/f:Form1.cs" caret="579" fromTop="17" />
+      <File id="997DA295-8EFF-4767-9C9D-1D0DAFE64FC3/f:Form1.cs" caret="2683" fromTop="17" />
+    </RecentEdits>
   </RecentFiles>
   <UnitTestRunner>
     <Providers />
@@ -19,4 +31,14 @@
   <UnitTestRunnerMSTest>
     <UseTestRunConfigFromMetadataFile>False</UseTestRunConfigFromMetadataFile>
   </UnitTestRunnerMSTest>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="labelMinutes" priority="0" />
+      <Item value="labelSeconds" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Label">
+      <Item value="BackgroundImage" priority="0" />
+      <Item value="Text" priority="1" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
 </Configuration>

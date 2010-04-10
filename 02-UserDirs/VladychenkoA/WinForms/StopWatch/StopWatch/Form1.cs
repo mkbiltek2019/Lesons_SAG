@@ -23,9 +23,8 @@ namespace StopWatch
 
             m = 0;
             s = 0;
+            
 
-            labelMinutes.Text = "00";
-            labelSeconds.Text = "00";
             labelColon.Visible = true;
 
         }
