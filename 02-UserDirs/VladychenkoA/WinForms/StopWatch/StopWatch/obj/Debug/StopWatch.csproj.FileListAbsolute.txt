@@ -1,0 +1,8 @@
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\StopWatch\StopWatch\bin\Debug\StopWatch.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\StopWatch\StopWatch\bin\Debug\StopWatch.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\StopWatch\StopWatch\obj\Debug\ResolveAssemblyReference.cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\StopWatch\StopWatch\obj\Debug\StopWatch.StopWatch.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\StopWatch\StopWatch\obj\Debug\StopWatch.Properties.Resources.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\StopWatch\StopWatch\obj\Debug\StopWatch.csproj.GenerateResource.Cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\StopWatch\StopWatch\obj\Debug\StopWatch.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\StopWatch\StopWatch\obj\Debug\StopWatch.pdb
