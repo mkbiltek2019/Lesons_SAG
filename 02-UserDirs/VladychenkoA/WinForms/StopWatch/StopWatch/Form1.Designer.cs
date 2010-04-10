@@ -49,7 +49,7 @@
             this.labelMinutes.Size = new System.Drawing.Size(60, 40);
             this.labelMinutes.TabIndex = 0;
             this.labelMinutes.Text = "00";
-            // 
+            //
             // buttonStart
             // 
             this.buttonStart.Location = new System.Drawing.Point(38, 81);
@@ -140,8 +140,7 @@
 
         private System.Windows.Forms.Label labelMinutes;
         private System.Windows.Forms.Button buttonStart;
-        private System.Windows.Forms.TextBox textBoxDateTimeNow;
-       
+        private System.Windows.Forms.TextBox textBoxDateTimeNow; 
         private System.Windows.Forms.Label labelColon;
         private System.Windows.Forms.Button buttonReset;
         private System.Windows.Forms.Timer timerStopWatch;
