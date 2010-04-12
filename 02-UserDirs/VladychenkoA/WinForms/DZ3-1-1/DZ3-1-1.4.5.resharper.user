@@ -1,0 +1,138 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="DA63115C-0308-49C5-A85E-5383123BBAC4/f:Form1.cs" caret="660" fromTop="20" />
+      <File id="E9D7326E-B765-43B7-8C37-4E7201B7238B/f:Form1.cs" caret="549" fromTop="16" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="1895" fromTop="18" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="DA63115C-0308-49C5-A85E-5383123BBAC4/f:Form1.cs" caret="354" fromTop="10" />
+      <File id="DA63115C-0308-49C5-A85E-5383123BBAC4/f:Form1.cs" caret="660" fromTop="20" />
+      <File id="DA63115C-0308-49C5-A85E-5383123BBAC4/f:Form1.cs" caret="683" fromTop="20" />
+      <File id="E9D7326E-B765-43B7-8C37-4E7201B7238B/f:Form1.cs" caret="549" fromTop="16" />
+      <File id="E9D7326E-B765-43B7-8C37-4E7201B7238B/f:Form1.cs" caret="658" fromTop="16" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="754" fromTop="14" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="1060" fromTop="22" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3688" fromTop="8" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="2216" fromTop="24" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3688" fromTop="62" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3430" fromTop="19" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3648" fromTop="19" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="335" fromTop="12" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="2719" fromTop="15" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="2938" fromTop="20" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="1660" fromTop="13" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="1894" fromTop="18" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerMSTest>
+    <UseTestRunConfigFromMetadataFile>False</UseTestRunConfigFromMetadataFile>
+  </UnitTestRunnerMSTest>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="timer" priority="4" />
+      <Item value="Random" priority="1" />
+      <Item value="random" priority="3" />
+      <Item value="new" priority="1" />
+      <Item value="BackColor" priority="0" />
+      <Item value="Color" priority="0" />
+      <Item value="MessageBox" priority="4" />
+      <Item value="int" priority="0" />
+      <Item value="a" priority="1" />
+      <Item value="Convert" priority="1" />
+      <Item value="textBoxA" priority="0" />
+      <Item value="b" priority="1" />
+      <Item value="textBoxB" priority="0" />
+      <Item value="sum" priority="1" />
+      <Item value="textBoxSum" priority="0" />
+      <Item value="private" priority="3" />
+      <Item value="DateTime" priority="7" />
+      <Item value="numericUpDownMinutes" priority="11" />
+      <Item value="false" priority="14" />
+      <Item value="numericUpDownSeconds" priority="11" />
+      <Item value="buttonStart" priority="10" />
+      <Item value="if" priority="8" />
+      <Item value="else" priority="6" />
+      <Item value="true" priority="8" />
+      <Item value="timeStart" priority="2" />
+      <Item value="timeStop" priority="20" />
+      <Item value="double" priority="1" />
+      <Item value="groupBoxInput" priority="4" />
+      <Item value="labelTimer" priority="7" />
+      <Item value="Equals" priority="0" />
+      <Item value="MessageBoxButtons" priority="0" />
+      <Item value="MessageBoxIcon" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Timer">
+      <Item value="Interval" priority="1" />
+      <Item value="Enabled" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Color">
+      <Item value="FromArgb" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Random">
+      <Item value="Next" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
+      <Item value="Show" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToInt32" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
+      <Item value="Text" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString" priority="8" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.NumericUpDown">
+      <Item value="Maximum" priority="2" />
+      <Item value="Minimum" priority="3" />
+      <Item value="TabStop" priority="3" />
+      <Item value="MaximumSize" priority="0" />
+      <Item value="Value" priority="11" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Button">
+      <Item value="Enabled" priority="7" />
+      <Item value="Text" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="Year" priority="0" />
+      <Item value="Month" priority="0" />
+      <Item value="Day" priority="0" />
+      <Item value="AddMinutes" priority="0" />
+      <Item value="AddSeconds" priority="1" />
+      <Item value="Minute" priority="6" />
+      <Item value="Second" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.GroupBox">
+      <Item value="Enabled" priority="2" />
+      <Item value="Visible" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Label">
+      <Item value="Text" priority="7" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBoxButtons">
+      <Item value="OK" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBoxIcon">
+      <Item value="Information" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

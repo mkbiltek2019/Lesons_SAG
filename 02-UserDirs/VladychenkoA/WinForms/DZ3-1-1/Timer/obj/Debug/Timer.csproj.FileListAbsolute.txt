@@ -1,0 +1,8 @@
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\DZ3-1-1\Timer\bin\Debug\Timer.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\DZ3-1-1\Timer\bin\Debug\Timer.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\DZ3-1-1\Timer\obj\Debug\ResolveAssemblyReference.cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\DZ3-1-1\Timer\obj\Debug\Timer.Form1.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\DZ3-1-1\Timer\obj\Debug\Timer.Properties.Resources.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\DZ3-1-1\Timer\obj\Debug\Timer.csproj.GenerateResource.Cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\DZ3-1-1\Timer\obj\Debug\Timer.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\DZ3-1-1\Timer\obj\Debug\Timer.pdb

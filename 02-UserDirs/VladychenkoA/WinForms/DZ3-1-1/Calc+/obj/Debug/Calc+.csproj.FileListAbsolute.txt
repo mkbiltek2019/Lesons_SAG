@@ -1,0 +1,8 @@
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\DZ3-1-1\Calc+\bin\Debug\Calc+.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\DZ3-1-1\Calc+\bin\Debug\Calc+.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\DZ3-1-1\Calc+\obj\Debug\ResolveAssemblyReference.cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\DZ3-1-1\Calc+\obj\Debug\Calc_.Properties.Resources.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\DZ3-1-1\Calc+\obj\Debug\Calc+.csproj.GenerateResource.Cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\DZ3-1-1\Calc+\obj\Debug\Calc+.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\DZ3-1-1\Calc+\obj\Debug\Calc+.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\DZ3-1-1\Calc+\obj\Debug\Calc_.FormCalc.resources
