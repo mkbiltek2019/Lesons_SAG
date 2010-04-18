@@ -1,0 +1,73 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="Form1" priority="0" />
+      <Item value="private" priority="2" />
+      <Item value="public" priority="3" />
+      <Item value="void" priority="0" />
+      <Item value="CountdownTimer" priority="3" />
+      <Item value="countdownTimer" priority="3" />
+      <Item value="new" priority="0" />
+      <Item value="WinFormsWait" priority="0" />
+      <Item value="FormCountdown" priority="1" />
+      <Item value="double" priority="0" />
+      <Item value="Acces" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WinFormsWait.CountdownTimer">
+      <Item value="Acces" priority="0" />
+      <Item value="Start" priority="0" />
+      <Item value="Stop" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:Program.cs" caret="0" fromTop="0" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:TimerOn.cs" caret="3229" fromTop="1" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:Form1.cs" caret="705" fromTop="12" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:TimerOn.cs" caret="945" fromTop="12" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:TimerOn.cs" caret="2030" fromTop="10" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:TimerOn.cs" caret="1315" fromTop="21" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:TimerOn.cs" caret="201" fromTop="0" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:TimerOn.cs" caret="201" fromTop="0" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:Form1.cs" caret="387" fromTop="16" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:TimerOn.cs" caret="1912" fromTop="12" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:TimerOn.cs" caret="2233" fromTop="15" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:TimerOn.cs" caret="2888" fromTop="12" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:Form1.cs" caret="284" fromTop="10" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:Form1.cs" caret="6163" fromTop="9" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:TimerOn.cs" caret="878" fromTop="15" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:Form1.cs" caret="423" fromTop="12" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:Form1.cs" caret="423" fromTop="19" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:Form1.cs" caret="284" fromTop="14" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:TimerOn.cs" caret="347" fromTop="15" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:Form1.cs" caret="387" fromTop="5" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:Form1.cs" caret="423" fromTop="3" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:TimerOn.cs" caret="3216" fromTop="15" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:TimerOn.cs" caret="3216" fromTop="20" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:TimerOn.cs" caret="2231" fromTop="2" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:TimerOn.cs" caret="629" fromTop="18" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:TimerOn.cs" caret="3229" fromTop="7" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:TimerOn.cs" caret="3229" fromTop="2" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:TimerOn.cs" caret="3241" fromTop="1" />
+      <File id="03ED9D11-3E20-47DE-BBA9-0CF7D69D1388/f:Form1.cs" caret="1008" fromTop="21" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerMSTest>
+    <UseTestRunConfigFromMetadataFile>False</UseTestRunConfigFromMetadataFile>
+  </UnitTestRunnerMSTest>
+</Configuration>

@@ -1,0 +1,8 @@
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\WinFormsWait\WinFormsWait\obj\Debug\ResolveAssemblyReference.cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\WinFormsWait\WinFormsWait\obj\Debug\WinFormsWait.FormCountdown.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\WinFormsWait\WinFormsWait\obj\Debug\WinFormsWait.Properties.Resources.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\WinFormsWait\WinFormsWait\obj\Debug\WinFormsWait.csproj.GenerateResource.Cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\WinFormsWait\WinFormsWait\bin\Debug\WinFormsWait.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\WinFormsWait\WinFormsWait\bin\Debug\WinFormsWait.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\WinFormsWait\WinFormsWait\obj\Debug\WinFormsWait.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\WinFormsWait\WinFormsWait\obj\Debug\WinFormsWait.pdb
