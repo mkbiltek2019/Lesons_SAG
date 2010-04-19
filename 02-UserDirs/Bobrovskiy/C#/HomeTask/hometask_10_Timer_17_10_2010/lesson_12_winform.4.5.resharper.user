@@ -1,0 +1,158 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/d:Properties/f:Resources.resx" caret="5949" fromTop="13" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:Form1.cs" caret="1012" fromTop="27" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:TeaMaker.cs" caret="334" fromTop="12" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:TeaMaker.cs" caret="1674" fromTop="42" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:Form1.cs" caret="2256" fromTop="15" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:Form1.cs" caret="1958" fromTop="18" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:TeaMaker.cs" caret="1110" fromTop="27" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:Form1.cs" caret="1374" fromTop="4" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:TeaMaker.cs" caret="15" fromTop="1" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:Form1.cs" caret="411" fromTop="14" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:Form1.cs" caret="2736" fromTop="23" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:TeaMaker.cs" caret="414" fromTop="16" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:Form1.cs" caret="15" fromTop="1" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:Form1.cs" caret="595" fromTop="17" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:Form1.cs" caret="2397" fromTop="24" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:Form1.cs" caret="843" fromTop="16" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:Form1.cs" caret="324" fromTop="11" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:TeaMaker.cs" caret="924" fromTop="34" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:TeaMaker.cs" caret="1697" fromTop="27" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:Form1.cs" caret="1180" fromTop="32" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:Form1.cs" caret="1713" fromTop="45" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:TeaMaker.cs" caret="1697" fromTop="26" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:Form1.cs" caret="1857" fromTop="5" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:Form1.cs" caret="2909" fromTop="20" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:Form1.cs" caret="3274" fromTop="20" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:Form1.cs" caret="3153" fromTop="15" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:Form1.cs" caret="2087" fromTop="13" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:Form1.cs" caret="3193" fromTop="15" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:TeaMaker.cs" caret="1349" fromTop="12" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:Form1.cs" caret="2892" fromTop="14" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:TeaMaker.cs" caret="1360" fromTop="15" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/f:Form1.cs" caret="2722" fromTop="16" />
+      <File id="7FA76C94-AB11-4D88-AED1-8107B5551280/d:Properties/f:Resources.resx" caret="5949" fromTop="13" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="public" priority="1" />
+      <Item value="TimeSpan" priority="4" />
+      <Item value="if" priority="4" />
+      <Item value="else" priority="3" />
+      <Item value="State" priority="2" />
+      <Item value="private" priority="3" />
+      <Item value="return" priority="2" />
+      <Item value="CountDownTimer" priority="1" />
+      <Item value="using" priority="0" />
+      <Item value="System" priority="0" />
+      <Item value="Threading" priority="2" />
+      <Item value="Timers" priority="1" />
+      <Item value="new" priority="4" />
+      <Item value="Timer" priority="2" />
+      <Item value="tm" priority="2" />
+      <Item value="curentTimerHandler" priority="0" />
+      <Item value="void" priority="2" />
+      <Item value="this" priority="1" />
+      <Item value="int" priority="2" />
+      <Item value="Int32" priority="2" />
+      <Item value="Timeout" priority="0" />
+      <Item value="Thread" priority="0" />
+      <Item value="Application" priority="0" />
+      <Item value="MainTimer" priority="1" />
+      <Item value="DateTime" priority="0" />
+      <Item value="Text" priority="0" />
+      <Item value="bool" priority="1" />
+      <Item value="false" priority="3" />
+      <Item value="true" priority="1" />
+      <Item value="Type" priority="0" />
+      <Item value="Drawing" priority="0" />
+      <Item value="Size" priority="0" />
+      <Item value="Focus" priority="1" />
+      <Item value="Activate" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.TimeSpan">
+      <Item value="Zero" priority="3" />
+      <Item value="MinValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@lesson_12_winform.State">
+      <Item value="Start" priority="1" />
+      <Item value="Stop" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Timer">
+      <Item value="Change" priority="0" />
+      <Item value="Dispose" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:lesson_12_winform.CountDownTimer">
+      <Item value="GetType" priority="0" />
+      <Item value="Start" priority="0" />
+      <Item value="Stop" priority="0" />
+      <Item value="TimeLeft" priority="0" />
+      <Item value="Tick" priority="0" />
+      <Item value="CurrentState" priority="2" />
+      <Item value="TickAndOut" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:lesson_12_winform.MainForm">
+      <Item value="TimeLeftLabel" priority="0" />
+      <Item value="TopMost" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Label">
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.AutoResetEvent">
+      <Item value="Set" priority="2" />
+      <Item value="WaitOne" priority="1" />
+      <Item value="SafeWaitHandle" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int32">
+      <Item value="MaxValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Timeout">
+      <Item value="Infinite" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
+      <Item value="Show" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.TimeSpan">
+      <Item value="Equals" priority="1" />
+      <Item value="Minutes" priority="2" />
+      <Item value="Hours" priority="0" />
+      <Item value="Seconds" priority="0" />
+      <Item value="TotalSeconds" priority="0" />
+      <Item value="Milliseconds" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Thread">
+      <Item value="Sleep" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.Application">
+      <Item value="Exit" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Timer">
+      <Item value="Start" priority="0" />
+      <Item value="Interval" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.NumericUpDown">
+      <Item value="Enabled" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Size">
+      <Item value="Empty" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
