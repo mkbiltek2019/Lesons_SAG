@@ -1,0 +1,8 @@
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\10.04.2010\bin\Debug\10.04.2010.exe
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\10.04.2010\bin\Debug\10.04.2010.pdb
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\10.04.2010\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\10.04.2010\obj\Debug\_10._04._2010.MyForm.resources
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\10.04.2010\obj\Debug\_10._04._2010.Properties.Resources.resources
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\10.04.2010\obj\Debug\SetColorWorm.csproj.GenerateResource.Cache
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\10.04.2010\obj\Debug\10.04.2010.exe
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\10.04.2010\obj\Debug\10.04.2010.pdb
