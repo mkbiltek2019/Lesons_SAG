@@ -53,12 +53,13 @@
             // labelTimer
             // 
             this.labelTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTimer.Location = new System.Drawing.Point(98, 29);
+            this.labelTimer.Location = new System.Drawing.Point(74, 26);
             this.labelTimer.Name = "labelTimer";
-            this.labelTimer.Size = new System.Drawing.Size(80, 30);
+            this.labelTimer.Size = new System.Drawing.Size(128, 30);
             this.labelTimer.TabIndex = 1;
-            this.labelTimer.Text = "00:00";
+            this.labelTimer.Text = "00:00.00";
             this.labelTimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            
             // 
             // numericUpDownMinutes
             // 
