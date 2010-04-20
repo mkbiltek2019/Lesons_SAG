@@ -1,0 +1,60 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="C2F1FA33-550E-4FC7-9EF7-53C3CDF66B88/f:Form1.cs" caret="893" fromTop="10" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="C2F1FA33-550E-4FC7-9EF7-53C3CDF66B88/f:Form1.cs" caret="1390" fromTop="35" />
+      <File id="C2F1FA33-550E-4FC7-9EF7-53C3CDF66B88/f:Form1.cs" caret="1390" fromTop="17" />
+      <File id="C2F1FA33-550E-4FC7-9EF7-53C3CDF66B88/f:Form1.cs" caret="817" fromTop="9" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="true" priority="1" />
+      <Item value="private" priority="0" />
+      <Item value="void" priority="0" />
+      <Item value="string" priority="0" />
+      <Item value="textBox1" priority="0" />
+      <Item value="textBox2" priority="0" />
+      <Item value="textBox3" priority="0" />
+      <Item value="strMessage" priority="5" />
+      <Item value="textBox4" priority="0" />
+      <Item value="textBox5" priority="0" />
+      <Item value="textBox6" priority="1" />
+      <Item value="dateTimePicker1" priority="0" />
+      <Item value="if" priority="0" />
+      <Item value="radioButtonMale" priority="0" />
+      <Item value="else" priority="0" />
+      <Item value="MessageBox" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
+      <Item value="Text" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DateTimePicker">
+      <Item value="Value" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="ToLongDateString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.RadioButton">
+      <Item value="Checked" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
+      <Item value="Show" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

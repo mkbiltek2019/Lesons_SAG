@@ -1,0 +1,8 @@
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\Anketa\Anketa\bin\Debug\Anketa.exe
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\Anketa\Anketa\bin\Debug\Anketa.pdb
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\Anketa\Anketa\obj\Debug\ResolveAssemblyReference.cache
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\Anketa\Anketa\obj\Debug\Anketa.Form1.resources
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\Anketa\Anketa\obj\Debug\Anketa.Properties.Resources.resources
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\Anketa\Anketa\obj\Debug\Anketa.csproj.GenerateResource.Cache
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\Anketa\Anketa\obj\Debug\Anketa.exe
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\Anketa\Anketa\obj\Debug\Anketa.pdb
