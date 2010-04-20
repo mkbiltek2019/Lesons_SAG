@@ -59,7 +59,6 @@
             this.labelTimer.TabIndex = 1;
             this.labelTimer.Text = "00:00.00";
             this.labelTimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            
             // 
             // numericUpDownMinutes
             // 
@@ -99,6 +98,7 @@
             // 
             // timer
             // 
+            this.timer.Interval = 10;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // FormCountdown

@@ -55,7 +55,7 @@ namespace WinFormsWait
                 timer.Enabled = false;
                 buttonStart.Text = "Пуск";
             }
-           
+            
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -68,7 +68,7 @@ namespace WinFormsWait
                                  _totalTimerRight.Minutes,
                                  _totalTimerRight.Seconds,
                                  _totalTimerRight.Milliseconds / 10);
-
+            
            
 
             _totalTimeLeft -= TimeSpan.FromMilliseconds(timer.Interval);
