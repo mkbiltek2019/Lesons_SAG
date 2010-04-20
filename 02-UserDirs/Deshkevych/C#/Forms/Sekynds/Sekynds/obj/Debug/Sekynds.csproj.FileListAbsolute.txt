@@ -1,0 +1,8 @@
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\Sekynds\Sekynds\obj\Debug\ResolveAssemblyReference.cache
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\Sekynds\Sekynds\obj\Debug\Sekynds.Form1.resources
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\Sekynds\Sekynds\obj\Debug\Sekynds.Properties.Resources.resources
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\Sekynds\Sekynds\obj\Debug\Sekynds.csproj.GenerateResource.Cache
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\Sekynds\Sekynds\bin\Debug\Sekynds.exe
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\Sekynds\Sekynds\bin\Debug\Sekynds.pdb
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\Sekynds\Sekynds\obj\Debug\Sekynds.exe
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\Sekynds\Sekynds\obj\Debug\Sekynds.pdb
