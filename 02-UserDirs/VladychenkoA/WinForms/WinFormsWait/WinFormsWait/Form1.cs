@@ -73,7 +73,7 @@ namespace WinFormsWait
 
             _totalTimeLeft -= TimeSpan.FromMilliseconds(timer.Interval);
             _totalTimerRight += TimeSpan.FromMilliseconds(timer.Interval);
-            if (_totalTimeLeft.Seconds <= 5  )
+            if (_totalTimeLeft.Seconds <= 5 && _totalTimeLeft.Seconds >= 1 )
             {
                 if (_totalTimeLeft.Seconds %1 == 0 && _totalTimeLeft.Milliseconds == 0)
                 {
