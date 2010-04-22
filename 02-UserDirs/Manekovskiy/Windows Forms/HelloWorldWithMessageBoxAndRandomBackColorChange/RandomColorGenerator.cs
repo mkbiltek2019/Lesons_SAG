@@ -12,7 +12,7 @@ namespace Helpers
         {
             return Color.FromArgb(randomByteGenerator.Next(byte.MinValue, byte.MaxValue),
                                   randomByteGenerator.Next(byte.MinValue, byte.MaxValue),
-                                  randomByteGenerator.Next(byte.MinValue, byte.MaxValue),
+                                  //randomByteGenerator.Next(byte.MinValue, byte.MaxValue),
                                   randomByteGenerator.Next(byte.MinValue, byte.MaxValue));
         }
 
