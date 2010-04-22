@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace WinFormsWait
 {
+   
     public partial class FormCountdown : Form
     {
 
@@ -49,6 +50,13 @@ namespace WinFormsWait
                 
                 buttonStart.Text = "Стоп";
                 timer.Enabled = true;
+                int d = (int) DateTime.Now.DayOfWeek;
+                DayOfWeek k = (DayOfWeek)DateTime.Now.DayOfWeek;
+                DayOfTheWeek dayOfTheWeek = new DayOfTheWeek();
+               
+                label1.Text = dayOfTheWeek.Day(k);
+                label4.Text = d.ToString();
+                //label1.Text = k.ToString()
             }
             else
             {
