@@ -19,6 +19,27 @@ namespace ColorChangerApplication
             None
         }
 
+        [Flags]
+        private enum MultiColorComponents : byte
+        {
+            None = 0,  // 0000 //all unset
+            Red = 1,   // 0001
+            Green = 2, // 0010
+            Blue = 4   // 0100
+        };
+
+        private MultiColorComponents currnetMultiColorComponentsState =
+                                    MultiColorComponents.None;
+
+        #region Constructors
+
+        public ColorfulForm()
+        {
+            InitializeComponent();
+        }
+
+        #endregion
+
 
         #region Color Change Logics
 
@@ -49,17 +70,50 @@ namespace ColorChangerApplication
             }
 
             return Color.FromArgb(red, green, blue);
-        } 
-
-        #endregion
-
-
-        #region Constructors
-
-        public ColorfulForm()
+        }
+        
+        private Color GetColorWithComponentExclusionComplex(MultiColorComponents colorComponentToExlude)
         {
-            InitializeComponent();
-        } 
+            int red = (int)redNumericUpDown.Value;
+            int green = (int)greenNumericUpDown.Value;
+            int blue = (int)blueNumericUpDown.Value;
+
+            SetUnsetBitsInMultiColorComponentState(colorComponentToExlude);
+
+            if (ContainsClientState(currnetMultiColorComponentsState, MultiColorComponents.Red))
+            {
+                red = 0;
+            }
+
+            if (ContainsClientState(currnetMultiColorComponentsState, MultiColorComponents.Green))
+            {
+                green = 0;
+            }
+
+            if (ContainsClientState(currnetMultiColorComponentsState, MultiColorComponents.Blue))
+            {
+                blue = 0;
+            }
+
+            return Color.FromArgb(red, green, blue);
+        }
+
+        private static bool ContainsClientState(MultiColorComponents combined, MultiColorComponents checkagainst)
+        {
+            return ((combined & checkagainst) == checkagainst);
+        }
+
+        private void SetUnsetBitsInMultiColorComponentState(MultiColorComponents setUnsetColor)
+        {
+            if (ContainsClientState(currnetMultiColorComponentsState, setUnsetColor))
+            {
+                currnetMultiColorComponentsState &= ~setUnsetColor;
+            }
+            else
+            {
+                currnetMultiColorComponentsState |= setUnsetColor;
+            }
+        }
 
         #endregion
 
@@ -91,6 +145,9 @@ namespace ColorChangerApplication
             }
         }
 
+
+        #region RadioButton handlers
+
         private void redExculeRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             ChangePreviewPanelBackColor(
@@ -113,7 +170,43 @@ namespace ColorChangerApplication
         {
             ChangePreviewPanelBackColor(
                 GetColorWithComponentExclusion(ColorComponents.None));
-        } 
+        }
+
+        #endregion
+
+
+        #region CheckBox handlers
+
+        private void redCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            redTrackBar.Enabled = !((CheckBox)sender).Checked;
+            redNumericUpDown.Enabled = !((CheckBox)sender).Checked;
+
+            ChangePreviewPanelBackColor(
+           GetColorWithComponentExclusionComplex(MultiColorComponents.Red));
+        }
+
+        private void greenCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            greenTrackBar.Enabled = !((CheckBox)sender).Checked;
+            greenNumericUpDown.Enabled = !((CheckBox)sender).Checked;
+
+            ChangePreviewPanelBackColor(
+                  GetColorWithComponentExclusionComplex(MultiColorComponents.Green));
+
+        }
+
+        private void blueCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+            blueTrackBar.Enabled = !((CheckBox)sender).Checked;
+            blueNumericUpDown.Enabled = !((CheckBox)sender).Checked;
+
+            ChangePreviewPanelBackColor(
+            GetColorWithComponentExclusionComplex(MultiColorComponents.Blue));
+        }
+
+        #endregion
 
         #endregion
 
@@ -129,8 +222,10 @@ namespace ColorChangerApplication
         {
             AboutBox aboutBox = new AboutBox();
             aboutBox.ShowDialog();
-        } 
+        }
 
         #endregion
+
+
     }
 }
