@@ -9,8 +9,10 @@ using System.Windows.Forms;
 
 namespace ColorChangerApplication
 {
-    public partial class ColorfulForm : Form
+    public partial class Form1 : Form
     {
+        
+        
         protected enum ColorComponents
         {
             Red,
@@ -56,10 +58,35 @@ namespace ColorChangerApplication
 
         #region Constructors
 
-        public ColorfulForm()
+        public Form1()
         {
             InitializeComponent();
-        } 
+        }
+
+        private void Close_Forms(object sender, EventArgs e)
+        {
+            progressBar1.Minimum = 0;
+            progressBar1.Maximum = 100;
+            progressBar1.Step = 1;
+
+            for (int i = 100; i > 0; --i)
+            {
+                progressBar1.PerformStep();
+                label1.Text = "До закрытия осталось : " + i;
+
+// ReSharper disable RedundantThisQualifier
+                this.Update();
+// ReSharper restore RedundantThisQualifier
+                System.Threading.Thread.Sleep(1000);
+
+                if (i == 2)
+                {
+                    label2.Text = "Поторопитесь !!!";
+                }
+
+            }
+            Application.Exit();
+        }
 
         #endregion
 
@@ -132,5 +159,39 @@ namespace ColorChangerApplication
         } 
 
         #endregion
+
+        
+        private void Close_Forms(object sender, FormClosedEventArgs e)
+        {
+            progressBar1.Minimum = 0;
+            progressBar1.Maximum = 100;
+            progressBar1.Step = 10;
+
+            for (int i = 10; i > 0; --i)
+            {
+                progressBar1.PerformStep();
+                label1.Text = "До закрытия осталось : " + i;
+
+                // ReSharper disable RedundantThisQualifier
+                this.Update();
+                // ReSharper restore RedundantThisQualifier
+                System.Threading.Thread.Sleep(1000);
+
+                if (i == 2)
+                {
+                    label2.Text = "ДОСВИДАНИЕ !!!";
+                }
+
+            }
+            Application.Exit();
+        }
+
+        
+
+        
     }
+
+   
+
+    
 }

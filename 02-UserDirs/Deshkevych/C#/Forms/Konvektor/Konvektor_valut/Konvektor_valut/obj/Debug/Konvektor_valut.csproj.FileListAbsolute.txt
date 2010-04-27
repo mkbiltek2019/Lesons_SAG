@@ -1,0 +1,8 @@
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Konvektor\Konvektor_valut\Konvektor_valut\bin\Debug\Konvektor_valut.exe
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Konvektor\Konvektor_valut\Konvektor_valut\bin\Debug\Konvektor_valut.pdb
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Konvektor\Konvektor_valut\Konvektor_valut\obj\Debug\ResolveAssemblyReference.cache
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Konvektor\Konvektor_valut\Konvektor_valut\obj\Debug\Konvektor_valut.Form1.resources
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Konvektor\Konvektor_valut\Konvektor_valut\obj\Debug\Konvektor_valut.Properties.Resources.resources
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Konvektor\Konvektor_valut\Konvektor_valut\obj\Debug\Konvektor_valut.csproj.GenerateResource.Cache
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Konvektor\Konvektor_valut\Konvektor_valut\obj\Debug\Konvektor_valut.exe
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Konvektor\Konvektor_valut\Konvektor_valut\obj\Debug\Konvektor_valut.pdb

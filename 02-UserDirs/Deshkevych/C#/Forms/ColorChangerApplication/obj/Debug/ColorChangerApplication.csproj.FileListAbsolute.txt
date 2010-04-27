@@ -1,0 +1,9 @@
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\SVN\13ns9-1spr\02-UserDirs\Deshkevych\C#\Forms\ColorChangerApplication\bin\Debug\ColorChangerApplication.exe
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\SVN\13ns9-1spr\02-UserDirs\Deshkevych\C#\Forms\ColorChangerApplication\bin\Debug\ColorChangerApplication.pdb
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\SVN\13ns9-1spr\02-UserDirs\Deshkevych\C#\Forms\ColorChangerApplication\obj\Debug\ResolveAssemblyReference.cache
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\SVN\13ns9-1spr\02-UserDirs\Deshkevych\C#\Forms\ColorChangerApplication\obj\Debug\ColorChangerApplication.AboutBox.resources
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\SVN\13ns9-1spr\02-UserDirs\Deshkevych\C#\Forms\ColorChangerApplication\obj\Debug\ColorChangerApplication.Properties.Resources.resources
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\SVN\13ns9-1spr\02-UserDirs\Deshkevych\C#\Forms\ColorChangerApplication\obj\Debug\ColorChangerApplication.csproj.GenerateResource.Cache
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\SVN\13ns9-1spr\02-UserDirs\Deshkevych\C#\Forms\ColorChangerApplication\obj\Debug\ColorChangerApplication.exe
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\SVN\13ns9-1spr\02-UserDirs\Deshkevych\C#\Forms\ColorChangerApplication\obj\Debug\ColorChangerApplication.pdb
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\SVN\13ns9-1spr\02-UserDirs\Deshkevych\C#\Forms\ColorChangerApplication\obj\Debug\ColorChangerApplication.Form1.resources
