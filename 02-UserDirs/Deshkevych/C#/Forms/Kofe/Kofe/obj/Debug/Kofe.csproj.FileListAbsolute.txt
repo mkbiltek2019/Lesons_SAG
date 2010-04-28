@@ -1,0 +1,8 @@
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Kofe\Kofe\bin\Debug\Kofe.exe
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Kofe\Kofe\bin\Debug\Kofe.pdb
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Kofe\Kofe\obj\Debug\ResolveAssemblyReference.cache
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Kofe\Kofe\obj\Debug\Kofe.Form1.resources
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Kofe\Kofe\obj\Debug\Kofe.Properties.Resources.resources
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Kofe\Kofe\obj\Debug\Kofe.csproj.GenerateResource.Cache
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Kofe\Kofe\obj\Debug\Kofe.exe
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Kofe\Kofe\obj\Debug\Kofe.pdb

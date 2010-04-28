@@ -1,0 +1,60 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="EDB9A732-C7F7-49E0-BDFE-2613697FD251/f:Form1.cs" caret="2550" fromTop="26" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="EDB9A732-C7F7-49E0-BDFE-2613697FD251/f:Form1.cs" caret="287" fromTop="13" />
+      <File id="EDB9A732-C7F7-49E0-BDFE-2613697FD251/f:Form1.cs" caret="483" fromTop="18" />
+      <File id="EDB9A732-C7F7-49E0-BDFE-2613697FD251/f:Form1.cs" caret="699" fromTop="21" />
+      <File id="EDB9A732-C7F7-49E0-BDFE-2613697FD251/f:Form1.cs" caret="1187" fromTop="24" />
+      <File id="EDB9A732-C7F7-49E0-BDFE-2613697FD251/f:Form1.cs" caret="1448" fromTop="23" />
+      <File id="EDB9A732-C7F7-49E0-BDFE-2613697FD251/f:Form1.cs" caret="2613" fromTop="21" />
+      <File id="EDB9A732-C7F7-49E0-BDFE-2613697FD251/f:Form1.cs" caret="2548" fromTop="26" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="private" priority="0" />
+      <Item value="double" priority="0" />
+      <Item value="checkBox3" priority="8" />
+      <Item value="false" priority="2" />
+      <Item value="if" priority="6" />
+      <Item value="checkBox1" priority="2" />
+      <Item value="summ" priority="10" />
+      <Item value="else" priority="5" />
+      <Item value="label1" priority="3" />
+      <Item value="checkBox2" priority="2" />
+      <Item value="true" priority="0" />
+      <Item value="checkBox4" priority="2" />
+      <Item value="MessageBox" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.CheckBox">
+      <Item value="Enabled" priority="3" />
+      <Item value="Checked" priority="13" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Label">
+      <Item value="Refresh" priority="2" />
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Double">
+      <Item value="ToString" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
+      <Item value="Show" priority="2" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
