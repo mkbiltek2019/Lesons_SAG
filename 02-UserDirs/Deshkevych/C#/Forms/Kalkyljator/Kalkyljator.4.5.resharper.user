@@ -1,0 +1,110 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">True</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="03151DE2-0384-4F5E-9C94-EE650A753C4A/f:Form1.Designer.cs" caret="49" fromTop="0" />
+      <File id="03151DE2-0384-4F5E-9C94-EE650A753C4A/f:Form1.cs" caret="638" fromTop="0" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="03151DE2-0384-4F5E-9C94-EE650A753C4A/f:Form1.Designer.cs" caret="1892" fromTop="17" />
+      <File id="03151DE2-0384-4F5E-9C94-EE650A753C4A/f:Form1.cs" caret="303" fromTop="15" />
+      <File id="03151DE2-0384-4F5E-9C94-EE650A753C4A/f:Form1.cs" caret="1113" fromTop="10" />
+      <File id="03151DE2-0384-4F5E-9C94-EE650A753C4A/f:Form1.cs" caret="4080" fromTop="26" />
+      <File id="03151DE2-0384-4F5E-9C94-EE650A753C4A/f:Form1.cs" caret="542" fromTop="6" />
+      <File id="03151DE2-0384-4F5E-9C94-EE650A753C4A/f:Form1.cs" caret="3911" fromTop="22" />
+      <File id="03151DE2-0384-4F5E-9C94-EE650A753C4A/f:Form1.cs" caret="5197" fromTop="19" />
+      <File id="03151DE2-0384-4F5E-9C94-EE650A753C4A/f:Form1.cs" caret="5172" fromTop="35" />
+      <File id="03151DE2-0384-4F5E-9C94-EE650A753C4A/f:Form1.cs" caret="1291" fromTop="27" />
+      <File id="03151DE2-0384-4F5E-9C94-EE650A753C4A/f:Form1.cs" caret="1877" fromTop="31" />
+      <File id="03151DE2-0384-4F5E-9C94-EE650A753C4A/f:Form1.cs" caret="1545" fromTop="23" />
+      <File id="03151DE2-0384-4F5E-9C94-EE650A753C4A/f:Form1.cs" caret="2848" fromTop="9" />
+      <File id="03151DE2-0384-4F5E-9C94-EE650A753C4A/f:Form1.cs" caret="638" fromTop="0" />
+      <File id="03151DE2-0384-4F5E-9C94-EE650A753C4A/f:Form1.cs" caret="5197" fromTop="0" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="int" priority="4" />
+      <Item value="delegate" priority="0" />
+      <Item value="private" priority="4" />
+      <Item value="double" priority="1" />
+      <Item value="string" priority="0" />
+      <Item value="Boolean" priority="0" />
+      <Item value="this" priority="6" />
+      <Item value="new" priority="3" />
+      <Item value="Drawing" priority="0" />
+      <Item value="Size" priority="0" />
+      <Item value="bw" priority="6" />
+      <Item value="bdx" priority="7" />
+      <Item value="bh" priority="1" />
+      <Item value="label1" priority="12" />
+      <Item value="bdy" priority="4" />
+      <Item value="if" priority="17" />
+      <Item value="for" priority="1" />
+      <Item value="i" priority="11" />
+      <Item value="Button" priority="5" />
+      <Item value="x" priority="1" />
+      <Item value="d" priority="6" />
+      <Item value="else" priority="7" />
+      <Item value="Convert" priority="1" />
+      <Item value="EventHandler" priority="1" />
+      <Item value="op" priority="8" />
+      <Item value="fd" priority="2" />
+      <Item value="true" priority="1" />
+      <Item value="co" priority="4" />
+      <Item value="void" priority="1" />
+      <Item value="object" priority="1" />
+      <Item value="EventArgs" priority="1" />
+      <Item value="sender" priority="1" />
+      <Item value="btn_c" priority="7" />
+      <Item value="false" priority="1" />
+      <Item value="ind_n" priority="1" />
+      <Item value="ac" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Kalkyljator.Form1">
+      <Item value="ClientSize" priority="0" />
+      <Item value="d" priority="1" />
+      <Item value="Controls" priority="1" />
+      <Item value="op" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Label">
+      <Item value="SetBounds" priority="0" />
+      <Item value="Text" priority="11" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Button">
+      <Item value="SetBounds" priority="3" />
+      <Item value="Name" priority="9" />
+      <Item value="Text" priority="10" />
+      <Item value="Click" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToString" priority="0" />
+      <Item value="ToDouble" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Control+ControlCollection">
+      <Item value="Add" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="IndexOf" priority="0" />
+      <Item value="Equals" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Double">
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
