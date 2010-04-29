@@ -1,0 +1,8 @@
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Steklopaket\Steklopaket\obj\Debug\ResolveAssemblyReference.cache
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Steklopaket\Steklopaket\obj\Debug\Steklopaket.Form1.resources
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Steklopaket\Steklopaket\obj\Debug\Steklopaket.Properties.Resources.resources
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Steklopaket\Steklopaket\obj\Debug\Steklopaket.csproj.GenerateResource.Cache
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Steklopaket\Steklopaket\bin\Debug\Steklopaket.exe
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Steklopaket\Steklopaket\bin\Debug\Steklopaket.pdb
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Steklopaket\Steklopaket\obj\Debug\Steklopaket.exe
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Steklopaket\Steklopaket\obj\Debug\Steklopaket.pdb
