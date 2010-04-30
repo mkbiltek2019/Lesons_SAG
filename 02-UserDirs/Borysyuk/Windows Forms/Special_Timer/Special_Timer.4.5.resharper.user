@@ -1,0 +1,44 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="restoreToolStripMenuItem" priority="0" />
+      <Item value="true" priority="0" />
+      <Item value="else" priority="0" />
+      <Item value="if" priority="0" />
+      <Item value="ClientSize" priority="0" />
+      <Item value="Size" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ToolStripMenuItem">
+      <Item value="Enabled" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Size">
+      <Item value="Empty" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="339" fromTop="15" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="5508" fromTop="11" />
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="5203" fromTop="16" />
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="4921" fromTop="8" />
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="4178" fromTop="10" />
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="5417" fromTop="20" />
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="888" fromTop="21" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+</Configuration>
