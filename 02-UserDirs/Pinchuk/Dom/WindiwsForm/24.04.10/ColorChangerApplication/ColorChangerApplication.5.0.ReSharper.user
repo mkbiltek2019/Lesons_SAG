@@ -9,20 +9,28 @@
   <RecentFiles>
     <RecentFiles>
       <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.Designer.cs" caret="23622" fromTop="8" />
-      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="6059" fromTop="37" />
+      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="5011" fromTop="110" />
     </RecentFiles>
     <RecentEdits>
-      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="4745" fromTop="43" />
-      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="4692" fromTop="36" />
-      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="4681" fromTop="36" />
-      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="4273" fromTop="23" />
+      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="4883" fromTop="43" />
+      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="4779" fromTop="36" />
       <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="576" fromTop="12" />
-      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="6259" fromTop="30" />
-      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="682" fromTop="25" />
-      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="5202" fromTop="22" />
-      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="5545" fromTop="27" />
-      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="2305" fromTop="24" />
-      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="6059" fromTop="37" />
+      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="6469" fromTop="30" />
+      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="2353" fromTop="24" />
+      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="3079" fromTop="37" />
+      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="661" fromTop="19" />
+      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="4883" fromTop="37" />
+      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="4915" fromTop="39" />
+      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="5658" fromTop="35" />
+      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="4883" fromTop="12" />
+      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="5743" fromTop="14" />
+      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="6248" fromTop="25" />
+      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="6297" fromTop="25" />
+      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="6295" fromTop="25" />
+      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="6445" fromTop="34" />
+      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="5219" fromTop="12" />
+      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="5435" fromTop="17" />
+      <File id="0474BF5E-8C31-408A-8A08-7893219150F8/f:ColorfulForm.cs" caret="5654" fromTop="22" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -44,13 +52,13 @@
       <Item value="Red" priority="0" />
       <Item value="Green" priority="0" />
       <Item value="Blue" priority="0" />
-      <Item value="private" priority="0" />
-      <Item value="Color`0" priority="2" />
+      <Item value="private" priority="2" />
+      <Item value="Color`0" priority="5" />
       <Item value="ColorFlags`0" priority="5" />
-      <Item value="colorFlags" priority="1" />
+      <Item value="colorFlags" priority="2" />
       <Item value="return" priority="0" />
-      <Item value="redTrackBar" priority="1" />
-      <Item value="greenTrackBar" priority="0" />
+      <Item value="redTrackBar" priority="3" />
+      <Item value="greenTrackBar" priority="2" />
       <Item value="if" priority="1" />
       <Item value="blue" priority="0" />
       <Item value="red" priority="0" />
@@ -63,14 +71,23 @@
       <Item value="break" priority="2" />
       <Item value="redCheckBox" priority="1" />
       <Item value="GreenCheckBox2" priority="0" />
-      <Item value="Color" priority="0" />
+      <Item value="Color" priority="1" />
       <Item value="greenCheckBox" priority="2" />
       <Item value="GetColor`0" priority="0" />
       <Item value="false" priority="2" />
       <Item value="blueCheckBox" priority="0" />
+      <Item value="public" priority="0" />
+      <Item value="new" priority="0" />
+      <Item value="colorPanel" priority="6" />
+      <Item value="blueTrackBar" priority="1" />
+      <Item value="int" priority="0" />
+      <Item value="ColorComponents`0" priority="1" />
+      <Item value="colorComponents" priority="0" />
+      <Item value="else" priority="0" />
+      <Item value="UnchekedColor`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Drawing.Color">
-      <Item value="FromArgb`0" priority="0" />
+      <Item value="FromArgb`0" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@ColorChangerApplication.ColorfulForm+ColorFlags">
       <Item value="Blue" priority="4" />
@@ -81,6 +98,19 @@
     <ItemStatistics item="Qualified:System.Windows.Forms.CheckBox">
       <Item value="Checked" priority="4" />
       <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TrackBar">
+      <Item value="Value" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Color">
+      <Item value="A" priority="0" />
+      <Item value="R" priority="0" />
+      <Item value="G" priority="0" />
+      <Item value="B" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ColorChangerApplication.ColorfulForm+ColorComponents">
+      <Item value="Red" priority="0" />
+      <Item value="Green" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

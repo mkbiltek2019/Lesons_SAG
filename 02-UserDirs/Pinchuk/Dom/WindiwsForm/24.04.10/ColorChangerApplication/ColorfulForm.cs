@@ -28,6 +28,7 @@ namespace ColorChangerApplication
             
           //  All = Red | Green | Blue  
         }
+        public Color colorPanel = new Color();
         #region Color Change Logics
 
         private void ChangePreviewPanelBackColor(Color color)
@@ -101,6 +102,7 @@ namespace ColorChangerApplication
                 greenTrackBar.Value = (int)greenNumericUpDown.Value;
                 blueTrackBar.Value = (int)blueNumericUpDown.Value;
             }
+            colorPanel = Color.FromArgb(redTrackBar.Value, greenTrackBar.Value, blueTrackBar.Value);
         }
 
         private void redExculeRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -148,48 +150,50 @@ namespace ColorChangerApplication
        
         private Color GetColor(ColorFlags colorFlags)
         {
-            int red = (int)redNumericUpDown.Value;
-            int green = (int)greenNumericUpDown.Value;
-            int blue = (int)blueNumericUpDown.Value;
-
             if ((colorFlags & ColorFlags.Blue) !=0)
-                blue = 0;
+                colorPanel = Color.FromArgb(colorPanel.R, colorPanel.G, 0);
             if ((colorFlags & ColorFlags.Red) != 0)
-                red = 0;
+                colorPanel = Color.FromArgb(0, colorPanel.G, colorPanel.B);
             if ((colorFlags & ColorFlags.Green) != 0)
-                green = 0;
+                colorPanel = Color.FromArgb(colorPanel.R, 0, colorPanel.B);
 
-            return  Color.FromArgb(red, green, blue);
+            return colorPanel;
         }
         private void checkBox_CheckedChanged(object sender, EventArgs e)
         {
             if(redCheckBox.Checked)
                 ChangePreviewPanelBackColor(GetColor(ColorFlags.Red));
-
-            if (redCheckBox.Checked && blueCheckBox.Checked)
-                ChangePreviewPanelBackColor(GetColor(ColorFlags.Red | ColorFlags.Blue));
+            else
+                ChangePreviewPanelBackColor(UnchekedColor(ColorComponents.Red)); 
 
             if (blueCheckBox.Checked)
                 ChangePreviewPanelBackColor(GetColor(ColorFlags.Blue));
+            else
+                ChangePreviewPanelBackColor(UnchekedColor(ColorComponents.Blue)); 
 
             if (greenCheckBox.Checked)
                 ChangePreviewPanelBackColor(GetColor(ColorFlags.Green));
+            else
+                ChangePreviewPanelBackColor(UnchekedColor(ColorComponents.Green)); 
+        }
+        private Color UnchekedColor(ColorComponents colorComponentToExlude)
+        {
+            switch (colorComponentToExlude)
+            {
+                case ColorComponents.Red:
+                    colorPanel = Color.FromArgb(redTrackBar.Value, colorPanel.G, colorPanel.B);
+                    break;
+                case ColorComponents.Green:
+                    colorPanel = Color.FromArgb(colorPanel.R, greenTrackBar.Value, colorPanel.B);
+                    break;
+                case ColorComponents.Blue:
+                    colorPanel = Color.FromArgb(colorPanel.R, colorPanel.G, blueTrackBar.Value);
+                    break;
+                case ColorComponents.None:
+                    break;
+            }
 
-            if (redCheckBox.Checked && blueCheckBox.Checked)
-                ChangePreviewPanelBackColor(GetColor(ColorFlags.Red | ColorFlags.Blue));
-
-            if (redCheckBox.Checked && greenCheckBox.Checked)
-                ChangePreviewPanelBackColor(GetColor(ColorFlags.Red | ColorFlags.Green));
-
-            if (greenCheckBox.Checked && blueCheckBox.Checked)
-                ChangePreviewPanelBackColor(GetColor(ColorFlags.Green | ColorFlags.Blue));
-
-            if (redCheckBox.Checked && blueCheckBox.Checked && greenCheckBox.Checked)
-                ChangePreviewPanelBackColor(GetColor(ColorFlags.Red | ColorFlags.Blue | ColorFlags.Green));
-
-            if (!redCheckBox.Checked && !blueCheckBox.Checked && !greenCheckBox.Checked)
-                ChangePreviewPanelBackColor(GetColor(ColorFlags.None));
-            
+            return colorPanel;
         }
     }
 }
