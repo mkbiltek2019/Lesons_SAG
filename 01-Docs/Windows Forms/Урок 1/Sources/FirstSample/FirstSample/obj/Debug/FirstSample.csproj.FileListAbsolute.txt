@@ -1,0 +1,8 @@
+D:\Programing\Manekovskij\01-Docs\Windows Forms\Урок 1\Sources\FirstSample\FirstSample\bin\Debug\FirstSample.exe
+D:\Programing\Manekovskij\01-Docs\Windows Forms\Урок 1\Sources\FirstSample\FirstSample\bin\Debug\FirstSample.pdb
+D:\Programing\Manekovskij\01-Docs\Windows Forms\Урок 1\Sources\FirstSample\FirstSample\obj\Debug\ResolveAssemblyReference.cache
+D:\Programing\Manekovskij\01-Docs\Windows Forms\Урок 1\Sources\FirstSample\FirstSample\obj\Debug\FirstSample.Form1.resources
+D:\Programing\Manekovskij\01-Docs\Windows Forms\Урок 1\Sources\FirstSample\FirstSample\obj\Debug\FirstSample.Properties.Resources.resources
+D:\Programing\Manekovskij\01-Docs\Windows Forms\Урок 1\Sources\FirstSample\FirstSample\obj\Debug\FirstSample.csproj.GenerateResource.Cache
+D:\Programing\Manekovskij\01-Docs\Windows Forms\Урок 1\Sources\FirstSample\FirstSample\obj\Debug\FirstSample.exe
+D:\Programing\Manekovskij\01-Docs\Windows Forms\Урок 1\Sources\FirstSample\FirstSample\obj\Debug\FirstSample.pdb
