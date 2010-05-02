@@ -13,7 +13,7 @@
     <RecentFiles>
       <File id="DA63115C-0308-49C5-A85E-5383123BBAC4/f:Form1.cs" caret="660" fromTop="20" />
       <File id="E9D7326E-B765-43B7-8C37-4E7201B7238B/f:Form1.cs" caret="549" fromTop="16" />
-      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="1894" fromTop="18" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3567" fromTop="17" />
     </RecentFiles>
     <RecentEdits>
       <File id="DA63115C-0308-49C5-A85E-5383123BBAC4/f:Form1.cs" caret="354" fromTop="10" />
@@ -23,16 +23,19 @@
       <File id="E9D7326E-B765-43B7-8C37-4E7201B7238B/f:Form1.cs" caret="658" fromTop="16" />
       <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="754" fromTop="14" />
       <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="1060" fromTop="22" />
-      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3688" fromTop="8" />
-      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="2216" fromTop="24" />
-      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3688" fromTop="62" />
-      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3430" fromTop="19" />
-      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3648" fromTop="19" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3818" fromTop="8" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="2259" fromTop="24" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3818" fromTop="62" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3778" fromTop="19" />
       <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="335" fromTop="12" />
-      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="2719" fromTop="15" />
-      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="2938" fromTop="20" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="2807" fromTop="15" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3026" fromTop="20" />
       <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="1660" fromTop="13" />
       <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="1894" fromTop="18" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="2603" fromTop="15" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="2193" fromTop="4" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3263" fromTop="10" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3542" fromTop="17" />
     </RecentEdits>
   </RecentFiles>
   <UnitTestRunner>
@@ -75,6 +78,7 @@
       <Item value="Equals" priority="0" />
       <Item value="MessageBoxButtons" priority="0" />
       <Item value="MessageBoxIcon" priority="0" />
+      <Item value="Text" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.Timer">
       <Item value="Interval" priority="1" />

@@ -61,6 +61,7 @@ namespace Timer
 
                 timer.Interval = 1000;
                 timer.Enabled = true;
+                Text = "Таймер работает";
 
                 groupBoxInput.Visible = false;
             }
@@ -71,6 +72,7 @@ namespace Timer
                 groupBoxInput.Enabled = true;
                 numericUpDownMinutes.Value = timeStopTimer.Minute;
                 numericUpDownSeconds.Value = timeStopTimer.Second;
+                Text = "Таймер остановлен";
             }
         }
 
@@ -96,6 +98,7 @@ namespace Timer
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
 
+                Text = "Отсчет окончен";
                 buttonStart.Text = "Пуск";
                 groupBoxInput.Enabled = true;
                 numericUpDownMinutes.Value = 0;
