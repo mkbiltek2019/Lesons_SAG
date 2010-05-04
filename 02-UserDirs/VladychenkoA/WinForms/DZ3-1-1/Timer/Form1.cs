@@ -62,8 +62,9 @@ namespace Timer
                 timer.Interval = 1000;
                 timer.Enabled = true;
                 Text = "Таймер работает";
+               
 
-                groupBoxInput.Visible = false;
+                groupBoxInput.Enabled = false;
             }
             else
             {
@@ -90,6 +91,11 @@ namespace Timer
             else
                 labelTimer.Text += timeStopTimer.Second.ToString();
 
+            if (timeStopTimer.Second <= 5 && timeStopTimer.Second > 0)
+            {
+                Microsoft.VisualBasic.Interaction.Beep();
+            }
+
             if(Equals(timeStartTimer, timeStopTimer))
             {
                 timer.Enabled = false;
@@ -103,7 +109,7 @@ namespace Timer
                 groupBoxInput.Enabled = true;
                 numericUpDownMinutes.Value = 0;
                 numericUpDownSeconds.Value = 0;
-                groupBoxInput.Visible = true;
+                groupBoxInput.Enabled = true;
             }
 
         }

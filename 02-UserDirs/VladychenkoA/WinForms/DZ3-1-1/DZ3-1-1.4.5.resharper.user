@@ -13,7 +13,7 @@
     <RecentFiles>
       <File id="DA63115C-0308-49C5-A85E-5383123BBAC4/f:Form1.cs" caret="660" fromTop="20" />
       <File id="E9D7326E-B765-43B7-8C37-4E7201B7238B/f:Form1.cs" caret="549" fromTop="16" />
-      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3567" fromTop="17" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="2260" fromTop="4" />
     </RecentFiles>
     <RecentEdits>
       <File id="DA63115C-0308-49C5-A85E-5383123BBAC4/f:Form1.cs" caret="354" fromTop="10" />
@@ -23,19 +23,19 @@
       <File id="E9D7326E-B765-43B7-8C37-4E7201B7238B/f:Form1.cs" caret="658" fromTop="16" />
       <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="754" fromTop="14" />
       <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="1060" fromTop="22" />
-      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3818" fromTop="8" />
-      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="2259" fromTop="24" />
-      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3818" fromTop="62" />
-      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3778" fromTop="19" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3998" fromTop="8" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="2276" fromTop="24" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3998" fromTop="62" />
       <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="335" fromTop="12" />
-      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="2807" fromTop="15" />
-      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3026" fromTop="20" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="2824" fromTop="15" />
       <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="1660" fromTop="13" />
       <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="1894" fromTop="18" />
-      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="2603" fromTop="15" />
-      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="2193" fromTop="4" />
-      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3263" fromTop="10" />
-      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3542" fromTop="17" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="2620" fromTop="15" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3443" fromTop="10" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3722" fromTop="17" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3371" fromTop="16" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="3950" fromTop="13" />
+      <File id="624CE401-A9E4-43A1-9F50-BCD315546590/f:Form1.cs" caret="2253" fromTop="4" />
     </RecentEdits>
   </RecentFiles>
   <UnitTestRunner>
@@ -67,7 +67,7 @@
       <Item value="false" priority="14" />
       <Item value="numericUpDownSeconds" priority="11" />
       <Item value="buttonStart" priority="10" />
-      <Item value="if" priority="8" />
+      <Item value="if" priority="9" />
       <Item value="else" priority="6" />
       <Item value="true" priority="8" />
       <Item value="timeStart" priority="2" />
@@ -79,6 +79,13 @@
       <Item value="MessageBoxButtons" priority="0" />
       <Item value="MessageBoxIcon" priority="0" />
       <Item value="Text" priority="1" />
+      <Item value="timeStopTimer" priority="1" />
+      <Item value="Microsoft" priority="0" />
+      <Item value="VisualBasic" priority="0" />
+      <Item value="CompilerServices" priority="0" />
+      <Item value="Information" priority="0" />
+      <Item value="ApplicationServices" priority="0" />
+      <Item value="Interaction" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.Timer">
       <Item value="Interval" priority="1" />
@@ -123,10 +130,10 @@
       <Item value="AddMinutes" priority="0" />
       <Item value="AddSeconds" priority="1" />
       <Item value="Minute" priority="6" />
-      <Item value="Second" priority="6" />
+      <Item value="Second" priority="8" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.GroupBox">
-      <Item value="Enabled" priority="2" />
+      <Item value="Enabled" priority="4" />
       <Item value="Visible" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.Label">
@@ -137,6 +144,9 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBoxIcon">
       <Item value="Information" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.VisualBasic.Interaction">
+      <Item value="Beep" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>
