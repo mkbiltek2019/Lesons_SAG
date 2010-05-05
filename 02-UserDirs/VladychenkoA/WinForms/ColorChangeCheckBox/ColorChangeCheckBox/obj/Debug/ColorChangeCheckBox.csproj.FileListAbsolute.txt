@@ -1,0 +1,9 @@
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\ColorChangeCheckBox\ColorChangeCheckBox\bin\Debug\ColorChangeCheckBox.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\ColorChangeCheckBox\ColorChangeCheckBox\bin\Debug\ColorChangeCheckBox.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\ColorChangeCheckBox\ColorChangeCheckBox\obj\Debug\ResolveAssemblyReference.cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\ColorChangeCheckBox\ColorChangeCheckBox\obj\Debug\ColorChangeCheckBox.Form1.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\ColorChangeCheckBox\ColorChangeCheckBox\obj\Debug\ColorChangeCheckBox.Properties.Resources.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\ColorChangeCheckBox\ColorChangeCheckBox\obj\Debug\ColorChangeCheckBox.csproj.GenerateResource.Cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\ColorChangeCheckBox\ColorChangeCheckBox\obj\Debug\ColorChangeCheckBox.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\ColorChangeCheckBox\ColorChangeCheckBox\obj\Debug\ColorChangeCheckBox.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\ColorChangeCheckBox\ColorChangeCheckBox\obj\Debug\ColorChangeCheckBox.AboutBox.resources
