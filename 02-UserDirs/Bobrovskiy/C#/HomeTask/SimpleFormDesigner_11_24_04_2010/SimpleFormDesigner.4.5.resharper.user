@@ -1,0 +1,182 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.Designer.cs" caret="21409" fromTop="341" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="4351" fromTop="40" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="2367" fromTop="20" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/d:Properties/f:Resources.resx" caret="5948" fromTop="17" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="1113" fromTop="21" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="3610" fromTop="17" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="3890" fromTop="17" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="4745" fromTop="21" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="2157" fromTop="23" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="2642" fromTop="14" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="1728" fromTop="15" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="1113" fromTop="11" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="1113" fromTop="3" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="1184" fromTop="21" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="1182" fromTop="12" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="5674" fromTop="23" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="4602" fromTop="3" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="968" fromTop="2" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="5434" fromTop="33" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="1519" fromTop="15" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="2827" fromTop="10" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="3020" fromTop="15" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="3209" fromTop="20" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="1717" fromTop="11" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="1915" fromTop="16" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="2116" fromTop="21" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="3669" fromTop="22" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="4351" fromTop="40" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="5877" fromTop="40" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="2255" fromTop="14" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="2367" fromTop="20" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="2392" fromTop="20" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/d:Properties/f:Resources.resx" caret="5911" fromTop="17" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/d:Properties/f:Resources.resx" caret="6197" fromTop="17" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="Windows" priority="2" />
+      <Item value="Forms" priority="2" />
+      <Item value="forms" priority="0" />
+      <Item value="System" priority="1" />
+      <Item value="AssemblyLoadEventArgs" priority="0" />
+      <Item value="new" priority="4" />
+      <Item value="Assembly" priority="1" />
+      <Item value="a" priority="2" />
+      <Item value="if" priority="2" />
+      <Item value="i" priority="0" />
+      <Item value="IContainerControl" priority="0" />
+      <Item value="IContainer" priority="0" />
+      <Item value="ArrayList" priority="0" />
+      <Item value="arr" priority="0" />
+      <Item value="Label" priority="2" />
+      <Item value="e" priority="2" />
+      <Item value="sender" priority="0" />
+      <Item value="Application" priority="0" />
+      <Item value="return" priority="0" />
+      <Item value="null" priority="0" />
+      <Item value="tmp" priority="1" />
+      <Item value="private" priority="1" />
+      <Item value="false" priority="1" />
+      <Item value="true" priority="0" />
+      <Item value="moove" priority="0" />
+      <Item value="this" priority="1" />
+      <Item value="MainPropertyGrid" priority="0" />
+      <Item value="BorderStyle" priority="0" />
+      <Item value="Point" priority="0" />
+      <Item value="StaticCreator" priority="0" />
+      <Item value="t" priority="0" />
+      <Item value="public" priority="0" />
+      <Item value="enum" priority="0" />
+      <Item value="switch" priority="0" />
+      <Item value="case" priority="0" />
+      <Item value="break" priority="0" />
+      <Item value="Control" priority="0" />
+      <Item value="Button" priority="0" />
+      <Item value="CheckBox" priority="0" />
+      <Item value="RadioButton" priority="0" />
+      <Item value="GroupBox" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Reflection.Assembly">
+      <Item value="LoadModule" priority="0" />
+      <Item value="GlobalAssemblyCache" priority="0" />
+      <Item value="ReflectionOnly" priority="0" />
+      <Item value="GetType" priority="0" />
+      <Item value="GetTypes" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Reflection.Assembly">
+      <Item value="CreateQualifiedName" priority="0" />
+      <Item value="Load" priority="0" />
+      <Item value="ReflectionOnlyLoad" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Type">
+      <Item value="GetType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Type">
+      <Item value="Equals" priority="0" />
+      <Item value="GetElementType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.ArrayList">
+      <Item value="Add" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SimpleFormDesigner.MainForm">
+      <Item value="SplitContainer" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.SplitContainer">
+      <Item value="AccessibilityObject" priority="0" />
+      <Item value="Panel1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.SplitterPanel">
+      <Item value="Controls" priority="0" />
+      <Item value="MouseDown" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Random">
+      <Item value="Next" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Label">
+      <Item value="Focus" priority="1" />
+      <Item value="MouseDown" priority="0" />
+      <Item value="MouseMove" priority="0" />
+      <Item value="Location" priority="1" />
+      <Item value="Update" priority="0" />
+      <Item value="BorderStyle" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SimpleFormDesigner.StaticCreator">
+      <Item value="CreateStatic" priority="0" />
+      <Item value="TopX" priority="1" />
+      <Item value="TopY" priority="0" />
+      <Item value="BottomX" priority="0" />
+      <Item value="BottomY" priority="0" />
+      <Item value="StaticsUnderPoint" priority="0" />
+      <Item value="currentLabel" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.Application">
+      <Item value="Exit" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Control+ControlCollection">
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MouseButtons">
+      <Item value="Left" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.MouseEventArgs">
+      <Item value="Location" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.PropertyGrid">
+      <Item value="SelectedObject" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.BorderStyle">
+      <Item value="FixedSingle" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Point">
+      <Item value="X" priority="1" />
+      <Item value="Y" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SimpleFormDesigner.ListOfControls">
+      <Item value="Label" priority="2" />
+      <Item value="Button" priority="1" />
+      <Item value="CheckBox" priority="1" />
+      <Item value="RadioButton" priority="1" />
+      <Item value="GroupBox" priority="1" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
