@@ -3,6 +3,7 @@
     <string />
     <integer />
     <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
       <setting name="SolutionAnalysisEnabled">False</setting>
     </boolean>
   </SettingsComponent>
@@ -11,42 +12,47 @@
   </NAntValidationSettings>
   <RecentFiles>
     <RecentFiles>
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.Designer.cs" caret="21409" fromTop="341" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="4351" fromTop="40" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="2367" fromTop="20" />
       <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/d:Properties/f:Resources.resx" caret="5948" fromTop="17" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/d:Properties/f:Settings.Designer.cs" caret="0" fromTop="0" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/d:Properties/f:AssemblyInfo.cs" caret="0" fromTop="0" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Program.cs" caret="138" fromTop="7" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:AboutBox.cs" caret="609" fromTop="16" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.Designer.cs" caret="0" fromTop="0" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlProperties.cs" caret="790" fromTop="50" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="8059" fromTop="56" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="2067" fromTop="38" />
     </RecentFiles>
     <RecentEdits>
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="1113" fromTop="21" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="3610" fromTop="17" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="3890" fromTop="17" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="4745" fromTop="21" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="2157" fromTop="23" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="2642" fromTop="14" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="1728" fromTop="15" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="1113" fromTop="11" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="1113" fromTop="3" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="1184" fromTop="21" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="1182" fromTop="12" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="5674" fromTop="23" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="4602" fromTop="3" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="968" fromTop="2" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="5434" fromTop="33" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="1519" fromTop="15" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="2827" fromTop="10" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="3020" fromTop="15" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="3209" fromTop="20" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="1717" fromTop="11" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="1915" fromTop="16" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="2116" fromTop="21" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="3669" fromTop="22" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="4351" fromTop="40" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="5877" fromTop="40" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="2255" fromTop="14" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="2367" fromTop="20" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="2392" fromTop="20" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/d:Properties/f:Resources.resx" caret="5911" fromTop="17" />
-      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/d:Properties/f:Resources.resx" caret="6197" fromTop="17" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="6959" fromTop="70" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="6529" fromTop="67" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="6785" fromTop="78" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="3730" fromTop="66" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="7850" fromTop="103" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="4480" fromTop="84" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="1044" fromTop="17" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="1187" fromTop="7" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="6325" fromTop="147" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="6794" fromTop="165" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="833" fromTop="15" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="421" fromTop="13" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="12023" fromTop="261" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:AboutBox.cs" caret="131" fromTop="10" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="3522" fromTop="154" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="3375" fromTop="152" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="2826" fromTop="38" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="2731" fromTop="10" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="9952" fromTop="76" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="12009" fromTop="116" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="8083" fromTop="29" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="3522" fromTop="85" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="3538" fromTop="92" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="3538" fromTop="43" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="10313" fromTop="6" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:Form1.cs" caret="3205" fromTop="67" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="6126" fromTop="70" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:ControlCreator.cs" caret="12023" fromTop="149" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:AboutBox.cs" caret="15" fromTop="1" />
+      <File id="AA2B0B5D-2A41-49C6-8D2D-85D19992C7E6/f:AboutBox.cs" caret="609" fromTop="16" />
     </RecentEdits>
   </RecentFiles>
   <UnitTestRunner>
@@ -59,33 +65,33 @@
       <Item value="forms" priority="0" />
       <Item value="System" priority="1" />
       <Item value="AssemblyLoadEventArgs" priority="0" />
-      <Item value="new" priority="4" />
+      <Item value="new" priority="12" />
       <Item value="Assembly" priority="1" />
       <Item value="a" priority="2" />
-      <Item value="if" priority="2" />
-      <Item value="i" priority="0" />
+      <Item value="if" priority="4" />
+      <Item value="i" priority="4" />
       <Item value="IContainerControl" priority="0" />
       <Item value="IContainer" priority="0" />
-      <Item value="ArrayList" priority="0" />
-      <Item value="arr" priority="0" />
+      <Item value="ArrayList" priority="2" />
+      <Item value="arr" priority="2" />
       <Item value="Label" priority="2" />
-      <Item value="e" priority="2" />
+      <Item value="e" priority="3" />
       <Item value="sender" priority="0" />
       <Item value="Application" priority="0" />
       <Item value="return" priority="0" />
       <Item value="null" priority="0" />
       <Item value="tmp" priority="1" />
-      <Item value="private" priority="1" />
-      <Item value="false" priority="1" />
-      <Item value="true" priority="0" />
+      <Item value="private" priority="3" />
+      <Item value="false" priority="2" />
+      <Item value="true" priority="1" />
       <Item value="moove" priority="0" />
-      <Item value="this" priority="1" />
+      <Item value="this" priority="3" />
       <Item value="MainPropertyGrid" priority="0" />
       <Item value="BorderStyle" priority="0" />
       <Item value="Point" priority="0" />
       <Item value="StaticCreator" priority="0" />
       <Item value="t" priority="0" />
-      <Item value="public" priority="0" />
+      <Item value="public" priority="1" />
       <Item value="enum" priority="0" />
       <Item value="switch" priority="0" />
       <Item value="case" priority="0" />
@@ -95,6 +101,49 @@
       <Item value="CheckBox" priority="0" />
       <Item value="RadioButton" priority="0" />
       <Item value="GroupBox" priority="0" />
+      <Item value="CurrentControlContextMenuStrip" priority="0" />
+      <Item value="deleteToolStripMenuItem" priority="0" />
+      <Item value="void" priority="0" />
+      <Item value="object" priority="0" />
+      <Item value="EventArgs" priority="0" />
+      <Item value="propertiesToolStripMenuItem1" priority="0" />
+      <Item value="Show" priority="0" />
+      <Item value="MessageBox" priority="0" />
+      <Item value="ControlsListComboBox" priority="0" />
+      <Item value="for" priority="1" />
+      <Item value="int" priority="2" />
+      <Item value="SerializableAttribute" priority="0" />
+      <Item value="Serializable" priority="0" />
+      <Item value="ISerializable" priority="0" />
+      <Item value="OpenFileDialog" priority="1" />
+      <Item value="openDialog" priority="1" />
+      <Item value="DialogResult" priority="1" />
+      <Item value="SaveFileDialog" priority="0" />
+      <Item value="controlArray" priority="0" />
+      <Item value="BackColor" priority="0" />
+      <Item value="SplitContainer" priority="0" />
+      <Item value="ControlSize" priority="0" />
+      <Item value="ForeColor" priority="0" />
+      <Item value="Location" priority="0" />
+      <Item value="Name" priority="0" />
+      <Item value="TabIndex" priority="0" />
+      <Item value="Text" priority="0" />
+      <Item value="while" priority="0" />
+      <Item value="m" priority="0" />
+      <Item value="ControlProperties" priority="1" />
+      <Item value="string" priority="8" />
+      <Item value="type" priority="0" />
+      <Item value="char" priority="1" />
+      <Item value="r" priority="0" />
+      <Item value="Length" priority="1" />
+      <Item value="result" priority="1" />
+      <Item value="foreach" priority="0" />
+      <Item value="ListOfControls" priority="0" />
+      <Item value="prop" priority="7" />
+      <Item value="Convert" priority="0" />
+      <Item value="Exception" priority="0" />
+      <Item value="AboutBox" priority="0" />
+      <Item value="box" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Reflection.Assembly">
       <Item value="LoadModule" priority="0" />
@@ -116,17 +165,19 @@
       <Item value="GetElementType" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.ArrayList">
-      <Item value="Add" priority="0" />
+      <Item value="Add" priority="1" />
+      <Item value="ToArray" priority="0" />
+      <Item value="Count" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:SimpleFormDesigner.MainForm">
-      <Item value="SplitContainer" priority="0" />
+      <Item value="SplitContainer" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.SplitContainer">
       <Item value="AccessibilityObject" priority="0" />
-      <Item value="Panel1" priority="0" />
+      <Item value="Panel1" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.SplitterPanel">
-      <Item value="Controls" priority="0" />
+      <Item value="Controls" priority="2" />
       <Item value="MouseDown" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Random">
@@ -154,6 +205,7 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.Control+ControlCollection">
       <Item value="Count" priority="0" />
+      <Item value="Add" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Windows.Forms.MouseButtons">
       <Item value="Left" priority="0" />
@@ -172,11 +224,88 @@
       <Item value="Y" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@SimpleFormDesigner.ListOfControls">
-      <Item value="Label" priority="2" />
-      <Item value="Button" priority="1" />
-      <Item value="CheckBox" priority="1" />
-      <Item value="RadioButton" priority="1" />
-      <Item value="GroupBox" priority="1" />
+      <Item value="Label" priority="3" />
+      <Item value="Button" priority="3" />
+      <Item value="CheckBox" priority="2" />
+      <Item value="RadioButton" priority="2" />
+      <Item value="GroupBox" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Control">
+      <Item value="ContextMenuStrip" priority="0" />
+      <Item value="Visible" priority="0" />
+      <Item value="Name" priority="3" />
+      <Item value="Parent" priority="0" />
+      <Item value="BackColor" priority="0" />
+      <Item value="Size" priority="0" />
+      <Item value="ForeColor" priority="0" />
+      <Item value="Location" priority="0" />
+      <Item value="TabIndex" priority="0" />
+      <Item value="Text" priority="0" />
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.MouseButtons">
+      <Item value="Right" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ContextMenuStrip">
+      <Item value="Show" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ToolStripMenuItem">
+      <Item value="Click" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
+      <Item value="Show" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ComboBox">
+      <Item value="Items" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ComboBox+ObjectCollection">
+      <Item value="AddRange" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.OpenFileDialog">
+      <Item value="InitialDirectory" priority="0" />
+      <Item value="Filter" priority="0" />
+      <Item value="FilterIndex" priority="0" />
+      <Item value="RestoreDirectory" priority="0" />
+      <Item value="ShowDialog" priority="0" />
+      <Item value="FileName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.DialogResult">
+      <Item value="OK" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Runtime.Serialization.SerializationException">
+      <Item value="Message" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.SaveFileDialog">
+      <Item value="FileName" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.FileMode">
+      <Item value="Open" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter">
+      <Item value="Deserialize" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.FileStream">
+      <Item value="CanRead" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Split" priority="1" />
+      <Item value="Equals" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SimpleFormDesigner.ControlProperties">
+      <Item value="ControlType" priority="1" />
+      <Item value="Name" priority="1" />
+      <Item value="BackColor" priority="0" />
+      <Item value="ControlSize" priority="0" />
+      <Item value="ForeColor" priority="0" />
+      <Item value="Location" priority="0" />
+      <Item value="TabIndex" priority="0" />
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SimpleFormDesigner.AboutBox">
+      <Item value="ShowDialog" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DialogResult">
+      <Item value="OK" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

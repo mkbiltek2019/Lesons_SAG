@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -26,22 +27,19 @@ namespace SimpleFormDesigner
 {
     public partial class MainForm : Form
     {
-       
+
         public MainForm()
         {
             InitializeComponent();
         }
+
+        #region Tool bar handlers
 
         private void CreateLabeltoolStripButton_Click(object sender, EventArgs e)
         {
             SetControlParamsAndBindToPanelByControlClassName(ListOfControls.Label);
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-        
         private void CreateButtonToolStripButton_Click(object sender, EventArgs e)
         {
             SetControlParamsAndBindToPanelByControlClassName(ListOfControls.Button);
@@ -62,9 +60,18 @@ namespace SimpleFormDesigner
             SetControlParamsAndBindToPanelByControlClassName(ListOfControls.RadioButton);
         }
 
-        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        #endregion
 
+
+        #region Menu handlers
+
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             SaveFileDialog saveDialog = new SaveFileDialog();
 
             saveDialog.InitialDirectory = @".";
@@ -72,31 +79,13 @@ namespace SimpleFormDesigner
             saveDialog.FilterIndex = -1;
             saveDialog.RestoreDirectory = true;
 
-            if (saveDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if (saveDialog.ShowDialog() == DialogResult.OK)
             {
-
+                SerializeControlsFromPanelToFile(saveDialog.FileName);
             }
-            //FileStream fs = new FileStream("FormDesigner.dat", FileMode.Create);
-
-            //// Construct a BinaryFormatter and use it to serialize the data to the stream.
-            //BinaryFormatter formatter = new BinaryFormatter();
-            //try
-            //{
-            //    formatter.Serialize(fs, (object)SplitContainer.Panel1.Controls[0]);
-            //}
-            //catch (SerializationException ee)
-            //{
-            //    Console.WriteLine("Failed to serialize. Reason: " + ee.Message);
-            //    throw;
-            //}
-            //finally
-            //{
-            //    fs.Close();
-            //}
-         
         }
 
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog openDialog = new OpenFileDialog();
 
@@ -104,26 +93,19 @@ namespace SimpleFormDesigner
             openDialog.Filter = @"data file |*.dat| All files |*.*";
             openDialog.FilterIndex = -1;
             openDialog.RestoreDirectory = true;
-            if (openDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if (openDialog.ShowDialog() == DialogResult.OK)
             {
-
+                DeserializeControlsFromFileToPanel(openDialog.FileName);
             }
         }
 
-        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AboutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveDialog = new SaveFileDialog();
-
-            saveDialog.InitialDirectory = @".";
-            saveDialog.Filter = @"data file |*.dat| All files |*.*";
-            saveDialog.FilterIndex = -1;
-            saveDialog.RestoreDirectory = true;
-
-            if (saveDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-
-            }
+            AboutBox box = new AboutBox();
+            box.ShowDialog();
         }
+
+        #endregion
 
     }
 

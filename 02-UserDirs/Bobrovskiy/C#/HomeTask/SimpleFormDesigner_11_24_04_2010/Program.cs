@@ -5,7 +5,6 @@ using System.Windows.Forms;
 
 namespace SimpleFormDesigner
 {
-    [Serializable]
     static class Program
     {
         /// <summary>
