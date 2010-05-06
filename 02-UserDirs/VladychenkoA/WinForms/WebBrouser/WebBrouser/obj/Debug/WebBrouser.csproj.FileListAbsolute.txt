@@ -1,0 +1,8 @@
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\WebBrouser\WebBrouser\bin\Debug\WebBrouser.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\WebBrouser\WebBrouser\bin\Debug\WebBrouser.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\WebBrouser\WebBrouser\obj\Debug\ResolveAssemblyReference.cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\WebBrouser\WebBrouser\obj\Debug\WebBrouser.Form1.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\WebBrouser\WebBrouser\obj\Debug\WebBrouser.Properties.Resources.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\WebBrouser\WebBrouser\obj\Debug\WebBrouser.csproj.GenerateResource.Cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\WebBrouser\WebBrouser\obj\Debug\WebBrouser.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\WebBrouser\WebBrouser\obj\Debug\WebBrouser.pdb
