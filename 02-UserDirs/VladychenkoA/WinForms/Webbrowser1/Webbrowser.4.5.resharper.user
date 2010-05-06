@@ -1,0 +1,69 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="C718C186-3240-4E71-83E0-03A47DF6A54B/f:Form1.Designer.cs" caret="10319" fromTop="32" />
+      <File id="C718C186-3240-4E71-83E0-03A47DF6A54B/f:Form1.cs" caret="775" fromTop="18" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="C718C186-3240-4E71-83E0-03A47DF6A54B/f:Form1.Designer.cs" caret="10319" fromTop="15" />
+      <File id="C718C186-3240-4E71-83E0-03A47DF6A54B/f:Form1.Designer.cs" caret="11288" fromTop="15" />
+      <File id="C718C186-3240-4E71-83E0-03A47DF6A54B/f:Form1.Designer.cs" caret="11288" fromTop="10" />
+      <File id="C718C186-3240-4E71-83E0-03A47DF6A54B/f:Form1.Designer.cs" caret="10319" fromTop="32" />
+      <File id="C718C186-3240-4E71-83E0-03A47DF6A54B/f:Form1.cs" caret="1001" fromTop="12" />
+      <File id="C718C186-3240-4E71-83E0-03A47DF6A54B/f:Form1.cs" caret="1136" fromTop="12" />
+      <File id="C718C186-3240-4E71-83E0-03A47DF6A54B/f:Form1.cs" caret="1274" fromTop="12" />
+      <File id="C718C186-3240-4E71-83E0-03A47DF6A54B/f:Form1.cs" caret="1435" fromTop="18" />
+      <File id="C718C186-3240-4E71-83E0-03A47DF6A54B/f:Form1.cs" caret="775" fromTop="18" />
+      <File id="C718C186-3240-4E71-83E0-03A47DF6A54B/f:Form1.cs" caret="1482" fromTop="18" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerMSTest>
+    <UseTestRunConfigFromMetadataFile>False</UseTestRunConfigFromMetadataFile>
+  </UnitTestRunnerMSTest>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="webBrowser1" priority="6" />
+      <Item value="toolStripTextBox1" priority="3" />
+      <Item value="tabPage1" priority="0" />
+      <Item value="toolStripProgressBar1" priority="0" />
+      <Item value="e" priority="0" />
+      <Item value="toolStripStatusLabel1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.WebBrowser">
+      <Item value="Navigate" priority="1" />
+      <Item value="Url" priority="0" />
+      <Item value="DocumentTitle" priority="0" />
+      <Item value="StatusText" priority="0" />
+      <Item value="GoBack" priority="0" />
+      <Item value="GoForward" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ToolStripTextBox">
+      <Item value="Text" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Uri">
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TabPage">
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ToolStripProgressBar">
+      <Item value="Value" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.WebBrowserProgressChangedEventArgs">
+      <Item value="CurrentProgress" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

@@ -1,0 +1,8 @@
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\Webbrowser\Webbrowser\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\Webbrowser\Webbrowser\obj\Debug\Webbrowser.Form1.resources
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\Webbrowser\Webbrowser\obj\Debug\Webbrowser.Properties.Resources.resources
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\Webbrowser\Webbrowser\obj\Debug\Webbrowser.csproj.GenerateResource.Cache
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\Webbrowser\Webbrowser\bin\Debug\Webbrowser.exe
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\Webbrowser\Webbrowser\bin\Debug\Webbrowser.pdb
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\Webbrowser\Webbrowser\obj\Debug\Webbrowser.exe
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\Webbrowser\Webbrowser\obj\Debug\Webbrowser.pdb
