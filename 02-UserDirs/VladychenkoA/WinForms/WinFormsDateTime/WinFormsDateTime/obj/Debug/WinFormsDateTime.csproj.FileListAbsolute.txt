@@ -1,0 +1,8 @@
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\WinFormsDateTime\WinFormsDateTime\bin\Debug\WinFormsDateTime.exe
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\WinFormsDateTime\WinFormsDateTime\bin\Debug\WinFormsDateTime.pdb
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\WinFormsDateTime\WinFormsDateTime\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\WinFormsDateTime\WinFormsDateTime\obj\Debug\WinFormsDateTime.Form1.resources
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\WinFormsDateTime\WinFormsDateTime\obj\Debug\WinFormsDateTime.Properties.Resources.resources
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\WinFormsDateTime\WinFormsDateTime\obj\Debug\WinFormsDateTime.csproj.GenerateResource.Cache
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\WinFormsDateTime\WinFormsDateTime\obj\Debug\WinFormsDateTime.exe
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\WinFormsDateTime\WinFormsDateTime\obj\Debug\WinFormsDateTime.pdb

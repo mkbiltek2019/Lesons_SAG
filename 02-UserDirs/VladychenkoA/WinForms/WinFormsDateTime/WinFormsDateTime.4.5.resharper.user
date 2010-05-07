@@ -1,0 +1,93 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="91CF605E-5871-483F-A406-4D7FB38110ED/f:DayOfTheWeek.cs" caret="310" fromTop="11" />
+      <File id="91CF605E-5871-483F-A406-4D7FB38110ED/f:Form1.cs" caret="1343" fromTop="23" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="91CF605E-5871-483F-A406-4D7FB38110ED/f:Form1.cs" caret="722" fromTop="12" />
+      <File id="91CF605E-5871-483F-A406-4D7FB38110ED/f:Form1.cs" caret="470" fromTop="12" />
+      <File id="91CF605E-5871-483F-A406-4D7FB38110ED/f:DayOfTheWeek.cs" caret="258" fromTop="10" />
+      <File id="91CF605E-5871-483F-A406-4D7FB38110ED/f:DayOfTheWeek.cs" caret="310" fromTop="11" />
+      <File id="91CF605E-5871-483F-A406-4D7FB38110ED/f:Form1.cs" caret="1437" fromTop="12" />
+      <File id="91CF605E-5871-483F-A406-4D7FB38110ED/f:Form1.cs" caret="1439" fromTop="17" />
+      <File id="91CF605E-5871-483F-A406-4D7FB38110ED/f:Form1.cs" caret="1547" fromTop="12" />
+      <File id="91CF605E-5871-483F-A406-4D7FB38110ED/f:Form1.cs" caret="1780" fromTop="17" />
+      <File id="91CF605E-5871-483F-A406-4D7FB38110ED/f:Form1.cs" caret="1914" fromTop="12" />
+      <File id="91CF605E-5871-483F-A406-4D7FB38110ED/f:Form1.cs" caret="2028" fromTop="16" />
+      <File id="91CF605E-5871-483F-A406-4D7FB38110ED/f:Form1.cs" caret="2249" fromTop="21" />
+      <File id="91CF605E-5871-483F-A406-4D7FB38110ED/f:Form1.cs" caret="964" fromTop="4" />
+      <File id="91CF605E-5871-483F-A406-4D7FB38110ED/f:Form1.cs" caret="2272" fromTop="4" />
+      <File id="91CF605E-5871-483F-A406-4D7FB38110ED/f:Form1.cs" caret="1343" fromTop="23" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerMSTest>
+    <UseTestRunConfigFromMetadataFile>False</UseTestRunConfigFromMetadataFile>
+  </UnitTestRunnerMSTest>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="private" priority="1" />
+      <Item value="static" priority="0" />
+      <Item value="Timer" priority="1" />
+      <Item value="new" priority="0" />
+      <Item value="void" priority="0" />
+      <Item value="Object" priority="0" />
+      <Item value="EventArgs" priority="0" />
+      <Item value="labelTime" priority="1" />
+      <Item value="DateTime" priority="2" />
+      <Item value="timer" priority="2" />
+      <Item value="EventHandler" priority="0" />
+      <Item value="ShowTime" priority="0" />
+      <Item value="labelDate" priority="0" />
+      <Item value="labelDay" priority="0" />
+      <Item value="dayOfTheWeek" priority="0" />
+      <Item value="ShowInTaskbar" priority="0" />
+      <Item value="false" priority="1" />
+      <Item value="notifyIcon1" priority="2" />
+      <Item value="true" priority="0" />
+      <Item value="ToolTipIcon" priority="0" />
+      <Item value="Application" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Label">
+      <Item value="Text" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="ToLongTimeString" priority="1" />
+      <Item value="ToLongDateString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Timer">
+      <Item value="Tick" priority="0" />
+      <Item value="Interval" priority="0" />
+      <Item value="Start" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WinFormsDateTime.DayOfTheWeek">
+      <Item value="Day" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.NotifyIcon">
+      <Item value="Visible" priority="1" />
+      <Item value="ShowBalloonTip" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.ToolTipIcon">
+      <Item value="Info" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.Application">
+      <Item value="Exit" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
