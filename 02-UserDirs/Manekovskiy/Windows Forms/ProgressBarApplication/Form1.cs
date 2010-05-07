@@ -23,6 +23,7 @@ namespace ProgressBarApplication
             {
                 progressBar.PerformStep();
                 Thread.Sleep(250);
+                Text = "Form1 выполнено  " + progressBar.Value + "%";
             }
         }
     }

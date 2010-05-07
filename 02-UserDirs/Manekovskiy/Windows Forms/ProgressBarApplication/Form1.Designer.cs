@@ -41,7 +41,6 @@
             this.progressBar.Step = 1;
             this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar.TabIndex = 0;
-            this.progressBar.Value = 15;
             // 
             // button1
             // 

@@ -10,10 +10,27 @@
     <NAntPath value="" />
   </NAntValidationSettings>
   <RecentFiles>
-    <RecentFiles />
-    <RecentEdits />
+    <RecentFiles>
+      <File id="36E3FD85-77F0-43DD-8E0A-BC81A0DC5B59/f:Form1.cs" caret="668" fromTop="16" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="36E3FD85-77F0-43DD-8E0A-BC81A0DC5B59/f:Form1.cs" caret="668" fromTop="16" />
+    </RecentEdits>
   </RecentFiles>
   <UnitTestRunner>
     <Providers />
   </UnitTestRunner>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="Text" priority="0" />
+      <Item value="progressBar" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ProgressBar">
+      <Item value="DataBindings" priority="0" />
+      <Item value="Value" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <UnitTestRunnerMSTest>
+    <UseTestRunConfigFromMetadataFile>False</UseTestRunConfigFromMetadataFile>
+  </UnitTestRunnerMSTest>
 </Configuration>
