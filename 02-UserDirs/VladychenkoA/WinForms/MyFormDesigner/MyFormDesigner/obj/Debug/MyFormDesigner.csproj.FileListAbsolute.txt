@@ -1,0 +1,8 @@
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\MyFormDesigner\MyFormDesigner\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\MyFormDesigner\MyFormDesigner\obj\Debug\MyFormDesigner.Form1.resources
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\MyFormDesigner\MyFormDesigner\obj\Debug\MyFormDesigner.Properties.Resources.resources
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\MyFormDesigner\MyFormDesigner\obj\Debug\MyFormDesigner.csproj.GenerateResource.Cache
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\MyFormDesigner\MyFormDesigner\bin\Debug\MyFormDesigner.exe
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\MyFormDesigner\MyFormDesigner\bin\Debug\MyFormDesigner.pdb
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\MyFormDesigner\MyFormDesigner\obj\Debug\MyFormDesigner.exe
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\MyFormDesigner\MyFormDesigner\obj\Debug\MyFormDesigner.pdb
