@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="System.Windows.Forms.Calendar">
+</Property><Property Name="Solution File" Value="C:\Documents and Settings\manekovskiy\Desktop\System.Windows.Forms.Calendar\System.Windows.Forms.Calendar.sln">
+</Property><Property Name="Date" Value="8 мая 2010 г.">
+</Property><Property Name="Time" Value="12:14">
+</Property></Properties><Event ErrorLevel="0" Project="System.Windows.Forms.Calendar" Source="System.Windows.Forms.Calendar\System.Windows.Forms.Calendar.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="System.Windows.Forms.Calendar" Source="System.Windows.Forms.Calendar\System.Windows.Forms.Calendar.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="CalendarDemo" Source="CalendarDemo\CalendarDemo.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="CalendarDemo" Source="CalendarDemo\CalendarDemo.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="System.Windows.Forms.Calendar.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="System.Windows.Forms.Calendar.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="System.Windows.Forms.Calendar" Source="System.Windows.Forms.Calendar\System.Windows.Forms.Calendar.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="CalendarDemo" Source="CalendarDemo\CalendarDemo.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
