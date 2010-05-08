@@ -28,18 +28,20 @@ namespace BackgroundWorkerDemo
 
         private void backgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            int totalIterations = n;
+            int[] array = (int[])e.Argument;
+
+            int totalIterations = array.Length;
             float currentProgress = 0;
 
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < array.Length; i++)
             {
-                for (int j = i + 1; j < n - 1; j++)
+                for (int j = i + 1; j < array.Length - 1; j++)
                 {
-                    if (a[i] < a[j])
+                    if (array[i] < array[j])
                     {
-                        int swap = a[i];
-                        a[i] = a[j];
-                        a[j] = swap;
+                        int swap = array[i];
+                        array[i] = array[j];
+                        array[j] = swap;
                     }
                 }
 
@@ -53,7 +55,6 @@ namespace BackgroundWorkerDemo
                 backgroundWorker.ReportProgress((int)currentProgress, SortingState.Sorting);
             }
 
-
             if (e.Cancel)
             {
                 backgroundWorker.ReportProgress((int)currentProgress, SortingState.Canceled);
@@ -66,7 +67,7 @@ namespace BackgroundWorkerDemo
 
         private void startSortingButton_Click(object sender, EventArgs e)
         {
-            backgroundWorker.RunWorkerAsync();
+            backgroundWorker.RunWorkerAsync(a);
         }
 
         private void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
