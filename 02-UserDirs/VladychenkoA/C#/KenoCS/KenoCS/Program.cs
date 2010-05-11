@@ -24,6 +24,9 @@ namespace KenoCS
             //Console.WriteLine();
             keno.ReadFile();
             keno.ArrayLiistKenoPrint(keno.ArrayListKeno);
+            Console.WriteLine("\n\n\n");
+            keno = (Keno)keno.ArrayListKeno[keno.ArrayListKeno.Count-1];
+            keno.Print();
         }
     }
 }

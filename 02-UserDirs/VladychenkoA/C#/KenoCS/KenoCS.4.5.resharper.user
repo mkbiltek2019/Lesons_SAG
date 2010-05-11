@@ -11,24 +11,25 @@
   </NAntValidationSettings>
   <RecentFiles>
     <RecentFiles>
-      <File id="A41E0CD6-B531-4371-9918-AEDDF8290D9E/f:Keno.cs" caret="1038" fromTop="12" />
-      <File id="A41E0CD6-B531-4371-9918-AEDDF8290D9E/f:Program.cs" caret="0" fromTop="0" />
+      <File id="A41E0CD6-B531-4371-9918-AEDDF8290D9E/f:Keno.cs" caret="0" fromTop="0" />
+      <File id="A41E0CD6-B531-4371-9918-AEDDF8290D9E/f:Program.cs" caret="937" fromTop="9" />
     </RecentFiles>
     <RecentEdits>
       <File id="A41E0CD6-B531-4371-9918-AEDDF8290D9E/f:Keno.cs" caret="1179" fromTop="16" />
       <File id="A41E0CD6-B531-4371-9918-AEDDF8290D9E/f:Keno.cs" caret="551" fromTop="16" />
       <File id="A41E0CD6-B531-4371-9918-AEDDF8290D9E/f:Keno.cs" caret="617" fromTop="14" />
       <File id="A41E0CD6-B531-4371-9918-AEDDF8290D9E/f:Keno.cs" caret="115" fromTop="4" />
-      <File id="A41E0CD6-B531-4371-9918-AEDDF8290D9E/f:Program.cs" caret="918" fromTop="14" />
+      <File id="A41E0CD6-B531-4371-9918-AEDDF8290D9E/f:Program.cs" caret="1061" fromTop="14" />
       <File id="A41E0CD6-B531-4371-9918-AEDDF8290D9E/f:Keno.cs" caret="348" fromTop="6" />
       <File id="A41E0CD6-B531-4371-9918-AEDDF8290D9E/f:Keno.cs" caret="790" fromTop="19" />
       <File id="A41E0CD6-B531-4371-9918-AEDDF8290D9E/f:Keno.cs" caret="1339" fromTop="16" />
       <File id="A41E0CD6-B531-4371-9918-AEDDF8290D9E/f:Keno.cs" caret="1610" fromTop="18" />
       <File id="A41E0CD6-B531-4371-9918-AEDDF8290D9E/f:Program.cs" caret="346" fromTop="5" />
       <File id="A41E0CD6-B531-4371-9918-AEDDF8290D9E/f:Keno.cs" caret="867" fromTop="10" />
-      <File id="A41E0CD6-B531-4371-9918-AEDDF8290D9E/f:Program.cs" caret="1278" fromTop="16" />
+      <File id="A41E0CD6-B531-4371-9918-AEDDF8290D9E/f:Program.cs" caret="1421" fromTop="16" />
       <File id="A41E0CD6-B531-4371-9918-AEDDF8290D9E/f:Keno.cs" caret="1227" fromTop="12" />
       <File id="A41E0CD6-B531-4371-9918-AEDDF8290D9E/f:Keno.cs" caret="1010" fromTop="14" />
+      <File id="A41E0CD6-B531-4371-9918-AEDDF8290D9E/f:Program.cs" caret="936" fromTop="9" />
     </RecentEdits>
   </RecentFiles>
   <UnitTestRunner>
@@ -43,13 +44,13 @@
       <Item value="string" priority="6" />
       <Item value="int" priority="7" />
       <Item value="public" priority="8" />
-      <Item value="Keno" priority="3" />
+      <Item value="Keno" priority="4" />
       <Item value="this" priority="2" />
       <Item value="get" priority="2" />
       <Item value="set" priority="0" />
       <Item value="date" priority="5" />
       <Item value="DateTime" priority="7" />
-      <Item value="Console" priority="5" />
+      <Item value="Console" priority="6" />
       <Item value="dateTime" priority="2" />
       <Item value="null" priority="2" />
       <Item value="new" priority="3" />
@@ -78,7 +79,7 @@
       <Item value="Numberballs" priority="1" />
       <Item value="nb" priority="0" />
       <Item value="Number" priority="1" />
-      <Item value="keno" priority="0" />
+      <Item value="keno" priority="5" />
       <Item value="static" priority="0" />
       <Item value="void" priority="0" />
     </ItemStatistics>
@@ -92,7 +93,7 @@
       <Item value="ToString" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Console">
-      <Item value="WriteLine" priority="4" />
+      <Item value="WriteLine" priority="5" />
       <Item value="Write" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Globalization.CultureInfo">
@@ -100,6 +101,12 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:KenoCS.Keno">
       <Item value="Num" priority="0" />
+      <Item value="ArrayListKeno" priority="2" />
+      <Item value="Print" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.ArrayList">
+      <Item value="IndexOf" priority="0" />
+      <Item value="Count" priority="1" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>
