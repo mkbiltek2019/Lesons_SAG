@@ -104,6 +104,9 @@ namespace Joke
 
         private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            _counter.Yes = 0;
+            _counter.No = 0;
+            _counter.WriteToFile(_counter);
             OpenFileDialog openFileDialog = new OpenFileDialog();
             //openFileDialog.ShowDialog();
             openFileDialog.InitialDirectory = @".";

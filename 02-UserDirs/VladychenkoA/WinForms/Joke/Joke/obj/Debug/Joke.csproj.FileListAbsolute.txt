@@ -9,3 +9,14 @@ C:\Users\Администратор\Documents\Visual Studio 2008\Projects\Joke\J
 C:\Users\Администратор\Documents\Visual Studio 2008\Projects\Joke\Joke\obj\Debug\Joke.Form1.resources
 C:\Users\Администратор\Documents\Visual Studio 2008\Projects\Joke\Joke\obj\Debug\Joke.Form2.resources
 C:\Users\Администратор\Documents\Visual Studio 2008\Projects\Joke\Joke\obj\Debug\Joke.Form3.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\Joke\Joke\obj\Debug\Joke.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\Joke\Joke\obj\Debug\Joke.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\Joke\Joke\bin\Debug\Joke.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\Joke\Joke\bin\Debug\Joke.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\Joke\Joke\obj\Debug\ResolveAssemblyReference.cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\Joke\Joke\obj\Debug\Joke.AboutBox1.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\Joke\Joke\obj\Debug\Joke.Form1.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\Joke\Joke\obj\Debug\Joke.Form2.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\Joke\Joke\obj\Debug\Joke.Form3.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\Joke\Joke\obj\Debug\Joke.Properties.Resources.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinForms\Joke\Joke\obj\Debug\Joke.csproj.GenerateResource.Cache

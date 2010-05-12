@@ -22,7 +22,7 @@ namespace Joke
         public Form3()
         {
             InitializeComponent();
-            counter =  counter.ReadFromFile();
+            //counter =  counter.ReadFromFile();
             //string str ;
             //str = counter.ReadTextFile();
             //counter = counter.ConvertToCounter(str);

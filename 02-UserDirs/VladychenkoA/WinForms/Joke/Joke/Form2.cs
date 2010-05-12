@@ -34,6 +34,7 @@ namespace Joke
             //myList.AddItem(new Item(name, text));
             //jokeText.JokeTextArL.Add(jokeText);
             //ArrayList.Add(jokeText);
+            if(textBox1.Text != null && richTextBox1.Text != null)
             Append(textBox1.Text, richTextBox1.Text);
             buttonAppend.Enabled = false;
         }
