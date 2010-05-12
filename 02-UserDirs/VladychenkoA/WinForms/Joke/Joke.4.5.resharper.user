@@ -1,0 +1,396 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.designer.cs" caret="649" fromTop="20" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form2.designer.cs" caret="5786" fromTop="53" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Program.cs" caret="441" fromTop="17" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form2.cs" caret="2162" fromTop="58" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:AboutBox1.Designer.cs" caret="0" fromTop="0" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:AboutBox1.cs" caret="361" fromTop="15" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Counter.cs" caret="1639" fromTop="43" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:JokeText.cs" caret="1358" fromTop="19" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form3.designer.cs" caret="5085" fromTop="12" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="4984" fromTop="29" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form3.cs" caret="2761" fromTop="19" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:AboutBox1.cs" caret="361" fromTop="15" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:JokeText.cs" caret="1014" fromTop="6" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:JokeText.cs" caret="920" fromTop="2" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:JokeText.cs" caret="172" fromTop="6" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:JokeText.cs" caret="2825" fromTop="25" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:JokeText.cs" caret="1831" fromTop="21" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:JokeText.cs" caret="1358" fromTop="19" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="217" fromTop="8" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="5106" fromTop="23" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="5106" fromTop="15" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="5050" fromTop="23" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="4377" fromTop="7" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="4056" fromTop="3" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="3860" fromTop="13" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="493" fromTop="16" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="602" fromTop="12" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="3736" fromTop="18" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form3.cs" caret="242" fromTop="9" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form3.cs" caret="525" fromTop="18" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form3.cs" caret="398" fromTop="7" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form3.designer.cs" caret="5085" fromTop="12" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form3.cs" caret="990" fromTop="21" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form3.cs" caret="1736" fromTop="8" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form3.cs" caret="2049" fromTop="19" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form3.cs" caret="3491" fromTop="19" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="5004" fromTop="17" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form3.cs" caret="2953" fromTop="14" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form3.cs" caret="3454" fromTop="24" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form3.cs" caret="2571" fromTop="14" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form3.cs" caret="2757" fromTop="19" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerMSTest>
+    <UseTestRunConfigFromMetadataFile>False</UseTestRunConfigFromMetadataFile>
+  </UnitTestRunnerMSTest>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="Joke" priority="0" />
+      <Item value="DialogResult" priority="5" />
+      <Item value="CancelButton" priority="1" />
+      <Item value="this" priority="5" />
+      <Item value="okButton" priority="0" />
+      <Item value="Form2" priority="2" />
+      <Item value="form2" priority="3" />
+      <Item value="new" priority="34" />
+      <Item value="Form3" priority="2" />
+      <Item value="form3" priority="1" />
+      <Item value="button1" priority="2" />
+      <Item value="if" priority="9" />
+      <Item value="true" priority="6" />
+      <Item value="private" priority="8" />
+      <Item value="string" priority="21" />
+      <Item value="public" priority="24" />
+      <Item value="set" priority="2" />
+      <Item value="return" priority="13" />
+      <Item value="name" priority="3" />
+      <Item value="value" priority="5" />
+      <Item value="text" priority="10" />
+      <Item value="JokeText" priority="33" />
+      <Item value="n" priority="0" />
+      <Item value="t" priority="0" />
+      <Item value="using" priority="15" />
+      <Item value="System" priority="17" />
+      <Item value="Collections" priority="4" />
+      <Item value="ArrayList" priority="19" />
+      <Item value="jokeText" priority="33" />
+      <Item value="textBox1" priority="3" />
+      <Item value="richTextBox1" priority="8" />
+      <Item value="Random" priority="3" />
+      <Item value="random" priority="2" />
+      <Item value="for" priority="5" />
+      <Item value="int" priority="8" />
+      <Item value="jokeText1" priority="1" />
+      <Item value="foreach" priority="2" />
+      <Item value="k" priority="4" />
+      <Item value="jt" priority="3" />
+      <Item value="Threading" priority="0" />
+      <Item value="Thread" priority="1" />
+      <Item value="label2" priority="3" />
+      <Item value="label3" priority="0" />
+      <Item value="richTextBox2" priority="0" />
+      <Item value="Xml" priority="3" />
+      <Item value="XmlTextWriter" priority="1" />
+      <Item value="writer" priority="11" />
+      <Item value="null" priority="7" />
+      <Item value="try" priority="1" />
+      <Item value="Text" priority="2" />
+      <Item value="Encoding" priority="0" />
+      <Item value="Formatting" priority="0" />
+      <Item value="finally" priority="1" />
+      <Item value="void" priority="9" />
+      <Item value="Write" priority="0" />
+      <Item value="yes" priority="1" />
+      <Item value="get" priority="2" />
+      <Item value="no" priority="1" />
+      <Item value="Close" priority="3" />
+      <Item value="Counter" priority="11" />
+      <Item value="_counter" priority="19" />
+      <Item value="IO" priority="2" />
+      <Item value="Runtime" priority="1" />
+      <Item value="Serialization.Formatters" priority="0" />
+      <Item value="Binary" priority="0" />
+      <Item value="counter" priority="19" />
+      <Item value="FileStream" priority="7" />
+      <Item value="fileStream" priority="8" />
+      <Item value="FileMode" priority="3" />
+      <Item value="FileAccess" priority="3" />
+      <Item value="BinaryFormatter" priority="1" />
+      <Item value="binaryFormatter" priority="2" />
+      <Item value="timer1" priority="0" />
+      <Item value="label1" priority="0" />
+      <Item value="Equals" priority="0" />
+      <Item value="Serializable" priority="2" />
+      <Item value="buttonYes" priority="2" />
+      <Item value="false" priority="4" />
+      <Item value="buttonNo" priority="2" />
+      <Item value="Windows.Forms" priority="0" />
+      <Item value="TextFormatFlags" priority="1" />
+      <Item value="_yes" priority="0" />
+      <Item value="_no" priority="0" />
+      <Item value="tmp" priority="3" />
+      <Item value="i" priority="2" />
+      <Item value="break" priority="1" />
+      <Item value="Convert" priority="1" />
+      <Item value="line" priority="1" />
+      <Item value="File" priority="1" />
+      <Item value="str" priority="1" />
+      <Item value="Serialization" priority="2" />
+      <Item value="Formatters" priority="0" />
+      <Item value="class" priority="1" />
+      <Item value="JokeList" priority="1" />
+      <Item value="_listJokes" priority="5" />
+      <Item value="XmlAnyElement" priority="0" />
+      <Item value="jokeTexts" priority="4" />
+      <Item value="in" priority="0" />
+      <Item value="XmlRoot" priority="0" />
+      <Item value="XmlSerializer" priority="1" />
+      <Item value="serializer" priority="1" />
+      <Item value="typeof" priority="0" />
+      <Item value="TextWriter" priority="0" />
+      <Item value="textWriter" priority="2" />
+      <Item value="StreamWriter" priority="0" />
+      <Item value="myList" priority="1" />
+      <Item value="Item" priority="0" />
+      <Item value="ShoppingList" priority="0" />
+      <Item value="Text1" priority="0" />
+      <Item value="joke" priority="4" />
+      <Item value="XmlNode" priority="4" />
+      <Item value="Dock" priority="0" />
+      <Item value="XmlDocument" priority="1" />
+      <Item value="doc" priority="6" />
+      <Item value="elem1" priority="1" />
+      <Item value="elem2" priority="1" />
+      <Item value="text2" priority="0" />
+      <Item value="root" priority="2" />
+      <Item value="Append" priority="0" />
+      <Item value="OpenFileDialog" priority="1" />
+      <Item value="openFileDialog" priority="9" />
+      <Item value="jokeList" priority="1" />
+      <Item value="Linq" priority="0" />
+      <Item value="XElement" priority="3" />
+      <Item value="nameFile" priority="0" />
+      <Item value="IEquatable" priority="0" />
+      <Item value="Content" priority="0" />
+      <Item value="from" priority="1" />
+      <Item value="list" priority="1" />
+      <Item value="element" priority="1" />
+      <Item value="select" priority="1" />
+      <Item value="IEnumerable" priority="1" />
+      <Item value="elem" priority="0" />
+      <Item value="title" priority="1" />
+      <Item value="content" priority="0" />
+      <Item value="JokesList" priority="3" />
+      <Item value="_joke" priority="8" />
+      <Item value="_jl" priority="3" />
+      <Item value="_nameFile" priority="1" />
+      <Item value="_rand" priority="1" />
+      <Item value="dialogResult" priority="1" />
+      <Item value="MessageBox" priority="1" />
+      <Item value="MessageBoxButtons" priority="1" />
+      <Item value="MessageBoxIcon" priority="1" />
+      <Item value="else" priority="2" />
+      <Item value="arrayList" priority="14" />
+      <Item value="buttonClose" priority="1" />
+      <Item value="jlist" priority="1" />
+      <Item value="jok" priority="1" />
+      <Item value="ReturnJooke" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DialogResult">
+      <Item value="Cancel" priority="1" />
+      <Item value="Yes" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Joke.AboutBox1">
+      <Item value="DialogResult" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Button">
+      <Item value="DialogResult" priority="1" />
+      <Item value="Enabled" priority="9" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.DialogResult">
+      <Item value="Cancel" priority="0" />
+      <Item value="OK" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Joke.Form2">
+      <Item value="Show" priority="0" />
+      <Item value="Close" priority="0" />
+      <Item value="richTextBox1" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Joke.Form3">
+      <Item value="Show" priority="0" />
+      <Item value="Close" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.RichTextBox">
+      <Item value="DragDrop" priority="0" />
+      <Item value="DragEnter" priority="0" />
+      <Item value="AllowDrop" priority="0" />
+      <Item value="Text" priority="9" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Joke.JokeText">
+      <Item value="name" priority="0" />
+      <Item value="Name" priority="6" />
+      <Item value="Text" priority="8" />
+      <Item value="JokeTextArL" priority="17" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
+      <Item value="Text" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.ArrayList">
+      <Item value="Add" priority="4" />
+      <Item value="Count" priority="12" />
+      <Item value="RemoveAt" priority="2" />
+      <Item value="CopyTo" priority="0" />
+      <Item value="Clear" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Random">
+      <Item value="Next" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Thread">
+      <Item value="Sleep" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Label">
+      <Item value="Text" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Text.Encoding">
+      <Item value="Unicode" priority="1" />
+      <Item value="GetEncoding" priority="0" />
+      <Item value="Convert" priority="0" />
+      <Item value="Default" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.XmlTextWriter">
+      <Item value="Formatting" priority="0" />
+      <Item value="WriteStartDocument" priority="0" />
+      <Item value="WriteStartElement" priority="2" />
+      <Item value="WriteElementString" priority="1" />
+      <Item value="WriteEndElement" priority="1" />
+      <Item value="Close" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Xml.Formatting">
+      <Item value="Indented" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Text.Encoding">
+      <Item value="Clone" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Joke.Counter">
+      <Item value="Yes" priority="6" />
+      <Item value="No" priority="4" />
+      <Item value="WriteToFile" priority="3" />
+      <Item value="ReadFromFile" priority="2" />
+      <Item value="WriteToTextFile" priority="0" />
+      <Item value="CounterToString" priority="1" />
+      <Item value="ConvertToCounter" priority="0" />
+      <Item value="ReadTextFile" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.FileMode">
+      <Item value="Create" priority="1" />
+      <Item value="Open" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.FileAccess">
+      <Item value="Write" priority="2" />
+      <Item value="Read" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter">
+      <Item value="Serialize" priority="0" />
+      <Item value="Deserialize" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.FileStream">
+      <Item value="Close" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Timer">
+      <Item value="Enabled" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Length" priority="1" />
+      <Item value="ToLower" priority="0" />
+      <Item value="ToString" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Char">
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToInt32" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.File">
+      <Item value="WriteAllText" priority="0" />
+      <Item value="ReadAllText" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.Serialization.XmlSerializer">
+      <Item value="Serialize" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.TextWriter">
+      <Item value="Close" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Joke.Form2+ShoppingList">
+      <Item value="AddItem" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.XmlDocument">
+      <Item value="Load" priority="0" />
+      <Item value="CreateElement" priority="2" />
+      <Item value="CreateTextNode" priority="1" />
+      <Item value="Save" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.XmlNode">
+      <Item value="AppendChild" priority="4" />
+      <Item value="RemoveChild" priority="0" />
+      <Item value="LastChild" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.OpenFileDialog">
+      <Item value="InitialDirectory" priority="0" />
+      <Item value="Filter" priority="0" />
+      <Item value="FilterIndex" priority="0" />
+      <Item value="RestoreDirectory" priority="0" />
+      <Item value="ShowDialog" priority="0" />
+      <Item value="FileName" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Xml.Linq.XElement">
+      <Item value="Load" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.Linq.XElement">
+      <Item value="Elements" priority="1" />
+      <Item value="Value" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="Elements" priority="1" />
+      <Item value="Count" priority="0" />
+      <Item value="ElementAt" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Joke.JokesList">
+      <Item value="JokeList" priority="3" />
+      <Item value="LoadXmlFile" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
+      <Item value="Show" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBoxButtons">
+      <Item value="YesNo" priority="0" />
+      <Item value="OK" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBoxIcon">
+      <Item value="None" priority="0" />
+      <Item value="Information" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
