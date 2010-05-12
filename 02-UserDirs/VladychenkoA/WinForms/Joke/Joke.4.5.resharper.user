@@ -21,20 +21,18 @@
       <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:JokeText.cs" caret="1358" fromTop="19" />
       <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form3.designer.cs" caret="5085" fromTop="12" />
       <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form2.cs" caret="969" fromTop="12" />
-      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="3256" fromTop="12" />
-      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form3.cs" caret="908" fromTop="18" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form3.cs" caret="908" fromTop="0" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="4996" fromTop="25" />
     </RecentFiles>
     <RecentEdits>
-      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:JokeText.cs" caret="172" fromTop="6" />
       <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:JokeText.cs" caret="2825" fromTop="25" />
       <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:JokeText.cs" caret="1831" fromTop="21" />
       <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:JokeText.cs" caret="1358" fromTop="19" />
       <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="217" fromTop="8" />
-      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="5212" fromTop="23" />
-      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="5212" fromTop="15" />
-      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="5156" fromTop="23" />
-      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="4483" fromTop="7" />
-      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="4162" fromTop="3" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="5218" fromTop="23" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="5218" fromTop="15" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="5162" fromTop="23" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="4487" fromTop="7" />
       <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="3966" fromTop="13" />
       <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="493" fromTop="16" />
       <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="602" fromTop="12" />
@@ -47,7 +45,7 @@
       <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form3.cs" caret="1738" fromTop="8" />
       <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form3.cs" caret="2051" fromTop="19" />
       <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form3.cs" caret="3493" fromTop="19" />
-      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="5110" fromTop="17" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="5116" fromTop="17" />
       <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form3.cs" caret="2955" fromTop="14" />
       <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form3.cs" caret="3456" fromTop="24" />
       <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form3.cs" caret="2573" fromTop="14" />
@@ -55,6 +53,8 @@
       <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form2.cs" caret="967" fromTop="12" />
       <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="3256" fromTop="18" />
       <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form3.cs" caret="650" fromTop="15" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="4244" fromTop="9" />
+      <File id="C8128D6F-4178-4E4D-B10B-EAE68F9F0723/f:Form1.cs" caret="4994" fromTop="25" />
     </RecentEdits>
   </RecentFiles>
   <UnitTestRunner>

@@ -129,8 +129,8 @@ namespace Joke
             arrayList = _jl.JokeList();
             if (arrayList.Count != 0)
             {
-                for (int i = 0; i < arrayList.Count; i++)
-                {
+                //for (int i = 0; i < arrayList.Count; i++)
+                //{
                     int k = _rand.Next(arrayList.Count);
                     _joke = (JokeText) arrayList[k];
                     DialogResult dialogResult = MessageBox.Show(_joke.Text, _joke.Name,
@@ -146,7 +146,7 @@ namespace Joke
                         _counter.WriteToFile(_counter);
                     }
                     arrayList.RemoveAt(k);
-                }
+                //}
             }
             else
             {
