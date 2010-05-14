@@ -11,31 +11,50 @@
   </NAntValidationSettings>
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
-      <Item value="restoreToolStripMenuItem" priority="0" />
-      <Item value="true" priority="0" />
-      <Item value="else" priority="0" />
-      <Item value="if" priority="0" />
-      <Item value="ClientSize" priority="0" />
-      <Item value="Size" priority="1" />
+      <Item value="NullButton" priority="0" />
+      <Item value="false" priority="5" />
+      <Item value="this" priority="0" />
+      <Item value="IconContextMenuStrip" priority="0" />
+      <Item value="startToolStripMenuItem" priority="3" />
+      <Item value="pauseToolStripMenuItem" priority="3" />
+      <Item value="true" priority="4" />
+      <Item value="stopToolStripMenuItem" priority="1" />
+      <Item value="quiteToolStripMenuItem" priority="0" />
     </ItemStatistics>
-    <ItemStatistics item="Qualified:System.Windows.Forms.ToolStripMenuItem">
+    <ItemStatistics item="Qualified:System.Windows.Forms.Button">
       <Item value="Enabled" priority="0" />
     </ItemStatistics>
-    <ItemStatistics item="Qualified:@System.Drawing.Size">
-      <Item value="Empty" priority="0" />
+    <ItemStatistics item="Qualified:Special_Timer.Form1">
+      <Item value="Close" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ToolStripMenuItem">
+      <Item value="Enabled" priority="9" />
     </ItemStatistics>
   </CompletionStatisticsManager>
   <RecentFiles>
     <RecentFiles>
-      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="339" fromTop="15" />
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Program.cs" caret="0" fromTop="0" />
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.Designer.cs" caret="15840" fromTop="12" />
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="307" fromTop="14" />
     </RecentFiles>
     <RecentEdits>
-      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="5508" fromTop="11" />
-      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="5203" fromTop="16" />
-      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="4921" fromTop="8" />
-      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="4178" fromTop="10" />
-      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="5417" fromTop="20" />
-      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="888" fromTop="21" />
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Program.cs" caret="0" fromTop="0" />
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="5298" fromTop="10" />
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.Designer.cs" caret="15840" fromTop="12" />
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="5325" fromTop="67" />
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="564" fromTop="16" />
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="5045" fromTop="14" />
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="3160" fromTop="19" />
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="886" fromTop="7" />
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="3440" fromTop="21" />
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="4120" fromTop="16" />
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="5085" fromTop="22" />
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="4659" fromTop="10" />
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.Designer.cs" caret="15840" fromTop="12" />
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="5234" fromTop="18" />
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="5325" fromTop="20" />
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="0" fromTop="0" />
+      <File id="C7B2282C-01F1-4C05-A3C3-BB8F43000777/f:Form1.cs" caret="229" fromTop="8" />
     </RecentEdits>
   </RecentFiles>
   <UnitTestRunner>
