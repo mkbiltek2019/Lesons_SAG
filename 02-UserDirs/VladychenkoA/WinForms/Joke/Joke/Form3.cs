@@ -57,6 +57,7 @@ namespace Joke
           
             buttonYes.Enabled = false;
             buttonNo.Enabled = false;
+            buttonProceed.Enabled = true;
             //Thread.Sleep(5000);
             //this.Close();
         }
@@ -67,6 +68,7 @@ namespace Joke
             counter.WriteToFile(counter);
             buttonYes.Enabled = false;
             buttonNo.Enabled = false;
+            buttonProceed.Enabled = true;
             //Close();
         }
 
@@ -107,6 +109,7 @@ namespace Joke
                buttonYes.Enabled = false;
                buttonNo.Enabled = false;
            }
+           buttonProceed.Enabled = false;
         }
     }
 }
