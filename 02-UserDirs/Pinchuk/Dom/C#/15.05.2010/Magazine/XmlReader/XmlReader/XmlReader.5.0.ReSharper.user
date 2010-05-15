@@ -1,0 +1,94 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/f:Program.cs" caret="0" fromTop="0" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/d:FileXML/f:Menu.xml" caret="805" fromTop="15" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:Console/f:ConsoleMenu.cs" caret="4188" fromTop="18" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/f:ActionsMethot.cs" caret="2125" fromTop="53" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/f:IEnumerableMenu.cs" caret="467" fromTop="9" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:Console/f:ConsoleMenu.cs" caret="6238" fromTop="43" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:Console/f:ConsoleMenu.cs" caret="4254" fromTop="11" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:Console/f:ConsoleMenu.cs" caret="2946" fromTop="16" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:Console/f:ConsoleMenu.cs" caret="2905" fromTop="12" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/f:IEnumerableMenu.cs" caret="1352" fromTop="8" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/f:IEnumerableMenu.cs" caret="1259" fromTop="10" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/d:FileXML/f:Menu.xml" caret="2230" fromTop="12" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/f:ActionsMethot.cs" caret="212" fromTop="8" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/f:ActionsMethot.cs" caret="112" fromTop="3" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/d:FileXML/f:Menu.xml" caret="566" fromTop="8" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/f:IEnumerableMenu.cs" caret="2033" fromTop="8" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/f:IEnumerableMenu.cs" caret="2509" fromTop="14" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/f:IEnumerableMenu.cs" caret="2671" fromTop="27" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/f:IEnumerableMenu.cs" caret="2873" fromTop="30" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/d:FileXML/f:Menu.xml" caret="1367" fromTop="19" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/d:FileXML/f:Menu.xml" caret="81" fromTop="2" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/d:FileXML/f:Menu.xml" caret="1868" fromTop="30" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/d:FileXML/f:Menu.xml" caret="673" fromTop="11" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/d:FileXML/f:Menu.xml" caret="441" fromTop="6" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/f:IEnumerableMenu.cs" caret="3240" fromTop="30" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/f:ActionsMethot.cs" caret="2207" fromTop="43" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/f:ActionsMethot.cs" caret="236" fromTop="9" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/f:ActionsMethot.cs" caret="788" fromTop="22" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/f:ActionsMethot.cs" caret="1538" fromTop="35" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/f:ActionsMethot.cs" caret="1923" fromTop="28" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/f:ActionsMethot.cs" caret="2125" fromTop="35" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:Console/f:ConsoleMenu.cs" caret="472" fromTop="12" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:Console/f:ConsoleMenu.cs" caret="250" fromTop="4" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:Console/f:ConsoleMenu.cs" caret="4188" fromTop="18" />
+      <File id="C280CF19-A3F0-4674-819C-D9202B5EA8D5/f:IEnumerableMenu.cs" caret="1142" fromTop="20" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="else" priority="0" />
+      <Item value="continue" priority="0" />
+      <Item value="break" priority="0" />
+      <Item value="SelectedIndex" priority="1" />
+      <Item value="GenericUriParser`0" priority="0" />
+      <Item value="GetLimitMenu`0" priority="0" />
+      <Item value="public" priority="2" />
+      <Item value="return" priority="2" />
+      <Item value="true" priority="1" />
+      <Item value="string" priority="3" />
+      <Item value="stringKey" priority="1" />
+      <Item value="using" priority="0" />
+      <Item value="System" priority="0" />
+      <Item value="Helpers" priority="0" />
+      <Item value="Console" priority="0" />
+      <Item value="this" priority="0" />
+      <Item value="thisActivString" priority="1" />
+      <Item value="bool" priority="1" />
+      <Item value="false" priority="0" />
+      <Item value="consoleMenu" priority="2" />
+      <Item value="Console`0" priority="1" />
+      <Item value="ConsoleMenu`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Remove`0" priority="1" />
+      <Item value="Length" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Console">
+      <Item value="Clear`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

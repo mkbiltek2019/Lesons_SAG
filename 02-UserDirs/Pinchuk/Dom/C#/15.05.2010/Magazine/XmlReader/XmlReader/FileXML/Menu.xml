@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="Windows-1251" ?>
+<menu Key="0">
+
+  <!--Main Menu-->
+  <menuItem Key="1" Description="Order" Visible="true" Action="NextLevelMenu" ></menuItem>
+  <menuItem Key="2" Description="View current order" Visible="true" Action="NextLevelMenu" ></menuItem>
+  <menuItem Key="3" Description="Administrator" Visible="true" Action="Print" ></menuItem>
+  <menuItem Key="4" Description="Exit" Visible="true" Action="Exit" ></menuItem>
+  
+  <!--1.X-->
+  
+  <menuItem Key="1.1" Description="Ordering Food" Visible="false" Action="NextLevelMenu" ></menuItem>
+  <menuItem Key="1.2" Description="Ordering Beverage" Visible="false" Action="NextLevelMenu" ></menuItem>
+  <menuItem Key="1.3" Description="Main Menu" Visible="false" Action="MainMenu" ></menuItem>
+  
+  <!--1.1.X-->
+  
+  <menuItem Key="1.1.1" Description="Hot Dog" Visible="false" Action="Print" ></menuItem>
+  <menuItem Key="1.1.2" Description="Hamburger" Visible="false" Action="Print" ></menuItem>
+  <menuItem Key="1.1.3" Description="Cheeseburger" Visible="false" Action="Print" ></menuItem>
+  <menuItem Key="1.1.4" Description="Potato" Visible="false" Action="Print" ></menuItem>
+  <menuItem Key="1.1.5" Description="Back" Visible="false" Action="PrevLevelMenu" ></menuItem>
+  <menuItem Key="1.1.6" Description="Main Menu" Visible="false" Action="MainMenu" ></menuItem>
+
+  <!--1.2.X-->
+
+  <menuItem Key="1.2.1" Description="Coffee" Visible="false" Action="Print" ></menuItem>
+  <menuItem Key="1.2.2" Description="Tea" Visible="false" Action="Print" ></menuItem>
+  <menuItem Key="1.2.3" Description="Shake" Visible="false" Action="Print" ></menuItem>
+  <menuItem Key="1.2.4" Description="Mineral Water" Visible="false" Action="Print" ></menuItem>
+  <menuItem Key="1.2.5" Description="Back" Visible="false" Action="PrevLevelMenu" ></menuItem>
+  <menuItem Key="1.2.6" Description="Main Menu" Visible="false" Action="MainMenu" ></menuItem>
+  <!--2.X-->
+  
+  <menuItem Key="2.1" Description="Ordering food" Visible="false" Action="Print" ></menuItem>
+  <menuItem Key="2.2" Description="Ordering food" Visible="false" Action="Print" ></menuItem>
+  <menuItem Key="2.3" Description="Back" Visible="false" Action="PrevLevelMenu" ></menuItem>
+</menu>
