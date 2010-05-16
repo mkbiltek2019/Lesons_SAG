@@ -1,0 +1,9 @@
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\RegionOperations\RegionOperations\bin\Debug\RegionOperations.exe
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\RegionOperations\RegionOperations\bin\Debug\RegionOperations.pdb
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\RegionOperations\RegionOperations\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\RegionOperations\RegionOperations\obj\Debug\RegionOperations.Properties.Resources.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\RegionOperations\RegionOperations\obj\Debug\RegionOperations.csproj.GenerateResource.Cache
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\RegionOperations\RegionOperations\obj\Debug\RegionOperations.exe
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\RegionOperations\RegionOperations\obj\Debug\RegionOperations.pdb
+E:\1\Metotika2\RegionOperations\RegionOperations\obj\Debug\RegionOperations.exe
+E:\1\Metotika2\RegionOperations\RegionOperations\obj\Debug\RegionOperations.pdb

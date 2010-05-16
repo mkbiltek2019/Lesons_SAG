@@ -1,0 +1,8 @@
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\GlobalTransformation\GlobalTransformation\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\GlobalTransformation\GlobalTransformation\obj\Debug\GlobalTransformation.Form1.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\GlobalTransformation\GlobalTransformation\obj\Debug\GlobalTransformation.Properties.Resources.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\GlobalTransformation\GlobalTransformation\obj\Debug\GlobalTransformation.csproj.GenerateResource.Cache
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\GlobalTransformation\GlobalTransformation\bin\Debug\GlobalTransformation.exe
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\GlobalTransformation\GlobalTransformation\bin\Debug\GlobalTransformation.pdb
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\GlobalTransformation\GlobalTransformation\obj\Debug\GlobalTransformation.exe
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\GlobalTransformation\GlobalTransformation\obj\Debug\GlobalTransformation.pdb

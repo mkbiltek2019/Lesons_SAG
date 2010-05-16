@@ -1,0 +1,8 @@
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\LocalTransformation\LocalTransformation\bin\Debug\LocalTransformation.exe
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\LocalTransformation\LocalTransformation\bin\Debug\LocalTransformation.pdb
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\LocalTransformation\LocalTransformation\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\LocalTransformation\LocalTransformation\obj\Debug\LocalTransformation.Form1.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\LocalTransformation\LocalTransformation\obj\Debug\LocalTransformation.Properties.Resources.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\LocalTransformation\LocalTransformation\obj\Debug\LocalTransformation.csproj.GenerateResource.Cache
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\LocalTransformation\LocalTransformation\obj\Debug\LocalTransformation.exe
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\LocalTransformation\LocalTransformation\obj\Debug\LocalTransformation.pdb

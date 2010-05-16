@@ -1,0 +1,8 @@
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixMultiply\MatrixMultiply\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixMultiply\MatrixMultiply\obj\Debug\MatrixMultiply.Form1.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixMultiply\MatrixMultiply\obj\Debug\MatrixMultiply.Properties.Resources.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixMultiply\MatrixMultiply\obj\Debug\MatrixMultiply.csproj.GenerateResource.Cache
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixMultiply\MatrixMultiply\bin\Debug\MatrixMultiply.exe
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixMultiply\MatrixMultiply\bin\Debug\MatrixMultiply.pdb
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixMultiply\MatrixMultiply\obj\Debug\MatrixMultiply.exe
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixMultiply\MatrixMultiply\obj\Debug\MatrixMultiply.pdb

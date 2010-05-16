@@ -1,0 +1,8 @@
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\ImageTransformation\ImageTransformation\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\ImageTransformation\ImageTransformation\obj\Debug\ImageTransformation.Form1.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\ImageTransformation\ImageTransformation\obj\Debug\ImageTransformation.Properties.Resources.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\ImageTransformation\ImageTransformation\obj\Debug\ImageTransformation.csproj.GenerateResource.Cache
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\ImageTransformation\ImageTransformation\bin\Debug\ImageTransformation.exe
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\ImageTransformation\ImageTransformation\bin\Debug\ImageTransformation.pdb
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\ImageTransformation\ImageTransformation\obj\Debug\ImageTransformation.exe
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\ImageTransformation\ImageTransformation\obj\Debug\ImageTransformation.pdb

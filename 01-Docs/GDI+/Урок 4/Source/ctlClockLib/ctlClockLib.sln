@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ctlClockLib", "ctlClockLib\ctlClockLib.csproj", "{E34B5425-19A1-448B-B457-4C1935EBE35A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{B270D289-9AFC-49DC-8782-568EB47D1C7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E34B5425-19A1-448B-B457-4C1935EBE35A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E34B5425-19A1-448B-B457-4C1935EBE35A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E34B5425-19A1-448B-B457-4C1935EBE35A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E34B5425-19A1-448B-B457-4C1935EBE35A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B270D289-9AFC-49DC-8782-568EB47D1C7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B270D289-9AFC-49DC-8782-568EB47D1C7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B270D289-9AFC-49DC-8782-568EB47D1C7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B270D289-9AFC-49DC-8782-568EB47D1C7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

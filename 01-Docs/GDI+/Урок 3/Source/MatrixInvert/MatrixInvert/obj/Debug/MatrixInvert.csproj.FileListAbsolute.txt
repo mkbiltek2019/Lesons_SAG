@@ -1,0 +1,8 @@
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixInvert\MatrixInvert\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixInvert\MatrixInvert\obj\Debug\MatrixInvert.Properties.Resources.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixInvert\MatrixInvert\obj\Debug\MatrixInvert.csproj.GenerateResource.Cache
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixInvert\MatrixInvert\bin\Debug\MatrixInvert.exe
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixInvert\MatrixInvert\bin\Debug\MatrixInvert.pdb
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixInvert\MatrixInvert\obj\Debug\MatrixInvert.Form1.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixInvert\MatrixInvert\obj\Debug\MatrixInvert.exe
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixInvert\MatrixInvert\obj\Debug\MatrixInvert.pdb

@@ -1,0 +1,8 @@
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\PageCoordinates\PageCoordinates\bin\Debug\PageCoordinates.exe
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\PageCoordinates\PageCoordinates\bin\Debug\PageCoordinates.pdb
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\PageCoordinates\PageCoordinates\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\PageCoordinates\PageCoordinates\obj\Debug\PageCoordinates.Form1.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\PageCoordinates\PageCoordinates\obj\Debug\PageCoordinates.Properties.Resources.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\PageCoordinates\PageCoordinates\obj\Debug\PageCoordinates.csproj.GenerateResource.Cache
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\PageCoordinates\PageCoordinates\obj\Debug\PageCoordinates.exe
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\PageCoordinates\PageCoordinates\obj\Debug\PageCoordinates.pdb

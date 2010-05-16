@@ -1,0 +1,8 @@
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixAndTransform\MatrixAndTransform\bin\Debug\MatrixAndTransform.exe
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixAndTransform\MatrixAndTransform\bin\Debug\MatrixAndTransform.pdb
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixAndTransform\MatrixAndTransform\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixAndTransform\MatrixAndTransform\obj\Debug\MatrixAndTransform.Form1.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixAndTransform\MatrixAndTransform\obj\Debug\MatrixAndTransform.Properties.Resources.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixAndTransform\MatrixAndTransform\obj\Debug\MatrixAndTransform.csproj.GenerateResource.Cache
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixAndTransform\MatrixAndTransform\obj\Debug\MatrixAndTransform.exe
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixAndTransform\MatrixAndTransform\obj\Debug\MatrixAndTransform.pdb

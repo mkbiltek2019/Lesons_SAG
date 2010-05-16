@@ -1,0 +1,10 @@
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixOperations\MatrixOperations\bin\Debug\MatrixOperations.exe
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixOperations\MatrixOperations\bin\Debug\MatrixOperations.pdb
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixOperations\MatrixOperations\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixOperations\MatrixOperations\obj\Debug\MatrixOperations.Form1.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixOperations\MatrixOperations\obj\Debug\MatrixOperations.Properties.Resources.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixOperations\MatrixOperations\obj\Debug\MatrixOperations.csproj.GenerateResource.Cache
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixOperations\MatrixOperations\obj\Debug\MatrixOperations.exe
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixOperations\MatrixOperations\obj\Debug\MatrixOperations.pdb
+E:\1\Metotika2\MatrixOperations\MatrixOperations\obj\Debug\MatrixOperations.exe
+E:\1\Metotika2\MatrixOperations\MatrixOperations\obj\Debug\MatrixOperations.pdb

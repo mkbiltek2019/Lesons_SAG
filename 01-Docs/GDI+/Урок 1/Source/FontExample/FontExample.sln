@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FontExample", "FontExample\FontExample.csproj", "{3AFA9396-E30E-45B7-BA33-330C2E6A2C87}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3AFA9396-E30E-45B7-BA33-330C2E6A2C87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AFA9396-E30E-45B7-BA33-330C2E6A2C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AFA9396-E30E-45B7-BA33-330C2E6A2C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AFA9396-E30E-45B7-BA33-330C2E6A2C87}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

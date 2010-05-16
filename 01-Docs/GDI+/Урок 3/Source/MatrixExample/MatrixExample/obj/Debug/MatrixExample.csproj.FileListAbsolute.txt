@@ -1,0 +1,8 @@
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixExample\MatrixExample\bin\Debug\MatrixExample.exe
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixExample\MatrixExample\bin\Debug\MatrixExample.pdb
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixExample\MatrixExample\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixExample\MatrixExample\obj\Debug\MatrixExample.Form1.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixExample\MatrixExample\obj\Debug\MatrixExample.Properties.Resources.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixExample\MatrixExample\obj\Debug\MatrixExample.csproj.GenerateResource.Cache
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixExample\MatrixExample\obj\Debug\MatrixExample.exe
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\GDIProjects\MatrixExample\MatrixExample\obj\Debug\MatrixExample.pdb
