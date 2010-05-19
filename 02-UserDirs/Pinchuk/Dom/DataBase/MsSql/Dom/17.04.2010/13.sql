@@ -1,24 +1,20 @@
---13. Замовник з найбільшим(по сумарній кількості продукції)
- --замовленням. Таблиці SalesOrderHeader, SalesOrderDetails, Customer
- USE AdventureWorksLT2008
- SELECT 
-  SalesLT.Customer.FirstName + SalesLT.Customer.LastName,SalesLT.SalesOrderDetail.OrderQty
- FROM
-   SalesLT.SalesOrderDetail,
-   SalesLT.SalesOrderHeader,
-   SalesLT.Customer 
-  WHERE SalesLT.Customer.CustomerID = SalesLT.SalesOrderHeader.CustomerID
-		AND SalesLT.SalesOrderDetail.SalesOrderID = SalesLT.SalesOrderHeader.SalesOrderID
-		AND SalesLT.SalesOrderDetail.OrderQty >= 
-		(SELECT MAX
-		(SELECT SUM(SalesLT.SalesOrderDetail.OrderQty)as SUMA
-		FROM SalesLT.SalesOrderDetail, SalesLT.SalesOrderHeader
-		WHERE SalesLT.SalesOrderDetail.SalesOrderID = SalesLT.SalesOrderHeader.SalesOrderID
-		GROUP BY SalesLT.SalesOrderHeader.CustomerID)
-		)
-ORDER BY SalesLT.SalesOrderDetail.OrderQty DESC
-
-		
- 
-
-	
+USE AdventureWorksLT2008
+SELECT  MAX(summ.SUMA) AS SummaQty ,
+        SalesLT.Customer.FirstName
+FROM    ( SELECT    SUM(SalesLT.SalesOrderDetail.OrderQty) AS SUMA ,
+                    SalesLT.SalesOrderHeader.CustomerID
+          FROM      SalesLT.SalesOrderDetail ,
+                    SalesLT.SalesOrderHeader
+          WHERE     SalesLT.SalesOrderDetail.SalesOrderID = SalesLT.SalesOrderHeader.SalesOrderID
+          GROUP BY  SalesLT.SalesOrderHeader.CustomerID
+        ) AS [summ] ,
+        SalesLT.Customer
+WHERE   SalesLT.Customer.CustomerID = summ.CustomerID
+GROUP BY SalesLT.Customer.FirstName ,
+        summ.SUMA
+HAVING  MAX(summ.SUMA)>=ALL ( SELECT    SUM(SalesLT.SalesOrderDetail.OrderQty) AS SUMA
+                              FROM      SalesLT.SalesOrderDetail ,
+                                        SalesLT.SalesOrderHeader
+                              WHERE     SalesLT.SalesOrderDetail.SalesOrderID = SalesLT.SalesOrderHeader.SalesOrderID
+                              GROUP BY  SalesLT.SalesOrderHeader.CustomerID )
+ORDER BY SummaQty ASC
