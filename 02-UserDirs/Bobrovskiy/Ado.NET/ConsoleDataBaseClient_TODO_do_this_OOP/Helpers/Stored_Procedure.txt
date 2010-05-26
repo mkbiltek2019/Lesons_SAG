@@ -1,0 +1,65 @@
+﻿use AdventureWorksLT2008
+go
+
+--  збережена процедура для виводу значень з пейджингом
+--   (вивід порядку 20-ти значень на сторінку)
+--   процедура приймає 2-ва параметри
+--   1-й розмір сторінки
+--   2-й номер сторінки
+
+CREATE PROCEDURE [dbo].[SalesLT.Customer.GetAllWithPaging]
+	@PageSize int = 20,
+	@PageIndex int = 1
+AS
+BEGIN
+   SET NOCOUNT ON
+   DECLARE @totalRowsNumber int 
+   DECLARE @firstSelectedRowNumber int 
+   DECLARE @FirstSelectedRowID int
+
+   SELECT 
+       @totalRowsNumber = COUNT([Customer].[CustomerID]) 
+   FROM 
+       [SalesLT].[Customer]
+       
+   SELECT 
+       @firstSelectedRowNumber = (@PageIndex - 1) * @PageSize + 1
+
+   IF (@firstSelectedRowNumber <= @totalRowsNumber)
+   BEGIN
+      SET ROWCOUNT @firstSelectedRowNumber
+      
+      SELECT 
+         @FirstSelectedRowID = [CustomerID]
+      FROM  
+         [SalesLT].[Customer]
+      ORDER BY [CustomerID]
+
+      SET ROWCOUNT @PageSize
+      
+      SELECT * 
+      FROM 
+          [SalesLT].[Customer]
+      WHERE 
+         [CustomerID] >= @FirstSelectedRowID  
+      ORDER BY [CustomerID]
+          
+   END
+   SET NOCOUNT OFF
+   
+RETURN;
+END
+
+/*
+	usage of stored procedure
+*/
+--USE [AdventureWorksLT2008]
+--GO
+
+--DECLARE	@return_value int
+
+--EXEC	@return_value = [dbo].[SalesLT.Customer.GetAllWithPaging]
+--		@PageSize = 20,
+--		@PageIndex = 2
+
+--SELECT	'Return Value' = @return_value

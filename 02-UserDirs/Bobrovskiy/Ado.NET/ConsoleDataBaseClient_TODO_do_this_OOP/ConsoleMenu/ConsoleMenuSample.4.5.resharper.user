@@ -1,0 +1,169 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="private" priority="2" />
+      <Item value="reader" priority="1" />
+      <Item value="using" priority="5" />
+      <Item value="new" priority="3" />
+      <Item value="DataPrinter" priority="0" />
+      <Item value="printer" priority="0" />
+      <Item value="ConsoleDataBaseManager" priority="0" />
+      <Item value="format" priority="0" />
+      <Item value="string" priority="14" />
+      <Item value="int" priority="4" />
+      <Item value="bool" priority="0" />
+      <Item value="return" priority="3" />
+      <Item value="true" priority="2" />
+      <Item value="if" priority="8" />
+      <Item value="class" priority="1" />
+      <Item value="IDisposable" priority="0" />
+      <Item value="void" priority="2" />
+      <Item value="Dispose" priority="0" />
+      <Item value="false" priority="2" />
+      <Item value="try" priority="1" />
+      <Item value="catch" priority="4" />
+      <Item value="Exception" priority="2" />
+      <Item value="SqlException" priority="0" />
+      <Item value="InvalidOperationException" priority="0" />
+      <Item value="name" priority="1" />
+      <Item value="char" priority="0" />
+      <Item value="IsAuthentificated" priority="0" />
+      <Item value="connection" priority="0" />
+      <Item value="null" priority="1" />
+      <Item value="else" priority="2" />
+      <Item value="System" priority="3" />
+      <Item value="Data" priority="1" />
+      <Item value="ConnectionState" priority="1" />
+      <Item value="Threading" priority="1" />
+      <Item value="StackOverflowException" priority="0" />
+      <Item value="MenuResult" priority="0" />
+      <Item value="data" priority="0" />
+      <Item value="public" priority="2" />
+      <Item value="delegate" priority="0" />
+      <Item value="ValueType" priority="0" />
+      <Item value="Console" priority="0" />
+      <Item value="result" priority="1" />
+      <Item value="const" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.SqlClient.SqlDataReader">
+      <Item value="Read" priority="0" />
+      <Item value="Close" priority="0" />
+      <Item value="IsClosed" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Helpers.DataBasePrinter.DataPrinter">
+      <Item value="ShowCustomerData" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Helpers.DataBaseManagement.ConsoleDataBaseManager">
+      <Item value="ShowDataFromDataBase" priority="0" />
+      <Item value="ShowCustomerData" priority="0" />
+      <Item value="Dispose" priority="0" />
+      <Item value="DeleteDataById" priority="0" />
+      <Item value="InsertData" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Format" priority="4" />
+      <Item value="Empty" priority="1" />
+      <Item value="IsNullOrEmpty" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="ToString" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Substring" priority="1" />
+      <Item value="Trim" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.SqlClient.SqlConnection">
+      <Item value="Close" priority="0" />
+      <Item value="State" priority="2" />
+      <Item value="Disposed" priority="0" />
+      <Item value="BeginTransaction" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Helpers.DataBaseManagement.Authentification">
+      <Item value="ConsoleLoginAndPasswdInput" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Console">
+      <Item value="ReadKey" priority="1" />
+      <Item value="WriteLine" priority="1" />
+      <Item value="Read" priority="0" />
+      <Item value="ReadLine" priority="0" />
+      <Item value="Clear" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Data.ConnectionState">
+      <Item value="Open" priority="0" />
+      <Item value="Closed" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Thread">
+      <Item value="Sleep" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Helpers.Console.MenuResult">
+      <Item value="Exit" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Helpers.DataBaseManagement.ActionWithParamHandler">
+      <Item value="Invoke" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.SqlClient.SqlCommand">
+      <Item value="ExecuteReader" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Helpers.DataBaseManagement.ConsoleDataReader">
+      <Item value="ReadSomeValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int32">
+      <Item value="TryParse" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:Console/f:ConsoleMenu.cs" caret="4093" fromTop="10" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:Console/f:ConsoleMenuItem.cs" caret="734" fromTop="36" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:DataBase/f:DataBaseManager.cs" caret="3225" fromTop="75" />
+      <File id="58500615-BE3A-4749-9FD3-0FA0CF9DE2A7/f:Program.cs" caret="418" fromTop="0" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/f:Stored_Procedure.txt" caret="1431" fromTop="31" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:DataBase/f:BadataBasePrinter.cs" caret="1854" fromTop="40" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:DataBase/f:DataBaseManager.cs" caret="4571" fromTop="7" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:DataBase/f:DataBaseManager.cs" caret="4177" fromTop="68" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:DataBase/f:DataBaseManager.cs" caret="2025" fromTop="66" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:DataBase/f:DataBaseManager.cs" caret="1391" fromTop="42" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:DataBase/f:DataBaseManager.cs" caret="3407" fromTop="18" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:DataBase/f:DataBaseManager.cs" caret="3508" fromTop="20" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:DataBase/f:DataBaseManager.cs" caret="4855" fromTop="31" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:DataBase/f:BadataBasePrinter.cs" caret="1201" fromTop="25" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:DataBase/f:BadataBasePrinter.cs" caret="1843" fromTop="34" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:DataBase/f:DataBaseManager.cs" caret="7198" fromTop="70" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:DataBase/f:DataBaseManager.cs" caret="5248" fromTop="38" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:DataBase/f:DataBaseManager.cs" caret="6316" fromTop="27" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:DataBase/f:DataBaseManager.cs" caret="6361" fromTop="20" />
+      <File id="58500615-BE3A-4749-9FD3-0FA0CF9DE2A7/f:Program.cs" caret="1837" fromTop="28" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:DataBase/f:DataBaseManager.cs" caret="5739" fromTop="19" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:DataBase/f:DataBaseManager.cs" caret="6345" fromTop="28" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:DataBase/f:DataBaseManager.cs" caret="5959" fromTop="47" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:DataBase/f:DataBaseManager.cs" caret="5948" fromTop="40" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/f:Stored_Procedure.txt" caret="0" fromTop="0" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/f:Stored_Procedure.txt" caret="0" fromTop="31" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/f:Stored_Procedure.txt" caret="1433" fromTop="31" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:DataBase/f:DataBaseManager.cs" caret="7001" fromTop="96" />
+      <File id="58500615-BE3A-4749-9FD3-0FA0CF9DE2A7/f:Program.cs" caret="1284" fromTop="16" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:DataBase/f:DataBaseManager.cs" caret="6852" fromTop="87" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:DataBase/f:DataBaseManager.cs" caret="6990" fromTop="92" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:DataBase/f:DataBaseManager.cs" caret="6643" fromTop="84" />
+      <File id="E43B37E3-61F0-4B7B-B3E0-65C86469D7C7/d:DataBase/f:DataBaseManager.cs" caret="3225" fromTop="48" />
+      <File id="58500615-BE3A-4749-9FD3-0FA0CF9DE2A7/f:Program.cs" caret="746" fromTop="11" />
+      <File id="58500615-BE3A-4749-9FD3-0FA0CF9DE2A7/f:Program.cs" caret="13" fromTop="0" />
+      <File id="58500615-BE3A-4749-9FD3-0FA0CF9DE2A7/f:Program.cs" caret="418" fromTop="9" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+</Configuration>
