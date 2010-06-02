@@ -1,19 +1,13 @@
-﻿using System;
-using System.Data;
-using AdventureWorksManger.AdventureWorksLTDataSetTableAdapters;
+﻿using System.Data;
 
 namespace AdventureWorksManger
 {
-    public class AdventureWorksAbstractManger//:IDisposable 
+    public abstract class AdventureWorksAbstractManger 
     {
-        protected string TableName
+        public string TableName
         {
             get;
             set;
-        }
-
-        protected AdventureWorksAbstractManger()
-        {
         }
 
         protected AdventureWorksAbstractManger(string tableName)

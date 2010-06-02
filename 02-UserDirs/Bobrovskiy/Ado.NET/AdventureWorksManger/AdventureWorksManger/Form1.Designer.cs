@@ -60,21 +60,18 @@
             this.orderByToolStripComboBox = new System.Windows.Forms.ToolStripComboBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.tabControl = new System.Windows.Forms.TabControl();
-            this.customerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameStyleDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.middleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.suffixDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.companyNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salesPersonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordHashDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordSaltDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rowguidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modifiedDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerTableAdapter = new AdventureWorksManger.AdventureWorksLTDataSetTableAdapters.CustomerTableAdapter();
+            this.addressTableAdapter = new AdventureWorksManger.AdventureWorksLTDataSetTableAdapters.AddressTableAdapter();
+            this.buildVersionTableAdapter = new AdventureWorksManger.AdventureWorksLTDataSetTableAdapters.BuildVersionTableAdapter();
+            this.customerAddressTableAdapter = new AdventureWorksManger.AdventureWorksLTDataSetTableAdapters.CustomerAddressTableAdapter();
+            this.productTableAdapter = new AdventureWorksManger.AdventureWorksLTDataSetTableAdapters.ProductTableAdapter();
+            this.errorLogTableAdapter = new AdventureWorksManger.AdventureWorksLTDataSetTableAdapters.ErrorLogTableAdapter();
+            this.productCategoryTableAdapter = new AdventureWorksManger.AdventureWorksLTDataSetTableAdapters.ProductCategoryTableAdapter();
+            this.productDescriptionTableAdapter = new AdventureWorksManger.AdventureWorksLTDataSetTableAdapters.ProductDescriptionTableAdapter();
+            this.productModelTableAdapter = new AdventureWorksManger.AdventureWorksLTDataSetTableAdapters.ProductModelTableAdapter();
+            this.productModelProductDescriptionTableAdapter = new AdventureWorksManger.AdventureWorksLTDataSetTableAdapters.ProductModelProductDescriptionTableAdapter();
+            this.salesOrderDetailTableAdapter = new AdventureWorksManger.AdventureWorksLTDataSetTableAdapters.SalesOrderDetailTableAdapter();
+            this.salesOrderHeaderTableAdapter = new AdventureWorksManger.AdventureWorksLTDataSetTableAdapters.SalesOrderHeaderTableAdapter();
             this.menuStrip.SuspendLayout();
             this.tabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator)).BeginInit();
@@ -139,7 +136,6 @@
             // bindingNavigator
             // 
             this.bindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bindingNavigator.AllowItemReorder = true;
             this.bindingNavigator.BindingSource = this.bindingSource;
             this.bindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
@@ -164,7 +160,6 @@
             this.toolStripSeparator3,
             this.toolStripLabel2,
             this.orderByToolStripComboBox});
-
             this.bindingNavigator.Location = new System.Drawing.Point(3, 3);
             this.bindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -190,7 +185,8 @@
             // 
             this.bindingSource.AllowNew = true;
             this.bindingSource.DataSource = this.adventureWorksLTDataSet;
-           // 
+            this.bindingSource.Position = 0;
+            // 
             // adventureWorksLTDataSet
             // 
             this.adventureWorksLTDataSet.DataSetName = "AdventureWorksLTDataSet";
@@ -286,7 +282,7 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton1.Text = "Save Changes";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.toolStripButton1.Click += new System.EventHandler(this.saveToolStripButton_Click);
             // 
             // toolStripSeparator1
             // 
@@ -322,6 +318,7 @@
             // 
             this.orderByToolStripComboBox.Name = "orderByToolStripComboBox";
             this.orderByToolStripComboBox.Size = new System.Drawing.Size(121, 25);
+            this.orderByToolStripComboBox.SelectedIndexChanged += new System.EventHandler(this.orderByToolStripComboBox_SelectedIndexChanged);
             // 
             // dataGridView
             // 
@@ -331,28 +328,13 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView.AutoGenerateColumns = false;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.customerIDDataGridViewTextBoxColumn,
-            this.nameStyleDataGridViewCheckBoxColumn,
-            this.titleDataGridViewTextBoxColumn,
-            this.firstNameDataGridViewTextBoxColumn,
-            this.middleNameDataGridViewTextBoxColumn,
-            this.lastNameDataGridViewTextBoxColumn,
-            this.suffixDataGridViewTextBoxColumn,
-            this.companyNameDataGridViewTextBoxColumn,
-            this.salesPersonDataGridViewTextBoxColumn,
-            this.emailAddressDataGridViewTextBoxColumn,
-            this.phoneDataGridViewTextBoxColumn,
-            this.passwordHashDataGridViewTextBoxColumn,
-            this.passwordSaltDataGridViewTextBoxColumn,
-            this.rowguidDataGridViewTextBoxColumn,
-            this.modifiedDateDataGridViewTextBoxColumn});
             this.dataGridView.DataSource = this.bindingSource;
             this.dataGridView.Location = new System.Drawing.Point(3, 31);
             this.dataGridView.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.Size = new System.Drawing.Size(738, 339);
-            this.dataGridView.TabIndex = 0;// 
+            this.dataGridView.TabIndex = 0;
+            // 
             // tabControl
             // 
             this.tabControl.Controls.Add(this.tabPage);
@@ -363,6 +345,54 @@
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(753, 399);
             this.tabControl.TabIndex = 2;
+            // 
+            // customerTableAdapter
+            // 
+            this.customerTableAdapter.ClearBeforeFill = true;
+            // 
+            // addressTableAdapter
+            // 
+            this.addressTableAdapter.ClearBeforeFill = true;
+            // 
+            // buildVersionTableAdapter
+            // 
+            this.buildVersionTableAdapter.ClearBeforeFill = true;
+            // 
+            // customerAddressTableAdapter
+            // 
+            this.customerAddressTableAdapter.ClearBeforeFill = true;
+            // 
+            // productTableAdapter
+            // 
+            this.productTableAdapter.ClearBeforeFill = true;
+            // 
+            // errorLogTableAdapter
+            // 
+            this.errorLogTableAdapter.ClearBeforeFill = true;
+            // 
+            // productCategoryTableAdapter
+            // 
+            this.productCategoryTableAdapter.ClearBeforeFill = true;
+            // 
+            // productDescriptionTableAdapter
+            // 
+            this.productDescriptionTableAdapter.ClearBeforeFill = true;
+            // 
+            // productModelTableAdapter
+            // 
+            this.productModelTableAdapter.ClearBeforeFill = true;
+            // 
+            // productModelProductDescriptionTableAdapter
+            // 
+            this.productModelProductDescriptionTableAdapter.ClearBeforeFill = true;
+            // 
+            // salesOrderDetailTableAdapter
+            // 
+            this.salesOrderDetailTableAdapter.ClearBeforeFill = true;
+            // 
+            // salesOrderHeaderTableAdapter
+            // 
+            this.salesOrderHeaderTableAdapter.ClearBeforeFill = true;
             // 
             // mainForm
             // 
@@ -424,21 +454,18 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripComboBox orderByToolStripComboBox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn nameStyleDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn middleNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn suffixDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn companyNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn salesPersonDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailAddressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordHashDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordSaltDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rowguidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn modifiedDateDataGridViewTextBoxColumn;
+        private AdventureWorksManger.AdventureWorksLTDataSetTableAdapters.CustomerTableAdapter customerTableAdapter;
+        private AdventureWorksManger.AdventureWorksLTDataSetTableAdapters.AddressTableAdapter addressTableAdapter;
+        private AdventureWorksManger.AdventureWorksLTDataSetTableAdapters.BuildVersionTableAdapter buildVersionTableAdapter;
+        private AdventureWorksManger.AdventureWorksLTDataSetTableAdapters.CustomerAddressTableAdapter customerAddressTableAdapter;
+        private AdventureWorksManger.AdventureWorksLTDataSetTableAdapters.ProductTableAdapter productTableAdapter;
+        private AdventureWorksManger.AdventureWorksLTDataSetTableAdapters.ErrorLogTableAdapter errorLogTableAdapter;
+        private AdventureWorksManger.AdventureWorksLTDataSetTableAdapters.ProductCategoryTableAdapter productCategoryTableAdapter;
+        private AdventureWorksManger.AdventureWorksLTDataSetTableAdapters.ProductDescriptionTableAdapter productDescriptionTableAdapter;
+        private AdventureWorksManger.AdventureWorksLTDataSetTableAdapters.ProductModelTableAdapter productModelTableAdapter;
+        private AdventureWorksManger.AdventureWorksLTDataSetTableAdapters.ProductModelProductDescriptionTableAdapter productModelProductDescriptionTableAdapter;
+        private AdventureWorksManger.AdventureWorksLTDataSetTableAdapters.SalesOrderDetailTableAdapter salesOrderDetailTableAdapter;
+        private AdventureWorksManger.AdventureWorksLTDataSetTableAdapters.SalesOrderHeaderTableAdapter salesOrderHeaderTableAdapter;
     }
 }
 

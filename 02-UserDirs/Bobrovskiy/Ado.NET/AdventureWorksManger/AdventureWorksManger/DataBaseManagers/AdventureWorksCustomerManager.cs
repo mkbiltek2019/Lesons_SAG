@@ -1,42 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Threading;
-using AdventureWorksManger.AdventureWorksLTDataSetTableAdapters;
 
 namespace AdventureWorksManger
 {
-    public class AdventureWorksCustomerManager : AdventureWorksAbstractManger
+    public delegate int UpdateHandler(AdventureWorksLTDataSet dataSet);
+
+    public interface IUpdateable
     {
-        public AdventureWorksCustomerManager(string tableName)
+        void Update(UpdateHandler handler, AdventureWorksLTDataSet dataTable);    
+    }
+
+    //-- AdventureWorksTableManager class use automaticaly
+    //-- generated class AdventureWorksLTDataSet by Wizard !!!!
+
+    public class AdventureWorksTableManager : AdventureWorksAbstractManger, IUpdateable
+    {
+        public AdventureWorksTableManager(string tableName)
             : base(tableName)
         {
         }
 
-        public void FillTableAdapter(AdventureWorksLTDataSet adventureWorksLTDataSet, CustomerTableAdapter customerTableAdapter)
+        public void Update(UpdateHandler handler, AdventureWorksLTDataSet dataTable)
         {
             try
             {
-                customerTableAdapter.FillBy(adventureWorksLTDataSet.Customer);
+                handler.Invoke(dataTable);
             }
             catch (Exception ex)
             {
             }
         }
-
-        public void Update(AdventureWorksLTDataSet adventureWorksLTDataSet, CustomerTableAdapter customerTableAdapter)
-        {
-           try
-                {
-                    customerTableAdapter.Update(adventureWorksLTDataSet.Customer);
-                }
-                catch (Exception ex)
-                {
-                  
-                }
-        }
-
-       
     }
+
 }

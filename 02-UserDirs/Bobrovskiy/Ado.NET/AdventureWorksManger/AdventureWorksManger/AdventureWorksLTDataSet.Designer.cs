@@ -950,6 +950,7 @@ namespace AdventureWorksManger {
                 this.columnAddressLine1.MaxLength = 60;
                 this.columnAddressLine2.MaxLength = 60;
                 this.columnCity.AllowDBNull = false;
+                this.columnCity.Caption = "Город";
                 this.columnCity.MaxLength = 30;
                 this.columnStateProvince.AllowDBNull = false;
                 this.columnStateProvince.MaxLength = 50;
@@ -959,6 +960,7 @@ namespace AdventureWorksManger {
                 this.columnPostalCode.MaxLength = 15;
                 this.columnrowguid.AllowDBNull = false;
                 this.columnModifiedDate.AllowDBNull = false;
+                this.Locale = new global::System.Globalization.CultureInfo("ru-RU");
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

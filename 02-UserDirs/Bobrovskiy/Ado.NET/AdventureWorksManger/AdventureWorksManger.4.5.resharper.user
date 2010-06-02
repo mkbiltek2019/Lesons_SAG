@@ -11,45 +11,45 @@
   </NAntValidationSettings>
   <RecentFiles>
     <RecentFiles>
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:Form1.cs" caret="1197" fromTop="27" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:FormManager/f:FormManager.cs" caret="2696" fromTop="19" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:Form1.Designer.cs" caret="21689" fromTop="352" />
       <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:AdventureWorksLTDataSet.cs" caret="71" fromTop="3" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:Form1.Designer.cs" caret="23461" fromTop="15" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:DataBaseManagers/f:AdventureWorksAbstractManger.cs" caret="505" fromTop="19" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:AdventureWorksLTDataSet.Designer.cs" caret="1374" fromTop="12" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:FormManager/f:FormManager.cs" caret="1137" fromTop="16" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:DataBaseManagers/f:AdventureWorksCustomerManager.cs" caret="555" fromTop="8" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:Form1.cs" caret="1631" fromTop="15" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:DataBaseManagers/f:AdventureWorksAbstractManger.cs" caret="215" fromTop="8" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:DataBaseManagers/f:AdventureWorksCustomerManager.cs" caret="529" fromTop="11" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:AdventureWorksLTDataSet.Designer.cs" caret="470779" fromTop="14" />
     </RecentFiles>
     <RecentEdits>
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:Form1.cs" caret="1778" fromTop="11" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:Form1.cs" caret="1300" fromTop="12" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:FormManager/f:FormManager.cs" caret="988" fromTop="35" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:FormManager/f:FormManager.cs" caret="2784" fromTop="18" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:Form1.cs" caret="1042" fromTop="15" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:Form1.cs" caret="1195" fromTop="20" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:Form1.cs" caret="1778" fromTop="4" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:Form1.cs" caret="479" fromTop="4" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:DataBaseManagers/f:AdventureWorksCustomerManager.cs" caret="1014" fromTop="23" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:DataBaseManagers/f:AdventureWorksCustomerManager.cs" caret="835" fromTop="16" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:DataBaseManagers/f:AdventureWorksCustomerManager.cs" caret="1682" fromTop="21" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:DataBaseManagers/f:AdventureWorksCustomerManager.cs" caret="311" fromTop="5" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:DataBaseManagers/f:AdventureWorksCustomerManager.cs" caret="675" fromTop="21" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:DataBaseManagers/f:AdventureWorksAbstractManger.cs" caret="677" fromTop="26" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:DataBaseManagers/f:AdventureWorksAbstractManger.cs" caret="222" fromTop="8" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:DataBaseManagers/f:AdventureWorksAbstractManger.cs" caret="1067" fromTop="40" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:DataBaseManagers/f:AdventureWorksAbstractManger.cs" caret="505" fromTop="19" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:DataBaseManagers/f:AdventureWorksCustomerManager.cs" caret="419" fromTop="10" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:FormManager/f:FormManager.cs" caret="1644" fromTop="21" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:FormManager/f:FormManager.cs" caret="974" fromTop="13" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:FormManager/f:FormManager.cs" caret="2059" fromTop="15" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:FormManager/f:FormManager.cs" caret="1375" fromTop="8" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:DataBaseManagers/f:AdventureWorksCustomerManager.cs" caret="1731" fromTop="22" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:DataBaseManagers/f:AdventureWorksCustomerManager.cs" caret="1419" fromTop="23" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:DataBaseManagers/f:AdventureWorksCustomerManager.cs" caret="1140" fromTop="9" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:DataBaseManagers/f:AdventureWorksCustomerManager.cs" caret="1320" fromTop="24" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:DataBaseManagers/f:AdventureWorksCustomerManager.cs" caret="555" fromTop="8" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:DataBaseManagers/f:AdventureWorksCustomerManager.cs" caret="17846" fromTop="8" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:FormManager/f:FormManager.cs" caret="1360" fromTop="20" />
-      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:Form1.cs" caret="1631" fromTop="15" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:DataBaseManagers/f:AdventureWorksCustomerManager.cs" caret="312" fromTop="9" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:DataBaseManagers/f:AdventureWorksCustomerManager.cs" caret="438" fromTop="8" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:DataBaseManagers/f:AdventureWorksAbstractManger.cs" caret="499" fromTop="16" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:DataBaseManagers/f:AdventureWorksAbstractManger.cs" caret="859" fromTop="28" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:DataBaseManagers/f:AdventureWorksAbstractManger.cs" caret="215" fromTop="5" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:FormManager/f:FormManager.cs" caret="2811" fromTop="13" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:FormManager/f:FormManager.cs" caret="2972" fromTop="18" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:Form1.cs" caret="342" fromTop="1" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:Form1.Designer.cs" caret="23323" fromTop="27" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:Form1.cs" caret="505" fromTop="6" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:Form1.cs" caret="926" fromTop="11" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:FormManager/f:FormManager.cs" caret="520" fromTop="18" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:FormManager/f:FormManager.cs" caret="1716" fromTop="13" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:Form1.Designer.cs" caret="23323" fromTop="450" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:FormManager/f:FormManager.cs" caret="1716" fromTop="15" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:FormManager/f:FormManager.cs" caret="1716" fromTop="3" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:FormManager/f:FormManager.cs" caret="3216" fromTop="16" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:FormManager/f:FormManager.cs" caret="3617" fromTop="21" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:AdventureWorksLTDataSet.cs" caret="253" fromTop="12" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:FormManager/f:FormManager.cs" caret="1694" fromTop="14" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:Form1.cs" caret="757" fromTop="7" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:Form1.cs" caret="1197" fromTop="17" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:Form1.Designer.cs" caret="20991" fromTop="21" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:Form1.Designer.cs" caret="20991" fromTop="10" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:Form1.Designer.cs" caret="20991" fromTop="9" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:Form1.Designer.cs" caret="20991" fromTop="15" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/f:Form1.Designer.cs" caret="20991" fromTop="15" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:FormManager/f:FormManager.cs" caret="2721" fromTop="20" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:FormManager/f:FormManager.cs" caret="2707" fromTop="19" />
+      <File id="BABCA093-4EF3-423E-9F82-560F54932080/d:FormManager/f:FormManager.cs" caret="3754" fromTop="19" />
     </RecentEdits>
   </RecentFiles>
   <UnitTestRunner>
@@ -57,9 +57,9 @@
   </UnitTestRunner>
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
-      <Item value="this" priority="17" />
+      <Item value="this" priority="19" />
       <Item value="new" priority="4" />
-      <Item value="CustomerTableAdapter" priority="2" />
+      <Item value="CustomerTableAdapter" priority="3" />
       <Item value="ad" priority="0" />
       <Item value="AdventureWorksLTDataSetTableAdapters" priority="0" />
       <Item value="adventureWorksLTDataSet" priority="1" />
@@ -73,7 +73,7 @@
       <Item value="int" priority="1" />
       <Item value="abstract" priority="3" />
       <Item value="public" priority="11" />
-      <Item value="void" priority="5" />
+      <Item value="void" priority="7" />
       <Item value="return" priority="3" />
       <Item value="bindingSource" priority="0" />
       <Item value="using" priority="1" />
@@ -83,11 +83,11 @@
       <Item value="string" priority="0" />
       <Item value="readonly" priority="1" />
       <Item value="tableNameToolStripComboBox" priority="0" />
-      <Item value="private" priority="2" />
+      <Item value="private" priority="4" />
       <Item value="switch" priority="0" />
       <Item value="case" priority="0" />
       <Item value="break" priority="0" />
-      <Item value="if" priority="4" />
+      <Item value="if" priority="5" />
       <Item value="customerManager" priority="0" />
       <Item value="AdventureWorksCustomerManager" priority="0" />
       <Item value="for" priority="0" />
@@ -99,13 +99,14 @@
       <Item value="dataRow" priority="1" />
       <Item value="sender" priority="1" />
       <Item value="DataRow" priority="0" />
-      <Item value="AdventureWorksLTDataSet" priority="1" />
+      <Item value="AdventureWorksLTDataSet" priority="2" />
       <Item value="dataSet" priority="0" />
       <Item value="System" priority="0" />
       <Item value="Threading" priority="0" />
       <Item value="Mutex" priority="1" />
       <Item value="m" priority="1" />
       <Item value="catch" priority="0" />
+      <Item value="true" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:AdventureWorksManger.mainForm">
       <Item value="adventureWorksLTDataSet" priority="7" />
@@ -113,10 +114,11 @@
       <Item value="dataGridView" priority="4" />
       <Item value="tableNameToolStripComboBox" priority="0" />
       <Item value="DataBindings" priority="0" />
+      <Item value="bindingNavigator" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:AdventureWorksManger.AdventureWorksLTDataSet">
       <Item value="Load" priority="0" />
-      <Item value="Customer" priority="13" />
+      <Item value="Customer" priority="14" />
       <Item value="Tables" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:AdventureWorksManger.AdventureWorksLTDataSet+CustomerDataTable">
@@ -131,6 +133,7 @@
       <Item value="Update" priority="3" />
       <Item value="GetData" priority="0" />
       <Item value="Adapter" priority="1" />
+      <Item value="ClearBeforeFill" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Data.DataSet">
       <Item value="CreateDataReader" priority="0" />
@@ -142,6 +145,9 @@
       <Item value="ToString" priority="0" />
       <Item value="Current" priority="1" />
       <Item value="Add" priority="0" />
+      <Item value="AllowNew" priority="0" />
+      <Item value="Position" priority="0" />
+      <Item value="Filter" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.DataGridView">
       <Item value="Update" priority="1" />
@@ -149,13 +155,13 @@
       <Item value="Invalidate" priority="0" />
       <Item value="UpdateCellValue" priority="0" />
       <Item value="Refresh" priority="1" />
-      <Item value="DataSource" priority="1" />
+      <Item value="DataSource" priority="2" />
       <Item value="Columns" priority="2" />
       <Item value="CommitEdit" priority="0" />
       <Item value="EndEdit" priority="1" />
       <Item value="RefreshEdit" priority="0" />
       <Item value="DataBindings" priority="1" />
-      <Item value="DataMember" priority="0" />
+      <Item value="DataMember" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewColumnCollection">
       <Item value="Clear" priority="0" />
@@ -215,6 +221,11 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Data.SqlClient.SqlDataAdapter">
       <Item value="AcceptChangesDuringUpdate" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.BindingNavigator">
+      <Item value="BindingSource" priority="0" />
+      <Item value="BeginInit" priority="0" />
+      <Item value="EndInit" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>
