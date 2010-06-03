@@ -1,0 +1,138 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="8DD94F85-A9C0-4746-B12D-A70CE1107A35/d:Properties/f:Resources.Designer.cs" caret="2847" fromTop="17" />
+      <File id="8DD94F85-A9C0-4746-B12D-A70CE1107A35/f:Form1.cs" caret="1742" fromTop="27" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="8DD94F85-A9C0-4746-B12D-A70CE1107A35/f:Form1.cs" caret="1800" fromTop="15" />
+      <File id="8DD94F85-A9C0-4746-B12D-A70CE1107A35/f:Form1.cs" caret="1788" fromTop="18" />
+      <File id="8DD94F85-A9C0-4746-B12D-A70CE1107A35/f:Form1.cs" caret="1788" fromTop="16" />
+      <File id="8DD94F85-A9C0-4746-B12D-A70CE1107A35/f:Form1.cs" caret="1788" fromTop="16" />
+      <File id="8DD94F85-A9C0-4746-B12D-A70CE1107A35/f:Form1.cs" caret="1293" fromTop="7" />
+      <File id="8DD94F85-A9C0-4746-B12D-A70CE1107A35/f:Form1.cs" caret="1293" fromTop="21" />
+      <File id="8DD94F85-A9C0-4746-B12D-A70CE1107A35/f:Form1.cs" caret="875" fromTop="5" />
+      <File id="8DD94F85-A9C0-4746-B12D-A70CE1107A35/f:Form1.cs" caret="875" fromTop="18" />
+      <File id="8DD94F85-A9C0-4746-B12D-A70CE1107A35/f:Form1.cs" caret="1565" fromTop="26" />
+      <File id="8DD94F85-A9C0-4746-B12D-A70CE1107A35/f:Form1.cs" caret="484" fromTop="9" />
+      <File id="8DD94F85-A9C0-4746-B12D-A70CE1107A35/f:Form1.cs" caret="862" fromTop="10" />
+      <File id="8DD94F85-A9C0-4746-B12D-A70CE1107A35/f:Form1.cs" caret="1565" fromTop="23" />
+      <File id="8DD94F85-A9C0-4746-B12D-A70CE1107A35/f:Form1.cs" caret="274" fromTop="9" />
+      <File id="8DD94F85-A9C0-4746-B12D-A70CE1107A35/f:Form1.cs" caret="533" fromTop="10" />
+      <File id="8DD94F85-A9C0-4746-B12D-A70CE1107A35/f:Form1.cs" caret="1180" fromTop="18" />
+      <File id="8DD94F85-A9C0-4746-B12D-A70CE1107A35/f:Form1.cs" caret="1276" fromTop="20" />
+      <File id="8DD94F85-A9C0-4746-B12D-A70CE1107A35/f:Form1.cs" caret="1800" fromTop="13" />
+      <File id="8DD94F85-A9C0-4746-B12D-A70CE1107A35/f:Form1.cs" caret="1740" fromTop="17" />
+      <File id="8DD94F85-A9C0-4746-B12D-A70CE1107A35/f:Form1.cs" caret="1276" fromTop="12" />
+      <File id="8DD94F85-A9C0-4746-B12D-A70CE1107A35/f:Form1.cs" caret="764" fromTop="10" />
+      <File id="8DD94F85-A9C0-4746-B12D-A70CE1107A35/d:Properties/f:Resources.Designer.cs" caret="2847" fromTop="17" />
+      <File id="8DD94F85-A9C0-4746-B12D-A70CE1107A35/d:Properties/f:Resources.Designer.cs" caret="2847" fromTop="17" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="private" priority="3" />
+      <Item value="Image" priority="2" />
+      <Item value="imageList" priority="0" />
+      <Item value="e" priority="9" />
+      <Item value="MouseClick" priority="1" />
+      <Item value="MousePosition" priority="0" />
+      <Item value="Color" priority="0" />
+      <Item value="Graphics" priority="0" />
+      <Item value="this" priority="2" />
+      <Item value="g" priority="3" />
+      <Item value="new" priority="1" />
+      <Item value="Point" priority="0" />
+      <Item value="Random" priority="1" />
+      <Item value="rand" priority="0" />
+      <Item value="null" priority="2" />
+      <Item value="List" priority="1" />
+      <Item value="for" priority="1" />
+      <Item value="GetService" priority="0" />
+      <Item value="int" priority="1" />
+      <Item value="i" priority="1" />
+      <Item value="if" priority="3" />
+      <Item value="Invalidate" priority="1" />
+      <Item value="using" priority="0" />
+      <Item value="Keys" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ImageList">
+      <Item value="Images" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.PaintEventArgs">
+      <Item value="Graphics" priority="3" />
+      <Item value="Dispose" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Graphics">
+      <Item value="DrawImage" priority="2" />
+      <Item value="Clear" priority="1" />
+      <Item value="ResetClip" priority="0" />
+      <Item value="Dispose" priority="1" />
+      <Item value="CopyFromScreen" priority="0" />
+      <Item value="GetHdc" priority="0" />
+      <Item value="FillRegion" priority="0" />
+      <Item value="DrawImageUnscaled" priority="0" />
+      <Item value="DrawPath" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Color">
+      <Item value="Empty" priority="0" />
+      <Item value="Transparent" priority="0" />
+      <Item value="ForestGreen" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Screen_Breaker.mainForm">
+      <Item value="CreateGraphics" priority="0" />
+      <Item value="Width" priority="0" />
+      <Item value="Height" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.MouseEventArgs">
+      <Item value="Location" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Point">
+      <Item value="X" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Image">
+      <Item value="Width" priority="0" />
+      <Item value="Height" priority="0" />
+      <Item value="Clone" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Random">
+      <Item value="Next" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ImageList+ImageCollection">
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add" priority="1" />
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Drawing2D.GraphicsPath">
+      <Item value="StartFigure" priority="0" />
+      <Item value="CloseFigure" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Media.SoundPlayer">
+      <Item value="Play" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.KeyPressEventArgs">
+      <Item value="KeyChar" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.KeyEventArgs">
+      <Item value="KeyCode" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.Keys">
+      <Item value="C" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

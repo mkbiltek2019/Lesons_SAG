@@ -1,0 +1,95 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:System.Windows.Forms.MouseEventArgs">
+      <Item value="Location" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Default">
+      <Item value="if" priority="2" />
+      <Item value="MousePosition" priority="0" />
+      <Item value="Point`0" priority="0" />
+      <Item value="PointToClient`0" priority="0" />
+      <Item value="e" priority="0" />
+      <Item value="gPath" priority="0" />
+      <Item value="this" priority="0" />
+      <Item value="true" priority="0" />
+      <Item value="public" priority="0" />
+      <Item value="void" priority="0" />
+      <Item value="KnownColor`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Drawing2D.GraphicsPath">
+      <Item value="GetBounds`0" priority="0" />
+      <Item value="IsVisible`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.RectangleF">
+      <Item value="Contains`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Color">
+      <Item value="Empty" priority="0" />
+      <Item value="Black" priority="0" />
+      <Item value="MidnightBlue" priority="0" />
+      <Item value="RoyalBlue" priority="0" />
+      <Item value="DarkSlateBlue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Region">
+      <Item value="IsVisible`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomButtonControlLibrary.UserControl1">
+      <Item value="DoubleBuffered" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Drawing2D.SmoothingMode">
+      <Item value="HighSpeed" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.ControlPaint">
+      <Item value="Dark`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="68B45D5D-3994-4399-AC5A-73A9FA21F6C9/f:UserControl1.cs" caret="2187" fromTop="20" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="68B45D5D-3994-4399-AC5A-73A9FA21F6C9/f:UserControl1.cs" caret="355" fromTop="8" />
+      <File id="68B45D5D-3994-4399-AC5A-73A9FA21F6C9/f:UserControl1.cs" caret="4392" fromTop="20" />
+      <File id="68B45D5D-3994-4399-AC5A-73A9FA21F6C9/f:UserControl1.cs" caret="5879" fromTop="12" />
+      <File id="68B45D5D-3994-4399-AC5A-73A9FA21F6C9/f:UserControl1.cs" caret="5277" fromTop="25" />
+      <File id="68B45D5D-3994-4399-AC5A-73A9FA21F6C9/f:UserControl1.cs" caret="4392" fromTop="8" />
+      <File id="68B45D5D-3994-4399-AC5A-73A9FA21F6C9/f:UserControl1.cs" caret="5300" fromTop="0" />
+      <File id="68B45D5D-3994-4399-AC5A-73A9FA21F6C9/f:UserControl1.cs" caret="5175" fromTop="18" />
+      <File id="68B45D5D-3994-4399-AC5A-73A9FA21F6C9/f:UserControl1.cs" caret="4392" fromTop="7" />
+      <File id="68B45D5D-3994-4399-AC5A-73A9FA21F6C9/f:UserControl1.cs" caret="4845" fromTop="5" />
+      <File id="68B45D5D-3994-4399-AC5A-73A9FA21F6C9/f:UserControl1.cs" caret="4686" fromTop="5" />
+      <File id="68B45D5D-3994-4399-AC5A-73A9FA21F6C9/f:UserControl1.cs" caret="4526" fromTop="11" />
+      <File id="68B45D5D-3994-4399-AC5A-73A9FA21F6C9/f:UserControl1.cs" caret="4234" fromTop="27" />
+      <File id="68B45D5D-3994-4399-AC5A-73A9FA21F6C9/f:UserControl1.cs" caret="3410" fromTop="19" />
+      <File id="68B45D5D-3994-4399-AC5A-73A9FA21F6C9/f:UserControl1.cs" caret="36" fromTop="0" />
+      <File id="68B45D5D-3994-4399-AC5A-73A9FA21F6C9/f:UserControl1.cs" caret="1813" fromTop="13" />
+      <File id="68B45D5D-3994-4399-AC5A-73A9FA21F6C9/f:UserControl1.cs" caret="2717" fromTop="16" />
+      <File id="68B45D5D-3994-4399-AC5A-73A9FA21F6C9/f:UserControl1.cs" caret="2814" fromTop="8" />
+      <File id="68B45D5D-3994-4399-AC5A-73A9FA21F6C9/f:UserControl1.cs" caret="2406" fromTop="13" />
+      <File id="68B45D5D-3994-4399-AC5A-73A9FA21F6C9/f:UserControl1.cs" caret="1066" fromTop="1" />
+      <File id="68B45D5D-3994-4399-AC5A-73A9FA21F6C9/f:UserControl1.cs" caret="1378" fromTop="6" />
+      <File id="68B45D5D-3994-4399-AC5A-73A9FA21F6C9/f:UserControl1.cs" caret="1412" fromTop="7" />
+      <File id="68B45D5D-3994-4399-AC5A-73A9FA21F6C9/f:UserControl1.cs" caret="2520" fromTop="24" />
+      <File id="68B45D5D-3994-4399-AC5A-73A9FA21F6C9/f:UserControl1.cs" caret="2368" fromTop="20" />
+      <File id="68B45D5D-3994-4399-AC5A-73A9FA21F6C9/f:UserControl1.cs" caret="5300" fromTop="20" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>
