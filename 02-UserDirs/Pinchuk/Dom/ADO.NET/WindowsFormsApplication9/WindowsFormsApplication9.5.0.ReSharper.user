@@ -1,0 +1,340 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Program.cs" caret="326" fromTop="13" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:AdventureWorksLT2008DataSet.Designer.cs" caret="440703" fromTop="18" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Form1.cs" caret="846" fromTop="2" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:DataBasaManeger.cs" caret="1696" fromTop="34" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Form1.Designer.cs" caret="0" fromTop="0" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Form1.cs" caret="1944" fromTop="16" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:AdventureWorksLT2008DataSet.Designer.cs" caret="405114" fromTop="23" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Form1.Designer.cs" caret="15233" fromTop="24" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:AdventureWorksLT2008DataSet.Designer.cs" caret="398684" fromTop="23" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Form1.cs" caret="544" fromTop="25" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:AdventureWorksLT2008DataSet.Designer.cs" caret="403938" fromTop="23" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Form1.cs" caret="544" fromTop="2" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Form1.cs" caret="544" fromTop="12" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Form1.cs" caret="1295" fromTop="16" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Form1.Designer.cs" caret="15233" fromTop="219" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Form1.cs" caret="1284" fromTop="20" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Form1.cs" caret="2771" fromTop="15" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Form1.cs" caret="2771" fromTop="36" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Form1.cs" caret="2263" fromTop="31" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Form1.cs" caret="2263" fromTop="29" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Form1.cs" caret="299" fromTop="8" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Form1.cs" caret="2785" fromTop="33" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Form1.cs" caret="2498" fromTop="18" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Form1.cs" caret="1810" fromTop="30" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:DataBasaManeger.cs" caret="1836" fromTop="23" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Form1.cs" caret="2001" fromTop="19" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Form1.cs" caret="2793" fromTop="19" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:DataBasaManeger.cs" caret="1222" fromTop="25" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:DataBasaManeger.cs" caret="253" fromTop="9" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Form1.cs" caret="1454" fromTop="19" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Form1.cs" caret="2483" fromTop="29" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:DataBasaManeger.cs" caret="1824" fromTop="28" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Form1.cs" caret="2001" fromTop="34" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Form1.cs" caret="846" fromTop="17" />
+      <File id="B822926A-F176-4D28-931F-A5FCBCCB764E/f:Form1.Designer.cs" caret="0" fromTop="0" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="AdventureWorksLT2008DataSet`0" priority="7" />
+      <Item value="adventureWorksLt2008DataSet" priority="4" />
+      <Item value="new" priority="20" />
+      <Item value="AdventureWorksLT2008DataSet" priority="0" />
+      <Item value="foreach" priority="3" />
+      <Item value="tabControl1" priority="4" />
+      <Item value="Control" priority="0" />
+      <Item value="TabControl`0" priority="0" />
+      <Item value="Name" priority="1" />
+      <Item value="dataTable" priority="19" />
+      <Item value="Text" priority="0" />
+      <Item value="dataGridView1" priority="8" />
+      <Item value="from" priority="11" />
+      <Item value="select" priority="14" />
+      <Item value="VAR" priority="8" />
+      <Item value="MessageBox`0" priority="5" />
+      <Item value="adventureWorksLT2008DataSet" priority="9" />
+      <Item value="string" priority="10" />
+      <Item value="DataTable`0" priority="10" />
+      <Item value="e" priority="4" />
+      <Item value="table" priority="1" />
+      <Item value="adventureWorksLT2008DataSetBindingSource" priority="11" />
+      <Item value="DataTableCollection`0" priority="0" />
+      <Item value="if" priority="0" />
+      <Item value="DataTable" priority="2" />
+      <Item value="dataTableSource" priority="10" />
+      <Item value="tableAdapterManager1" priority="1" />
+      <Item value="TableAdapter1" priority="0" />
+      <Item value="tttt" priority="0" />
+      <Item value="this" priority="0" />
+      <Item value="AdventureWorksLT2008DataSetTableAdapters" priority="0" />
+      <Item value="ProductTableAdapter`0" priority="2" />
+      <Item value="ProductTableAdapter" priority="0" />
+      <Item value="addd" priority="0" />
+      <Item value="DataView`0" priority="2" />
+      <Item value="dataView" priority="3" />
+      <Item value="TableAdapterManager`0" priority="1" />
+      <Item value="tableAdapterManager" priority="1" />
+      <Item value="TableAdapterManager" priority="1" />
+      <Item value="dataBinding" priority="0" />
+      <Item value="DataSet`0" priority="4" />
+      <Item value="List" priority="0" />
+      <Item value="Validate`0" priority="0" />
+      <Item value="VARIABLE" priority="0" />
+      <Item value="hhfg" priority="0" />
+      <Item value="var" priority="6" />
+      <Item value="bindingSourceadventureWorks" priority="0" />
+      <Item value="private" priority="0" />
+      <Item value="return" priority="1" />
+      <Item value="DataSet" priority="0" />
+      <Item value="result" priority="9" />
+      <Item value="GetTypeDateSet`0" priority="2" />
+      <Item value="stData" priority="0" />
+      <Item value="AddressTableAdapter`0" priority="0" />
+      <Item value="CustomerTableAdapter`0" priority="0" />
+      <Item value="CustomerAddressTableAdapter`0" priority="0" />
+      <Item value="ProductCategoryTableAdapter`0" priority="0" />
+      <Item value="ProductDescriptionTableAdapter`0" priority="0" />
+      <Item value="ProductModelTableAdapter`0" priority="0" />
+      <Item value="ProductModelProductDescriptionTableAdapter`0" priority="0" />
+      <Item value="SalesOrderDetailTableAdapter`0" priority="0" />
+      <Item value="SalesOrderHeaderTableAdapter`0" priority="0" />
+      <Item value="bindingNavigator1" priority="0" />
+      <Item value="dataTableActiv" priority="6" />
+      <Item value="toolStripComboBox1" priority="10" />
+      <Item value="dataRow" priority="5" />
+      <Item value="ColumnStyle`0" priority="0" />
+      <Item value="DataColumnCollection`0" priority="0" />
+      <Item value="rows" priority="2" />
+      <Item value="row" priority="0" />
+      <Item value="column" priority="0" />
+      <Item value="DataColumn`0" priority="0" />
+      <Item value="Array`0" priority="0" />
+      <Item value="array" priority="1" />
+      <Item value="Array" priority="0" />
+      <Item value="toolStripTextBox1" priority="8" />
+      <Item value="dataTableName" priority="1" />
+      <Item value="dataTableSelectedIndex" priority="0" />
+      <Item value="query" priority="4" />
+      <Item value="EnumerableRowCollection" priority="0" />
+      <Item value="DataRow`0" priority="0" />
+      <Item value="where" priority="0" />
+      <Item value="SqlDbType`0" priority="0" />
+      <Item value="Sql" priority="3" />
+      <Item value="Like" priority="2" />
+      <Item value="System" priority="1" />
+      <Item value="Data" priority="2" />
+      <Item value="Linq" priority="1" />
+      <Item value="SqlMethods" priority="0" />
+      <Item value="Like`0" priority="0" />
+      <Item value="str" priority="0" />
+      <Item value="Expressions" priority="0" />
+      <Item value="SqlClient" priority="1" />
+      <Item value="String`0" priority="0" />
+      <Item value="Convert`0" priority="0" />
+      <Item value="DataBasaManeger`0" priority="0" />
+      <Item value="public" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WindowsFormsApplication9.AdventureWorksLT2008DataSet">
+      <Item value="Tables" priority="8" />
+      <Item value="Product" priority="5" />
+      <Item value="SalesOrderDetail" priority="3" />
+      <Item value="SalesOrderHeader" priority="1" />
+      <Item value="Address" priority="4" />
+      <Item value="Customer" priority="0" />
+      <Item value="CustomerAddress" priority="0" />
+      <Item value="ProductCategory" priority="0" />
+      <Item value="ProductDescription" priority="0" />
+      <Item value="ProductModel" priority="0" />
+      <Item value="ProductModelProductDescription" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TabControl">
+      <Item value="Controls" priority="1" />
+      <Item value="TabPages" priority="2" />
+      <Item value="SelectedIndex" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Control+ControlCollection">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataTable">
+      <Item value="TableName" priority="5" />
+      <Item value="AsEnumerable`0" priority="6" />
+      <Item value="AsDataView`0" priority="2" />
+      <Item value="Copy`0" priority="0" />
+      <Item value="Rows" priority="0" />
+      <Item value="Columns" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridView">
+      <Item value="DataSource" priority="9" />
+      <Item value="AutoResizeColumn`0" priority="0" />
+      <Item value="AutoResizeColumns`0" priority="0" />
+      <Item value="DataMember" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
+      <Item value="Show`0" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TabControlCancelEventArgs">
+      <Item value="TabPage" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TabPage">
+      <Item value="Text" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.BindingSource">
+      <Item value="GetEnumerator`0" priority="0" />
+      <Item value="DataMember" priority="3" />
+      <Item value="DataSource" priority="7" />
+      <Item value="List" priority="0" />
+      <Item value="DataSourceChanged" priority="0" />
+      <Item value="MoveFirst`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataTableCollection">
+      <Item value="GetEnumerator`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WindowsFormsApplication9.AdventureWorksLT2008DataSetTableAdapters.AddressTableAdapter">
+      <Item value="Fill`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WindowsFormsApplication9.AdventureWorksLT2008DataSetTableAdapters.ProductTableAdapter">
+      <Item value="Fill`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WindowsFormsApplication9.AdventureWorksLT2008DataSet+AddressDataTable">
+      <Item value="AsDataView`0" priority="0" />
+      <Item value="AsEnumerable`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.EnumerableRowCollection`1">
+      <Item value="CopyToDataTable`1" priority="1" />
+      <Item value="AsDataView`1" priority="0" />
+      <Item value="Where`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ControlBindingsCollection">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@WindowsFormsApplication9.AdventureWorksLT2008DataSet">
+      <Item value="AddressRow`0" priority="0" />
+      <Item value="AddressDataTable`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WindowsFormsApplication9.AdventureWorksLT2008DataSet+ProductDataTable">
+      <Item value="CopyToDataTable`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="ToString`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Void">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WindowsFormsApplication9.AdventureWorksLT2008DataSetTableAdapters.TableAdapterManager">
+      <Item value="Container" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataSet">
+      <Item value="Tables" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@WindowsFormsApplication9.AdventureWorksLT2008DataSet+AddressDataTable">
+      <Item value="GetDataTableSchema`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TabControl+TabPageCollection">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WindowsFormsApplication9.AdventureWorksLT2008DataSetTableAdapters.CustomerTableAdapter">
+      <Item value="Fill`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WindowsFormsApplication9.AdventureWorksLT2008DataSetTableAdapters.CustomerAddressTableAdapter">
+      <Item value="Fill`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WindowsFormsApplication9.AdventureWorksLT2008DataSetTableAdapters.ProductCategoryTableAdapter">
+      <Item value="Fill`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WindowsFormsApplication9.AdventureWorksLT2008DataSetTableAdapters.ProductDescriptionTableAdapter">
+      <Item value="Fill`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WindowsFormsApplication9.AdventureWorksLT2008DataSetTableAdapters.ProductModelTableAdapter">
+      <Item value="Fill`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WindowsFormsApplication9.AdventureWorksLT2008DataSetTableAdapters.ProductModelProductDescriptionTableAdapter">
+      <Item value="Fill`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WindowsFormsApplication9.AdventureWorksLT2008DataSetTableAdapters.SalesOrderDetailTableAdapter">
+      <Item value="Fill`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WindowsFormsApplication9.AdventureWorksLT2008DataSetTableAdapters.SalesOrderHeaderTableAdapter">
+      <Item value="Fill`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.BindingNavigator">
+      <Item value="DataBindings" priority="0" />
+      <Item value="Tag" priority="0" />
+      <Item value="BindingSource" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ToolStripComboBox">
+      <Item value="ToolTipText" priority="0" />
+      <Item value="Items" priority="4" />
+      <Item value="SelectedItem" priority="1" />
+      <Item value="SelectedIndex" priority="3" />
+      <Item value="Text" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ComboBox+ObjectCollection">
+      <Item value="AddRange`0" priority="1" />
+      <Item value="Clear`0" priority="0" />
+      <Item value="Indexer" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataRow">
+      <Item value="GetChildRows`0" priority="0" />
+      <Item value="Field`1" priority="0" />
+      <Item value="ItemArray" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataRowCollection">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataColumnCollection">
+      <Item value="GetEnumerator`0" priority="3" />
+      <Item value="CopyTo`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TSource">
+      <Item value="ToString`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataColumn">
+      <Item value="ColumnName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ToolStripTextBox">
+      <Item value="Text" priority="6" />
+      <Item value="SelectionStart" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToInt32`0" priority="0" />
+      <Item value="ToString`0" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Equals`0" priority="0" />
+      <Item value="IndexOf`0" priority="0" />
+      <Item value="Contains`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Empty" priority="1" />
+      <Item value="Format`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataView">
+      <Item value="RowFilter" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
