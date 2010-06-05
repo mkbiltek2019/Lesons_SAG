@@ -8,10 +8,20 @@ namespace MediaLibrary.Business
 {
     public class TrackList
     {
-        public int ID { get; set; }
+        public int? ID { get; set; }
         public string Name { get; set; }
 
         public int Save()
+        {
+            return ID == null ? Insert() : Update();
+        }
+
+        private int Update()
+        {
+            throw new NotImplementedException();
+        }
+
+        private int Insert()
         {
             int affectedRows = 0;
             using (var connection =
@@ -31,6 +41,7 @@ namespace MediaLibrary.Business
             }
 
             return affectedRows;
+
         }
     }
 }

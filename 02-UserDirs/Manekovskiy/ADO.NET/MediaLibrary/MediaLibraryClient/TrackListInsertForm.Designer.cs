@@ -1,6 +1,6 @@
 ﻿namespace MediaLibraryClient
 {
-    partial class Form1
+    partial class TrackListInsertForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrackListInsertForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.trackListNameTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,10 +45,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(342, 220);
+            this.groupBox1.Size = new System.Drawing.Size(300, 53);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Вставка нового запису до таблиці TrackList";
             // 
             // trackListNameTextBox
             // 
@@ -55,6 +55,7 @@
             this.trackListNameTextBox.Name = "trackListNameTextBox";
             this.trackListNameTextBox.Size = new System.Drawing.Size(141, 20);
             this.trackListNameTextBox.TabIndex = 3;
+            this.trackListNameTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.trackListNameTextBox_Validating);
             // 
             // label2
             // 
@@ -67,28 +68,28 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(205, 238);
+            this.button1.Location = new System.Drawing.Point(237, 71);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
             this.button1.Text = "Зберегти";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            this.button1.Validating += new System.ComponentModel.CancelEventHandler(this.button1_Validating);
             // 
             // errorProvider
             // 
             this.errorProvider.ContainerControl = this;
+            this.errorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider.Icon")));
             // 
-            // Form1
+            // TrackListInsertForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 273);
+            this.ClientSize = new System.Drawing.Size(325, 104);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "TrackListInsertForm";
+            this.Text = "Вставка нового запису в таблицю";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
