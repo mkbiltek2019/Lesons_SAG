@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaLibraryClient", "MediaLibraryClient\MediaLibraryClient.csproj", "{53F84A18-2C2C-436A-94C9-6E2E478EC532}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaLibrary.Business", "MediaLibrary.Business\MediaLibrary.Business.csproj", "{18235086-FB86-4D6E-AE65-FFF5F6245523}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53F84A18-2C2C-436A-94C9-6E2E478EC532}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53F84A18-2C2C-436A-94C9-6E2E478EC532}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53F84A18-2C2C-436A-94C9-6E2E478EC532}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53F84A18-2C2C-436A-94C9-6E2E478EC532}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18235086-FB86-4D6E-AE65-FFF5F6245523}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18235086-FB86-4D6E-AE65-FFF5F6245523}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18235086-FB86-4D6E-AE65-FFF5F6245523}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18235086-FB86-4D6E-AE65-FFF5F6245523}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
