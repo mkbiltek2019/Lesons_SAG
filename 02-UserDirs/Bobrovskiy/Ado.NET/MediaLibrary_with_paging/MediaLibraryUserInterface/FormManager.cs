@@ -7,6 +7,7 @@ namespace MediaLibraryUserInterface
     {
         private string tabPageName = string.Empty;
         private int pageNumber = 1;
+        private object selectedRowBuffer = null;
 
         private void FillDataGridViewByTableName(string tableName)
         {
@@ -73,6 +74,13 @@ namespace MediaLibraryUserInterface
             pageNumber++;
 
             FillDataGridView();
+
+
+            if (mainDataGridView.RowCount <= 0)
+            {
+                pageNumber--;
+            }  
+            
         }  
 
     }

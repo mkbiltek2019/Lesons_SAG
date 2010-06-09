@@ -53,8 +53,9 @@
             // 
             this.trackListNameTextBox.Location = new System.Drawing.Point(9, 32);
             this.trackListNameTextBox.Name = "trackListNameTextBox";
-            this.trackListNameTextBox.Size = new System.Drawing.Size(329, 20);
+            this.trackListNameTextBox.Size = new System.Drawing.Size(306, 20);
             this.trackListNameTextBox.TabIndex = 3;
+            this.trackListNameTextBox.Validated += new System.EventHandler(this.trackListNameTextBox_Validated);
             this.trackListNameTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.trackListNameTextBox_Validating);
             // 
             // label2
@@ -88,6 +89,7 @@
             this.ClientSize = new System.Drawing.Size(349, 104);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "TrackListInsertForm";
             this.Text = "Add new track name to TrackList table";
             this.groupBox1.ResumeLayout(false);

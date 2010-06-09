@@ -1,6 +1,5 @@
-﻿using System.Data;
-using System.Data.SqlClient;
-using System.Windows.Forms;
+﻿using System.Collections.Generic;
+using System.Windows.Forms; 
 using MediaLibraryClient;
 
 namespace MediaLibraryUserInterface
@@ -42,18 +41,32 @@ namespace MediaLibraryUserInterface
         private void addToolStripButton_Click(object sender, System.EventArgs e)
         {
            TrackListInsertForm addForm = new TrackListInsertForm();
-            addForm.ShowDialog();
+                addForm.ShowDialog();
         }
 
         private void modifyToolStripButton_Click(object sender, System.EventArgs e)
         {
+            int rowIndex = mainDataGridView.Rows.GetFirstRow(DataGridViewElementStates.Selected);
+            if (rowIndex > 0)
+            {
+                List<string> cellList = new List<string>();
+                
+                for (int i = 0; i < mainDataGridView.Rows[rowIndex].Cells.Count; i++ )
+                {
+                   cellList.Add(mainDataGridView.Rows[rowIndex].Cells[i].Value.ToString());
+                }
 
-        }
+                TrackListInsertForm addForm = new TrackListInsertForm(cellList);
+                addForm.ShowDialog();
+            }
+        } 
+         
 
         private void deleteToolStripButton_Click(object sender, System.EventArgs e)
         {
 
-        }     
+        } 
+         
     }
 
 }

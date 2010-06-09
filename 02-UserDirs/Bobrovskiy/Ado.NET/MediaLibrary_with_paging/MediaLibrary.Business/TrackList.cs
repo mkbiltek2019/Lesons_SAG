@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 using MediaLibrary.Resources;
 
 namespace MediaLibrary.Business
@@ -19,7 +15,25 @@ namespace MediaLibrary.Business
 
         private int Update()
         {
-            throw new NotImplementedException();
+            int affectedRows = 0;
+            using (var connection =
+                new SqlConnection(MediaLibraryResource.connectionString))
+            {
+                connection.Open();
+
+                SqlCommand insertCommand = new SqlCommand(@"
+                    UPDATE [MediaLibrary].[dbo].[TrackList]
+                    SET [Name] = @Name
+                    WHERE [ID]=@SelectedID", connection);
+                SqlParameter selectedIDParameter = new SqlParameter("@SelectedID", ID);
+                insertCommand.Parameters.Add(selectedIDParameter);
+                SqlParameter nameParameter = new SqlParameter("@Name", Name);
+                insertCommand.Parameters.Add(nameParameter);
+
+                affectedRows = insertCommand.ExecuteNonQuery();
+            }
+
+            return affectedRows;
         }
 
         private int Insert()

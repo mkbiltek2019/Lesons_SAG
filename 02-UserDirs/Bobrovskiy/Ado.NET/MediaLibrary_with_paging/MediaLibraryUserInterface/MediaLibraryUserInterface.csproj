@@ -76,6 +76,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MediaLibrary.Business\MediaLibrary.Business.csproj">
+      <Project>{18235086-FB86-4D6E-AE65-FFF5F6245523}</Project>
+      <Name>MediaLibrary.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MediaLibrary.Resources\MediaLibrary.Resources.csproj">
       <Project>{87864554-4A67-4F92-A2B3-1909408E9CB2}</Project>
       <Name>MediaLibrary.Resources</Name>
