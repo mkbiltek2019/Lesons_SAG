@@ -1,0 +1,9 @@
+E:\ADO.NET\DataBaseForm\DataBaseForm\bin\Debug\DataBaseForm.exe
+E:\ADO.NET\DataBaseForm\DataBaseForm\bin\Debug\DataBaseForm.pdb
+E:\ADO.NET\DataBaseForm\DataBaseForm\obj\Debug\ResolveAssemblyReference.cache
+E:\ADO.NET\DataBaseForm\DataBaseForm\obj\Debug\DataBaseForm.Form1.resources
+E:\ADO.NET\DataBaseForm\DataBaseForm\obj\Debug\DataBaseForm.Properties.Resources.resources
+E:\ADO.NET\DataBaseForm\DataBaseForm\obj\Debug\DataBaseForm.csproj.GenerateResource.Cache
+E:\ADO.NET\DataBaseForm\DataBaseForm\obj\Debug\DataBaseForm.exe
+E:\ADO.NET\DataBaseForm\DataBaseForm\obj\Debug\DataBaseForm.pdb
+E:\ADO.NET\DataBaseForm\DataBaseForm\bin\Debug\DataBaseForm.exe.config

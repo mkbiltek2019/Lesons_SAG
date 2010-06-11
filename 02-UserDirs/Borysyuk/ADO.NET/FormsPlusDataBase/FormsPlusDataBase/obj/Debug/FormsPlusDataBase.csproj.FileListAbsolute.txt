@@ -1,0 +1,12 @@
+E:\ADO.NET\FormsPlusDataBase\FormsPlusDataBase\bin\Debug\FormsPlusDataBase.exe
+E:\ADO.NET\FormsPlusDataBase\FormsPlusDataBase\bin\Debug\FormsPlusDataBase.pdb
+E:\ADO.NET\FormsPlusDataBase\FormsPlusDataBase\obj\Debug\ResolveAssemblyReference.cache
+E:\ADO.NET\FormsPlusDataBase\FormsPlusDataBase\obj\Debug\FormsPlusDataBase.Form1.resources
+E:\ADO.NET\FormsPlusDataBase\FormsPlusDataBase\obj\Debug\FormsPlusDataBase.Properties.Resources.resources
+E:\ADO.NET\FormsPlusDataBase\FormsPlusDataBase\obj\Debug\FormsPlusDataBase.csproj.GenerateResource.Cache
+E:\ADO.NET\FormsPlusDataBase\FormsPlusDataBase\obj\Debug\FormsPlusDataBase.exe
+E:\ADO.NET\FormsPlusDataBase\FormsPlusDataBase\obj\Debug\FormsPlusDataBase.pdb
+E:\ADO.NET\FormsPlusDataBase\FormsPlusDataBase\bin\Debug\FormsPlusDataBase.exe.config
+D:\Programing\Manekovskij\02-UserDirs\Borysyuk\ADO.NET\FormsPlusDataBase\FormsPlusDataBase\bin\Debug\FormsPlusDataBase.exe.config
+D:\Programing\Manekovskij\02-UserDirs\Borysyuk\ADO.NET\FormsPlusDataBase\FormsPlusDataBase\obj\Debug\FormsPlusDataBase.exe
+D:\Programing\Manekovskij\02-UserDirs\Borysyuk\ADO.NET\FormsPlusDataBase\FormsPlusDataBase\obj\Debug\FormsPlusDataBase.pdb

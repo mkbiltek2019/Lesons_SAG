@@ -1,0 +1,10 @@
+C:\Documents and Settings\borysjuk\Рабочий стол\Game\Game\bin\Debug\Game.exe
+C:\Documents and Settings\borysjuk\Рабочий стол\Game\Game\bin\Debug\Game.pdb
+C:\Documents and Settings\borysjuk\Рабочий стол\Game\Game\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\borysjuk\Рабочий стол\Game\Game\obj\Debug\Game.MainForm.resources
+C:\Documents and Settings\borysjuk\Рабочий стол\Game\Game\obj\Debug\Game.Properties.Resources.resources
+C:\Documents and Settings\borysjuk\Рабочий стол\Game\Game\obj\Debug\Game.csproj.GenerateResource.Cache
+C:\Documents and Settings\borysjuk\Рабочий стол\Game\Game\obj\Debug\Game.exe
+C:\Documents and Settings\borysjuk\Рабочий стол\Game\Game\obj\Debug\Game.pdb
+E:\GDI+\Game\Game\obj\Debug\Game.exe
+E:\GDI+\Game\Game\obj\Debug\Game.pdb

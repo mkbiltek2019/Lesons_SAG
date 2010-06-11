@@ -1,0 +1,3 @@
+SELECT *, ROW_NUMBER () OVER (ORDER BY ProductCategoryID ASC) as 'RowNumber'
+ FROM [SalesLT].[ProductCategory]
+ WHERE RowNumber between 20 and 25
