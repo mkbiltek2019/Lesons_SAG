@@ -1,0 +1,64 @@
+﻿use MediaLibrary
+go
+
+--3) написати збережену процедуру для виводу значень з пейджингом
+--   (вивід порідку 20-ти значень на сторінку)
+--   процедура приймає 2-ва параметри
+--   1-й розмір сторінки
+--   2-й номер сторінки
+
+CREATE PROCEDURE [dbo].[TrackList.GetAllWithPaging]
+	@PageSize int = 20,
+	@PageIndex int = 1
+AS
+BEGIN
+   SET NOCOUNT ON
+   DECLARE @totalRowsNumber int 
+   DECLARE @firstSelectedRowNumber int 
+   DECLARE @FirstSelectedRowID int
+
+   SELECT 
+       @totalRowsNumber = COUNT([TrackList].[ID]) 
+   FROM 
+       [MediaLibrary].[dbo].[TrackList]
+       
+   SELECT 
+       @firstSelectedRowNumber = (@PageIndex - 1) * @PageSize + 1
+
+   IF (@firstSelectedRowNumber <= @totalRowsNumber)
+   BEGIN
+      SET ROWCOUNT @firstSelectedRowNumber
+      
+      SELECT 
+         @FirstSelectedRowID = [TrackList].[ID]
+      FROM  
+          [MediaLibrary].[dbo].[TrackList]
+      ORDER BY [TrackList].[ID]
+
+      SET ROWCOUNT @PageSize
+      
+      SELECT * 
+      FROM 
+         [MediaLibrary].[dbo].[TrackList]
+      WHERE 
+         [TrackList].[ID] >= @FirstSelectedRowID  
+      ORDER BY [TrackList].[ID]
+          
+   END
+   SET NOCOUNT OFF
+   
+RETURN;
+END
+//------------------usage----------------------------
+--USE [MediaLibrary]
+--GO
+
+--DECLARE	@return_value int
+
+--EXEC	@return_value = [dbo].[TrackList.GetAllWithPaging]
+--		@PageSize = 20,
+--		@PageIndex = 2
+
+--SELECT	'Return Value' = @return_value
+
+--GO
