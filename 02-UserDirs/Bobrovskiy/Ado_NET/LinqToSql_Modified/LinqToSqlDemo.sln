@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqToSql.WindowsFormsClient", "LinqToSql.WindowsFormsClient\LinqToSql.WindowsFormsClient.csproj", "{0904F2D2-B23F-4B1E-BECA-8862624C18DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqToSql.Model", "LinqToSql.Model\LinqToSql.Model.csproj", "{1165C05A-2F68-483A-8326-E64E071AEEB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqToSql.Business", "LinqToSql.Business\LinqToSql.Business.csproj", "{2B23CD96-D405-4008-A86D-02C2EE09506E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0904F2D2-B23F-4B1E-BECA-8862624C18DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0904F2D2-B23F-4B1E-BECA-8862624C18DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0904F2D2-B23F-4B1E-BECA-8862624C18DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0904F2D2-B23F-4B1E-BECA-8862624C18DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1165C05A-2F68-483A-8326-E64E071AEEB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1165C05A-2F68-483A-8326-E64E071AEEB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1165C05A-2F68-483A-8326-E64E071AEEB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1165C05A-2F68-483A-8326-E64E071AEEB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B23CD96-D405-4008-A86D-02C2EE09506E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B23CD96-D405-4008-A86D-02C2EE09506E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B23CD96-D405-4008-A86D-02C2EE09506E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B23CD96-D405-4008-A86D-02C2EE09506E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
