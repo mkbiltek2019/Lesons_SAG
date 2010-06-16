@@ -1,0 +1,8 @@
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\дома\Просмотр Иллюстраций\LoockFotos\LoockFotos\obj\Debug\ResolveAssemblyReference.cache
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\дома\Просмотр Иллюстраций\LoockFotos\LoockFotos\obj\Debug\LoockFotos.Form1.resources
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\дома\Просмотр Иллюстраций\LoockFotos\LoockFotos\obj\Debug\LoockFotos.Properties.Resources.resources
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\дома\Просмотр Иллюстраций\LoockFotos\LoockFotos\obj\Debug\LoockFotos.csproj.GenerateResource.Cache
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\дома\Просмотр Иллюстраций\LoockFotos\LoockFotos\bin\Debug\LoockFotos.exe
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\дома\Просмотр Иллюстраций\LoockFotos\LoockFotos\bin\Debug\LoockFotos.pdb
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\дома\Просмотр Иллюстраций\LoockFotos\LoockFotos\obj\Debug\LoockFotos.exe
+D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\дома\Просмотр Иллюстраций\LoockFotos\LoockFotos\obj\Debug\LoockFotos.pdb
