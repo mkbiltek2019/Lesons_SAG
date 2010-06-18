@@ -1,0 +1,3 @@
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\MarioWindowsGame\Content\obj\x86\Debug\ResolveAssemblyReference.cache
+H:\DOCUMMENT\Doc\КА ШАГ\MarioWindowsGame\Content\obj\x86\Debug\ResolveAssemblyReference.cache
+H:\DOCUMMENT\Doc\КА ШАГ\Games\MarioWindowsGame\Content\obj\x86\Debug\ResolveAssemblyReference.cache

@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>Player\ide.png</Source>
+      <Name>Player\ide</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\DOCUMMENT\Doc\КА ШАГ\Games\MarioWindowsGame\bin\x86\Release\Content\Player\ide.xnb</Output>
+      <Time>2010-06-14T21:44:44.7672651+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Player\run.png</Source>
+      <Name>Player\run</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\DOCUMMENT\Doc\КА ШАГ\Games\MarioWindowsGame\bin\x86\Release\Content\Player\run.xnb</Output>
+      <Time>2010-06-14T21:33:12.7116818+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Player\jump.png</Source>
+      <Name>Player\jump</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\DOCUMMENT\Doc\КА ШАГ\Games\MarioWindowsGame\bin\x86\Release\Content\Player\jump.xnb</Output>
+      <Time>2010-06-14T23:10:03.6332279+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Texture\Block.png</Source>
+      <Name>Texture\Block</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\DOCUMMENT\Doc\КА ШАГ\Games\MarioWindowsGame\bin\x86\Release\Content\Texture\Block.xnb</Output>
+      <Time>2010-06-15T14:51:47.1795161+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Texture\Bricks.png</Source>
+      <Name>Texture\Bricks</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\DOCUMMENT\Doc\КА ШАГ\Games\MarioWindowsGame\bin\x86\Release\Content\Texture\Bricks.xnb</Output>
+      <Time>2010-06-15T14:57:03.2428153+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Texture\question.png</Source>
+      <Name>Texture\question</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\DOCUMMENT\Doc\КА ШАГ\Games\MarioWindowsGame\bin\x86\Release\Content\Texture\question.xnb</Output>
+      <Time>2010-06-15T11:40:35.4998901+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Texture\coin.png</Source>
+      <Name>Texture\coin</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\DOCUMMENT\Doc\КА ШАГ\Games\MarioWindowsGame\bin\x86\Release\Content\Texture\coin.xnb</Output>
+      <Time>2010-06-16T22:25:21.9142552+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Texture\Q.png</Source>
+      <Name>Texture\Q</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\DOCUMMENT\Doc\КА ШАГ\Games\MarioWindowsGame\bin\x86\Release\Content\Texture\Q.xnb</Output>
+      <Time>2010-06-17T21:52:48.8049889+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Texture\Logo.png</Source>
+      <Name>Texture\Logo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\DOCUMMENT\Doc\КА ШАГ\Games\MarioWindowsGame\bin\x86\Release\Content\Texture\Logo.xnb</Output>
+      <Time>2010-06-18T21:28:26.0749284+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\Arial22.spritefont</Source>
+      <Name>Fonts\Arial22</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\DOCUMMENT\Doc\КА ШАГ\Games\MarioWindowsGame\bin\x86\Release\Content\Fonts\Arial22.xnb</Output>
+      <Time>2008-08-29T16:09:54+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\Arial42.spritefont</Source>
+      <Name>Fonts\Arial42</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\DOCUMMENT\Doc\КА ШАГ\Games\MarioWindowsGame\bin\x86\Release\Content\Fonts\Arial42.xnb</Output>
+      <Time>2008-08-29T16:21:42+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\wayoshi72.spritefont</Source>
+      <Name>Fonts\wayoshi72</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\DOCUMMENT\Doc\КА ШАГ\Games\MarioWindowsGame\bin\x86\Release\Content\Fonts\wayoshi72.xnb</Output>
+      <Time>2010-06-18T21:16:07.0706597+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Texture\Exit.png</Source>
+      <Name>Texture\Exit</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\DOCUMMENT\Doc\КА ШАГ\Games\MarioWindowsGame\bin\x86\Release\Content\Texture\Exit.xnb</Output>
+      <Time>2010-06-18T22:09:21.2993592+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Texture\Clouds.png</Source>
+      <Name>Texture\Clouds</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\DOCUMMENT\Doc\КА ШАГ\Games\MarioWindowsGame\bin\x86\Release\Content\Texture\Clouds.xnb</Output>
+      <Time>2010-06-18T23:52:20.2747764+03:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <BuildConfiguration>Release</BuildConfiguration>
+      <CompressContent>true</CompressContent>
+      <RootDirectory>F:\DOCUMMENT\Doc\КА ШАГ\Games\MarioWindowsGame\Content\</RootDirectory>
+      <LoggerRootDirectory>F:\DOCUMMENT\Doc\КА ШАГ\Games\MarioWindowsGame\</LoggerRootDirectory>
+      <IntermediateDirectory>F:\DOCUMMENT\Doc\КА ШАГ\Games\MarioWindowsGame\Content\obj\x86\Release\</IntermediateDirectory>
+      <OutputDirectory>F:\DOCUMMENT\Doc\КА ШАГ\Games\MarioWindowsGame\bin\x86\Release\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.1\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2009-05-28T00:16:14+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.1\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2009-05-28T00:16:06+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.1\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2009-05-28T00:16:16+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.1\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2009-05-28T00:16:26+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.1\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2009-05-28T00:16:12+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.1\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2009-05-28T00:16:06+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\3.1.0.0__6d5c3888ef60e27d\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2010-06-13T17:12:48.0140634+03:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

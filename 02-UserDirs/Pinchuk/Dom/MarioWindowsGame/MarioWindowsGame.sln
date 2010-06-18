@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarioWindowsGame", "MarioWindowsGame.csproj", "{4888ED5C-BFF5-4021-AD25-56E87C671A41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4888ED5C-BFF5-4021-AD25-56E87C671A41}.Debug|x86.ActiveCfg = Debug|x86
+		{4888ED5C-BFF5-4021-AD25-56E87C671A41}.Debug|x86.Build.0 = Debug|x86
+		{4888ED5C-BFF5-4021-AD25-56E87C671A41}.Release|x86.ActiveCfg = Release|x86
+		{4888ED5C-BFF5-4021-AD25-56E87C671A41}.Release|x86.Build.0 = Release|x86
+		{E955BE16-AB4E-429F-9670-D4B37B4521C8}.Debug|x86.ActiveCfg = Debug|x86
+		{E955BE16-AB4E-429F-9670-D4B37B4521C8}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

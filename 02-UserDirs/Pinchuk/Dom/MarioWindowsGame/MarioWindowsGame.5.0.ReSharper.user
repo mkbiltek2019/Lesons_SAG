@@ -1,0 +1,396 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">False</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:Block.cs" caret="1302" fromTop="39" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:AnimationPlayer.cs" caret="1910" fromTop="39" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:GameState.cs" caret="98" fromTop="3" />
+      <File id="E955BE16-AB4E-429F-9670-D4B37B4521C8/d:Fonts/f:Arial42.spritefont" caret="0" fromTop="0" />
+      <File id="E955BE16-AB4E-429F-9670-D4B37B4521C8/d:Fonts/f:wayoshi72.spritefont" caret="678" fromTop="18" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:Coin.cs" caret="1539" fromTop="42" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:LevelObject.cs" caret="299" fromTop="8" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/d:Helpers/f:LoadHelper.cs" caret="817" fromTop="19" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:AnimateSprite.cs" caret="2743" fromTop="12" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:MarioGame.cs" caret="7799" fromTop="45" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:MainMenu.cs" caret="798" fromTop="19" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:Level.cs" caret="706" fromTop="16" />
+      <File id="E955BE16-AB4E-429F-9670-D4B37B4521C8/d:Levels/f:Level0.txt" caret="258" fromTop="2" />
+      <File id="E955BE16-AB4E-429F-9670-D4B37B4521C8/d:Levels/f:Level2.txt" caret="950" fromTop="12" />
+      <File id="E955BE16-AB4E-429F-9670-D4B37B4521C8/d:Levels/f:Level1.txt" caret="350" fromTop="4" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:Animation.cs" caret="178" fromTop="8" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:MarioGame.cs" caret="8161" fromTop="30" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:MarioGame.cs" caret="4546" fromTop="28" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:MarioGame.cs" caret="3437" fromTop="16" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:MarioGame.cs" caret="3836" fromTop="12" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:MarioGame.cs" caret="4666" fromTop="19" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:MarioGame.cs" caret="1134" fromTop="9" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:AnimateSprite.cs" caret="4028" fromTop="30" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:AnimateSprite.cs" caret="2595" fromTop="21" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:AnimateSprite.cs" caret="2743" fromTop="24" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:MarioGame.cs" caret="1819" fromTop="22" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:MarioGame.cs" caret="2704" fromTop="15" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:MarioGame.cs" caret="6005" fromTop="15" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:MarioGame.cs" caret="1462" fromTop="23" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:MainMenu.cs" caret="1175" fromTop="21" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:MainMenu.cs" caret="798" fromTop="10" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:MarioGame.cs" caret="7799" fromTop="20" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:Level.cs" caret="1746" fromTop="23" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/d:Helpers/f:LoadHelper.cs" caret="1158" fromTop="32" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/d:Helpers/f:LoadHelper.cs" caret="817" fromTop="19" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:LevelObject.cs" caret="299" fromTop="8" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:Level.cs" caret="417" fromTop="11" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:Level.cs" caret="847" fromTop="21" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:Level.cs" caret="1287" fromTop="21" />
+      <File id="4888ED5C-BFF5-4021-AD25-56E87C671A41/f:Level.cs" caret="1642" fromTop="31" />
+      <File id="E955BE16-AB4E-429F-9670-D4B37B4521C8/d:Levels/f:Level0.txt" caret="153" fromTop="1" />
+      <File id="E955BE16-AB4E-429F-9670-D4B37B4521C8/d:Levels/f:Level0.txt" caret="258" fromTop="2" />
+      <File id="E955BE16-AB4E-429F-9670-D4B37B4521C8/d:Levels/f:Level1.txt" caret="856" fromTop="11" />
+      <File id="E955BE16-AB4E-429F-9670-D4B37B4521C8/d:Levels/f:Level1.txt" caret="874" fromTop="11" />
+      <File id="E955BE16-AB4E-429F-9670-D4B37B4521C8/d:Levels/f:Level1.txt" caret="578" fromTop="7" />
+      <File id="E955BE16-AB4E-429F-9670-D4B37B4521C8/d:Levels/f:Level1.txt" caret="262" fromTop="2" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="Texture2D`0" priority="25" />
+      <Item value="bool" priority="8" />
+      <Item value="public" priority="30" />
+      <Item value="get" priority="1" />
+      <Item value="return" priority="9" />
+      <Item value="run" priority="7" />
+      <Item value="int" priority="23" />
+      <Item value="FrameWidth" priority="4" />
+      <Item value="AnimateSprite`0" priority="1" />
+      <Item value="Rectangle`0" priority="18" />
+      <Item value="this" priority="7" />
+      <Item value="ide" priority="5" />
+      <Item value="rect" priority="9" />
+      <Item value="GameTime`0" priority="5" />
+      <Item value="gameTime" priority="16" />
+      <Item value="if" priority="32" />
+      <Item value="isRuning" priority="3" />
+      <Item value="timeEclapsed" priority="6" />
+      <Item value="timeForFreme" priority="1" />
+      <Item value="curentFrame" priority="7" />
+      <Item value="Frame" priority="0" />
+      <Item value="void" priority="12" />
+      <Item value="SpriteBatch`0" priority="3" />
+      <Item value="spriteBatch" priority="17" />
+      <Item value="Color`0" priority="2" />
+      <Item value="else" priority="5" />
+      <Item value="new" priority="18" />
+      <Item value="SpriteBatch" priority="0" />
+      <Item value="GraphicsDevice`0" priority="1" />
+      <Item value="Content" priority="5" />
+      <Item value="rectangle" priority="24" />
+      <Item value="Rectangle" priority="3" />
+      <Item value="AnimateSprite" priority="0" />
+      <Item value="hero" priority="8" />
+      <Item value="false" priority="5" />
+      <Item value="FrameHeight" priority="0" />
+      <Item value="frameWidth" priority="3" />
+      <Item value="frameHeight" priority="0" />
+      <Item value="true" priority="8" />
+      <Item value="Keyboard`0" priority="1" />
+      <Item value="keyboard" priority="0" />
+      <Item value="KeyboardState`0" priority="1" />
+      <Item value="keyboardState" priority="7" />
+      <Item value="Keys`0" priority="6" />
+      <Item value="isRuningRight" priority="1" />
+      <Item value="isRight" priority="0" />
+      <Item value="Vector2`0" priority="2" />
+      <Item value="SpriteEffects`0" priority="3" />
+      <Item value="spriteEffects" priority="3" />
+      <Item value="SpriteEffects" priority="0" />
+      <Item value="dx" priority="5" />
+      <Item value="nextPosition" priority="4" />
+      <Item value="Game1`0" priority="1" />
+      <Item value="game1" priority="0" />
+      <Item value="game" priority="14" />
+      <Item value="Width" priority="6" />
+      <Item value="graphics" priority="2" />
+      <Item value="Height" priority="5" />
+      <Item value="width" priority="0" />
+      <Item value="jump" priority="3" />
+      <Item value="float" priority="3" />
+      <Item value="isJumping" priority="3" />
+      <Item value="yVelocity" priority="6" />
+      <Item value="maxYVElocity" priority="0" />
+      <Item value="g" priority="0" />
+      <Item value="nexPosition" priority="2" />
+      <Item value="GetBoundingRect`0" priority="0" />
+      <Item value="boudingRect" priority="6" />
+      <Item value="ApplyGravity`0" priority="0" />
+      <Item value="System" priority="2" />
+      <Item value="Diagnostics" priority="3" />
+      <Item value="Debug`0" priority="3" />
+      <Item value="FrameCountIde" priority="0" />
+      <Item value="FrameCountJump" priority="0" />
+      <Item value="Block`0" priority="1" />
+      <Item value="texture2D" priority="5" />
+      <Item value="texture" priority="3" />
+      <Item value="List" priority="4" />
+      <Item value="string" priority="2" />
+      <Item value="foreach" priority="7" />
+      <Item value="x" priority="4" />
+      <Item value="block" priority="1" />
+      <Item value="Block" priority="0" />
+      <Item value="blockTexture" priority="2" />
+      <Item value="List&lt;Block&gt;" priority="0" />
+      <Item value="CreateLevel`0" priority="1" />
+      <Item value="block1" priority="1" />
+      <Item value="Bricks" priority="0" />
+      <Item value="bricksTexture" priority="0" />
+      <Item value="curentLevel" priority="2" />
+      <Item value="oldState" priority="1" />
+      <Item value="boundingRect" priority="1" />
+      <Item value="collideOnFailDown" priority="0" />
+      <Item value="levelLenght" priority="0" />
+      <Item value="s" priority="1" />
+      <Item value="static" priority="5" />
+      <Item value="ScrollX" priority="6" />
+      <Item value="screnRect" priority="3" />
+      <Item value="MarioGame`0" priority="5" />
+      <Item value="Scroll`0" priority="2" />
+      <Item value="GetScrenRect`0" priority="0" />
+      <Item value="heroScrenRect" priority="1" />
+      <Item value="const" priority="0" />
+      <Item value="Size" priority="0" />
+      <Item value="Count`1" priority="0" />
+      <Item value="size" priority="1" />
+      <Item value="c" priority="2" />
+      <Item value="private" priority="5" />
+      <Item value="questioTexture" priority="1" />
+      <Item value="frameHeigt" priority="0" />
+      <Item value="FrameCount" priority="0" />
+      <Item value="ImageFileFormat`0" priority="0" />
+      <Item value="Animation`0" priority="2" />
+      <Item value="Animation" priority="2" />
+      <Item value="coinTexuture" priority="1" />
+      <Item value="Coin`0" priority="4" />
+      <Item value="coin" priority="5" />
+      <Item value="List&lt;Coin&gt;" priority="0" />
+      <Item value="Coin" priority="0" />
+      <Item value="for" priority="0" />
+      <Item value="AnimationPlayer`0" priority="2" />
+      <Item value="AnimationPlayer" priority="0" />
+      <Item value="Play" priority="0" />
+      <Item value="coin1" priority="2" />
+      <Item value="DeviceStillDrawingException`0" priority="1" />
+      <Item value="sprite" priority="1" />
+      <Item value="Position" priority="0" />
+      <Item value="positio" priority="0" />
+      <Item value="Vector2" priority="1" />
+      <Item value="set" priority="0" />
+      <Item value="position" priority="0" />
+      <Item value="Tile`0" priority="0" />
+      <Item value="StringSplitOptions`0" priority="0" />
+      <Item value="GameState`0" priority="1" />
+      <Item value="MainMenu" priority="1" />
+      <Item value="MainMenu`0" priority="1" />
+      <Item value="mainMenu" priority="2" />
+      <Item value="State" priority="0" />
+      <Item value="Fonts" priority="0" />
+      <Item value="SpriteFont`0" priority="0" />
+      <Item value="Textures" priority="1" />
+      <Item value="content" priority="0" />
+      <Item value="switch" priority="0" />
+      <Item value="char" priority="0" />
+      <Item value="levelSymbol" priority="0" />
+      <Item value="case" priority="1" />
+      <Item value="break" priority="1" />
+      <Item value="LevelObject`0" priority="1" />
+      <Item value="levelObjects" priority="3" />
+      <Item value="List&lt;LevelObject&gt;" priority="0" />
+      <Item value="LevelObject" priority="0" />
+      <Item value="Texture`0" priority="0" />
+      <Item value="XnaMediaPlayer" priority="3" />
+      <Item value="levelObject" priority="3" />
+      <Item value="level" priority="3" />
+      <Item value="Level" priority="0" />
+      <Item value="NextLevel`0" priority="0" />
+      <Item value="LoadHelper`0" priority="0" />
+      <Item value="TextureEnum`0" priority="0" />
+      <Item value="Exit" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Graphics.Texture2D">
+      <Item value="Width" priority="3" />
+      <Item value="Height" priority="5" />
+      <Item value="Name" priority="1" />
+      <Item value="ResourceType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MarioWindowsGame.AnimateSprite">
+      <Item value="run" priority="0" />
+      <Item value="ide" priority="0" />
+      <Item value="rect" priority="2" />
+      <Item value="Updata`0" priority="0" />
+      <Item value="Draw`0" priority="0" />
+      <Item value="StartRun`0" priority="0" />
+      <Item value="Stop`0" priority="1" />
+      <Item value="game" priority="0" />
+      <Item value="jump" priority="0" />
+      <Item value="Jump`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.GameTime">
+      <Item value="ElapsedGameTime" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.TimeSpan">
+      <Item value="Milliseconds" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Graphics.SpriteBatch">
+      <Item value="Begin`0" priority="1" />
+      <Item value="End`0" priority="1" />
+      <Item value="Draw`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Xna.Framework.Graphics.Color">
+      <Item value="White" priority="2" />
+      <Item value="WhiteSmoke" priority="1" />
+      <Item value="Black" priority="1" />
+      <Item value="DarkViolet" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Content.ContentManager">
+      <Item value="Load`1" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="CompareTo`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Xna.Framework.Input.Keyboard">
+      <Item value="GetState`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Input.KeyboardState">
+      <Item value="IsKeyDown`0" priority="5" />
+      <Item value="IsKeyUp`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Xna.Framework.Input.Keys">
+      <Item value="Left" priority="0" />
+      <Item value="Right" priority="0" />
+      <Item value="Down" priority="0" />
+      <Item value="Space" priority="0" />
+      <Item value="N" priority="0" />
+      <Item value="Q" priority="0" />
+      <Item value="W" priority="0" />
+      <Item value="Escape" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Xna.Framework.Vector2">
+      <Item value="Zero" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Xna.Framework.Graphics.SpriteEffects">
+      <Item value="None" priority="1" />
+      <Item value="FlipHorizontally" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Rectangle">
+      <Item value="Offset`0" priority="2" />
+      <Item value="Left" priority="3" />
+      <Item value="Right" priority="1" />
+      <Item value="Width" priority="1" />
+      <Item value="X" priority="2" />
+      <Item value="Y" priority="0" />
+      <Item value="Top" priority="1" />
+      <Item value="Height" priority="0" />
+      <Item value="Bottom" priority="1" />
+      <Item value="Intersects`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.GraphicsDeviceManager">
+      <Item value="PreferredBackBufferWidth" priority="0" />
+      <Item value="PreferredBackBufferHeight" priority="0" />
+      <Item value="IsFullScreen" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MarioWindowsGame.Game1">
+      <Item value="Width" priority="0" />
+      <Item value="Height" priority="1" />
+      <Item value="CollidesWithLevel`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Diagnostics.Debug">
+      <Item value="WriteLine`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MarioWindowsGame.Block">
+      <Item value="rectangle" priority="1" />
+      <Item value="Draw`0" priority="0" />
+      <Item value="Update`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.File">
+      <Item value="ReadAllLines`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Length" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@MarioWindowsGame.MarioGame">
+      <Item value="GetScrenRect`0" priority="1" />
+      <Item value="GetScrollX`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MarioWindowsGame.AnimationPlayer">
+      <Item value="PlayAnimation`0" priority="1" />
+      <Item value="Draw`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MarioWindowsGame.Coin">
+      <Item value="coin" priority="0" />
+      <Item value="Draw`0" priority="0" />
+      <Item value="BoundingRectangle" priority="0" />
+      <Item value="IsAlive" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Format`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Vector2">
+      <Item value="X" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MarioWindowsGame.MarioGame">
+      <Item value="CollidesWithCoin`0" priority="0" />
+      <Item value="CollidesWithExit`0" priority="0" />
+      <Item value="CreateLevel`0" priority="0" />
+      <Item value="ResetPosition`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@MarioWindowsGame.Helpers.LoadHelper">
+      <Item value="Load`0" priority="0" />
+      <Item value="Textures" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@MarioWindowsGame.GameState">
+      <Item value="MainMenu" priority="1" />
+      <Item value="Game" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.Dictionary`2">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@MarioWindowsGame.Helpers.TextureEnum">
+      <Item value="Exit" priority="3" />
+      <Item value="Clouds" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MarioWindowsGame.LevelObject">
+      <Item value="Draw`0" priority="1" />
+      <Item value="BoundingRectangle" priority="0" />
+      <Item value="ojectAnimation" priority="0" />
+      <Item value="objectAnimation" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MarioWindowsGame.Level">
+      <Item value="CreateLevel`0" priority="0" />
+      <Item value="Draw`0" priority="0" />
+      <Item value="game" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MarioWindowsGame.Animation">
+      <Item value="Texture" priority="1" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
