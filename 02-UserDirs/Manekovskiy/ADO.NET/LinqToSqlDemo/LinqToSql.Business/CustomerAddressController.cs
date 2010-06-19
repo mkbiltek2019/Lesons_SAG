@@ -31,6 +31,8 @@ namespace LinqToSql.Business
 
         public void Save(CustomerAddress customerAddress)
         {
+            //DataContextFactory<AdventureWorksDataContext>.DataContext.Refresh();
+
             DataContextFactory<AdventureWorksDataContext>.DataContext.CustomerAddresses.InsertOnSubmit(customerAddress);
             DataContextFactory<AdventureWorksDataContext>.DataContext.SubmitChanges();
         }
