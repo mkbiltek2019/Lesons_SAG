@@ -1,5 +1,0 @@
-<Modules>
-  <Module PersistentId="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Windows.Forms" />
-  <Module PersistentId="FFDF834A-0D27-4EE3-9F91-C7290D3B0974" ModuleId="SUPER_TANK" />
-  <Module PersistentId="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" ModuleId="System.Drawing" />
-</Modules>
