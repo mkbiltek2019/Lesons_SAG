@@ -1,75 +1,90 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using DrawCanvas;
+using DrawingCanvas.AdditionalDialogs;
 
 namespace Simple.Net_Paint
 {
-    public partial class mainForm : Form
-    {
-        private int thick = 1;
-
-        public mainForm()
+    public partial class MainForm : Form
+    {  
+        public MainForm()
         {
             InitializeComponent();
-        }
+            AddImageToCanvasToTabControl(defaultName, null, null); //add default tab with empty region
+        }  
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Image currentImage = null;
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-
-            openFileDialog1.InitialDirectory = @"c:\";
-            openFileDialog1.Filter = @"All files (*.*)|*.*";
-            openFileDialog1.FilterIndex = 1;
-            openFileDialog1.RestoreDirectory = true;
-
-            Image loadedImage = null;
-
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                loadedImage = Image.FromFile(openFileDialog1.FileName);
-
-                currentImage = (Image)loadedImage.Clone();
-            }
-
-            if (loadedImage != null)
-            {
-                loadedImage.Dispose();
-            }
-
-            drawingCanvas.DrawImage(currentImage);
-            
+            canvasManager.SaveChanges(selectedImageName, drawingCanvas);
+            ShowOpenFileDialogAndAddImage();
+            canvasManager.RefreshCanvas(drawingCanvas);
         }
 
         private void drawingCanvas_MouseDown(object sender, MouseEventArgs e)
         {
-            drawingCanvas.DrawingCanvasMouseDown(e.X, e.Y, thick);
+            Text = selectedPlugin.Instance.SelectedTool.ToString();
+           canvasManager.DrawingCanvasMouseDown(e.Location, selectedPlugin, drawingCanvas);
         }
 
         private void drawingCanvas_MouseUp(object sender, MouseEventArgs e)
         {
-            drawingCanvas.DrawingCanvasMouseUp(e.X, e.Y);
+            canvasManager.DrawingCanvasMouseUp(e.Location, drawingCanvas, selectedImageName);
         }
 
         private void drawingCanvas_MouseMove(object sender, MouseEventArgs e)
         {
-            drawingCanvas.DrawingCanvasMouseMove(e.X, e.Y, thick); 
+            canvasManager.DrawingCanvasMouseMove(e.Location, drawingCanvas, selectedPlugin);
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
-
+            LoadPluginFromPluginDirectoryToPanel();
         }
 
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CloseCurrentTabPage();
+        }
 
+        private void mainTabControl_Selected(object sender, TabControlEventArgs e)
+        {
+            selectedImageName = e.TabPage.Text;
+            LoadImageByName(selectedImageName);
+        }
 
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
-       
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveCurrentImageByName(selectedImageName);
+        }
+
+        private void clearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            canvasManager.ClearDrawingCanvas(drawingCanvas); 
+        }
+
+        private void setImageSizeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ResizeCurrentImage(selectedImageName);
+        }
+
+        private void drawingCanvas_Click(object sender, EventArgs e)
+        {
+           canvasManager.ZoomCanvas(((MouseEventArgs)e).Button, drawingCanvas);
+        }
+        
+        private void setSizeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // set pen Size
+            PenDialog dialog = new PenDialog(drawingCanvas.PenThick, drawingCanvas.PenEndLineStyle);
+            dialog.ShowDialog();
+            drawingCanvas.PenThick = dialog.PenSize;
+            drawingCanvas.PenEndLineStyle = dialog.PenEndLineStyle;
+        }      
+
+        
     }
 }

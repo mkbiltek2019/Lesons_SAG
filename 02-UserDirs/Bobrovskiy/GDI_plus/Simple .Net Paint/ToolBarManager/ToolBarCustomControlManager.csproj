@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6E0A9CEC-851C-4966-AD1D-05CED0CC7899}</ProjectGuid>
+    <ProjectGuid>{F772F6A4-A789-4693-A805-A2B724BB4F26}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PluginInterface</RootNamespace>
-    <AssemblyName>PluginInterface</AssemblyName>
+    <RootNamespace>ToolBarManager</RootNamespace>
+    <AssemblyName>ToolBarManager</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -47,8 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enums.cs" />
-    <Compile Include="PluginInterface.cs" />
+    <Compile Include="ToolBarCustomControlManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

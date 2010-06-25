@@ -1,31 +1,48 @@
-﻿using System.Drawing;
+using System.Drawing;
 
 namespace PluginInterface
 {
     public interface IPlugin
     {
-        IPluginHost Host { get; set; }
+        IPluginHost Host
+        {
+            get; 
+            set;
+        }
 
-        Image ToolBoxBitmapImage 
-        { 
+        string Name
+        {
             get;
         }
 
-        string MenuItemTextString
-        { 
-            get;
+        Tool.BasicTools SelectedTool
+        {
+            get; 
+            set;
         }
 
-        void Action(object param); 
+        Color ForegroundColor
+        {
+            get; 
+            set; 
+        }
 
+        Color BackgroundColor
+        {
+            get; 
+            set;
+        }
+        
         System.Windows.Forms.UserControl MainInterface { get; }
 
+        void SetDefaultTool();
         void Initialize();
-        void Dispose();  
+        void Dispose();
+
     }
 
     public interface IPluginHost
     {
-        void Draw(string param);
+        void Feedback(Tool.BasicTools Feedback, IPlugin Plugin);
     }
 }

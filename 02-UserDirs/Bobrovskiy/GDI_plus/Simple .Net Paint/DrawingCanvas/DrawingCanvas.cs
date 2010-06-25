@@ -2,25 +2,30 @@ using System;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using System.Drawing;
+using PluginInterface;
 
 namespace ClassicPaint
 {
     public class DrawingCanvas : Panel
     {
-        private Size drawingArea;
-        private Bitmap contents; 
-        private Bitmap image;
+        public int PenThick
+        {
+            get; 
+            set;
+        }
 
-        private bool press;
-        private int mouseStartPositionX;
-        private int mouseDownStartPosotionY;
-
-        private Color mainColor = Color.Black;
-        private bool resizeMode = false;
-
-        private const int border = 6;
-        private const int doubleBorder = border * 2;
-
+        public LineCap PenEndLineStyle
+        {
+            get; 
+            set;
+        }
+        
+        public string TextToDraw
+        {
+            get; 
+            set;
+        }
+        
         public int DrawWidth
         {
             get
@@ -44,182 +49,327 @@ namespace ClassicPaint
                 drawingArea.Height = value;
             }
         }
+        
+        public Bitmap Contents;
+ 
+        private Size drawingArea;
+        
+        private bool press;
+        private int mouseStartPositionX;
+        private int mouseStartPositionY;
 
-        public void DrawingCanvasMouseDown(int mouseX, int mouseY, int penThick)
-        {
-            mouseStartPositionX = mouseX;
-            mouseDownStartPosotionY = mouseY;
+        private Size drawingAreaStart = new Size(0,0);
+        private Size moove = new Size(0, 0);
+        private readonly int mooveStep = 20;
+        
+        public Color mainColor = Color.Black;
+        public Color backGroundColor = Color.Black;
+        public Color foregroundColor = Color.White;
 
-            PaintPixel(mouseX, mouseY, mainColor, penThick);
+        private bool resizeMode = false;
+
+        private const int borderSquareSize = 6;
+        private const int doubleBorder = borderSquareSize * 2;
+
+        
+        #region mouse events handlers
+
+        public void DrawingCanvasMouseDown(Point mousePosition, Tool.BasicTools tool)
+        {  
+            mouseStartPositionX = mousePosition.X;
+            mouseStartPositionY = mousePosition.Y;
+
             press = true;
 
-            if (mouseX >= DrawWidth + border && mouseX < DrawWidth + doubleBorder
-                && mouseY >= DrawHeight + border && mouseY < DrawHeight + doubleBorder)
+            int startX = drawingArea.Width + borderSquareSize+ moove.Width;
+            int startY = drawingArea.Height + borderSquareSize+ moove.Height;
+
+            if (new Rectangle(startX, startY, borderSquareSize, borderSquareSize).Contains(mousePosition))
             {
                 resizeMode = true;
+            }
+           
+            #region some action by selected tool 
+
+            if (tool == Tool.BasicTools.Pencil)
+            {
+              PaintPixel(mousePosition.X + moove.Width, mousePosition.Y + moove.Height, mainColor, PenThick);
+            }
+                     
+            if (tool == Tool.BasicTools.Text)
+            {
+                DrawText(mousePosition.X , mousePosition.Y, this.TextToDraw);
+            }
+
+            #endregion
+
+            Refresh();
+        }
+        
+        public void DrawingCanvasMouseUp(Point mousePosition)
+        { 
+           if (resizeMode)
+            {
+                if (Contents != null)
+                {
+                    Contents = ResizeImage(Contents, drawingArea);
+                }
+
+                CropBitmap(mousePosition.X + borderSquareSize + moove.Width, mousePosition.Y + borderSquareSize + moove.Height);
+                
+                Refresh();
+            }
+            
+            press = false;
+            resizeMode = false;
+        }
+
+        public void DrawingCanvasMouseMove(Point mousePosition, Tool.BasicTools tool)
+        { 
+            int x1 = mousePosition.X - borderSquareSize;
+            int y1 = mousePosition.Y - borderSquareSize;
+
+            if (tool != Tool.BasicTools.MouseCursor && (tool != Tool.BasicTools.Text))
+            {
+                if (!resizeMode)
+                {
+                    if ((mousePosition.X - moove.Width) >= borderSquareSize &&
+                        (mousePosition.X - moove.Width) < DrawWidth + borderSquareSize &&
+                        (mousePosition.Y - moove.Height) >= borderSquareSize &&
+                        (mousePosition.Y - moove.Height) < DrawHeight + borderSquareSize)
+                    {
+                        if (press)
+                        {
+                            try
+                            {
+                                InterpolatePixel(mouseStartPositionX - moove.Width, 
+                                                 mouseStartPositionY - moove.Height,
+                                                 x1 - moove.Width, y1 - moove.Height, mainColor, PenThick);
+                                Refresh();
+
+                                mouseStartPositionX = x1;
+                                mouseStartPositionY = y1;
+                            }
+                            catch (Exception ex)
+                            {
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    using (Graphics g = CreateGraphics())
+                    {
+                        Pen pn = new Pen(SystemColors.Highlight);
+                        pn.DashStyle = DashStyle.Solid;
+                        g.DrawRectangle(pn, borderSquareSize, borderSquareSize, x1, y1);
+                    }
+
+                    Refresh();
+                }
+            }
+        }
+       
+        #endregion 
+
+        public Bitmap ResizeImage(Bitmap imgToResize, Size newSize)
+        {
+            if ((newSize.Width > 0) && (newSize.Height > 0))
+            {
+                Bitmap b = new Bitmap(newSize.Width, newSize.Height);
+                using (Graphics g = Graphics.FromImage(b))
+                {
+                    g.InterpolationMode = InterpolationMode.HighQualityBilinear;
+                    g.DrawImage(imgToResize, 
+                                drawingAreaStart.Width, drawingAreaStart.Height,
+                                newSize.Width, newSize.Height);
+                }
+                
+                return b;
+            }
+
+            return imgToResize; 
+        }
+
+        public DrawingCanvas()
+        {
+            TextToDraw = string.Empty;
+            PenThick = 1;
+            PenEndLineStyle = LineCap.Round;
+
+            const int defaultCancasWidth = 40;
+            const int defaultCanvasHeight = 30;
+            
+            ResizeRedraw = true;
+            
+            this.HorizontalScroll.SmallChange = 1;
+            this.HorizontalScroll.LargeChange = 1;
+            
+            this.Focus();
+            SetStyle(ControlStyles.DoubleBuffer, true);
+            SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            SetStyle(ControlStyles.UserPaint, true);
+            SetStyle(ControlStyles.Selectable, true);
+            SetStyle(ControlStyles.ContainerControl, true);
+
+            VScrollBar vScrollBar1 = new VScrollBar();
+            // Dock the scroll bar to the right side of the form.
+            vScrollBar1.Dock = DockStyle.Right;
+           
+            vScrollBar1.LargeChange = 5;
+            vScrollBar1.SmallChange = 5;
+            vScrollBar1.Value = 0;
+            vScrollBar1.Maximum = 100;
+            vScrollBar1.Minimum = 1;
+            vScrollBar1.Scroll += new ScrollEventHandler(vScrollBar1_Scroll);
+            // Add the scroll bar to the form.
+            Controls.Add(vScrollBar1);
+            HScrollBar hScrollBar1 = new HScrollBar();
+            // Dock the scroll bar to the right side of the form.
+            hScrollBar1.Location = new Point(0, this.Height -25);
+            hScrollBar1.Dock = DockStyle.Bottom;
+            
+            hScrollBar1.LargeChange = 5;
+            hScrollBar1.SmallChange = 5;
+            hScrollBar1.Value = 0;
+            hScrollBar1.Maximum = 100;
+            hScrollBar1.Minimum = 1;
+            hScrollBar1.Scroll += new ScrollEventHandler(hScrollBar1_Scroll);
+            // Add the scroll bar to the form.
+            Controls.Add(hScrollBar1);
+
+            this.Bounds = 
+                new Rectangle(borderSquareSize, borderSquareSize, 
+                              drawingArea.Width, drawingArea.Height); 
+
+            BackgroundImageLayout = ImageLayout.Tile;
+
+            drawingArea = new Size(defaultCancasWidth, defaultCanvasHeight);
+            Contents = new Bitmap(drawingArea.Width, drawingArea.Height);
+          
+            using (Graphics g = Graphics.FromImage(Contents))
+            {
+               g.FillRectangle(Brushes.White, drawingAreaStart.Width, drawingAreaStart.Height,
+                                               drawingArea.Width, drawingArea.Height);
+            }
+        }
+
+        #region vertical and horizontal scroll handlers
+
+        void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            if (e.Type == ScrollEventType.SmallIncrement)
+            {
+                moove.Width += mooveStep;
+                moove = new Size(moove.Width, moove.Height);
+            }
+            if (e.Type == ScrollEventType.SmallDecrement)
+            {
+                moove.Width -= mooveStep;
+                moove = new Size(moove.Width, moove.Height);
             }
 
             Refresh();
         }
 
-        public void DrawingCanvasMouseUp(int mouseX, int mouseY)
+        void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
-            if (resizeMode)
+            if (e.Type == ScrollEventType.SmallIncrement)
             {
-                CropBitmap(mouseX + border, mouseY + border);
-                if (image != null)
-                { 
-                    DrawImage(ResizeImage(image, drawingArea));
-                }
-                Refresh();
+                moove.Height += mooveStep;
+                moove = new Size(moove.Width, moove.Height);
+            }
+            if (e.Type == ScrollEventType.SmallDecrement)
+            {
+                moove.Height -= mooveStep;
+                moove = new Size(moove.Width, moove.Height);
             }
 
-            press = false;
-            resizeMode = false;
+            Refresh();
         }
-
-        public Bitmap ResizeImage(Bitmap imgToResize, Size newSize)
-        {
-            Bitmap b = new Bitmap(newSize.Width, newSize.Height);
-            using (Graphics g = Graphics.FromImage(b))
-            {
-                g.InterpolationMode = InterpolationMode.HighQualityBilinear;
-                g.DrawImage(imgToResize, 0, 0, newSize.Width, newSize.Height);
-                g.Dispose();
-            }
-
-            return b;
-        }
-
-        public void DrawingCanvasMouseMove(int mouseX, int mouseY, int thick)
-        {
-            int x1 = mouseX - border;
-            int y1 = mouseY - border;
-
-            if (!resizeMode)
-            {
-                if (mouseX >= border && mouseX < DrawWidth + border &&
-                    mouseY >= border && mouseY < DrawHeight + border)
-                {
-                    if (press)
-                    {
-                        try
-                        {
-                            InterpolatePixel(mouseStartPositionX, mouseDownStartPosotionY, x1, y1, mainColor, thick);
-                            Refresh();
-                            mouseStartPositionX = x1;
-                            mouseDownStartPosotionY = y1;
-                        }
-                        catch (Exception ex)
-                        {
-                        }
-                    }
-                }
-            }
-            else
-            {
-                using (Graphics g = CreateGraphics())
-                {
-                    Pen pn = new Pen(SystemColors.Highlight);
-                    pn.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
-
-                    g.DrawRectangle(pn, border, border, x1, y1);
-                }
-
-                Refresh();
-            }
-        }
-
-        public DrawingCanvas()
-        {
-            const int defaultCancasWidth = 400;
-            const int defaultCanvasHeight = 300;
-
-            DoubleBuffered = true;
-            ResizeRedraw = true;
-
-            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-            SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-            SetStyle(ControlStyles.UserPaint, true);
-            SetStyle(ControlStyles.Selectable, true);
-          
-            this.Bounds = new Rectangle(border, border, drawingArea.Width, drawingArea.Height); 
-
-            BackgroundImageLayout = ImageLayout.Stretch;
-
-            drawingArea = new Size(defaultCancasWidth, defaultCanvasHeight);
-            contents = new Bitmap(drawingArea.Width, drawingArea.Height);
-
-            using (Graphics g = Graphics.FromImage(contents))
-            {
-                g.FillRectangle(Brushes.White, 0, 0, drawingArea.Width, drawingArea.Height);
-            }
-        }
+        
+        #endregion
 
         [System.ComponentModel.EditorBrowsableAttribute()]
         protected override void OnPaint(PaintEventArgs e)
         {
+            this.Focus();
             base.OnPaint(e);
             Graphics g = e.Graphics;
 
-            int wd = drawingArea.Width + border;
-            int ht = drawingArea.Height + border;
+            int wd = drawingArea.Width + borderSquareSize+ moove.Width;
+            int ht = drawingArea.Height + borderSquareSize + moove.Height;
 
             SolidBrush sb = new SolidBrush(Color.Red);
+            
+            g.DrawImage(Contents, borderSquareSize+moove.Width,
+                                  borderSquareSize+moove.Height,
+                                  drawingArea.Width, drawingArea.Height);
 
-            g.DrawImage(contents, border, border, drawingArea.Width, drawingArea.Height);
-            g.FillRectangle(sb, 0, 0, border, border);
-            g.FillRectangle(sb, wd, 0, border, border);
-            g.FillRectangle(sb, 0, ht, border, border);
-            g.FillRectangle(sb, wd, ht, border, border);
-            g.FillRectangle(sb, wd, ht / 2, border, border);
-            g.FillRectangle(sb, wd / 2, ht, border, border);
+            g.FillRectangle(sb, moove.Width, moove.Height, borderSquareSize, borderSquareSize);
+            g.FillRectangle(sb, wd, moove.Height, borderSquareSize, borderSquareSize);
+            g.FillRectangle(sb, moove.Width, ht, borderSquareSize, borderSquareSize);
+            g.FillRectangle(sb, wd , ht , borderSquareSize, borderSquareSize);
         }
 
         public void InterpolatePixel(int x, int y, int x1, int y1, Color color, int width)
         {
             Pen pn = new Pen(color, width);
-            pn.StartCap = System.Drawing.Drawing2D.LineCap.Round;
-            pn.EndCap = System.Drawing.Drawing2D.LineCap.Round;
-            Graphics.FromImage(contents).DrawLine(pn, x, y, x1, y1);
+            pn.StartCap = PenEndLineStyle;
+            pn.EndCap = PenEndLineStyle;
+
+            using (Graphics g = Graphics.FromImage(Contents))
+            {
+                g.DrawLine(pn, x, y, x1, y1);
+            }
         }
 
         public void PaintPixel(int x, int y, Color color, int width)
         {
             Pen pn = new Pen(color, width);
-            pn.StartCap = LineCap.Round;
-            Graphics.FromImage(contents).DrawLine(pn, x, y, x, y);
+            pn.StartCap = PenEndLineStyle;
+            pn.EndCap = PenEndLineStyle;
+            
+            using (Graphics g = Graphics.FromImage(Contents))
+            {
+               g.DrawLine(pn, x, y, x, y);
+            }  
         }
 
         public void DrawImage(Image currentImage)
         {
-            image = (Bitmap)currentImage;
-
-            if (currentImage != null)
+            if (currentImage!=null)
             {
-                contents = new Bitmap(currentImage);
-                CropBitmap(currentImage.Width, currentImage.Height);
-                Refresh();
-            }
+                drawingArea.Width = currentImage.Width;
+                drawingArea.Height = currentImage.Height;
+
+                Contents = (Bitmap)currentImage; 
+            }         
         }
 
         public void CropBitmap(int width, int height)
         {
             drawingArea.Width = width;
             drawingArea.Height = height;
+
             try
             {
-                contents = contents.Clone(new Rectangle(0, 0, width, height),
-                           contents.PixelFormat);
+                Contents = 
+                    Contents.Clone(new Rectangle(drawingAreaStart.Width, drawingAreaStart.Height, 
+                                                 width, height),
+                                    Contents.PixelFormat);
             }
             catch
             {
-                Bitmap oldc = contents;
-                contents = new Bitmap(width, height);
-                using (Graphics g = Graphics.FromImage(contents))
+                Bitmap oldc = Contents;
+                if ((width > 0) && (height > 0))
                 {
-                    g.FillRectangle(Brushes.White, 0, 0, width, height);
-                    g.DrawImage(oldc, 0, 0);
+                    Contents = new Bitmap(width, height);
+                    using (Graphics g = Graphics.FromImage(Contents))
+                    {
+                        g.FillRectangle(Brushes.White, drawingAreaStart.Width, drawingAreaStart.Height, width, height);
+                        g.DrawImage(oldc, drawingAreaStart.Width, drawingAreaStart.Height);
+                    }
                 }
             }
 
@@ -227,10 +377,12 @@ namespace ClassicPaint
 
         public void ClearBitmap()
         {
-            contents = new Bitmap(drawingArea.Width, drawingArea.Height);
-            using (Graphics g = Graphics.FromImage(contents))
-            {
-                g.FillRectangle(Brushes.White, 0, 0, drawingArea.Width, drawingArea.Height);
+            Contents = new Bitmap(drawingArea.Width, drawingArea.Height);
+            using (Graphics g = Graphics.FromImage(Contents))
+            {  
+                g.FillRectangle(Brushes.White, 
+                    drawingAreaStart.Width, drawingAreaStart.Height,
+                    drawingArea.Width, drawingArea.Height);
             }
 
         }
@@ -239,8 +391,23 @@ namespace ClassicPaint
         {
             Invalidate();
             Update();
-        }    
+        }
 
+        public void SetDrawSize(Size size)
+        {
+            DrawHeight = size.Height;
+            DrawWidth = size.Width;
+            Refresh();
+        }
+
+        private void DrawText(int x, int y, string text)
+        {
+            using (Graphics g = Graphics.FromImage(Contents))
+            {
+                g.DrawString(text, Font, new SolidBrush(foregroundColor), x, y);
+            }
+
+        }
     }
 
 }

@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6E0A9CEC-851C-4966-AD1D-05CED0CC7899}</ProjectGuid>
+    <ProjectGuid>{C561BF2F-E9FE-445D-8249-9E338179443C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PluginInterface</RootNamespace>
-    <AssemblyName>PluginInterface</AssemblyName>
+    <RootNamespace>PluginService</RootNamespace>
+    <AssemblyName>PluginService</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -47,9 +47,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enums.cs" />
-    <Compile Include="PluginInterface.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="PluginServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PluginInterface\PluginInterface.csproj">
+      <Project>{6E0A9CEC-851C-4966-AD1D-05CED0CC7899}</Project>
+      <Name>PluginInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ToolBarManager\ToolBarCustomControlManager.csproj">
+      <Project>{F772F6A4-A789-4693-A805-A2B724BB4F26}</Project>
+      <Name>ToolBarCustomControlManager</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

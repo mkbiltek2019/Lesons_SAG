@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6E0A9CEC-851C-4966-AD1D-05CED0CC7899}</ProjectGuid>
+    <ProjectGuid>{0CDE7B0E-1C2C-490F-A795-AF88C5F80BA4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PluginInterface</RootNamespace>
-    <AssemblyName>PluginInterface</AssemblyName>
+    <RootNamespace>ToolPlugin</RootNamespace>
+    <AssemblyName>ToolPlugin</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -47,9 +47,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enums.cs" />
-    <Compile Include="PluginInterface.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources.Designer.cs" />
+    <Compile Include="Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ToolBarControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolBarControl.Designer.cs">
+      <DependentUpon>ToolBarControl.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolBarControl.resx">
+      <DependentUpon>ToolBarControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PluginInterface\PluginInterface.csproj">
+      <Project>{6E0A9CEC-851C-4966-AD1D-05CED0CC7899}</Project>
+      <Name>PluginInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PluginService\PluginService.csproj">
+      <Project>{C561BF2F-E9FE-445D-8249-9E338179443C}</Project>
+      <Name>PluginService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ToolBarManager\ToolBarCustomControlManager.csproj">
+      <Project>{F772F6A4-A789-4693-A805-A2B724BB4F26}</Project>
+      <Name>ToolBarCustomControlManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Brush_tool.png" />
+    <Content Include="Resources\color_picker.png" />
+    <None Include="Resources\Cursor.png" />
+    <Content Include="Resources\eraser.png" />
+    <Content Include="Resources\lens_zoom_tool.png" />
+    <Content Include="Resources\paintbucket.png" />
+    <Content Include="Resources\pen_tool.png" />
+    <Content Include="Resources\select_tool.png" />
+    <Content Include="Resources\select_tool1.png" />
+    <Content Include="Resources\text_letter.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

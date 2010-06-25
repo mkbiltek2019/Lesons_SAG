@@ -70,6 +70,9 @@
     <Compile Include="mainForm.Designer.cs">
       <DependentUpon>mainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainFormManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="mainForm.resx">
@@ -132,17 +135,21 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DrawCanvas\DrawCanvas.csproj">
-      <Project>{C8C82E47-4F2B-48B4-8EE6-CD34323F8B9D}</Project>
-      <Name>DrawCanvas</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DrawingCanvas\DrawingCanvas.csproj">
       <Project>{5D06DC04-CC87-481F-9722-3B0E566CCED4}</Project>
       <Name>DrawingCanvas</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ToolBar\ToolBar.csproj">
-      <Project>{91F62A47-0B1A-4353-A2D2-74F36A63C3FC}</Project>
-      <Name>ToolBar</Name>
+    <ProjectReference Include="..\PluginInterface\PluginInterface.csproj">
+      <Project>{6E0A9CEC-851C-4966-AD1D-05CED0CC7899}</Project>
+      <Name>PluginInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PluginService\PluginService.csproj">
+      <Project>{C561BF2F-E9FE-445D-8249-9E338179443C}</Project>
+      <Name>PluginService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ToolBarManager\ToolBarCustomControlManager.csproj">
+      <Project>{F772F6A4-A789-4693-A805-A2B724BB4F26}</Project>
+      <Name>ToolBarCustomControlManager</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
