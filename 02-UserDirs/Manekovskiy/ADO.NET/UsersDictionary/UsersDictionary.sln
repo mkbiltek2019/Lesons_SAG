@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersDictionary.Client", "UsersDictionary.Client\UsersDictionary.Client.csproj", "{85BC706E-9952-40E4-8339-0E86FC15E383}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersDictionary.DatabaseExtensions", "UsersDictionary.DatabaseExtensions\UsersDictionary.DatabaseExtensions.csproj", "{FEBF1666-C1E0-49F0-96D5-C8C7FED3401E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersDictionary.Tests", "UsersDictionary.Tests\UsersDictionary.Tests.csproj", "{E09B00A5-4D46-4AFD-AA39-20DED9D69573}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{41EDE1E3-81A4-4279-A6F9-CB5303EBECDA}"
+	ProjectSection(SolutionItems) = preProject
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		UsersDictionary.vsmdi = UsersDictionary.vsmdi
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersDictionary.Model", "UsersDictionary.Model\UsersDictionary.Model.csproj", "{0C44EBF4-A024-493C-94E4-BF7988A06815}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersDictionary.Controllers", "UsersDictionary.Controllers\UsersDictionary.Controllers.csproj", "{BD232856-2322-4929-943D-CD2F9818F51E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersDictionary.Presenters", "UsersDictionary.Views\UsersDictionary.Presenters.csproj", "{A99E63D2-E684-43F2-881E-6B2D6A7D9B01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersDictionary.DataAccess", "UsersDictionary.DataAccess\UsersDictionary.DataAccess.csproj", "{4D5DD61A-6F81-433B-9319-2C590419968F}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = UsersDictionary.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85BC706E-9952-40E4-8339-0E86FC15E383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85BC706E-9952-40E4-8339-0E86FC15E383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85BC706E-9952-40E4-8339-0E86FC15E383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85BC706E-9952-40E4-8339-0E86FC15E383}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEBF1666-C1E0-49F0-96D5-C8C7FED3401E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEBF1666-C1E0-49F0-96D5-C8C7FED3401E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEBF1666-C1E0-49F0-96D5-C8C7FED3401E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEBF1666-C1E0-49F0-96D5-C8C7FED3401E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E09B00A5-4D46-4AFD-AA39-20DED9D69573}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E09B00A5-4D46-4AFD-AA39-20DED9D69573}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E09B00A5-4D46-4AFD-AA39-20DED9D69573}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E09B00A5-4D46-4AFD-AA39-20DED9D69573}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C44EBF4-A024-493C-94E4-BF7988A06815}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C44EBF4-A024-493C-94E4-BF7988A06815}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C44EBF4-A024-493C-94E4-BF7988A06815}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C44EBF4-A024-493C-94E4-BF7988A06815}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD232856-2322-4929-943D-CD2F9818F51E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD232856-2322-4929-943D-CD2F9818F51E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD232856-2322-4929-943D-CD2F9818F51E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD232856-2322-4929-943D-CD2F9818F51E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A99E63D2-E684-43F2-881E-6B2D6A7D9B01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A99E63D2-E684-43F2-881E-6B2D6A7D9B01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A99E63D2-E684-43F2-881E-6B2D6A7D9B01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A99E63D2-E684-43F2-881E-6B2D6A7D9B01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D5DD61A-6F81-433B-9319-2C590419968F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D5DD61A-6F81-433B-9319-2C590419968F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D5DD61A-6F81-433B-9319-2C590419968F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D5DD61A-6F81-433B-9319-2C590419968F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
