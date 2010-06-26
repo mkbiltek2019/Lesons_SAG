@@ -106,7 +106,7 @@ namespace Simple.Net_Paint
         {
             ImageManager imageManager = new ImageManager();
 
-            imageManager.Save(paintImageList.GetFullName(selectedImageName), drawingCanvas.Contents);
+            imageManager.Save(drawingCanvas.Contents);
         }
 
         private void ResizeCurrentImage(string imageName)

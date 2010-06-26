@@ -42,6 +42,7 @@ namespace Simple.Net_Paint
             this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setImageSizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setSizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paletteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,7 +55,6 @@ namespace Simple.Net_Paint
             this.tabControlContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.setSizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drawingCanvas = new ClassicPaint.DrawingCanvas();
             this.label1 = new System.Windows.Forms.Label();
             this.mainMenuStrip.SuspendLayout();
@@ -155,6 +155,13 @@ namespace Simple.Net_Paint
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.viewToolStripMenuItem.Text = "Pen";
             // 
+            // setSizeToolStripMenuItem
+            // 
+            this.setSizeToolStripMenuItem.Name = "setSizeToolStripMenuItem";
+            this.setSizeToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.setSizeToolStripMenuItem.Text = "&Set size";
+            this.setSizeToolStripMenuItem.Click += new System.EventHandler(this.setSizeToolStripMenuItem_Click);
+            // 
             // imageToolStripMenuItem
             // 
             this.imageToolStripMenuItem.Name = "imageToolStripMenuItem";
@@ -251,18 +258,12 @@ namespace Simple.Net_Paint
             this.mainPanel.Size = new System.Drawing.Size(65, 456);
             this.mainPanel.TabIndex = 4;
             // 
-            // setSizeToolStripMenuItem
-            // 
-            this.setSizeToolStripMenuItem.Name = "setSizeToolStripMenuItem";
-            this.setSizeToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.setSizeToolStripMenuItem.Text = "&Set size";
-            this.setSizeToolStripMenuItem.Click += new System.EventHandler(this.setSizeToolStripMenuItem_Click);
-            // 
             // drawingCanvas
             // 
             this.drawingCanvas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.drawingCanvas.AutoScrollMinSize = new System.Drawing.Size(400, 400);
             this.drawingCanvas.BackColor = System.Drawing.Color.Transparent;
             this.drawingCanvas.BackgroundImage = global::Simple.Net_Paint.Properties.Resources.font;
             this.drawingCanvas.Controls.Add(this.label1);
@@ -277,6 +278,7 @@ namespace Simple.Net_Paint
             this.drawingCanvas.Size = new System.Drawing.Size(614, 430);
             this.drawingCanvas.TabIndex = 2;
             this.drawingCanvas.TabStop = true;
+            this.drawingCanvas.TextToDraw = "";
             this.drawingCanvas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.drawingCanvas_MouseMove);
             this.drawingCanvas.Click += new System.EventHandler(this.drawingCanvas_Click);
             this.drawingCanvas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.drawingCanvas_MouseDown);

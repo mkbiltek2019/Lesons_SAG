@@ -188,8 +188,17 @@ namespace ClassicPaint
                 return b;
             }
 
-            return imgToResize; 
+            return imgToResize;
         }
+
+        #region do not use autoscroll
+
+        //protected override void OnScroll(ScrollEventArgs se)
+        //{  // using AutoScroll is bad Need fast  area update it sad
+        //    base.OnScroll(se);
+        //    this.Refresh();
+        //}
+        #endregion 
 
         public DrawingCanvas()
         {
@@ -201,10 +210,15 @@ namespace ClassicPaint
             const int defaultCanvasHeight = 30;
             
             ResizeRedraw = true;
-            
-            this.HorizontalScroll.SmallChange = 1;
-            this.HorizontalScroll.LargeChange = 1;
-            
+
+            #region do not use autoscroll
+            //this.HorizontalScroll.SmallChange = 10;
+            //this.HorizontalScroll.LargeChange = 10;
+            //this.VerticalScroll.LargeChange = 10;
+            //this.VerticalScroll.SmallChange = 10;
+            //this.AutoScrollMinSize = new Size(10000,10000);
+            #endregion
+
             this.Focus();
             SetStyle(ControlStyles.DoubleBuffer, true);
             SetStyle(ControlStyles.AllPaintingInWmPaint, true);
@@ -215,7 +229,7 @@ namespace ClassicPaint
             VScrollBar vScrollBar1 = new VScrollBar();
             // Dock the scroll bar to the right side of the form.
             vScrollBar1.Dock = DockStyle.Right;
-           
+
             vScrollBar1.LargeChange = 5;
             vScrollBar1.SmallChange = 5;
             vScrollBar1.Value = 0;
@@ -226,9 +240,9 @@ namespace ClassicPaint
             Controls.Add(vScrollBar1);
             HScrollBar hScrollBar1 = new HScrollBar();
             // Dock the scroll bar to the right side of the form.
-            hScrollBar1.Location = new Point(0, this.Height -25);
+            hScrollBar1.Location = new Point(0, this.Height - 25);
             hScrollBar1.Dock = DockStyle.Bottom;
-            
+
             hScrollBar1.LargeChange = 5;
             hScrollBar1.SmallChange = 5;
             hScrollBar1.Value = 0;
@@ -293,7 +307,6 @@ namespace ClassicPaint
         [System.ComponentModel.EditorBrowsableAttribute()]
         protected override void OnPaint(PaintEventArgs e)
         {
-            this.Focus();
             base.OnPaint(e);
             Graphics g = e.Graphics;
 
@@ -301,10 +314,16 @@ namespace ClassicPaint
             int ht = drawingArea.Height + borderSquareSize + moove.Height;
 
             SolidBrush sb = new SolidBrush(Color.Red);
-            
-            g.DrawImage(Contents, borderSquareSize+moove.Width,
-                                  borderSquareSize+moove.Height,
+
+            g.DrawImage(Contents, borderSquareSize + moove.Width,
+                                  borderSquareSize + moove.Height,
                                   drawingArea.Width, drawingArea.Height);
+
+            #region do not use autoscroll
+            //g.DrawImage(Contents,this.AutoScrollPosition.X,
+            //                      this.AutoScrollPosition.Y,
+            //                      drawingArea.Width, drawingArea.Height);
+            #endregion
 
             g.FillRectangle(sb, moove.Width, moove.Height, borderSquareSize, borderSquareSize);
             g.FillRectangle(sb, wd, moove.Height, borderSquareSize, borderSquareSize);
