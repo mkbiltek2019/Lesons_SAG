@@ -22,17 +22,17 @@ namespace Simple.Net_Paint
         private void drawingCanvas_MouseDown(object sender, MouseEventArgs e)
         {
             Text = selectedPlugin.Instance.SelectedTool.ToString();
-           canvasManager.DrawingCanvasMouseDown(e.Location, selectedPlugin, drawingCanvas);
+            canvasManager.DrawingCanvasMouseDown(e.Location, selectedPlugin, drawingCanvas);
         }
 
         private void drawingCanvas_MouseUp(object sender, MouseEventArgs e)
         {
-            canvasManager.DrawingCanvasMouseUp(e.Location, drawingCanvas, selectedImageName);
+            canvasManager.DrawingCanvasMouseUp(e.Location, selectedPlugin, drawingCanvas, selectedImageName);
         }
 
         private void drawingCanvas_MouseMove(object sender, MouseEventArgs e)
         {
-            canvasManager.DrawingCanvasMouseMove(e.Location, drawingCanvas, selectedPlugin);
+            canvasManager.DrawingCanvasMouseMove(e.Location, selectedPlugin, drawingCanvas);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -79,10 +79,11 @@ namespace Simple.Net_Paint
         private void setSizeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // set pen Size
-            PenDialog dialog = new PenDialog(drawingCanvas.PenThick, drawingCanvas.PenEndLineStyle);
+            PenDialog dialog = new PenDialog(Host.Global.SlectedTool.PenStrength,
+                   Host.Global.SlectedTool.PenEndLineStyle);
             dialog.ShowDialog();
-            drawingCanvas.PenThick = dialog.PenSize;
-            drawingCanvas.PenEndLineStyle = dialog.PenEndLineStyle;
+            Host.Global.SlectedTool.PenStrength = dialog.PenSize;
+            Host.Global.SlectedTool.PenEndLineStyle = dialog.PenEndLineStyle;
         }      
 
         

@@ -37,14 +37,10 @@
     </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml.Linq">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
     <Reference Include="System.Data.DataSetExtensions">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.cs" />
@@ -52,13 +48,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MyTools\MyTools.csproj">
+      <Project>{F772F6A4-A789-4693-A805-A2B724BB4F26}</Project>
+      <Name>MyTools</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PluginInterface\PluginInterface.csproj">
       <Project>{6E0A9CEC-851C-4966-AD1D-05CED0CC7899}</Project>
       <Name>PluginInterface</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ToolBarManager\ToolBarCustomControlManager.csproj">
-      <Project>{F772F6A4-A789-4693-A805-A2B724BB4F26}</Project>
-      <Name>ToolBarCustomControlManager</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

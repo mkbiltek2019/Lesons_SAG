@@ -1,11 +1,47 @@
 using System;
+using System.Drawing;
 using System.IO;
 using System.Reflection;
+using System.Windows.Forms;
 using PluginInterface;
-using ToolBarCustomControlManager;
 
 namespace Host
 {
+    public class ToolBarManager
+    {
+        #region Get background and fore ground Color from ColorDialog
+
+        private Color backgGroundColor;
+        private Color foreGroundColor;
+
+        public Color BackGroundColor
+        {
+            get
+            {
+                backgGroundColor = GetColorFromColorDialog();
+                return backgGroundColor;
+            }
+        }
+
+        public Color ForeGroundColor
+        {
+            get
+            {
+                foreGroundColor = GetColorFromColorDialog();
+                return foreGroundColor;
+            }
+        }
+
+        private Color GetColorFromColorDialog()
+        {
+            ColorDialog colorDialog = new ColorDialog();
+            colorDialog.ShowDialog();
+            return colorDialog.Color;
+        }
+
+        #endregion
+    }
+
     public class PluginServices : IPluginHost
     {
         public PluginServices()
@@ -123,12 +159,12 @@ namespace Host
         public void Feedback(Tool.BasicTools Feedback, IPlugin Plugin)
         {
             if (Feedback == Tool.BasicTools.BackGroundColorButton)
-            {  
-               Plugin.BackgroundColor = (new ToolBarManager()).BackGroundColor;
+            {
+                Plugin.BackgroundColor = (new ToolBarManager()).BackGroundColor;
                Plugin.MainInterface.Invalidate(true);
             }
             if (Feedback == Tool.BasicTools.ForeGroundColorButton)
-            {   
+            {
                 Plugin.ForegroundColor = (new ToolBarManager()).ForeGroundColor;
                 Plugin.MainInterface.Invalidate(true);
             }    

@@ -1,4 +1,4 @@
-﻿using System.Drawing;
+﻿using System;
 using System.Collections;
 using System.Windows.Forms;
 using PluginInterface;
@@ -10,53 +10,90 @@ namespace DrawingCanvas
     {
         private Hashtable imageList = new Hashtable();
 
-        private void Action(Point mousePosition,
-                                    Host.Types.AvailablePlugin currentPlugin,
-                                    ClassicPaint.DrawingCanvas drawingCanvas)
+        private void Action(Host.Types.AvailablePlugin currentPlugin, ClassicPaint.DrawingCanvas drawingCanvas)
         {
-            switch(currentPlugin.Instance.SelectedTool)
+            switch (currentPlugin.Instance.SelectedTool)
             {
-                #region Color
                 case Tool.BasicTools.BackGroundColorButton:
                     {
-                        drawingCanvas.backGroundColor = currentPlugin.Instance.BackgroundColor;
                         drawingCanvas.mainColor = currentPlugin.Instance.BackgroundColor;
-                        //currentPlugin.Instance.SetDefaultTool();
-                    }break;
+                    } break;
 
                 case Tool.BasicTools.ForeGroundColorButton:
                     {
-                        drawingCanvas.foregroundColor = currentPlugin.Instance.ForegroundColor;
-                        //currentPlugin.Instance.SetDefaultTool();
+                        drawingCanvas.mainColor = currentPlugin.Instance.ForegroundColor;
                     } break;
-                #endregion
 
-                case Tool.BasicTools.Pencil: 
+                case Tool.BasicTools.Pencil:
                     {
-                        drawingCanvas.DrawingCanvasMouseDown(mousePosition, Tool.BasicTools.Pencil);
+                        CreateTool(new MyTools.PencilTool());
                     } break;
+
                 case Tool.BasicTools.MouseCursor:
                     {
-                        drawingCanvas.DrawingCanvasMouseDown(mousePosition, Tool.BasicTools.MouseCursor);
+                        CreateTool(null);
                     } break;
+
                 case Tool.BasicTools.Text:
                     {
-                        drawingCanvas.TextToDraw = "dsfasdfsadfdf";
-                        drawingCanvas.DrawingCanvasMouseDown(mousePosition, Tool.BasicTools.Text);
+                        CreateTool(null);
                     } break;
+
+                case Tool.BasicTools.Brush:
+                    {
+                        CreateTool(new MyTools.BrushTool());
+                    } break;
+
+                default:
+                    {
+                        CreateTool(null);
+                    }
+                    break;
             }
         }
 
-        public void DrawingCanvasMouseDown(Point mousePosition,
+        private void CreateTool(MyTools.BaseTool tool)
+        {
+            if (Host.Global.SlectedTool == null)
+            {
+                Host.Global.SlectedTool = tool;
+            }
+            else
+            {
+                string first = Host.Global.SlectedTool.ToString();
+                string second = string.Empty;
+
+                if (tool != null)
+                {
+                    second = tool.ToString();
+                }
+
+                if (first != second)
+                {
+                    Host.Global.SlectedTool = tool;
+                }
+            }
+        }
+
+        public void DrawingCanvasMouseDown(System.Drawing.Point mousePosition,
                                     Host.Types.AvailablePlugin currentPlugin,
                                     ClassicPaint.DrawingCanvas drawingCanvas)
         {
-          Action(mousePosition, currentPlugin, drawingCanvas);
+            Action(currentPlugin, drawingCanvas);
+            drawingCanvas.DrawingCanvasMouseDown(mousePosition);
         }
 
-        public void OpenImage(ClassicPaint.DrawingCanvas drawingCanvas, Image currentImage)
+        public void DrawingCanvasMouseUp(System.Drawing.Point mousePosition, Host.Types.AvailablePlugin currentPlugin, ClassicPaint.DrawingCanvas drawingCanvas, string Name)
         {
-            drawingCanvas.DrawImage(currentImage);
+            Action(currentPlugin, drawingCanvas);
+            SaveChanges(Name, drawingCanvas);
+            drawingCanvas.DrawingCanvasMouseUp(mousePosition);
+        }
+
+        public void DrawingCanvasMouseMove(System.Drawing.Point mousePosition, Host.Types.AvailablePlugin currentPlugin, ClassicPaint.DrawingCanvas drawingCanvas)
+        {
+            Action(currentPlugin, drawingCanvas);
+            drawingCanvas.DrawingCanvasMouseMove(mousePosition);
         }
 
         public void SaveChanges(string fileName, ClassicPaint.DrawingCanvas drawingCanvas)
@@ -67,15 +104,18 @@ namespace DrawingCanvas
             }
         }
 
-        public void Add(string fileName, ClassicPaint.DrawingCanvas drawingCanvas, Image currentImage)
+        public void AddImageToCanvasAndToOpenedImageList(string fileName, ClassicPaint.DrawingCanvas drawingCanvas, System.Drawing.Image currentImage)
         {
-            drawingCanvas.DrawImage(currentImage);
-            imageList.Add(fileName, drawingCanvas.Contents);
+            if ((fileName != null) && (currentImage != null))
+            {
+                drawingCanvas.DrawImage(currentImage);
+                imageList.Add(fileName, drawingCanvas.Contents);
+            }
         }
 
         public void LoadImageByName(string fileName, ClassicPaint.DrawingCanvas drawingCanvas)
         {
-            Image image = (Image)imageList[fileName];
+            System.Drawing.Image image = (System.Drawing.Image)imageList[fileName];
             if (image != null)
             {
                 drawingCanvas.DrawImage(image);
@@ -106,17 +146,6 @@ namespace DrawingCanvas
             drawingCanvas.Refresh();
         }
 
-        public void DrawingCanvasMouseUp(Point mousePosition, ClassicPaint.DrawingCanvas drawingCanvas, string Name)
-        {
-            SaveChanges(Name, drawingCanvas);
-            drawingCanvas.DrawingCanvasMouseUp(mousePosition);
-        }
-
-        public void DrawingCanvasMouseMove(Point mousePosition, ClassicPaint.DrawingCanvas drawingCanvas, Host.Types.AvailablePlugin currentPlugin)
-        {
-            drawingCanvas.DrawingCanvasMouseMove(mousePosition, currentPlugin.Instance.SelectedTool);
-        }
-
         public void ClearDrawingCanvas(ClassicPaint.DrawingCanvas drawingCanvas)
         {
             drawingCanvas.ClearBitmap();
@@ -126,13 +155,13 @@ namespace DrawingCanvas
         public void ResizeDrawingCanvas(ClassicPaint.DrawingCanvas drawingCanvas, string imageName)
         {
             ResizeDialog resizeDialog =
-                  new ResizeDialog(new Size(drawingCanvas.DrawWidth, drawingCanvas.DrawHeight));
+                  new ResizeDialog(new System.Drawing.Size(drawingCanvas.DrawWidth, drawingCanvas.DrawHeight));
 
             resizeDialog.ShowDialog();
 
             drawingCanvas.Contents = drawingCanvas.ResizeImage(drawingCanvas.Contents,
-                                                               new Size(resizeDialog.imageWidth, resizeDialog.imageHeight));
-            drawingCanvas.SetDrawSize(new Size(resizeDialog.imageWidth, resizeDialog.imageHeight));
+                                                               new System.Drawing.Size(resizeDialog.imageWidth, resizeDialog.imageHeight));
+            drawingCanvas.SetDrawSize(new System.Drawing.Size(resizeDialog.imageWidth, resizeDialog.imageHeight));
 
             SaveChanges(imageName, drawingCanvas);
         }

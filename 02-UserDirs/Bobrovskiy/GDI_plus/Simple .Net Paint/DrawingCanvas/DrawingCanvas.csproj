@@ -78,6 +78,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MyTools\MyTools.csproj">
+      <Project>{F772F6A4-A789-4693-A805-A2B724BB4F26}</Project>
+      <Name>MyTools</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PluginInterface\PluginInterface.csproj">
       <Project>{6E0A9CEC-851C-4966-AD1D-05CED0CC7899}</Project>
       <Name>PluginInterface</Name>

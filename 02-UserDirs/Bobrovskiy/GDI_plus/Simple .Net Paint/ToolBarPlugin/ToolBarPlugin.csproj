@@ -79,10 +79,6 @@
       <Project>{C561BF2F-E9FE-445D-8249-9E338179443C}</Project>
       <Name>PluginService</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ToolBarManager\ToolBarCustomControlManager.csproj">
-      <Project>{F772F6A4-A789-4693-A805-A2B724BB4F26}</Project>
-      <Name>ToolBarCustomControlManager</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Brush_tool.png" />

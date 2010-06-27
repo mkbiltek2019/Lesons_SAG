@@ -1,4 +1,3 @@
-
 namespace PluginInterface
 {
     public static class Tool

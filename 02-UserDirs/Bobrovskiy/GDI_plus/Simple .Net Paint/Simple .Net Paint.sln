@@ -3,17 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainForm", "Simple .Net Paint\MainForm.csproj", "{198C55CA-A2F3-4DD8-82F4-7B7BC071F4FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resources", "Resources\Resources.csproj", "{8419CEE8-ED1D-4F04-8E74-536E4906F353}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginInterface", "PluginInterface\PluginInterface.csproj", "{6E0A9CEC-851C-4966-AD1D-05CED0CC7899}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawingCanvas", "DrawingCanvas\DrawingCanvas.csproj", "{5D06DC04-CC87-481F-9722-3B0E566CCED4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBarCustomControlManager", "ToolBarManager\ToolBarCustomControlManager.csproj", "{F772F6A4-A789-4693-A805-A2B724BB4F26}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginService", "PluginService\PluginService.csproj", "{C561BF2F-E9FE-445D-8249-9E338179443C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBarPlugin", "ToolBarPlugin\ToolBarPlugin.csproj", "{0CDE7B0E-1C2C-490F-A795-AF88C5F80BA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTools", "MyTools\MyTools.csproj", "{F772F6A4-A789-4693-A805-A2B724BB4F26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +23,6 @@ Global
 		{198C55CA-A2F3-4DD8-82F4-7B7BC071F4FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{198C55CA-A2F3-4DD8-82F4-7B7BC071F4FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{198C55CA-A2F3-4DD8-82F4-7B7BC071F4FA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8419CEE8-ED1D-4F04-8E74-536E4906F353}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8419CEE8-ED1D-4F04-8E74-536E4906F353}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8419CEE8-ED1D-4F04-8E74-536E4906F353}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8419CEE8-ED1D-4F04-8E74-536E4906F353}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6E0A9CEC-851C-4966-AD1D-05CED0CC7899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6E0A9CEC-851C-4966-AD1D-05CED0CC7899}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E0A9CEC-851C-4966-AD1D-05CED0CC7899}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -37,10 +31,6 @@ Global
 		{5D06DC04-CC87-481F-9722-3B0E566CCED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D06DC04-CC87-481F-9722-3B0E566CCED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D06DC04-CC87-481F-9722-3B0E566CCED4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F772F6A4-A789-4693-A805-A2B724BB4F26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F772F6A4-A789-4693-A805-A2B724BB4F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F772F6A4-A789-4693-A805-A2B724BB4F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F772F6A4-A789-4693-A805-A2B724BB4F26}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C561BF2F-E9FE-445D-8249-9E338179443C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C561BF2F-E9FE-445D-8249-9E338179443C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C561BF2F-E9FE-445D-8249-9E338179443C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -49,6 +39,10 @@ Global
 		{0CDE7B0E-1C2C-490F-A795-AF88C5F80BA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CDE7B0E-1C2C-490F-A795-AF88C5F80BA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CDE7B0E-1C2C-490F-A795-AF88C5F80BA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F772F6A4-A789-4693-A805-A2B724BB4F26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F772F6A4-A789-4693-A805-A2B724BB4F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F772F6A4-A789-4693-A805-A2B724BB4F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F772F6A4-A789-4693-A805-A2B724BB4F26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -36,7 +36,7 @@ namespace Simple.Net_Paint
         }
 
     }
-    
+
     public partial class MainForm
     {
         const string defaultName = "first.bmp";
@@ -75,12 +75,15 @@ namespace Simple.Net_Paint
 
         private void AddImageToCanvasToTabControl(string fileName, string fullFileName, Image image)
         {
-            canvasManager.Add(fileName, drawingCanvas, image);
-            paintImageList.Add(fileName, fullFileName);
+            if (!string.IsNullOrEmpty(fileName))
+            {
+                canvasManager.AddImageToCanvasAndToOpenedImageList(fileName, drawingCanvas, image);
+                paintImageList.Add(fileName, fullFileName);
 
-            TabPage tabPage = new TabPage(fileName);
-            mainTabControl.TabPages.Add(tabPage);
-            mainTabControl.SelectTab(tabPage);
+                TabPage tabPage = new TabPage(fileName);
+                mainTabControl.TabPages.Add(tabPage);
+                mainTabControl.SelectTab(tabPage);
+            }    
         }
 
         private void LoadImageByName(string fileName)
@@ -103,10 +106,8 @@ namespace Simple.Net_Paint
         }
 
         private void SaveCurrentImageByName(string selectedImageName)
-        {
-            ImageManager imageManager = new ImageManager();
-
-            imageManager.Save(drawingCanvas.Contents);
+        {  
+           (new ImageManager()).Save(drawingCanvas.Contents);
         }
 
         private void ResizeCurrentImage(string imageName)

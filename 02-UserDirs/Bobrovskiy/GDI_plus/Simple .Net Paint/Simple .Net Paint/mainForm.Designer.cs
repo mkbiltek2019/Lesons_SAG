@@ -273,12 +273,12 @@ namespace Simple.Net_Paint
             this.drawingCanvas.ImeMode = System.Windows.Forms.ImeMode.On;
             this.drawingCanvas.Location = new System.Drawing.Point(4, 21);
             this.drawingCanvas.Name = "drawingCanvas";
-            this.drawingCanvas.PenEndLineStyle = System.Drawing.Drawing2D.LineCap.Round;
-            this.drawingCanvas.PenThick = 10;
+           // this.drawingCanvas.PenEndLineStyle = System.Drawing.Drawing2D.LineCap.Round;
+           // this.drawingCanvas.PenThick = 10;
             this.drawingCanvas.Size = new System.Drawing.Size(614, 430);
             this.drawingCanvas.TabIndex = 2;
             this.drawingCanvas.TabStop = true;
-            this.drawingCanvas.TextToDraw = "";
+           // this.drawingCanvas.TextToDraw = "";
             this.drawingCanvas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.drawingCanvas_MouseMove);
             this.drawingCanvas.Click += new System.EventHandler(this.drawingCanvas_Click);
             this.drawingCanvas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.drawingCanvas_MouseDown);
