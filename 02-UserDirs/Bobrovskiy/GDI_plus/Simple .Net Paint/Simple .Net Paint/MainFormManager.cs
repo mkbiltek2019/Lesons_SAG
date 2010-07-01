@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Drawing;
 using System.Windows.Forms;
+using DialogManger.ImageManger;
 using DrawingCanvas;
-using DrawingCanvas.ImageManger;
 using Host;
 
 namespace Simple.Net_Paint
@@ -105,7 +105,7 @@ namespace Simple.Net_Paint
             }
         }
 
-        private void SaveCurrentImageByName(string selectedImageName)
+        private void SaveCurrentImageByName()
         {  
            (new ImageManager()).Save(drawingCanvas.Contents);
         }
@@ -114,6 +114,6 @@ namespace Simple.Net_Paint
         {
             canvasManager.ResizeDrawingCanvas(drawingCanvas, imageName);
         }
-
+        
     }
 }

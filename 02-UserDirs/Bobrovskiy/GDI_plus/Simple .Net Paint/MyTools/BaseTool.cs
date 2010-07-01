@@ -69,6 +69,60 @@ namespace MyTools
             set;
         }
 
+        public bool Solid
+        { 
+            get; 
+            set;
+        }
+
+        #endregion
+
+        #region TextTool properties
+
+        public string TextToDraw
+        {
+            get;
+            set;
+        } 
+       
+        public Image TextResultImage
+        {
+            get; 
+            set;
+        }
+
+        #endregion
+
+        #region   Brush specific properties
+
+        public Image CustomBrush
+        {
+            get; 
+            set;
+        }
+
+        public int CustomBrushHeight
+        {
+            get; 
+            set;
+        }
+
+        public int CustomBrushWidth
+        {
+            get;
+            set;
+        }
+
+        #endregion
+
+        #region   Color Piker properties
+
+        public Color ColorPikerColor
+        {
+            get; 
+            set;
+        }
+
         #endregion
 
         public virtual System.Drawing.Image Draw(System.Drawing.Image currentImage)
@@ -81,6 +135,11 @@ namespace MyTools
         public new string ToString()
         {
             return this.GetType().ToString();
+        }
+
+        public new bool Compare(string currentTool)
+        {
+            return this.GetType().ToString() == currentTool.ToString();
         }
 
         public virtual void Dispose()

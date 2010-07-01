@@ -1,16 +1,19 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
-using DrawingCanvas.AdditionalDialogs;
+using CSharpFilters;
 
 namespace Simple.Net_Paint
 {
     public partial class MainForm : Form
-    {  
+    {
+        public double Zoom = 1;
+
         public MainForm()
         {
             InitializeComponent();
             AddImageToCanvasToTabControl(defaultName, null, null); //add default tab with empty region
-        }  
+        }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -21,7 +24,6 @@ namespace Simple.Net_Paint
 
         private void drawingCanvas_MouseDown(object sender, MouseEventArgs e)
         {
-            Text = selectedPlugin.Instance.SelectedTool.ToString();
             canvasManager.DrawingCanvasMouseDown(e.Location, selectedPlugin, drawingCanvas);
         }
 
@@ -58,12 +60,12 @@ namespace Simple.Net_Paint
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaveCurrentImageByName(selectedImageName);
+            SaveCurrentImageByName();
         }
 
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            canvasManager.ClearDrawingCanvas(drawingCanvas); 
+            canvasManager.ClearDrawingCanvas(drawingCanvas);
         }
 
         private void setImageSizeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -73,19 +75,62 @@ namespace Simple.Net_Paint
 
         private void drawingCanvas_Click(object sender, EventArgs e)
         {
-           canvasManager.ZoomCanvas(((MouseEventArgs)e).Button, drawingCanvas);
+            canvasManager.ZoomCanvas(((MouseEventArgs)e).Button, drawingCanvas);
         }
-        
-        private void setSizeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // set pen Size
-            PenDialog dialog = new PenDialog(Host.Global.SlectedTool.PenStrength,
-                   Host.Global.SlectedTool.PenEndLineStyle);
-            dialog.ShowDialog();
-            Host.Global.SlectedTool.PenStrength = dialog.PenSize;
-            Host.Global.SlectedTool.PenEndLineStyle = dialog.PenEndLineStyle;
-        }      
 
-        
+        private void zoomInToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Zoom = 2;
+
+            this.drawingCanvas.AutoScrollMinSize =
+                new Size((int)(this.drawingCanvas.DrawHeight * Zoom) + 30,
+                         (int)(this.drawingCanvas.DrawWidth * Zoom) + 30);
+
+            drawingCanvas.DrawHeight = (int)(this.drawingCanvas.DrawHeight * Zoom);
+            drawingCanvas.DrawWidth = (int)(this.drawingCanvas.DrawWidth * Zoom);
+
+            drawingCanvas.Refresh();
+            drawingCanvas.Invalidate();
+            this.Invalidate();
+
+        }
+
+        private void zoomOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Zoom = 0.5;
+            this.drawingCanvas.AutoScrollMinSize =
+                new Size((int)(this.drawingCanvas.DrawHeight * Zoom) + 30,
+                         (int)(this.drawingCanvas.DrawWidth * Zoom) + 30);
+
+            drawingCanvas.DrawHeight = (int)(this.drawingCanvas.DrawHeight * Zoom);
+            drawingCanvas.DrawWidth = (int)(this.drawingCanvas.DrawWidth * Zoom);
+
+            drawingCanvas.Refresh();
+            drawingCanvas.Invalidate();
+            this.Invalidate();
+        }
+
+        private void invertToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Bitmap currentBitmap = (Bitmap)drawingCanvas.Contents;
+            if (BitmapFilter.Invert(currentBitmap))
+            {
+                drawingCanvas.Contents = currentBitmap;
+                this.Invalidate();
+            }  
+        }
+
+        private void grayScaleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Bitmap currentBitmap = (Bitmap)drawingCanvas.Contents;
+            if (BitmapFilter.GrayScale(currentBitmap))
+            {
+                drawingCanvas.Contents = currentBitmap;
+                this.Invalidate();
+            }  
+        }
+
+
+
     }
 }

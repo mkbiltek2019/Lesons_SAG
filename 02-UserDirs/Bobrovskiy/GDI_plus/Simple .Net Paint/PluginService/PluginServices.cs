@@ -1,47 +1,11 @@
 using System;
-using System.Drawing;
 using System.IO;
 using System.Reflection;
-using System.Windows.Forms;
+using DialogManger.ImageManger;
 using PluginInterface;
 
 namespace Host
 {
-    public class ToolBarManager
-    {
-        #region Get background and fore ground Color from ColorDialog
-
-        private Color backgGroundColor;
-        private Color foreGroundColor;
-
-        public Color BackGroundColor
-        {
-            get
-            {
-                backgGroundColor = GetColorFromColorDialog();
-                return backgGroundColor;
-            }
-        }
-
-        public Color ForeGroundColor
-        {
-            get
-            {
-                foreGroundColor = GetColorFromColorDialog();
-                return foreGroundColor;
-            }
-        }
-
-        private Color GetColorFromColorDialog()
-        {
-            ColorDialog colorDialog = new ColorDialog();
-            colorDialog.ShowDialog();
-            return colorDialog.Color;
-        }
-
-        #endregion
-    }
-
     public class PluginServices : IPluginHost
     {
         public PluginServices()
@@ -157,17 +121,96 @@ namespace Host
         }
 
         public void Feedback(Tool.BasicTools Feedback, IPlugin Plugin)
-        {
-            if (Feedback == Tool.BasicTools.BackGroundColorButton)
+        { // Do not remoove !!!!
+           
+            #region Tool creation and setting tool data Main switch
+
+            switch (Feedback)
             {
-                Plugin.BackgroundColor = (new ToolBarManager()).BackGroundColor;
-               Plugin.MainInterface.Invalidate(true);
+                case Tool.BasicTools.BackGroundColorButton:
+                    { 
+                        Plugin.BackgroundColor = (new ColorDialogManager()).BackGroundColor;
+                        Plugin.MainInterface.Invalidate(true);
+                    } break;
+
+                case Tool.BasicTools.ForeGroundColorButton:
+                    { 
+                        Plugin.ForegroundColor = (new ColorDialogManager()).ForeGroundColor;
+                        Plugin.MainInterface.Invalidate(true);
+                    } break;
+
+                case Tool.BasicTools.Pencil:
+                    {
+                        CreateTool(new MyTools.PencilTool());
+                        (new DialogManger.DialogToolManager()).Show();
+                    } break;
+
+                case Tool.BasicTools.MouseCursor:
+                    {
+                        CreateTool(new MyTools.BaseTool());
+                    } break;
+
+                case Tool.BasicTools.Text:
+                    {
+                        CreateTool(new MyTools.TextTool());
+                        (new DialogManger.DialogToolManager()).Show();
+                    } break;
+
+                case Tool.BasicTools.Brush:
+                    {
+                        CreateTool(new MyTools.BrushTool());
+                        (new DialogManger.DialogToolManager()).Show();
+                    } break;
+
+                case Tool.BasicTools.Eraser:
+                    {
+                        CreateTool(new MyTools.EraserTool());
+                    } break;
+
+                case Tool.BasicTools.ColorPick:
+                    {
+                        CreateTool(new MyTools.ColorPickTool()); 
+                    } break;
+
+                case Tool.BasicTools.Zoom:
+                    {
+                        CreateTool(new MyTools.ZoomTool());
+                    } break;
+
+                case Tool.BasicTools.Bucket:
+                    {
+                        CreateTool(new MyTools.BucketTool());
+                    } break;
+
+                case Tool.BasicTools.RectangleSelection:
+                    {
+                        CreateTool(new MyTools.RectangleSelectionTool());
+                    } break;
+
+                default:
+                    {
+                        CreateTool(new MyTools.BaseTool());
+                    }
+                    break;
             }
-            if (Feedback == Tool.BasicTools.ForeGroundColorButton)
+
+            #endregion
+
+        }
+
+        private void CreateTool(MyTools.BaseTool tool)
+        {
+            if (Host.Global.SlectedTool == null)
             {
-                Plugin.ForegroundColor = (new ToolBarManager()).ForeGroundColor;
-                Plugin.MainInterface.Invalidate(true);
-            }    
+                Host.Global.SlectedTool = tool;
+            }
+            else
+            {
+                if (!Host.Global.SlectedTool.Compare(tool.ToString()))
+                {
+                    Host.Global.SlectedTool = tool;
+                }
+            }
         }
     }
 

@@ -98,46 +98,55 @@ namespace MyToolBar
         private void penToolButton_Click(object sender, EventArgs e)
         {
             selectedTool = Tool.BasicTools.Pencil;
+            myPluginHost.Feedback(selectedTool, this);
         }
 
         private void brushToolButton_Click(object sender, EventArgs e)
         {
             selectedTool = Tool.BasicTools.Brush;
+            myPluginHost.Feedback(selectedTool, this);
         }
 
         private void textToolButton_Click(object sender, EventArgs e)
         {
             selectedTool = Tool.BasicTools.Text;
+            myPluginHost.Feedback(selectedTool, this);
         }
 
         private void colorPikerToolButton_Click(object sender, EventArgs e)
         {
             selectedTool = Tool.BasicTools.ColorPick;
+            myPluginHost.Feedback(selectedTool, this);
         }
 
         private void zoomToolButton_Click(object sender, EventArgs e)
         {
             selectedTool = Tool.BasicTools.Zoom;
+            myPluginHost.Feedback(selectedTool, this);
         }
 
         private void EraseToolButton_Click(object sender, EventArgs e)
         {
             selectedTool = Tool.BasicTools.Eraser;
+            myPluginHost.Feedback(selectedTool, this);
         }
 
         private void fillToolButton_Click(object sender, EventArgs e)
         {
             selectedTool = Tool.BasicTools.Bucket;
+            myPluginHost.Feedback(selectedTool, this);
         }
 
         private void selectToolButton_Click(object sender, EventArgs e)
         {
             selectedTool = Tool.BasicTools.RectangleSelection;
+            myPluginHost.Feedback(selectedTool, this);
         }
 
         private void defaultButton_Click(object sender, EventArgs e)
         {
             selectedTool = Tool.BasicTools.MouseCursor;
+            myPluginHost.Feedback(selectedTool, this);
         }   
          
     }

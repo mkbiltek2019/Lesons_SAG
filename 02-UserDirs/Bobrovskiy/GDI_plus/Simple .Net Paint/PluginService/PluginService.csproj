@@ -43,11 +43,16 @@
     <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DialogToolManager.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="PluginServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DialogManager\DialogManager.csproj">
+      <Project>{CF964FA8-F4E0-425F-8D31-DD2734B5A4A6}</Project>
+      <Name>DialogManager</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyTools\MyTools.csproj">
       <Project>{F772F6A4-A789-4693-A805-A2B724BB4F26}</Project>
       <Name>MyTools</Name>

@@ -1,6 +1,4 @@
 ﻿using System.Drawing;
-using System.Drawing.Drawing2D;
-using MyTools;
 
 namespace MyTools
 {
@@ -10,25 +8,25 @@ namespace MyTools
         {
             PenStrength = 1;
             MainColor = Color.Black;
-            PenEndLineStyle = LineCap.Round;
-            PenStartLineStyle = LineCap.RoundAnchor;
         }
 
         #region BaseTool Members
 
         public override Image Draw(Image currentImage)
         {
-            Pen pen = new Pen(MainColor, PenStrength);
-            pen.StartCap = PenStartLineStyle;
-            pen.EndCap = PenEndLineStyle;
-
-            if (!startPosition.IsEmpty && !endPosition.IsEmpty)
+            if(CustomBrush!=null)
             {
-                using (Graphics g = Graphics.FromImage(currentImage))
+                if (!startPosition.IsEmpty && !endPosition.IsEmpty)
                 {
-                    g.DrawLine(pen, startPosition.X, startPosition.Y, endPosition.X, endPosition.Y);
+                    using (Graphics g = Graphics.FromImage(currentImage))
+                    {
+                        g.DrawImage(CustomBrush,
+                            new Rectangle((startPosition.X - CustomBrush.Width/2),
+                                          (startPosition.Y - CustomBrush.Height/2),
+                                          CustomBrush.Width, CustomBrush.Height));
+                    }
                 }
-            }
+            }     
 
             return currentImage;  
         }

@@ -1,5 +1,6 @@
 using System;
 using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 using System.Windows.Forms;
 using System.Drawing;
 
@@ -58,13 +59,15 @@ namespace ClassicPaint
         public Color foregroundColor = Color.White;
 
         private Size moove = new Size(0, 0);
-        private readonly int mooveStep = 20;
+        private readonly int mooveStep = 0;
 
         #region mouse events handlers
 
         public void DrawingCanvasMouseDown(Point mousePosition)
         {
-            mouseStartPosition = mousePosition;
+            mouseStartPosition =
+                new Point(mousePosition.X - borderSquareSize,
+                          mousePosition.Y - borderSquareSize);
 
             press = true;
 
@@ -79,10 +82,11 @@ namespace ClassicPaint
                 resizeMode = true;
             }
 
-            Point squareSize2 = new Point(mousePosition.X  - moove.Width ,
-                                          mousePosition.Y  - moove.Height);
+            Point squareSize2 = new Point(mousePosition.X - moove.Width,
+                                          mousePosition.Y - moove.Height);
 
-            Action(mousePosition, squareSize2);
+            Action(new Point(mousePosition.X - borderSquareSize,
+                           mousePosition.Y - borderSquareSize), squareSize2);
 
             Refresh();
         }
@@ -120,7 +124,7 @@ namespace ClassicPaint
 
         public void DrawingCanvasMouseMove(Point mousePosition)
         {
-            Point squareSize = new Point(mousePosition.X - moove.Width ,
+            Point squareSize = new Point(mousePosition.X - moove.Width,
                                          mousePosition.Y - moove.Height);
 
             if (!resizeMode)
@@ -131,7 +135,8 @@ namespace ClassicPaint
                     {
                         try
                         {
-                            Action(mousePosition, squareSize); // this is main event !!!
+                            Action(new Point(mousePosition.X - borderSquareSize,
+                            mousePosition.Y - borderSquareSize), squareSize); // this is main event !!!
 
                             Refresh();
 
@@ -162,7 +167,7 @@ namespace ClassicPaint
 
         private void Action(Point mousePosition, Point squareSize)
         {  // here we set all needed parameter to selected ToolControl
-            if (Host.Global.SlectedTool!=null)
+            if (Host.Global.SlectedTool != null)
             {
                 Host.Global.SlectedTool.StartXY =
                  new Point(mousePosition.X - moove.Width, mousePosition.Y - moove.Height);
@@ -173,7 +178,7 @@ namespace ClassicPaint
                 Host.Global.SlectedTool.MainColor = this.mainColor;
 
                 contents = Host.Global.SlectedTool.Draw(contents);
-            }   
+            }
         }
 
         #endregion
@@ -181,11 +186,11 @@ namespace ClassicPaint
 
         #region do not use autoscroll
 
-        //protected override void OnScroll(ScrollEventArgs se)
-        //{  // using AutoScroll is bad Need fast  area update it sad
-        //    base.OnScroll(se);
-        //    this.Refresh();
-        //}
+        protected override void OnScroll(ScrollEventArgs se)
+        {  // using AutoScroll is bad Need fast  area update it sad
+            base.OnScroll(se);
+            this.Refresh();
+        }
         #endregion
 
         public DrawingCanvas()
@@ -196,11 +201,13 @@ namespace ClassicPaint
             ResizeRedraw = true;
 
             #region do not use autoscroll
-            //this.HorizontalScroll.SmallChange = 10;
-            //this.HorizontalScroll.LargeChange = 10;
-            //this.VerticalScroll.LargeChange = 10;
-            //this.VerticalScroll.SmallChange = 10;
-            //this.AutoScrollMinSize = new Size(10000,10000);
+            this.HorizontalScroll.SmallChange = 1;
+            this.HorizontalScroll.LargeChange = 51;
+            this.VerticalScroll.LargeChange = 10;
+            this.VerticalScroll.SmallChange = 10;
+            this.AutoScrollMinSize = new Size(10000, 10000);
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+
             #endregion
 
             this.Focus();
@@ -210,32 +217,6 @@ namespace ClassicPaint
             SetStyle(ControlStyles.Selectable, true);
             SetStyle(ControlStyles.ContainerControl, true);
 
-            VScrollBar vScrollBar1 = new VScrollBar();
-            // Dock the scroll bar to the right side of the form.
-            vScrollBar1.Dock = DockStyle.Right;
-
-            vScrollBar1.LargeChange = 5;
-            vScrollBar1.SmallChange = 5;
-            vScrollBar1.Value = 0;
-            vScrollBar1.Maximum = 100;
-            vScrollBar1.Minimum = 1;
-            vScrollBar1.Scroll += new ScrollEventHandler(vScrollBar1_Scroll);
-            // Add the scroll bar to the form.
-            Controls.Add(vScrollBar1);
-            HScrollBar hScrollBar1 = new HScrollBar();
-            // Dock the scroll bar to the right side of the form.
-            hScrollBar1.Location = new Point(0, this.Height - 25);
-            hScrollBar1.Dock = DockStyle.Bottom;
-
-            hScrollBar1.LargeChange = 5;
-            hScrollBar1.SmallChange = 5;
-            hScrollBar1.Value = 0;
-            hScrollBar1.Maximum = 100;
-            hScrollBar1.Minimum = 1;
-            hScrollBar1.Scroll += new ScrollEventHandler(hScrollBar1_Scroll);
-            // Add the scroll bar to the form.
-            Controls.Add(hScrollBar1);
-
             this.Bounds =
                 new Rectangle(borderSquareSize, borderSquareSize,
                               drawingArea.Width, drawingArea.Height);
@@ -243,50 +224,14 @@ namespace ClassicPaint
             BackgroundImageLayout = ImageLayout.Tile;
 
             drawingArea = new Size(defaultCancasWidth, defaultCanvasHeight);
-            contents = new Bitmap(drawingArea.Width, drawingArea.Height);
+            contents = new Bitmap(drawingArea.Width, drawingArea.Height, PixelFormat.Format32bppArgb);//new Bitmap(drawingArea.Width, drawingArea.Height);
 
             using (Graphics g = Graphics.FromImage(contents))
             {
                 g.FillRectangle(Brushes.White, drawingAreaStart.Width, drawingAreaStart.Height,
                                                 drawingArea.Width, drawingArea.Height);
             }
-        }
-
-        #region vertical and horizontal scroll handlers
-
-        void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
-        {
-            if (e.Type == ScrollEventType.SmallIncrement)
-            {
-                moove.Width += mooveStep;
-                moove = new Size(moove.Width, moove.Height);
-            }
-            if (e.Type == ScrollEventType.SmallDecrement)
-            {
-                moove.Width -= mooveStep;
-                moove = new Size(moove.Width, moove.Height);
-            }
-
-            Refresh();
-        }
-
-        void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
-        {
-            if (e.Type == ScrollEventType.SmallIncrement)
-            {
-                moove.Height += mooveStep;
-                moove = new Size(moove.Width, moove.Height);
-            }
-            if (e.Type == ScrollEventType.SmallDecrement)
-            {
-                moove.Height -= mooveStep;
-                moove = new Size(moove.Width, moove.Height);
-            }
-
-            Refresh();
-        }
-
-        #endregion
+        } 
 
         [System.ComponentModel.EditorBrowsableAttribute()]
         protected override void OnPaint(PaintEventArgs e)
@@ -294,19 +239,18 @@ namespace ClassicPaint
             base.OnPaint(e);
             Graphics g = e.Graphics;
 
+            moove.Width = this.AutoScrollPosition.X;
+            moove.Height = this.AutoScrollPosition.Y;
             int wd = drawingArea.Width + borderSquareSize + moove.Width;
             int ht = drawingArea.Height + borderSquareSize + moove.Height;
 
             SolidBrush sb = new SolidBrush(Color.Red);
 
-            g.DrawImage(contents, borderSquareSize + moove.Width,
-                                  borderSquareSize + moove.Height,
-                                  drawingArea.Width, drawingArea.Height);
-
             #region do not use autoscroll
-            //g.DrawImage(Contents,this.AutoScrollPosition.X,
-            //                      this.AutoScrollPosition.Y,
-            //                      drawingArea.Width, drawingArea.Height);
+
+            g.DrawImage(Contents, this.AutoScrollPosition.X + borderSquareSize,
+                                  this.AutoScrollPosition.Y + borderSquareSize,
+                                  drawingArea.Width, drawingArea.Height);
             #endregion
 
             g.FillRectangle(sb, moove.Width, moove.Height, borderSquareSize, borderSquareSize);

@@ -37,6 +37,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -45,6 +46,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -64,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Filters.cs" />
     <Compile Include="mainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +103,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Games.ico" />
+    <None Include="Resources\zoomIng.PNG" />
+    <None Include="Resources\zoomOut.PNG" />
+    <None Include="Resources\zoomIn.PNG" />
     <None Include="Resources\font.PNG" />
   </ItemGroup>
   <ItemGroup>
@@ -135,6 +141,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DialogManager\DialogManager.csproj">
+      <Project>{CF964FA8-F4E0-425F-8D31-DD2734B5A4A6}</Project>
+      <Name>DialogManager</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DrawingCanvas\DrawingCanvas.csproj">
       <Project>{5D06DC04-CC87-481F-9722-3B0E566CCED4}</Project>
       <Name>DrawingCanvas</Name>
