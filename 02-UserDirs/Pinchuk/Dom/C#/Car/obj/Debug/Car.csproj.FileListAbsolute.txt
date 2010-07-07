@@ -3,3 +3,5 @@ D:\Документи\КА ШАГ\REPOSITORIY\C#\Dom\Car\bin\Debug\Car.pdb
 D:\Документи\КА ШАГ\REPOSITORIY\C#\Dom\Car\obj\Debug\ResolveAssemblyReference.cache
 D:\Документи\КА ШАГ\REPOSITORIY\C#\Dom\Car\obj\Debug\Car.exe
 D:\Документи\КА ШАГ\REPOSITORIY\C#\Dom\Car\obj\Debug\Car.pdb
+D:\doc\КА ШАГ\REPOSITORY\13ns9-1spr\02-UserDirs\Pinchuk\Dom\C#\Car\obj\Debug\Car.exe
+D:\doc\КА ШАГ\REPOSITORY\13ns9-1spr\02-UserDirs\Pinchuk\Dom\C#\Car\obj\Debug\Car.pdb

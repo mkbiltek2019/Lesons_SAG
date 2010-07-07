@@ -11,8 +11,8 @@ namespace Car
         public Truck(string name, int speed)
         {
             this.Name = name;
-            this.MaxSpeed = 120;
-            this.Speed = speed;
+            this.MaxSpeed = 120 ;
+            this.Speed = speed ;
  
         }
 
