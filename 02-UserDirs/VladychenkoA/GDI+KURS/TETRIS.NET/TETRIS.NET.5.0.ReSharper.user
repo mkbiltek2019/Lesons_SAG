@@ -1,0 +1,221 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="3AE20AC1-0D1E-42E1-AC94-20E133817033/f:Square.cs" caret="1393" fromTop="51" />
+      <File id="3AE20AC1-0D1E-42E1-AC94-20E133817033/f:Rotation.cs" caret="219" fromTop="11" />
+      <File id="3AE20AC1-0D1E-42E1-AC94-20E133817033/f:GameItem.cs" caret="200" fromTop="10" />
+      <File id="3AE20AC1-0D1E-42E1-AC94-20E133817033/f:GameField.cs" caret="6785" fromTop="257" />
+      <File id="3AE20AC1-0D1E-42E1-AC94-20E133817033/f:Direction.cs" caret="193" fromTop="10" />
+      <File id="3AE20AC1-0D1E-42E1-AC94-20E133817033/f:BlockType.cs" caret="142" fromTop="6" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.Designer.cs" caret="14087" fromTop="19" />
+      <File id="3AE20AC1-0D1E-42E1-AC94-20E133817033/f:Block.cs" caret="4633" fromTop="12" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Program.cs" caret="475" fromTop="16" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form2.Designer.cs" caret="5343" fromTop="13" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form2.cs" caret="491" fromTop="11" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.cs" caret="1982" fromTop="5" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.Designer.cs" caret="14087" fromTop="13" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.Designer.cs" caret="14087" fromTop="19" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.cs" caret="5529" fromTop="24" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.cs" caret="5529" fromTop="114" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.cs" caret="5529" fromTop="5" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Program.cs" caret="99" fromTop="3" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Program.cs" caret="475" fromTop="16" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form2.cs" caret="469" fromTop="19" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form2.Designer.cs" caret="5343" fromTop="13" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form2.cs" caret="503" fromTop="11" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.cs" caret="5529" fromTop="16" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.cs" caret="1520" fromTop="8" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.cs" caret="2994" fromTop="9" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.cs" caret="2547" fromTop="7" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.cs" caret="3661" fromTop="13" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.cs" caret="3364" fromTop="14" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.cs" caret="3038" fromTop="19" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.cs" caret="5290" fromTop="14" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.cs" caret="2358" fromTop="13" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.cs" caret="4059" fromTop="20" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.cs" caret="2817" fromTop="13" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.cs" caret="474" fromTop="9" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.cs" caret="2817" fromTop="16" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.cs" caret="5529" fromTop="16" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.cs" caret="5493" fromTop="17" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.cs" caret="5493" fromTop="17" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.cs" caret="3954" fromTop="22" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.cs" caret="4096" fromTop="28" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.cs" caret="1749" fromTop="6" />
+      <File id="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F/f:Form1.cs" caret="1982" fromTop="5" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="Application`0" priority="1" />
+      <Item value="using" priority="7" />
+      <Item value="System" priority="7" />
+      <Item value="Drawing" priority="4" />
+      <Item value="public" priority="11" />
+      <Item value="protected" priority="2" />
+      <Item value="Color`0" priority="3" />
+      <Item value="Point`0" priority="1" />
+      <Item value="Size`0" priority="2" />
+      <Item value="get" priority="2" />
+      <Item value="return" priority="3" />
+      <Item value="fore" priority="2" />
+      <Item value="back" priority="2" />
+      <Item value="location" priority="6" />
+      <Item value="set" priority="0" />
+      <Item value="value" priority="0" />
+      <Item value="GameItem`0" priority="0" />
+      <Item value="Square`0" priority="0" />
+      <Item value="Drawing2D" priority="0" />
+      <Item value="size" priority="7" />
+      <Item value="this" priority="2" />
+      <Item value="void" priority="4" />
+      <Item value="IntPtr`0" priority="1" />
+      <Item value="Graphics`0" priority="3" />
+      <Item value="hwnd" priority="0" />
+      <Item value="Rectangle`0" priority="1" />
+      <Item value="rectangle" priority="3" />
+      <Item value="new" priority="8" />
+      <Item value="Rectangle" priority="1" />
+      <Item value="GraphicsPath`0" priority="0" />
+      <Item value="path" priority="3" />
+      <Item value="GraphicsPath" priority="0" />
+      <Item value="PathGradientBrush`0" priority="0" />
+      <Item value="brush" priority="3" />
+      <Item value="PathGradientBrush" priority="0" />
+      <Item value="Color" priority="0" />
+      <Item value="surface" priority="1" />
+      <Item value="SolidBrush`0" priority="0" />
+      <Item value="Collections" priority="1" />
+      <Item value="GameField`0" priority="1" />
+      <Item value="TETRIS" priority="0" />
+      <Item value="TetrisLib" priority="0" />
+      <Item value="int" priority="1" />
+      <Item value="ObjectBoard" priority="0" />
+      <Item value="sender" priority="0" />
+      <Item value="ObjectBoard`0" priority="0" />
+      <Item value="board" priority="1" />
+      <Item value="timer" priority="1" />
+      <Item value="true" priority="2" />
+      <Item value="private" priority="1" />
+      <Item value="Start`0" priority="1" />
+      <Item value="Pause`0" priority="0" />
+      <Item value="default" priority="0" />
+      <Item value="Microsoft" priority="0" />
+      <Item value="VisualBasic" priority="0" />
+      <Item value="Interaction`0" priority="0" />
+      <Item value="break" priority="0" />
+      <Item value="case" priority="0" />
+      <Item value="Keys`0" priority="0" />
+      <Item value="if" priority="1" />
+      <Item value="Form2`0" priority="2" />
+      <Item value="form2" priority="3" />
+      <Item value="Form2" priority="0" />
+      <Item value="static" priority="0" />
+      <Item value="TETRIS.NET" priority="0" />
+      <Item value="AboutBox1`0" priority="0" />
+      <Item value="aboutBox1" priority="1" />
+      <Item value="AboutBox1" priority="0" />
+      <Item value="DateTime`0" priority="1" />
+      <Item value="time" priority="1" />
+      <Item value="label5" priority="1" />
+      <Item value="timer1" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.Application">
+      <Item value="Exit`0" priority="0" />
+      <Item value="OpenForms" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TetrisLib.Square">
+      <Item value="fore" priority="0" />
+      <Item value="back" priority="0" />
+      <Item value="size" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Graphics">
+      <Item value="FromHwnd`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Point">
+      <Item value="X" priority="1" />
+      <Item value="Y" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Size">
+      <Item value="Width" priority="1" />
+      <Item value="Height" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Drawing2D.GraphicsPath">
+      <Item value="AddRectangle`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Drawing2D.PathGradientBrush">
+      <Item value="CenterColor" priority="0" />
+      <Item value="SurroundColors" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Graphics">
+      <Item value="FillPath`0" priority="0" />
+      <Item value="FillRectangle`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@TetrisLib.GameField">
+      <Item value="BackColor" priority="0" />
+      <Item value="SquareSize" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Timer">
+      <Item value="Start`0" priority="1" />
+      <Item value="Enabled" priority="2" />
+      <Item value="Interval" priority="0" />
+      <Item value="Stop`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.VisualBasic.Interaction">
+      <Item value="Beep`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.FormCollection">
+      <Item value="Indexer" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Form">
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TETRIS.NET.Form2">
+      <Item value="Show`0" priority="0" />
+      <Item value="Controls" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Control+ControlCollection">
+      <Item value="Indexer" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Control">
+      <Item value="Controls" priority="0" />
+      <Item value="Text" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Label">
+      <Item value="Text" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TETRIS.NET.AboutBox1">
+      <Item value="Show`0" priority="0" />
+      <Item value="ShowDialog`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="Second" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

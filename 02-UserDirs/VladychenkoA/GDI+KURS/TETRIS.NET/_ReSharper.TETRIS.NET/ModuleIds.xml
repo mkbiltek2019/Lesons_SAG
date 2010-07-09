@@ -1,0 +1,4 @@
+<Modules>
+  <Module PersistentId="A417F528-A0B6-4C1C-9A5C-CDDA1805F43F" ModuleId="TETRIS.NET" />
+  <Module PersistentId="3AE20AC1-0D1E-42E1-AC94-20E133817033" ModuleId="TetrisLib" />
+</Modules>

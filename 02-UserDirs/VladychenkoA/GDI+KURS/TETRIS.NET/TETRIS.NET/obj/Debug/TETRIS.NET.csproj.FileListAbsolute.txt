@@ -1,0 +1,13 @@
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\TETRIS.NET\TETRIS.NET\obj\Debug\ResolveAssemblyReference.cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\TETRIS.NET\TETRIS.NET\obj\Debug\TETRIS.NET.TetrisNETForm.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\TETRIS.NET\TETRIS.NET\obj\Debug\TETRIS.NET.Form2.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\TETRIS.NET\TETRIS.NET\obj\Debug\TETRIS.NET.Properties.Resources.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\TETRIS.NET\TETRIS.NET\obj\Debug\TETRIS.NET.csproj.GenerateResource.Cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\TETRIS.NET\TETRIS.NET\bin\Debug\TETRIS.NET.exe.config
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\TETRIS.NET\TETRIS.NET\bin\Debug\TETRIS.NET.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\TETRIS.NET\TETRIS.NET\bin\Debug\TETRIS.NET.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\TETRIS.NET\TETRIS.NET\bin\Debug\TetrisLib.dll
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\TETRIS.NET\TETRIS.NET\bin\Debug\TetrisLib.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\TETRIS.NET\TETRIS.NET\obj\Debug\TETRIS.NET.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\TETRIS.NET\TETRIS.NET\obj\Debug\TETRIS.NET.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\TETRIS.NET\TETRIS.NET\obj\Debug\TETRIS.NET.AboutBox1.resources

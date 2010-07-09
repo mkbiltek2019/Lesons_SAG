@@ -1,0 +1,5 @@
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\TETRIS.NET\TetrisLib\obj\Debug\ResolveAssemblyReference.cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\TETRIS.NET\TetrisLib\bin\Debug\TetrisLib.dll
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\TETRIS.NET\TetrisLib\bin\Debug\TetrisLib.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\TETRIS.NET\TetrisLib\obj\Debug\TetrisLib.dll
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\TETRIS.NET\TetrisLib\obj\Debug\TetrisLib.pdb
