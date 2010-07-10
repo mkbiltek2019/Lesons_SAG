@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Cucumbers>
+	<Cucumber>
+		<PricePerDot>1</PricePerDot>
+		<DotsCount>5</DotsCount>
+		<Color>Blue</Color>
+	</Cucumber>
+	<Cucumber>
+		<PricePerDot>5</PricePerDot>
+		<DotsCount>1500</DotsCount>
+		<Color>Violet</Color>
+	</Cucumber>
+	<Cucumber>
+		<PricePerDot>1</PricePerDot>
+		<DotsCount>42</DotsCount>
+		<Color>Green</Color>
+	</Cucumber>
+</Cucumbers>
