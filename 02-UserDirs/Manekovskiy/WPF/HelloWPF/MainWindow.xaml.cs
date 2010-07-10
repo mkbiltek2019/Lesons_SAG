@@ -29,22 +29,22 @@ namespace HelloWPF
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            cucumbers = CucumberStore.LoadCucumbers()
-                .ToList();
-            foreach (Cucumber cucumber in cucumbers)
-	        {
-                TextBlock cucumberTextBlock = new TextBlock() { FontSize = 16, Background = new SolidColorBrush(cucumber.Color) };
-                cucumberTextBlock.Inlines.Add(new Bold(new Run("Color:")));
-                cucumberTextBlock.Inlines.Add(new Run(cucumber.Color + Environment.NewLine));
+            //cucumbers = CucumberStore.LoadCucumbers()
+            //    .ToList();
+            //foreach (Cucumber cucumber in cucumbers)
+            //{
+            //    TextBlock cucumberTextBlock = new TextBlock() { FontSize = 16, Background = new SolidColorBrush(cucumber.Color) };
+            //    cucumberTextBlock.Inlines.Add(new Bold(new Run("Color:")));
+            //    cucumberTextBlock.Inlines.Add(new Run(cucumber.Color + Environment.NewLine));
 
-                cucumberTextBlock.Inlines.Add(new Bold(new Run("Dots:")));
-                cucumberTextBlock.Inlines.Add(new Run(cucumber.DotsCount + Environment.NewLine));
+            //    cucumberTextBlock.Inlines.Add(new Bold(new Run("Dots:")));
+            //    cucumberTextBlock.Inlines.Add(new Run(cucumber.DotsCount + Environment.NewLine));
 
-                cucumberTextBlock.Inlines.Add(new Bold(new Run("Price:")));
-                cucumberTextBlock.Inlines.Add(new Run(cucumber.TotalPrice + Environment.NewLine));
+            //    cucumberTextBlock.Inlines.Add(new Bold(new Run("Price:")));
+            //    cucumberTextBlock.Inlines.Add(new Run(cucumber.TotalPrice + Environment.NewLine));
 
-                CucumberStackPanel.Children.Add(cucumberTextBlock);
-	        }
+            //    CucumberStackPanel.Children.Add(cucumberTextBlock);
+            //}
         }
     }
 }

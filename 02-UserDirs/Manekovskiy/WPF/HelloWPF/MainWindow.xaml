@@ -6,12 +6,24 @@
     Height="270" 
     Width="274">
     <Grid ShowGridLines="True">
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.5, 0" EndPoint="0.5, 1">
+                <GradientStop Color="Red" Offset="0"></GradientStop>
+                <GradientStop Color="Orange" Offset="0.16"></GradientStop>
+                <GradientStop Color="Yellow" Offset="0.32"></GradientStop>
+                <GradientStop Color="Green" Offset="0.48"></GradientStop>
+                <GradientStop Color="Aquamarine" Offset="0.64"></GradientStop>
+                <GradientStop Color="Blue" Offset="0.8"></GradientStop>
+                <GradientStop Color="Magenta" Offset="0.96"></GradientStop>
+            </LinearGradientBrush>
+        </Grid.Background>
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="2*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         
-        <Button Grid.Column="0"
+        <!--<Button Grid.Column="0"
                 Margin="5"
                 Click="Button_Click">
             <Run FontSize="16">Hello WPF!</Run>
@@ -19,6 +31,6 @@
         
         <StackPanel Grid.Column="1"
                     Name="CucumberStackPanel">
-        </StackPanel>
+        </StackPanel>-->
     </Grid>
 </Window>
