@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -25,14 +26,30 @@ namespace HelloWPF
         public Window1()
         {
             InitializeComponent();
+
+            LoadColorToComboBox(this.colorComboBox);
+
+            cucumbers = CucumberStore.LoadCucumbers()
+               .ToList();
+        }
+
+        private void LoadColorToComboBox(ComboBox comboBox)
+        {
+            Type colors = typeof(Colors);
+            PropertyInfo[] colorInfo = colors.GetProperties(BindingFlags.Public |
+                BindingFlags.Static);
+            foreach (PropertyInfo info in colorInfo)
+            {
+                comboBox.Items.Add(info.Name);
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            cucumbers = CucumberStore.LoadCucumbers()
-                .ToList();
+            this.cucumberListBox.Items.Clear();
+           
             foreach (Cucumber cucumber in cucumbers)
-	        {
+	        { 
                 TextBlock cucumberTextBlock = new TextBlock() { FontSize = 16, Background = new SolidColorBrush(cucumber.Color) };
                 cucumberTextBlock.Inlines.Add(new Bold(new Run("Color:")));
                 cucumberTextBlock.Inlines.Add(new Run(cucumber.Color + Environment.NewLine));
@@ -43,8 +60,26 @@ namespace HelloWPF
                 cucumberTextBlock.Inlines.Add(new Bold(new Run("Price:")));
                 cucumberTextBlock.Inlines.Add(new Run(cucumber.TotalPrice + Environment.NewLine));
 
-                CucumberStackPanel.Children.Add(cucumberTextBlock);
+                cucumberListBox.Items.Add(cucumberTextBlock);
 	        }
+
+            //cucumberListBox.Height = this.CucumberStackPanel.Height;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {   // cucumber add
+
+            int dots = Convert.ToInt32(this.dotsTextBox.Text);
+            int pricePerDot = Convert.ToInt32(this.pricePerDotTextBox.Text);
+            Color color = (Color)ColorConverter.ConvertFromString(colorComboBox.SelectedItem.ToString());
+
+            cucumbers.Add(new Cucumber()
+                              {
+                                  DotsCount = dots,
+                                  Color = color,
+                                  PricePerDot = pricePerDot 
+                              });
+
         }
     }
 }
