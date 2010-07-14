@@ -23,5 +23,15 @@ namespace FirstWPF
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            //firstColorComboBox.Items.Add( )
+            //foreach (Color color in Colors.)
+            //{
+                
+            //}
+            
+        }
     }
 }
