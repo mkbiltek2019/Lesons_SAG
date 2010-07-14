@@ -61,7 +61,7 @@ namespace HelloWPF.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на 100.
+        ///   Ищет локализованную строку, похожую на 125.
         /// </summary>
         internal static string DeltaForms {
             get {
@@ -70,7 +70,7 @@ namespace HelloWPF.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на 25.
+        ///   Ищет локализованную строку, похожую на 0.
         /// </summary>
         internal static string EpanderWidthCollapsed {
             get {
@@ -79,7 +79,7 @@ namespace HelloWPF.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на 125.
+        ///   Ищет локализованную строку, похожую на 150.
         /// </summary>
         internal static string EpanderWidthExpandet {
             get {

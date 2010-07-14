@@ -22,18 +22,29 @@ namespace HelloWPF
     {
         List<Cucumber> cucumbers;
 
+        private TextBlock cucumberTextBlock;
+
         public Window1()
         {
             InitializeComponent();
+            cucumberTextBlock = new TextBlock() { FontSize = 16};
+            CucumberStackPanel.Children.Add(cucumberTextBlock);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             cucumbers = CucumberStore.LoadCucumbers()
                 .ToList();
+            RefrechCucumberr();
+        }
+
+        private void RefrechCucumberr()
+        {
             foreach (Cucumber cucumber in cucumbers)
             {
-                TextBlock cucumberTextBlock = new TextBlock() { FontSize = 16, Background = new SolidColorBrush(cucumber.Color) };
+                //cucumberTextBlock;
+
+               // TextBlock cucumberTextBlock = new TextBlock() { FontSize = 16, Background = new SolidColorBrush(cucumber.Color) };
                 cucumberTextBlock.Inlines.Add(new Bold(new Run("Color:")));
                 cucumberTextBlock.Inlines.Add(new Run(cucumber.Color + Environment.NewLine));
 
@@ -43,9 +54,10 @@ namespace HelloWPF
                 cucumberTextBlock.Inlines.Add(new Bold(new Run("Price:")));
                 cucumberTextBlock.Inlines.Add(new Run(cucumber.TotalPrice + Environment.NewLine));
 
-                CucumberStackPanel.Children.Add(cucumberTextBlock);
+                
             }
         }
+
 
         private void expander_Expanded(object sender, RoutedEventArgs e)
         {
@@ -57,6 +69,11 @@ namespace HelloWPF
         {
             grid.ColumnDefinitions.ElementAtOrDefault(2).Width = new GridLength(Convert.ToDouble(Properties.Resources.EpanderWidthCollapsed), GridUnitType.Pixel); ;
             MyWindows.Width = MyWindows.Width - Convert.ToDouble(Properties.Resources.DeltaForms);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

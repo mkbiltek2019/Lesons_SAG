@@ -118,12 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DeltaForms" xml:space="preserve">
-    <value>100</value>
+    <value>125</value>
   </data>
   <data name="EpanderWidthCollapsed" xml:space="preserve">
-    <value>25</value>
+    <value>0</value>
   </data>
   <data name="EpanderWidthExpandet" xml:space="preserve">
-    <value>125</value>
+    <value>150</value>
   </data>
 </root>

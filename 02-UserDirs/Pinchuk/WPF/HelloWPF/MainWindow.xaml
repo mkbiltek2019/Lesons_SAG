@@ -7,6 +7,9 @@
     Width="449"
     Name="MyWindows">
     <Grid ShowGridLines="True" Name="grid">
+        <Grid.Resources>
+            
+        </Grid.Resources>
         <!--<Grid.Background>
             <LinearGradientBrush StartPoint="0.5, 0" EndPoint="0.5, 1">
                 <GradientStop Color="Red" Offset="0"></GradientStop>
@@ -22,27 +25,49 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="2*"></ColumnDefinition>
-            <ColumnDefinition Width="25" Name="exapnderColumn"></ColumnDefinition>
+            <ColumnDefinition Width="0" Name="exapnderColumn"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         
         <Button Grid.Column="0"
                 Margin="5"
                 Click="Button_Click"
-				Style=""{DynamicResource HelloWpf}"">
+				Style="{DynamicResource HelloWpf}">
             <Run FontSize="16">Hello WPF!</Run>
         </Button>
         
         <StackPanel Grid.Column="1"
                     Name="CucumberStackPanel">
         </StackPanel>
-        <Expander Grid.Column="2" Name="expander" ExpandDirection="Right" VerticalAlignment="Center" Expanded="expander_Expanded" Collapsed="expander_Collapsed">
-            <StackPanel >
-                <TextBox></TextBox>
-                <Label></Label>
-                <TextBox></TextBox>
-                <Label></Label>
-                <TextBox></TextBox>
+        <Expander 
+            Grid.Column="1" 
+            Name="expander" 
+            ExpandDirection="Right" 
+            VerticalAlignment="Bottom" 
+            HorizontalAlignment="Right"
+            Expanded="expander_Expanded" 
+            Collapsed="expander_Collapsed"
+             Height="22">           
+        </Expander>
+        <StackPanel 
+           
+            Grid.Column="2"
+            VerticalAlignment="Stretch"
+            Margin="5,60,5,5">
+            <Label HorizontalAlignment="Center" FontWeight ="Bold" FontSize="14"  >Add Cucumber</Label>
+            <Label>Color</Label>
+            <TextBox></TextBox>
+            <Label>Dots</Label>
+            <TextBox></TextBox>
+            <Label>Price</Label>
+            <TextBox></TextBox>
+            <Button 
+                HorizontalAlignment="Right"
+                Content="Add"
+                Margin="5,5,0,5 "
+                Width="50"
+                Style="{DynamicResource HelloWpf}" Click="Button_Click_1">
+                
+            </Button>
             </StackPanel>
-        </Expander> 
     </Grid>
 </Window>
