@@ -22,29 +22,32 @@ namespace HelloWPF
     {
         List<Cucumber> cucumbers;
 
-        private TextBlock cucumberTextBlock;
 
         public Window1()
         {
             InitializeComponent();
-            cucumberTextBlock = new TextBlock() { FontSize = 16};
-            CucumberStackPanel.Children.Add(cucumberTextBlock);
+            
+           cucumbers = new List<Cucumber>();
+            
+           
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             cucumbers = CucumberStore.LoadCucumbers()
                 .ToList();
+           
             RefrechCucumberr();
         }
 
         private void RefrechCucumberr()
         {
+            CucumberStackPanel.Children.Clear();
+            
             foreach (Cucumber cucumber in cucumbers)
             {
-                //cucumberTextBlock;
+                TextBlock cucumberTextBlock = new TextBlock() { FontSize = 16, Background = new SolidColorBrush(cucumber.Color) };
 
-               // TextBlock cucumberTextBlock = new TextBlock() { FontSize = 16, Background = new SolidColorBrush(cucumber.Color) };
                 cucumberTextBlock.Inlines.Add(new Bold(new Run("Color:")));
                 cucumberTextBlock.Inlines.Add(new Run(cucumber.Color + Environment.NewLine));
 
@@ -54,7 +57,7 @@ namespace HelloWPF
                 cucumberTextBlock.Inlines.Add(new Bold(new Run("Price:")));
                 cucumberTextBlock.Inlines.Add(new Run(cucumber.TotalPrice + Environment.NewLine));
 
-                
+                CucumberStackPanel.Children.Add(cucumberTextBlock);
             }
         }
 
@@ -73,7 +76,23 @@ namespace HelloWPF
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+               
+                cucumbers.Add(new Cucumber()
+                {
+                    Color = (Color)ColorConverter.ConvertFromString(colorTextBox.Text),
+                    DotsCount = Convert.ToInt32(dotsTextBox.Text),
+                    PricePerDot = Convert.ToInt32(priceTextBox.Text)
+                });
+                RefrechCucumberr();
+            }
+            catch (Exception)
+            {
+               
+                MessageBox.Show("Error");
+            }
+            
         }
     }
 }

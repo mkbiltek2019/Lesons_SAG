@@ -79,7 +79,7 @@ namespace HelloWPF.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на 150.
+        ///   Ищет локализованную строку, похожую на 125.
         /// </summary>
         internal static string EpanderWidthExpandet {
             get {

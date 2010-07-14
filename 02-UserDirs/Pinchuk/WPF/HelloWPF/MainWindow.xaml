@@ -55,11 +55,21 @@
             Margin="5,60,5,5">
             <Label HorizontalAlignment="Center" FontWeight ="Bold" FontSize="14"  >Add Cucumber</Label>
             <Label>Color</Label>
-            <TextBox></TextBox>
+            <TextBox 
+                Name="colorTextBox">
+                <TextBox.Text>
+                    <Binding Path="Color" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <ExceptionValidationRule />
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+
+            </TextBox>
             <Label>Dots</Label>
-            <TextBox></TextBox>
+            <TextBox Name="dotsTextBox"></TextBox>
             <Label>Price</Label>
-            <TextBox></TextBox>
+            <TextBox Name="priceTextBox"></TextBox>
             <Button 
                 HorizontalAlignment="Right"
                 Content="Add"
