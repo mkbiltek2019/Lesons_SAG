@@ -3,10 +3,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     
     Title="Window1" 
-    Height="270" 
-    Width="274">
-    <Grid ShowGridLines="True">
-        <Grid.Background>
+    Height="401" 
+    Width="449"
+    Name="MyWindows">
+    <Grid ShowGridLines="True" Name="grid">
+        <!--<Grid.Background>
             <LinearGradientBrush StartPoint="0.5, 0" EndPoint="0.5, 1">
                 <GradientStop Color="Red" Offset="0"></GradientStop>
                 <GradientStop Color="Orange" Offset="0.16"></GradientStop>
@@ -16,14 +17,15 @@
                 <GradientStop Color="Blue" Offset="0.8"></GradientStop>
                 <GradientStop Color="Magenta" Offset="0.96"></GradientStop>
             </LinearGradientBrush>
-        </Grid.Background>
+        </Grid.Background>-->
         
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="25" Name="exapnderColumn"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         
-        <!--<Button Grid.Column="0"
+        <Button Grid.Column="0"
                 Margin="5"
                 Click="Button_Click">
             <Run FontSize="16">Hello WPF!</Run>
@@ -31,6 +33,15 @@
         
         <StackPanel Grid.Column="1"
                     Name="CucumberStackPanel">
-        </StackPanel>-->
+        </StackPanel>
+        <Expander Grid.Column="2" Name="expander" ExpandDirection="Right" VerticalAlignment="Center" Expanded="expander_Expanded" Collapsed="expander_Collapsed">
+            <StackPanel >
+                <TextBox></TextBox>
+                <Label></Label>
+                <TextBox></TextBox>
+                <Label></Label>
+                <TextBox></TextBox>
+            </StackPanel>
+        </Expander> 
     </Grid>
 </Window>

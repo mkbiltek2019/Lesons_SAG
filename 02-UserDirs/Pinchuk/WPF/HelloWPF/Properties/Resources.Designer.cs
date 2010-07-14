@@ -59,5 +59,32 @@ namespace HelloWPF.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 100.
+        /// </summary>
+        internal static string DeltaForms {
+            get {
+                return ResourceManager.GetString("DeltaForms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 25.
+        /// </summary>
+        internal static string EpanderWidthCollapsed {
+            get {
+                return ResourceManager.GetString("EpanderWidthCollapsed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 125.
+        /// </summary>
+        internal static string EpanderWidthExpandet {
+            get {
+                return ResourceManager.GetString("EpanderWidthExpandet", resourceCulture);
+            }
+        }
     }
 }
