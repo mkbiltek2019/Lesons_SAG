@@ -76,9 +76,16 @@
                 
                 <StackPanel.Background>
 
-                    <LinearGradientBrush  StartPoint="{ Binding ElementName=startPointer, Path=Text }" EndPoint="0.5, 1">
-                        <GradientStop Color="{ Binding ElementName=firstColorComboBox, Path=Text }" Offset="0"></GradientStop>
-                        <GradientStop Color="{ Binding ElementName=secondaryColorComboBox, Path=Text }" Offset="0.5"></GradientStop>
+                    <LinearGradientBrush 
+                        
+                        StartPoint="{ Binding ElementName=startPointer, Path=Text }" 
+                        EndPoint="0.5, 1">
+                        <GradientStop 
+                            Color="{ Binding ElementName=firstColorComboBox, Path=Text }" 
+                            Offset="0"></GradientStop>
+                        <GradientStop 
+                            Color="{ Binding ElementName=secondaryColorComboBox, Path=Text }" 
+                            Offset="0.5"></GradientStop>
                         
                     </LinearGradientBrush>
                     

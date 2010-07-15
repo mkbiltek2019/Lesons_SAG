@@ -26,12 +26,7 @@ namespace FirstWPF
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //firstColorComboBox.Items.Add( )
-            //foreach (Color color in Colors.)
-            //{
-                
-            //}
-            //Colors.
+           sliderColor.i
             
         }
     }
