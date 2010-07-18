@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="mp3Collader_stored_procedures">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="WINDA1:WINDA1\Администратор">
+          <Created>2010-07-02T07:04:30.1245+03:00</Created>
+          <Type>SQL</Type>
+          <Server>WINDA1</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB>MediaLibrary</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="Database_Creation_Script.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WINDA1:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WINDA1</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Database_Creation_Script.sql</FullPath>
+        </FileNode>
+        <FileNode Name="PathInsert_SP.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WINDA1:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WINDA1</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>PathInsert_SP.sql</FullPath>
+        </FileNode>
+        <FileNode Name="AlbumInsert_SP.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WINDA1:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WINDA1</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>AlbumInsert_SP.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GenreInsert_SP.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WINDA1:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WINDA1</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>GenreInsert_SP.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BitrateInsert_SP.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WINDA1:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WINDA1</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>BitrateInsert_SP.sql</FullPath>
+        </FileNode>
+        <FileNode Name="MainView.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WINDA1:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WINDA1</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>MainView.sql</FullPath>
+        </FileNode>
+        <FileNode Name="VIEW_LIST.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WINDA1:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WINDA1</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>VIEW_LIST.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SelectALLWithPaging_SP.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WINDA1:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WINDA1</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SelectALLWithPaging_SP.sql</FullPath>
+        </FileNode>
+        <FileNode Name="TrancateAllTables.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WINDA1:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WINDA1</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>TrancateAllTables.sql</FullPath>
+        </FileNode>
+        <FileNode Name="TrackInsert_SP.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WINDA1:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WINDA1</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>TrackInsert_SP.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ArtistInsert_SP.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WINDA1:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WINDA1</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>ArtistInsert_SP.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>
