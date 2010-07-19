@@ -8,8 +8,7 @@ namespace mp3Collader.Instance
     public class ExecuteStoredProcWithParam
     {
         private DbCommand dbCommand;
-        public int resultValue = 0;
-
+       
         public ExecuteStoredProcWithParam(Database dataBase, string storedProcedureName)
         {
             dbCommand = dataBase.GetStoredProcCommand(storedProcedureName);
@@ -29,10 +28,10 @@ namespace mp3Collader.Instance
                DataRowVersion.Default, null);
         }
 
-        public void ExecuteSpSetResultValue(Database database, string returnParameterName)
+        public int ExecuteSpSetResultValue(Database database, string returnParameterName)
         {
             database.ExecuteNonQuery(dbCommand);
-            resultValue = Convert.ToInt32(database.GetParameterValue(dbCommand, returnParameterName));
+            return Convert.ToInt32(database.GetParameterValue(dbCommand, returnParameterName));
         }
     }
 }

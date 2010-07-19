@@ -1,18 +1,24 @@
-﻿using System;
-using System.Data.Common;
-using System.Data.Odbc;
+﻿using System.Data.Common;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 
 namespace mp3Collader.Instance
 {
     public class SimpleParameterMapper : IParameterMapper
     {
+       // public object[] ParameterValues;
+
         public void AssignParameters(DbCommand command, object[] parameterValues)
         {
-            foreach (object parameterValue in parameterValues)
+            if (parameterValues != null)
             {
-              command.Parameters.Add(parameterValue);
-            } 
+                foreach (ParameterItem parameterValue in parameterValues)
+                {
+                    DbParameter parameter = command.CreateParameter();
+                    parameter.ParameterName = parameterValue.ParameterName;
+                    parameter.Value = parameterValue.ParameterValue;
+                    command.Parameters.Add(parameter);
+                }
+            }
         }
     }
 
