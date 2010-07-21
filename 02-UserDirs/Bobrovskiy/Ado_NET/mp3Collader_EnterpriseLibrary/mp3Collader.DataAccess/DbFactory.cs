@@ -1,10 +1,11 @@
-﻿using Microsoft.Practices.EnterpriseLibrary.Data.Sql;
+﻿using Microsoft.Practices.EnterpriseLibrary.Data;
+using Microsoft.Practices.EnterpriseLibrary.Data.Sql;
 
 namespace mp3Collader.DataAccess
 {
     public class DbFactory
     {
-        public SqlDatabase CreateDatabase()
+        public Database CreateDatabase()
         {
           return  new SqlDatabase(DBConnectionFactory.GetConnection().ConnectionString);
         }

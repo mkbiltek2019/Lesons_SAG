@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using Microsoft.Practices.EnterpriseLibrary.Data;
@@ -17,7 +19,6 @@ namespace mp3Collader
         // fill dataBase with data
         private AudioFileManager.AudioFileManager audioFileManager = null;
 
-        private Database database;
         private TableController tableController;
 
         private int currentPage = 1;
@@ -78,15 +79,17 @@ namespace mp3Collader
                 fileNameComboBox.Items.Clear();
             }
 
-            foreach (Model.ResultTable value in tableController.GetListByTableName(TableList.FileName))
+            foreach (Model.SimpleTable value in tableController.GetListByTableName(TableList.FileName))
             {
-                fileNameComboBox.Items.Add(value.FileName);
+                fileNameComboBox.Items.Add(value.Name);
             }
             
         }
 
         private void FillDataGridViewWithFilter()
         {
+            mainDataGridView.Columns.Clear();
+
             tableController = new TableController();
 
             string album = string.Empty;
@@ -138,7 +141,7 @@ namespace mp3Collader
                     fileName));
                 if (datasource != null)
                 {
-                    mainDataGridView.DataSource = datasource;
+                    mainDataGridView.DataSource = (IList)datasource;
                 }
             }
             catch (Exception exception)
@@ -196,9 +199,9 @@ namespace mp3Collader
             StoreRenamedFilesToSelectedDirectory(tableController.ResultList);
         }
 
-        private void StoreRenamedFilesToSelectedDirectory(System.Collections.Generic.List<global::Model.ResultTable> list)
+        private void StoreRenamedFilesToSelectedDirectory(List<Model.ResultTable> list)
         {
-            audioFileManager.StoreFileList(tableController.ResultList);
+            audioFileManager.StoreFileList(list);
         }
 
         private void clearDatabaseToolStripMenuItem_Click(object sender, EventArgs e)

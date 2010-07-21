@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using FileSearcherBackgroundWorker;
 using FillDataBaseBackgroundWorker;
+using Model;
 using MyBackgroundWorker;
 
 namespace AudioFileManager
@@ -36,7 +37,7 @@ namespace AudioFileManager
             fileWorker.ShowDialog();
         }
 
-        public void StoreFileList(List<Model.ResultTable> fileList)
+        public void StoreFileList(List<ResultTable> fileList)
         {
             SaveForm dialog = new SaveForm(fileList);
             dialog.ShowDialog();

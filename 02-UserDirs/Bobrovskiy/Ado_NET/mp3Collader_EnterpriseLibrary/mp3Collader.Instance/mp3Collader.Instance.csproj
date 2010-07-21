@@ -50,17 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataBaseObjectCreator.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="ExecuteNonQuery.cs" />
+    <Compile Include="ParameterItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleParameterMapper.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\mp3Collader.Model\mp3Collader.Model.csproj">
-      <Project>{481DFB32-596F-4BC4-92FC-3846C49F608A}</Project>
-      <Name>mp3Collader.Model</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

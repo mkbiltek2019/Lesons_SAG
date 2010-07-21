@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Windows.Forms;
+using Model;
 
 namespace MyBackgroundWorker
 {
     public partial class SaveForm : Form
     {
-        public SaveForm(List<Model.ResultTable> fileList)
+        public SaveForm(List<ResultTable> fileList)
         {
             InitializeComponent();
             if (result != null)
@@ -38,8 +39,8 @@ namespace MyBackgroundWorker
             foreach (Model.ResultTable res in result)
             {
                 //store files
-                string sourceFile = res.PathName + @"\" + res.FileName;
-                string destFile = folderPath + @"\" + res.NewFileName + @".mp3";
+                string sourceFile = res.FullPath + @"\" + res.FileName;
+                string destFile = folderPath + @"\" + res.NewName + @".mp3";
                // File.Move(sourceFile, destFile);
                 try
                 {

@@ -7,7 +7,7 @@ namespace mp3Collader.Instance
 {
     public interface IDataProvider<TResultTable> where TResultTable : new()
     {
-        IEnumerable<TResultTable> GetDataFromStoredProcedureAccessor(Database database, object[] param);
+        IEnumerable<TResultTable> GetDataFromStoredProcedureAccessor(Database database, object[] param, IRowMapper<TResultTable> mapper);
         
         string StoredProcedureName
         {
@@ -64,22 +64,14 @@ namespace mp3Collader.Instance
             }
         }
 
-        public IEnumerable<TResultTable> GetDataFromStoredProcedureAccessor(Database database, object[] param)
+        public IEnumerable<TResultTable> GetDataFromStoredProcedureAccessor(Database database, object[] param, IRowMapper<TResultTable> mapper)
         {
             IParameterMapper paramMapper = new SimpleParameterMapper();
-           // ((SimpleParameterMapper)paramMapper).ParameterValues = dbParameterValues;
-
-            IRowMapper<TResultTable> rowMapper = 
-                MapBuilder<TResultTable>.MapAllProperties().Build();
-
-            //DataAccessor<TResultTable> accessor = database.CreateSprocAccessor(storedProcedureName,
-            // MapBuilder<TResultTable>.MapAllProperties().Build());
-
+         
             DataAccessor<TResultTable> accessor =
-                database.CreateSprocAccessor(storedProcedureName, paramMapper, rowMapper);  
-
-            // Execute the accessor to obtain the results
-            return accessor.Execute();
+                database.CreateSprocAccessor(storedProcedureName, paramMapper, mapper);
+           
+            return accessor.Execute(param);
         } 
 
     }
@@ -108,22 +100,18 @@ namespace mp3Collader.Instance
 
         private bool executionState = false;
 
-        public void RunAsync(Database database)
+        public void RunAsync(Database database, object[] param, IRowMapper<TResultTable> rowMapper)
         {
             try
             {
-                // Create the accessor. This example uses the simplest overload.
-                //var accessor = database.CreateSprocAccessor(storedProcedureName, mapper);
-
-                IParameterMapper paramMapper = new SimpleParameterMapper();
-                IRowMapper<TResultTable> rowMapper = MapBuilder<TResultTable>.BuildAllProperties();
-
+               IParameterMapper paramMapper = new SimpleParameterMapper();
+             
                 DataAccessor<TResultTable> accessor =
                     database.CreateSprocAccessor(StoredProcedureName, paramMapper, rowMapper);
 
                 // Execute the accessor asynchronously, passing in the callback handler, 
                 // the existing accessor as the AsyncState, and the parameter values.
-                IAsyncResult async = accessor.BeginExecute(MyEndExecuteCallback, accessor, dbParameterValues);
+                IAsyncResult async = accessor.BeginExecute(MyEndExecuteCallback, accessor, param);
             }
             catch
             {

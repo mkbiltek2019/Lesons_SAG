@@ -5,8 +5,6 @@ namespace mp3Collader.Instance
 {
     public class SimpleParameterMapper : IParameterMapper
     {
-       // public object[] ParameterValues;
-
         public void AssignParameters(DbCommand command, object[] parameterValues)
         {
             if (parameterValues != null)

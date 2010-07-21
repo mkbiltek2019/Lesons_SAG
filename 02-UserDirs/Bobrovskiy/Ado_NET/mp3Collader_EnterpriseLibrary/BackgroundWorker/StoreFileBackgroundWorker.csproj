@@ -59,9 +59,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\mp3Collader.Model\mp3Collader.Model.csproj">
-      <Project>{481DFB32-596F-4BC4-92FC-3846C49F608A}</Project>
-      <Name>mp3Collader.Model</Name>
+    <ProjectReference Include="..\mp3Collader.DataAccess\mp3Collader.DataAccess.csproj">
+      <Project>{3AF6542D-40D3-46F2-A938-453DD86E7F51}</Project>
+      <Name>mp3Collader.DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

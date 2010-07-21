@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -47,9 +48,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\TableController.cs" />
+    <Compile Include="Controllers\TableResourses.cs" />
     <Compile Include="DBConnectionFactory.cs" />
     <Compile Include="DbFactory.cs" />
+    <Compile Include="Model\Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AudioFileTagger\AudioFileTagger.csproj">
+      <Project>{21262864-EDD4-42DB-A6C5-894EC4B8161A}</Project>
+      <Name>AudioFileTagger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mp3Collader.Instance\mp3Collader.Instance.csproj">
+      <Project>{A6226458-82C1-4ACB-A8D7-DEBC103CD6B3}</Project>
+      <Name>mp3Collader.Instance</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
