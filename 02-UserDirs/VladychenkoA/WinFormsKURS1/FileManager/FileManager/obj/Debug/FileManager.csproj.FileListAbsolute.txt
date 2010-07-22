@@ -1,0 +1,27 @@
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\FileManager\FileManager\bin\Debug\FileManager.exe
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\FileManager\FileManager\bin\Debug\FileManager.pdb
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\FileManager\FileManager\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\FileManager\FileManager\obj\Debug\FileManager.Form1.resources
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\FileManager\FileManager\obj\Debug\FileManager.Properties.Resources.resources
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\FileManager\FileManager\obj\Debug\FileManager.csproj.GenerateResource.Cache
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\FileManager\FileManager\obj\Debug\FileManager.exe
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\FileManager\FileManager\obj\Debug\FileManager.pdb
+C:\Users\Администратор\Documents\Visual Studio 2008\Projects\FileManager\FileManager\obj\Debug\FileManager.FileListPanel.resources
+D:\vista 3-5 2010\Documents\Visual Studio 2008\Projects\FileManager\FileManager\obj\Debug\FileManager.exe
+D:\vista 3-5 2010\Documents\Visual Studio 2008\Projects\FileManager\FileManager\obj\Debug\FileManager.pdb
+D:\vista 3-5 2010\Documents\Visual Studio 2008\Projects\FileManager\FileManager\obj\Debug\ResolveAssemblyReference.cache
+D:\vista 3-5 2010\Documents\Visual Studio 2008\Projects\FileManager\FileManager\obj\Debug\FileManager.Form1.resources
+D:\vista 3-5 2010\Documents\Visual Studio 2008\Projects\FileManager\FileManager\obj\Debug\FileManager.Properties.Resources.resources
+D:\vista 3-5 2010\Documents\Visual Studio 2008\Projects\FileManager\FileManager\obj\Debug\FileManager.csproj.GenerateResource.Cache
+D:\vista 3-5 2010\Documents\Visual Studio 2008\Projects\FileManager\FileManager\bin\Debug\FileManager.exe
+D:\vista 3-5 2010\Documents\Visual Studio 2008\Projects\FileManager\FileManager\bin\Debug\FileManager.pdb
+D:\vista 3-5 2010\Documents\Visual Studio 2008\Projects\FileManager\FileManager\obj\Debug\FileManager.FileListPanel.resources
+D:\ОС old\Vista\vista 3-5 2010\Documents\Visual Studio 2008\Projects\FileManager\FileManager\obj\Debug\FileManager.exe
+D:\ОС old\Vista\vista 3-5 2010\Documents\Visual Studio 2008\Projects\FileManager\FileManager\obj\Debug\FileManager.pdb
+D:\ОС old\Vista\vista 3-5 2010\Documents\Visual Studio 2008\Projects\FileManager\FileManager\bin\Debug\FileManager.exe
+D:\ОС old\Vista\vista 3-5 2010\Documents\Visual Studio 2008\Projects\FileManager\FileManager\bin\Debug\FileManager.pdb
+D:\ОС old\Vista\vista 3-5 2010\Documents\Visual Studio 2008\Projects\FileManager\FileManager\obj\Debug\ResolveAssemblyReference.cache
+D:\ОС old\Vista\vista 3-5 2010\Documents\Visual Studio 2008\Projects\FileManager\FileManager\obj\Debug\FileManager.FileListPanel.resources
+D:\ОС old\Vista\vista 3-5 2010\Documents\Visual Studio 2008\Projects\FileManager\FileManager\obj\Debug\FileManager.Form1.resources
+D:\ОС old\Vista\vista 3-5 2010\Documents\Visual Studio 2008\Projects\FileManager\FileManager\obj\Debug\FileManager.Properties.Resources.resources
+D:\ОС old\Vista\vista 3-5 2010\Documents\Visual Studio 2008\Projects\FileManager\FileManager\obj\Debug\FileManager.csproj.GenerateResource.Cache

@@ -1,0 +1,149 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListPanel.Designer.cs" caret="6467" fromTop="20" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:Form1.Designer.cs" caret="21511" fromTop="13" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListView.cs" caret="7762" fromTop="81" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListPanel.cs" caret="3990" fromTop="24" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:Form1.cs" caret="442" fromTop="16" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListView.cs" caret="6057" fromTop="10" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListView.cs" caret="5144" fromTop="4" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListView.cs" caret="7092" fromTop="14" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListView.cs" caret="5401" fromTop="22" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListView.cs" caret="7016" fromTop="24" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListView.cs" caret="7515" fromTop="21" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListView.cs" caret="4837" fromTop="5" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListView.cs" caret="7050" fromTop="25" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListView.cs" caret="7050" fromTop="11" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListView.cs" caret="6893" fromTop="8" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListView.cs" caret="194" fromTop="9" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListView.cs" caret="7934" fromTop="28" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListView.cs" caret="4576" fromTop="28" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListPanel.cs" caret="313" fromTop="10" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListPanel.cs" caret="2021" fromTop="18" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListPanel.cs" caret="2307" fromTop="25" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:Form1.Designer.cs" caret="21511" fromTop="13" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:Form1.Designer.cs" caret="24244" fromTop="17" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListPanel.cs" caret="1581" fromTop="36" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListPanel.cs" caret="2561" fromTop="25" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListPanel.cs" caret="3051" fromTop="21" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListPanel.cs" caret="1148" fromTop="26" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListPanel.cs" caret="877" fromTop="20" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListPanel.cs" caret="1865" fromTop="13" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListPanel.cs" caret="3256" fromTop="20" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListPanel.cs" caret="6498" fromTop="28" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListPanel.cs" caret="3824" fromTop="9" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListPanel.cs" caret="5841" fromTop="4" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:FileListPanel.cs" caret="3880" fromTop="13" />
+      <File id="68CD7B0D-4EEE-40D8-8FE0-EBA2F4697761/f:Form1.cs" caret="442" fromTop="16" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerMSTest>
+    <UseTestRunConfigFromMetadataFile>False</UseTestRunConfigFromMetadataFile>
+  </UnitTestRunnerMSTest>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="using" priority="2" />
+      <Item value="System" priority="2" />
+      <Item value="Drawing" priority="0" />
+      <Item value="Windows.Forms" priority="0" />
+      <Item value="IO" priority="0" />
+      <Item value="public" priority="10" />
+      <Item value="class" priority="0" />
+      <Item value="event" priority="0" />
+      <Item value="MouseEventHandler" priority="0" />
+      <Item value="void" priority="1" />
+      <Item value="fileListPanel1" priority="2" />
+      <Item value="string" priority="7" />
+      <Item value="FileListView`0" priority="1" />
+      <Item value="DirectoryInfo`0" priority="4" />
+      <Item value="directoryInfo" priority="1" />
+      <Item value="try" priority="0" />
+      <Item value="ListView`0" priority="2" />
+      <Item value="listView" priority="2" />
+      <Item value="private" priority="1" />
+      <Item value="ImageList`0" priority="5" />
+      <Item value="get" priority="2" />
+      <Item value="return" priority="2" />
+      <Item value="set" priority="2" />
+      <Item value="value" priority="2" />
+      <Item value="smallImageList" priority="7" />
+      <Item value="bigImageList" priority="9" />
+      <Item value="listView1" priority="2" />
+      <Item value="View`0" priority="0" />
+      <Item value="comboBox1" priority="0" />
+      <Item value="fileListView" priority="5" />
+      <Item value="new" priority="13" />
+      <Item value="FileListView" priority="0" />
+      <Item value="DirectoryInfo" priority="1" />
+      <Item value="BigImmageList" priority="0" />
+      <Item value="FileListPanel`0" priority="3" />
+      <Item value="FileListPanel" priority="1" />
+      <Item value="fileListPanel" priority="0" />
+      <Item value="ImageList" priority="3" />
+      <Item value="Image`0" priority="1" />
+      <Item value="Icon" priority="1" />
+      <Item value="GetType`0" priority="3" />
+      <Item value="Size" priority="1" />
+      <Item value="this" priority="0" />
+      <Item value="fileListPanel2" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FileManager.FileListPanel">
+      <Item value="ShowList`0" priority="0" />
+      <Item value="ViewFileListPanel`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListView">
+      <Item value="Items" priority="0" />
+      <Item value="View" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ComboBox">
+      <Item value="SelectedIndex" priority="0" />
+      <Item value="SelectedItem" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FileManager.FileListView">
+      <Item value="ListView" priority="1" />
+      <Item value="SmallImageList" priority="0" />
+      <Item value="BigImmageList" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ImageList">
+      <Item value="CreateObjRef`0" priority="0" />
+      <Item value="Tag" priority="1" />
+      <Item value="Images" priority="4" />
+      <Item value="Site" priority="0" />
+      <Item value="ImageSize" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.ImageList">
+      <Item value="ImageCollection`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ImageList+ImageCollection">
+      <Item value="SetKeyName`0" priority="1" />
+      <Item value="Add`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Image">
+      <Item value="FromFile`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int32">
+      <Item value="MinValue" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>
