@@ -25,3 +25,12 @@ D:\ОС old\Vista\vista 3-5 2010\Documents\Visual Studio 2008\Projects\FileManag
 D:\ОС old\Vista\vista 3-5 2010\Documents\Visual Studio 2008\Projects\FileManager\FileManager\obj\Debug\FileManager.Form1.resources
 D:\ОС old\Vista\vista 3-5 2010\Documents\Visual Studio 2008\Projects\FileManager\FileManager\obj\Debug\FileManager.Properties.Resources.resources
 D:\ОС old\Vista\vista 3-5 2010\Documents\Visual Studio 2008\Projects\FileManager\FileManager\obj\Debug\FileManager.csproj.GenerateResource.Cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinFormsKURS1\FileManager\FileManager\obj\Debug\FileManager.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinFormsKURS1\FileManager\FileManager\obj\Debug\FileManager.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinFormsKURS1\FileManager\FileManager\bin\Debug\FileManager.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinFormsKURS1\FileManager\FileManager\bin\Debug\FileManager.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinFormsKURS1\FileManager\FileManager\obj\Debug\ResolveAssemblyReference.cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinFormsKURS1\FileManager\FileManager\obj\Debug\FileManager.FileListPanel.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinFormsKURS1\FileManager\FileManager\obj\Debug\FileManager.Form1.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinFormsKURS1\FileManager\FileManager\obj\Debug\FileManager.Properties.Resources.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\WinFormsKURS1\FileManager\FileManager\obj\Debug\FileManager.csproj.GenerateResource.Cache

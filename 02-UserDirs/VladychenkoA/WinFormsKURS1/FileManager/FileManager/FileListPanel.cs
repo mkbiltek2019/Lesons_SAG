@@ -74,7 +74,7 @@ namespace FileManager
 
                 foreach (DirectoryInfo directory in directories)
                 {
-                    Icon icon = new Icon(this.GetType(), "Resources.Folder.ico");
+                    Icon icon = new Icon(this.GetType(), "Resources.2.ico");
                     smallImageList.Images.Add(icon);
                     bigImageList.Images.Add(icon);
                     listView1.Items.Add(
@@ -89,15 +89,21 @@ namespace FileManager
                 foreach (FileInfo file in files)
                 {
                     Icon icon = Icon.ExtractAssociatedIcon(file.FullName);
-                    smallImageList.Images.Add(file.Name, icon);
-                    bigImageList.Images.Add(file.Name, icon);
+
+                    string iconKey = string.IsNullOrEmpty(file.Extension) ? file.Name : file.Extension;
+                    if (!smallImageList.Images.ContainsKey(iconKey))
+                    {
+                        smallImageList.Images.Add(iconKey, icon);
+                        bigImageList.Images.Add(iconKey, icon);
+                    }
+
                     listView1.Items.Add(
                         new ListViewItem(
                             new string[]
                                 {
                                     file.Name, file.Length.ToString(), file.CreationTime.ToString(),
                                     file.LastWriteTime.ToString()
-                                }, file.Name));
+                                }, iconKey));
                 }
 
             }
@@ -163,25 +169,15 @@ namespace FileManager
 
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-           
-            if ((string)listView1.SelectedItems[0].Tag == root)
+
+            string path = Path.Combine(CurrentDirectory.ToString(), listView1.SelectedItems[0].Text);
+            if (File.Exists(path))
             {
-                CurrentDirectory = new DirectoryInfo(Path.Combine(CurrentDirectory.ToString(), listView1.SelectedItems[0].Text));
-                ViewFileListPanel(CurrentDirectory.ToString());
+                Process.Start(path);
             }
             else
             {
-                foreach (ListViewItem item in listView1.Items)
-                {
-                    try
-                    {
-                        Process.Start(Path.Combine(CurrentDirectory.ToString(), item.Text));
-                    }
-                    catch
-                    {
-                    }
-
-                }
+                ViewFileListPanel(path);
             }
         }
       
