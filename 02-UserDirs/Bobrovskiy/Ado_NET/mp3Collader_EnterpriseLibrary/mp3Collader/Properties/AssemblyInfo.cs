@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("mp3Collader")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Computer")]
+[assembly: AssemblyCompany("Bobrovskiy")]
 [assembly: AssemblyProduct("mp3Collader")]
-[assembly: AssemblyCopyright("Copyright © Computer 2010")]
+[assembly: AssemblyCopyright("Copyright © Bobrovskiy 2010")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

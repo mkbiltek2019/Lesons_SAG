@@ -33,5 +33,10 @@ namespace mp3Collader.Instance
             database.ExecuteNonQuery(dbCommand);
             return Convert.ToInt32(database.GetParameterValue(dbCommand, returnParameterName));
         }
+
+        public void ExecuteSp(Database database)
+        {
+            database.ExecuteNonQuery(dbCommand);
+        }
     }
 }

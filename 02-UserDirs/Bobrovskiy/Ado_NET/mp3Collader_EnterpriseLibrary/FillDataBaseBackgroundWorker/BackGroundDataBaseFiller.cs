@@ -42,6 +42,11 @@ namespace FillDataBaseBackgroundWorker
         {  
             ReportProgress(0, SortingState.Start);
 
+            TableController tableController = new TableController();
+            AudioFileInfo audioFile  = new AudioFileInfo();
+            
+            tableController.InsertInitialize();
+
             while (FileListEnumerator.MoveNext())
             { 
                 if (CancellationPending)
@@ -49,16 +54,11 @@ namespace FillDataBaseBackgroundWorker
                     e.Cancel = true;
                     break;
                 } 
-
-                TableController tableController = new TableController();
-                AudioFileInfo audioFile  = new AudioFileInfo();
+                
                 FileInfo currentFile = new FileInfo(FileListEnumerator.Key.ToString());
 
                 audioFile.GetInfo(currentFile);
-
                 tableController.Insert(currentFile, audioFile);
-
-
             }
 
             ReportProgress(100, "Done!");

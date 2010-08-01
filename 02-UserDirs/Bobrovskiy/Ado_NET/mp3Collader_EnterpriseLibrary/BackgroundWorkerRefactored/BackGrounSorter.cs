@@ -6,9 +6,9 @@ namespace FileSearcherBackgroundWorker
 {
     public class BackGroundFileWorker : System.ComponentModel.BackgroundWorker
     {
-        public SortingState Result;
+        public SearchState Result;
 
-        private static readonly int defaultCapacity = 5000;
+        private static readonly int defaultCapacity = 200000;
         private string FilePattern = "*mp3"; 
         private string Path = string.Empty;
         private Hashtable directoryList = new Hashtable(defaultCapacity);
@@ -23,6 +23,7 @@ namespace FileSearcherBackgroundWorker
                                       ref directoryList,
                                       ref fileList,
                                       true);
+            
         } 
        
         public BackGroundFileWorker()
@@ -39,18 +40,18 @@ namespace FileSearcherBackgroundWorker
 
         protected override void OnDoWork(DoWorkEventArgs e)
         {  
-            ReportProgress(0, SortingState.Start);
+            ReportProgress(0, SearchState.Start);
 
             FillDataBaseWithData(Path);
 
             ReportProgress(100, "Done!");
-            e.Result = SortingState.Completed;
+            e.Result = SearchState.Completed;
         }
 
 
     }
 
-    public enum SortingState
+    public enum SearchState
     {
         Start,
         Completed,

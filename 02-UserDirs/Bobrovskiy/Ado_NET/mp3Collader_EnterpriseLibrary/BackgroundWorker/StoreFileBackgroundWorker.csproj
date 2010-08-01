@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.VisualC.STLCLR">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -62,6 +59,10 @@
     <ProjectReference Include="..\mp3Collader.DataAccess\mp3Collader.DataAccess.csproj">
       <Project>{3AF6542D-40D3-46F2-A938-453DD86E7F51}</Project>
       <Name>mp3Collader.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mp3Collader.Instance\mp3Collader.Instance.csproj">
+      <Project>{A6226458-82C1-4ACB-A8D7-DEBC103CD6B3}</Project>
+      <Name>mp3Collader.Instance</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

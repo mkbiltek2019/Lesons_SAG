@@ -46,10 +46,7 @@ namespace FillDataBaseBackgroundWorker
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (progressBar.Value == 100)
-            {
-              this.Close();
-            }    
+             this.Close();
         }
 
     }

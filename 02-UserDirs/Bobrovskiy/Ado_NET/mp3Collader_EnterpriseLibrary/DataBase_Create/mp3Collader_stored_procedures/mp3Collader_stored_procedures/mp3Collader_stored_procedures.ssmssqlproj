@@ -55,36 +55,6 @@
           <AssociatedConnUserName />
           <FullPath>MainView.sql</FullPath>
         </FileNode>
-        <FileNode Name="SelectFileName_SP.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WINDA1:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>WINDA1</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>SelectFileName_SP.sql</FullPath>
-        </FileNode>
-        <FileNode Name="SelectTrackTitleName_SP.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WINDA1:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>WINDA1</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>SelectTrackTitleName_SP.sql</FullPath>
-        </FileNode>
-        <FileNode Name="SelectGenreName_SP.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WINDA1:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>WINDA1</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>SelectGenreName_SP.sql</FullPath>
-        </FileNode>
-        <FileNode Name="SelectAlbumName_SP.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WINDA1:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>WINDA1</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>SelectAlbumName_SP.sql</FullPath>
-        </FileNode>
-        <FileNode Name="SelectArtistNAme_SP.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WINDA1:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>WINDA1</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>SelectArtistNAme_SP.sql</FullPath>
-        </FileNode>
         <FileNode Name="VIEW_LIST.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WINDA1:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>WINDA1</AssociatedConnSrvName>

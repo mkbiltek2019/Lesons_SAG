@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3AF6542D-40D3-46F2-A938-453DD86E7F51}</ProjectGuid>
+    <ProjectGuid>{1F3CB8E9-07C6-4F69-82C1-8B52217F2381}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>mp3Collader.DataAccess</RootNamespace>
-    <AssemblyName>mp3Collader.DataAccess</AssemblyName>
+    <RootNamespace>AudioFileManager</RootNamespace>
+    <AssemblyName>AudioFileManager</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,29 +31,34 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
     <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\TableController.cs" />
-    <Compile Include="DbConnection\DBConnectionFactory.cs" />
-    <Compile Include="DbConnection\DbFactory.cs" />
+    <Compile Include="BackgroundWorkers\BackGroundDataBaseFiller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BackgroundWorkers\BackGrounSorter.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AudioFileTagger\AudioFileTagger.csproj">
       <Project>{21262864-EDD4-42DB-A6C5-894EC4B8161A}</Project>
       <Name>AudioFileTagger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileSearcher\FileSearcher.csproj">
+      <Project>{6D3234C7-92CA-4559-901E-58A95174C062}</Project>
+      <Name>FileSearcher</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mp3Collader.DataAccess\mp3Collader.DataAccess.csproj">
+      <Project>{3AF6542D-40D3-46F2-A938-453DD86E7F51}</Project>
+      <Name>mp3Collader.DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\mp3Collader.Instance\mp3Collader.DataInstance.csproj">
       <Project>{A6226458-82C1-4ACB-A8D7-DEBC103CD6B3}</Project>
