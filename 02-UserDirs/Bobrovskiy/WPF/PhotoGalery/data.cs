@@ -3,9 +3,11 @@ using System.IO;
 using System.Collections.ObjectModel;
 using System.Windows.Media.Imaging;
 
-
 namespace PhotoGallery
 {
+    //NOTICE: to work with large collections you have to use some kind of paging 
+    // because you can't store all image in memory if you have a lot of images
+ 
     public class ImageFile
     {  
         private String _path; 
