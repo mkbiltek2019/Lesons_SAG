@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="photodemo">
+</Property><Property Name="Solution File" Value="D:\virtual pc\Valera\All Samples\All Samples\PhotoStoreDemo\photodemo.sln">
+</Property><Property Name="Date" Value="24 липня 2010 р.">
+</Property><Property Name="Time" Value="10:30:10">
+</Property></Properties><Event ErrorLevel="0" Project="photodemo" Source="photodemo.csproj" Description="Project file successfully backed up as D:\virtual pc\Valera\All Samples\All Samples\PhotoStoreDemo\Backup\photodemo.csproj">
+</Event><Event ErrorLevel="0" Project="photodemo" Source="app.xaml.cs" Description="File successfully backed up as D:\virtual pc\Valera\All Samples\All Samples\PhotoStoreDemo\Backup\app.xaml.cs">
+</Event><Event ErrorLevel="0" Project="photodemo" Source="Window1.xaml.cs" Description="File successfully backed up as D:\virtual pc\Valera\All Samples\All Samples\PhotoStoreDemo\Backup\Window1.xaml.cs">
+</Event><Event ErrorLevel="0" Project="photodemo" Source="Adorner.cs" Description="File successfully backed up as D:\virtual pc\Valera\All Samples\All Samples\PhotoStoreDemo\Backup\Adorner.cs">
+</Event><Event ErrorLevel="0" Project="photodemo" Source="Data.cs" Description="File successfully backed up as D:\virtual pc\Valera\All Samples\All Samples\PhotoStoreDemo\Backup\Data.cs">
+</Event><Event ErrorLevel="0" Project="photodemo" Source="app.xaml" Description="File successfully backed up as D:\virtual pc\Valera\All Samples\All Samples\PhotoStoreDemo\Backup\app.xaml">
+</Event><Event ErrorLevel="0" Project="photodemo" Source="Window1.xaml" Description="File successfully backed up as D:\virtual pc\Valera\All Samples\All Samples\PhotoStoreDemo\Backup\Window1.xaml">
+</Event><Event ErrorLevel="0" Project="photodemo" Source="photodemo.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="photodemo" Source="photodemo.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="photodemo" Source="photodemo.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
