@@ -1,0 +1,16 @@
+﻿<Application 
+    x:Class="EDairy.Application"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    StartupUri="Window.xaml">
+    <Application.Resources>
+      <!--Attach Default Fluent Control's Theme Blue,Silver,Black.xaml-this can be changed use Reflector -->
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                 <ResourceDictionary Source="pack://application:,,,/Fluent;Component/Themes/Office2010/Blue.xaml" />
+                 <ResourceDictionary Source="ResourceDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>        
+        
+    </Application.Resources>
+</Application>

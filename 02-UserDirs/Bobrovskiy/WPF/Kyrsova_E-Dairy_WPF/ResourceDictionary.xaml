@@ -1,0 +1,44 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:Mvvm_Model="clr-namespace:Mvvm.Model" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d">		
+	
+    <!-- Person DataTemplate Start-->
+    <DataTemplate x:Key="PersoneCardTemplate">  
+			<Grid>
+			 <Grid.ColumnDefinitions>
+			 	<ColumnDefinition Width="Auto" MinWidth="66.667"/>
+				<ColumnDefinition MinWidth="340"/>
+			 </Grid.ColumnDefinitions>
+			 <DockPanel
+			    Grid.Column="0"				
+				HorizontalAlignment="Left">
+				<ComboBox 
+				Margin="0,2.5,0,0"
+				HorizontalAlignment="Left" 
+			 Style="{DynamicResource ComboBoxStyle1}" 
+			 VerticalAlignment="Top" 
+			 Width="53.667" Height="35" Grid.Row="2">
+    		<Rectangle Fill="#FFD10000" Width="25" Height="20"/>
+    		<Rectangle Fill="White" Width="25" Height="20"/>
+    		<Rectangle Fill="#FF165401" Width="25" Height="20"/>
+    		<Rectangle Fill="#FFEFEB72" Width="25" Height="20"/>
+    	</ComboBox>
+		 </DockPanel> 
+		<StackPanel
+		   Grid.Column="1"
+			 Orientation="Vertical" Margin="2,0,0.667,0">
+                <TextBlock Text="{Binding Date}" FontStyle="Oblique" />
+                <TextBlock Text="{Binding Title}" />
+               
+            </StackPanel>   
+			</Grid>      
+                 
+    </DataTemplate>
+    <!-- Person DataTemplate End-->
+    
+	
+</ResourceDictionary>

@@ -1,0 +1,24 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	xmlns:Custom="http://schemas.microsoft.com/wpf/2008/toolkit"
+	x:Class="E.Dairy.WPF.UserControl1"
+	x:Name="UserControl"
+	d:DesignWidth="492.84" d:DesignHeight="161">
+
+	<Grid x:Name="LayoutRoot">
+		<Custom:Calendar FontSize="18.667" FontFamily="Verdana" HorizontalAlignment="Left" VerticalAlignment="Top" FontStretch="SemiExpanded" FontWeight="Bold">
+			<Custom:Calendar.Background>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="#FFE4EAF0" Offset="0"/>
+					<GradientStop Color="#FFECF0F4" Offset="0.16"/>
+					<GradientStop Color="#FFFCFCFD" Offset="0.16"/>
+					<GradientStop Color="#FF9692F4" Offset="1"/>
+				</LinearGradientBrush>
+			</Custom:Calendar.Background>
+		</Custom:Calendar>
+	</Grid>
+</UserControl>
