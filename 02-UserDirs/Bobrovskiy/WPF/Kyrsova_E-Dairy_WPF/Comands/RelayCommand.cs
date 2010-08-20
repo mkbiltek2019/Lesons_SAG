@@ -26,11 +26,11 @@ namespace Mvvm.Comands
     {
         #region CanExecute Automatic Updating
 
-        //[SuppressMessage("Microsoft.Performance", "CA1823", Justification = "This variable is used. I can swear")]
-        //static DispatcherTimer timer = 
-        //        new DispatcherTimer(TimeSpan.FromMilliseconds(200), 
-        //            DispatcherPriority.SystemIdle, (s, e) => UpdateCanExcecute(), 
-        //            Dispatcher.CurrentDispatcher);
+        [SuppressMessage("Microsoft.Performance", "CA1823", Justification = "This variable is used.")]
+        static DispatcherTimer timer =
+                new DispatcherTimer(TimeSpan.FromMilliseconds(200),
+                    DispatcherPriority.SystemIdle, (s, e) => UpdateCanExcecute(),
+                    Dispatcher.CurrentDispatcher);
 
         static void UpdateCanExcecute()
         {
