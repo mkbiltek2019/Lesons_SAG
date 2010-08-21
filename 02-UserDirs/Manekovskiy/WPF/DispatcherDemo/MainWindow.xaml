@@ -1,0 +1,24 @@
+﻿<Window x:Class="DispatcherDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <Button Grid.Row="0" Grid.Column="0" x:Name="StartButton" Click="StartButton_Click" Content="Start" />
+        <Button Grid.Row="0" Grid.Column="1" x:Name="StopButton" Click="StopButton_Click" Content="Stop" />
+
+        <ProgressBar Grid.Row="1" Grid.ColumnSpan="2" 
+                     x:Name="ProgressBar"
+                     Minimum="0"
+                     Maximum="100"></ProgressBar>
+        
+    </Grid>
+</Window>

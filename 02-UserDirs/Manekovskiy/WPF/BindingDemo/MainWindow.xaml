@@ -1,0 +1,61 @@
+﻿<Window x:Class="BindingDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:data="clr-namespace:BindingDemo" 
+        Title="MainWindow" 
+        Height="350" 
+        Width="525">
+    
+    <Window.Resources>
+        <data:DataModel x:Key="MyDataModel"></data:DataModel>
+
+        <DataTemplate x:Key="UserDataTemplate">
+            <Border BorderThickness="1"
+                    BorderBrush="Black">
+                <StackPanel>
+                    <TextBlock Text="{Binding Path=Name}" />
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        
+                        <TextBlock Grid.Column="0" Grid.Row="0" 
+                                   Text="Country:"/>
+                        <TextBlock Grid.Column="1" Grid.Row="0" 
+                                   Text="{Binding Path=Address.Country}"/>
+
+                        <TextBlock Grid.Column="0" Grid.Row="1" 
+                                   Text="City:"/>
+                        <TextBlock Grid.Column="1" Grid.Row="1" 
+                                   Text="{Binding Path=Address.City}"/>
+                    </Grid>
+                </StackPanel>
+            </Border>
+        </DataTemplate>
+    </Window.Resources>
+    
+    <Grid>
+        <Border BorderThickness="1"
+                BorderBrush="YellowGreen"
+                Panel.ZIndex="0">
+            <ListBox ItemsSource="{Binding Users, Source={StaticResource ResourceKey=MyDataModel}}"
+                    ItemTemplate="{StaticResource UserDataTemplate}"
+                    Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=Height}">
+            </ListBox>
+        </Border>
+
+        <StackPanel Panel.ZIndex="1" Orientation="Horizontal" HorizontalAlignment="Right"> 
+            <Button
+                Click="ChangeRandomUserButton_Click"
+                Content="Change random user name" />
+            <Button
+                Click="AddUser_Click"
+                Content="Add new user" />
+            <TextBlock x:Name="NewUserNameTextBlock" />
+        </StackPanel>
+    </Grid>
+</Window>

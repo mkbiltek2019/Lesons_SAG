@@ -1,0 +1,23 @@
+﻿<Window x:Class="BindingDemo.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Window1" Height="300" Width="300">
+    <Grid>
+        <StackPanel>
+            <!--<Slider x:Name="firstSlider" Value="{Binding ElementName=secondSlider, Path=Value, Mode=OneTime}"></Slider>
+            <Slider x:Name="secondSlider" Value="5"></Slider>-->
+            <!--<Slider x:Name="firstSlider" Value="{Binding ElementName=secondSlider, Path=Value}"></Slider>
+            <Slider x:Name="secondSlider"></Slider>-->
+            <!--<Slider x:Name="firstSlider" Value="{Binding ElementName=secondSlider, Path=Value, Mode=OneWay}"></Slider>
+            <Slider x:Name="secondSlider" ></Slider>-->
+            <ListBox ItemsSource="{Binding MyDataModel, Path=Ints}" 
+                     Height="150">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding /}" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+    </Grid>
+</Window>
