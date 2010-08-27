@@ -1,0 +1,14 @@
+C:\Users\Александр\Downloads\ribbonsample\RibbonSample\CS\bin\Debug\RibbonSample.exe
+C:\Users\Александр\Downloads\ribbonsample\RibbonSample\CS\bin\Debug\RibbonSample.pdb
+C:\Users\Александр\Downloads\ribbonsample\RibbonSample\CS\bin\Debug\RibbonSample.xml
+C:\Users\Александр\Downloads\ribbonsample\RibbonSample\CS\bin\Debug\RibbonControlsLibrary.dll
+C:\Users\Александр\Downloads\ribbonsample\RibbonSample\CS\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Александр\Downloads\ribbonsample\RibbonSample\CS\obj\Debug\Window1.baml
+C:\Users\Александр\Downloads\ribbonsample\RibbonSample\CS\obj\Debug\Window1.g.cs
+C:\Users\Александр\Downloads\ribbonsample\RibbonSample\CS\obj\Debug\Application.g.cs
+C:\Users\Александр\Downloads\ribbonsample\RibbonSample\CS\obj\Debug\RibbonSample_MarkupCompile.cache
+C:\Users\Александр\Downloads\ribbonsample\RibbonSample\CS\obj\Debug\RibbonSample.g.resources
+C:\Users\Александр\Downloads\ribbonsample\RibbonSample\CS\obj\Debug\RibbonSample.Properties.Resources.resources
+C:\Users\Александр\Downloads\ribbonsample\RibbonSample\CS\obj\Debug\RibbonSample.csproj.GenerateResource.Cache
+C:\Users\Александр\Downloads\ribbonsample\RibbonSample\CS\obj\Debug\RibbonSample.exe
+C:\Users\Александр\Downloads\ribbonsample\RibbonSample\CS\obj\Debug\RibbonSample.pdb
