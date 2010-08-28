@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{31A66B10-68FF-49D9-8D85-03F5A259D266}</ProjectGuid>
     <OutputType>library</OutputType>
@@ -64,6 +64,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControlsRegistrator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
