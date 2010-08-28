@@ -1,0 +1,32 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:PanelSample="clr-namespace:PanelSample"
+        x:Class="PanelSample.Sample"
+        Title="Sample" 
+        x:Name="self">
+	<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+    
+		<PanelSample:SpacePanel Rows="3" Columns="3" 
+                                Scale="{Binding ElementName=sld, Path=Value}"
+                                x:Name="SpacePanel">
+            <Button Background="Red" Content="Red" />
+            <Button Background="OrangeRed" Content="OrangeRed" />
+            <Button Background="Orange" Content="Orange" />
+            <Button Background="Yellow" Content="Yellow" />
+            <Button Background="YellowGreen" Content="YellowGreen" />
+            <Button Background="GreenYellow" Content="GreenYellow" />
+            <Button Background="Green" Content="Green" />
+            <Button Background="Teal" Content="Teal" />
+            <Button Background="Blue" Content="Blue" />
+        </PanelSample:SpacePanel>
+        
+        <Slider Grid.Row="1" Minimum="0.7" Maximum="1" Value="0.9" x:Name="sld" VerticalAlignment="Center" />
+        <CheckBox Grid.Row="2"  x:Name="IsLeftToRightArrangeDirectionCheckBox" 
+                  Checked="IsLeftToRightArrangeDirectionCheckBox_Checked">Is Left To Right Arrangement Direction</CheckBox>
+	</Grid>
+</Window>

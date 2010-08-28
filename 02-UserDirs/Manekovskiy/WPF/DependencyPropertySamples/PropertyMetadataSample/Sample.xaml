@@ -1,0 +1,19 @@
+﻿<Window x:Class="PropertyMetadataSample.Sample"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Sample" Height="300" Width="300" x:Name="Self">
+    <Window.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button" >
+                <Setter Property="Height" Value="40" />
+                <Setter Property="Width" Value="100" />
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    <StackPanel VerticalAlignment="Center" DataContext="{Binding ElementName=Self}">
+        <Button Content="{Binding Path=Obj1.Test}" Click="Button1_Click" />
+        <Button Content="{Binding Path=Obj2.Test}" Click="Button2_Click"/>
+        <Button Content="{Binding Path=Obj3.Test}" Click="Button3_Click"/>
+        <Button Content="{Binding Path=Obj4.Test}" Click="Button4_Click"/>
+    </StackPanel>
+</Window>

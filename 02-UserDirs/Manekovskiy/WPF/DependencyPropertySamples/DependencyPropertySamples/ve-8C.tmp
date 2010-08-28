@@ -1,0 +1,79 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using PropertyMetadataSample;
+
+namespace DependencyPropertySamples
+{
+    /// <summary>
+    /// Interaction logic for Window1.xaml
+    /// </summary>
+    public partial class Window1 : Window
+    {
+        public Window1()
+        {
+            InitializeComponent();
+
+            var obj = new TestDo();
+            var nextobj = new NextDo();
+            var anotherObj = new AnotherTestDo();
+
+            var hcpm = (HandleChangesPropertyMetadata)TestDo.ValueProperty.GetMetadata(typeof(AnotherTestDo));
+            hcpm.AddPropertyChanged(anotherObj.DependencyObjectType, TestPropertyChanged);
+                
+            obj.Value = 1;
+            nextobj.Value = 1;
+            anotherObj.Value = 1;
+        }
+
+        private static void TestPropertyChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            Console.WriteLine();
+            Console.WriteLine(sender.GetType());
+            Console.WriteLine();
+        }
+    }
+
+    public class TestDo : DependencyObject
+    {
+        public int Value
+        {
+            get { return (int)GetValue(ValueProperty); }
+            set { SetValue(ValueProperty, value); }
+        }
+
+        public static readonly DependencyProperty ValueProperty =
+            DependencyProperty.Register("Value", typeof(int), typeof(TestDo), new HandleChangesPropertyMetadata(0));
+
+
+    }
+
+    public class NextDo : TestDo
+    {
+        //static NextDo()
+        //{
+        //    ValueProperty.OverrideMetadata(typeof(NextDo), new HandleChangesPropertyMetadata(0));
+        //}
+    }
+
+    public class AnotherTestDo : DependencyObject
+    {
+        public int Value
+        {
+            get { return (int)GetValue(ValueProperty); }
+            set { SetValue(ValueProperty, value); }
+        }
+
+        public static readonly DependencyProperty ValueProperty = TestDo.ValueProperty.AddOwner(typeof(AnotherTestDo), new HandleChangesPropertyMetadata(0));
+    }
+}
