@@ -1,10 +1,8 @@
 ﻿using System.ComponentModel;
 
 namespace Mvvm.Model
-{
-    /// <summary>
-    /// Represents DairyItem
-    /// </summary>
+{ // the name in the Model must be the same like in database
+
     public class DairyItem : INotifyPropertyChanged
     {
         #region Events
@@ -19,7 +17,7 @@ namespace Mvvm.Model
         {
             if (PropertyChanged != null)
             {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+                PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
             }
         }
 
@@ -27,115 +25,162 @@ namespace Mvvm.Model
 
         #region Fields
 
-        // Date
-        private string date = "03/04/10";
-        // Title
-        private string title;
-        // Content
-        private string content;
-        // Priority
-        private int priority;
-        // Status
-        private int status;
+        // itemID
+        private int itemID = 0;
+        // priorityID
+        private int priorityID = 0;
+        // statusID
+        private int statusID = 0;
+        // dateID
+        private int dateID = 0;
+        // itemTitle
+        private string itemTitle = string.Empty;
+        // itemContent
+        private string itemContent = string.Empty;
+        
+        #endregion 
 
-        #endregion
-
+        
         #region Properies
 
         /// <summary>
-        /// Gets or sets Date
+        /// Gets or sets ItemID
         /// </summary>
-        public string Date
+        public int ItemID
         {
-            get { return date; }
+            get { return itemID; }
             set
             {
-                if (date == value) { return; }
-                date = value;
-                RaisePropertyChanged("Date");
+                if (itemID == value)
+                {
+                    return;
+                }
+
+                itemID = value;
+                RaisePropertyChanged("ItemID");
             }
         }
 
         /// <summary>
-        /// Gets or sets Title
+        /// Gets or sets PriorityID
         /// </summary>
-        public string Title
+        public int PriorityID
         {
-            get { return title; }
+            get { return priorityID; }
             set
             {
-                if (title == value) { return; }
-                title = value;
-                RaisePropertyChanged("Title");
+                if (priorityID == value)
+                {
+                    return;
+                }
+
+                priorityID = value;
+                RaisePropertyChanged("PriorityID");
             }
         }
 
         /// <summary>
-        /// Gets or sets Content
+        /// Gets or sets StatusID
         /// </summary>
-        public string Content
+        public int StatusID
         {
-            get { return content; }
+            get { return statusID; }
             set
             {
-                if (content == value) { return; }
-                content = value;
-                RaisePropertyChanged("Content");
+                if (statusID == value)
+                {
+                    return;
+                }
+
+                statusID = value;
+                RaisePropertyChanged("StatusID");
             }
         }
 
         /// <summary>
-        /// Gets or sets Priority
+        /// Gets or sets DateID
         /// </summary>
-        public int Priority
+        public int DateID
         {
-            get { return priority; }
+            get { return dateID; }
             set
             {
-                if (priority == value) { return; }
-                priority = value;
-                RaisePropertyChanged("Priority");
+                if (dateID == value)
+                {
+                    return;
+                }
+
+                dateID = value;
+                RaisePropertyChanged("DateID");
             }
         }
 
         /// <summary>
-        /// Gets or sets Status
+        /// Gets or sets ItemTitle
         /// </summary>
-        public int Status
+        public string ItemTitle
         {
-            get { return status; }
+            get { return itemTitle; }
             set
             {
-                if (status == value) { return; }
-                status = value;
-                RaisePropertyChanged("Status");
+                if (itemTitle == value)
+                {
+                    return;
+                }
+
+                itemTitle = value;
+                RaisePropertyChanged("ItemTitle");
             }
         }
 
-        #endregion
+        /// <summary>
+        /// Gets or sets ItemContent
+        /// </summary>
+        public string ItemContent
+        {
+            get { return itemContent; }
+            set
+            {
+                if (itemContent == value)
+                {
+                    return;
+                }
+
+                itemContent = value;
+                RaisePropertyChanged("ItemContent");
+            }
+        }
+
+        #endregion 
 
         #region Methods
 
         /// <summary>
         /// Creates new DairyItem
         /// </summary>
-        /// <param name="date">Date</param>
-        /// <param name="title">Title</param>
+        /// <param name="itemID">itemID</param>
+        /// <param name="dateID">dateID</param>
+        /// <param name="title">title</param>
         /// <param name="content">Content</param>
-        /// /// <param name="priority">Priority</param>
-        /// <param name="status">Status</param>
+        /// /// <param name="priority">PripriorityIDrity</param>
+        /// <param name="status">statusID</param>
         /// <returns>DairyItem</returns>
-        public static DairyItem Create(string date, string title, string content, int priority, int status)
+        public static DairyItem Create(int itemID,  int priorityID,
+                                       int statusID, int dateID, string title,
+                                       string content)
         {
             DairyItem dairyItem = new DairyItem();
-            dairyItem.date = date;
-            dairyItem.title = title;
-            dairyItem.content = content;
-            dairyItem.priority = priority;
-            dairyItem.status = status;
+            dairyItem.itemID = itemID;
+            dairyItem.priorityID = priorityID;
+            dairyItem.statusID = statusID;
+            dairyItem.dateID = dateID;
+            dairyItem.itemTitle = title;
+            dairyItem.itemContent = content;
+           
             return dairyItem;
         }
 
         #endregion
-    }
-}
+    }//class
+
+}//namespace

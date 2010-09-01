@@ -9,33 +9,24 @@
     xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Classic" 
     x:Class="EDairy.Window"
     x:Name="MainForm"
-    Title="E-Dairy.WPF" 
-    Width="670"
-	MinWidth="250"
-	Height="635"
-	MinHeight="270"	 
+    Title="E-Dairy.WPF"     
+	MinWidth="754"	
+	MinHeight="600"	 
     FontSize="14"
     Background="White" 
     Icon="Images/Games.ico" 
     WindowStyle="ThreeDBorderWindow" 
     SnapsToDevicePixels="True" 
-    Visibility="Visible" ResizeMode="CanResize"
-    ShowInTaskbar="False" VerticalAlignment="Bottom">
-
+    Visibility="Visible"> 
 
     <DockPanel 
 	Name="MainDockPanel"
-	LastChildFill="True" 
-	MaxHeight="{Binding ElementName=MainForm, Path=Value}" 
-    Height="{Binding ElementName=MainForm, Path=Value}"  
-    MinHeight="{Binding ElementName=MainForm, Path=Value}" 
-	VerticalAlignment="Top" 
+	LastChildFill="True"   
 	Fluent:KeyTip.HorizontalAlignment="Left"
 	Fluent:KeyTip.VerticalAlignment="Top" 
-	ScrollViewer.VerticalScrollBarVisibility="Disabled">
-	 
+	ScrollViewer.VerticalScrollBarVisibility="Disabled" > 	 
        
-	    <Fluent:Ribbon DockPanel.Dock="Top" Height="67">          
+	    <Fluent:Ribbon DockPanel.Dock="Top" Height="67" FontFamily="Fonts/#Verdana">          
           <!--Quick Access Toolbar Items-->
           <Fluent:Ribbon.QuickAccessItems>
             <Fluent:QuickAccessMenuItem 
@@ -53,7 +44,7 @@
           <!--Tabs-->
           <Fluent:RibbonTabItem x:Name="ribbonTabItem" 
               Header="Tab"
-              ReduceOrder="(P),(P),(P),(P),(P)">
+              ReduceOrder="(P),(P),(P),(P),(P)" FontFamily="Fonts/#Verdana">
 
             <!--Gallery with all persons-->
                 <!--Gallery with all persons-->
@@ -65,9 +56,8 @@
     <!--View & Edit Current Persone Details-->
     <Grid		 
           SnapsToDevicePixels="True" 
-          Margin="0,-15,0,0" 
-          x:Name="MainGrid"        	  
-		  	 
+          Margin="0,-15,0,9" 
+          x:Name="MainGrid" 	  	 
 		  >
 		  
     	<Grid.ColumnDefinitions>
@@ -75,31 +65,28 @@
     		<ColumnDefinition Width="0.644*" MinWidth="100"/>
     	</Grid.ColumnDefinitions>
     	<Grid.RowDefinitions>
-    		<RowDefinition Height="3*"/>
-    		<RowDefinition Height="*"/>
-    		<RowDefinition Height="*"/>
-    	</Grid.RowDefinitions>
-    	
+    		<RowDefinition Height="0.592*"/>
+    		<RowDefinition Height="0.408*"  MinHeight="173" />
+    	</Grid.RowDefinitions>    	
         
       <Border 
           Padding="10" 
           CornerRadius="5" 
+          Name="TextInputBorder"
           BorderBrush="DarkGray"
           BorderThickness="1" 
 		  Grid.Row="1"
-          Grid.Column="1" 
-          Grid.RowSpan="2"
-          Fluent:KeyTip.VerticalAlignment="Top"
-		  Name="ContentBorder" 
-          Margin="-2.79,-1,0,0"		  
-		  MinWidth="400.248" 
-		  MinHeight="215"		 
-          Height="215">
+          Grid.Column="1"
+          Fluent:KeyTip.VerticalAlignment="Stretch"
+		  Margin="-1,-1,-2.332,-8.502"
+		  Fluent:KeyTip.HorizontalAlignment="Stretch" 
+          
+		  MinWidth="400.248" >
           
         <Grid      		 
-      		Margin="-2,-2,-1,5"
+      		Margin="5,-4.667,5,-1.515"
             Fluent:KeyTip.HorizontalAlignment="Stretch" 
-            Fluent:KeyTip.VerticalAlignment="Stretch"             
+            Fluent:KeyTip.VerticalAlignment="Stretch" MinHeight="173"             
             >
             
         	<Grid.ColumnDefinitions>
@@ -107,308 +94,286 @@
         		<ColumnDefinition/>
         	</Grid.ColumnDefinitions>
         	<Grid.RowDefinitions>
-        		<RowDefinition Height="0.25*"/>
-        		<RowDefinition Height="0.75*"/>
+        		<RowDefinition Height="0.143*"/>
+        		<RowDefinition Height="0.174*"/>
+        		<RowDefinition Height="0.683*"/>
         	</Grid.RowDefinitions>
-			
-      		<StackPanel 
-      			Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Width="61.807" d:LayoutOverrides="GridBox">
-      			<TextBlock 
-      				Text="Title:" 
-      				Height="19" 
-      				Margin="3"/>
-      			<TextBlock 
-      				Text="Content:" 
-      				Height="19" 
-      				Margin="3"/>
-      		</StackPanel>
 		  
-      		<StackPanel		
-      			Orientation="Vertical" 
-      			ClipToBounds="True" Margin="-0.293,0.5,0.997,-1.5"
-                Grid.RowSpan="2" Grid.Column="1" 
-                Fluent:KeyTip.HorizontalAlignment="Stretch" 
-                Fluent:KeyTip.VerticalAlignment="Stretch" >
-      			<TextBox
-      				Text="{Binding Current.Title}" 
-      				Height="25" Margin="0,0,7,0" MaxLines="2" MaxLength="400" />
-      			<TextBox 
-      				Text="{Binding Current.Content}"
-      				Height="164.5" 
-      				ClipToBounds="True" 
-      				FontSize="14" 
-      				AcceptsTab="True" AcceptsReturn="True" 
-      				HorizontalContentAlignment="Stretch" 
-      				VerticalContentAlignment="Stretch" 
-      				Margin="0,0,7,0" 
-      				MinWidth="300"
-				/>
-      		</StackPanel>
+      		<ScrollViewer
+        		MaxHeight="{Binding Height, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type StackPanel}}}"
+        		VerticalScrollBarVisibility="Auto"
+        		HorizontalScrollBarVisibility="Auto" Margin="0,0,-1.333,0" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1">
+        		<TextBox 
+        			Text="{Binding Current.ItemContent}" 
+                    
+        			ClipToBounds="True" 
+        			FontSize="14" 
+        			AcceptsTab="True" 
+        			AcceptsReturn="True"       				                    
+        			Margin="0" 
+        			MinWidth="300" 
+        			MaxLength="1000" 
+        			MinHeight="100" 
+        			AutoWordSelection="True" 
+        			BorderBrush="SlateGray" 
+        			BorderThickness="1" FontFamily="Fonts/#Verdana"/> 
+        	</ScrollViewer>
 			
 			<Fluent:RibbonGroupBox
-			Grid.Column="0"
-			Grid.Row="1"
-			 Header="" Margin="14,3.5,0,0" 
-			Height="52" HorizontalAlignment="Left" Width="84.277" d:LayoutOverrides="VerticalAlignment, GridBox" CanAddToQuickAccessToolBar="False" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" Style="{DynamicResource RibbonGroupBoxStyle1}">
+			Grid.Row="2"
+			Header="" Margin="2,2.303,0,0" 
+			Height="52" HorizontalAlignment="Left" 
+                Width="84.277" d:LayoutOverrides="VerticalAlignment" 
+                CanAddToQuickAccessToolBar="False" VerticalAlignment="Top" 
+                ScrollViewer.VerticalScrollBarVisibility="Disabled" 
+                Style="{DynamicResource RibbonGroupBoxStyle1}" FontFamily="Fonts/#Verdana" RenderTransformOrigin="0.53,0.47">
 			 
-				<Fluent:Button Text="Add" Command="{Binding CreateCommand}" Icon="Images\Green.png"
-					LargeIcon="Images\GreenLarge.png" x:Name="buttonGreen_Copy" HorizontalAlignment="Left" 
-					VerticalAlignment="Top" Height="50" Fluent:KeyTip.AutoPlacement="False" Margin="0" 
+				<Fluent:Button Text="Add" Command="{Binding CreateCommand}" 
+                               Icon="Images\Green.png"
+					           LargeIcon="Images\GreenLarge.png" 
+                               x:Name="buttonGreen_Copy" 
+                               HorizontalAlignment="Left" 
+					           VerticalAlignment="Top" 
+                               Height="50" 
+                               Fluent:KeyTip.AutoPlacement="False"
+                               Margin="0" 
+			 Width="79.333" 
 			 />
 			 </Fluent:RibbonGroupBox> 
 			 <Fluent:RibbonGroupBox
-			Grid.Column="0"
-			Grid.Row="1"
-			 Header="" Margin="12,55.75,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" CanAddToQuickAccessToolBar="False" Fluent:KeyTip.HorizontalAlignment="Left" Height="51" Fluent:KeyTip.VerticalAlignment="Top" Padding="-2" Width="64.277" >
+			Grid.Row="2"
+			     Header="" Margin="1.333,58.552,0,0" 
+                 VerticalAlignment="Top" 
+                 HorizontalAlignment="Left" 
+                 CanAddToQuickAccessToolBar="False" 
+                 Fluent:KeyTip.HorizontalAlignment="Left" Height="51" 
+                 Fluent:KeyTip.VerticalAlignment="Top" Padding="-2" Width="64.277" >
 			 	<Fluent:Button Text="Remove" Command="{Binding DeleteCommand}" Icon="Images\Gray.png"
 			 		LargeIcon="Images\GrayLarge.png" HorizontalAlignment="Left" VerticalAlignment="Bottom" 
 			 		Height="50.5" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
 			 		Fluent:KeyTip.AutoPlacement="False" Fluent:KeyTip.HorizontalAlignment="Stretch" 
 			 		Fluent:KeyTip.VerticalAlignment="Stretch" CanAddToQuickAccessToolBar="False"
-			 		Margin="0" Width="49.277" />
-			 </Fluent:RibbonGroupBox>    
+			 		Margin="0" Width="59.944" FontFamily="Fonts/#Verdana" />
+			 </Fluent:RibbonGroupBox>
+        	<TextBlock 
+        		Text="Title:" 
+        		Margin="3,3,4.983,3.177" FontFamily="Fonts/#Verdana" />
+        	<TextBlock 
+        		Text="Content:" 
+        		Margin="4.333,7.156,3.65,4.545" FontFamily="Fonts/#Verdana" Grid.Row="1" />
+                
+        	<TextBox
+        		Text="{Binding Current.ItemTitle}" Margin="0,0,-1.333,0" 
+        		MaxLines="2" MaxLength="400" 
+        		BorderBrush="SlateGray" 
+        		BorderThickness="1" FontFamily="Fonts/#Verdana" Grid.Column="1" FontSize="16" />    
       	</Grid>
       </Border>
-        
-    	<Border 
-    		Padding="10" 
-    		CornerRadius="5" 
-    		BorderBrush="DarkGray"
-    		BorderThickness="1" 
-            VerticalAlignment="Top"
-            Height="145"
-            Margin="-0.834,208.84,1.166,0" 
-			MinWidth="229.102" MaxWidth="229.102" 
-			Width="230" ClipToBounds="True">
-            
-    		<StackPanel 
-    			Orientation="Vertical" 
-                Margin="-5,0,-3,-0.5" 
-                VerticalAlignment="Bottom" 
-                Height="130" Width="215">
-    			<TextBlock 
-    				Text="Statistics" 
-    				Height="19.5" 
-    				Margin="3" HorizontalAlignment="Center" FontSize="16"/>
-				<Fluent:RibbonGroupBox 
-                    Height="24.834" Foreground="Black" FontSize="16" Margin="0,0,-3,0">
-					<TextBlock 
-						Text="Today:" 
-						Height="24.5" 
-						Margin="0,0,3,0" Width="129.2"/>
-				</Fluent:RibbonGroupBox>	
-    			
-				<Fluent:RibbonGroupBox 
-                    Height="24.834" Foreground="Black" FontSize="16" Margin="0,0,-3,0">
-    			<TextBlock 
-    				Text="Tomorrow:" 
-    				Height="22" 
-    				Margin="0" HorizontalAlignment="Left" Width="128.102"/>
-				</Fluent:RibbonGroupBox>
-				
-    			<Fluent:RibbonGroupBox 
-                    Height="24.834" Foreground="Black" FontSize="16" Margin="0,0,-3,0">
-					<TextBlock 
-    				Text="Declined:" 
-    				Height="24.5" 
-    				Margin="0,0,3,0" Width="133.037"/>
-					</Fluent:RibbonGroupBox>
-					
-    			<Fluent:RibbonGroupBox 
-                    Height="24.834" Foreground="Black" FontSize="16" Margin="0,0,-3,0">
-					<TextBlock 
-    				Text="Done: " 
-    				Height="23.5" 
-    				Margin="0,0,3,0" 
-                    Width="139.367"/>
-			   </Fluent:RibbonGroupBox>
-    		</StackPanel>
-    	</Border>
-    	
-        <Border 
-    		Padding="10" 
-    		CornerRadius="5" 
-			MaxWidth="231"
-    		BorderBrush="DarkGray"
-    		BorderThickness="1" Grid.Row="1" 
-			VerticalAlignment="Top" 
-            Height="89.91" Margin="0,-1.336,0,0"
-			HorizontalAlignment="Left" Width="230">
-    		<StackPanel 
-    			Orientation="Vertical" Margin="-5,0,-3,-3" 
-                VerticalAlignment="Bottom" Height="74.28">
-    			<TextBlock 
-    				Text="Navigation" 
-    				Height="21" 
-    				Margin="3,0,3,3" 
-                    HorizontalAlignment="Center" 
-                    FontSize="16"/>
-					
-    				<Fluent:RibbonGroupBox 
-                        Height="24.834" 
-                        Foreground="Black" 
-                        FontSize="16" Margin="0,0,-3,0">
-					<TextBlock  
-    				Text="Tommorow:" 
-    				Height="23.5" 
-    				Margin="0,0,3,0" Width="137.66"/>
-					</Fluent:RibbonGroupBox>
-					
-    				<Fluent:RibbonGroupBox Height="24.834" Foreground="Black" FontSize="16" Margin="0,0,-3,0">
-					<TextBlock 
-    				Text="Today:" 
-    				Height="23.5" 
-    				Margin="0,0,3,0" Width="138.533"/>
-					</Fluent:RibbonGroupBox>
-					
-    		</StackPanel>
-    	</Border>
-        
-    	<Custom:Calendar
-    		Margin="-0.791,21,1.123,0"
-    		VerticalAlignment="Top"
-    		MinWidth ="175"
-    		FontSize="16"
-    		Height="164.782"
-    		IsTodayHighlighted="True" 
-    		FontStretch="UltraExpanded" 
-            FontWeight="Bold" Focusable="True"
-            RenderTransformOrigin="0.5,0.5" Fluent:KeyTip.VerticalAlignment="Top"
-            Fluent:KeyTip.HorizontalAlignment="Left" 
-            Width="230" Foreground="#FFAB7272" OpacityMask="#FF473434" >
-    		
-            <Custom:Calendar.BorderBrush>
-    			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-    				<GradientStop Color="#FFA3AEB9" Offset="0"/>
-    				<GradientStop Color="#FF8399A9" Offset="0.375"/>
-    				<GradientStop Color="#FF718597" Offset="0.375"/>
-    				<GradientStop Color="#FF9DD2FA" Offset="1"/>
-    			</LinearGradientBrush>
-    		</Custom:Calendar.BorderBrush>
-    		<Custom:Calendar.Background>
-    			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-    				<GradientStop Color="#FFE4EAF0" Offset="0"/>
-    				<GradientStop Color="#FFECF0F4" Offset="0.16"/>
-    				<GradientStop Color="#FFFCFCFD" Offset="0.16"/>
-    				<GradientStop Color="#FFB7CBEC" Offset="1"/>
-    			</LinearGradientBrush>
-    		</Custom:Calendar.Background>
-    		<Custom:Calendar.RenderTransform>
-    			<TransformGroup>
-    				<ScaleTransform ScaleX="1.3" ScaleY="1.3"/>
-    				<SkewTransform AngleX="0" AngleY="0"/>
-    				<RotateTransform Angle="0"/>
-    				<TranslateTransform/>
-    			</TransformGroup>
-    		</Custom:Calendar.RenderTransform>
-            
-    	</Custom:Calendar>
 
     	<Border
     		Padding="10" 
     		CornerRadius="5"
     		BorderBrush="DarkGray"
     		BorderThickness="1" 
-            Margin="-2.332,0,-1,0.313" 
+            Margin="-1,0" 
             Grid.Column="1">                
            		               
     		<ListBox x:Name="listBox"			    
-    			 Margin="0,0,0,-4" Background="{x:Null}" BorderBrush="{x:Null}"
+    			 Margin="0" 
 				 BorderThickness="0" 
 				 Foreground="Black"                     
-				 SelectedItem="{Binding Current}" 
+				 SelectedItem="{Binding Current}"                                                                       
+                     
 				 ItemTemplate="{DynamicResource PersoneCardTemplate}"                     
 				 ItemsSource="{Binding ItemCollection}" 
                  IsTabStop="True" 
                  ItemTemplateSelector="{Binding BitmapEffect, ElementName=listBox, Mode=Default}" 
-                 ScrollViewer.HorizontalScrollBarVisibility="Hidden">
-    			
-                <ListBox.ItemContainerStyle>
-    				<Style TargetType="{x:Type ListBoxItem}">
-    					<Setter Property="Background" Value="Transparent"/>
-    					<Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
-    					<Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
-    					<Setter Property="Padding" Value="2,0,0,0"/>
-    					<Setter Property="Template">
-    						<Setter.Value>
-    							<ControlTemplate TargetType="{x:Type ListBoxItem}">
-    								<Border x:Name="Bd" SnapsToDevicePixels="true" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}">
-    									<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
-    								</Border>
-    								<ControlTemplate.Triggers>
-    									<Trigger Property="IsSelected" Value="true">
-    										<Setter Property="Background" TargetName="Bd" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
-    										<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
-    									</Trigger>
-    									<MultiTrigger>
-    										<MultiTrigger.Conditions>
-    											<Condition Property="IsSelected" Value="true"/>
-    											<Condition Property="Selector.IsSelectionActive" Value="false"/>
-    										</MultiTrigger.Conditions>
-    										<Setter Property="Background" TargetName="Bd" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
-    										<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
-    									</MultiTrigger>
-    									<Trigger Property="IsEnabled" Value="false">
-    										<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
-    									</Trigger>
-    								</ControlTemplate.Triggers>
-    							</ControlTemplate>
-    						</Setter.Value>
-    					</Setter>
-    				</Style>
-    			</ListBox.ItemContainerStyle>
-    			<ListBox.ItemsPanel>
-    				<ItemsPanelTemplate>
-    					<VirtualizingStackPanel IsItemsHost="True"/>
-    				</ItemsPanelTemplate>
-    			</ListBox.ItemsPanel>
-    			<ListBox.Style>
-    				<Style TargetType="{x:Type ListBox}">
-    					<Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
-    					<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}"/>
-    					<Setter Property="BorderBrush" Value="{x:Static Microsoft_Windows_Themes:ClassicBorderDecorator.ClassicBorderBrush}"/>
-    					<Setter Property="BorderThickness" Value="2"/>
-    					<Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
-    					<Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
-    					<Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
-    					<Setter Property="VerticalContentAlignment" Value="Center"/>
-    					<Setter Property="Template">
-    						<Setter.Value>
-    							<ControlTemplate TargetType="{x:Type ListBox}">
-    								<Microsoft_Windows_Themes:ClassicBorderDecorator x:Name="Bd" SnapsToDevicePixels="true" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderStyle="Sunken" BorderThickness="{TemplateBinding BorderThickness}">
-    									<ScrollViewer Padding="{TemplateBinding Padding}" Focusable="false">
-    										<ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
-    									</ScrollViewer>
-    								</Microsoft_Windows_Themes:ClassicBorderDecorator>
-    								<ControlTemplate.Triggers>
-    									<Trigger Property="IsEnabled" Value="false">
-    										<Setter Property="Background" TargetName="Bd" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
-    									</Trigger>
-    									<Trigger Property="IsGrouping" Value="true">
-    										<Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
-    									</Trigger>
-    								</ControlTemplate.Triggers>
-    							</ControlTemplate>
-    						</Setter.Value>
-    					</Setter>
-    				</Style>
-    			</ListBox.Style>
+                 ScrollViewer.HorizontalScrollBarVisibility="Hidden" FontFamily="Fonts/#Verdana">     			
+                
     		</ListBox>
              
                             
     	</Border>
+    	<StackPanel 
+		Grid.Column="0"
+		Grid.Row="0" Margin="0,0,0,1.498" Grid.RowSpan="2">
 
-        <Border 
-		    Padding="10" 
-		    CornerRadius="5" 
-		    MaxWidth="231" 
-            Width="230" 
-		    BorderBrush="DarkGray"
-		    BorderThickness="1" 
-            Grid.Row="2" 
-            HorizontalAlignment="Left" 
-            Margin="0,-1.112,0,0">	
-		</Border>
+                <Border 
+    			Padding="0" 
+    			CornerRadius="5" 
+    			BorderBrush="DarkGray"
+    			BorderThickness="1" 
+    			VerticalAlignment="Top"
+    			Height="191"
+    			Margin="0" 
+    			MinWidth="229.102" MaxWidth="229.102" 
+    			Width="230" ClipToBounds="True">
+               
+               <Custom:Calendar
+                SelectedDate="{Binding SelectDateCommand}" 
+                Name="MainCalendar"
+    			VerticalAlignment="Top"
+    			MinWidth ="175"
+    			FontSize="16"
+    			Height="180"
+    			IsTodayHighlighted="True" FontWeight="Bold" Focusable="True"
+    			RenderTransformOrigin="0.5,0.5" 
+                Fluent:KeyTip.VerticalAlignment="Top"
+    			Fluent:KeyTip.HorizontalAlignment="Left" 
+    			Width="183" Foreground="#FFAB7272" 
+                OpacityMask="#FF473434" 
+                HorizontalAlignment="Left" 
+                BorderThickness="0" 
+                Grid.IsSharedSizeScope="True" 
+                Margin="20,20,0,0" 
+                HorizontalContentAlignment="Stretch" 
+                VerticalContentAlignment="Stretch" FontFamily="Fonts/#Verdana" OverridesDefaultStyle="False">
+
+                        <Custom:Calendar.BorderBrush>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFA3AEB9" Offset="0"/>
+                                <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                                <GradientStop Color="#FF718597" Offset="0.375"/>
+                                <GradientStop Color="#FF9DD2FA" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Custom:Calendar.BorderBrush>
+                        <Custom:Calendar.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFE4EAF0" Offset="0"/>
+                                <GradientStop Color="#FFECF0F4" Offset="0.16"/>
+                                <GradientStop Color="#FFFCFCFD" Offset="0.16"/>
+                                <GradientStop Color="#FFB7CBEC" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Custom:Calendar.Background>
+                        <Custom:Calendar.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="1.3" ScaleY="1.3"/>
+                                <SkewTransform AngleX="0" AngleY="0"/>
+                                <RotateTransform Angle="0"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Custom:Calendar.RenderTransform>
+
+                    </Custom:Calendar>
+                </Border>
+
+                <Border 
+    			Padding="10" 
+    			CornerRadius="5" 
+    			BorderBrush="DarkGray"
+    			BorderThickness="1" 
+    			VerticalAlignment="Top"
+    			Height="145"
+    			Margin="0" 
+    			MinWidth="229.102" MaxWidth="229.102" 
+    			Width="230" ClipToBounds="True">
+            
+    			<StackPanel 
+    				Orientation="Vertical" 
+    				Margin="-5,0,-3,-0.5" 
+    				VerticalAlignment="Bottom" 
+    				Height="130" Width="215">
+    				<TextBlock 
+    					Text="Statistics" 
+    					Height="19.5" 
+    					Margin="3" HorizontalAlignment="Center" FontSize="14" FontFamily="Fonts/#Verdana" />
+    				<Fluent:RibbonGroupBox 
+    					Height="24.834" Foreground="Black" 
+                        FontSize="16" Margin="0,0,-3,0">
+    					<TextBlock 
+    						Text="Today:" 
+    						Height="24.5" 
+    						Margin="0,0,3,0" Width="129.2" FontFamily="Fonts/#Verdana" FontSize="14" />
+    				</Fluent:RibbonGroupBox>	
+    			
+    				<Fluent:RibbonGroupBox 
+    					Height="24.834" Foreground="Black" 
+                        FontSize="16" Margin="0,0,-3,0">
+    					<TextBlock 
+    						Text="Tomorrow:" 
+    						Height="22" 
+    						Margin="0" HorizontalAlignment="Left" 
+                            Width="128.102" FontFamily="Fonts/#Verdana" FontSize="14" />
+    				</Fluent:RibbonGroupBox>
+				
+    				<Fluent:RibbonGroupBox 
+    					Height="24.834" Foreground="Black" 
+                        FontSize="16" Margin="0,0,-3,0">
+    					<TextBlock 
+    						Text="Declined:" 
+    						Height="24.5" 
+    						Margin="0,0,3,0" Width="133.037" FontFamily="Fonts/#Verdana" FontSize="14" />
+    				</Fluent:RibbonGroupBox>
+					
+    				<Fluent:RibbonGroupBox 
+    					Height="24.834" Foreground="Black" 
+                        FontSize="16" Margin="0,0,-3,0">
+    					<TextBlock 
+    						Text="Done: " 
+    						Height="23.5" 
+    						Margin="0,0,3,0" 
+    						Width="139.367" FontFamily="Fonts/#Verdana" FontSize="14" />
+    				</Fluent:RibbonGroupBox>
+    			</StackPanel>
+    		</Border>
+    		<Border 
+    			Padding="10" 
+    			CornerRadius="5" 
+    			MaxWidth="231"
+    			BorderBrush="DarkGray"
+    			BorderThickness="1" 
+    			VerticalAlignment="Top" 
+    			Height="89.91"
+    			HorizontalAlignment="Left" 
+                Width="230" Margin="0,-1,0,0">
+    			<StackPanel 
+    				Orientation="Vertical" 
+                    Margin="-5,0,-3,-3" 
+    				VerticalAlignment="Bottom" 
+                    Height="74.28">
+    				<TextBlock 
+    					Text="Navigation" 
+    					Height="21" 
+    					Margin="3,0,3,3" 
+    					HorizontalAlignment="Center" 
+    					FontSize="14" FontFamily="Fonts/#Verdana" />
+					
+    				<Fluent:RibbonGroupBox 
+    					Height="24.834" 
+    					Foreground="Black" 
+    					FontSize="16" Margin="0,0,-3,0">
+    					<TextBlock  
+    						Text="Tommorow:" 
+    						Height="23.5" 
+    						Margin="0,0,3,0" Width="137.66" FontFamily="Fonts/#Verdana" FontSize="14" />
+    				</Fluent:RibbonGroupBox>
+					
+    				<Fluent:RibbonGroupBox 
+                        Height="24.834" 
+                        Foreground="Black" 
+                        FontSize="16" 
+                        Margin="0,0,-3,0">
+    					<TextBlock 
+    						Text="Today:" 
+    						Height="23.5" 
+    						Margin="0,0,3,0" 
+                            Width="138.533" FontFamily="Fonts/#Verdana" FontSize="14" />
+    				</Fluent:RibbonGroupBox>
+					
+    			</StackPanel>
+    		</Border>
+               
+            <!--<Border 
+    			Padding="10" 
+    			CornerRadius="5" 
+    			MaxWidth="231" 
+    			Width="230" 
+    			BorderBrush="DarkGray"
+    			BorderThickness="1" 
+    			Margin="0,-1,0,0" >                     
+             </Border>-->
+
+            </StackPanel>
            
     	
            

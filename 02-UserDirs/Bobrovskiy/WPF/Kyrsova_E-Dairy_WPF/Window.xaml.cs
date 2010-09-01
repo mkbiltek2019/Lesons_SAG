@@ -9,6 +9,7 @@
 
 #endregion
 
+using System;
 using Fluent;
 using Mvvm.ViewModels;
 
@@ -27,5 +28,7 @@ namespace EDairy
             InitializeComponent();
             DataContext = new MainViewModel();
         }
+
+     
     }
 }

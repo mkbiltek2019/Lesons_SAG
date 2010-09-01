@@ -1,16 +1,8 @@
-﻿#region Copyright and License Information
-
-// Fluent Ribbon Control Suite
-// http://fluent.codeplex.com/
-// Copyright © Degtyarev Daniel, Rikker Serg. 2009-2010.  All rights reserved.
-// 
-// Distributed under the terms of the Microsoft Public License (Ms-PL). 
-// The license is available online http://fluent.codeplex.com/license
-
-#endregion
-
+﻿using System;
 using System.ComponentModel;
 using System.Windows.Input;
+using Dairy.MyDataInstance.DataProvider;
+using Model;
 using Mvvm.Comands;
 using Mvvm.Model;
 
@@ -42,9 +34,9 @@ namespace Mvvm.ViewModels
         #region Fields
 
         // All DairyItems
-        private readonly DairyItemCollection _dairyItemCollection = DairyItemCollection.Generate();
-        // Current person
-        private DairyItem current;
+        private DairyItemCollection _dairyItemCollection = DairyItemCollection.Generate(null);
+        // Current DairyItem
+        private DairyItem current; 
 
         #endregion
 
@@ -55,12 +47,16 @@ namespace Mvvm.ViewModels
         /// </summary>
         public DairyItem Current
         {
-            get { return current; }
+            get
+            {
+                return current;
+            }
             set
             {
                 if (current == value) return;
                 current = value;
                 RaisePropertyChanged("Current");
+                deleteCommand.RaiseCanExecuteChanged();
             }
         }
 
@@ -70,6 +66,16 @@ namespace Mvvm.ViewModels
         public DairyItemCollection ItemCollection
         {
             get { return _dairyItemCollection; }
+            set
+            {
+                if (_dairyItemCollection == value)
+                {
+                    return;
+                }
+
+                _dairyItemCollection = value;
+                RaisePropertyChanged("ItemCollection");
+            }
         }
 
 
@@ -168,10 +174,97 @@ namespace Mvvm.ViewModels
         {
             _dairyItemCollection.Insert(0, new DairyItem());
             Current = _dairyItemCollection[0];
-            deleteCommand.RaiseCanExecuteChanged();
+            //deleteCommand.RaiseCanExecuteChanged();
+            //-----------------
+            //DairyListItem dairyListItem = new DairyListItem()
+            //                                  {   ItemID  = current.ID,
+            //                                      PriorityID = current.Priority,
+            //                                      StatusID = 1,
+            //                                      DateID = 1,
+            //                                      ItemTitle = current.Title,
+            //                                      ItemContent = current.Content
+            //                                  };
+
+            ////DairyDateItem dateItem = new DairyDateItem()
+            ////                             {
+            ////                                 Date = DateTime.Now,
+            ////                                 DateID = 0
+            ////                             };
+            
+            //TableController tabeController = new TableController();
+
+            //tabeController.Insert(dairyListItem);
+
         }
 
         #endregion
+
+        #region SelectDate
+
+        private DateTime selectDate=DateTime.Now;
+        /// <summary>
+        /// On SelectDate action ComboBoxSelectedItem
+        /// </summary>
+        public DateTime SelectDateCommand
+        {
+            get
+            {
+                return selectDate;
+            }
+            set
+            {
+                if (selectDate != value)
+                {
+                  selectDate = value;
+                  CreateDairyItemList();
+                  RaisePropertyChanged("SelectDateCommand");
+                } 
+            }
+        }
+
+        // Creates DairyItemList from dataBase by selected Date
+        void CreateDairyItemList()
+        {
+            DateTime day = Convert.ToDateTime("04.03.10");
+
+            TableAssemblyWorker worker = new TableAssemblyWorker();
+            DairyDateItem dateItem = new DairyDateItem()
+                                         {
+                                             Date = day,
+                                             DateID = 0 
+                                         };
+            worker.DateItem = dateItem;
+
+            ItemCollection = DairyItemCollection.Generate(worker.Select());
+            
+            //deleteCommand.RaiseCanExecuteChanged();
+
+            //_dairyItemCollection.Insert(0, new DairyItem());
+            //Current = _dairyItemCollection[0];
+            //deleteCommand.RaiseCanExecuteChanged();
+            //-----------------
+            //DairyListItem dairyListItem = new DairyListItem()
+            //{
+            //    PriorityID = current.Priority,
+            //    StatusID = 1,
+            //    DateID = 1,
+            //    ItemTitle = current.Title,
+            //    ItemContent = current.Content
+            //};
+
+            //DairyDateItem dateItem = new DairyDateItem()
+            //                             {
+            //                                 Date = DateTime.Now,
+            //                                 DateID = 0
+            //                             };
+
+            //TableController tabeController = new TableController();
+
+            //tabeController.Insert(dairyListItem);
+
+        }
+
+        #endregion  
 
         #endregion
 
