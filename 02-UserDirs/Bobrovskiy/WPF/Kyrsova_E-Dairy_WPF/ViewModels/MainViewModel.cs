@@ -33,10 +33,12 @@ namespace Mvvm.ViewModels
 
         #region Fields
 
+        //  Database worker
+        private TableAssemblyWorker databaseWorker = new TableAssemblyWorker();
         // All DairyItems
         private DairyItemCollection _dairyItemCollection = DairyItemCollection.Generate(null);
         // Current DairyItem
-        private DairyItem current; 
+        private DairyItem current;
 
         #endregion
 
@@ -103,7 +105,7 @@ namespace Mvvm.ViewModels
         }
 
         #endregion
-        
+
         #region Delete
 
         RelayCommand deleteCommand;
@@ -120,7 +122,7 @@ namespace Mvvm.ViewModels
                     deleteCommand = new RelayCommand(
                         x => DeleteCurrentDairyItem(),
                         x => current != null);
-                    
+
                 }
                 return deleteCommand;
             }
@@ -129,7 +131,18 @@ namespace Mvvm.ViewModels
         // Deletes current DairyItem
         void DeleteCurrentDairyItem()
         {
-            if (current == null) return;
+            if (current == null)
+            {
+                return;
+            }
+
+            databaseWorker.ListItem = databaseWorker.ListItem = new DairyListItem()
+            {
+                ItemID = current.ItemID
+            };
+
+            databaseWorker.Delete();
+
             DairyItem deleted = current;
 
             if (_dairyItemCollection.Count != 1)
@@ -144,7 +157,7 @@ namespace Mvvm.ViewModels
             }
 
             _dairyItemCollection.Remove(deleted);
-            
+
         }
 
         #endregion
@@ -162,8 +175,8 @@ namespace Mvvm.ViewModels
             {
                 if (createCommand == null)
                 {
-                    createCommand = new RelayCommand(x => CreateDairyItem());
-
+                    createCommand =
+                        new RelayCommand(x => CreateDairyItem());
                 }
                 return createCommand;
             }
@@ -174,34 +187,80 @@ namespace Mvvm.ViewModels
         {
             _dairyItemCollection.Insert(0, new DairyItem());
             Current = _dairyItemCollection[0];
-            //deleteCommand.RaiseCanExecuteChanged();
-            //-----------------
-            //DairyListItem dairyListItem = new DairyListItem()
-            //                                  {   ItemID  = current.ID,
-            //                                      PriorityID = current.Priority,
-            //                                      StatusID = 1,
-            //                                      DateID = 1,
-            //                                      ItemTitle = current.Title,
-            //                                      ItemContent = current.Content
-            //                                  };
+            deleteCommand.RaiseCanExecuteChanged();
 
-            ////DairyDateItem dateItem = new DairyDateItem()
-            ////                             {
-            ////                                 Date = DateTime.Now,
-            ////                                 DateID = 0
-            ////                             };
-            
-            //TableController tabeController = new TableController();
+            databaseWorker.ListItem = new DairyListItem()
+                                              {
+                                                  PriorityID = current.PriorityID,
+                                                  StatusID = current.StatusID,
+                                                  DateID = 1,
+                                                  ItemTitle = current.ItemTitle,
+                                                  ItemContent = current.ItemContent
+                                              };
 
-            //tabeController.Insert(dairyListItem);
+            databaseWorker.DateItem = new DairyDateItem()
+            {
+                Date = selectDate,
+                DateID = 0
+            }; ;
+
+            databaseWorker.Insert();
+        }
+
+        #endregion
+
+        #region Commit
+
+        RelayCommand commitCommand;
+
+        /// <summary>
+        /// Delete this DairyItem
+        /// </summary>
+        public ICommand CommitCommand
+        {
+            get
+            {
+                if (commitCommand == null)
+                {
+                    commitCommand =
+                        new RelayCommand(x => CommitData());
+                }
+                return commitCommand;
+            }
+        }
+
+        // Creates DairyItem
+        void CommitData()
+        {
+            databaseWorker.DateItem = new DairyDateItem()
+            {
+                Date = selectDate,
+                DateID = 0
+            };
+
+            foreach (DairyItem item in ItemCollection)
+            {
+                databaseWorker.ListItem = new DairyListItem()
+              {
+                  ItemID = item.ItemID,
+                  PriorityID = item.PriorityID,
+                  StatusID = item.StatusID,
+                  DateID = item.DateID,
+                  ItemTitle = item.ItemTitle,
+                  ItemContent = item.ItemContent
+              };
+
+              databaseWorker.Update();
+            }                        
 
         }
 
         #endregion
 
+
         #region SelectDate
 
-        private DateTime selectDate=DateTime.Now;
+        private DateTime selectDate = DateTime.Now;
         /// <summary>
         /// On SelectDate action ComboBoxSelectedItem
         /// </summary>
@@ -215,56 +274,27 @@ namespace Mvvm.ViewModels
             {
                 if (selectDate != value)
                 {
-                  selectDate = value;
-                  CreateDairyItemList();
-                  RaisePropertyChanged("SelectDateCommand");
-                } 
+                    selectDate = value;
+                    CreateDairyItemList();
+                    RaisePropertyChanged("SelectDateCommand");
+                }
             }
         }
 
         // Creates DairyItemList from dataBase by selected Date
         void CreateDairyItemList()
         {
-            DateTime day = Convert.ToDateTime("04.03.10");
-
-            TableAssemblyWorker worker = new TableAssemblyWorker();
-            DairyDateItem dateItem = new DairyDateItem()
+            databaseWorker.DateItem = new DairyDateItem()
                                          {
-                                             Date = day,
-                                             DateID = 0 
+                                             Date = selectDate,
+                                             DateID = 0
                                          };
-            worker.DateItem = dateItem;
 
-            ItemCollection = DairyItemCollection.Generate(worker.Select());
-            
-            //deleteCommand.RaiseCanExecuteChanged();
-
-            //_dairyItemCollection.Insert(0, new DairyItem());
-            //Current = _dairyItemCollection[0];
-            //deleteCommand.RaiseCanExecuteChanged();
-            //-----------------
-            //DairyListItem dairyListItem = new DairyListItem()
-            //{
-            //    PriorityID = current.Priority,
-            //    StatusID = 1,
-            //    DateID = 1,
-            //    ItemTitle = current.Title,
-            //    ItemContent = current.Content
-            //};
-
-            //DairyDateItem dateItem = new DairyDateItem()
-            //                             {
-            //                                 Date = DateTime.Now,
-            //                                 DateID = 0
-            //                             };
-
-            //TableController tabeController = new TableController();
-
-            //tabeController.Insert(dairyListItem);
-
+            ItemCollection = DairyItemCollection.Generate(
+                                                 databaseWorker.Select());
         }
 
-        #endregion  
+        #endregion
 
         #endregion
 

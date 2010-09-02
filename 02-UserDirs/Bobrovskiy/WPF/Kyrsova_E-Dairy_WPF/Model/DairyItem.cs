@@ -26,13 +26,13 @@ namespace Mvvm.Model
         #region Fields
 
         // itemID
-        private int itemID = 0;
+        private int itemID = 1;
         // priorityID
-        private int priorityID = 0;
+        private int priorityID = 1;
         // statusID
-        private int statusID = 0;
+        private int statusID = 1;
         // dateID
-        private int dateID = 0;
+        private int dateID = 1;
         // itemTitle
         private string itemTitle = string.Empty;
         // itemContent

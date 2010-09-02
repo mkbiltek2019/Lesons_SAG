@@ -6,7 +6,7 @@
     mc:Ignorable="d" 
     xmlns:Custom="http://schemas.microsoft.com/wpf/2008/toolkit" 
     xmlns:Fluent="clr-namespace:Fluent;assembly=Fluent" 
-    xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Classic" 
+     
     x:Class="EDairy.Window"
     x:Name="MainForm"
     Title="E-Dairy.WPF"     
@@ -24,7 +24,7 @@
 	LastChildFill="True"   
 	Fluent:KeyTip.HorizontalAlignment="Left"
 	Fluent:KeyTip.VerticalAlignment="Top" 
-	ScrollViewer.VerticalScrollBarVisibility="Disabled" > 	 
+	ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="0,0,0,2" > 	 
        
 	    <Fluent:Ribbon DockPanel.Dock="Top" Height="67" FontFamily="Fonts/#Verdana">          
           <!--Quick Access Toolbar Items-->
@@ -42,9 +42,8 @@
           </Fluent:Ribbon.BackstageItems>
 
           <!--Tabs-->
-          <Fluent:RibbonTabItem x:Name="ribbonTabItem" 
-              Header="Tab"
-              ReduceOrder="(P),(P),(P),(P),(P)" FontFamily="Fonts/#Verdana">
+          <Fluent:RibbonTabItem x:Name="ribbonTabItem"
+              ReduceOrder="(P),(P),(P),(P),(P)" FontFamily="Fonts/#Verdana" Header="Dairy">
 
             <!--Gallery with all persons-->
                 <!--Gallery with all persons-->
@@ -56,17 +55,17 @@
     <!--View & Edit Current Persone Details-->
     <Grid		 
           SnapsToDevicePixels="True" 
-          Margin="0,-15,0,9" 
-          x:Name="MainGrid" 	  	 
+          Margin="0,-15,0,1" 
+          x:Name="MainGrid" d:LayoutOverrides="Width" 	  	 
 		  >
 		  
     	<Grid.ColumnDefinitions>
     		<ColumnDefinition Width="230" MinWidth="230"/>
-    		<ColumnDefinition Width="0.644*" MinWidth="100"/>
+    		<ColumnDefinition MinWidth="100"/>
     	</Grid.ColumnDefinitions>
     	<Grid.RowDefinitions>
-    		<RowDefinition Height="0.592*"/>
-    		<RowDefinition Height="0.408*"  MinHeight="173" />
+    		<RowDefinition Height="0.477*"/>
+    		<RowDefinition Height="0.523*"  MinHeight="173" />
     	</Grid.RowDefinitions>    	
         
       <Border 
@@ -78,7 +77,7 @@
 		  Grid.Row="1"
           Grid.Column="1"
           Fluent:KeyTip.VerticalAlignment="Stretch"
-		  Margin="-1,-1,-2.332,-8.502"
+		  Margin="-1,-1.106,0,-0.502"
 		  Fluent:KeyTip.HorizontalAlignment="Stretch" 
           
 		  MinWidth="400.248" >
@@ -94,9 +93,9 @@
         		<ColumnDefinition/>
         	</Grid.ColumnDefinitions>
         	<Grid.RowDefinitions>
-        		<RowDefinition Height="0.143*"/>
-        		<RowDefinition Height="0.174*"/>
-        		<RowDefinition Height="0.683*"/>
+        		<RowDefinition Height="31.847"/>
+        		<RowDefinition Height="0.203*"/>
+        		<RowDefinition Height="0.797*"/>
         	</Grid.RowDefinitions>
 		  
       		<ScrollViewer
@@ -116,12 +115,12 @@
         			MinHeight="100" 
         			AutoWordSelection="True" 
         			BorderBrush="SlateGray" 
-        			BorderThickness="1" FontFamily="Fonts/#Verdana"/> 
+        			BorderThickness="1" FontFamily="Fonts/#Verdana" Background="{x:Null}"/> 
         	</ScrollViewer>
 			
 			<Fluent:RibbonGroupBox
 			Grid.Row="2"
-			Header="" Margin="2,2.303,0,0" 
+			Header="" Margin="6,0.303,0,0" 
 			Height="52" HorizontalAlignment="Left" 
                 Width="84.277" d:LayoutOverrides="VerticalAlignment" 
                 CanAddToQuickAccessToolBar="False" VerticalAlignment="Top" 
@@ -142,31 +141,57 @@
 			 </Fluent:RibbonGroupBox> 
 			 <Fluent:RibbonGroupBox
 			Grid.Row="2"
-			     Header="" Margin="1.333,58.552,0,0" 
+			     Header="" Margin="2.333,55.552,0,0" 
                  VerticalAlignment="Top" 
                  HorizontalAlignment="Left" 
                  CanAddToQuickAccessToolBar="False" 
                  Fluent:KeyTip.HorizontalAlignment="Left" Height="51" 
                  Fluent:KeyTip.VerticalAlignment="Top" Padding="-2" Width="64.277" >
-			 	<Fluent:Button Text="Remove" Command="{Binding DeleteCommand}" Icon="Images\Gray.png"
-			 		LargeIcon="Images\GrayLarge.png" HorizontalAlignment="Left" VerticalAlignment="Bottom" 
-			 		Height="50.5" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
-			 		Fluent:KeyTip.AutoPlacement="False" Fluent:KeyTip.HorizontalAlignment="Stretch" 
-			 		Fluent:KeyTip.VerticalAlignment="Stretch" CanAddToQuickAccessToolBar="False"
-			 		Margin="0" Width="59.944" FontFamily="Fonts/#Verdana" />
+			 	<Fluent:Button Text="Commit" Icon="Images/Blue.png"
+                        Command="{Binding CommitCommand}"        
+                        LargeIcon="Images/YellowLarge.png" 
+                        HorizontalAlignment="Left" 
+                        VerticalAlignment="Bottom"			 		
+                        HorizontalContentAlignment="Stretch" 
+                        VerticalContentAlignment="Stretch"
+                        Fluent:KeyTip.AutoPlacement="False" 
+                        Fluent:KeyTip.HorizontalAlignment="Stretch" 
+                        Fluent:KeyTip.VerticalAlignment="Stretch" 
+                        CanAddToQuickAccessToolBar="False"
+                        Margin="0" Width="59.944" Height="50.5" 
+                        FontFamily="Fonts/#Verdana" />
+                 
 			 </Fluent:RibbonGroupBox>
         	<TextBlock 
         		Text="Title:" 
-        		Margin="3,3,4.983,3.177" FontFamily="Fonts/#Verdana" />
+        		Margin="0,3,7.983,3.177" FontFamily="Fonts/#Verdana" />
         	<TextBlock 
         		Text="Content:" 
-        		Margin="4.333,7.156,3.65,4.545" FontFamily="Fonts/#Verdana" Grid.Row="1" />
+        		Margin="-2,7.156,2,4.545" FontFamily="Fonts/#Verdana" Grid.Row="1" />
                 
         	<TextBox
-        		Text="{Binding Current.ItemTitle}" Margin="0,0,-1.333,0" 
+               	Text="{Binding Current.ItemTitle}" 
+                Margin="0,0,-1.333,0" 
         		MaxLines="2" MaxLength="400" 
         		BorderBrush="SlateGray" 
-        		BorderThickness="1" FontFamily="Fonts/#Verdana" Grid.Column="1" FontSize="16" />    
+        		BorderThickness="1" 
+                FontFamily="Fonts/#Verdana" Grid.Column="1" 
+                FontSize="14" Background="{x:Null}" />
+        	<Fluent:RibbonGroupBox
+        		Grid.Row="2"
+        		Header="" Margin="2.333,117.552,0,0" 
+        		VerticalAlignment="Top" 
+        		HorizontalAlignment="Left" 
+        		CanAddToQuickAccessToolBar="False" 
+        		Fluent:KeyTip.HorizontalAlignment="Left" Height="51" 
+        		Fluent:KeyTip.VerticalAlignment="Top" Padding="-2" Width="64.277" >
+        		<Fluent:Button Text="Remove" Command="{Binding DeleteCommand}" Icon="Images\Gray.png"
+        			LargeIcon="Images\GrayLarge.png" HorizontalAlignment="Left" VerticalAlignment="Bottom" 
+        			Height="50.5" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
+        			Fluent:KeyTip.AutoPlacement="False" Fluent:KeyTip.HorizontalAlignment="Stretch" 
+        			Fluent:KeyTip.VerticalAlignment="Stretch" CanAddToQuickAccessToolBar="False"
+        			Margin="0" Width="59.944" FontFamily="Fonts/#Verdana" />
+        	</Fluent:RibbonGroupBox>    
       	</Grid>
       </Border>
 
@@ -175,7 +200,7 @@
     		CornerRadius="5"
     		BorderBrush="DarkGray"
     		BorderThickness="1" 
-            Margin="-1,0" 
+            Margin="-1,0,-1,0.106" 
             Grid.Column="1">                
            		               
     		<ListBox x:Name="listBox"			    
@@ -196,7 +221,7 @@
     	</Border>
     	<StackPanel 
 		Grid.Column="0"
-		Grid.Row="0" Margin="0,0,0,1.498" Grid.RowSpan="2">
+		Grid.Row="0" Margin="0,0,0,9.498" Grid.RowSpan="2">
 
                 <Border 
     			Padding="0" 
@@ -227,7 +252,7 @@
                 Grid.IsSharedSizeScope="True" 
                 Margin="20,20,0,0" 
                 HorizontalContentAlignment="Stretch" 
-                VerticalContentAlignment="Stretch" FontFamily="Fonts/#Verdana" OverridesDefaultStyle="False">
+                VerticalContentAlignment="Stretch" FontFamily="Fonts/#Verdana" OverridesDefaultStyle="False" Background="{x:Null}">
 
                         <Custom:Calendar.BorderBrush>
                             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -237,14 +262,6 @@
                                 <GradientStop Color="#FF9DD2FA" Offset="1"/>
                             </LinearGradientBrush>
                         </Custom:Calendar.BorderBrush>
-                        <Custom:Calendar.Background>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="#FFE4EAF0" Offset="0"/>
-                                <GradientStop Color="#FFECF0F4" Offset="0.16"/>
-                                <GradientStop Color="#FFFCFCFD" Offset="0.16"/>
-                                <GradientStop Color="#FFB7CBEC" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Custom:Calendar.Background>
                         <Custom:Calendar.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform ScaleX="1.3" ScaleY="1.3"/>
@@ -343,7 +360,7 @@
     					Foreground="Black" 
     					FontSize="16" Margin="0,0,-3,0">
     					<TextBlock  
-    						Text="Tommorow:" 
+    						Text="Tommorow" 
     						Height="23.5" 
     						Margin="0,0,3,0" Width="137.66" FontFamily="Fonts/#Verdana" FontSize="14" />
     				</Fluent:RibbonGroupBox>
@@ -354,7 +371,7 @@
                         FontSize="16" 
                         Margin="0,0,-3,0">
     					<TextBlock 
-    						Text="Today:" 
+    						Text="Today" 
     						Height="23.5" 
     						Margin="0,0,3,0" 
                             Width="138.533" FontFamily="Fonts/#Verdana" FontSize="14" />
@@ -363,7 +380,7 @@
     			</StackPanel>
     		</Border>
                
-            <!--<Border 
+            <Border 
     			Padding="10" 
     			CornerRadius="5" 
     			MaxWidth="231" 
@@ -371,7 +388,7 @@
     			BorderBrush="DarkGray"
     			BorderThickness="1" 
     			Margin="0,-1,0,0" >                     
-             </Border>-->
+             </Border>
 
             </StackPanel>
            
