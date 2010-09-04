@@ -54,18 +54,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataOperator\IDataOperator.cs" />
+    <Compile Include="DataOperator\IStatisticProvider.cs" />
     <Compile Include="DataProvider\AsyncDataProvider.cs" />
     <Compile Include="DataProvider\IDataProvider.cs" />
-    <Compile Include="DataProvider\ParameterProvider.cs" />
-    <Compile Include="DataProvider\Resources\TableResourses.cs" />
+    <Compile Include="ParameterProvider\ParameterProvider.cs" />
+    <Compile Include="ParameterProvider\StoredProcedureResource\TableResourses.cs" />
     <Compile Include="DataProvider\SyncDataProvider.cs" />
-    <Compile Include="DataProvider\TableAssemblyWorker.cs" />
-    <Compile Include="ExecuteNonQuery.cs" />
+    <Compile Include="DataOperator\TableAssemblyWorker.cs" />
+    <Compile Include="DataProvider\ExecuteNonQuery.cs" />
     <Compile Include="Model\Model.cs" />
-    <Compile Include="ParameterItem.cs" />
+    <Compile Include="ParameterProvider\ParameterItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SimpleParameterMapper.cs" />
-    <Compile Include="TableController.cs" />
+    <Compile Include="ParameterProvider\SimpleParameterMapper.cs" />
+    <Compile Include="Controller\TableController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

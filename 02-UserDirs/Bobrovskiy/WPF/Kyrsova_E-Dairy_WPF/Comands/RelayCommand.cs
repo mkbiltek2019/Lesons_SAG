@@ -13,12 +13,14 @@ namespace Mvvm.Comands
     /// </summary>
     public class RelayCommand : ICommand
     {
+        private static readonly double updateTime = 100;
+
         #region CanExecute Automatic Updating
 
         [SuppressMessage("Microsoft.Performance", "CA1823", Justification = "This variable is used.")]
         static DispatcherTimer timer =
-                new DispatcherTimer(TimeSpan.FromMilliseconds(200),
-                    DispatcherPriority.SystemIdle, (s, e) => UpdateCanExcecute(),
+                new DispatcherTimer(TimeSpan.FromMilliseconds(updateTime),
+                    DispatcherPriority.Send, (s, e) => UpdateCanExcecute(),
                     Dispatcher.CurrentDispatcher);
 
         static void UpdateCanExcecute()

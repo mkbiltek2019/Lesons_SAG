@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Windows.Input;
 using Dairy.MyDataInstance.DataProvider;
 using Model;
@@ -79,7 +81,6 @@ namespace Mvvm.ViewModels
                 RaisePropertyChanged("ItemCollection");
             }
         }
-
 
         #endregion
 
@@ -173,11 +174,11 @@ namespace Mvvm.ViewModels
         {
             get
             {
-                if (createCommand == null)
-                {
-                    createCommand =
-                        new RelayCommand(x => CreateDairyItem());
-                }
+                //  if (createCommand == null)
+                // {
+                createCommand =
+                    new RelayCommand(x => CreateDairyItem());
+                // }
                 return createCommand;
             }
         }
@@ -187,7 +188,7 @@ namespace Mvvm.ViewModels
         {
             _dairyItemCollection.Insert(0, new DairyItem());
             Current = _dairyItemCollection[0];
-            deleteCommand.RaiseCanExecuteChanged();
+            createCommand.RaiseCanExecuteChanged();
 
             databaseWorker.ListItem = new DairyListItem()
                                               {
@@ -202,9 +203,11 @@ namespace Mvvm.ViewModels
             {
                 Date = selectDate,
                 DateID = 0
-            }; ;
+            };
 
             databaseWorker.Insert();
+
+            CreateDairyItemList();
         }
 
         #endregion
@@ -234,29 +237,29 @@ namespace Mvvm.ViewModels
         {
             databaseWorker.DateItem = new DairyDateItem()
             {
-                Date = selectDate,
+                Date = SelectDateCommand,
                 DateID = 0
             };
 
             foreach (DairyItem item in ItemCollection)
             {
                 databaseWorker.ListItem = new DairyListItem()
-              {
-                  ItemID = item.ItemID,
-                  PriorityID = item.PriorityID,
-                  StatusID = item.StatusID,
-                  DateID = item.DateID,
-                  ItemTitle = item.ItemTitle,
-                  ItemContent = item.ItemContent
-              };
+                {
+                    ItemID = item.ItemID,
+                    PriorityID = item.PriorityID,
+                    StatusID = item.StatusID,
+                    DateID = item.DateID,
+                    ItemTitle = item.ItemTitle,
+                    ItemContent = item.ItemContent
+                };
 
-              databaseWorker.Update();
-            }                        
+                databaseWorker.Update();
+            }
 
+            commitCommand.RaiseCanExecuteChanged();
         }
 
-        #endregion
-
+        #endregion  
 
         #region SelectDate
 
@@ -293,6 +296,170 @@ namespace Mvvm.ViewModels
             ItemCollection = DairyItemCollection.Generate(
                                                  databaseWorker.Select());
         }
+
+        #endregion
+
+        #region Statistic 
+
+        #region Today
+        private string statisticToday = "Today: 0";
+        /// <summary>
+        /// On SelectDate action ComboBoxSelectedItem
+        /// </summary>
+        public string StatisticToday
+        {
+            get
+            {
+                return statisticToday;
+            }
+            set
+            {
+                if (statisticToday != value)
+                {
+                    statisticToday = value;
+                    UpdateStatistic();
+                    RaisePropertyChanged("StatisticToday");
+                }
+            }
+        }
+
+        // UpdateStatistic 
+        void UpdateStatistic()
+        {
+            databaseWorker.DateItem = new DairyDateItem()
+            {
+                Date = DateTime.Now,
+                DateID = 0
+            };
+
+            statisticToday = string.Format("Today: {0}", 1);
+
+            //ItemCollection = DairyItemCollection.Generate(
+            //databaseWorker.Select());
+        }
+
+        #endregion
+
+        #region Tomorrow
+
+        private string statisticTomorrow = "Tomorrow: 0";
+        /// <summary>
+        /// On SelectDate action ComboBoxSelectedItem
+        /// </summary>
+        public string StatisticTomorrow
+        {
+            get
+            {
+                return statisticTomorrow;
+            }
+            set
+            {
+                if (statisticTomorrow != value)
+                {
+                    statisticTomorrow = value;
+                    UpdateStatisticForTommorow();
+                    RaisePropertyChanged("StatisticTomorrow");
+                }
+            }
+        }
+
+        // UpdateStatistic 
+        void UpdateStatisticForTommorow()
+        {
+            databaseWorker.DateItem = new DairyDateItem()
+            {
+                Date = DateTime.Now.AddDays(1),
+                DateID = 0
+            };
+
+            statisticToday = string.Format("Tomorrow: {0}", 1);
+
+            //ItemCollection = DairyItemCollection.Generate(
+            //databaseWorker.Select());
+        }
+
+        #endregion
+
+        #region Declined
+
+        private string statisticDeclined = "Declined: 0";
+        /// <summary>
+        /// On  action 
+        /// </summary>
+        public string StatisticDeclined
+        {
+            get
+            {
+                return statisticDeclined;
+            }
+            set
+            {
+                if (statisticDeclined != value)
+                {
+                    statisticDeclined = value;
+                    UpdateStatisticForDeclined();
+                    RaisePropertyChanged("StatisticDeclined");
+                }
+            }
+        }
+
+        // UpdateStatistic 
+        void UpdateStatisticForDeclined()
+        {
+            databaseWorker.DateItem = new DairyDateItem()
+            {
+                Date = DateTime.Now,
+                DateID = 0
+            };
+
+            statisticToday = string.Format("Declined: {0}", 1);
+
+            //ItemCollection = DairyItemCollection.Generate(
+            //databaseWorker.Select());
+        }
+
+        #endregion
+
+        #region Done
+
+        private string statisticDone = "Done: 0";
+        /// <summary>
+        /// On action 
+        /// </summary>
+        public string StatisticDone
+        {
+            get
+            {
+                return statisticDone;
+            }
+            set
+            {
+                if (statisticDone != value)
+                {
+                    statisticDone = value;
+                    UpdateStatisticForStatisticDone();
+                    RaisePropertyChanged("StatisticDone");
+                }
+            }
+        }
+
+        // UpdateStatistic 
+        void UpdateStatisticForStatisticDone()
+        {
+            databaseWorker.DateItem = new DairyDateItem()
+            {
+                Date = DateTime.Now,
+                DateID = 0
+            };
+
+            statisticToday = string.Format("Done: {0}", 1);
+
+            //ItemCollection = DairyItemCollection.Generate(
+            //databaseWorker.Select());
+        }
+
+        #endregion
+
 
         #endregion
 

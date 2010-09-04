@@ -84,6 +84,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Cube\Dictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="ResourceDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -118,6 +122,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Cube\Trackball.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -131,9 +136,15 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Blue.png" />
-    <Resource Include="Images\BlueLarge.png" />
-    <Resource Include="Images\Brown.png" />
+    <Resource Include="Images\Blue.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BlueLarge.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Brown.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\BrownLarge.png" />
     <Resource Include="Images\Gray.png" />
     <Resource Include="Images\Green.png" />
@@ -144,7 +155,9 @@
     <Resource Include="Images\Pink.png" />
     <Resource Include="Images\PinkLarge.png" />
     <Resource Include="Images\Red.png" />
-    <Resource Include="Images\RedLarge.png" />
+    <Resource Include="Images\RedLarge.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\Yellow.png" />
     <Resource Include="Images\YellowLarge.png" />
   </ItemGroup>
@@ -218,50 +231,7 @@
       <All>True</All>
       <AutoFill>True</AutoFill>
     </BlendEmbeddedFont>
-    <BlendEmbeddedFont Include="Fonts\tahoma.ttf">
-      <IsSystemFont>True</IsSystemFont>
-      <All>True</All>
-      <AutoFill>True</AutoFill>
-    </BlendEmbeddedFont>
-    <BlendEmbeddedFont Include="Fonts\tahomabd.ttf">
-      <IsSystemFont>True</IsSystemFont>
-      <All>True</All>
-      <AutoFill>True</AutoFill>
-    </BlendEmbeddedFont>
-    <BlendEmbeddedFont Include="Fonts\verdana.ttf">
-      <IsSystemFont>True</IsSystemFont>
-      <All>True</All>
-      <AutoFill>True</AutoFill>
-      <Characters>
-      </Characters>
-      <Uppercase>True</Uppercase>
-      <Lowercase>True</Lowercase>
-      <Numbers>True</Numbers>
-      <Punctuation>True</Punctuation>
-    </BlendEmbeddedFont>
-    <BlendEmbeddedFont Include="Fonts\verdanab.ttf">
-      <IsSystemFont>True</IsSystemFont>
-      <All>True</All>
-      <AutoFill>True</AutoFill>
-      <Characters>
-      </Characters>
-      <Uppercase>True</Uppercase>
-      <Lowercase>True</Lowercase>
-      <Numbers>True</Numbers>
-      <Punctuation>True</Punctuation>
-    </BlendEmbeddedFont>
-    <BlendEmbeddedFont Include="Fonts\verdanai.ttf">
-      <IsSystemFont>True</IsSystemFont>
-      <All>True</All>
-      <AutoFill>True</AutoFill>
-      <Characters>
-      </Characters>
-      <Uppercase>True</Uppercase>
-      <Lowercase>True</Lowercase>
-      <Numbers>True</Numbers>
-      <Punctuation>True</Punctuation>
-    </BlendEmbeddedFont>
-    <BlendEmbeddedFont Include="Fonts\verdanaz.ttf">
+    <BlendEmbeddedFont Include="Fonts\ITCKRIST.TTF">
       <IsSystemFont>True</IsSystemFont>
       <All>True</All>
       <AutoFill>True</AutoFill>
@@ -313,6 +283,14 @@
       <Project>{92697FF2-8670-4A6D-9145-ECFED0592ED2}</Project>
       <Name>Dairy.MyDataInstance</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\roundcornersheet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\star.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

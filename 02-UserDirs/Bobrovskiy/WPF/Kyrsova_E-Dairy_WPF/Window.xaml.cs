@@ -1,17 +1,9 @@
-﻿#region Copyright and License Information
-
-// Fluent Ribbon Control Suite
-// http://fluent.codeplex.com/
-// Copyright © Degtyarev Daniel, Rikker Serg. 2009-2010.  All rights reserved.
-// 
-// Distributed under the terms of the Microsoft Public License (Ms-PL). 
-// The license is available online http://fluent.codeplex.com/license
-
-#endregion
-
-using System;
+﻿using System;
+using System.Windows;
+using System.Windows.Media.Animation;
 using Fluent;
 using Mvvm.ViewModels;
+using Windows_With_CUBE;
 
 namespace EDairy
 {
@@ -29,6 +21,31 @@ namespace EDairy
             DataContext = new MainViewModel();
         }
 
-     
+        #region   cube
+
+        private void OnLoaded(object sender, EventArgs e)
+        {
+            // setup trackball for moving the model around
+            _trackball = new Trackball();
+            _trackball.Attach(this);
+            _trackball.Slaves.Add(myViewport3D);
+            _trackball.Enabled = true;
+
+        }
+
+        #region Globals
+
+        Trackball _trackball;
+
+        #endregion
+
+        private void OnLoaded(object sender, RoutedEventArgs e)
+        {
+            Storyboard s;
+
+            s = (Storyboard)this.FindResource("RotateStoryboard");
+            this.BeginStoryboard(s);
+        }
+        #endregion
     }
 }

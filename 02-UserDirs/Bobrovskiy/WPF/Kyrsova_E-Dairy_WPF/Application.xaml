@@ -8,8 +8,8 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                  <ResourceDictionary Source="pack://application:,,,/Fluent;Component/Themes/Office2010/Blue.xaml" />
-                 <ResourceDictionary Source="ResourceDictionary.xaml" />                                           
-                
+                 <ResourceDictionary Source="ResourceDictionary.xaml" />
+                <ResourceDictionary Source="Cube/Dictionary.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>        
         
