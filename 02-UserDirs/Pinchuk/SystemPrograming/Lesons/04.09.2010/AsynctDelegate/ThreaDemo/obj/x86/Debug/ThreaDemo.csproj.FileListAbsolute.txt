@@ -1,0 +1,5 @@
+C:\Documents and Settings\user.STEP\Мои документы\Visual Studio 2010\Projects\AsynctDelegate\ThreaDemo\bin\Debug\ThreaDemo.exe
+C:\Documents and Settings\user.STEP\Мои документы\Visual Studio 2010\Projects\AsynctDelegate\ThreaDemo\bin\Debug\ThreaDemo.pdb
+C:\Documents and Settings\user.STEP\Мои документы\Visual Studio 2010\Projects\AsynctDelegate\ThreaDemo\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\user.STEP\Мои документы\Visual Studio 2010\Projects\AsynctDelegate\ThreaDemo\obj\x86\Debug\ThreaDemo.exe
+C:\Documents and Settings\user.STEP\Мои документы\Visual Studio 2010\Projects\AsynctDelegate\ThreaDemo\obj\x86\Debug\ThreaDemo.pdb

@@ -1,0 +1,149 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="FB721B48-F776-486B-8850-BBDC48E000B0/f:Program.cs" caret="938" fromTop="32" />
+      <File id="4835684A-471D-4DA6-83F3-EE2885CD365E/f:Program.cs" caret="1241" fromTop="40" />
+      <File id="1EFFD24D-8A47-4129-BD61-D04B03BC2040/f:Program.cs" caret="889" fromTop="34" />
+      <File id="05F62B12-E929-4519-AE7E-F8C469C2EF34/f:Program.cs" caret="287" fromTop="9" />
+      <File id="AEE71149-477F-44B2-89B7-BC1AAC4E551C/f:Program.cs" caret="560" fromTop="15" />
+      <File id="896DFACB-73B3-43F1-900A-1DCDFEE7E0A7/f:Program.cs" caret="393" fromTop="18" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="FB721B48-F776-486B-8850-BBDC48E000B0/f:Program.cs" caret="248" fromTop="9" />
+      <File id="FB721B48-F776-486B-8850-BBDC48E000B0/f:Program.cs" caret="924" fromTop="30" />
+      <File id="FB721B48-F776-486B-8850-BBDC48E000B0/f:Program.cs" caret="420" fromTop="13" />
+      <File id="FB721B48-F776-486B-8850-BBDC48E000B0/f:Program.cs" caret="648" fromTop="15" />
+      <File id="4835684A-471D-4DA6-83F3-EE2885CD365E/f:Program.cs" caret="922" fromTop="31" />
+      <File id="4835684A-471D-4DA6-83F3-EE2885CD365E/f:Program.cs" caret="1230" fromTop="39" />
+      <File id="4835684A-471D-4DA6-83F3-EE2885CD365E/f:Program.cs" caret="783" fromTop="27" />
+      <File id="4835684A-471D-4DA6-83F3-EE2885CD365E/f:Program.cs" caret="415" fromTop="16" />
+      <File id="1EFFD24D-8A47-4129-BD61-D04B03BC2040/f:Program.cs" caret="889" fromTop="38" />
+      <File id="1EFFD24D-8A47-4129-BD61-D04B03BC2040/f:Program.cs" caret="193" fromTop="8" />
+      <File id="1EFFD24D-8A47-4129-BD61-D04B03BC2040/f:Program.cs" caret="415" fromTop="17" />
+      <File id="1EFFD24D-8A47-4129-BD61-D04B03BC2040/f:Program.cs" caret="482" fromTop="22" />
+      <File id="05F62B12-E929-4519-AE7E-F8C469C2EF34/f:Program.cs" caret="884" fromTop="33" />
+      <File id="05F62B12-E929-4519-AE7E-F8C469C2EF34/f:Program.cs" caret="554" fromTop="23" />
+      <File id="05F62B12-E929-4519-AE7E-F8C469C2EF34/f:Program.cs" caret="884" fromTop="34" />
+      <File id="05F62B12-E929-4519-AE7E-F8C469C2EF34/f:Program.cs" caret="184" fromTop="6" />
+      <File id="05F62B12-E929-4519-AE7E-F8C469C2EF34/f:Program.cs" caret="857" fromTop="34" />
+      <File id="05F62B12-E929-4519-AE7E-F8C469C2EF34/f:Program.cs" caret="287" fromTop="9" />
+      <File id="AEE71149-477F-44B2-89B7-BC1AAC4E551C/f:Program.cs" caret="835" fromTop="27" />
+      <File id="AEE71149-477F-44B2-89B7-BC1AAC4E551C/f:Program.cs" caret="1080" fromTop="37" />
+      <File id="AEE71149-477F-44B2-89B7-BC1AAC4E551C/f:Program.cs" caret="633" fromTop="22" />
+      <File id="AEE71149-477F-44B2-89B7-BC1AAC4E551C/f:Program.cs" caret="559" fromTop="9" />
+      <File id="AEE71149-477F-44B2-89B7-BC1AAC4E551C/f:Program.cs" caret="560" fromTop="15" />
+      <File id="896DFACB-73B3-43F1-900A-1DCDFEE7E0A7/f:Program.cs" caret="309" fromTop="31" />
+      <File id="896DFACB-73B3-43F1-900A-1DCDFEE7E0A7/f:Program.cs" caret="307" fromTop="13" />
+      <File id="896DFACB-73B3-43F1-900A-1DCDFEE7E0A7/f:Program.cs" caret="393" fromTop="18" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="delegate" priority="0" />
+      <Item value="int" priority="8" />
+      <Item value="public" priority="5" />
+      <Item value="void" priority="3" />
+      <Item value="for" priority="1" />
+      <Item value="count" priority="0" />
+      <Item value="s" priority="0" />
+      <Item value="i" priority="1" />
+      <Item value="IAsyncResult`0" priority="1" />
+      <Item value="TaskDelegate`0" priority="0" />
+      <Item value="taskDelegate" priority="2" />
+      <Item value="static" priority="1" />
+      <Item value="Summa`0" priority="1" />
+      <Item value="asyncResult" priority="3" />
+      <Item value="while" priority="1" />
+      <Item value="Console`0" priority="5" />
+      <Item value="ThreadExceptionEventArgs`0" priority="0" />
+      <Item value="if" priority="1" />
+      <Item value="else" priority="0" />
+      <Item value="ThreaDemo" priority="0" />
+      <Item value="threa" priority="0" />
+      <Item value="new" priority="3" />
+      <Item value="Thread" priority="0" />
+      <Item value="FileStyleUriParser`0" priority="0" />
+      <Item value="thread" priority="1" />
+      <Item value="class" priority="2" />
+      <Item value="private" priority="4" />
+      <Item value="AppDomainSetup`0" priority="1" />
+      <Item value="object" priority="3" />
+      <Item value="task" priority="2" />
+      <Item value="Task" priority="0" />
+      <Item value="set" priority="0" />
+      <Item value="return" priority="0" />
+      <Item value="state" priority="2" />
+      <Item value="loop" priority="0" />
+      <Item value="StateObject`0" priority="2" />
+      <Item value="stateObject" priority="3" />
+      <Item value="o" priority="0" />
+      <Item value="as" priority="0" />
+      <Item value="true" priority="0" />
+      <Item value="StateObject" priority="0" />
+      <Item value="ThreadState`0" priority="0" />
+      <Item value="lock" priority="0" />
+      <Item value="sync" priority="0" />
+      <Item value="string" priority="0" />
+      <Item value="FindFile`0" priority="0" />
+      <Item value="info" priority="1" />
+      <Item value="FileMask" priority="0" />
+      <Item value="List" priority="0" />
+      <Item value="Directory`0" priority="0" />
+      <Item value="DirectoryInfo`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AsynctDelegate.Program+TaskDelegate">
+      <Item value="BeginInvoke`0" priority="0" />
+      <Item value="EndInvoke`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IAsyncResult">
+      <Item value="GetType`0" priority="0" />
+      <Item value="IsCompleted" priority="0" />
+      <Item value="AsyncWaitHandle" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Console">
+      <Item value="WriteLine`0" priority="4" />
+      <Item value="ReadKey`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Thread">
+      <Item value="Sleep`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.WaitHandle">
+      <Item value="WaitOne`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Thread">
+      <Item value="Start`0" priority="1" />
+      <Item value="Join`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ThreadDemo2.Program+Task">
+      <Item value="DoWork`0" priority="0" />
+      <Item value="Summ" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Diagnostics.Trace">
+      <Item value="Assert`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Resurse.StateObject">
+      <Item value="ChangeState`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.DirectoryInfo">
+      <Item value="GetFiles`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

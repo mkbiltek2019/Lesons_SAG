@@ -1,0 +1,8 @@
+<Modules>
+  <Module PersistentId="FB721B48-F776-486B-8850-BBDC48E000B0" ModuleId="AsynctDelegate" />
+  <Module PersistentId="4835684A-471D-4DA6-83F3-EE2885CD365E" ModuleId="AsyncDeledateOneWhite" />
+  <Module PersistentId="1EFFD24D-8A47-4129-BD61-D04B03BC2040" ModuleId="ThreaDemo" />
+  <Module PersistentId="05F62B12-E929-4519-AE7E-F8C469C2EF34" ModuleId="ThreadDemo2" />
+  <Module PersistentId="AEE71149-477F-44B2-89B7-BC1AAC4E551C" ModuleId="Resurse" />
+  <Module PersistentId="896DFACB-73B3-43F1-900A-1DCDFEE7E0A7" ModuleId="FileFind" />
+</Modules>

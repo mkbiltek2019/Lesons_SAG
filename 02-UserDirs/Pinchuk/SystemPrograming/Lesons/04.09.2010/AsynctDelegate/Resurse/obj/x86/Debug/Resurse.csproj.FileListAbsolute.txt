@@ -1,0 +1,5 @@
+C:\Documents and Settings\user.STEP\Мои документы\Visual Studio 2010\Projects\AsynctDelegate\Resurse\bin\Debug\Resurse.exe
+C:\Documents and Settings\user.STEP\Мои документы\Visual Studio 2010\Projects\AsynctDelegate\Resurse\bin\Debug\Resurse.pdb
+C:\Documents and Settings\user.STEP\Мои документы\Visual Studio 2010\Projects\AsynctDelegate\Resurse\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\user.STEP\Мои документы\Visual Studio 2010\Projects\AsynctDelegate\Resurse\obj\x86\Debug\Resurse.exe
+C:\Documents and Settings\user.STEP\Мои документы\Visual Studio 2010\Projects\AsynctDelegate\Resurse\obj\x86\Debug\Resurse.pdb

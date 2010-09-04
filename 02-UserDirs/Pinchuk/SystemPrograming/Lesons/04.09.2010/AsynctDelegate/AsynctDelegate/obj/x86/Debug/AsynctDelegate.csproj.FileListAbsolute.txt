@@ -1,0 +1,5 @@
+C:\Documents and Settings\user.STEP\Мои документы\Visual Studio 2010\Projects\AsynctDelegate\AsynctDelegate\bin\Debug\AsynctDelegate.exe
+C:\Documents and Settings\user.STEP\Мои документы\Visual Studio 2010\Projects\AsynctDelegate\AsynctDelegate\bin\Debug\AsynctDelegate.pdb
+C:\Documents and Settings\user.STEP\Мои документы\Visual Studio 2010\Projects\AsynctDelegate\AsynctDelegate\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\user.STEP\Мои документы\Visual Studio 2010\Projects\AsynctDelegate\AsynctDelegate\obj\x86\Debug\AsynctDelegate.exe
+C:\Documents and Settings\user.STEP\Мои документы\Visual Studio 2010\Projects\AsynctDelegate\AsynctDelegate\obj\x86\Debug\AsynctDelegate.pdb
