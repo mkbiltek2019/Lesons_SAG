@@ -1,0 +1,5 @@
+D:\ITStep\Subjects\System Programming with .NET\Samples\MultiThreading\FileSearcher\bin\Debug\FileSearcher.exe
+D:\ITStep\Subjects\System Programming with .NET\Samples\MultiThreading\FileSearcher\bin\Debug\FileSearcher.pdb
+D:\ITStep\Subjects\System Programming with .NET\Samples\MultiThreading\FileSearcher\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\ITStep\Subjects\System Programming with .NET\Samples\MultiThreading\FileSearcher\obj\x86\Debug\FileSearcher.exe
+D:\ITStep\Subjects\System Programming with .NET\Samples\MultiThreading\FileSearcher\obj\x86\Debug\FileSearcher.pdb

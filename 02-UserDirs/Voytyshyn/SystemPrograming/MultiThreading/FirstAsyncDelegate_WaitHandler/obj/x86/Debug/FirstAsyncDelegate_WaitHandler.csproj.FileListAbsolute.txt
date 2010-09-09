@@ -1,0 +1,5 @@
+D:\ITStep\Subjects\System Programming with .NET\Samples\MultiThreading\FirstAsyncDelegate_WaitHandler\bin\Debug\FirstAsyncDelegate_WaitHandler.exe
+D:\ITStep\Subjects\System Programming with .NET\Samples\MultiThreading\FirstAsyncDelegate_WaitHandler\bin\Debug\FirstAsyncDelegate_WaitHandler.pdb
+D:\ITStep\Subjects\System Programming with .NET\Samples\MultiThreading\FirstAsyncDelegate_WaitHandler\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\ITStep\Subjects\System Programming with .NET\Samples\MultiThreading\FirstAsyncDelegate_WaitHandler\obj\x86\Debug\FirstAsyncDelegate_WaitHandler.exe
+D:\ITStep\Subjects\System Programming with .NET\Samples\MultiThreading\FirstAsyncDelegate_WaitHandler\obj\x86\Debug\FirstAsyncDelegate_WaitHandler.pdb

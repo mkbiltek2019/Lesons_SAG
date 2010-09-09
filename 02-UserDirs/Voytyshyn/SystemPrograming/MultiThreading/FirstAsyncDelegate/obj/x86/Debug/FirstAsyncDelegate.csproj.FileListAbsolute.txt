@@ -1,0 +1,5 @@
+D:\ITStep\Subjects\System Programming with .NET\Samples\MultiThreading\FirstAsyncDelegate\bin\Debug\FirstAsyncDelegate.exe
+D:\ITStep\Subjects\System Programming with .NET\Samples\MultiThreading\FirstAsyncDelegate\bin\Debug\FirstAsyncDelegate.pdb
+D:\ITStep\Subjects\System Programming with .NET\Samples\MultiThreading\FirstAsyncDelegate\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\ITStep\Subjects\System Programming with .NET\Samples\MultiThreading\FirstAsyncDelegate\obj\x86\Debug\FirstAsyncDelegate.exe
+D:\ITStep\Subjects\System Programming with .NET\Samples\MultiThreading\FirstAsyncDelegate\obj\x86\Debug\FirstAsyncDelegate.pdb

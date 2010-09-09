@@ -1,0 +1,5 @@
+D:\ITStep\Subjects\System Programming with .NET\Samples\MultiThreading\FirstParametrizedThread2\bin\Debug\FirstParametrizedThread2.exe
+D:\ITStep\Subjects\System Programming with .NET\Samples\MultiThreading\FirstParametrizedThread2\bin\Debug\FirstParametrizedThread2.pdb
+D:\ITStep\Subjects\System Programming with .NET\Samples\MultiThreading\FirstParametrizedThread2\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\ITStep\Subjects\System Programming with .NET\Samples\MultiThreading\FirstParametrizedThread2\obj\x86\Debug\FirstParametrizedThread2.exe
+D:\ITStep\Subjects\System Programming with .NET\Samples\MultiThreading\FirstParametrizedThread2\obj\x86\Debug\FirstParametrizedThread2.pdb

@@ -1,0 +1,5 @@
+D:\ITStep\Subjects\System Programming with .NET\Samples\MultiThreading\FirstThread\bin\Debug\FirstThread.exe
+D:\ITStep\Subjects\System Programming with .NET\Samples\MultiThreading\FirstThread\bin\Debug\FirstThread.pdb
+D:\ITStep\Subjects\System Programming with .NET\Samples\MultiThreading\FirstThread\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\ITStep\Subjects\System Programming with .NET\Samples\MultiThreading\FirstThread\obj\x86\Debug\FirstThread.exe
+D:\ITStep\Subjects\System Programming with .NET\Samples\MultiThreading\FirstThread\obj\x86\Debug\FirstThread.pdb
