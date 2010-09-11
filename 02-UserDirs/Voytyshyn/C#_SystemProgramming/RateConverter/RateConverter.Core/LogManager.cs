@@ -6,7 +6,7 @@ using System.Text;
 
 namespace RateConverter.Core
 {
-    class LogManager
+    public class LogManager
     {
         #region Field
 
@@ -23,10 +23,9 @@ namespace RateConverter.Core
         {
             get
             {
-
                 lock (sync)
                 {
-                    if (instance != null)
+                    if (instance == null)
                     {
                         instance = new LogManager();
                     }
@@ -41,7 +40,7 @@ namespace RateConverter.Core
 
         #region Constructor
 
-        public LogManager()
+        protected LogManager()
         {
         } 
 
