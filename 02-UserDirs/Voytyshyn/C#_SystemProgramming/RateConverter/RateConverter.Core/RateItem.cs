@@ -11,7 +11,7 @@ namespace RateConverter.Core
 
         private string currency;
         private string bank;
-        private DateTime data;
+        private DateTime date;
         private decimal value; 
 
         #endregion
@@ -31,10 +31,10 @@ namespace RateConverter.Core
             set { bank = value; }
         }
 
-        public DateTime Data
+        public DateTime Date
         {
-            get { return data; }
-            set { data = value; }
+            get { return date; }
+            set { date = value; }
         }
 
         public decimal Value
@@ -56,7 +56,7 @@ namespace RateConverter.Core
         {
             this.currency = currency;
             this.bank = bank;
-            this.data = data;
+            this.date = data;
             this.value = value;
         } 
 
