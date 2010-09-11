@@ -8,16 +8,8 @@ namespace RateConverter.Core
 {
     public class LogManager
     {
-        #region Field
-
         private static object sync = new object();
-
         private static LogManager instance = null; 
-
-        #endregion
-
-
-        #region Property
 
         public static LogManager Instance
         {
@@ -35,19 +27,9 @@ namespace RateConverter.Core
 
         } 
 
-        #endregion
-
-
-        #region Constructor
-
         protected LogManager()
         {
         } 
-
-        #endregion
-
-
-        #region Members
 
         public void PutMessage(string message)
         {
@@ -61,7 +43,5 @@ namespace RateConverter.Core
                 }
             }
         } 
-
-        #endregion
     }
 }
