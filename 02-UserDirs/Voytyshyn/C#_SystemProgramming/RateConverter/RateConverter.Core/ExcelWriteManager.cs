@@ -9,9 +9,9 @@ namespace RateConverter.Core
     {
         private static object sync = new object();
 
-        private ExcelInstance singleExelInstance = null;
+        private ExcelApp singleExelInstance = null;
 
-        public ExcelWriteManager(ExcelInstance singleExelInstance)
+        public ExcelWriteManager(ExcelApp singleExelInstance)
         {
             this.singleExelInstance = singleExelInstance;
         }
