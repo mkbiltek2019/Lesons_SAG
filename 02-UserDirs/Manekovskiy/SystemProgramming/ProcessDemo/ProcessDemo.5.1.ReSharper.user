@@ -1,0 +1,89 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="14F910B6-A464-4450-8BFA-CCFF24B963CF/f:in.txt" caret="3" fromTop="0" />
+      <File id="14F910B6-A464-4450-8BFA-CCFF24B963CF/f:Program.cs" caret="978" fromTop="27" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="14F910B6-A464-4450-8BFA-CCFF24B963CF/f:in.txt" caret="3" fromTop="0" />
+      <File id="14F910B6-A464-4450-8BFA-CCFF24B963CF/f:Program.cs" caret="1122" fromTop="27" />
+      <File id="14F910B6-A464-4450-8BFA-CCFF24B963CF/f:Program.cs" caret="1009" fromTop="24" />
+      <File id="14F910B6-A464-4450-8BFA-CCFF24B963CF/f:Program.cs" caret="834" fromTop="15" />
+      <File id="14F910B6-A464-4450-8BFA-CCFF24B963CF/f:Program.cs" caret="458" fromTop="7" />
+      <File id="14F910B6-A464-4450-8BFA-CCFF24B963CF/f:Program.cs" caret="140" fromTop="5" />
+      <File id="14F910B6-A464-4450-8BFA-CCFF24B963CF/f:Program.cs" caret="1544" fromTop="34" />
+      <File id="14F910B6-A464-4450-8BFA-CCFF24B963CF/f:Program.cs" caret="444" fromTop="9" />
+      <File id="14F910B6-A464-4450-8BFA-CCFF24B963CF/f:Program.cs" caret="278" fromTop="3" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="ProcessDemo" priority="0" />
+      <Item value="new" priority="1" />
+      <Item value="Process" priority="0" />
+      <Item value="process" priority="7" />
+      <Item value="ProcessStartInfo" priority="0" />
+      <Item value="processStartInfo" priority="6" />
+      <Item value="true" priority="1" />
+      <Item value="Console`0" priority="3" />
+      <Item value="Hidden" priority="0" />
+      <Item value="while" priority="0" />
+      <Item value="processModule" priority="0" />
+      <Item value="Process`0" priority="4" />
+      <Item value="calcProcess" priority="0" />
+      <Item value="foreach" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Diagnostics.Process">
+      <Item value="Start`0" priority="0" />
+      <Item value="Close`0" priority="1" />
+      <Item value="StartInfo" priority="0" />
+      <Item value="HasExited" priority="0" />
+      <Item value="ExitTime" priority="0" />
+      <Item value="ExitCode" priority="0" />
+      <Item value="StartTime" priority="0" />
+      <Item value="MainModule" priority="0" />
+      <Item value="ProcessName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Diagnostics.ProcessStartInfo">
+      <Item value="CreateNoWindow" priority="0" />
+      <Item value="WindowStyle" priority="0" />
+      <Item value="UseShellExecute" priority="0" />
+      <Item value="WorkingDirectory" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Console">
+      <Item value="ReadLine`0" priority="1" />
+      <Item value="WriteLine`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Diagnostics.ProcessWindowStyle">
+      <Item value="Minimized" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="ToLongTimeString`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Diagnostics.Process">
+      <Item value="Start`0" priority="0" />
+      <Item value="EnterDebugMode`0" priority="0" />
+      <Item value="LeaveDebugMode`0" priority="0" />
+      <Item value="GetProcesses`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
