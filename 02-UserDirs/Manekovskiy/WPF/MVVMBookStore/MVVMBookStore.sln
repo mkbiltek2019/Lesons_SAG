@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVMBookStore.UI", "MVVMBookStore\MVVMBookStore.UI.csproj", "{317777BE-44C1-47DC-8B6D-D5A22ED97C0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Externals", "Externals", "{91ECA1B7-F561-433C-A242-B294FE1E21C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVVM Light", "MVVM Light", "{23CB52E4-F3C0-49BC-B266-2A9F3CC78685}"
+	ProjectSection(SolutionItems) = preProject
+		Externals\MVVM Light\GalaSoft.MvvmLight.Extras.WPF4.dll = Externals\MVVM Light\GalaSoft.MvvmLight.Extras.WPF4.dll
+		Externals\MVVM Light\GalaSoft.MvvmLight.WPF4.dll = Externals\MVVM Light\GalaSoft.MvvmLight.WPF4.dll
+		Externals\MVVM Light\System.Windows.Interactivity.dll = Externals\MVVM Light\System.Windows.Interactivity.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{317777BE-44C1-47DC-8B6D-D5A22ED97C0B}.Debug|x86.ActiveCfg = Debug|x86
+		{317777BE-44C1-47DC-8B6D-D5A22ED97C0B}.Debug|x86.Build.0 = Debug|x86
+		{317777BE-44C1-47DC-8B6D-D5A22ED97C0B}.Release|x86.ActiveCfg = Release|x86
+		{317777BE-44C1-47DC-8B6D-D5A22ED97C0B}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{23CB52E4-F3C0-49BC-B266-2A9F3CC78685} = {91ECA1B7-F561-433C-A242-B294FE1E21C4}
+	EndGlobalSection
+EndGlobal
