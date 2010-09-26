@@ -1,0 +1,20 @@
+C:\Users\Александр\Documents\Visual Studio 2010\Projects\TEST\TEST\bin\Debug\TEST.exe
+C:\Users\Александр\Documents\Visual Studio 2010\Projects\TEST\TEST\bin\Debug\TEST.pdb
+C:\Users\Александр\Documents\Visual Studio 2010\Projects\TEST\TEST\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Александр\Documents\Visual Studio 2010\Projects\TEST\TEST\obj\x86\Debug\TEST.Properties.Resources.resources
+C:\Users\Александр\Documents\Visual Studio 2010\Projects\TEST\TEST\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Александр\Documents\Visual Studio 2010\Projects\TEST\TEST\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Александр\Documents\Visual Studio 2010\Projects\TEST\TEST\obj\x86\Debug\TEST.exe
+C:\Users\Александр\Documents\Visual Studio 2010\Projects\TEST\TEST\obj\x86\Debug\TEST.pdb
+C:\Users\Александр\Documents\Visual Studio 2010\Projects\TEST\TEST\obj\x86\Debug\TEST.Form1.resources
+C:\Users\Александр\Documents\Visual Studio 2010\Projects\TEST\TEST\bin\Debug\TEST.exe.config
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\TEST\TEST\bin\Debug\TEST.exe.config
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\TEST\TEST\obj\x86\Debug\TEST.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\TEST\TEST\obj\x86\Debug\TEST.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\TEST\TEST\bin\Debug\TEST.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\TEST\TEST\bin\Debug\TEST.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\TEST\TEST\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\TEST\TEST\obj\x86\Debug\TEST.Form1.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\TEST\TEST\obj\x86\Debug\TEST.Properties.Resources.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\TEST\TEST\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\TEST\TEST\obj\x86\Debug\GenerateResource.write.1.tlog

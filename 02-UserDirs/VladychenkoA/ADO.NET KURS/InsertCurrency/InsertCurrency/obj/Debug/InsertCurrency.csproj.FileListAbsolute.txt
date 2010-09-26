@@ -1,0 +1,11 @@
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\InsertCurrency\InsertCurrency\bin\Debug\InsertCurrency.exe.config
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\InsertCurrency\InsertCurrency\bin\Debug\Currency Rates NBU 10072010.mdf
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\InsertCurrency\InsertCurrency\bin\Debug\Currency Rates NBU 10072010_log.ldf
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\InsertCurrency\InsertCurrency\bin\Debug\InsertCurrency.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\InsertCurrency\InsertCurrency\bin\Debug\InsertCurrency.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\InsertCurrency\InsertCurrency\obj\Debug\ResolveAssemblyReference.cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\InsertCurrency\InsertCurrency\obj\Debug\InsertCurrency.Form1.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\InsertCurrency\InsertCurrency\obj\Debug\InsertCurrency.Properties.Resources.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\InsertCurrency\InsertCurrency\obj\Debug\InsertCurrency.csproj.GenerateResource.Cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\InsertCurrency\InsertCurrency\obj\Debug\InsertCurrency.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\InsertCurrency\InsertCurrency\obj\Debug\InsertCurrency.pdb

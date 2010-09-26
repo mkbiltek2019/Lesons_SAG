@@ -1,0 +1,5 @@
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\InsertRates\InsertRates\bin\Release\InsertRates.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\InsertRates\InsertRates\bin\Release\InsertRates.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\InsertRates\InsertRates\obj\Release\ResolveAssemblyReference.cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\InsertRates\InsertRates\obj\Release\InsertRates.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ADO.NET KURS\InsertRates\InsertRates\obj\Release\InsertRates.pdb

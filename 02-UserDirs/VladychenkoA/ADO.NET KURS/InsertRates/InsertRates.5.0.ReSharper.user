@@ -1,0 +1,128 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="447FB852-BC32-4C48-8821-5BB6B1287440/f:Currency.cs" caret="0" fromTop="0" />
+      <File id="447FB852-BC32-4C48-8821-5BB6B1287440/f:Program.cs" caret="359" fromTop="14" />
+      <File id="447FB852-BC32-4C48-8821-5BB6B1287440/f:Rates.cs" caret="4105" fromTop="30" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="447FB852-BC32-4C48-8821-5BB6B1287440/f:Rates.cs" caret="0" fromTop="0" />
+      <File id="447FB852-BC32-4C48-8821-5BB6B1287440/f:Rates.cs" caret="1117" fromTop="5" />
+      <File id="447FB852-BC32-4C48-8821-5BB6B1287440/f:Rates.cs" caret="1070" fromTop="13" />
+      <File id="447FB852-BC32-4C48-8821-5BB6B1287440/f:Rates.cs" caret="6047" fromTop="28" />
+      <File id="447FB852-BC32-4C48-8821-5BB6B1287440/f:Rates.cs" caret="3204" fromTop="24" />
+      <File id="447FB852-BC32-4C48-8821-5BB6B1287440/f:Rates.cs" caret="2866" fromTop="5" />
+      <File id="447FB852-BC32-4C48-8821-5BB6B1287440/f:Rates.cs" caret="4564" fromTop="14" />
+      <File id="447FB852-BC32-4C48-8821-5BB6B1287440/f:Program.cs" caret="461" fromTop="15" />
+      <File id="447FB852-BC32-4C48-8821-5BB6B1287440/f:Rates.cs" caret="391" fromTop="15" />
+      <File id="447FB852-BC32-4C48-8821-5BB6B1287440/f:Rates.cs" caret="928" fromTop="24" />
+      <File id="447FB852-BC32-4C48-8821-5BB6B1287440/f:Rates.cs" caret="3772" fromTop="10" />
+      <File id="447FB852-BC32-4C48-8821-5BB6B1287440/f:Rates.cs" caret="4818" fromTop="1" />
+      <File id="447FB852-BC32-4C48-8821-5BB6B1287440/f:Rates.cs" caret="5743" fromTop="23" />
+      <File id="447FB852-BC32-4C48-8821-5BB6B1287440/f:Rates.cs" caret="5390" fromTop="15" />
+      <File id="447FB852-BC32-4C48-8821-5BB6B1287440/f:Rates.cs" caret="4105" fromTop="6" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="rate" priority="0" />
+      <Item value="currency" priority="0" />
+      <Item value="price" priority="0" />
+      <Item value="absoluteChange" priority="0" />
+      <Item value="relativeChange" priority="0" />
+      <Item value="public" priority="1" />
+      <Item value="void" priority="0" />
+      <Item value="string" priority="5" />
+      <Item value="System" priority="0" />
+      <Item value="IO" priority="0" />
+      <Item value="File`0" priority="0" />
+      <Item value="int" priority="1" />
+      <Item value="private" priority="0" />
+      <Item value="name" priority="2" />
+      <Item value="value" priority="0" />
+      <Item value="return" priority="0" />
+      <Item value="Console`0" priority="3" />
+      <Item value="DateTime`0" priority="0" />
+      <Item value="foreach" priority="0" />
+      <Item value="Rates`0" priority="1" />
+      <Item value="rates" priority="10" />
+      <Item value="new" priority="1" />
+      <Item value="Rates" priority="1" />
+      <Item value="null" priority="1" />
+      <Item value="date" priority="2" />
+      <Item value="forr" priority="0" />
+      <Item value="line" priority="6" />
+      <Item value="if" priority="1" />
+      <Item value="i" priority="4" />
+      <Item value="temp" priority="4" />
+      <Item value="r" priority="1" />
+      <Item value="break" priority="0" />
+      <Item value="for" priority="0" />
+      <Item value="Convert`0" priority="1" />
+      <Item value="decimal" priority="5" />
+      <Item value="ArrayListRates" priority="0" />
+      <Item value="double" priority="4" />
+      <Item value="Double`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.File">
+      <Item value="ReadAllLines`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Console">
+      <Item value="Write`0" priority="2" />
+      <Item value="WriteLine`0" priority="0" />
+      <Item value="ReadLine`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:InsertRates.Rates">
+      <Item value="_date" priority="0" />
+      <Item value="_currency" priority="0" />
+      <Item value="ArrayListRates" priority="1" />
+      <Item value="_name" priority="0" />
+      <Item value="_price" priority="0" />
+      <Item value="_absoluteChange" priority="0" />
+      <Item value="_relativeChange" priority="0" />
+      <Item value="ReadFile`0" priority="0" />
+      <Item value="ArrayLiistRatesPrint`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.ArrayList">
+      <Item value="Count" priority="0" />
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Length" priority="1" />
+      <Item value="ToLower`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Char">
+      <Item value="ToString`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToDecimal`0" priority="0" />
+      <Item value="ToDateTime`0" priority="0" />
+      <Item value="ToDouble`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="Date" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Double">
+      <Item value="Parse`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
