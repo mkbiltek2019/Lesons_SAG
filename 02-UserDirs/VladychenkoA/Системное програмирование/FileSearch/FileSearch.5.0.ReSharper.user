@@ -1,0 +1,48 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="BE036E23-D983-4BB3-A033-F7A9AE8C47F0/f:Program.cs" caret="4408" fromTop="92" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="BE036E23-D983-4BB3-A033-F7A9AE8C47F0/f:Program.cs" caret="164" fromTop="6" />
+      <File id="BE036E23-D983-4BB3-A033-F7A9AE8C47F0/f:Program.cs" caret="2638" fromTop="35" />
+      <File id="BE036E23-D983-4BB3-A033-F7A9AE8C47F0/f:Program.cs" caret="3346" fromTop="17" />
+      <File id="BE036E23-D983-4BB3-A033-F7A9AE8C47F0/f:Program.cs" caret="2273" fromTop="22" />
+      <File id="BE036E23-D983-4BB3-A033-F7A9AE8C47F0/f:Program.cs" caret="1881" fromTop="10" />
+      <File id="BE036E23-D983-4BB3-A033-F7A9AE8C47F0/f:Program.cs" caret="3787" fromTop="16" />
+      <File id="BE036E23-D983-4BB3-A033-F7A9AE8C47F0/f:Program.cs" caret="4194" fromTop="24" />
+      <File id="BE036E23-D983-4BB3-A033-F7A9AE8C47F0/f:Program.cs" caret="4706" fromTop="28" />
+      <File id="BE036E23-D983-4BB3-A033-F7A9AE8C47F0/f:Program.cs" caret="4408" fromTop="23" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="drives" priority="1" />
+      <Item value="IsRunning" priority="0" />
+      <Item value="if" priority="0" />
+      <Item value="DriveInfo`0" priority="1" />
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.DriveInfo">
+      <Item value="GetDrives`0" priority="1" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
