@@ -1,0 +1,9 @@
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Системное програмирование\RegisryEditor\RegisryEditor\bin\Debug\RegisryEditor.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Системное програмирование\RegisryEditor\RegisryEditor\bin\Debug\RegisryEditor.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Системное програмирование\RegisryEditor\RegisryEditor\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Системное програмирование\RegisryEditor\RegisryEditor\obj\x86\Debug\RegisryEditor.Form1.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Системное програмирование\RegisryEditor\RegisryEditor\obj\x86\Debug\RegisryEditor.Properties.Resources.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Системное програмирование\RegisryEditor\RegisryEditor\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Системное програмирование\RegisryEditor\RegisryEditor\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Системное програмирование\RegisryEditor\RegisryEditor\obj\x86\Debug\RegisryEditor.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Системное програмирование\RegisryEditor\RegisryEditor\obj\x86\Debug\RegisryEditor.pdb

@@ -1,0 +1,105 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.Designer.cs" caret="12279" fromTop="100" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="950" fromTop="9" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="6381" fromTop="21" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="5932" fromTop="2" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="5933" fromTop="13" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="6038" fromTop="16" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="7582" fromTop="25" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="6857" fromTop="13" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="6490" fromTop="8" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="6723" fromTop="13" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="6994" fromTop="13" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="5778" fromTop="68" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="7134" fromTop="13" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="7485" fromTop="22" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="7513" fromTop="21" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="7582" fromTop="26" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="3410" fromTop="17" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="3564" fromTop="18" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="4352" fromTop="19" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="4630" fromTop="26" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="4783" fromTop="15" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="962" fromTop="7" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="5378" fromTop="12" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="5190" fromTop="13" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="657" fromTop="9" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="544" fromTop="14" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="2362" fromTop="24" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="2362" fromTop="28" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="2362" fromTop="0" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="5065" fromTop="27" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="4888" fromTop="27" />
+      <File id="A3009FD7-CA42-4E09-A878-C77492E05EDB/f:Form1.cs" caret="950" fromTop="9" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="listView" priority="7" />
+      <Item value="toolStripStatusLabel1" priority="0" />
+      <Item value="toolStripStatusLabel2" priority="0" />
+      <Item value="string" priority="1" />
+      <Item value="name" priority="0" />
+      <Item value="Application`0" priority="0" />
+      <Item value="public" priority="1" />
+      <Item value="static" priority="0" />
+      <Item value="Exception`0" priority="0" />
+      <Item value="MessageBox`0" priority="0" />
+      <Item value="ex" priority="0" />
+      <Item value="private" priority="0" />
+      <Item value="void" priority="0" />
+      <Item value="timerCallback" priority="1" />
+      <Item value="LoadAllProcesses`0" priority="1" />
+      <Item value="Timer" priority="1" />
+      <Item value="timer" priority="1" />
+      <Item value="new" priority="0" />
+      <Item value="null" priority="0" />
+      <Item value="Threading" priority="0" />
+      <Item value="timer1" priority="0" />
+      <Item value="sender" priority="0" />
+      <Item value="object" priority="0" />
+      <Item value="Process`0" priority="0" />
+      <Item value="processes" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.Application">
+      <Item value="Exit`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Exception">
+      <Item value="Message" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Timer">
+      <Item value="Change`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Timer">
+      <Item value="Start`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListView">
+      <Item value="Clear`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

@@ -1,0 +1,8 @@
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Системное програмирование\TaskManagerCS\TaskManagerCS\bin\Debug\TaskManagerCS.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Системное програмирование\TaskManagerCS\TaskManagerCS\bin\Debug\TaskManagerCS.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Системное програмирование\TaskManagerCS\TaskManagerCS\obj\Debug\ResolveAssemblyReference.cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Системное програмирование\TaskManagerCS\TaskManagerCS\obj\Debug\TaskManagerCS.Form1.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Системное програмирование\TaskManagerCS\TaskManagerCS\obj\Debug\TaskManagerCS.Properties.Resources.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Системное програмирование\TaskManagerCS\TaskManagerCS\obj\Debug\TaskManagerCS.csproj.GenerateResource.Cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Системное програмирование\TaskManagerCS\TaskManagerCS\obj\Debug\TaskManagerCS.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Системное програмирование\TaskManagerCS\TaskManagerCS\obj\Debug\TaskManagerCS.pdb
