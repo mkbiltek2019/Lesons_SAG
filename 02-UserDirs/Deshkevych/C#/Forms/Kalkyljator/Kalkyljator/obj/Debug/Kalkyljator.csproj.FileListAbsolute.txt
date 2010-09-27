@@ -1,8 +1,0 @@
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Kalkyljator\Kalkyljator\bin\Debug\Kalkyljator.exe
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Kalkyljator\Kalkyljator\bin\Debug\Kalkyljator.pdb
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Kalkyljator\Kalkyljator\obj\Debug\ResolveAssemblyReference.cache
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Kalkyljator\Kalkyljator\obj\Debug\Kalkyljator.Form1.resources
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Kalkyljator\Kalkyljator\obj\Debug\Kalkyljator.Properties.Resources.resources
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Kalkyljator\Kalkyljator\obj\Debug\Kalkyljator.csproj.GenerateResource.Cache
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Kalkyljator\Kalkyljator\obj\Debug\Kalkyljator.exe
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Kalkyljator\Kalkyljator\obj\Debug\Kalkyljator.pdb
