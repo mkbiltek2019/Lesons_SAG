@@ -1,8 +1,0 @@
-D:\Programing\Home Tasks\C#\01_timer_home\01_timer_home\obj\Debug\ResolveAssemblyReference.cache
-D:\Programing\Home Tasks\C#\01_timer_home\01_timer_home\obj\Debug\_01_timer_home.Form1.resources
-D:\Programing\Home Tasks\C#\01_timer_home\01_timer_home\obj\Debug\_01_timer_home.Properties.Resources.resources
-D:\Programing\Home Tasks\C#\01_timer_home\01_timer_home\obj\Debug\01_timer_home.csproj.GenerateResource.Cache
-D:\Programing\Home Tasks\C#\01_timer_home\01_timer_home\bin\Debug\01_timer_home.exe
-D:\Programing\Home Tasks\C#\01_timer_home\01_timer_home\bin\Debug\01_timer_home.pdb
-D:\Programing\Home Tasks\C#\01_timer_home\01_timer_home\obj\Debug\01_timer_home.exe
-D:\Programing\Home Tasks\C#\01_timer_home\01_timer_home\obj\Debug\01_timer_home.pdb
