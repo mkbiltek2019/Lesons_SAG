@@ -1,8 +1,0 @@
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\Vremja\Vremja\bin\Debug\Vremja.exe
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\Vremja\Vremja\bin\Debug\Vremja.pdb
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\Vremja\Vremja\obj\Debug\ResolveAssemblyReference.cache
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\Vremja\Vremja\obj\Debug\Vremja.Form1.resources
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\Vremja\Vremja\obj\Debug\Vremja.Properties.Resources.resources
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\Vremja\Vremja\obj\Debug\Vremja.csproj.GenerateResource.Cache
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\Vremja\Vremja\obj\Debug\Vremja.exe
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\Vremja\Vremja\obj\Debug\Vremja.pdb
