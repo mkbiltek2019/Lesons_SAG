@@ -1,4 +1,0 @@
-E:\13NS9_1SPR_SVN_REPO\13ns9-1spr\TeamProjects\TeamProjects\TheatreTicketBooking\TheatreTicketBooking.Client\obj\x86\Debug\ResolveAssemblyReference.cache
-E:\13NS9_1SPR_SVN_REPO\13ns9-1spr\TeamProjects\TeamProjects\TheatreTicketBooking\TheatreTicketBooking.Client\obj\x86\Debug\MainWindow.baml
-E:\13NS9_1SPR_SVN_REPO\13ns9-1spr\TeamProjects\TeamProjects\TheatreTicketBooking\TheatreTicketBooking.Client\obj\x86\Debug\MainWindow.g.cs
-E:\13NS9_1SPR_SVN_REPO\13ns9-1spr\TeamProjects\TeamProjects\TheatreTicketBooking\TheatreTicketBooking.Client\obj\x86\Debug\TheatreTicketBooking.Client_MarkupCompile.cache
