@@ -1,8 +1,0 @@
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\MouseMuve\mousemuve\mousemuve\bin\Debug\mousemuve.exe
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\MouseMuve\mousemuve\mousemuve\bin\Debug\mousemuve.pdb
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\MouseMuve\mousemuve\mousemuve\obj\Debug\ResolveAssemblyReference.cache
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\MouseMuve\mousemuve\mousemuve\obj\Debug\mousemuve.Properties.Resources.resources
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\MouseMuve\mousemuve\mousemuve\obj\Debug\mousemuve.csproj.GenerateResource.Cache
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\MouseMuve\mousemuve\mousemuve\obj\Debug\mousemuve.exe
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\MouseMuve\mousemuve\mousemuve\obj\Debug\mousemuve.pdb
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Fist\MouseMuve\mousemuve\mousemuve\obj\Debug\mousemuve.Form1.resources
