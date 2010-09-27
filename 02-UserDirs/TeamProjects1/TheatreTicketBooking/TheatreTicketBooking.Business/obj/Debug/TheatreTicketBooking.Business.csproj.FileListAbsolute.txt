@@ -1,5 +1,0 @@
-E:\13NS9_1SPR_SVN_REPO\13ns9-1spr\TeamProjects\TeamProjects\TheatreTicketBooking\TheatreTicketBooking.Business\bin\Debug\TheatreTicketBooking.Business.dll
-E:\13NS9_1SPR_SVN_REPO\13ns9-1spr\TeamProjects\TeamProjects\TheatreTicketBooking\TheatreTicketBooking.Business\bin\Debug\TheatreTicketBooking.Business.pdb
-E:\13NS9_1SPR_SVN_REPO\13ns9-1spr\TeamProjects\TeamProjects\TheatreTicketBooking\TheatreTicketBooking.Business\obj\Debug\ResolveAssemblyReference.cache
-E:\13NS9_1SPR_SVN_REPO\13ns9-1spr\TeamProjects\TeamProjects\TheatreTicketBooking\TheatreTicketBooking.Business\obj\Debug\TheatreTicketBooking.Business.dll
-E:\13NS9_1SPR_SVN_REPO\13ns9-1spr\TeamProjects\TeamProjects\TheatreTicketBooking\TheatreTicketBooking.Business\obj\Debug\TheatreTicketBooking.Business.pdb
