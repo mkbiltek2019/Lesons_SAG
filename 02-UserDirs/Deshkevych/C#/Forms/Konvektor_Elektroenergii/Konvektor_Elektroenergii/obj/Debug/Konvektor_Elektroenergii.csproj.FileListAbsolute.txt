@@ -1,8 +1,0 @@
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Konvektor\Konvektor_Elektroenergii\Konvektor_Elektroenergii\bin\Debug\Konvektor_Elektroenergii.exe
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Konvektor\Konvektor_Elektroenergii\Konvektor_Elektroenergii\bin\Debug\Konvektor_Elektroenergii.pdb
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Konvektor\Konvektor_Elektroenergii\Konvektor_Elektroenergii\obj\Debug\ResolveAssemblyReference.cache
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Konvektor\Konvektor_Elektroenergii\Konvektor_Elektroenergii\obj\Debug\Konvektor_Elektroenergii.Form1.resources
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Konvektor\Konvektor_Elektroenergii\Konvektor_Elektroenergii\obj\Debug\Konvektor_Elektroenergii.Properties.Resources.resources
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Konvektor\Konvektor_Elektroenergii\Konvektor_Elektroenergii\obj\Debug\Konvektor_Elektroenergii.csproj.GenerateResource.Cache
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Konvektor\Konvektor_Elektroenergii\Konvektor_Elektroenergii\obj\Debug\Konvektor_Elektroenergii.exe
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Konvektor\Konvektor_Elektroenergii\Konvektor_Elektroenergii\obj\Debug\Konvektor_Elektroenergii.pdb
