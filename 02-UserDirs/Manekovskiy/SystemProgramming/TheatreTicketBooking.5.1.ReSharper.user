@@ -1,0 +1,43 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="this" priority="0" />
+      <Item value="message" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TheatreTicketBooking.Client.PremiereSelectedMessage">
+      <Item value="Primiere" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="3A585B9A-B5C8-441B-BDA8-31E0A65F3B82/f:TicketWindows.xaml" caret="819" fromTop="10" />
+      <File id="3A585B9A-B5C8-441B-BDA8-31E0A65F3B82/f:TicketWindows.xaml.cs" caret="936" fromTop="22" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="3A585B9A-B5C8-441B-BDA8-31E0A65F3B82/f:TicketWindows.xaml.cs" caret="1311" fromTop="38" />
+      <File id="3A585B9A-B5C8-441B-BDA8-31E0A65F3B82/f:TicketWindows.xaml.cs" caret="650" fromTop="21" />
+      <File id="3A585B9A-B5C8-441B-BDA8-31E0A65F3B82/f:TicketWindows.xaml" caret="277" fromTop="4" />
+      <File id="3A585B9A-B5C8-441B-BDA8-31E0A65F3B82/f:TicketWindows.xaml" caret="819" fromTop="10" />
+      <File id="3A585B9A-B5C8-441B-BDA8-31E0A65F3B82/f:TicketWindows.xaml.cs" caret="889" fromTop="21" />
+      <File id="3A585B9A-B5C8-441B-BDA8-31E0A65F3B82/f:TicketWindows.xaml.cs" caret="1187" fromTop="31" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>
