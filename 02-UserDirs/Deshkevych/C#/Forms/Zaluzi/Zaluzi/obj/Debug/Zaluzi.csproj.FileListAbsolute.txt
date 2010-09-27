@@ -1,8 +1,0 @@
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Zaluzi\Zaluzi\obj\Debug\ResolveAssemblyReference.cache
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Zaluzi\Zaluzi\obj\Debug\Zaluzi.Form1.resources
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Zaluzi\Zaluzi\obj\Debug\Zaluzi.Properties.Resources.resources
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Zaluzi\Zaluzi\obj\Debug\Zaluzi.csproj.GenerateResource.Cache
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Zaluzi\Zaluzi\bin\Debug\Zaluzi.exe
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Zaluzi\Zaluzi\bin\Debug\Zaluzi.pdb
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Zaluzi\Zaluzi\obj\Debug\Zaluzi.exe
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Zaluzi\Zaluzi\obj\Debug\Zaluzi.pdb
