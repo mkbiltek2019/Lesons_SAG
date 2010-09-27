@@ -1,8 +1,0 @@
-C:\Users\Admin\Documents\Visual Studio 2008\Projects\CountdownTimer\bin\Debug\CountdownTimer.exe
-C:\Users\Admin\Documents\Visual Studio 2008\Projects\CountdownTimer\bin\Debug\CountdownTimer.pdb
-C:\Users\Admin\Documents\Visual Studio 2008\Projects\CountdownTimer\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Admin\Documents\Visual Studio 2008\Projects\CountdownTimer\obj\Debug\CountdownTimer.Properties.Resources.resources
-C:\Users\Admin\Documents\Visual Studio 2008\Projects\CountdownTimer\obj\Debug\CountdownTimer.csproj.GenerateResource.Cache
-C:\Users\Admin\Documents\Visual Studio 2008\Projects\CountdownTimer\obj\Debug\CountdownTimer.exe
-C:\Users\Admin\Documents\Visual Studio 2008\Projects\CountdownTimer\obj\Debug\CountdownTimer.pdb
-C:\Users\Admin\Documents\Visual Studio 2008\Projects\CountdownTimer\obj\Debug\CountdownTimer.MyForm.resources
