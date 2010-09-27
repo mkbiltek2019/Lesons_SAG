@@ -1,8 +1,0 @@
-D:\Programing\Manekovskij\02-UserDirs\Borysyuk\Windows Forms\Special_Timer\Special_Timer\obj\Debug\ResolveAssemblyReference.cache
-D:\Programing\Manekovskij\02-UserDirs\Borysyuk\Windows Forms\Special_Timer\Special_Timer\obj\Debug\Special_Timer.Form1.resources
-D:\Programing\Manekovskij\02-UserDirs\Borysyuk\Windows Forms\Special_Timer\Special_Timer\obj\Debug\Special_Timer.Properties.Resources.resources
-D:\Programing\Manekovskij\02-UserDirs\Borysyuk\Windows Forms\Special_Timer\Special_Timer\obj\Debug\Special_Timer.csproj.GenerateResource.Cache
-D:\Programing\Manekovskij\02-UserDirs\Borysyuk\Windows Forms\Special_Timer\Special_Timer\bin\Debug\Special_Timer.exe
-D:\Programing\Manekovskij\02-UserDirs\Borysyuk\Windows Forms\Special_Timer\Special_Timer\bin\Debug\Special_Timer.pdb
-D:\Programing\Manekovskij\02-UserDirs\Borysyuk\Windows Forms\Special_Timer\Special_Timer\obj\Debug\Special_Timer.exe
-D:\Programing\Manekovskij\02-UserDirs\Borysyuk\Windows Forms\Special_Timer\Special_Timer\obj\Debug\Special_Timer.pdb
