@@ -1,8 +1,0 @@
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Konvektor\AvtoZapravka\AvtoZapravka\bin\Debug\AvtoZapravka.exe
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Konvektor\AvtoZapravka\AvtoZapravka\bin\Debug\AvtoZapravka.pdb
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Konvektor\AvtoZapravka\AvtoZapravka\obj\Debug\ResolveAssemblyReference.cache
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Konvektor\AvtoZapravka\AvtoZapravka\obj\Debug\AvtoZapravka.Form1.resources
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Konvektor\AvtoZapravka\AvtoZapravka\obj\Debug\AvtoZapravka.Properties.Resources.resources
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Konvektor\AvtoZapravka\AvtoZapravka\obj\Debug\AvtoZapravka.csproj.GenerateResource.Cache
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Konvektor\AvtoZapravka\AvtoZapravka\obj\Debug\AvtoZapravka.exe
-D:\ЗМЕЙ\1AYchoba ШАГ_NEW\C#(обучение)\Forms\Seckond\Konvektor\AvtoZapravka\AvtoZapravka\obj\Debug\AvtoZapravka.pdb
