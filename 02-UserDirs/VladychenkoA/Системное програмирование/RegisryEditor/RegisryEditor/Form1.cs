@@ -31,7 +31,6 @@ namespace RegisryEditor
           string[] rootSubKeys = Registry.ClassesRoot.GetSubKeyNames();
           foreach (string key in rootSubKeys)
           {
-              //get a list of the third level sub keys and their values
               TreeNode node = new TreeNode(key, 0, 1);
               string[] subKeys = Registry.ClassesRoot.OpenSubKey(key).GetSubKeyNames();
               foreach (string subKeysKey in subKeys)
@@ -43,7 +42,6 @@ namespace RegisryEditor
                   node.Nodes.Add(subKeyNode);
               }
 
-              //get the list of values in the second level sub key and their contents
               GetValuesAndData(Registry.ClassesRoot.OpenSubKey(key), node);
 
               rootNode.Nodes.Add(node);
@@ -56,7 +54,6 @@ namespace RegisryEditor
           string[] configSubKeys = Registry.CurrentConfig.GetSubKeyNames();
           foreach (string key in configSubKeys)
           {
-              //get a list of the third level sub keys and their values
               TreeNode node = new TreeNode(key, 0, 1);
               string[] subKeys = Registry.CurrentConfig.OpenSubKey(key).GetSubKeyNames();
               foreach (string subKeysKey in subKeys)
@@ -68,7 +65,6 @@ namespace RegisryEditor
                   node.Nodes.Add(subKeyNode);
               }
 
-              //get the list of values in the second level sub key and their contents
               GetValuesAndData(Registry.CurrentConfig.OpenSubKey(key), node);
 
               configNode.Nodes.Add(node);
@@ -81,7 +77,6 @@ namespace RegisryEditor
           string[] currentUserSubKeys = Registry.CurrentUser.GetSubKeyNames();
           foreach (string key in currentUserSubKeys)
           {
-              //get a list of the third level sub keys and their values
               TreeNode node = new TreeNode(key, 0, 1);
               string[] subKeys = Registry.CurrentUser.OpenSubKey(key).GetSubKeyNames();
               foreach (string subKeysKey in subKeys)
@@ -93,8 +88,7 @@ namespace RegisryEditor
                   node.Nodes.Add(subKeyNode);
               }
 
-              //get the list of values in the second level sub key and their contents
-              GetValuesAndData(Registry.CurrentUser.OpenSubKey(key), node);
+             GetValuesAndData(Registry.CurrentUser.OpenSubKey(key), node);
 
               currentUserNode.Nodes.Add(node);
           }
@@ -108,11 +102,8 @@ namespace RegisryEditor
           {
               TreeNode node = new TreeNode(key, 0, 1);
 
-              //a try/catch statement is needed here because some of the data is 
-              //not available for all users
-              try
+            try
               {
-                  //get a list of the third level sub keys and their values
                   string[] subKeys = Registry.LocalMachine.OpenSubKey(key, false).GetSubKeyNames();
                   foreach (string subKeysKey in subKeys)
                   {
@@ -120,16 +111,13 @@ namespace RegisryEditor
                       GetValuesAndData(Registry.LocalMachine.OpenSubKey(key).OpenSubKey(subKeysKey),
                           subKeyNode);
 
-                      //get the list of values in the second level sub key and their contents
-                      GetValuesAndData(Registry.LocalMachine.OpenSubKey(key), node);
+                     GetValuesAndData(Registry.LocalMachine.OpenSubKey(key), node);
 
                       node.Nodes.Add(subKeyNode);
                   }
               }
               catch (Exception)
               {
-                  //an exception is thrown if the user has no access to this subkey
-                  //if this is the case, change the icon to show a dimmed folder
                   node.ImageIndex = 4;
                   node.SelectedImageIndex = 5;
               }
@@ -146,11 +134,8 @@ namespace RegisryEditor
           {
               TreeNode node = new TreeNode(key, 0, 1);
 
-              //a try/catch statement is needed here because some of the data is 
-              //not available for all users
               try
               {
-                  //get a list of the third level sub keys and their values
                   string[] subKeys = Registry.Users.OpenSubKey(key).GetSubKeyNames();
                   foreach (string subKeysKey in subKeys)
                   {
@@ -158,15 +143,12 @@ namespace RegisryEditor
                       GetValuesAndData(Registry.Users.OpenSubKey(key).OpenSubKey(subKeysKey),
                           subKeyNode);
 
-                      //get the list of values in the second level sub key and their contents
                       GetValuesAndData(Registry.Users.OpenSubKey(key), node);
                       node.Nodes.Add(subKeyNode);
                   }
               }
               catch (Exception)
               {
-                  //an exception is thrown if the user has no access to this subkey
-                  //if this is the case, change the icon to show a dimmed folder
                   node.ImageIndex = 4;
                   node.SelectedImageIndex = 5;
               }
@@ -186,19 +168,15 @@ namespace RegisryEditor
               {
                   string stringData = data.ToString();
 
-                  //if the data is too long, display the begining only
-                  if (stringData.Length > 50)
+                 if (stringData.Length > 50)
                       stringData = stringData.Substring(0, 46) + " ...";
 
-                  //Display the data of the value. The conditional operatore is
-                  //needed because the default value has no name
-                  node.Nodes.Add(value, (value == "" ? "Default" : value) +
+                 node.Nodes.Add(value, (value == "" ? "Default" : value) +
                       ": " + stringData, 2, 2);
               }
               else
               {
-                  //Display <empty> if the value is empty
-                  node.Nodes.Add(value, (value == "" ? "Default" : value) +
+                 node.Nodes.Add(value, (value == "" ? "Default" : value) +
                       ": <empty>", 2, 2);
               }
           }
