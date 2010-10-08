@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TicketBookingModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="TicketBookingModelStoreContainer">
+          <EntitySet Name="Genre" EntityType="TicketBookingModel.Store.Genre" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Premiere" EntityType="TicketBookingModel.Store.Premiere" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Ticket" EntityType="TicketBookingModel.Store.Ticket" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Premiere_Genre" Association="TicketBookingModel.Store.FK_Premiere_Genre">
+            <End Role="Genre" EntitySet="Genre" />
+            <End Role="Premiere" EntitySet="Premiere" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ticket_Premiere" Association="TicketBookingModel.Store.FK_Ticket_Premiere">
+            <End Role="Premiere" EntitySet="Premiere" />
+            <End Role="Ticket" EntitySet="Ticket" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Genre">
+          <Key>
+            <PropertyRef Name="GenreID" />
+          </Key>
+          <Property Name="GenreID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Premiere">
+          <Key>
+            <PropertyRef Name="PremiereID" />
+          </Key>
+          <Property Name="PremiereID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="350" />
+          <Property Name="Price" Type="money" Nullable="false" />
+          <Property Name="TicketCapacity" Type="int" Nullable="false" />
+          <Property Name="GenreID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Ticket">
+          <Key>
+            <PropertyRef Name="TicketID" />
+          </Key>
+          <Property Name="TicketID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PremiereID" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Premiere_Genre">
+          <End Role="Genre" Type="TicketBookingModel.Store.Genre" Multiplicity="1" />
+          <End Role="Premiere" Type="TicketBookingModel.Store.Premiere" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Genre">
+              <PropertyRef Name="GenreID" />
+            </Principal>
+            <Dependent Role="Premiere">
+              <PropertyRef Name="GenreID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ticket_Premiere">
+          <End Role="Premiere" Type="TicketBookingModel.Store.Premiere" Multiplicity="1" />
+          <End Role="Ticket" Type="TicketBookingModel.Store.Ticket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Premiere">
+              <PropertyRef Name="PremiereID" />
+            </Principal>
+            <Dependent Role="Ticket">
+              <PropertyRef Name="PremiereID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TicketBookingModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="TicketBookingEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Genre" EntityType="TicketBookingModel.Genre" />
+          <EntitySet Name="Premiere" EntityType="TicketBookingModel.Premiere" />
+          <EntitySet Name="Ticket" EntityType="TicketBookingModel.Ticket" />
+          <AssociationSet Name="FK_Premiere_Genre" Association="TicketBookingModel.FK_Premiere_Genre">
+            <End Role="Genre" EntitySet="Genre" />
+            <End Role="Premiere" EntitySet="Premiere" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ticket_Premiere" Association="TicketBookingModel.FK_Ticket_Premiere">
+            <End Role="Premiere" EntitySet="Premiere" />
+            <End Role="Ticket" EntitySet="Ticket" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Genre">
+          <Key>
+            <PropertyRef Name="GenreID" />
+          </Key>
+          <Property Name="GenreID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Premiere" Relationship="TicketBookingModel.FK_Premiere_Genre" FromRole="Genre" ToRole="Premiere" />
+        </EntityType>
+        <EntityType Name="Premiere">
+          <Key>
+            <PropertyRef Name="PremiereID" />
+          </Key>
+          <Property Name="PremiereID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="350" Unicode="true" FixedLength="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="TicketCapacity" Type="Int32" Nullable="false" />
+          <Property Name="GenreID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Genre" Relationship="TicketBookingModel.FK_Premiere_Genre" FromRole="Premiere" ToRole="Genre" />
+          <NavigationProperty Name="Ticket" Relationship="TicketBookingModel.FK_Ticket_Premiere" FromRole="Premiere" ToRole="Ticket" />
+        </EntityType>
+        <EntityType Name="Ticket">
+          <Key>
+            <PropertyRef Name="TicketID" />
+          </Key>
+          <Property Name="TicketID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PremiereID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Premiere" Relationship="TicketBookingModel.FK_Ticket_Premiere" FromRole="Ticket" ToRole="Premiere" />
+        </EntityType>
+        <Association Name="FK_Premiere_Genre">
+          <End Role="Genre" Type="TicketBookingModel.Genre" Multiplicity="1" />
+          <End Role="Premiere" Type="TicketBookingModel.Premiere" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Genre">
+              <PropertyRef Name="GenreID" />
+            </Principal>
+            <Dependent Role="Premiere">
+              <PropertyRef Name="GenreID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ticket_Premiere">
+          <End Role="Premiere" Type="TicketBookingModel.Premiere" Multiplicity="1" />
+          <End Role="Ticket" Type="TicketBookingModel.Ticket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Premiere">
+              <PropertyRef Name="PremiereID" />
+            </Principal>
+            <Dependent Role="Ticket">
+              <PropertyRef Name="PremiereID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TicketBookingModelStoreContainer" CdmEntityContainer="TicketBookingEntities">
+          <EntitySetMapping Name="Genre"><EntityTypeMapping TypeName="TicketBookingModel.Genre"><MappingFragment StoreEntitySet="Genre">
+            <ScalarProperty Name="GenreID" ColumnName="GenreID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Premiere"><EntityTypeMapping TypeName="TicketBookingModel.Premiere"><MappingFragment StoreEntitySet="Premiere">
+            <ScalarProperty Name="PremiereID" ColumnName="PremiereID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Price" ColumnName="Price" />
+            <ScalarProperty Name="TicketCapacity" ColumnName="TicketCapacity" />
+            <ScalarProperty Name="GenreID" ColumnName="GenreID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Ticket"><EntityTypeMapping TypeName="TicketBookingModel.Ticket"><MappingFragment StoreEntitySet="Ticket">
+            <ScalarProperty Name="TicketID" ColumnName="TicketID" />
+            <ScalarProperty Name="PremiereID" ColumnName="PremiereID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="TicketBookingEntities">
+        <EntityTypeShape EntityType="TicketBookingModel.Genre" Width="1.5" PointX="0.75" PointY="1.25" Height="1.4279589843750002" IsExpanded="true" />
+        <EntityTypeShape EntityType="TicketBookingModel.Premiere" Width="1.5" PointX="3" PointY="0.875" Height="2.0853483072916656" IsExpanded="true" />
+        <EntityTypeShape EntityType="TicketBookingModel.Ticket" Width="1.5" PointX="5.25" PointY="1.25" Height="1.4279589843749996" IsExpanded="true" />
+        <AssociationConnector Association="TicketBookingModel.FK_Premiere_Genre" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="1.9639794921875002" />
+          <ConnectorPoint PointX="3" PointY="1.9639794921875002" />
+        </AssociationConnector>
+        <AssociationConnector Association="TicketBookingModel.FK_Ticket_Premiere" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="1.9639794921874998" />
+          <ConnectorPoint PointX="5.25" PointY="1.9639794921874998" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
