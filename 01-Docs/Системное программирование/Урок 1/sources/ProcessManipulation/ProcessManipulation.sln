@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessManipulation", "ProcessManipulation\ProcessManipulation.csproj", "{4B51536A-C8C0-48DF-9124-0AD04E4B75DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChildProcess", "ChildProcess\ChildProcess.csproj", "{BCEC968D-7623-45A9-9237-04474E6256EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChildProcess2", "ChildProcess2\ChildProcess2.csproj", "{0A639A3F-5527-4252-B295-0C0A54CFD207}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B51536A-C8C0-48DF-9124-0AD04E4B75DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B51536A-C8C0-48DF-9124-0AD04E4B75DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B51536A-C8C0-48DF-9124-0AD04E4B75DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B51536A-C8C0-48DF-9124-0AD04E4B75DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCEC968D-7623-45A9-9237-04474E6256EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCEC968D-7623-45A9-9237-04474E6256EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCEC968D-7623-45A9-9237-04474E6256EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCEC968D-7623-45A9-9237-04474E6256EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A639A3F-5527-4252-B295-0C0A54CFD207}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A639A3F-5527-4252-B295-0C0A54CFD207}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A639A3F-5527-4252-B295-0C0A54CFD207}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A639A3F-5527-4252-B295-0C0A54CFD207}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

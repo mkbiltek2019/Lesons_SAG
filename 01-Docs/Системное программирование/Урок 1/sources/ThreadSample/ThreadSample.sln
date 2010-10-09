@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadSample", "ThreadSample\ThreadSample.csproj", "{AC8F621E-4973-4EAF-906F-4DF5704648E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadSample2", "ThreadSample2\ThreadSample2.csproj", "{B07D6F2B-1D4C-4D02-8AFA-C4FCEB2E4A88}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC8F621E-4973-4EAF-906F-4DF5704648E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC8F621E-4973-4EAF-906F-4DF5704648E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC8F621E-4973-4EAF-906F-4DF5704648E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC8F621E-4973-4EAF-906F-4DF5704648E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B07D6F2B-1D4C-4D02-8AFA-C4FCEB2E4A88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B07D6F2B-1D4C-4D02-8AFA-C4FCEB2E4A88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B07D6F2B-1D4C-4D02-8AFA-C4FCEB2E4A88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B07D6F2B-1D4C-4D02-8AFA-C4FCEB2E4A88}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
