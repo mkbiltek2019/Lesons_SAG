@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ErrorLogger_Client;
 
 namespace ApplicationWithExeption
 {
@@ -9,12 +10,17 @@ namespace ApplicationWithExeption
     {
         static void Main(string[] args)
         {
+            // Add initialization for ErrorLogger_Client.Logger
+            //Logger.AddAppender(new UdpAppender());
+
             try
             {
                 throw new Exception("1:First Exception");
             }
             catch (Exception e)
             {
+                ErrorLogger_Client.Logger.Debug("Something happened");
+
                 LogManager.Core.LogManager.Instance.UseRemoteErrorLogServer = true;
                 LogManager.Core.LogManager.Instance.PutMessage(e.Message);
             }
