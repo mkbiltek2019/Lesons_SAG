@@ -6,42 +6,42 @@ using ErrorLogger_Client;
 
 namespace ApplicationWithExeption
 {
+
+    /// <summary>
+    /// For real not big projects better use Dot4Net.dll
+    /// usage the same like realized in this home task
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
-        {
-            // Add initialization for ErrorLogger_Client.Logger
-            //Logger.AddAppender(new UdpAppender());
+        {         
+            Logger.AddAppender(new TCPLogger());
+            Logger.AddAppender(new FileLogger());
 
             try
             {
-                throw new Exception("1:First Exception");
+                throw new Exception("1:First debug Exception");
             }
             catch (Exception e)
             {
-                ErrorLogger_Client.Logger.Debug("Something happened");
-
-                LogManager.Core.LogManager.Instance.UseRemoteErrorLogServer = true;
-                LogManager.Core.LogManager.Instance.PutMessage(e.Message);
+                Logger.Debug("D: {0}", e.Message);               
             }
 
             try
             {
-                throw new Exception("2:Second Exception..");
+                throw new Exception("2:Second Info Exception..");
             }catch(Exception e)
             {
-                LogManager.Core.LogManager.Instance.UseRemoteErrorLogServer = true;
-                LogManager.Core.LogManager.Instance.PutMessage(e.Message);
+                Logger.Info ("I: {0}", e.Message);            
             }
 
             try
             {
-                throw new Exception("3:Third Exception..");
+                throw new Exception("3:Third Fatal Exception..");
             }
             catch (Exception e)
             {
-                LogManager.Core.LogManager.Instance.UseRemoteErrorLogServer = false;
-                LogManager.Core.LogManager.Instance.PutMessage(e.Message);
+                Logger.Fatal("F: {0}", e.Message);             
             }
         }
     }
