@@ -39,7 +39,6 @@
             this.messageTextBox = new System.Windows.Forms.TextBox();
             this.messageLogListBox = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.activeUsersListBox = new System.Windows.Forms.ListBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,6 +46,7 @@
             this.setConnetionParamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setUserDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userImageListBox = new MessageFormatter.ImageListBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.smilePictureBox)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -153,20 +153,12 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.activeUsersListBox);
+            this.groupBox3.Controls.Add(this.userImageListBox);
             this.groupBox3.Location = new System.Drawing.Point(0, 115);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(210, 340);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
-            // 
-            // activeUsersListBox
-            // 
-            this.activeUsersListBox.FormattingEnabled = true;
-            this.activeUsersListBox.Location = new System.Drawing.Point(3, 9);
-            this.activeUsersListBox.Name = "activeUsersListBox";
-            this.activeUsersListBox.Size = new System.Drawing.Size(203, 329);
-            this.activeUsersListBox.TabIndex = 4;
             // 
             // menuStrip1
             // 
@@ -224,6 +216,13 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.helpToolStripMenuItem.Text = "&Help";
             // 
+            // userImageListBox
+            // 
+            this.userImageListBox.Location = new System.Drawing.Point(-1, 8);
+            this.userImageListBox.Name = "userImageListBox";
+            this.userImageListBox.Size = new System.Drawing.Size(208, 330);
+            this.userImageListBox.TabIndex = 5;
+            // 
             // dotNetChatClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,7 +260,6 @@
         private System.Windows.Forms.TextBox messageTextBox;
         private System.Windows.Forms.ListBox messageLogListBox;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ListBox activeUsersListBox;
         private System.Windows.Forms.Button connectButton;        
         private System.Windows.Forms.Button disconnectButton;
         private System.Windows.Forms.PictureBox smilePictureBox;
@@ -272,6 +270,7 @@
         private System.Windows.Forms.ToolStripMenuItem setConnetionParamToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem setUserDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private MessageFormatter.ImageListBox userImageListBox;
         
       
     }

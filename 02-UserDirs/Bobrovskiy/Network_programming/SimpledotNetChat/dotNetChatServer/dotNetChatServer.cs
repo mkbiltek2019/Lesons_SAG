@@ -34,7 +34,7 @@ namespace dotNetChatServer
             // Hook the StatusChanged event handler to mainServer_StatusChanged
 
             ChatServer.StatusChanged += new Action<string>(mainServer_StatusChanged);
-
+            ChatServer.UserStatusChanged += new Action<string, string>(UserStatusChanged);
             // Start listening for connections
 
             mainServer.StartListening();          
@@ -50,6 +50,17 @@ namespace dotNetChatServer
         {
             // Updates the log with the message
             connectedUsersListBox.Items.Add(strMessage);
+        }
+
+        private void UserStatusChanged(string name, string smile)
+        {
+            this.Invoke( new Action<string, string>(AddUsers), name, smile);
+        }
+
+        private void AddUsers(string name, string smile)
+        {
+            userImageListBox.AddUserToFile(name, smile);
+            userImageListBox.LoadDataFromFile();
         }
 
 

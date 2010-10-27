@@ -74,7 +74,9 @@ namespace dotNetChatClient
                 chatClient.InitializeConnection(buffer, CurrentUserData.ServerIpAddress);
 
                 chatClient.CloseConnectionCallback += new Action<string>(AddMessageToList);
-                chatClient.UpdateLogCallback += new Action<string>(AddMessageToList);                
+                chatClient.UpdateLogCallback += new Action<string>(AddMessageToList);
+                chatClient.AddUsersCallback += new Action<string, string>(UserStatusChanged);
+               
             }            
         }
 
@@ -88,7 +90,6 @@ namespace dotNetChatClient
 
         private void privateChatButton_Click(object sender, EventArgs e)
         {
-
         }
 
         private void sendMessageButton_Click(object sender, EventArgs e)
@@ -106,7 +107,18 @@ namespace dotNetChatClient
             {
                 chatClient.SendMessage(buffer);
             }            
-        }    
+        }
+
+        private void UserStatusChanged(string name, string smile)
+        {
+            this.Invoke(new Action<string, string>(AddUsers), name, smile);
+        }
+
+        private void AddUsers(string name, string smile)
+        {
+            userImageListBox.AddUserToFile(name, smile);
+            userImageListBox.LoadDataFromFile();
+        }
         
     }
 }

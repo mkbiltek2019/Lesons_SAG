@@ -27,6 +27,7 @@ namespace dotNetChatServer.udpServer
         private const string userNameReserved = "This username is reserved.";
         private const string successfullConnection = "Connected successfully.";
         private const string none = "none";
+        private const string newUser = "new";
 
         public Connection(TcpClient tcpCon)
         {
@@ -60,7 +61,7 @@ namespace dotNetChatServer.udpServer
             currUser = strMessage.UserName; // srReceiver.ReadLine();
             // We got a response from the client
 
-            if (IsSuccessfullyConnected()) 
+            if (IsSuccessfullyConnected(m)) 
             {
                 try
                 {
@@ -94,7 +95,7 @@ namespace dotNetChatServer.udpServer
 
         }
 
-        private bool IsSuccessfullyConnected()
+        private bool IsSuccessfullyConnected(string mess)
         {
             bool result = false;
 
@@ -108,7 +109,7 @@ namespace dotNetChatServer.udpServer
                     strMessage.FriendName = none;
                     strMessage.NewUser = none;
                     strMessage.PrivateChat = none;
-                    strMessage.SmileName = none;
+                    strMessage.SmileName = strMessage.SmileName;
                    
                     swSender.WriteLine(strMessage.Serialize(strMessage));
                     swSender.Flush();
@@ -121,7 +122,7 @@ namespace dotNetChatServer.udpServer
                     strMessage.FriendName = none;
                     strMessage.NewUser = none;
                     strMessage.PrivateChat = none;
-                    strMessage.SmileName = none;
+                    strMessage.SmileName = strMessage.SmileName;
 
                     swSender.WriteLine(strMessage.Serialize(strMessage));
                     swSender.Flush();
@@ -132,9 +133,9 @@ namespace dotNetChatServer.udpServer
                     strMessage.CurrentMessage = successfullConnection;
                     strMessage.UserName = currUser;
                     strMessage.FriendName = none;
-                    strMessage.NewUser = none;
+                    strMessage.NewUser = newUser;
                     strMessage.PrivateChat = none;
-                    strMessage.SmileName = none;
+                    strMessage.SmileName = strMessage.SmileName;
 
                     swSender.WriteLine(strMessage.Serialize(strMessage));                    
                     swSender.Flush();

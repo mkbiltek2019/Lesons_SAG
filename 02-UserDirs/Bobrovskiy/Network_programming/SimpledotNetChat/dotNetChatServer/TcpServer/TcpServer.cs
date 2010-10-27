@@ -22,13 +22,14 @@ namespace dotNetChatServer.udpServer
         public static Hashtable htUsers = new Hashtable(maxUsersCountAtTime); // 30 users at one time limit
         // This hash table stores connections and users (browsable by connection)
         public static Hashtable htConnections = new Hashtable(maxUsersCountAtTime); // 30 users at one time limit
-
+        public static Hashtable htUserNameSmileName = new Hashtable(maxUsersCountAtTime); // 30 users at one time limit
         // Will store the IP address passed to it
         private IPAddress ipAddress = null;
         private TcpClient tcpClient = null;
 
         // The event and its argument will notify the form when a user has connected, disconnected, send message, etc.
         public static event Action<string> StatusChanged;
+        public static event Action<string, string> UserStatusChanged;
 
         // The thread that will hold the connection listener
         private Thread thrListener;
@@ -59,9 +60,11 @@ namespace dotNetChatServer.udpServer
 
             ChatServer.htUsers.Add(message.UserName, tcpUser);
             ChatServer.htConnections.Add(tcpUser, message.UserName);
+            ChatServer.htUserNameSmileName.Add(message.UserName, message.SmileName);
 
+            OnUserStatusChanged(message.UserName, message.SmileName);
             // Tell of the new connection to all other users and to the server form
-            SendAdminMessage(htConnections[tcpUser] + userJoinUs);
+            SendAdminMessage(htConnections[tcpUser] + userJoinUs, (string)htConnections[tcpUser]);
         }
 
         // Remove the user from the hash tables
@@ -73,7 +76,7 @@ namespace dotNetChatServer.udpServer
 
                 htUsers.Remove(htConnections[tcpUser]);
                 htConnections.Remove(tcpUser);
-                SendAdminMessage(uname + userLeftUs);
+                SendAdminMessage(uname + userLeftUs, uname);
             }
         }
 
@@ -83,31 +86,63 @@ namespace dotNetChatServer.udpServer
             StatusChanged.Invoke(status);
         }
 
+        public static void OnUserStatusChanged(string name, string imageName)
+        {
+            UserStatusChanged.Invoke(name, imageName);
+        }
+
         // Send administrative messages
-        public static void SendAdminMessage(string currentMessage)
+        public static void SendAdminMessage(string currentMessage, string userName)
         {
             string format = administrator + "{0}";
 
-            SendMessageToAllClients(format, currentMessage);
+            string result = string.Format(format, currentMessage);
+            OnStatusChanged(result);
+
+            message.CurrentMessage = result;
+            message.UserName = userName;
+            if (htUserNameSmileName.Contains(userName)) 
+            {
+                message.SmileName = (string)htUserNameSmileName[userName];
+            }
+
+            message.FriendName = none;
+            message.NewUser = none;
+            message.PrivateChat = none;
+
+            SendMessageToAllClients(currentMessage, message.Serialize(message));
         }
 
         // Send messages from one user to all the others
-        public static void SendMessage(string From, string currentMessage)
+        public static void SendMessage(string currentUser, string currentMessage)
         {
-            string format = From + say + "{0}";
+            string format = currentUser + say + "{0}";
 
-            SendMessageToAllClients(format, currentMessage);
+            string result = string.Format(format, currentMessage);
+            OnStatusChanged(result);
+
+            message.CurrentMessage = result;
+            message.UserName = currentUser;
+            if (htUserNameSmileName.Contains(currentUser))
+            {
+                message.SmileName = (string)htUserNameSmileName[currentUser];
+            }
+
+            message.FriendName = none;
+            message.NewUser = none;
+            message.PrivateChat = none;
+
+
+            SendMessageToAllClients(currentMessage, message.Serialize(message));
         }
 
         private static void SendMessageToAllClients(string format, string currentMessage)
         {
             lock (sync)
             {
-                message = message.Deserialize(currentMessage);
+                //message = message.Deserialize(currentMessage);
 
-                string result = string.Format(format, currentMessage);
-
-                OnStatusChanged(result);
+                //string result = string.Format(format, currentMessage);                
 
                 StreamWriter swSenderSender = null;
                 TcpClient[] tcpClients = new TcpClient[ChatServer.htUsers.Count];
@@ -121,21 +156,26 @@ namespace dotNetChatServer.udpServer
                     try
                     {
                         // If the message is blank or the connection is null, break out
-                        if (string.IsNullOrEmpty(message.CurrentMessage.Trim()) || tcpClients[i] == null)
+                        if (string.IsNullOrEmpty(format.Trim()) || tcpClients[i] == null)
                         {
                             continue;
                         }
                         // Send the message to the current user in the loop
                         swSenderSender = new StreamWriter(tcpClients[i].GetStream());
 
-                        message.CurrentMessage = result;
-                        message.UserName = htConnections[tcpClients[i]].ToString();
-                        message.FriendName = none;
-                        message.NewUser = none;
-                        message.PrivateChat = none;
-                        message.SmileName = none;
+                       // message.CurrentMessage = result;
+                       // message.UserName = htConnections[tcpClients[i]].ToString();
+                       // //if (htUserNameSmileName.Contains(message.UserName)) 
+                       //// {
+                       //     message.SmileName = (string)htUserNameSmileName[message.UserName];
+                       // //}
+                        
+                       // message.FriendName = none;
+                       // message.NewUser = none;
+                       // message.PrivateChat = none;
 
-                        swSenderSender.WriteLine(message.Serialize(message));
+
+                        swSenderSender.WriteLine(currentMessage);
                         swSenderSender.Flush();
                         swSenderSender = null;
                     }

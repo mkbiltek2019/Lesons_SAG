@@ -36,7 +36,7 @@
             this.startServerButton = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.activeUserListBox = new System.Windows.Forms.ListBox();
+            this.userImageListBox = new MessageFormatter.ImageListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -114,32 +114,32 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.activeUserListBox);
+            this.groupBox3.Controls.Add(this.userImageListBox);
             this.groupBox3.Location = new System.Drawing.Point(309, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(200, 317);
+            this.groupBox3.Size = new System.Drawing.Size(213, 317);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "ConnectedUsers";
             // 
-            // activeUserListBox
+            // userImageListBox
             // 
-            this.activeUserListBox.FormattingEnabled = true;
-            this.activeUserListBox.Location = new System.Drawing.Point(6, 19);
-            this.activeUserListBox.Name = "activeUserListBox";
-            this.activeUserListBox.Size = new System.Drawing.Size(188, 290);
-            this.activeUserListBox.TabIndex = 0;
+            this.userImageListBox.Location = new System.Drawing.Point(3, 14);
+            this.userImageListBox.Name = "userImageListBox";
+            this.userImageListBox.Size = new System.Drawing.Size(206, 297);
+            this.userImageListBox.TabIndex = 4;
             // 
             // dotNetChatServer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 321);
+            this.ClientSize = new System.Drawing.Size(524, 321);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.MinimumSize = new System.Drawing.Size(313, 348);
+            this.MaximumSize = new System.Drawing.Size(532, 348);
+            this.MinimumSize = new System.Drawing.Size(532, 348);
             this.Name = "dotNetChatServer";
             this.Text = "dotNetChatServer";
             this.groupBox1.ResumeLayout(false);
@@ -159,7 +159,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ListBox connectedUsersListBox;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ListBox activeUserListBox;
+        private MessageFormatter.ImageListBox userImageListBox;
     }
 }
 
