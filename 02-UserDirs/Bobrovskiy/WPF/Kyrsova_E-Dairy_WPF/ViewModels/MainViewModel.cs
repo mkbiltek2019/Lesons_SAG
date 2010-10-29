@@ -36,7 +36,7 @@ namespace Mvvm.ViewModels
         #region Fields
 
         //  Database worker
-        private TableAssemblyWorker databaseWorker = new TableAssemblyWorker();
+        private Dairy.MyDataInstance.DataProvider.TableAssemblyWorker databaseWorker = new TableAssemblyWorker();
         // All DairyItems
         private DairyItemCollection _dairyItemCollection = DairyItemCollection.Generate(null);
         // Current DairyItem

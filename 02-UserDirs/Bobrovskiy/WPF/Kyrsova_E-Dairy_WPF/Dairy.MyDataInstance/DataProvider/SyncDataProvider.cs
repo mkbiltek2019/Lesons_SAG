@@ -1,81 +1,38 @@
 ﻿using System.Collections.Generic;
 using Instance.DataProvider;
 using Microsoft.Practices.EnterpriseLibrary.Data;
+using Dairy.DataAccess.DataProvider;
 
 namespace Dairy.MyDataInstance.DataProvider
 {
-    /// <summary>
-    /// Generic class that with one
-    /// method Run()  it use DataAccessor generic from
-    /// entlib to get result from database
-    /// as result of execution of stored procedure we get
-    /// IEnumerable collection.
-    /// <Restriction>
-    /// Stored procedure result column names must be the same like
-    /// TResultTable field names. It's important!!! 
-    /// </Restriction>
-    /// </summary>
-    /// <typeparam name="TResultTable"></typeparam>
     public class DataProviderWithSynchronouseAccessor<TResultTable> :
                                         IDataProvider<TResultTable> where TResultTable : new()
-    {
-        #region Fields
-
-        private string storedProcedureName = string.Empty;
+    {            
         private Database currentDatabaseInstance=null;
-        private object[] dbParameterValues = new object[0];
-
-        #endregion
-
-        #region Properties
+        private IRowMapper<TResultTable> resultTableMapper;
 
         public Database CurrentDatabaseInstance
-        {
-            get
-            {
-                return currentDatabaseInstance;
-            }
+        {           
             set
             {
                 currentDatabaseInstance = value;
             }
-        }
+        }        
 
-        public object[] DatabaseParameterValue
+        public DataProviderWithSynchronouseAccessor()
         {
-            get
-            {
-                return dbParameterValues;
-            }
-            set
-            {
-                dbParameterValues = value;
-            }
+           resultTableMapper = MapBuilder<TResultTable>.MapAllProperties().Build();
         }
+        
+        public IEnumerable<TResultTable> Run(StoredProcedure storedProcedure)
+        {  
+            //An output mapper takes the result set returned from a database 
+            DataAccessor<TResultTable> resultTableAccessor = currentDatabaseInstance.CreateSprocAccessor(
+                                                                            storedProcedure.Name, 
+							                                                storedProcedure.ParameterMapper,
+							                                                resultTableMapper);
 
-        public string StoredProcedureName
-        {
-            get
-            {
-                return storedProcedureName;
-            }
-            set
-            {
-                storedProcedureName = value;
-            }
-        }
-
-        #endregion
-
-        public IEnumerable<TResultTable> Run()
-        {
-            IParameterMapper paramMapper = new SimpleParameterMapper();
-            IRowMapper<TResultTable> mapper = MapBuilder<TResultTable>.MapAllProperties().Build();
-
-            DataAccessor<TResultTable> accessor =
-                currentDatabaseInstance.CreateSprocAccessor(storedProcedureName, paramMapper, mapper);
-
-            return accessor.Execute(dbParameterValues);
+            return resultTableAccessor.Execute(storedProcedure.ParameterValues);
         }
 
     }   //class

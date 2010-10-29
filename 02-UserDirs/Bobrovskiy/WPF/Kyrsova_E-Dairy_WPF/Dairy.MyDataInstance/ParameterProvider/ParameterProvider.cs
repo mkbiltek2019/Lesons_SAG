@@ -1,6 +1,7 @@
 ﻿using System;
 using Dairy.MyDataInstance;
 using Model;
+using System.Collections.Generic;
 
 namespace Instance.DataProvider
 {
@@ -14,198 +15,132 @@ namespace Instance.DataProvider
         /// stored procedure parameter name other wise
         /// you will get some error 
         /// 
-        /// </summary>
-        public static ParameterItem InParam
+        /// </summary>  
+
+        public static List<ParameterItem> GetParameterListForSelectDairyListItem(DairyListItem dairyItem)
         {
-            get;
-            set;
+            List<ParameterItem> parameterList = new List<ParameterItem>();
+
+            if (dairyItem == null)
+            {
+                throw new Exception("GetParameterListForSelectDairyListItem(DairyListItem dairyItem) input parameter can't be null");
+            }
+
+            parameterList.Add(new ParameterItem()
+            {
+                ParameterName = "ItemID",
+                ParameterValue = dairyItem.ItemID
+            });
+
+            parameterList.Add(new ParameterItem()
+            {
+                ParameterName = "PriorityID",
+                ParameterValue = dairyItem.PriorityID
+            });
+
+            parameterList.Add(new ParameterItem()
+            {
+                ParameterName = "StatusID",
+                ParameterValue = dairyItem.StatusID
+            });
+
+            parameterList.Add(new ParameterItem()
+            {
+                ParameterName = "DateID",
+                ParameterValue = dairyItem.DateID
+            });
+
+            parameterList.Add(new ParameterItem()
+            {
+                ParameterName = "ItemTitle",
+                ParameterValue = dairyItem.ItemTitle
+            });
+
+            parameterList.Add(new ParameterItem()
+            {
+                ParameterName = "ItemContent",
+                ParameterValue = dairyItem.ItemContent
+            });
+
+            return parameterList;
         }
 
-        public static ParameterItem OutParam
+        public static List<ParameterItem> GetParameterListForDeleteDairyItem(int ID)
         {
-            get;
-            set;
+            List<ParameterItem> parameterList = new List<ParameterItem>();
+
+            if ((ID <0) && (ID > int.MaxValue))
+            {
+                throw new Exception("GetParameterListForDeleteDairyItem(int ID) input parameter can't be null");
+            }
+
+            parameterList.Add(new ParameterItem()
+            {
+                ParameterName = @"ItemID",
+                ParameterValue = ID
+            });
+
+            return parameterList;
         }
 
-        public static void SetInOutParam(DairyDateItem param)
+        public static List<ParameterItem> GetParameterListForInsertDairyDateItem(DairyDateItem dairyDateItem)
         {
-            InParam = new ParameterItem()
+            List<ParameterItem> parameterList = new List<ParameterItem>();
+
+            if (dairyDateItem == null)
+            {
+                throw new Exception("GetParameterListForInsertDairyDateItem(DairyDateItem dairyDateItem) input parameter can't be null");
+            }
+
+            parameterList.Add(new ParameterItem()
             {
                 ParameterName = @"Date",
-                ParameterValue = param.Date
-            };
+                ParameterValue = dairyDateItem.Date
+            });
 
-            OutParam = new ParameterItem()
-            {
-                ParameterName = @"result",
-                ParameterValue = 0
-            };
+            return parameterList;
         }
 
-        public static object[] GetParameterListForSelectDairyListItem(DairyListItem dairyItem)
+        public static List<ParameterItem> GetParameterListForInsertDairyListItem(DairyListItem dairyItem)
         {
-            if (dairyItem!=null)
-            {
-               return new object[]{
-                   new ParameterItem()
-                       {
-                           ParameterName = @"ItemID",
-                           ParameterValue = dairyItem.ItemID
-                       },
-                   new ParameterItem()
-                       {
-                           ParameterName = @"PriorityID",
-                           ParameterValue = dairyItem.PriorityID
-                       },
-                   new ParameterItem()
-                       {
-                           ParameterName = @"StatusID",
-                           ParameterValue = dairyItem.StatusID
-                       },
-                   new ParameterItem()
-                       {
-                           ParameterName = @"DateID",
-                           ParameterValue = dairyItem.DateID
-                       },
-                   new ParameterItem()
-                       {
-                           ParameterName = @"ItemTitle",
-                           ParameterValue = dairyItem.ItemTitle
-                       },
-                   new ParameterItem()
-                       {
-                           ParameterName = @"ItemContent",
-                           ParameterValue = dairyItem.ItemContent
-                       }
-               };
-            }
-            
-            return  new object[]{
-                   new ParameterItem()
-                       {
-                           ParameterName = @"ItemID",
-                           ParameterValue = 0
-                       },
-                   new ParameterItem()
-                       {
-                           ParameterName = @"PriorityID",
-                           ParameterValue = 0
-                       },
-                   new ParameterItem()
-                       {
-                           ParameterName = @"StatusID",
-                           ParameterValue = 0
-                       },
-                   new ParameterItem()
-                       {
-                           ParameterName = @"DateID",
-                           ParameterValue = 0
-                       },
-                   new ParameterItem()
-                       {
-                           ParameterName = @"ItemTitle",
-                           ParameterValue = "none"
-                       },
-                   new ParameterItem()
-                       {
-                           ParameterName = @"ItemContent",
-                           ParameterValue = "none"
-                       }
-               };
-        }     
+            List<ParameterItem> parameterList = new List<ParameterItem>();
 
-        public static object[] GetParameterListForDeleteDairyItem(int ID)
-        {
-               return new object[]{
-                   new ParameterItem()
-                       {
-                           ParameterName = @"ItemID",
-                           ParameterValue = ID
-                       }
-               };
-        }
-
-        public static object[] GetParameterListForInsertDairyDateItem(DairyDateItem dairyDateItem)
-        {
-            if (dairyDateItem!=null)
+            if (dairyItem == null)
             {
-               return new object[]{
-                   new ParameterItem()
-                       {
-                           ParameterName = @"Date",
-                           ParameterValue = dairyDateItem.Date
-                       }
-               };
-            }
-            return new object[]{
-                   new ParameterItem()
-                       {
-                           ParameterName = @"Date",
-                           ParameterValue = DateTime.Now
-                       }
-               };
-        }
-
-        public static object[] GetParameterListForInsertDairyListItem(DairyListItem dairyItem)
-        {
-            if (dairyItem != null)
-            {
-                return new object[]{
-                   new ParameterItem()
-                       {
-                           ParameterName = @"PriorityID",
-                           ParameterValue = dairyItem.PriorityID
-                       },
-                   new ParameterItem()
-                       {
-                           ParameterName = @"StatusID",
-                           ParameterValue = dairyItem.StatusID
-                       },
-                   new ParameterItem()
-                       {
-                           ParameterName = @"DateID",
-                           ParameterValue = dairyItem.DateID
-                       },
-                   new ParameterItem()
-                       {
-                           ParameterName = @"ItemTitle",
-                           ParameterValue = dairyItem.ItemTitle
-                       },
-                   new ParameterItem()
-                       {
-                           ParameterName = @"ItemContent",
-                           ParameterValue = dairyItem.ItemContent
-                       }
-               };
+                throw new Exception("GetParameterListForInsertDairyDateItem(DairyDateItem dairyDateItem) input parameter can't be null");
             }
 
-            return new object[]{
-                   new ParameterItem()
-                       {
-                           ParameterName = @"PriorityID",
-                           ParameterValue = 0
-                       },
-                   new ParameterItem()
-                       {
-                           ParameterName = @"StatusID",
-                           ParameterValue = 0
-                       },
-                   new ParameterItem()
-                       {
-                           ParameterName = @"DateID",
-                           ParameterValue = 0
-                       },
-                   new ParameterItem()
-                       {
-                           ParameterName = @"ItemTitle",
-                           ParameterValue = "none"
-                       },
-                   new ParameterItem()
-                       {
-                           ParameterName = @"ItemContent",
-                           ParameterValue = "none"
-                       }
-               };
+            parameterList.Add(new ParameterItem()
+            {
+                ParameterName = @"PriorityID",
+                ParameterValue = dairyItem.PriorityID
+            });
+
+            parameterList.Add(new ParameterItem()
+            {
+                ParameterName = @"StatusID",
+                ParameterValue = dairyItem.StatusID
+            });
+
+             parameterList.Add(new ParameterItem()
+            {
+                ParameterName = @"DateID",
+                ParameterValue = dairyItem.DateID
+            });
+
+            parameterList.Add(new ParameterItem()
+            {
+                ParameterName = @"ItemTitle",
+                ParameterValue = dairyItem.ItemTitle
+            });
+
+            parameterList.Add(new ParameterItem()
+            {
+                ParameterName = @"ItemContent",
+                ParameterValue = dairyItem.ItemContent
+            });
+
+            return parameterList;            
         }
 
     }//class

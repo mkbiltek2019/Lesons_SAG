@@ -31,9 +31,9 @@
 						<Style/>
 					</Grid.FocusVisualStyle>
 					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width="Auto" MinWidth="39.5"/>
-						<ColumnDefinition Width="67"/>
-						<ColumnDefinition Width="304"/>
+						<ColumnDefinition Width="Auto" MinWidth="25"/>
+						<ColumnDefinition Width="72.25"/>
+						<ColumnDefinition Width="313.25"/>
 						<ColumnDefinition/>
 						<ColumnDefinition/>
 						<ColumnDefinition/>
@@ -56,7 +56,7 @@
                             SelectedIndex="{Binding PriorityID}"                             
 							Style="{DynamicResource ComboBoxStyle1}" 
 							VerticalAlignment="Top" 
-							Width="50.167" Height="43" Grid.Row="2" 
+							Width="35.167" Height="43" Grid.Row="2" 
                             VerticalContentAlignment="Top" IsReadOnly="True" 
                             Fluent:KeyTip.HorizontalAlignment="Left" 
                             Fluent:KeyTip.VerticalAlignment="Top" SnapsToDevicePixels="True">
@@ -69,7 +69,7 @@
 						</ComboBox>
 					</DockPanel>
 					<StackPanel
-						Orientation="Vertical" Margin="19.25,7.5,-153.25,0.173"
+						Orientation="Vertical" Margin="1,7.5,-135,0.173"
                         HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
                         Width="Auto" Height="Auto" Fluent:KeyTip.VerticalAlignment="Bottom" 
                         Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="12">
@@ -77,9 +77,9 @@
                                    
 							HorizontalAlignment="Left" Width="441" 
 							Height="34.827" FontSize="16" FontFamily="Verdana" 
-							SnapsToDevicePixels="True" Foreground="#FF737A84" VerticalAlignment="Center" Margin="1.5,0,0,0" />
+							SnapsToDevicePixels="True" Foreground="#FF737A84" VerticalAlignment="Center" Margin="1,0,0,0" />
 					</StackPanel>
-					<StackPanel Margin="8,1,0,1" Grid.Column="1" HorizontalAlignment="Stretch" Width="Auto">
+					<StackPanel Margin="0.75,1,7.25,1" Grid.Column="1" HorizontalAlignment="Stretch" Width="Auto">
 					          
             <Fluent:Button 
                 Text="Done" Width="Auto" Height="20" 
@@ -89,9 +89,9 @@
 				Fluent:KeyTip.VerticalAlignment="Center" 
 				FontFamily="Fonts/#Verdana" 
 				SizeDefinition=" Middle, Small" Fluent:KeyTip.AutoPlacement="False" 
-				FontStyle="Italic" FontWeight="Bold" 
+				FontStyle="Italic" FontWeight="Normal" 
 				Custom:SelectiveScrollingGrid.SelectiveScrollingOrientation="Horizontal" 
-				LargeIcon="Images/Blue.png" Icon="Images/Games.ico" VerticalAlignment="Stretch"               
+				LargeIcon="Images/Blue.png" Icon="Images/Green.png" VerticalAlignment="Stretch"               
                 />
             <Fluent:Button 
             	Text="Moove" Width="Auto" Height="20" 
@@ -101,15 +101,20 @@
             	Fluent:KeyTip.VerticalAlignment="Bottom" 
             	FontFamily="Fonts/#Verdana" 
             	SizeDefinition=" Middle, Small" Fluent:KeyTip.AutoPlacement="False" 
-            	FontStyle="Italic" FontWeight="Bold" 
+            	FontStyle="Italic" FontWeight="Normal" 
             	Custom:SelectiveScrollingGrid.SelectiveScrollingOrientation="Horizontal" 
-            	LargeIcon="Images/Pink.png" Icon="Images/Blue.png" Fluent:KeyTip.Margin="0" Padding="1,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Stretch"               
+            	LargeIcon="Images/Pink.png" Icon="Images/Blue.png" Fluent:KeyTip.Margin="0" 
+                Padding="1,0,0,0" VerticalContentAlignment="Center" 
+                HorizontalContentAlignment="Center" VerticalAlignment="Stretch"               
                 />
           
-		  
-								</StackPanel>
-					<Rectangle Stroke="#FF494FD0" StrokeEndLineCap="Round" StrokeStartLineCap="Round" StrokeThickness="7" HorizontalAlignment="Right" Margin="0,0.25,-0.25,-2.75" Width="0.5" Grid.Column="0" Fill="#FF5A87E8" OpacityMask="#FF5B91C5"/>
-					<Rectangle Fill="#FF5A87E8" Stroke="#FF494FD0" StrokeEndLineCap="Round" StrokeStartLineCap="Round" StrokeThickness="7" HorizontalAlignment="Left" Margin="6.25,-1.75,0,-0.75" Width="0.5" OpacityMask="#FF5B91C5" Grid.Column="2"/>      
+		  		</StackPanel>
+					<Rectangle Stroke="#FF494FD0" StrokeEndLineCap="Round" StrokeStartLineCap="Round"
+                               StrokeThickness="7" HorizontalAlignment="Right" Margin="0,-2.75,0.583,0.25" 
+                               Width="0.5" Grid.Column="0" Fill="#FF5A87E8" OpacityMask="#FF5B91C5"/>
+					<Rectangle Fill="#FF5A87E8" Stroke="#FF494FD0" StrokeEndLineCap="Round" StrokeStartLineCap="Round" 
+                               StrokeThickness="7" HorizontalAlignment="Left" Margin="0.25,-1.5,0,-1" Width="0.5"
+                               OpacityMask="#FF5B91C5" Grid.Column="2"/>      
 				</Grid>
 			</Fluent:RibbonGroupBox>      
             
@@ -182,11 +187,15 @@
 				</Microsoft_Windows_Themes:ClassicBorderDecorator>
 				<ToggleButton Margin="2" MinHeight="0" MinWidth="0" 
                               
-                              Width="Auto" Focusable="false" ClickMode="Press" IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"/>
+                              Width="Auto" Focusable="false" ClickMode="Press" 
+                              IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"/>
 				<DockPanel Margin="2">
-					<FrameworkElement Width="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}" DockPanel.Dock="Right"/>
+					<FrameworkElement Width="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}" 
+                                      DockPanel.Dock="Right"/>
 					<TextBox x:Name="PART_EditableTextBox" Margin="{TemplateBinding Padding}" 
-                             HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" IsReadOnly="{Binding IsReadOnly, RelativeSource={RelativeSource TemplatedParent}}"/>
+                             HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                             VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" 
+                             IsReadOnly="{Binding IsReadOnly, RelativeSource={RelativeSource TemplatedParent}}"/>
 				</DockPanel>
 			</Grid>
 		</Border>
@@ -224,7 +233,8 @@
 							DockPanel.Dock="Right" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" 
 							BorderBrush="{TemplateBinding BorderBrush}" BorderStyle="AltRaised" 
 							BorderThickness="{TemplateBinding BorderThickness}">
-							<Path Fill="{TemplateBinding Foreground}" HorizontalAlignment="Center" VerticalAlignment="Center" Data="{StaticResource DownArrowGeometry}"/>
+							<Path Fill="{TemplateBinding Foreground}" HorizontalAlignment="Center" 
+                                  VerticalAlignment="Center" Data="{StaticResource DownArrowGeometry}"/>
 						</Microsoft_Windows_Themes:ClassicBorderDecorator>
 					</DockPanel>
 					<ControlTemplate.Triggers>
@@ -251,7 +261,8 @@
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type TextBox}">
-					<ScrollViewer x:Name="PART_ContentHost" Background="Transparent" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+					<ScrollViewer x:Name="PART_ContentHost" Background="Transparent"
+                                  Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
 				</ControlTemplate>
 			</Setter.Value>
 		</Setter>
@@ -292,7 +303,7 @@
 						<Border SnapsToDevicePixels="true" 
 						BorderThickness="{TemplateBinding BorderThickness}" 
 						BorderBrush="#FFBDE0EA" Width="52" Height="42.667">
-						<Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Fluent:KeyTip.HorizontalAlignment="Stretch" Fluent:KeyTip.VerticalAlignment="Stretch">
+						<Grid HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="40" Fluent:KeyTip.HorizontalAlignment="Stretch" Fluent:KeyTip.VerticalAlignment="Stretch" Margin="3.25,0,-2.25,0" d:LayoutOverrides="Width">
 							<Grid.ColumnDefinitions>
 								<ColumnDefinition Width="29.733"/>
 								<ColumnDefinition Width="Auto" MinWidth="21.267"/>
@@ -301,23 +312,23 @@
 							<Microsoft_Windows_Themes:ClassicBorderDecorator
 								x:Name="Border" BorderBrush="#FFBBCEF6" 
 								BorderStyle="Sunken" BorderThickness="0"
-								Margin="14.25,-0.334,-2.833,1.334"
+								Margin="11.75,-0.084,-0.333,1.084"
 								RenderTransformOrigin="0.424,0.467" Grid.ColumnSpan="2">
 							  
 								<Popup x:Name="PART_Popup" AllowsTransparency="true"
 									IsOpen="{TemplateBinding IsDropDownOpen}" 
 									Placement="Bottom"
 									PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}"
-									Focusable="False" FocusVisualStyle="{DynamicResource ControlStyle1}" VerticalOffset="-1" Margin="0">
+									Focusable="False" FocusVisualStyle="{DynamicResource ControlStyle1}" VerticalOffset="-1" Margin="-2,0,2,0">
 									
 									<Microsoft_Windows_Themes:SystemDropShadowChrome 
 										x:Name="Shdw" MaxHeight="{TemplateBinding MaxDropDownHeight}" 
 										Color="Transparent" Width="32.083" HorizontalAlignment="Left"
-										VerticalAlignment="Top" RenderTransformOrigin="0.561,0.496" OpacityMask="#FF373535">
+										VerticalAlignment="Top" RenderTransformOrigin="0.561,0.496" OpacityMask="#FF373535" Margin="0">
 									 
 										<Border x:Name="DropDownBorder" Background="{x:Null}" 
 											BorderBrush="#FFBBCEF6" BorderThickness="5,0" Width="28.083"
-											RenderTransformOrigin="0.5,0.5" Margin="4,0,0,0"
+											RenderTransformOrigin="0.5,0.5" Margin="0"
 											HorizontalAlignment="Left" Height="80.666" CornerRadius="5">
 										  
 											<ItemsPresenter HorizontalAlignment="Center" 
@@ -333,7 +344,7 @@
 								</Popup>
 							</Microsoft_Windows_Themes:ClassicBorderDecorator>
 							
-							<DockPanel Margin="14.5,0,0.5,-0.25" 
+							<DockPanel Margin="10,1,5,-1.25" 
 								HorizontalAlignment="Stretch" Width="Auto" Grid.ColumnSpan="2">
 								<FrameworkElement DockPanel.Dock="Right"
 									Width="3" Height="40.5" RenderTransformOrigin="-0.35,0.5"
@@ -341,15 +352,15 @@
 								  
 								<Border 
 									x:Name="SelectedItemBorder" 
-									Margin="2,7.251,2,3.25"
+									Margin="0,1,15,2.2"
 									Width="16.706" 
 									HorizontalAlignment="Right" VerticalAlignment="Stretch" 
-									RenderTransformOrigin="0.5,0.5" BorderBrush="#FFBBCEF6" Height="Auto">
+									RenderTransformOrigin="0.327,0.387" BorderBrush="#FFBBCEF6" Height="Auto">
 									<Border.RenderTransform>
 										<TransformGroup>
 											<ScaleTransform/>
 											<SkewTransform/>
-											<RotateTransform Angle="23.518"/>
+											<RotateTransform/>
 											<TranslateTransform/>
 										</TransformGroup>
 									</Border.RenderTransform>
@@ -364,11 +375,11 @@
 										ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"/>
 								</Border>
 							</DockPanel>
-							<ToggleButton Margin="7.75,13.25,5.983,0.25" MinHeight="0" 
+							<ToggleButton Margin="7.75,18.25,5.983,-4.75" MinHeight="0" 
 								MinWidth="0"
 								Width="Auto" 
 								Focusable="False" 
-								ClickMode="Hover" 
+								ClickMode="Press" 
 										
 								IsChecked="{Binding IsDropDownOpen, Mode=TwoWay,
 								 RelativeSource={RelativeSource TemplatedParent}}" 
@@ -378,7 +389,13 @@
 								Grid.Column="0" 
 								Height="Auto" RenderTransformOrigin="0.5,0.5"
 								 OpacityMask="{x:Null}" 
-								 Style="{DynamicResource ComboBoxTransparentButtonStyle}" FocusVisualStyle="{DynamicResource ComboBoxFocusVisual}" Foreground="#FF123D7A" BorderBrush="{x:Null}" Background="#FF4741B1" ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="0" FontStyle="Italic">
+								 Style="{DynamicResource ComboBoxTransparentButtonStyle}" 
+                                          FocusVisualStyle="{DynamicResource ComboBoxFocusVisual}" 
+                                          BorderBrush="{x:Null}" Background="#FF4741B1" 
+                                          ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                                          VerticalContentAlignment="Center"
+                                          HorizontalContentAlignment="Center" 
+                                          Padding="0" FontStyle="Italic">
 								<ToggleButton.RenderTransform>
 									<TransformGroup>
 										<ScaleTransform ScaleX="1" ScaleY="1"/>
@@ -445,6 +462,35 @@
 			</Style>
 		</Style.BasedOn>
 	</Style>
+	
+			 <Style TargetType="{x:Type Hyperlink}" >
+			         <Setter Property="TextDecorations">
+                                    <Setter.Value>
+                                        <TextDecorationCollection>
+											
+                                            <TextDecoration Location="Underline" />
+                                            <TextDecoration Location="Overline" />
+                                            <TextDecoration  
+         PenThicknessUnit="FontRecommended">
+                                                <TextDecoration.Pen>
+                                                    <Pen Thickness="1.0">
+                                                        <Pen.Brush>
+                                                            <LinearGradientBrush Opacity="0.5"
+                 StartPoint="0,0.5"  EndPoint="1,0.5">
+                                                                <LinearGradientBrush.GradientStops>
+                                                                    <GradientStop Color="Yellow" Offset="0" />
+                                                                    <GradientStop Color="Red" Offset="1" />
+                                                                </LinearGradientBrush.GradientStops>
+                                                            </LinearGradientBrush>
+                                                        </Pen.Brush>
+                                                    </Pen>
+                                                </TextDecoration.Pen>
+                                            </TextDecoration>
+                                        </TextDecorationCollection>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+		
     
 	
 </ResourceDictionary>

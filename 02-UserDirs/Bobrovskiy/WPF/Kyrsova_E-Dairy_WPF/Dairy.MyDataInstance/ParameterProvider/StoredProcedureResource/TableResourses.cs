@@ -1,15 +1,52 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Model;
 
 namespace Dairy.MyDataInstance.DataProvider.Resources
-{ 
+{
     /// <summary>
     /// Bind database table names to stored procedures
     /// </summary>
+
+    //TODO: refactor this 
+
+    public struct StoredProcedureParametriser
+    {
+        public string SpName;
+        public object[] SpParametersValues;
+
+        public StoredProcedureParametriser(string spName, object[] spParametersValues)
+        {
+            SpName = spName;
+            SpParametersValues = spParametersValues;
+        }
+    } 
+
     public static class Resources
     {
         public static Hashtable CreateInsertSPList()
         {
+            //Hashtable spList1 = new Hashtable();
+
+            //object[] param = new object[]
+            //                             {
+            //                                  new ParameterItem()
+            //                                   {
+            //                                       ParameterName = @"Date",
+            //                                       ParameterValue = DateTime.Now
+            //                                   }
+            //                             };
+
+            //spList1.Add(TableList.DiaryDate, new StoredProcedureParametriser()
+            //                                     {
+            //                                         SpName = "InsertDairyDate_SP",
+            //                                         SpParametersValues = param
+            //                                     });
+
+            ////(spList1[TableList.DiaryDate]).
+
+
+
             Hashtable spList = new Hashtable();
 
             spList.Add(TableList.DiaryDate, @"InsertDairyDate_SP");

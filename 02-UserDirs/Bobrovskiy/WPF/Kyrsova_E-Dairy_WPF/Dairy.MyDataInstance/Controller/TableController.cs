@@ -5,6 +5,8 @@ using Dairy.MyDataInstance.DataProvider;
 using Instance;
 using Instance.DataProvider;
 using Microsoft.Practices.EnterpriseLibrary.Data;
+using Dairy.DataAccess.DataProvider;
+using System;
 
 namespace Dairy.MyDataInstance
 {
@@ -24,23 +26,24 @@ namespace Dairy.MyDataInstance
     /// that returned Run method the same like stored procedure result fields
     /// and must be the same like
     /// TableModel colunm name other wise you don't get any result
-    public class TableController<TableModel> where TableModel : new()
+
+    public class TableController<TResultTable> where TResultTable : new()
     {
         #region  Fields
 
         private Database currentDatabase = null;
-        private IDataProvider<TableModel> asyncDataProvider = null;
+        private IDataProvider<TResultTable> asyncDataProvider = null;
 
-        private IDataProvider<TableModel> syncDataProvider = null;
+        private IDataProvider<TResultTable> syncDataProvider = null;
         private ExecuteStoredProcWithParam dataProvider = null;
 
-        private IList<TableModel> result;
+        private IList<TResultTable> result;
 
         #endregion
 
         #region  Properties
 
-        public IList<TableModel> Result
+        public IList<TResultTable> Result
         {
             get
             {
@@ -57,6 +60,8 @@ namespace Dairy.MyDataInstance
         public TableController()
         {
             currentDatabase = (new DbFactory()).CreateDatabase();
+            InitAsync();
+            InitSync(); 
         }
 
         #region private  methods
@@ -73,64 +78,56 @@ namespace Dairy.MyDataInstance
 
         private void InitAsync()
         {
-            asyncDataProvider = new DataProviderWithASynchronouseAccessor<TableModel>();
+            asyncDataProvider = new DataProviderWithASynchronouseAccessor<TResultTable>();
             asyncDataProvider.CurrentDatabaseInstance = currentDatabase;
         }
 
         private void InitSync()
         {
-            syncDataProvider = new DataProviderWithSynchronouseAccessor<TableModel>();
+            syncDataProvider = new DataProviderWithSynchronouseAccessor<TResultTable>();
             syncDataProvider.CurrentDatabaseInstance = currentDatabase;
         }
         
         #endregion
 
-        public List<TableModel> ExecuteAsync(object[] storedProcedureParam, string storedProcedureName)
+        public List<TResultTable> ExecuteAsync(StoredProcedure storedProcedure)
         {
-            InitAsync();
-
-            asyncDataProvider.StoredProcedureName = storedProcedureName;
-            asyncDataProvider.DatabaseParameterValue = storedProcedureParam;
-
-            return asyncDataProvider.Run() as List<TableModel>;
+            return syncDataProvider.Run(storedProcedure) as List<TResultTable>;
         }
 
-        public List<TableModel> ExecuteSync(object[] storedProcedureParam, string storedProcedureName)
+        public List<TResultTable> ExecuteSync(StoredProcedure storedProcedure)
         {
-            InitSync(); 
-
-            syncDataProvider.StoredProcedureName = storedProcedureName;
-            syncDataProvider.DatabaseParameterValue = storedProcedureParam;
-
-            return syncDataProvider.Run().ToList();
+            return syncDataProvider.Run(storedProcedure).ToList();
         }
 
-        public int Execute(object[] storedProcedureParam, string storedProcedureName)
+        public int Execute(StoredProcedure storedProcedure)
         {
             /// The result value must have some name
             const string outParameterName = "result";
+            int result = 0;
 
-            InitSimple(storedProcedureName);
-           
-            foreach (ParameterItem parameterItem in storedProcedureParam)
+            InitSimple(storedProcedure.Name);
+
+            foreach (ParameterItem parameterItem in storedProcedure.ParameterValueCollection)
             {
                dataProvider.AddInParameter(
                    parameterItem.ParameterValue,
-                   parameterItem.ParameterName
-                   ); 
+                   parameterItem.ParameterName); 
             }
 
             dataProvider.AddOutParameter(outParameterName);
 
             try
             {
-                return dataProvider.ExecuteSpGetResultValue(outParameterName);
-            }catch
+                result = dataProvider.ExecuteSpGetResultValue(outParameterName);
+            }
+            catch
             {
-                return 0;
+                throw new Exception("Execute(StoredProcedure storedProcedure) has failed to execute");
+                result = 0;
             }
 
-            return 0;
+            return result;
         }
 
     }//class 

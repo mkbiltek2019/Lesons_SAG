@@ -1,11 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-Dairy_WPF", "E-Dairy_WPF.csproj", "{3FDAD918-2233-4F64-AADA-018D6475F4DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dairy.MyDataAccesse", "Dairy.MyDataAccesse\Dairy.MyDataAccesse.csproj", "{01A7D8CF-57B8-4306-A468-141C5038B1A3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dairy.MyDataInstance", "Dairy.MyDataInstance\Dairy.MyDataInstance.csproj", "{92697FF2-8670-4A6D-9145-ECFED0592ED2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dairy.DataAccess", "Dairy.MyDataInstance\Dairy.DataAccess.csproj", "{92697FF2-8670-4A6D-9145-ECFED0592ED2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{3FDAD918-2233-4F64-AADA-018D6475F4DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FDAD918-2233-4F64-AADA-018D6475F4DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FDAD918-2233-4F64-AADA-018D6475F4DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{01A7D8CF-57B8-4306-A468-141C5038B1A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{01A7D8CF-57B8-4306-A468-141C5038B1A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{01A7D8CF-57B8-4306-A468-141C5038B1A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{01A7D8CF-57B8-4306-A468-141C5038B1A3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{92697FF2-8670-4A6D-9145-ECFED0592ED2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{92697FF2-8670-4A6D-9145-ECFED0592ED2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92697FF2-8670-4A6D-9145-ECFED0592ED2}.Release|Any CPU.ActiveCfg = Release|Any CPU

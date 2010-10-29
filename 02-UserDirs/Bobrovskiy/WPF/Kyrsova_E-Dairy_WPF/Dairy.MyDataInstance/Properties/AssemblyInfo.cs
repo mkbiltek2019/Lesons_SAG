@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Computer")]
-[assembly: AssemblyProduct("Dairy.MyDataInstance")]
+[assembly: AssemblyProduct("Dairy.DataAccess")]
 [assembly: AssemblyCopyright("Copyright © Computer 2010")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
