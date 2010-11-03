@@ -6,9 +6,9 @@ namespace SimpleDownloadManager.Classes
 {
     public class BackgroundFileLoader : BackgroundWorker
     {
-        private Func<int> downloadMethod = null;
+        private Action downloadMethod = null;
 
-        public BackgroundFileLoader(Func<int> currentMethod)
+        public BackgroundFileLoader(Action currentMethod)
         {
             WorkerReportsProgress = true;
             WorkerSupportsCancellation = true;
@@ -20,8 +20,7 @@ namespace SimpleDownloadManager.Classes
             e.Result = TaskState.Start;
             try
             {
-                int porgress = downloadMethod.Invoke();
-                ReportProgress(porgress, TaskState.Processing);
+                downloadMethod.Invoke();
             }
             finally
             {

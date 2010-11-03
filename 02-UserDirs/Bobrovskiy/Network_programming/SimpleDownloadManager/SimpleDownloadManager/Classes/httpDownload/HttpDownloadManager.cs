@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using SimpleDownloadManager.Classes.httpDownload;
 using SimpleDownloadManager.Interfaces;
@@ -8,8 +7,7 @@ namespace SimpleDownloadManager.Classes
 {
     public class HttpDownloadManager : IDownloadManager
     {
-        //TODO: синхронізувати datagridview зі списком за допомогою подій DownloadItemList
-        public event Action<List<IDownloadTask> > GetDownloadTaskState;
+        public event Action<List<DownloadItem>> GetDownloadTaskState = null;
 
         private List<IDownloadTask> downloadTaskList = null;
         private DownloadItem selectedTask = null;
@@ -19,20 +17,21 @@ namespace SimpleDownloadManager.Classes
             get
             {
                 return downloadTaskList;
-            } 
+            }
         }
 
         public List<DownloadItem> DownloadList
         {
             get
             {
-                List<DownloadItem> list = new List<DownloadItem>();
+                List<DownloadItem> downloadList = new List<DownloadItem>();
+
                 foreach (IDownloadTask downloadItem in downloadTaskList)
                 {
-                    list.Add(downloadItem.CurrentDownloadItem);
+                    downloadList.Add(downloadItem.CurrentDownloadItem);
                 }
 
-                return list;
+                return downloadList;
             }
         }
 
@@ -56,9 +55,9 @@ namespace SimpleDownloadManager.Classes
         public void AddTask(DownloadItem downloadItem)
         {
             IDownloadTask downloadTask = new HttpDownloadTask(downloadItem);
-            downloadTask.ReportProgress +=new Action<DownloadItem>(downloadTask_ReportProgress);
+            downloadTask.ReportProgress += new Action<DownloadItem>(downloadTask_ReportProgress);
             downloadTaskList.Add(downloadTask);
-		
+
             GetDownloadTaskState.Invoke(DownloadList);
         }
 
@@ -69,7 +68,7 @@ namespace SimpleDownloadManager.Classes
                 if (downloadTaskList[i].CurrentDownloadItem.ID.Equals(downloadItem.ID))
                 {
                     downloadTaskList[i].CurrentDownloadItem = downloadItem;
-		    break;
+                    break;
                 }
             }
 
@@ -78,69 +77,79 @@ namespace SimpleDownloadManager.Classes
 
         public void RemooveTask()
         {
-            //remooove selected task
-	    IDownloadTask temp = null;
-
-            for (int i = 0; i < downloadTaskList.Count; i++)
+            //remoove selected task
+            if (selectedTask != null)
             {
-                if  (downloadTaskList[i].CurrentDownloadItem.ID.Equals(selectedTask.ID))
-                {
-                    downloadTaskList[i].Stop();
-			temp = downloadTaskList[i];
-		    break;
-                   // downloadTaskList.Remove(downloadTaskList[i]);
-                }
-            }
-		downloadTaskList.Remove(temp);
+                IDownloadTask temp = null;
 
-            GetDownloadTaskState.Invoke(DownloadList);
+                for (int i = 0; i < downloadTaskList.Count; i++)
+                {
+                    if (downloadTaskList[i].CurrentDownloadItem.ID.Equals(selectedTask.ID))
+                    {
+                        downloadTaskList[i].Stop();
+                        temp = downloadTaskList[i];
+                        break;
+                    }
+                }
+
+                downloadTaskList.Remove(temp);
+
+                GetDownloadTaskState.Invoke(DownloadList);
+            }
         }
 
         public void PauseTask()
         {
-            //pause selected task
-            for (int i = 0; i < downloadTaskList.Count; i++)
+            if (selectedTask != null)
             {
-                if (downloadTaskList[i].CurrentDownloadItem.ID.Equals(selectedTask.ID))
+                //pause selected task
+                for (int i = 0; i < downloadTaskList.Count; i++)
                 {
-                    downloadTaskList[i].Pause();
-
-                    downloadTaskList.Remove(downloadTaskList[i]);
-		    break;
+                    if (downloadTaskList[i].CurrentDownloadItem.ID.Equals(selectedTask.ID))
+                    {
+                        downloadTaskList[i].Pause();
+                        break;
+                    }
                 }
-            }
 
-            GetDownloadTaskState.Invoke(DownloadList);
+                GetDownloadTaskState.Invoke(DownloadList);
+            }
         }
 
         public void StartTask()
         {
-            for (int i = 0; i < downloadTaskList.Count; i++)
+            if (selectedTask != null)
             {
-                if (downloadTaskList[i].CurrentDownloadItem.ID.Equals(selectedTask.ID))
+                for (int i = 0; i < downloadTaskList.Count; i++)
                 {
-                    downloadTaskList[i].Start();
-                    break;
+                    if (downloadTaskList[i].CurrentDownloadItem.ID.Equals(selectedTask.ID))
+                    {
+                        downloadTaskList[i].Start();
+                        break;
+                    }
                 }
-            }
 
-            GetDownloadTaskState.Invoke(DownloadList);
+                GetDownloadTaskState.Invoke(DownloadList);
+            }
         }
 
         public void StopTask()
         {
-            //stop selected task
-            for (int i = 0; i < downloadTaskList.Count; i++)
+            if (selectedTask != null)
             {
-                if (downloadTaskList[i].CurrentDownloadItem.ID.Equals(selectedTask.ID))
+                //stop selected task
+                for (int i = 0; i < downloadTaskList.Count; i++)
                 {
-                    downloadTaskList[i].Stop();
-		    break;
+                    if (downloadTaskList[i].CurrentDownloadItem.ID.Equals(selectedTask.ID))
+                    {
+                        downloadTaskList[i].Stop();
+                        break;
+                    }
                 }
-            }
 
-            GetDownloadTaskState.Invoke(DownloadList);
+                GetDownloadTaskState.Invoke(DownloadList);
+            }
         }
-        
+
     }
 }

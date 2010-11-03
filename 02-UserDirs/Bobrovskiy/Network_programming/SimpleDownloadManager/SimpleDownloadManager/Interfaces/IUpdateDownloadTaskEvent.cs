@@ -7,6 +7,6 @@ namespace SimpleDownloadManager.Interfaces
 {
     public interface IUpdateDownloadTaskEvent
     {
-        event Action<List<IDownloadTask> > GetDownloadTaskState;
+        event Action<List<DownloadItem> > GetDownloadTaskState;
     }
 }

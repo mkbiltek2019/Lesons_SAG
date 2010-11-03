@@ -50,10 +50,9 @@
     <Compile Include="Classes\httpDownload\HttpDownloadManager.cs" />
     <Compile Include="Classes\httpDownload\HttpDownloadTask.cs" />
     <Compile Include="Interfaces\IDownload.cs" />
-    <Compile Include="Classes\httpDownload\DownloadItem.cs" />
+    <Compile Include="Classes\DownloadItem.cs" />
     <Compile Include="Interfaces\IDownloadManager.cs" />
     <Compile Include="Interfaces\IDownLoadTask.cs" />
-    <Compile Include="Interfaces\IStreemManager.cs" />
     <Compile Include="Interfaces\ITaskManager.cs" />
     <Compile Include="Interfaces\IUpdateDownloadTaskEvent.cs" />
     <Compile Include="SimpleDownloadmanager.cs">

@@ -1,13 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using SimpleDownloadManager.Classes;
-using SimpleDownloadManager.Classes.httpDownload;
 using SimpleDownloadManager.Interfaces;
 
 namespace SimpleDownloadManager
@@ -17,22 +11,23 @@ namespace SimpleDownloadManager
         public SimpleDownloadmanager()
         {
             InitializeComponent();
-            httpDownloadManager.GetDownloadTaskState += new Action<List<IDownloadTask> >(httpDownloadManager_GetDownloadTaskState);
+            httpDownloadManager.GetDownloadTaskState += new Action<List<DownloadItem> >(httpDownloadManager_GetDownloadTaskState);
         }
 
-        void httpDownloadManager_GetDownloadTaskState(List<IDownloadTask> data)
+        private IDownloadManager httpDownloadManager = new HttpDownloadManager();
+        private DownloadItem dataGridViewSelectedItem = null;
+
+        void httpDownloadManager_GetDownloadTaskState(List<DownloadItem> data)
         {
-            this.tastListDataGridView.BeginInvoke(new Action<List<IDownloadTask> >(UpdateDataGridView), data);
+            this.tastListDataGridView.BeginInvoke(new Action<List<DownloadItem> >(UpdateDataGridView), data);
         }
 
-        private void UpdateDataGridView(List<IDownloadTask> data)
+        private void UpdateDataGridView(List<DownloadItem> data)
         {
             this.tastListDataGridView.DataSource = null;
-            this.tastListDataGridView.DataSource = httpDownloadManager.DownloadList;
+            this.tastListDataGridView.DataSource = data;
+            this.tastListDataGridView.Columns[0].Visible = false; //hide first Column
         }
-
-        private HttpDownloadManager httpDownloadManager = new HttpDownloadManager();
-        private DownloadItem dataGridViewSelectedItem = null;
 
         private void fileStoreDirectoryButton_Click(object sender, EventArgs e)
         {
@@ -68,7 +63,7 @@ namespace SimpleDownloadManager
             downloadItem.DestinationName = this.destFileTextBox.Text;
             downloadItem.Persentage = 0;
             downloadItem.State = TaskState.Start;
-           
+
             httpDownloadManager.AddTask(downloadItem);
         }
 
