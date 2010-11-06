@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserInfo", "UserInfo\UserInfo.csproj", "{60A927CC-A885-4FBD-A352-36098F96C81D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger On Demand", "Logger\Logger On Demand.csproj", "{83BE47D0-6818-4353-9C99-464F9AB7A9C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger Early", "Logger Early\Logger Early.csproj", "{8E552255-B569-43F1-A5C4-87860B7ADE82}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60A927CC-A885-4FBD-A352-36098F96C81D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60A927CC-A885-4FBD-A352-36098F96C81D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60A927CC-A885-4FBD-A352-36098F96C81D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60A927CC-A885-4FBD-A352-36098F96C81D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83BE47D0-6818-4353-9C99-464F9AB7A9C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83BE47D0-6818-4353-9C99-464F9AB7A9C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83BE47D0-6818-4353-9C99-464F9AB7A9C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83BE47D0-6818-4353-9C99-464F9AB7A9C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E552255-B569-43F1-A5C4-87860B7ADE82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E552255-B569-43F1-A5C4-87860B7ADE82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E552255-B569-43F1-A5C4-87860B7ADE82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E552255-B569-43F1-A5C4-87860B7ADE82}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
