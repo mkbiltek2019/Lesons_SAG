@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="08c36c49-bc60-4d43-af1e-f4012c7ce9e0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1527/ParrotToPythonConverter.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ParrotToPythonConverter.xsd" MetadataType="Schema" ID="190a2f2b-554d-4be1-a7ee-acab869b1298" SourceId="1" SourceUrl="http://localhost:1527/ParrotToPythonConverter.svc?xsd=xsd0" />
+    <MetadataFile FileName="ParrotToPythonConverter.disco" MetadataType="Disco" ID="a1fa03a4-b009-4b3d-9dea-701352466e28" SourceId="1" SourceUrl="http://localhost:1527/ParrotToPythonConverter.svc?disco" />
+    <MetadataFile FileName="ParrotToPythonConverter1.xsd" MetadataType="Schema" ID="c59d0b39-4ab0-4fcd-b94b-32be4e858274" SourceId="1" SourceUrl="http://localhost:1527/ParrotToPythonConverter.svc?xsd=xsd1" />
+    <MetadataFile FileName="ParrotToPythonConverter.wsdl" MetadataType="Wsdl" ID="435643cf-1f5f-4a09-9b3c-4bb80f41ba66" SourceId="1" SourceUrl="http://localhost:1527/ParrotToPythonConverter.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
