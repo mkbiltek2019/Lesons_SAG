@@ -1,0 +1,8 @@
+E:\my\!!!Shag_домашка_в_розробці\WCF\MoneyConverter\MoneyConverServiceWCF\CurrencyConverter\bin\CurrencyConverter.dll
+E:\my\!!!Shag_домашка_в_розробці\WCF\MoneyConverter\MoneyConverServiceWCF\CurrencyConverter\bin\CurrencyConverter.pdb
+E:\my\!!!Shag_домашка_в_розробці\WCF\MoneyConverter\MoneyConverServiceWCF\CurrencyConverter\bin\HtmlAgilityPack.dll
+E:\my\!!!Shag_домашка_в_розробці\WCF\MoneyConverter\MoneyConverServiceWCF\CurrencyConverter\bin\HtmlAgilityPack.pdb
+E:\my\!!!Shag_домашка_в_розробці\WCF\MoneyConverter\MoneyConverServiceWCF\CurrencyConverter\bin\HtmlAgilityPack.xml
+E:\my\!!!Shag_домашка_в_розробці\WCF\MoneyConverter\MoneyConverServiceWCF\CurrencyConverter\obj\Release\ResolveAssemblyReference.cache
+E:\my\!!!Shag_домашка_в_розробці\WCF\MoneyConverter\MoneyConverServiceWCF\CurrencyConverter\obj\Release\CurrencyConverter.dll
+E:\my\!!!Shag_домашка_в_розробці\WCF\MoneyConverter\MoneyConverServiceWCF\CurrencyConverter\obj\Release\CurrencyConverter.pdb
