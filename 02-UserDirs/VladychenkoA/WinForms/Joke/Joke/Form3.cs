@@ -27,6 +27,7 @@ namespace Joke
             //str = counter.ReadTextFile();
             //counter = counter.ConvertToCounter(str);
             buttonClose.Enabled = false;
+            buttonProceed.Enabled = false;
             jlist.LoadXmlFile("Joke.xml");
             arrayList = jlist.JokeList();
             jokeText = ReturnJooke(arrayList);
