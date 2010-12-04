@@ -40,6 +40,15 @@ namespace HelloWorldWebApplication {
         protected global::System.Web.UI.WebControls.TextBox tbNumber1;
         
         /// <summary>
+        /// ddlOperation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlOperation;
+        
+        /// <summary>
         /// tbNumber2 control.
         /// </summary>
         /// <remarks>
@@ -49,12 +58,12 @@ namespace HelloWorldWebApplication {
         protected global::System.Web.UI.WebControls.TextBox tbNumber2;
         
         /// <summary>
-        /// btnResult control.
+        /// lbResult control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnResult;
+        protected global::System.Web.UI.WebControls.LinkButton lbResult;
     }
 }

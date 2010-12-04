@@ -12,12 +12,30 @@ namespace HelloWorldWebApplication
         protected void Page_Load(object sender, EventArgs e)
         {
             HelloWorldLabel.Text = "Hello!!!111";
+
+            if (IsPostBack)
+            {
+                UpdatelbresultText();
+            }
         }
 
-        protected void btnResult_Click(object sender, EventArgs e)
+        protected void lbResult_Click(object sender, EventArgs e)
         {
-            btnResult.Text = (int.Parse(tbNumber1.Text) + int.Parse(tbNumber2.Text))
-                .ToString();
+            UpdatelbresultText();
+        }
+
+        private void UpdatelbresultText()
+        {
+            if (ddlOperation.SelectedItem.Value == "+")
+            {
+                lbResult.Text = (int.Parse(tbNumber1.Text) + int.Parse(tbNumber2.Text))
+                                .ToString();
+            }
+            else
+            {
+                lbResult.Text = (int.Parse(tbNumber1.Text) - int.Parse(tbNumber2.Text))
+                                .ToString();
+            }
         }
     }
 }

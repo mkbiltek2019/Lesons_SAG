@@ -2,7 +2,7 @@
          AutoEventWireup="true" 
          Trace="false"
          CodeBehind="Default.aspx.cs" 
-         Inherits="HelloWorldWebApplication.Default" %>
+         Inherits="HelloWorldWebApplication.Default" EnableViewState="false" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -21,11 +21,15 @@
         <br />
 
         <asp:TextBox runat="server" ID="tbNumber1"></asp:TextBox>
-        +
+        <asp:DropDownList runat="server" ID="ddlOperation" AutoPostBack="true">
+            <asp:ListItem Text="Додати" Value="+" />
+            <asp:ListItem Text="Відняти" Value="-" />
+        </asp:DropDownList>
         <asp:TextBox runat="server" ID="tbNumber2"></asp:TextBox>
         =
-        <asp:Button runat="server" ID="btnResult"
-                    OnClick="btnResult_Click"></asp:Button>
+        <%--<asp:Button runat="server" ID="btnResult"
+                    OnClick="btnResult_Click"></asp:Button>--%>
+        <asp:LinkButton runat="server" ID="lbResult" OnClick="lbResult_Click" Text="Click me" />
 
     </div>
     </form>
