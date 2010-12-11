@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Products>
+
+  <!--Шоколадні плитки-->
+  <!--шлях до малюнка писати без пробілів з правильними слешами без початкового слеша-->
+  <Product>
+    <Category>Шоколадні плитки</Category>    
+    <Name>СВІТОЧ чорний шоколад</Name>    
+    <Description>
+      СВІТОЧ чорний шоколад
+      СВІТОЧ чорний шоколад
+      СВІТОЧ чорний шоколад
+      СВІТОЧ чорний шоколад
+      СВІТОЧ чорний шоколад
+      СВІТОЧ чорний шоколад
+      СВІТОЧ чорний шоколад
+      СВІТОЧ чорний шоколад
+    </Description>
+    <ThubmnailImagePath>images/Brick/thumb/svDark.jpg</ThubmnailImagePath>
+    <MainImagePath>images/Brick/big/svDark.jpg</MainImagePath>  
+    <Price>12.6</Price>  
+  </Product>
+
+  <Product>
+    <Category>Шоколадні плитки</Category>
+    <Name>СВІТОЧ особливий</Name>
+    <Description>
+      СВІТОЧ особливий
+      СВІТОЧ особливий
+      СВІТОЧ особливий
+      СВІТОЧ особливий
+      СВІТОЧ особливий
+      СВІТОЧ особливий
+      СВІТОЧ особливий
+      СВІТОЧ особливий
+    </Description>
+    <ThubmnailImagePath>images/Brick/thumb/svSpecial.jpg</ThubmnailImagePath>
+    <MainImagePath>images/Brick/big/svSpecial.jpg</MainImagePath>
+    <Price>13.6</Price>
+  </Product>
+
+  <Product>
+    <Category>Шоколадні плитки</Category>
+    <Name>СВІТОЧ тірамісу</Name>
+    <Description>
+      СВІТОЧ тірамісу
+      СВІТОЧ тірамісу
+      СВІТОЧ тірамісу
+      СВІТОЧ тірамісу
+      СВІТОЧ тірамісу
+      СВІТОЧ тірамісу
+      СВІТОЧ тірамісу
+      СВІТОЧ тірамісу
+    </Description>
+    <ThubmnailImagePath>images/Brick/thumb/svTiramisu.jpg</ThubmnailImagePath>
+    <MainImagePath>images/Brick/big/svTiramisu.jpg</MainImagePath>
+    <Price>15.6</Price>
+  </Product>
+
+  <Product>
+    <Category>Шоколадні плитки</Category>
+    <Name>СВІТОЧ особливий чорний шоколад з лісовим горіхом</Name>
+    <Description>
+      СВІТОЧ особливий чорний шоколад з лісовим горіхом
+      СВІТОЧ особливий чорний шоколад з лісовим горіхом
+      СВІТОЧ особливий чорний шоколад з лісовим горіхом
+      СВІТОЧ особливий чорний шоколад з лісовим горіхом
+      СВІТОЧ особливий чорний шоколад з лісовим горіхом
+      СВІТОЧ особливий чорний шоколад з лісовим горіхом
+    </Description>
+    <ThubmnailImagePath>images/Brick/thumb/svSpecDarkWithNuts.jpg</ThubmnailImagePath>
+    <MainImagePath>images/Brick/big/svSpecDarkWithNuts.jpg</MainImagePath>
+    <Price>10.6</Price>
+  </Product>
+
+  <Product>
+    <Category>Шоколадні плитки</Category>
+    <Name>СВІТОЧ молочний</Name>
+    <Description>
+      СВІТОЧ молочний
+      СВІТОЧ молочний
+      СВІТОЧ молочний
+      СВІТОЧ молочний
+      СВІТОЧ молочний
+      СВІТОЧ молочний
+      СВІТОЧ молочний
+      СВІТОЧ молочний
+    </Description>
+    <ThubmnailImagePath>images/Brick/thumb/svMolochnuj.jpg</ThubmnailImagePath>
+    <MainImagePath>images/Brick/big/svMolochnuj.jpg</MainImagePath>
+    <Price>9.6</Price>
+  </Product>
+  
+  <!--Цукерки вагові-->
+  
+  <Product>
+    <Category>Цукерки вагові</Category>
+    <Name>Ромашка Світоч</Name>
+    <Description>
+      Улюблена шоколадна цукерка з помадною начинкою
+    </Description>
+    <ThubmnailImagePath>images/Candy/thumb/svRomashka.jpg</ThubmnailImagePath>
+    <MainImagePath>images/Candy/big/svRomashka.jpg</MainImagePath>
+    <Price>50.6</Price>
+  </Product>
+
+  <Product>
+    <Category>Цукерки вагові</Category>
+    <Name>Ромашка Молочна</Name>
+    <Description>
+      Новинка, популярні цукерки з шоколадно-помадною начинкою, вкриті ніжною молочною глазур'ю
+    </Description>
+    <ThubmnailImagePath>images/Candy/thumb/svRomashkaMolochna.jpg</ThubmnailImagePath>
+    <MainImagePath>images/Candy/big/svRomashkaMolochna.jpg</MainImagePath>
+    <Price>50.6</Price>
+  </Product>
+
+  <Product>
+    <Category>Цукерки вагові</Category>
+    <Name>Зоряне сяйво</Name>
+    <Description>
+      Купольна цукерка з горіховою начинкою, вкрита шоколадною 
+      глазур'ю та обсипана хрумкою вафельною крихтою
+    </Description>
+    <ThubmnailImagePath>images/Candy/thumb/svZoraneSaivo.jpg</ThubmnailImagePath>
+    <MainImagePath>images/Candy/big/svZoraneSaivo.jpg</MainImagePath>
+    <Price>50.6</Price>
+  </Product>
+
+  <Product>
+    <Category>Цукерки вагові</Category>
+    <Name>Мак</Name>
+    <Description>
+      Популярна цукерка з подрібненим арахісом та
+      хрумкими шматочками карамелі, вкрита шоколадною глазур'ю
+    </Description>
+    <ThubmnailImagePath>images/Candy/thumb/svMak.jpg</ThubmnailImagePath>
+    <MainImagePath>images/Candy/big/svMak.jpg</MainImagePath>
+    <Price>50.6</Price>
+  </Product>
+
+  <Product>
+    <Category>Цукерки вагові</Category>
+    <Name>Карпати-Світоч</Name>
+    <Description>
+      Цукерка, що містить подрібнений арахіс та хрумку вафельну крихту, вкрита шоколадною глазур'ю
+    </Description>
+    <ThubmnailImagePath>images/Candy/thumb/svKarpatuSvitoch.jpg</ThubmnailImagePath>
+    <MainImagePath>images/Candy/big/svKarpatuSvitoch.jpg</MainImagePath>
+    <Price>50.6</Price>
+  </Product>
+
+  <!--Драже-->
+  
+  <Product>
+    <Category>Драже</Category>
+    <Name>Смак «Арахiс в какао»</Name>
+    <Description>
+      Смак «Арахiс в какао»
+      Смак «Арахiс в какао» Смак «Арахiс в какао» 
+      Смак «Арахiс в какао»
+      Смак «Арахiс в какао»
+    </Description>
+    <ThubmnailImagePath>images/Dragee/thumb/svArahisVKakao.jpg</ThubmnailImagePath>
+    <MainImagePath>images/Dragee/big/svArahisVKakao.jpg</MainImagePath>
+    <Price>5.6</Price>
+  </Product>
+
+  <Product>
+    <Category>Драже</Category>
+    <Name>Смак «Арахiс в какао» 90 гр.</Name>
+    <Description>
+      Смак «Арахiс в какао»
+      Смак «Арахiс в какао» Смак «Арахiс в какао»
+      Смак «Арахiс в какао»
+      Смак «Арахiс в какао»
+    </Description>
+    <ThubmnailImagePath>images/Dragee/thumb/svArahisVKakao90.jpg</ThubmnailImagePath>
+    <MainImagePath>images/Dragee/big/svArahisVKakao90.jpg</MainImagePath>
+    <Price>12.6</Price>
+  </Product>
+
+  <Product>
+    <Category>Драже</Category>
+    <Name>Сенсації. Арахіс в молочному шоколаді XL</Name>
+    <Description>
+      Сенсації. Арахіс в молочному шоколаді XL
+      Сенсації. Арахіс в молочному шоколаді XL
+      Сенсації. Арахіс в молочному шоколаді XL
+    </Description>
+    <ThubmnailImagePath>images/Dragee/thumb/svArahisVMolochShokoladi.jpg</ThubmnailImagePath>
+    <MainImagePath>images/Dragee/big/svArahisVMolochShokoladi.jpg</MainImagePath>
+    <Price>50.6</Price>
+  </Product>
+
+  <!--Цукерки в коробках-->
+
+  <Product>
+    <Category>Цукерки в коробках</Category>
+    <Name>Палітра Вишукані десерти 245 г</Name>
+    <Description>
+      Світоч пропонує колекцію оригінальних десертів! Це ексклюзивне 
+      асорті з трьох видів шоколаду: цукерка десерт тірамісу у чорному,
+      крем-карамель у молочному і кокосовий крем у білому шоколаді.
+    </Description>
+    <ThubmnailImagePath>images/CandyInBox/thumb/svPalitraVushukanuDesertu.jpg</ThubmnailImagePath>
+    <MainImagePath>images/CandyInBox/big/svPalitraVushukanuDesertu.jpg</MainImagePath>
+    <Price>12.6</Price>
+  </Product>
+
+  <Product>
+    <Category>Цукерки в коробках</Category>
+    <Name>Палітра Асорті у молочному шоколаді 254г.</Name>
+    <Description>
+      З думкою про Вас Палітра Асорті від Світоч дарує цукерки з 
+      мигдалево-горіховою, полунично-вершковою, молочною та шоколадною
+      начинками у вишуканому молочному шоколаді Світоч, 
+      ніжність якого створена вершками
+    </Description>
+    <ThubmnailImagePath>images/CandyInBox/thumb/svPalitraMolochnuiShokolad.jpg</ThubmnailImagePath>
+    <MainImagePath>images/CandyInBox/big/svPalitraMolochnuiShokolad.jpg</MainImagePath>
+    <Price>22.6</Price>
+  </Product>
+
+  <Product>
+    <Category>Цукерки в коробках</Category>
+    <Name>Палітра Асорті у темному шоколаді 254г.</Name>
+    <Description>
+      З думкою про Вас Палітра Асорті від Світоч дарує 
+      цукерки з мигдалево-горіховою, полунично-вершковою, 
+      молочною та шоколадною начинками у чорному шоколаді Світоч.
+    </Description>
+    <ThubmnailImagePath>images/CandyInBox/thumb/svPalitraTemnuiShokolad.jpg</ThubmnailImagePath>
+    <MainImagePath>images/CandyInBox/big/svPalitraTemnuiShokolad.jpg</MainImagePath>
+    <Price>22.6</Price>
+  </Product>
+  
+</Products>

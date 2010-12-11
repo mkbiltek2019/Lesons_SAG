@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BDAA83A6-2EAF-459A-B566-715B7181E7E5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChocoPlanet</RootNamespace>
+    <AssemblyName>ChocoPlanet</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="ChocolateOrder.aspx" />
+    <Content Include="History.aspx" />
+    <Content Include="images\Brick\big\svDark.jpg" />
+    <Content Include="images\Brick\big\svMolochnuj.jpg" />
+    <Content Include="images\Brick\big\svSpecDarkWithNuts.jpg" />
+    <Content Include="images\Brick\big\svSpecial.jpg" />
+    <Content Include="images\Brick\big\svTiramisu.jpg" />
+    <Content Include="images\Brick\thumbs\svDark.jpg" />
+    <Content Include="images\Brick\thumbs\svMolochnuj.jpg" />
+    <Content Include="images\Brick\thumbs\svSpecDarkWithNuts.jpg" />
+    <Content Include="images\Brick\thumbs\svSpecial.jpg" />
+    <Content Include="images\Brick\thumbs\svTiramisu.jpg" />
+    <Content Include="images\CandyInBox\big\svPalitraMolochnuiShokolad.jpg" />
+    <Content Include="images\CandyInBox\big\svPalitraTemnuiShokolad.jpg" />
+    <Content Include="images\CandyInBox\big\svPalitraVushukanuDesertu.jpg" />
+    <Content Include="images\CandyInBox\thumbs\svPalitraMolochnuiShokolad.jpg" />
+    <Content Include="images\CandyInBox\thumbs\svPalitraTemnuiShokolad.jpg" />
+    <Content Include="images\CandyInBox\thumbs\svPalitraVushukanuDesertu.jpg" />
+    <Content Include="images\Candy\big\svKarpatuSvitoch.jpg" />
+    <Content Include="images\Candy\big\svMak.jpg" />
+    <Content Include="images\Candy\big\svRomashka.jpg" />
+    <Content Include="images\Candy\big\svRomashkaMolochna.jpg" />
+    <Content Include="images\Candy\big\svZoraneSaivo.jpg" />
+    <Content Include="images\Candy\thumbs\svKarpatuSvitoch.jpg" />
+    <Content Include="images\Candy\thumbs\svMak.jpg" />
+    <Content Include="images\Candy\thumbs\svRomashka.jpg" />
+    <Content Include="images\Candy\thumbs\svRomashkaMolochna.jpg" />
+    <Content Include="images\Candy\thumbs\svZoraneSaivo.jpg" />
+    <Content Include="images\Dragee\big\svArahisVKakao.jpg" />
+    <Content Include="images\Dragee\big\svArahisVKakao90.jpg" />
+    <Content Include="images\Dragee\big\svArahisVMolochShokoladi.jpg" />
+    <Content Include="images\Dragee\thumbs\svArahisVKakao.jpg" />
+    <Content Include="images\Dragee\thumbs\svArahisVKakao90.jpg" />
+    <Content Include="images\Dragee\thumbs\svArahisVMolochShokoladi.jpg" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="sun.jpg" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChocolateOrder.aspx.cs">
+      <DependentUpon>ChocolateOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChocolateOrder.aspx.designer.cs">
+      <DependentUpon>ChocolateOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="History.aspx.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="History.aspx.designer.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChocoPlanet.Business\ChocoPlanet.Business.csproj">
+      <Project>{A3688304-54EE-45E5-9A29-3583EDCD2F72}</Project>
+      <Name>ChocoPlanet.Business</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5648</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
