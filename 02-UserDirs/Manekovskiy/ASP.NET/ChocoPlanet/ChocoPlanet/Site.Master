@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" 
+    CodeBehind="Site.master.cs" Inherits="ChocoPlanet.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server" enableviewstate="false">
+
+    <div class="page">
+
+        <div class="header">
+            <div class="title">
+                <h1>
+                    ChocoPlanet Company
+                </h1>
+            </div>
+            <div class="clear hideSkiplink">
+            </div>
+        </div>
+
+        <div class="main">
+            <table border="0">
+                <tr>
+
+                    <td align="left" valign="top">
+                        <div class="clear hideSkiplink">
+                            <asp:Menu ID="NavigationMenu" runat="server" 
+                                CssClass="menu" EnableViewState="false"
+                                IncludeStyleBlock="false" Orientation="Vertical">
+                                <Items>
+                                    <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" />
+                                    <asp:MenuItem NavigateUrl="~/History.aspx" Text="History" />
+                                    <asp:MenuItem NavigateUrl="~/ChocolateOrder.aspx" Text="Order chocolate" />
+                                      <asp:MenuItem NavigateUrl="~/About.aspx" Text="About" />
+                                </Items>
+                            </asp:Menu>
+                        </div>
+                    </td>
+
+                    <td style="padding-left:20px; padding-right:20px;"  align="left" valign="top">
+                        <div >
+                            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                        </div>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+
+        <div class="footer">
+            <div class="clear hideSkiplink">
+                <h1>
+                    Footer
+                </h1>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
