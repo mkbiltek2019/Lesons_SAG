@@ -5,7 +5,7 @@
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
 
-    <h1>About page</h1> 
+    <asp:HyperLink runat="server" 
+        NavigateUrl="~/Feedback.aspx">Пожелайте что-нибудь нашему замечательному сервису!</asp:HyperLink>
        
-
 </asp:Content>

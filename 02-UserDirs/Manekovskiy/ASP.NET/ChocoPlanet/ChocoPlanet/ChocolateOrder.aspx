@@ -1,100 +1,75 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master"
     AutoEventWireup="true" CodeBehind="ChocolateOrder.aspx.cs" 
     Inherits="ChocoPlanet.ChocolateOrder" %>
+<%@ Import Namespace="ChocoPlanet.Business" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <asp:ObjectDataSource 
+                runat="server" 
+                ID="odsProduct"
+                TypeName="ChocoPlanet.Business.ProductController"
+                SelectMethod="GetAllProductsWithFilter"> 
+        <SelectParameters>
+            <asp:ControlParameter ControlID="ddlProductCategory" 
+                Name="categoryId"
+                PropertyName="SelectedValue" 
+                Type="Int32" 
+                Direction="Input"
+                ConvertEmptyStringToNull="true" />
+        </SelectParameters>
+    </asp:ObjectDataSource>
+
+    <asp:ObjectDataSource 
+                runat="server" 
+                ID="odsCategory"
+                TypeName="ChocoPlanet.Business.CategoryController"
+                SelectMethod="GetAllCategories"> 
+    </asp:ObjectDataSource>
+
    <div>
    <asp:Label runat="server" ID="label">Please select product category:</asp:Label>
-    <asp:DropDownList 
-            EnableViewState="False"
-            CssClass="header" 
+    <asp:DropDownList runat="server"             
+            ID="ddlProductCategory"
             AutoPostBack="True"
-            OnTextChanged="OnDDListSelectionChanged_Click"                      
-            runat="server"             
-            DataSourceID="odsCategoryList"          
-            ID="ddlProductCategory">   
+            DataSourceID="odsCategory"
+            DataTextField="Name"
+            DataValueField="Id">   
     </asp:DropDownList>
    </div>
 
    <div>
-     <asp:DataGrid 
-            BorderWidth="0"
-            runat="server" 
-            ID="dgProducts"            
-            AutoGenerateColumns="false">
-
-            <Columns>
-           <%-- <asp:BoundColumn DataField="Category"/>--%>
-
-            <asp:BoundColumn DataField="Name"/>
-
-            <asp:BoundColumn DataField="Description"/>
-           
-            <asp:TemplateColumn ItemStyle-Height="30" ItemStyle-Width="30" HeaderText=" ">
+     <asp:DataGrid BorderWidth="0"
+                   runat="server" 
+                   ID="dgProducts"            
+                   AutoGenerateColumns="false"
+                   DataSourceID="odsProduct">
+        <Columns>
+            <asp:BoundColumn DataField="Name" HeaderText="Название"/>
+            <asp:BoundColumn DataField="Description" HeaderText="Описание"/>
+            
+            <asp:TemplateColumn HeaderText="Фото">
                <ItemTemplate>
-               <asp:HyperLink 
-                    runat="server" 
-                    Width="30"
-                    Height="30"
-                    NavigateUrl='<%# Eval("MainImagePath")%>' 
-                    ImageUrl='<%# Eval("ThubmnailImagePath")%>'>
-               </asp:HyperLink>
-               <%--<asp:ImageButton
-                    ID="hlImage"                  
-                    ImageUrl='<%# Eval("ThubmnailImagePath")%>'
-                    runat="server" > </asp:ImageButton>--%>
-                <%--<img
-                    id="hlImage"                  
-                    src='<%# Eval("ThubmnailImagePath")%>'
-                    runat="server" />
-                </img>--%>
-               
-                  <%--<asp:ImageButton
-                    ID="hlImage"                  
-                    ImageUrl='<%# Eval("MainImagePath")%>'
-                    runat="server" >
-                          <img 
-                            runat="server"
-                            id="iTumbnail" 
-                            alt="image"
-                            width="30"
-                            height="30"                           
-                            src='<%# Eval("ThubmnailImagePath")%>' />
-                 </asp:ImageButton>--%>
+                   <asp:HyperLink runat="server"
+                                  NavigateUrl='<%# "~/images/" + Eval("ImageName")%>' 
+                                  ImageUrl='<%# "~/images/" + Eval("ThumbnailName")%>'>
+                   </asp:HyperLink>
                </ItemTemplate>
             </asp:TemplateColumn>
 
-                <asp:BoundColumn DataField="Price" />
-
-            <asp:TemplateColumn HeaderText=" ">
+            <asp:BoundColumn DataField="Price" HeaderText="Цена" />
+            
+            <asp:TemplateColumn HeaderText="Дата поступления в продажу">
                <ItemTemplate>
-                  <asp:HyperLink id="hlDetails"
-                       Text="Details"
-                       NavigateUrl="#"
-                       runat="server"/>
+                   <asp:Label runat="server" Text='<%# ((DateTime?)Eval("PlacementDate")).GetFormattedDate() %>'></asp:Label>
                </ItemTemplate>
             </asp:TemplateColumn>
-           
          </Columns> 
-         
-    </asp:DataGrid>
-   
-    <%-- <asp:ObjectDataSource 
-                runat="server" 
-                ID="odsProduct"
-                TypeName="ChocoPlanet.Business.ProductController"
-                SelectMethod="GetAllProducts"> 
-    </asp:ObjectDataSource>--%>
+        </asp:DataGrid>
 
-    <asp:ObjectDataSource 
-                runat="server" 
-                ID="odsCategoryList"
-                TypeName="ChocoPlanet.Business.ProductController"
-                SelectMethod="GetCategoryList"> 
-    </asp:ObjectDataSource>
+        
 
    </div>
 </asp:Content>

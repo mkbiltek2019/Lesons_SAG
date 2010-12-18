@@ -13,5 +13,15 @@ namespace ChocoPlanet
         {
 
         }
+
+        protected void rpMenu_OnDataBinding(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void rpMenu_OnItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+
+        }
     }
 }

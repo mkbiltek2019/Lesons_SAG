@@ -307,3 +307,9 @@ div.accountInfo
 {
     display: inline;
 }
+
+/* Alex Manekovskiy - styles for images */
+img
+{
+    border: 0;    
+}

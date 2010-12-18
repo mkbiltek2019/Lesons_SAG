@@ -10,7 +10,7 @@
         Chocolate Sun
     </h2>
     <p>
-        <asp:Image ImageUrl="~/sun.jpg" runat="server"/>
+               
     </p>
     
 </asp:Content>

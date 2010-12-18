@@ -52,6 +52,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="ChocolateOrder.aspx" />
+    <Content Include="Feedback.aspx" />
     <Content Include="History.aspx" />
     <Content Include="images\Brick\big\svDark.jpg" />
     <Content Include="images\Brick\big\svMolochnuj.jpg" />
@@ -85,12 +86,28 @@
     <Content Include="images\Dragee\thumbs\svArahisVKakao.jpg" />
     <Content Include="images\Dragee\thumbs\svArahisVKakao90.jpg" />
     <Content Include="images\Dragee\thumbs\svArahisVMolochShokoladi.jpg" />
+    <Content Include="images\Fusion.jpg" />
+    <Content Include="Scripts\master.js" />
+    <Content Include="Scripts\jquery-1.4.4.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.7.custom.min.js" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
-    <Content Include="Scripts\jquery-1.4.1.js" />
-    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Styles\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Styles\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Styles\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Styles\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Styles\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Styles\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Styles\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Styles\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Styles\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Styles\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Styles\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Styles\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Styles\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Styles\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Styles\ui-lightness\jquery-ui-1.8.7.custom.css" />
     <Content Include="sun.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -122,6 +139,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Feedback.aspx.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Feedback.aspx.designer.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -146,9 +170,20 @@
       <Project>{A3688304-54EE-45E5-9A29-3583EDCD2F72}</Project>
       <Name>ChocoPlanet.Business</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ChocoPlanet.DataAccess\ChocoPlanet.DataAccess.csproj">
+      <Project>{986D25A7-7366-4F5E-A623-1C93E1599B5E}</Project>
+      <Name>ChocoPlanet.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChocoPlanet.Model\ChocoPlanet.Model.csproj">
+      <Project>{90D2F19B-6C63-41C8-A633-745F2E6CA9F1}</Project>
+      <Name>ChocoPlanet.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

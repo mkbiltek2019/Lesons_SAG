@@ -17,14 +17,12 @@ namespace ChocoPlanet
 
         protected void OnDDListSelectionChanged_Click(object sender, EventArgs e)
         {
-            ProductController productController = new ProductController();
-            string category = ((DropDownList) sender).SelectedItem.Text;
-            
-            dgProducts.DataSourceID = null;
-            dgProducts.DataSource = productController.GetListByCategoryName(category);
-            dgProducts.DataBind();
-        }
+            //ProductController productController = new ProductController();
+            //string category = ((DropDownList)sender).SelectedItem.Text;
 
-        
+            //dgProducts.DataSourceID = null;
+            //dgProducts.DataSource = productController.GetAllProducts();
+            //dgProducts.DataBind();
+        }
     }
 }
