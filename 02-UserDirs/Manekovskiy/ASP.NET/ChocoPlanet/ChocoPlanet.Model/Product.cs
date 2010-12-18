@@ -10,6 +10,8 @@ namespace ChocoPlanet.Business
         public string ThumbnailName { get; set; }
 
         public double Price { get; set; }
-        public DateTime? PlacementDate { get; set; } 
+        public DateTime? PlacementDate { get; set; }
+
+        public int CategoryId { get; set; }
     }
 }

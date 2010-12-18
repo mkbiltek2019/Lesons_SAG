@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A3688304-54EE-45E5-9A29-3583EDCD2F72}</ProjectGuid>
+    <ProjectGuid>{90D2F19B-6C63-41C8-A633-745F2E6CA9F1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ChocoPlanet.Business</RootNamespace>
-    <AssemblyName>ChocoPlanet.Business</AssemblyName>
+    <RootNamespace>ChocoPlanet.Model</RootNamespace>
+    <AssemblyName>ChocoPlanet.Model</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -33,9 +33,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Entity" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,20 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoryController.cs" />
-    <Compile Include="DateTimeUtility.cs" />
-    <Compile Include="ProductController.cs" />
+    <Compile Include="Category.cs" />
+    <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ChocoPlanet.DataAccess\ChocoPlanet.DataAccess.csproj">
-      <Project>{986D25A7-7366-4F5E-A623-1C93E1599B5E}</Project>
-      <Name>ChocoPlanet.DataAccess</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ChocoPlanet.Model\ChocoPlanet.Model.csproj">
-      <Project>{90D2F19B-6C63-41C8-A633-745F2E6CA9F1}</Project>
-      <Name>ChocoPlanet.Model</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

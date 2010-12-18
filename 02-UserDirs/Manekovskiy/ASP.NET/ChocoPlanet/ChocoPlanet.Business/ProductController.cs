@@ -10,17 +10,27 @@ namespace ChocoPlanet.Business
         public IEnumerable<Product> GetAllProducts()
         {
             yield return new Product()
-                             {
-                                 Name = "Svitoch Dark", 
-                                 ImageName = "Brick/big/svDark.jpg", 
-                                 ThumbnailName = "Brick/thumbs/svDark.jpg",
-                                 PlacementDate = DateTime.Today
-                             };
+            {
+                Name = "Nachspeise",
+                ImageName = "Fusion.jpg",
+                ThumbnailName = "Fusion.jpg",
+                PlacementDate = DateTime.Today,
+                CategoryId = 1
+            };
 
-            yield return new Product() { Name = "SEagull" };
-            //ChocoPlanetDBEntities dataContext = new ChocoPlanetDBEntities();
-            //return dataContext.Product
-            //    .ToList();
+            yield return new Product()
+            {
+                Name = "Світоч темний", 
+                ImageName = "Brick/big/svDark.jpg", 
+                ThumbnailName = "Brick/thumbs/svDark.jpg",
+                PlacementDate = DateTime.Today,
+                CategoryId = 2
+            };
+        }
+
+        public IEnumerable<Product> GetAllProductsWithFilter(int? categoryId)
+        {
+            return GetAllProducts().Where(product => product.CategoryId == categoryId);
         }
     }
 }
