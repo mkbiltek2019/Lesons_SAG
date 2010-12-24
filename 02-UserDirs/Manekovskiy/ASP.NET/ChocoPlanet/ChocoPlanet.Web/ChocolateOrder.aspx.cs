@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using ChocoPlanet.Business;
 
-namespace ChocoPlanet
+namespace ChocoPlanet.Web
 {
     public partial class ChocolateOrder : System.Web.UI.Page
     {

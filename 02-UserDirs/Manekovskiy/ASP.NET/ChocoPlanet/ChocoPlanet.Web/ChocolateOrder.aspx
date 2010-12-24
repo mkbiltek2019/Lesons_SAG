@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master"
     AutoEventWireup="true" CodeBehind="ChocolateOrder.aspx.cs" 
-    Inherits="ChocoPlanet.ChocolateOrder" %>
+    Inherits="ChocoPlanet.Web.ChocolateOrder" %>
 <%@ Import Namespace="ChocoPlanet.Business" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">

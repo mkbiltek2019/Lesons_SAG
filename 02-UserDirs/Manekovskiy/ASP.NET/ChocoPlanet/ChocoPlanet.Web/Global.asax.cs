@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Security;
-using System.Web.SessionState;
 using ChocoPlanet.Business;
 using ChocoPlanet.DataAccess;
 using ChocoPlanet.DataAccess.Abstraction;
 using ChocoPlanet.DataAccess.Fakes;
 
-namespace ChocoPlanet
+namespace ChocoPlanet.Web
 {
     public class Global : System.Web.HttpApplication
     {

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ChocoPlanet {
+namespace ChocoPlanet.Web {
     
     
     public partial class _Default {

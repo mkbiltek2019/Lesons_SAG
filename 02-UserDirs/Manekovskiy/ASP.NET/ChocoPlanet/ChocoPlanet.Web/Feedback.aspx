@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Feedback.aspx.cs" Inherits="ChocoPlanet.Feedback" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Feedback.aspx.cs" Inherits="ChocoPlanet.Web.Feedback" %>
 <asp:Content runat="server" ID="Main" ContentPlaceHolderID="MainContent">
     <script type="text/javascript" language="javascript">
         function Validate_Email(sender, eventargs) {

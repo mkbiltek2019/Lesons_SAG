@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ChocoPlanet
+namespace ChocoPlanet.Web
 {
     public partial class Feedback : Page
     {

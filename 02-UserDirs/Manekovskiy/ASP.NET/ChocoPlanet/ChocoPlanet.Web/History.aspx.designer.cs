@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ChocoPlanet
+namespace ChocoPlanet.Web
 {
 
 
