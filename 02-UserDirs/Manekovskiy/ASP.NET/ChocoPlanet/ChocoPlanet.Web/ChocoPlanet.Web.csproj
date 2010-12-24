@@ -87,12 +87,13 @@
     <Content Include="images\Dragee\thumbs\svArahisVKakao90.jpg" />
     <Content Include="images\Dragee\thumbs\svArahisVMolochShokoladi.jpg" />
     <Content Include="images\Fusion.jpg" />
-    <Content Include="Scripts\master.js" />
+    <Content Include="Scripts\Site.Master.js" />
     <Content Include="Scripts\jquery-1.4.4.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.7.custom.min.js" />
-    <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Styles\base_style.css" />
+    <Content Include="Styles\base_style_ie.css" />
     <Content Include="Styles\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
     <Content Include="Styles\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
     <Content Include="Styles\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />

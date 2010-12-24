@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="History.aspx.cs" Inherits="ChocoPlanet.Web.History" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+﻿<%@ Page Title="" Language="C#" AutoEventWireup="true" CodeBehind="History.aspx.cs" Inherits="ChocoPlanet.Web.History" %>
+<%--<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+</asp:Content>--%>
+<%--<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">--%>
 
         <h2>
             Chocolate history.
@@ -38,4 +38,4 @@
             </div>
         </p>
 
-</asp:Content>
+<%--</asp:Content>--%>
