@@ -4,24 +4,16 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Globalization;
 
 namespace ChocoPlanet.Web
 {
-    public partial class SiteMaster : System.Web.UI.MasterPage
+    public partial class SiteMaster : MasterPage
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected void OnChangeCultureCommand(object sender, CommandEventArgs e)
         {
-
-        }
-
-        protected void rpMenu_OnDataBinding(object sender, EventArgs e)
-        {
-            
-        }
-
-        protected void rpMenu_OnItemDataBound(object sender, RepeaterItemEventArgs e)
-        {
-
+            Context.Session["LanguagePreference"] = e.CommandArgument.ToString();
+            Response.Redirect(Page.AppRelativeVirtualPath);
         }
     }
 }

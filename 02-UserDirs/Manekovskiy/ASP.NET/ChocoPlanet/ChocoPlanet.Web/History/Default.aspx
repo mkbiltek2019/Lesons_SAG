@@ -1,10 +1,14 @@
-﻿<%@ Page Title="" Language="C#" AutoEventWireup="true" CodeBehind="History.aspx.cs" Inherits="ChocoPlanet.Web.History" %>
-<%--<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-</asp:Content>--%>
-<%--<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">--%>
+﻿<%@ Page Title="" Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ChocoPlanet.Web.History.Default"
+    UICulture="uk-UA" %>
 
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body>
         <h2>
-            Chocolate history.
+            <asp:Label runat="server" ID="Label1451451" meta:resourcekey="Label1" />
         </h2>
         <p style="text-align:justify">
             <div color="#800000" face="Arial, Helvetica, sans-serif" ><b>2000 BC, Amazon:</b></div>
@@ -37,5 +41,5 @@
                 and the texts their literature refer to cocoa as the god’s food
             </div>
         </p>
-
-<%--</asp:Content>--%>
+</body>
+</html>

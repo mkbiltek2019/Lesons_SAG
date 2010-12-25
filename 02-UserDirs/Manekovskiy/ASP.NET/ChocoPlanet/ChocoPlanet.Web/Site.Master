@@ -21,37 +21,27 @@
     <script src="/Scripts/Site.Master.js" type="text/javascript"></script>
 </head>
 <body>
-    <div id="wrapper">
-        <%--<div id="header">
+    <form runat="server" id="contentForm">
+        <div id="wrapper">
+            <div id="header">
+                <asp:LinkButton runat="server" CommandArgument="en-GB" OnCommand="OnChangeCultureCommand">
+                    <asp:Image runat="server" ImageUrl="~/images/flags/gb.png" />
+                </asp:LinkButton>
+                <asp:LinkButton runat="server" CommandArgument="uk-UA" OnCommand="OnChangeCultureCommand">
+                    <asp:Image runat="server" ImageUrl="~/images/flags/ua.png" />
+                </asp:LinkButton>
+            </div>
+            <!-- #header-->
+            <div id="content">
+            
+                    <div>
+                        <asp:ContentPlaceHolder runat="server" ID="MainContent"></asp:ContentPlaceHolder>
+                    </div>
+            
+            </div>
+            <!-- #content-->
         </div>
-        <!-- #header-->--%>
-        <div id="content">
-            <form id="contentForm">
-                <asp:SiteMapDataSource runat="server" ID="smdsSite" StartFromCurrentNode="false" />
-                <asp:Repeater runat="server" ID="rpMenu" DataSourceID="smdsSite" 
-                    OnDataBinding="rpMenu_OnDataBinding"
-                    OnItemDataBound="rpMenu_OnItemDataBound">
-                    <ItemTemplate>
-                        <div id="tabs">
-                            <ul>
-                                <asp:Repeater ID="Repeater1" runat="server" DataSource='<%# Eval("ChildNodes") %>'>
-                                    <ItemTemplate>
-                                        <li>
-                                            <a href='<%# Eval("Url") %>'><%# Eval("Title") %></a>
-                                        </li>
-                                    </ItemTemplate>
-                                </asp:Repeater>
-                            </ul>
-                        </div>
-                    </ItemTemplate>
-                </asp:Repeater>
-<%--                <div>
-                    <asp:ContentPlaceHolder runat="server" ID="MainContent"></asp:ContentPlaceHolder>
-                </div>--%>
-            </form>
-        </div>
-        <!-- #content-->
-    </div>
+    </form>
     <!-- #wrapper -->
     <div id="footer">
        All Rights Reserved

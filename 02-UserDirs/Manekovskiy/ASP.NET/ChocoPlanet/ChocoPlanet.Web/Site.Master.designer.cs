@@ -22,21 +22,21 @@ namespace ChocoPlanet.Web {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
         
         /// <summary>
-        /// smdsSite control.
+        /// contentForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SiteMapDataSource smdsSite;
+        protected global::System.Web.UI.HtmlControls.HtmlForm contentForm;
         
         /// <summary>
-        /// rpMenu control.
+        /// MainContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rpMenu;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
     }
 }
