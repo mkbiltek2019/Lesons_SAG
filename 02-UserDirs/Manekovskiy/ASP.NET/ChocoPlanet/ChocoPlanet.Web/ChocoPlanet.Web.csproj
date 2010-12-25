@@ -128,11 +128,6 @@
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_GlobalResources\Global.uk-UA.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Global.uk-UA.resx</DependentUpon>
-    </Compile>
     <Compile Include="BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -197,12 +192,6 @@
     <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_GlobalResources\Global.uk-UA.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>Global.uk-UA.designer.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="App_LocalResources\Default.aspx.uk-UA.resx" />
   </ItemGroup>
   <ItemGroup>
@@ -211,8 +200,15 @@
   <ItemGroup>
     <Content Include="App_LocalResources\Default.aspx.en-GB.resx" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="History\App_LocalResources\" />
+    <Content Include="History\App_LocalResources\Default.aspx.uk-UA.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="History\App_LocalResources\Default.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="History\App_LocalResources\Default.aspx.en-GB.resx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
