@@ -12,13 +12,13 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
 
-    <link href="/Styles/ui-lightness/jquery-ui-1.8.7.custom.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="/Styles/base_style.css" type="text/css" media="screen, projection" />
-    <!--[if lte IE 6]><link rel="stylesheet" href="/Styles/base_style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
+    <link href="Styles/ui-lightness/jquery-ui-1.8.7.custom.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="Styles/base_style.css" type="text/css" media="screen, projection" />
+    <!--[if lte IE 6]><link rel="stylesheet" href="Styles/base_style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
 
-    <script src="/Scripts/jquery-1.4.4.min.js" type="text/javascript"></script>
-    <script src="/Scripts/jquery-ui-1.8.7.custom.min.js" type="text/javascript"></script>
-    <script src="/Scripts/Site.Master.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-1.4.4.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-ui-1.8.7.custom.min.js" type="text/javascript"></script>
+    <script src="Scripts/Site.Master.js" type="text/javascript"></script>
 </head>
 <body>
     <form runat="server" id="contentForm">
