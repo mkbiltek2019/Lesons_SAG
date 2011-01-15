@@ -1,0 +1,36 @@
+<HTML>
+
+<HEAD>
+	<script type="text/javascript" language="javascript" >
+		var John = {
+			"name" : "John",
+			"age"  : 17,
+			"phoneNumbers" : [
+				{ 
+					"provider" : "Telco Suite",
+					"number"   : 123456
+				},
+				{
+					"provider" : "John Telecom",
+					"number"   : 654321
+				}
+			]
+		};
+		
+		document.write(John.name + "<br/>");
+		document.write(John.age + "<br/>");
+		
+		for(phoneNumber in John.phoneNumbers)
+		{
+			document.write("Phone #" + phoneNumber + "<br />");
+			document.write(John.phoneNumbers[phoneNumber].provider + "<br />");
+			document.write(John.phoneNumbers[phoneNumber].number + "<br />");
+		}
+		
+	</script>
+</HEAD>
+
+<BODY>
+</BODY>
+
+</HTML>
