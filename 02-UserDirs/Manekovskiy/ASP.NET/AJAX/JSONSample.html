@@ -4,6 +4,7 @@
 	<script type="text/javascript" language="javascript" >
 		var John = {
 			"name" : "John",
+			"surname" : "Smith",
 			"age"  : 17,
 			"phoneNumbers" : [
 				{ 
@@ -14,12 +15,18 @@
 					"provider" : "John Telecom",
 					"number"   : 654321
 				}
-			]
+			],
+			
+			"getFullName" : function() {
+				return this.name + " " + this.surname;
+			}
 		};
 		
 		document.write(John.name + "<br/>");
 		document.write(John.age + "<br/>");
 		
+		document.write(John.getFullName() + "<br/>");
+				
 		for(phoneNumber in John.phoneNumbers)
 		{
 			document.write("Phone #" + phoneNumber + "<br />");
