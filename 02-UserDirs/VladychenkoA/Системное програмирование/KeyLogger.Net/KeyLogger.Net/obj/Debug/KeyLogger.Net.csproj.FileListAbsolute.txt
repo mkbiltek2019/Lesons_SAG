@@ -1,8 +1,0 @@
-D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Системное програмирование\KeyLogger.Net\KeyLogger.Net\bin\Debug\KeyLogger.Net.exe
-D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Системное програмирование\KeyLogger.Net\KeyLogger.Net\bin\Debug\KeyLogger.Net.pdb
-D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Системное програмирование\KeyLogger.Net\KeyLogger.Net\obj\Debug\ResolveAssemblyReference.cache
-D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Системное програмирование\KeyLogger.Net\KeyLogger.Net\obj\Debug\KeyLogger.Net.Form1.resources
-D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Системное програмирование\KeyLogger.Net\KeyLogger.Net\obj\Debug\KeyLogger.Net.Properties.Resources.resources
-D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Системное програмирование\KeyLogger.Net\KeyLogger.Net\obj\Debug\KeyLogger.Net.csproj.GenerateResource.Cache
-D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Системное програмирование\KeyLogger.Net\KeyLogger.Net\obj\Debug\KeyLogger.Net.exe
-D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Системное програмирование\KeyLogger.Net\KeyLogger.Net\obj\Debug\KeyLogger.Net.pdb
