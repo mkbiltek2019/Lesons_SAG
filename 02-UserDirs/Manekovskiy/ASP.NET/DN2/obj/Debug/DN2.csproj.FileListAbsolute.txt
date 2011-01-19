@@ -1,0 +1,5 @@
+D:\MAS\13НС9-1С\02-UserDirs\Manekovskiy\ASP.NET\DN2\bin\DN2.dll
+D:\MAS\13НС9-1С\02-UserDirs\Manekovskiy\ASP.NET\DN2\bin\DN2.pdb
+D:\MAS\13НС9-1С\02-UserDirs\Manekovskiy\ASP.NET\DN2\obj\Debug\ResolveAssemblyReference.cache
+D:\MAS\13НС9-1С\02-UserDirs\Manekovskiy\ASP.NET\DN2\obj\Debug\DN2.dll
+D:\MAS\13НС9-1С\02-UserDirs\Manekovskiy\ASP.NET\DN2\obj\Debug\DN2.pdb

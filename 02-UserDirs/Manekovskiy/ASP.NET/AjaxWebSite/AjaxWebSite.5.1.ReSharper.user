@@ -1,0 +1,88 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="BFF3D451-87A4-46B3-BF24-7DD3FE452B4B/f:jquery-1.4.1-vsdoc.js" caret="1883" fromTop="14" />
+      <File id="BFF3D451-87A4-46B3-BF24-7DD3FE452B4B/f:Default.aspx.cs" caret="383" fromTop="14" />
+      <File id="BFF3D451-87A4-46B3-BF24-7DD3FE452B4B/f:Default.aspx" caret="1101" fromTop="8" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="BFF3D451-87A4-46B3-BF24-7DD3FE452B4B/f:Default.aspx" caret="1478" fromTop="17" />
+      <File id="BFF3D451-87A4-46B3-BF24-7DD3FE452B4B/f:Default.aspx" caret="124" fromTop="0" />
+      <File id="BFF3D451-87A4-46B3-BF24-7DD3FE452B4B/f:Default.aspx" caret="507" fromTop="9" />
+      <File id="BFF3D451-87A4-46B3-BF24-7DD3FE452B4B/f:Default.aspx" caret="1904" fromTop="25" />
+      <File id="BFF3D451-87A4-46B3-BF24-7DD3FE452B4B/f:Default.aspx" caret="514" fromTop="7" />
+      <File id="BFF3D451-87A4-46B3-BF24-7DD3FE452B4B/f:Default.aspx.cs" caret="666" fromTop="20" />
+      <File id="BFF3D451-87A4-46B3-BF24-7DD3FE452B4B/f:Default.aspx" caret="741" fromTop="6" />
+      <File id="BFF3D451-87A4-46B3-BF24-7DD3FE452B4B/f:Default.aspx" caret="2009" fromTop="21" />
+      <File id="BFF3D451-87A4-46B3-BF24-7DD3FE452B4B/f:Default.aspx" caret="1720" fromTop="22" />
+      <File id="BFF3D451-87A4-46B3-BF24-7DD3FE452B4B/f:Default.aspx" caret="1380" fromTop="17" />
+      <File id="BFF3D451-87A4-46B3-BF24-7DD3FE452B4B/f:Default.aspx" caret="1068" fromTop="10" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="Button`0" priority="0" />
+      <Item value="lblDate" priority="0" />
+      <Item value="DateTime`0" priority="0" />
+      <Item value="Trace" priority="0" />
+      <Item value="if" priority="0" />
+      <Item value="Request" priority="0" />
+      <Item value="const" priority="0" />
+      <Item value="string" priority="0" />
+      <Item value="case" priority="0" />
+      <Item value="break" priority="0" />
+      <Item value="default" priority="0" />
+      <Item value="null" priority="0" />
+      <Item value="EventArgs`0" priority="0" />
+      <Item value="Response" priority="0" />
+      <Item value="AsyncPostBackTrigger`0" priority="0" />
+      <Item value="TextBox`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.Label">
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="ToLongTimeString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpRequest">
+      <Item value="QueryString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Specialized.NameValueCollection">
+      <Item value="GetKey`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="IsNullOrWhiteSpace`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.EventArgs">
+      <Item value="Empty" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpResponse">
+      <Item value="Write`0" priority="0" />
+      <Item value="End`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.Button">
+      <Item value="OnClientClick" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

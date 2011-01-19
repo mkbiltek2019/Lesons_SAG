@@ -1,0 +1,5 @@
+D:\MAS\13НС9-1С\02-UserDirs\Manekovskiy\ASP.NET\AjaxWebSite\bin\AjaxWebSite.dll
+D:\MAS\13НС9-1С\02-UserDirs\Manekovskiy\ASP.NET\AjaxWebSite\bin\AjaxWebSite.pdb
+D:\MAS\13НС9-1С\02-UserDirs\Manekovskiy\ASP.NET\AjaxWebSite\obj\Debug\ResolveAssemblyReference.cache
+D:\MAS\13НС9-1С\02-UserDirs\Manekovskiy\ASP.NET\AjaxWebSite\obj\Debug\AjaxWebSite.dll
+D:\MAS\13НС9-1С\02-UserDirs\Manekovskiy\ASP.NET\AjaxWebSite\obj\Debug\AjaxWebSite.pdb
