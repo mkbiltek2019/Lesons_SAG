@@ -1,0 +1,101 @@
+<!-- Remove the Icon Property if you are going to use the Office 2007 themes-->
+<r:RibbonWindow x:Class="RibbonSample.Window1" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:r="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary" Title="My First Ribbon Form" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen" Icon="Images\app.png" Height="600" Width="800" MinHeight="300" MinWidth="400">
+  <r:RibbonWindow.Resources>
+    <ResourceDictionary>
+      <r:RibbonCommand x:Key="QATButton" CanExecute="RibbonCommand_CanExecute" LabelTitle="QAT Button" LabelDescription="This is a sample QAT Button" ToolTipTitle="QAT Button" ToolTipDescription="This is a sample QAT Button, it doesn't do anything" SmallImageSource="Images\save.png" LargeImageSource="Images\save.png" />
+      <r:RibbonCommand x:Key="MenuItem1" CanExecute="RibbonCommand_CanExecute" LabelTitle="Menu Item 1" LabelDescription="This is a sample menu item" ToolTipTitle="Menu Item 1" ToolTipDescription="This is a sample menu item" SmallImageSource="Images\files.png" LargeImageSource="Images\files.png" />
+      <r:RibbonCommand x:Key="MenuItem2" CanExecute="RibbonCommand_CanExecute" LabelTitle="Menu Item 2" LabelDescription="This is a sample menu item" ToolTipTitle="Menu Item 2" ToolTipDescription="This is a sample menu item" SmallImageSource="Images\save.png" LargeImageSource="Images\save.png" />
+      <r:RibbonCommand x:Key="MenuItem3" CanExecute="RibbonCommand_CanExecute" LabelTitle="Menu Item 3" LabelDescription="This is a sample menu item" ToolTipTitle="Menu Item 3" ToolTipDescription="This is a sample menu item" SmallImageSource="Images\print.png" LargeImageSource="Images\print.png" />
+      <r:RibbonCommand x:Key="MenuItem4" CanExecute="RibbonCommand_CanExecute" LabelTitle="Menu Item 4" LabelDescription="This is a sample menu item" ToolTipTitle="Menu Item 4" ToolTipDescription="This is a sample menu item" SmallImageSource="Images\diagnostic.png" LargeImageSource="Images\diagnostic.png" />
+      <r:RibbonCommand x:Key="HomeButton1" CanExecute="RibbonCommand_CanExecute" LabelTitle="Calculator" LabelDescription="Calc This!" ToolTipTitle="Calculator" ToolTipDescription="Used to do math and stuff" SmallImageSource="Images\calculator.png" LargeImageSource="Images\calculator.png" />
+      <r:RibbonCommand x:Key="HomeButton2" CanExecute="RibbonCommand_CanExecute" LabelTitle="Calendar" LabelDescription="Schedule This!" ToolTipTitle="Calendar" ToolTipDescription="Schedule and remind yourself of stuff" SmallImageSource="Images\calendar.png" LargeImageSource="Images\calendar.png" />
+      <r:RibbonCommand x:Key="HomeButton3" CanExecute="RibbonCommand_CanExecute" LabelTitle="Computer" LabelDescription="Format This!" ToolTipTitle="Computer" ToolTipDescription="Where you store your naked pictures" SmallImageSource="Images\computer.png" LargeImageSource="Images\computer.png" />
+      <r:RibbonCommand x:Key="MediaEject" CanExecute="RibbonCommand_CanExecute" LabelTitle="Eject" LabelDescription="Eject" ToolTipTitle="Eject" ToolTipDescription="Open the cup holder" SmallImageSource="Images\bt_eject.png" LargeImageSource="Images\bt_eject.png" />
+      <r:RibbonCommand x:Key="MediaBackward" CanExecute="RibbonCommand_CanExecute" LabelTitle="Previous" LabelDescription="Previous" ToolTipTitle="Previous" ToolTipDescription="Previous Tune" SmallImageSource="Images\bt_skip_backward.png" LargeImageSource="Images\bt_skip_backward.png" />
+      <r:RibbonCommand x:Key="MediaPlay" CanExecute="RibbonCommand_CanExecute" LabelTitle="Play" LabelDescription="Play" ToolTipTitle="Play" ToolTipDescription="Play Tune" SmallImageSource="Images\bt_play.png" LargeImageSource="Images\bt_play.png" />
+      <r:RibbonCommand x:Key="MediaStop" CanExecute="RibbonCommand_CanExecute" LabelTitle="Stop" LabelDescription="Stop" ToolTipTitle="Stop" ToolTipDescription="Stop the music" SmallImageSource="Images\bt_stop.png" LargeImageSource="Images\bt_stop.png" />
+      <r:RibbonCommand x:Key="MediaForward" CanExecute="RibbonCommand_CanExecute" LabelTitle="Next" LabelDescription="Next" ToolTipTitle="Next" ToolTipDescription="Next Tune" SmallImageSource="Images\bt_skip_forward.png" LargeImageSource="Images\bt_skip_forward.png" />
+      <!-- Uncomment below for Office 2007 Blue -->
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/RibbonControlsLibrary;component/Themes/Office2007Blue.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+      <!-- Uncomment below for Office 2007 Silver -->
+      <!--<ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/RibbonControlsLibrary;component/Themes/Office2007Silver.xaml" />
+            </ResourceDictionary.MergedDictionaries>-->
+      <!-- Uncomment below for Office 2007 Black -->
+      <!--<ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/RibbonControlsLibrary;component/Themes/Office2007Black.xaml" />
+            </ResourceDictionary.MergedDictionaries>-->
+    </ResourceDictionary>
+  </r:RibbonWindow.Resources>
+  <DockPanel>
+    <r:Ribbon DockPanel.Dock="Top" Title="My First Ribbon Form" x:Name="mainRibbon">
+      <r:Ribbon.QuickAccessToolBar>
+        <r:RibbonQuickAccessToolBar>
+          <r:RibbonButton Command="{StaticResource QATButton}" />
+          <r:RibbonButton Command="{StaticResource MediaEject}" r:RibbonQuickAccessToolBar.Placement="InCustomizeMenu" />
+        </r:RibbonQuickAccessToolBar>
+      </r:Ribbon.QuickAccessToolBar>
+      <r:Ribbon.ApplicationMenu>
+        <r:RibbonApplicationMenu>
+          <r:RibbonApplicationMenu.Command>
+            <r:RibbonCommand SmallImageSource="Images\box.png" LargeImageSource="Images\box.png" />
+          </r:RibbonApplicationMenu.Command>
+          <r:RibbonApplicationMenuItem Command="{StaticResource MenuItem1}">
+            <TextBlock Text="Item 1 in the list" />
+            <TextBlock Text="Item 2 in the list" />
+            <TextBlock Text="Item 3 in the list" />
+            <TextBlock Text="Item 4 in the list" />
+          </r:RibbonApplicationMenuItem>
+          <r:RibbonApplicationMenuItem Command="{StaticResource MenuItem2}" />
+          <r:RibbonApplicationMenuItem Command="{StaticResource MenuItem3}" />
+          <r:RibbonApplicationMenuItem Command="{StaticResource MenuItem4}" />
+          <r:RibbonApplicationMenu.RecentItemList>
+            <Rectangle Height="300" />
+          </r:RibbonApplicationMenu.RecentItemList>
+        </r:RibbonApplicationMenu>
+      </r:Ribbon.ApplicationMenu>
+      <r:RibbonTab Label="Home">
+        <r:RibbonGroup>
+          <r:RibbonGroup.Command>
+            <r:RibbonCommand LabelTitle="Programs" />
+          </r:RibbonGroup.Command>
+          <r:RibbonGroup.GroupSizeDefinitions>
+            <r:RibbonGroupSizeDefinitionCollection>
+              <r:RibbonGroupSizeDefinition>
+                <r:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />
+                <r:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />
+                <r:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />
+              </r:RibbonGroupSizeDefinition>
+            </r:RibbonGroupSizeDefinitionCollection>
+          </r:RibbonGroup.GroupSizeDefinitions>
+          <r:RibbonButton Command="{StaticResource HomeButton1}" />
+          <r:RibbonButton Command="{StaticResource HomeButton2}" />
+          <r:RibbonButton Command="{StaticResource HomeButton3}" />
+        </r:RibbonGroup>
+      </r:RibbonTab>
+      <r:RibbonTab Label="Media">
+        <r:RibbonGroup>
+          <r:RibbonGroup.Command>
+            <r:RibbonCommand LabelTitle="Media Controls" />
+          </r:RibbonGroup.Command>
+          <r:RibbonControlGroup>
+            <r:RibbonButton Command="{StaticResource MediaEject}" />
+            <r:RibbonButton Command="{StaticResource MediaBackward}" />
+            <r:RibbonButton Command="{StaticResource MediaPlay}" />
+            <r:RibbonButton Command="{StaticResource MediaStop}" />
+            <r:RibbonButton Command="{StaticResource MediaForward}" />
+          </r:RibbonControlGroup>
+        </r:RibbonGroup>
+      </r:RibbonTab>
+    </r:Ribbon>
+    <RichTextBox Height="auto" Width="auto">
+      <FlowDocument>
+        <Paragraph>
+          <Hyperlink NavigateUri="http://www.renevo.com">RenEvo Software &amp; Designs</Hyperlink>
+        </Paragraph>
+      </FlowDocument>
+    </RichTextBox>
+  </DockPanel>
+</r:RibbonWindow>
