@@ -1,0 +1,11 @@
+D:\MAS\13НС9-1С\02-UserDirs\Bobrovskiy\Asp.Net\ChocoPlanet_2_Main_version\ChocoPlanet.Business\bin\Debug\xmlData\xmlData.xml
+D:\MAS\13НС9-1С\02-UserDirs\Bobrovskiy\Asp.Net\ChocoPlanet_2_Main_version\ChocoPlanet.Business\bin\Debug\ChocoPlanet.Business.dll.config
+D:\MAS\13НС9-1С\02-UserDirs\Bobrovskiy\Asp.Net\ChocoPlanet_2_Main_version\ChocoPlanet.Business\bin\Debug\ChocoPlanet.Business.dll
+D:\MAS\13НС9-1С\02-UserDirs\Bobrovskiy\Asp.Net\ChocoPlanet_2_Main_version\ChocoPlanet.Business\bin\Debug\ChocoPlanet.Business.pdb
+D:\MAS\13НС9-1С\02-UserDirs\Bobrovskiy\Asp.Net\ChocoPlanet_2_Main_version\ChocoPlanet.Business\bin\Debug\ChocoPlanet.DataAccess.dll
+D:\MAS\13НС9-1С\02-UserDirs\Bobrovskiy\Asp.Net\ChocoPlanet_2_Main_version\ChocoPlanet.Business\bin\Debug\ChocoPlanet.Model.dll
+D:\MAS\13НС9-1С\02-UserDirs\Bobrovskiy\Asp.Net\ChocoPlanet_2_Main_version\ChocoPlanet.Business\bin\Debug\ChocoPlanet.DataAccess.pdb
+D:\MAS\13НС9-1С\02-UserDirs\Bobrovskiy\Asp.Net\ChocoPlanet_2_Main_version\ChocoPlanet.Business\bin\Debug\ChocoPlanet.Model.pdb
+D:\MAS\13НС9-1С\02-UserDirs\Bobrovskiy\Asp.Net\ChocoPlanet_2_Main_version\ChocoPlanet.Business\obj\Debug\ResolveAssemblyReference.cache
+D:\MAS\13НС9-1С\02-UserDirs\Bobrovskiy\Asp.Net\ChocoPlanet_2_Main_version\ChocoPlanet.Business\obj\Debug\ChocoPlanet.Business.dll
+D:\MAS\13НС9-1С\02-UserDirs\Bobrovskiy\Asp.Net\ChocoPlanet_2_Main_version\ChocoPlanet.Business\obj\Debug\ChocoPlanet.Business.pdb

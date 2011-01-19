@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="Home Page" Language="C#" 
          MasterPageFile="~/Site.master" AutoEventWireup="true"
          CodeBehind="Default.aspx.cs" Inherits="ChocoPlanet._Default" %>
+<%@Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" tagPrefix="ajax" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 </asp:Content>
@@ -24,6 +25,9 @@
                     <p>
                         <asp:Label ID="lPassword" runat="server" Text="Пароль:" />
                         <asp:TextBox runat="server" ID="tbPassword" TextMode="Password" />
+
+                        <ajax:CalendarExtender runat="server" TargetControlID="tbPassword" 
+                         TodaysDateFormat="dd/MM/yyyy"/>
                     </p>
                     <p>
                         <asp:Button runat="server" ID="btnLogin" Text="Увійти" />

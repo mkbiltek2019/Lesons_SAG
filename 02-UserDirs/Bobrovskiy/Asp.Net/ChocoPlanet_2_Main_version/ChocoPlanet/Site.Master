@@ -18,17 +18,18 @@
 	#resizable { width: 150px; height: 150px; padding: 0.5em; }
 	#resizable h3 { text-align: center; margin: 0; }
 	</style>
-	<script type="text/javascript" language="javascript">
+	<%--<script type="text/javascript" language="javascript">
 	    $(function () {
 	        $("#MainContent_rblImages").resizable();
 	    });
-	</script>
+	</script>--%>
 
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">        
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form runat="server" enableviewstate="false">
+    <asp:ScriptManager runat="server" EnableScriptGlobalization="true" />
 
     <div class="page">
 

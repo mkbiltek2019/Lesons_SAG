@@ -1,0 +1,59 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="ASP" priority="0" />
+      <Item value="tagPrefix" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AjaxControlToolkit.TextBoxWatermarkExtender">
+      <Item value="TargetControlID" priority="0" />
+      <Item value="WatermarkText" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AjaxControlToolkit.FilteredTextBoxExtender">
+      <Item value="FilterMode" priority="0" />
+      <Item value="FilterType" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="BDAA83A6-2EAF-459A-B566-715B7181E7E5/f:AddCategoryPage.aspx" caret="301" fromTop="4" />
+      <File id="BDAA83A6-2EAF-459A-B566-715B7181E7E5/f:ProductEditWindow.aspx" caret="225" fromTop="5" />
+      <File id="BDAA83A6-2EAF-459A-B566-715B7181E7E5/f:Default.aspx" caret="1309" fromTop="28" />
+      <File id="BDAA83A6-2EAF-459A-B566-715B7181E7E5/f:Site.Master" caret="1162" fromTop="16" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="BDAA83A6-2EAF-459A-B566-715B7181E7E5/f:Site.Master" caret="960" fromTop="19" />
+      <File id="BDAA83A6-2EAF-459A-B566-715B7181E7E5/f:AddCategoryPage.aspx" caret="1357" fromTop="20" />
+      <File id="BDAA83A6-2EAF-459A-B566-715B7181E7E5/f:AddCategoryPage.aspx" caret="717" fromTop="12" />
+      <File id="BDAA83A6-2EAF-459A-B566-715B7181E7E5/f:AddCategoryPage.aspx" caret="1231" fromTop="20" />
+      <File id="BDAA83A6-2EAF-459A-B566-715B7181E7E5/f:AddCategoryPage.aspx" caret="1937" fromTop="4" />
+      <File id="BDAA83A6-2EAF-459A-B566-715B7181E7E5/f:AddCategoryPage.aspx" caret="2166" fromTop="4" />
+      <File id="BDAA83A6-2EAF-459A-B566-715B7181E7E5/f:AddCategoryPage.aspx" caret="301" fromTop="4" />
+      <File id="BDAA83A6-2EAF-459A-B566-715B7181E7E5/f:Site.Master" caret="118" fromTop="0" />
+      <File id="BDAA83A6-2EAF-459A-B566-715B7181E7E5/f:ProductEditWindow.aspx" caret="317" fromTop="5" />
+      <File id="BDAA83A6-2EAF-459A-B566-715B7181E7E5/f:ProductEditWindow.aspx" caret="6150" fromTop="6" />
+      <File id="BDAA83A6-2EAF-459A-B566-715B7181E7E5/f:ProductEditWindow.aspx" caret="319" fromTop="6" />
+      <File id="BDAA83A6-2EAF-459A-B566-715B7181E7E5/f:ProductEditWindow.aspx" caret="1678" fromTop="17" />
+      <File id="BDAA83A6-2EAF-459A-B566-715B7181E7E5/f:Default.aspx" caret="181" fromTop="2" />
+      <File id="BDAA83A6-2EAF-459A-B566-715B7181E7E5/f:Site.Master" caret="1354" fromTop="21" />
+      <File id="BDAA83A6-2EAF-459A-B566-715B7181E7E5/f:Default.aspx" caret="1309" fromTop="19" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

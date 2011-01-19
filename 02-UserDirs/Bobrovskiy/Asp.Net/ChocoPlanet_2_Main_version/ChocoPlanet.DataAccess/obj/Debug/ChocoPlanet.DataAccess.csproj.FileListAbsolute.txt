@@ -1,0 +1,7 @@
+D:\MAS\13НС9-1С\02-UserDirs\Bobrovskiy\Asp.Net\ChocoPlanet_2_Main_version\ChocoPlanet.DataAccess\bin\Debug\ChocoPlanet.DataAccess.dll
+D:\MAS\13НС9-1С\02-UserDirs\Bobrovskiy\Asp.Net\ChocoPlanet_2_Main_version\ChocoPlanet.DataAccess\bin\Debug\ChocoPlanet.DataAccess.pdb
+D:\MAS\13НС9-1С\02-UserDirs\Bobrovskiy\Asp.Net\ChocoPlanet_2_Main_version\ChocoPlanet.DataAccess\bin\Debug\ChocoPlanet.Model.dll
+D:\MAS\13НС9-1С\02-UserDirs\Bobrovskiy\Asp.Net\ChocoPlanet_2_Main_version\ChocoPlanet.DataAccess\bin\Debug\ChocoPlanet.Model.pdb
+D:\MAS\13НС9-1С\02-UserDirs\Bobrovskiy\Asp.Net\ChocoPlanet_2_Main_version\ChocoPlanet.DataAccess\obj\Debug\ResolveAssemblyReference.cache
+D:\MAS\13НС9-1С\02-UserDirs\Bobrovskiy\Asp.Net\ChocoPlanet_2_Main_version\ChocoPlanet.DataAccess\obj\Debug\ChocoPlanet.DataAccess.dll
+D:\MAS\13НС9-1С\02-UserDirs\Bobrovskiy\Asp.Net\ChocoPlanet_2_Main_version\ChocoPlanet.DataAccess\obj\Debug\ChocoPlanet.DataAccess.pdb
