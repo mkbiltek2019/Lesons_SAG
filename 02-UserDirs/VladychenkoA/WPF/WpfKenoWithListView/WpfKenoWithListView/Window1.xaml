@@ -1,0 +1,45 @@
+﻿<Window x:Class="WpfKenoWithListView.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:l="clr-namespace:WpfKenoWithListView"
+    Title="Keno" Height="600" Width="810">
+    <Window.Resources>
+        <!--<ObjectDataProvider x:Key="KenoDataSource"
+            ObjectType="{x:Type l:ClassKeno}"/>--> 
+        
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Загрузить" Width="75" 
+                Name="btn1" HorizontalAlignment="Left" 
+                Margin="12,12,0,15" Click="btn1_Click" 
+                ToolTip="Нажмите для загрузки файла" />
+        <Image Name="img1" HorizontalAlignment="Center" Source="keno_logo300s.png" Height="45" Width="90"/>
+        <Image Name="img2" HorizontalAlignment="Right" Source="002.gif"   />
+        <StackPanel Name="StackPanel1" Grid.Row="1" HorizontalAlignment="Center">
+            <ListView  Name="Listview" HorizontalContentAlignment="Center"  VerticalAlignment="Stretch" Height="510" ><!--ScrollViewer.VerticalScrollBarVisibility="Auto"  ItemsSource="{Binding ClassKeno}"-->>
+                <ListView.View>
+                    <GridView AllowsColumnReorder="True" ColumnHeaderToolTip="Информация Кено">
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Num}"
+                                        Header="Номер тиража" Width="100"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Date}"
+                                        Header="Дата тиража" Width="100"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Numberloto}"
+                                        Header="Лототрон" Width="60"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Numberballs}"
+                                        Header="К-т шаров" Width="60"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Number}"
+                                        Header="Выиграшные номера" Width="458"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</Window>
+<!--,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type l:Window1}}}-->
