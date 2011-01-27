@@ -1,0 +1,251 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="5B7712DB-553F-455E-A528-94D68FFCC621/f:Form1.Designer.cs" caret="673" fromTop="16" />
+      <File id="5B7712DB-553F-455E-A528-94D68FFCC621/f:Form2.Designer.cs" caret="2201" fromTop="17" />
+      <File id="5B7712DB-553F-455E-A528-94D68FFCC621/f:Form2.cs" caret="1456" fromTop="17" />
+      <File id="5B7712DB-553F-455E-A528-94D68FFCC621/f:Program.cs" caret="487" fromTop="17" />
+      <File id="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D/f:Rates.cs" caret="3511" fromTop="17" />
+      <File id="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D/f:ICurrencyConverter.cs" caret="953" fromTop="20" />
+      <File id="5B7712DB-553F-455E-A528-94D68FFCC621/f:Form1.cs" caret="1338" fromTop="9" />
+      <File id="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D/f:CurreencyConventer.svc.cs" caret="1991" fromTop="18" />
+      <File id="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D/f:Currency.cs" caret="1303" fromTop="19" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D/f:ICurrencyConverter.cs" caret="994" fromTop="18" />
+      <File id="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D/f:CurreencyConventer.svc.cs" caret="2049" fromTop="17" />
+      <File id="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D/f:ICurrencyConverter.cs" caret="2362" fromTop="14" />
+      <File id="5B7712DB-553F-455E-A528-94D68FFCC621/f:Form1.cs" caret="332" fromTop="8" />
+      <File id="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D/f:Rates.cs" caret="186" fromTop="3" />
+      <File id="5B7712DB-553F-455E-A528-94D68FFCC621/f:Form1.cs" caret="1653" fromTop="24" />
+      <File id="5B7712DB-553F-455E-A528-94D68FFCC621/f:Form1.cs" caret="1526" fromTop="14" />
+      <File id="5B7712DB-553F-455E-A528-94D68FFCC621/f:Form1.cs" caret="1575" fromTop="18" />
+      <File id="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D/f:CurreencyConventer.svc.cs" caret="2569" fromTop="22" />
+      <File id="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D/f:CurreencyConventer.svc.cs" caret="2569" fromTop="28" />
+      <File id="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D/f:CurreencyConventer.svc.cs" caret="2569" fromTop="34" />
+      <File id="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D/f:Currency.cs" caret="173" fromTop="5" />
+      <File id="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D/f:Currency.cs" caret="228" fromTop="3" />
+      <File id="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D/f:Currency.cs" caret="511" fromTop="16" />
+      <File id="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D/f:CurreencyConventer.svc.cs" caret="2569" fromTop="14" />
+      <File id="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D/f:CurreencyConventer.svc.cs" caret="2569" fromTop="17" />
+      <File id="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D/f:CurreencyConventer.svc.cs" caret="263" fromTop="8" />
+      <File id="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D/f:CurreencyConventer.svc.cs" caret="2569" fromTop="0" />
+      <File id="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D/f:Currency.cs" caret="1168" fromTop="16" />
+      <File id="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D/f:Currency.cs" caret="3123" fromTop="34" />
+      <File id="5B7712DB-553F-455E-A528-94D68FFCC621/f:Form1.cs" caret="509" fromTop="10" />
+      <File id="5B7712DB-553F-455E-A528-94D68FFCC621/f:Form1.cs" caret="1846" fromTop="27" />
+      <File id="5B7712DB-553F-455E-A528-94D68FFCC621/f:Form1.cs" caret="2254" fromTop="22" />
+      <File id="5B7712DB-553F-455E-A528-94D68FFCC621/f:Form1.cs" caret="2054" fromTop="21" />
+      <File id="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D/f:CurreencyConventer.svc.cs" caret="1063" fromTop="16" />
+      <File id="5B7712DB-553F-455E-A528-94D68FFCC621/f:Form1.cs" caret="1338" fromTop="18" />
+      <File id="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D/f:CurreencyConventer.svc.cs" caret="654" fromTop="14" />
+      <File id="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D/f:CurreencyConventer.svc.cs" caret="1435" fromTop="13" />
+      <File id="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D/f:CurreencyConventer.svc.cs" caret="1544" fromTop="17" />
+      <File id="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D/f:CurreencyConventer.svc.cs" caret="1972" fromTop="17" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="if" priority="3" />
+      <Item value="textBoxResault" priority="1" />
+      <Item value="Form2`0" priority="1" />
+      <Item value="form2" priority="5" />
+      <Item value="new" priority="15" />
+      <Item value="Form2" priority="0" />
+      <Item value="Timer`0" priority="0" />
+      <Item value="timer" priority="3" />
+      <Item value="Timer" priority="0" />
+      <Item value="ThreadExceptionDialog`0" priority="0" />
+      <Item value="pictureBox1" priority="2" />
+      <Item value="Image`0" priority="1" />
+      <Item value="Font" priority="0" />
+      <Item value="System" priority="0" />
+      <Item value="Drawing" priority="0" />
+      <Item value="Brushes`0" priority="0" />
+      <Item value="PointF" priority="0" />
+      <Item value="DockStyle`0" priority="0" />
+      <Item value="g" priority="0" />
+      <Item value="Icon" priority="4" />
+      <Item value="image" priority="0" />
+      <Item value="Point" priority="0" />
+      <Item value="PointF`0" priority="0" />
+      <Item value="public" priority="1" />
+      <Item value="Paint" priority="0" />
+      <Item value="this" priority="4" />
+      <Item value="PaintEventHandler" priority="0" />
+      <Item value="Bitmap`0" priority="1" />
+      <Item value="bitmap" priority="1" />
+      <Item value="Bitmap" priority="0" />
+      <Item value="Close`0" priority="0" />
+      <Item value="graphics" priority="3" />
+      <Item value="Rectangle`0" priority="0" />
+      <Item value="Rectangle" priority="0" />
+      <Item value="rect" priority="0" />
+      <Item value="Icon`0" priority="0" />
+      <Item value="toolTip1" priority="0" />
+      <Item value="OperationContract" priority="0" />
+      <Item value="double" priority="2" />
+      <Item value="string" priority="3" />
+      <Item value="return" priority="2" />
+      <Item value="CurrencyList`0" priority="0" />
+      <Item value="result" priority="1" />
+      <Item value="using" priority="0" />
+      <Item value="CurrencyConverter" priority="0" />
+      <Item value="CurrencyConverterService" priority="0" />
+      <Item value="ClientRectangle" priority="0" />
+      <Item value="CurrencyConverterClient`0" priority="0" />
+      <Item value="client" priority="2" />
+      <Item value="Convert`0" priority="2" />
+      <Item value="MessageBox`0" priority="0" />
+      <Item value="OK" priority="0" />
+      <Item value="Warning" priority="0" />
+      <Item value="monthCalendar" priority="0" />
+      <Item value="DateTime`0" priority="2" />
+      <Item value="temp" priority="0" />
+      <Item value="void" priority="0" />
+      <Item value="address" priority="0" />
+      <Item value="doc" priority="2" />
+      <Item value="null" priority="2" />
+      <Item value="HtmlNodeCollection`0" priority="0" />
+      <Item value="Rates`0" priority="0" />
+      <Item value="tmp" priority="0" />
+      <Item value="Rates" priority="0" />
+      <Item value="Currency`0" priority="3" />
+      <Item value="Currency" priority="1" />
+      <Item value="List" priority="0" />
+      <Item value="List&lt;Currency&gt;" priority="0" />
+      <Item value="courrencyList" priority="2" />
+      <Item value="currencyList" priority="2" />
+      <Item value="currency" priority="1" />
+      <Item value="currencyComboBox" priority="2" />
+      <Item value="for" priority="1" />
+      <Item value="arrayList" priority="3" />
+      <Item value="ArrayList" priority="0" />
+      <Item value="List&lt;string&gt;" priority="0" />
+      <Item value="foreach" priority="0" />
+      <Item value="cur" priority="3" />
+      <Item value="date" priority="2" />
+      <Item value="Equals`0" priority="0" />
+      <Item value="fromCurrencyCode" priority="0" />
+      <Item value="amount" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
+      <Item value="Text" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CurrencyConverter.Form2">
+      <Item value="Show`0" priority="0" />
+      <Item value="Close`0" priority="0" />
+      <Item value="Paint" priority="1" />
+      <Item value="Form2_Paint`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Timer">
+      <Item value="Interval" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Thread">
+      <Item value="Sleep`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.PictureBox">
+      <Item value="Image" priority="1" />
+      <Item value="Dock" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Brushes">
+      <Item value="Blue" priority="0" />
+      <Item value="Black" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.DockStyle">
+      <Item value="Fill" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Graphics">
+      <Item value="DrawIcon`0" priority="0" />
+      <Item value="DrawImage`0" priority="0" />
+      <Item value="Dispose`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ToolTip">
+      <Item value="Show`0" priority="0" />
+      <Item value="GetToolTip`0" priority="0" />
+      <Item value="SetToolTip`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CurrencyConverter.CurrencyConverterService.CurrencyConverterClient">
+      <Item value="Convert`0" priority="0" />
+      <Item value="GetCurrentcyList`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CurrencyConverter.Form1">
+      <Item value="numericUpDown1" priority="0" />
+      <Item value="dateBox" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToDateTime`0" priority="0" />
+      <Item value="ToString`0" priority="0" />
+      <Item value="ToInt32`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.MonthCalendar">
+      <Item value="DateSelected" priority="1" />
+      <Item value="SetDate`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Void">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="TryParse`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HtmlAgilityPack.HtmlDocument">
+      <Item value="LoadHtml`0" priority="0" />
+      <Item value="DocumentNode" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HtmlAgilityPack.HtmlNode">
+      <Item value="SelectNodes`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CurrencyConverter.Currency">
+      <Item value="Number" priority="3" />
+      <Item value="DigitalCode" priority="0" />
+      <Item value="LetterCode" priority="2" />
+      <Item value="NumberUnit" priority="1" />
+      <Item value="ReadHtmlSite`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ComboBox">
+      <Item value="Items" priority="2" />
+      <Item value="Text" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ComboBox+ObjectCollection">
+      <Item value="AddRange`0" priority="0" />
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Count" priority="1" />
+      <Item value="Indexer" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CurrencyConverter.CurrencyList">
+      <Item value="Add`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="Year" priority="0" />
+      <Item value="Month" priority="0" />
+      <Item value="Day" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString`0" priority="2" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

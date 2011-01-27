@@ -1,0 +1,8 @@
+C:\Users\Александр\Documents\Visual Studio 2010\Projects\CurrencyConverter\CurrencyConverter\bin\CurrencyConverter.dll
+C:\Users\Александр\Documents\Visual Studio 2010\Projects\CurrencyConverter\CurrencyConverter\bin\CurrencyConverter.pdb
+C:\Users\Александр\Documents\Visual Studio 2010\Projects\CurrencyConverter\CurrencyConverter\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Александр\Documents\Visual Studio 2010\Projects\CurrencyConverter\CurrencyConverter\obj\Debug\CurrencyConverter.dll
+C:\Users\Александр\Documents\Visual Studio 2010\Projects\CurrencyConverter\CurrencyConverter\obj\Debug\CurrencyConverter.pdb
+C:\Users\Александр\Documents\Visual Studio 2010\Projects\CurrencyConverter\CurrencyConverter\bin\HtmlAgilityPack.dll
+C:\Users\Александр\Documents\Visual Studio 2010\Projects\CurrencyConverter\CurrencyConverter\bin\HtmlAgilityPack.pdb
+C:\Users\Александр\Documents\Visual Studio 2010\Projects\CurrencyConverter\CurrencyConverter\bin\HtmlAgilityPack.xml

@@ -1,0 +1,9 @@
+c:\users\александр\documents\visual studio 2010\Projects\CurrencyConverter\CurrencyConverter\bin\Debug\CurrencyConverter.exe
+c:\users\александр\documents\visual studio 2010\Projects\CurrencyConverter\CurrencyConverter\bin\Debug\CurrencyConverter.pdb
+c:\users\александр\documents\visual studio 2010\Projects\CurrencyConverter\CurrencyConverter\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\александр\documents\visual studio 2010\Projects\CurrencyConverter\CurrencyConverter\obj\x86\Debug\CurrencyConverter.Form1.resources
+c:\users\александр\documents\visual studio 2010\Projects\CurrencyConverter\CurrencyConverter\obj\x86\Debug\CurrencyConverter.Properties.Resources.resources
+c:\users\александр\documents\visual studio 2010\Projects\CurrencyConverter\CurrencyConverter\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\александр\documents\visual studio 2010\Projects\CurrencyConverter\CurrencyConverter\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\александр\documents\visual studio 2010\Projects\CurrencyConverter\CurrencyConverter\obj\x86\Debug\CurrencyConverter.exe
+c:\users\александр\documents\visual studio 2010\Projects\CurrencyConverter\CurrencyConverter\obj\x86\Debug\CurrencyConverter.pdb

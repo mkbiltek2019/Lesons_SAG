@@ -1,0 +1,4 @@
+<Modules>
+  <Module PersistentId="85F3C624-A2BD-4EFB-A508-2BC60FAC7B5D" ModuleId="CurrencyConverter" />
+  <Module PersistentId="5B7712DB-553F-455E-A528-94D68FFCC621" ModuleId="CurrencyConverterClient" />
+</Modules>
