@@ -1,0 +1,46 @@
+﻿DataStorage ds = new DataStorage
+                                 {
+                                     ImageFeed = new List<ImageItem>
+                                                     {
+                                                         new ImageItem
+                                                             {
+                                                                 Content =
+                                                                     File.ReadAllBytes(@"c:\temp\_ba\AHardDaysNight.jpg"),
+                                                                 Id = 1,
+                                                                 Title = "A Hard Day's Night"
+                                                             },
+                                                         new ImageItem
+                                                             {
+                                                                 Content =
+                                                                     File.ReadAllBytes(@"c:\temp\_ba\BeatlesForSale.jpg"),
+                                                                 Id = 2,
+                                                                 Title = "Beatles for Sale"
+                                                             },
+                                                         new ImageItem
+                                                             {
+                                                                 Content = File.ReadAllBytes(@"c:\temp\_ba\Help.jpg"),
+                                                                 Id = 3,
+                                                                 Title = "Help"
+                                                             }
+                                                     },
+                                     NewsFeed = new List<NewsItem>
+                                                     {
+                                                           new NewsItem
+                                                               {
+                                                                   Date = new DateTime(2008, 12, 7), 
+                                                                   Id = 1, 
+                                                                   Title = "RINGO THRILLED TO RECEIVE 5.1 SURROUND COLLECTION GRAMMY NOMINATION", 
+                                                                   Text =  "The National Academy of Recording Arts and Sciences is pleased to announce the following nomination for the 2009 Grammy award in the category of Best Surround Album."
+                                                               },
+                                                               new NewsItem
+                                                               {
+                                                                   Date = new DateTime(2008, 10, 30), 
+                                                                   Id = 2, 
+                                                                   Title = "THE BEATLES INSPIRE NEW MUSIC VIDEO GAME", 
+                                                                   Text =  "The Beatles' extraordinary music and phenomenal legacy is set to rock across the universe in the form of a video game through an exclusive partnership between Apple Corps Ltd., Harmonix and MTV Games, a part of Viacom's MTV Networks (NYSE: VIA, VIA.B)."
+                                                               }
+                                                      }
+                                 };
+
+            
+            DataStorage.SaveData(AppGlobal.DataFilePath, ds);
