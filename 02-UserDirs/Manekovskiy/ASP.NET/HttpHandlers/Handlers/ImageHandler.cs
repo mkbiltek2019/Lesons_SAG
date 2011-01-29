@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Configuration;
+using System.Drawing;
 using System.IO;
 using System.Web;
 using HttpHandlers.Data;
@@ -7,28 +9,38 @@ namespace HttpHandlers.Handlers
 {
     public class ImageHandler : IHttpHandler
     {
-
         public void ProcessRequest(HttpContext context)
         {
+            string imageDirectory = ConfigurationManager.AppSettings["ImagesDirectory"];
+            string fileName = Path.Combine(imageDirectory, Path.GetFileNameWithoutExtension(context.Request.FilePath) + ".jpg");
 
-            string fileName = Path.GetFileNameWithoutExtension(context.Request.FilePath);
-
-            DataStorage ds = DataStorage.GetData(AppGlobal.DataFilePath);
-            ImageItem img = ds.ImageFeed.Find(i => i.Id == Convert.ToInt32(fileName));
-
-            if (img != null)
+            try
             {
-                context.Response.ContentType = "image/jpeg";
-                context.Response.BinaryWrite(img.Content);
-                context.Response.End();
-                return;
+                byte[] imageBytes = new byte[] { };
+                using (var stream = new FileStream(context.Server.MapPath(fileName), FileMode.Open))
+                {
+                    BinaryReader reader = new BinaryReader(stream);
+                    imageBytes = reader.ReadBytes((int)stream.Length);
+
+                    context.Response.ContentType = "image/jpeg";
+                    context.Response.Output.Write(imageBytes);
+                    context.Response.End();
+
+                    reader.Close();
+
+                    return;
+                }
             }
-            context.Response.StatusCode = 404;
+            catch (Exception ex)
+            {
+                //context.Response.StatusCode = 404;
+                throw ex;
+            }
         }
 
         public bool IsReusable
         {
-            get { return true; }
+            get { return false; }
         }
     }
 }

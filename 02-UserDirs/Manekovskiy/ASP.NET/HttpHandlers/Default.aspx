@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="HttpHandlers._Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="HttpHandlers._Default" Trace="true" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -9,11 +9,12 @@
     <form id="form1" runat="server">
     <div>
         <p>
-            [<a href="/test.rss">RSS</a>]</p>
+            [<a href="/test.rss">RSS</a>]
+        </p>
         <p>
-            <img src="/pic/1.img" />
-            <img src="/test/2.img" />
-            <img src="/srv/3.img" />
+            <img src="1.image" />
+            <%--<img src="2.image" />
+            <img src="4.image" />--%>
         </p>
     </div>
     </form>
