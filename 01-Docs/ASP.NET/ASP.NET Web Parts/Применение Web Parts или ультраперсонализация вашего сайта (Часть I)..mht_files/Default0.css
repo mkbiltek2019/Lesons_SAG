@@ -1,0 +1,1173 @@
+/* Arc Theme */
+
+
+TD {
+	FONT-SIZE: 0.8em; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+TH {
+	FONT-SIZE: 1.0em; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+TR {
+	FONT-SIZE: 0.8em; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+H1
+{
+    FONT-FAMILY: Verdana;
+	FONT-WEIGHT: Bold;
+    FONT-SIZE: medium;
+}
+H2
+{
+    FONT-FAMILY: Verdana;
+	FONT-WEIGHT: Bold;
+    FONT-SIZE: small;
+}
+H3
+{
+    FONT-FAMILY: Verdana; 
+	FONT-WEIGHT: Bold;
+    FONT-SIZE: x-small;
+}
+/***********************
+H1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #2952a3
+}
+H2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #bb0100
+}
+H3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #2952a3
+}
+***********************/
+.HomeHeader{
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #bb0100
+}
+
+.Pager_CurrentPage {
+	COLOR: #000000; text-decoration: none; font-weight:bold;
+}
+
+/* Section Menu */
+
+/* SMR - BEGIN: Multi-Level Section Menu */
+.SectionMenu a, .SectionMenu a:visited
+{
+	color: #000000;
+	text-decoration: none;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 12px;
+}
+.SectionMenu a:hover
+{
+	text-decoration: underline;
+}
+
+.SectionMenu_SelectedMenuItem
+{
+	font-weight:bold;
+	color:Red;
+}
+
+/* SMR - END: Multi-Level Section Menu */
+
+.SectionMenu2 a {color: #3366cc; font-family: verdana, arial, helvetica, sans-serif; font-size: 12px; font-weight: bold;}
+.SectionMenu2 a:hover {color: #FF6600; text-decoration: underline;}
+
+.SectionNav
+{
+	font-weight:normal;
+	color:black;
+	font-family: verdana, arial, helvetica, sans-serif;
+}
+/*****************************
+  Default Style Elements
+*****************************/
+
+.pageBody 
+{ 
+	margin-top: 0px; 
+	margin-right: 0px; 
+	margin-bottom: 0px; 
+	margin-left: 0px; 
+	FONT-SIZE: x-small; 
+	COLOR: #333333; 
+	background-color:"#ffffff"; 
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+A:link {
+	COLOR: #2952a3
+}
+A:visited {
+	COLOR: #7a5ea3;TEXT-DECORATION:underline
+}
+A:hover {
+	COLOR: #bb0100
+}
+
+.Footer {font-family: verdana, arial, helvetica, sans-serif; font-size: 11px;}
+
+.submenu {
+	FONT-SIZE: 12px;FONT-WEIGHT: bold; 
+	COLOR: #ffffff; 
+	FONT-SIZE: 12px; 
+	TEXT-DECORATION: none; 
+}
+
+.topmenu {
+	FONT-SIZE: 12px;FONT-WEIGHT: bold; 
+	COLOR: #ffffff; TEXT-DECORATION: none;
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px;
+	PADDING-BOTTOM: 5px; PADDING-TOP: 5px;
+}
+.topmenuSel {
+	FONT-SIZE: 12px;FONT-WEIGHT: bold; 
+	COLOR: #bb0100; TEXT-DECORATION: none;
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px;
+	PADDING-BOTTOM: 5px; PADDING-TOP: 5px;
+}
+.topmenu a:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.topmenu a:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.topmenu a:hover {
+	COLOR: #ffcc00; TEXT-DECORATION: none
+}
+.topmenuSel a:link {
+	COLOR: #bb0100; TEXT-DECORATION: none
+}
+.topmenuSel a:visited {
+	COLOR: #bb0100; TEXT-DECORATION: none
+}
+.topmenuSel a:hover {
+	COLOR: #bb0100; TEXT-DECORATION: none
+}
+
+/*********************************
+  Standard Style Elements
+  -----------------------
+  The following style elements are defined for every theme. When 
+  creating a new theme, you should copy these elements.
+***********************************/
+
+/* Section Menu */
+
+.SectionMenu {PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 12px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; TEXT-DECORATION: none;}
+.SectionMenu a {color: #2952a3; text-decoration: none; font-size: 13px; font-weight: bold;}
+.SectionMenu a:hover {text-decoration: underline;}
+
+.SectionMenu2 a {color: #2952a3; text-decoration: none; font-size: 11px; }
+.SectionMenu2 a:hover {text-decoration: underline;}
+
+
+/* Topic Menu */
+
+.TopicMenu a {font-family: Trebuchet, verdana, arial, helvetica, sans-serif;color: #663333; text-decoration: none; font-size: 12px; font-weight: bold;}
+.TopicMenu a:hover {text-decoration: underline;}
+
+
+/* BreadCrumb Navigation */
+
+/*.BreadCrumb {PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 12px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; TEXT-DECORATION: none}*/
+.BreadCrumb {FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #bb0100}
+.BreadCrumb a {FONT-SIZE: 10px;COLOR: #2952a3;/*COLOR: #bb0100; TEXT-DECORATION: none;*/}
+.BreadCrumb a:hover {COLOR: #bb0100; TEXT-DECORATION: none;}
+
+.BreadCrumb_CurrentCrumb A:link {FONT-SIZE: 10px; COLOR: #000000; TEXT-DECORATION: none;/*COLOR: #bb0100; TEXT-DECORATION: none;*/}
+.BreadCrumb_CurrentCrumb A:hover {COLOR: #000000; TEXT-DECORATION: underline;}
+/*
+#_ctl0__ctl4__ctl0_CurrentCrumb{FONT-SIZE: 10px; COLOR: #000000; TEXT-DECORATION: none;}
+*/
+
+/* UserLogin */
+
+.UserLogin {font-family: Arial, Helvetica, Sans Serif; font-size: 12px;}
+.UserLogin a {color: #2952a3; text-decoration: underline; font-size: 10px;}
+.UserLogin a:hover {text-decoration: underline;}
+.UserLogin a:visited {color: #2952a3; text-decoration: underline; font-size: 10px;}
+
+
+
+/* Search */
+
+.Search {FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #2952a3;}
+.Search_NoMatch {font-size: 12px; color: #CC0000;}
+
+
+/***************************
+  Modules 
+***************************/
+
+
+/* Articles */
+.ArticleSection_SectionTitle {FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #2952a3;}
+.ArticleSection_SectionDescription {font-family: verdana, arial, helvetica, sans-serif; font-size: 12px; font-weight: normal;}
+.ArticleSection_ListTable {/*border-left-style: dotted; border-color: #99FFFF; border-top-style: double;*/}
+.ArticleSection_ListItem {background-color:#FFFFFF;}
+.ArticleSection_ListItem2 {background-color:#FFFFFF;}
+.ArticleSection_ListAlternatingItem {background-color:#CCCCFF;}
+.ArticleSection_ListAlternatingItem2 {background-color:#CCCCFF;}
+.ArticleSection_ListTitle {FONT-WEIGHT: bold; FONT-SIZE: 13px}
+.ArticleSection_ListDate {FONT-SIZE: 10px; COLOR: #a2a2a2;}
+.ArticleSection_ListAuthorLink {FONT-SIZE: 10px; COLOR: #a2a2a2}
+.ArticleSection_ListBriefDescription {FONT-SIZE: 11px;FONT-WEIGHT:normal;font-family: verdana, arial, helvetica, sans-serif;}
+.ArticleSection_ListReadMoreLink {FONT-SIZE: 12px; FONT-WEIGHT:bold;}
+.ArticleSection_NoArticles {font-family: verdana, arial, helvetica; font-size: 12px; color: #CC0000;}
+.ArticleSection_RightBlockTitle{FONT-WEIGHT: bold; FONT-SIZE: 12px}
+
+.Article_Table {border:none;}
+.Article_IntroCell {background-color: #ffffff;} 
+.Article_BodyCell {background-color:#FFFFFF;}
+.Article_Title {FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #2952a3}
+.Article_AuthorLink {FONT-SIZE: 12px; COLOR: #a2a2a2;}
+.Article_BriefDescription {FONT-WEIGHT: bold;font-size: 11px;}
+.Article_FullDescription {font-size: 11px;color: #333333}
+
+
+/* Books */
+.BookSection_SectionTitle {FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #2952a3;}
+.BookSection_SectionDescription {font-family: verdana, arial, helvetica, sans-serif; font-size: 12px; font-weight: normal;}
+.BookSection_ListTable {/*border-left-style: dotted; border-color: #99FFFF; border-top-style: double;*/}
+.BookSection_ListItem {background-color:#FFFFFF;}
+.BookSection_ListItem2 {background-color:#FFFFFF;}
+.BookSection_ListAlternatingItem {background-color:#CCCCFF;}
+.BookSection_ListAlternatingItem2 {background-color:#CCCCFF;}
+.BookSection_ListLabel {font: 10pt verdana;}
+.BookSection_ListTitle {FONT-WEIGHT: bold; FONT-SIZE: 13px}
+.BookSection_ListDate {FONT-SIZE: 10px; COLOR: #a2a2a2;}
+.BookSection_ListAuthor {FONT-SIZE: 12px;}
+.BookSection_ListBriefDescription {FONT-SIZE: 11px;FONT-WEIGHT:normal;font-family: verdana, arial, helvetica, sans-serif;}
+.BookSection_ListReadMoreLink {FONT-WEIGHT: bold; FONT-SIZE: 12px;}/*font-family: Trebuchet, verdana, arial, helvetica;color: #2952a3; text-decoration: none; font-size: 12px*/
+.BookSection_ListPublisher {font-style: italic;}
+.BookSection_ListPublicationDate {font-style: italic; }
+.BookSection_ListBriefDescription {font-family: verdana, arial, helvetica, sans-serif; font-size: 12px; font-weight: normal;}
+.BookSection_ListReadMoreLink {color: #2952a3; text-decoration: none; font-size: 14px;}
+.BookSection_NoBooks {font-family: verdana, arial, helvetica; font-size: 12px; color: #CC0000;}
+.BookSection_RightBlockTitle{FONT-WEIGHT: bold; FONT-SIZE: 12px}
+
+.Book_Table {border:none;}
+.Book_IntroCell {background-color: #ffffff;} 
+.Book_BodyCell {background-color:#FFFFFF;}
+.Book_Title {FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #2952a3}
+.Book_Author {FONT-SIZE: 12px; COLOR: #a2a2a2;}
+.Book_BriefDescription {FONT-WEIGHT: bold;font-size: 11px;}
+.Book_FullDescription {font-size: 11px;color: #333333}
+.Book_Label {font-family: Comic Sans MS, sans-serif; font-size: 14px;font-style: italic;}
+
+
+/* Downloads */
+.DownloadSection_SectionTitle {FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #2952a3;}
+.DownloadSection_SectionDescription {font-family: verdana, arial, helvetica, sans-serif; font-size: 12px; font-weight: normal;}
+.DownloadSection_ListTable {padding:0;}
+.DownloadSection_ListItem {background-color:#FFFFFF;}
+.DownloadSection_ListItem2 {background-color:#FFFFFF;}
+.DownloadSection_ListAlternatingItem {background-color:#CCCCFF;}
+.DownloadSection_ListAlternatingItem2 {background-color:#CCCCFF;}
+.DownloadSection_ListTitle {FONT-WEIGHT: bold; FONT-SIZE: 13px}
+.DownloadSection_ListDate {FONT-SIZE: 10px; COLOR: #a2a2a2;}
+.DownloadSection_ListAuthorLink {FONT-SIZE: 10px; COLOR: #a2a2a2;}
+.DownloadSection_ListFileSize {font-family: Trebuchet, verdana, arial, helvetica; font-size: 10px; color:"#CC0000"}
+.DownloadSection_ListDownloadLink {font-family: Trebuchet, verdana, arial, helvetica;color: #2952a3; text-decoration: none; font-size: 12px ; font-weight: bold;}
+.DownloadSection_ListBriefDescription {FONT-SIZE: 11px;FONT-WEIGHT:normal;font-family: verdana, arial, helvetica, sans-serif;}
+.DownloadSection_ListReadMoreLink {FONT-SIZE: 12px;}/*font-family: Trebuchet, verdana, arial, helvetica;color: #2952a3; text-decoration: none; font-size: 12px*/
+.DownloadSection_NoDownloads {font-family: verdana, arial, helvetica; font-size: 12px; color: #CC0000;}
+
+.Download_Table {border:none;}
+.Download_IntroCell {background-color: #ffffff;} 
+.Download_BodyCell {background-color:#FFFFFF;}
+.Download_Title {FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #2952a3;}
+.Download_AuthorLink {FONT-SIZE: 12px; COLOR: #a2a2a2;}
+.Download_BriefDescription {FONT-WEIGHT: normal;}
+.Download_FullDescription {font-size: 12px;color: #333333}
+.Download_Label {font-size: 12px;FONT-WEIGHT: bold;COLOR: #a2a2a2;}
+.Download_FileSize {font-size: 12px;}
+.Download_DownloadLink {font-family: Trebuchet, verdana, arial, helvetica;color: #2952a3; text-decoration: none; font-size: 12px; font-weight: bold;}
+
+
+
+/* Events */
+
+.EventSection_SectionTitle {FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #2952a3;}
+.EventSection_SectionDescription {font-family: verdana, arial, helvetica, sans-serif; font-size: 12px; font-weight: normal;}
+.EventSection_ListTable {/*border-left-style: dotted; border-color: #99FFFF; border-top-style: double;*/}
+.EventSection_ListItem {background-color:#FFFFFF;}
+.EventSection_ListItem2 {background-color:#FFFFFF;}
+.EventSection_ListAlternatingItem {background-color:#CCCCFF;}
+.EventSection_ListAlternatingItem2 {background-color:#CCCCFF;}
+.EventSection_ListTitle {FONT-WEIGHT: bold; FONT-SIZE: 13px}
+.EventSection_ListDate {FONT-SIZE: 10px; COLOR: #a2a2a2;}
+.EventSection_ListBriefDescription {FONT-SIZE: 11px;FONT-WEIGHT:normal;font-family: verdana, arial, helvetica, sans-serif;}
+.EventSection_ListReadMoreLink {FONT-SIZE: 12px; FONT-WEIGHT:bold;}/*font-family: Trebuchet, verdana, arial, helvetica;color: #2952a3; text-decoration: none; font-size: 12px*/
+.EventSection_ListNotVisible {background-color:#CCCCFF;font-size: 12px; font-style: italic;}
+.EventSection_NoEvents {font-family: verdana, arial, helvetica; font-size: 12px; color: #CC0000;}
+.EventSection_RightBlockTitle{FONT-WEIGHT: bold; FONT-SIZE: 12px}
+
+.Event_Table {border:none;}
+.Event_IntroCell {background-color: #ffffff;} 
+.Event_BodyCell {background-color:#FFFFFF;}
+.Event_Title {FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #2952a3}
+.Event_TitleLink {FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #a2a2a2;}
+.Event_AuthorLink {FONT-SIZE: 12px; COLOR: #a2a2a2;}
+.Event_BriefDescription {FONT-WEIGHT: bold;font-size: 11px;}
+.Event_FullDescription {font-size: 11px;color: #333333}
+.Event_Date{FONT-SIZE: 10px}
+.Event_MainLink{FONT-SIZE: 12px}
+.Event_AuxText{FONT-SIZE: 10px; COLOR: #a2a2a2;}
+
+
+/* FAQ */
+
+.FAQSection_ListReadMoreLink {FONT-SIZE: 12px; FONT-WEIGHT:bold;}
+
+/* Home */
+
+.HomeSection_ListReadMoreLink {FONT-SIZE: 11px;}
+.Home_Date{FONT-SIZE: 10px;}/* COLOR: #a2a2a2; */
+
+/* Links */
+
+.LinkSection_SectionTitle {FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #2952a3;}
+.LinkSection_SectionDescription {font-family: verdana, arial, helvetica, sans-serif; font-size: 12px; font-weight: normal;}
+.LinkSection_ListTable {border: none;}
+.LinkSection_ListItem {border-top: thick dashed #cccccc 1px; background-color:#FFFFFF;}
+.LinkSection_ListItem2 {background-color:#FFFFFF;font-family: verdana, arial, helvetica, sans-serif; font-size: 12px; font-weight: normal;}
+.LinkSection_ListAlternatingItem {border-top: thick dashed #cccccc 1px; background-color:#FFFFFF;}
+.LinkSection_ListAlternatingItem2 {background-color:#FFFFFF;}
+.LinkSection_ListTitle {font-size: 12px; font-weight: bold; font-variant: small-caps;}
+.LinkSection_ListBriefDescription {font-family: verdana, arial, helvetica, sans-serif; font-size: 12px; font-weight: normal;}
+.LinkSection_ListCommentLink {color: #3366CC; text-decoration: none; font-size: 12px; font-weight: normal;}
+.LinkSection_NoLinks {font-family: verdana, arial, helvetica; font-size: 12px; color: #CC0000;}
+
+.Link_Table {border: none;}
+.Link_IntroCell {background-color:#FFFFFF;} 
+.Link_BodyCell {background-color:#FFFFFF;}
+.Link_Link {font-size: 12px; font-weight: bold; font-variant: small-caps;}
+.Link_BriefDescription {font-size: 12px;}
+
+
+/* Parent Section */
+
+.ParentSection_SectionTitle {FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #2952a3;}
+.ParentSection_SectionDescription {font-family: verdana, arial, helvetica, sans-serif; font-size: 12px; font-weight: normal;}
+.ParentSection_ListTable {border: none;}
+.ParentSection_ListItem {border-top: thick dashed #cccccc 1px; background-color:#FFFFFF;}
+.ParentSection_ListItem2 {background-color:#CCCCFF;font-family: verdana, arial, helvetica, sans-serif; font-size: 12px; font-weight: normal;}
+.ParentSection_ListAlternatingItem {border-top: thick dashed #cccccc 1px; background-color:#EEEEEE;}
+.ParentSection_ListAlternatingItem2 {background-color:#CCCCFF;}
+.ParnetSection_ListTitleLink {FONT-WEIGHT: bold; FONT-SIZE: 13px;}
+.ParentSection_ListBriefDescription {font-family: verdana, arial, helvetica, sans-serif; font-size: 12px; font-weight: normal;}
+
+
+/* Photo Gallery */
+
+.PhotoSection_SectionTitle {FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #2952a3;}
+.PhotoSection_SectionDescription {font-family: verdana, arial, helvetica, sans-serif; font-size: 12px; font-weight: normal;}
+.PhotoSection_SpacerCell {background-color: #FFFFFF;}
+.PhotoSection_ListTable {}
+.PhotoSection_ListItem {border-top: thick dashed #cccccc 1px; background-color:#FFFFFF;}
+.PhotoSection_ListItem2 {background-color:#CCCCFF;font-family: verdana, arial, helvetica, sans-serif; font-size: 12px; font-weight: normal;}
+.PhotoSection_ListAlternatingItem {border-top: thick dashed #cccccc 1px; background-color:#EEEEEE;}
+.PhotoSection_ListAlternatingItem2 {background-color:#CCCCFF;}
+.PhotoSection_ListTitle {font-family: Comic Sans MS, sans-serif; font-size: 14px; font-style:normal;}
+.PhotoSection_ListBriefDescription {font-family: verdana, arial, helvetica, sans-serif; font-size: 12px; font-weight: normal;}
+.PhotoSection_ListReadMoreLink {font-family: Trebuchet, verdana, arial, helvetica;color: #2952a3; text-decoration: none; font-size: 12px;}
+.PhotoSection_NoPhotos {font-family: verdana, arial, helvetica; font-size: 12px; color: #CC0000;}
+
+.Photo_Table {}
+.Photo_IntroCell {background-color:#FFFFFF;} 
+.Photo_BodyCell {background-color: #FFFFFF;}
+.Photo_Title {color:#993300;font-family: Comic Sans MS, sans-serif; font-size: 16px; font-style:normal;}
+.Photo_AuthorLink {color: #2952a3; text-decoration: none; font-size: 12px; font-weight: normal;}
+.Photo_DateCreated {font-size: 12px;}
+.Photo_BriefDescription {font: 12px verdana; font-style: italic;}
+.Photo_FullDescription {font: 12px verdana;}
+
+.DiscussSection_SectionTitle {FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #2952a3;}
+.DiscussSection_NoPosts{font-family: verdana, arial, helvetica; font-size: 12px; color: #CC0000;}
+.discussCell{font-weight:normal;}
+.discussCellHiLite{font-weight:bold;}
+ 
+.author
+{
+    font-weight: bold;
+}
+a.author
+{
+    font-weight: bold;
+}
+
+.itemCommentText
+{
+    font-size: 120%;
+}
+
+.postBodyText
+{
+    font-size: 1.2em;
+}
+
+.itemDateCreated
+{
+    FONT-SIZE: 10px;
+    COLOR: #a2a2a2;
+}
+
+.DateCreated
+{
+    FONT-SIZE: 10px;
+    COLOR: #a2a2a2;
+}
+
+.discussTable 
+{   
+    background-color: #A5AEBD;
+}
+
+.discussTable td
+{
+    background-color: #F7F7F7;
+    padding: 3px;
+}
+
+.discussDiv
+{
+    background-color: #B2CCE5;
+    height: 10px;
+}
+
+td.discussDiv
+{
+    background-color: #B2CCE5;
+    height: 10px;
+}
+
+.discussTable th 
+{
+    height: 25px;
+    padding: 3px;
+    margin: 1px;
+    background-color: #B2CCE5;
+    color: black;
+    font-weight:bold;
+}
+
+th.headerWorkaround {
+    background-color: #BCE27F;
+}
+
+th.headerSolution {
+    background-color: #96B566;
+}
+
+th.headerSolutionComplete {
+    background-color: #668E39;
+}
+
+td.cellWorkaround {
+    background-color: #BCE27F;
+}
+
+td.cellSolution {
+    background-color: #96B566;
+}
+
+td.cellSolutionComplete {
+    background-color: #668E39;
+}
+
+.tableWorkaround th {
+    background-color: #BCE27F;
+}
+
+.tableSolution th {
+    background-color: #96B566;
+}
+
+.tableSolutionComplete th {
+    background-color: #668E39;
+}
+
+.discussTable a 
+{
+    color: navy;
+    font-size: 11px;
+    text-decoration:underline;
+}
+
+
+.discussAlternCell  
+{
+    padding: 3px;
+    margin: 1px;
+    background-color: #f0f8ff
+}
+
+
+.discussAlternCellHilite  
+{
+    padding: 3px;
+    background-color: #f0f8ff;
+}
+
+
+
+
+/* Comments */
+/*  border: thick dashed #99FFFF 2px;*/
+.Comments_ListTable {border: thick dashed #dddddd 2px;}
+.Comments_ListItem {background-color: #EEE8AA;}
+.Comments_ListItem2 {background-color:#FFFFFF;}
+
+.Comments_ListAlternatingItem {background-color:#EEEEEE;}
+.Comments_ListAlternatingItem2 {background-color:#CCCCFF;}
+
+.Comments_ListTitle {FONT-WEIGHT: bold; FONT-SIZE: 12px;}
+.Comments_ListTitleLink {color: #2952a3; text-decoration: none; font-size: 12px; font-weight: normal;}
+.Comments_ListAuthorLink { text-decoration: none; font-size: 12px; font-weight: normal;}
+.Comments_ListDateCreated {font-size: 12px;}
+.Comments_ListBriefDescription {font-family: verdana, arial, helvetica, sans-serif; font-size: 12px; font-weight: normal;}
+.Comments_ListReplyLink {color: #993300; text-decoration: none; font-size: 12px; font-weight: normal;}
+
+/*  border: thick dashed #99FFFF 2px;*/
+.Comments_Table {}
+.Comments_IntroCell {background-color:#EEE8AA;} 
+.Comments_BodyCell {background-color:#FFFFFF;}
+.Comments_Title {font-size: 12px; font-weight: bold; font-variant: small-caps;}
+.Comments_AuthorLink {font-family: Trebuchet, verdana, arial, helvetica;color: #2952a3; text-decoration: none; font-size: 12px; font-weight: normal;}
+.Comments_DateCreated {font-size: 12px;}
+.Comments_BriefDescription {font-size: 12px;}
+.Comments_ParentLink {font-family: Trebuchet, verdana, arial, helvetica;color: #2952a3; text-decoration: none; font-size: 12px; font-weight: normal;}
+
+
+/* Topics */
+
+.Topics_TopicTitle {font-weight: bold; font-size: 17px; font-variant: small-caps;}
+.Topics_TopicDescription {font-family: verdana, arial, helvetica, sans-serif; font-size: 12px; font-weight: normal;}
+.Topics_ListTable {border: thick dashed #99FFFF 2px;}
+.Topics_ListItem {background-color:#FFFFFF;}
+.Topics_ListItem2 {background-color:#FFFFFF;}
+.Topics_ListAlternatingItem {border-top: thick dashed #cccccc 1px; background-color:#EEEEEE;}
+.Topics_ListAlternatingItem2 {background-color:#CCCCFF;}
+.Topics_ListTitle {font-size: 12px; font-weight: bold; font-variant: small-caps;}
+.Topics_ListTitleLink {color: #2952a3; text-decoration: none; font-size: 12px; font-weight: normal;}
+.Topics_ListAuthorLink {color: #2952a3; text-decoration: none; font-size: 12px; font-weight: normal;}
+.Topics_ListDateCreated {font-size: 12px;}
+.Topics_ListBriefDescription {font-family: verdana, arial, helvetica, sans-serif; font-size: 12px; font-weight: normal;}
+
+
+/* Search */
+/*
+.Search_ListTable {border-left-style: dotted; border-color: #99FFFF; border-top-style: double;}
+.Search_ListItem {background-color:#FFFFFF;}
+.Search_ListItem2 {background-color:#FFFFFF;}
+.Search_ListAlternatingItem {background-color:#CCCCFF;}
+.Search_ListAlternatingItem2 {background-color:#CCCCFF;}
+.Search_ListTitle {FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #2952a3;}
+.Search_ListTitleLink {FONT-WEIGHT: bold; FONT-SIZE: 13px}
+.Search_ListAuthorLink {FONT-SIZE: 10px; COLOR: #a2a2a2}
+.Search_ListDateCreated {font-size: 12px;}
+.Search_ListBriefDescription {FONT-SIZE: 11px;FONT-WEIGHT:normal;font-family: verdana, arial, helvetica, sans-serif;}
+.Search_ListReadMoreLink {FONT-SIZE: 12px; FONT-WEIGHT:bold;}
+.Search_NoResults {font-family: verdana, arial, helvetica; font-size: 12px; color: #CC0000;}
+*/
+
+
+.Search_ListTable {/*border-left-style: dotted; border-color: #99FFFF; border-top-style: double;*/}
+.Search_ListItem {background-color:#FFFFFF;}
+.Search_ListItem2 {background-color:#FFFFFF;}
+.Search_ListAlternatingItem {background-color:#CCCCFF;}
+.Search_ListAlternatingItem2 {background-color:#CCCCFF;}
+.Search_ListTitle {FONT-WEIGHT: bold; FONT-SIZE: 13px}
+.Search_ListTitleLink {FONT-WEIGHT: bold; FONT-SIZE: 13px}
+.Search_ListDate {FONT-SIZE: 10px; COLOR: #a2a2a2;}
+.Search_ListAuthorLink {FONT-SIZE: 10px; COLOR: #a2a2a2}
+.Search_ListBriefDescription {FONT-SIZE: 11px;FONT-WEIGHT:normal;font-family: verdana, arial, helvetica, sans-serif;}
+.Search_ListReadMoreLink {FONT-SIZE: 12px; FONT-WEIGHT:bold;}
+.Search_NoResults {font-family: verdana, arial, helvetica; font-size: 12px; color: #CC0000;}
+
+/*
+.Search_ListTable {border: none;}
+.Search_ListItem {background-color:#dddddd;}
+.Search_ListItem2 {background-color:#FFFFFF;}
+.Search_ListAlternatingItem {border-top: thick dashed #cccccc 1px; background-color:#EEEEEE;}
+.Search_ListAlternatingItem2 {background-color:#CCCCFF;}
+.Search_ListTitle {FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #2952a3;}
+.Search_ListTitleLink {color: #3366CC; text-decoration: none; font-size: 12px; font-weight: normal;}
+.Search_ListAuthorLink {color: #3366CC; text-decoration: none; font-size: 12px; font-weight: normal;}
+.Search_ListDateCreated {font-size: 12px;}
+.Search_ListBriefDescription {font-family: verdana, arial, helvetica, sans-serif; font-size: 12px; font-weight: normal;}
+.Search_NoResults {font-family: verdana, arial, helvetica; font-size: 12px; color: #CC0000;}
+*/
+
+.ListAuthorLink {}
+.itemAuthor{}
+
+/* Form */
+
+.Form_Title {FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #2952a3;}
+.Form_SubTitle {FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #2952a3;}
+.Form_Description {font-size: 12px;}
+.Form_Table {}
+.Form_LabelRow {font-size: 10pt;}
+.Form_LabelCell {font-size: 10pt;}
+.Form_LabelText {FONT-WEIGHT: bold; FONT-SIZE: 10px; white-space:nowrap;}
+.Form_FieldRow {font-size: 12px;}
+.Form_FieldCell {font-size: 12px;}
+.Form_Field {BORDER-RIGHT: #404040 1px solid; BORDER-TOP: #404040 1px solid; BORDER-LEFT: #404040 1px solid; BORDER-BOTTOM: #404040 1px solid; HEIGHT: 20px}
+.Form_SectionRow {background-color: #FFFFFF;}
+.Form_SectionCell {font-size: 12pt;}
+.Form_SectionText {font-weight: bold;}
+.Form_Button {BORDER-RIGHT: #404040 1px solid; BORDER-TOP: #404040 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 10px; BORDER-LEFT: #404040 1px solid; COLOR: #ffffff; BORDER-BOTTOM: #404040 1px solid; HEIGHT: 20px; BACKGROUND-COLOR: #737373}
+.Vote_button {BORDER-RIGHT: #404040 1px solid; BORDER-TOP: #404040 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 10px; BORDER-LEFT: #404040 1px solid; COLOR: #ffffff; BORDER-BOTTOM: #404040 1px solid; HEIGHT: 20px; BACKGROUND-COLOR: #737373}
+.Form_HelpText {font-size: 8pt;}
+.Form_SubSectionRow {font-size: 13px;}
+.Form_SubSectionCell {font-size: 13px;}
+.Form_SubSectionText {font-size: 13px;}
+.Form_List {font-size: 12px;}
+.Form_Message {font-size: 12px; color: #CC0000}
+
+
+/* Web Box */
+
+.WebBox_ListTable {border: none; font-size: 10px;}
+.WebBox_ListItem {font: 10px verdana;}
+.WebBox_ListItem a {color:#2952a3; text-decoration: none; font-size: 10px;}
+.WebBox_ListItem a:hover {text-decoration: underline;}
+
+.WebBox_TitleText {font-family: verdana, arial, helvetica, sans-serif; font-weight: bold; font-size: 12px; }
+.WebBox_TitleText a:active {color: #3366CC; text-decoration: none; }
+.WebBox_TitleText a:link {color: #3366CC; text-decoration: none; }
+.WebBox_TitleText a:visited {color: #3366CC; text-decoration: underline; }
+.WebBox_TitleText a:hover {color: #FF6600; text-decoration: none; }
+
+.WebBox_TitleRow {font-family: verdana, arial, helvetica, sans-serif; font-size: 10px; font-style:italic;}
+.WebBox_TitleCell {font-family: verdana, arial, helvetica, sans-serif; font-size: 10px;}
+.WebBox_Table {font-family: verdana, arial, helvetica, sans-serif; font-size: 10px;}
+.WebBox_SubText {font-family: verdana, arial, helvetica, sans-serif; font-size: 8px;}
+.WebBox_Link {color: #993300;font-family: verdana, arial, helvetica, sans-serif; font-weight: bold; font-size: 10px;}
+
+
+/* Web Service Box */
+
+.WebServiceBox_ListTable {border:none;font-size: 10px;}
+.WebServiceBox_ServiceTitleLink {color: #2952a3; text-decoration: none; font-size: 12px; font-weight: bold;}
+.WebServiceBox_ServiceTitleLink:hover {font-weight: bold;}
+.WebServiceBox_ServiceDescription {font-family: verdana, arial, helvetica, sans-serif; font-size: 10px;}
+.WebServiceBox_ListTitleLink:link {color: #2952a3; text-decoration: none;font: 10px verdana;}
+.WebServiceBox_ListTitleLink:hover {text-decoration: underline;}
+.WebServiceBox_ListDescription {font-family: verdana, arial, helvetica, sans-serif; font-size: 10px; }
+.WebServiceBox_Copyright {font-family: verdana, arial, helvetica, sans-serif; font-size: 8px;}
+.WebServiceBox_LastRefreshed {font-family: verdana, arial, helvetica, sans-serif; font-size: 8px;}
+
+
+/* Forum Login */
+
+.ForumLogin_SectionTitle {FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #2952a3;}
+.ForumLogin_SectionDescription {font-family: verdana, arial, helvetica, sans-serif; font-size: 12px; font-weight: normal;}
+
+.ForumLogin_LoginLink a{FONT-SIZE: 10px; COLOR: #2952a3; text-decoration: underline;}
+.ForumLogin_LoginLink a:hover{FONT-SIZE: 10px; COLOR: #2952a3; text-decoration: none;}
+.ForumLogin_LoginLink a:link{FONT-SIZE: 10px; COLOR: #2952a3; text-decoration: underline;}
+
+
+/* HtmlTextBox */
+
+/*
+pre 
+{
+    word-wrap:break-word;
+    padding:5px;
+    margin-bottom:0px;
+    margin-top:0px;
+    margin-right:0px;
+    margin-left:10px;
+    background-color: white;
+    font: 10px normal Lucida Console;
+}
+
+
+.postBodyText {padding-bottom:0px;width:500px; overflow-x:auto}
+.postBodyText p {margin:0px;}
+
+.commentText {padding-bottom:0px;width:500px; overflow-x:auto}
+.commentText p {margin:0px;}
+
+.itemCommentText {padding-bottom:0px;width:500px; overflow-x:auto}
+.itemCommentText p {margin:0px;}
+
+.articleBodyText {padding-bottom:0px;width:500px; overflow-x:auto}
+.articleBodyText p {margin:0px;}
+
+.bookFullDescription {padding-bottom:0px;width:500px; overflow-x:auto}
+.bookFullDescription p {margin:0px;}
+
+
+.downloadFullDescription {padding-bottom:0px;width:500px; overflow-x:auto}
+.downloadFullDescription p {margin:0px;}
+
+.eventFullDescription {padding-bottom:0px;width:500px; overflow-x:auto}
+.eventFullDescription p {margin:0px;}
+
+.eventSpeakerBiography {padding-bottom:0px;width:500px; overflow-x:auto}
+.eventSpeakerBiography p {margin:0px;}
+
+.itemEventSpeakerBiography {padding-bottom:0px;width:500px; overflow-x:auto}
+.itemEventSpeakerBiography p {margin:0px;}
+
+.photoFullDescription {padding-bottom:0px;width:500px; overflow-x:auto}
+.photoFullDescription p {margin:0px;}
+*/
+
+
+.itemRating TD {FONT-SIZE: 10px; COLOR: #a2a2a2;}
+.rating TD {FONT-SIZE: 10px; COLOR: #000000;}
+
+
+
+/***********************************
+  Theme Specific Style Elements
+  ------------------------------
+  The following style elements are specific to the current
+  theme.
+************************************/
+.headerTitle {
+	FONT-SIZE: 10px; COLOR: #2952a3; cursor:default; 
+}
+.Content_SubTitleRow 
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #2952a3
+}
+
+.Content_TitleText
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #2952a3;
+}
+
+.Content
+{
+	FONT-WEIGHT: bold;
+}
+.Content_SubTitle
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #2952a3;
+}
+.Error_Message
+{
+	FONT-WEIGHT: normal; COLOR: #ff0000;
+}
+SELECT
+{
+	FONT-SIZE: 9px;
+}
+
+.ContentTable 
+{   
+    background-color: #FFFFFF;
+}
+
+.ContentTable td 
+{
+    height: 25px;
+    padding: 3px;
+    margin: 1px;
+    background-color: #B2CCE5;
+    color: black;
+    font-weight:bold;
+}
+.rightBlockTitle
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 12px
+}
+
+.sampleCode 
+{
+	BORDER: solid 1px #b2cce5  ; 
+	PADDING-RIGHT: 5px; 
+	PADDING-LEFT: 5px; 
+	PADDING-BOTTOM: 15px;  
+	PADDING-TOP: 0px; 
+	BACKGROUND-COLOR: #f3f7fb; 
+	font-size:x-small;
+	OVERFLOW: scroll; 
+	WHITE-SPACE: normal;
+}
+
+.inlineCode 
+{
+	PADDING-RIGHT: 5px; 
+	PADDING-LEFT: 5px; 
+	PADDING-BOTTOM: 15px;  
+	PADDING-TOP: 0px; 
+	font-size:x-small;
+	font-family: Courier New;
+	OVERFLOW: scroll; 
+	/*WHITE-SPACE: normal;nowrap*/
+	white-space:pre;
+}
+
+TD.sampleCodeTab 
+{
+	BORDER-RIGHT: #3399FF 0px; 
+	PADDING-RIGHT: 3px; 
+	BORDER-TOP: #3399FF 0px solid;  
+	PADDING-LEFT: 3px; 
+	PADDING-BOTTOM: 3px; 
+	FONT: 8pt verdana; 
+	BORDER-LEFT: #3399FF 1px solid; 
+	WIDTH:  15%; 
+	PADDING-TOP: 3px; 
+	BORDER-BOTTOM: #3399FF 1px solid; 
+	BACKGROUND-COLOR: #99CCFF; 
+	TEXT-ALIGN:  center
+}
+
+TD.sampleCodeBacktab 
+{
+	CURSOR:HAND; 
+	BORDER-RIGHT: #3399FF 0px; 
+	PADDING-RIGHT: 3px; 
+	BORDER-TOP: #3399FF 0px  solid; 
+	PADDING-LEFT: 3px; 
+	PADDING-BOTTOM: 3px; 
+	FONT: 8pt verdana; 
+	BORDER-LEFT: #3399FF 1px solid;  
+	WIDTH: 15%; 
+	PADDING-TOP: 3px; 
+	BORDER-BOTTOM: #3399FF 1px solid; 
+	BACKGROUND-COLOR: #ffffff;  
+	TEXT-ALIGN: center
+}
+
+TD.sampleCodeSpace 
+{
+	BORDER-RIGHT: #cccccc 1px; 
+	PADDING-RIGHT: 0px; 
+	BORDER-TOP: #cccccc 0px solid;  
+	PADDING-LEFT: 0px; 
+	PADDING-BOTTOM: 0px; 
+	FONT: 8pt verdana; 
+	BORDER-LEFT: #3399FF 1px solid; 
+	WIDTH:  70%; 
+	PADDING-TOP: 0px; 
+	BORDER-BOTTOM: #cccccc 1px; 
+	BACKGROUND-COLOR: white
+}
+.code 
+{
+	FONT-FAMILY: courier new; 
+	FONT-SIZE: xx-small;
+}
+TD.code
+{
+	FONT-FAMILY: courier;
+	FONT-SIZE: small;
+}
+
+.GenericPanelYellow { BORDER-RIGHT: #3399ff 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #3399ff 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 15px; BORDER-LEFT: #3399ff 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #3399ff 1px solid; BACKGROUND-COLOR: #e5f2ff }
+.SubSubHead { FONT-WEIGHT: bold; FONT-SIZE: x-small; COLOR: black; FONT-FAMILY: Verdana, Arial }
+.Normal { FONT-SIZE: 10px; FONT-FAMILY: Verdana, Arial }
+
+.DiscussSection_ListReadMoreLink {FONT-SIZE: 12px}
+
+.itemParentSectionTitleLink{FONT-WEIGHT: bold; COLOR: #2952a3;}
+.ParentSection_ListTitleLink{FONT-WEIGHT: bold; COLOR: #000000; cursor:hand}
+TR.titlerow /* for the row that contains column headers in a table */
+{
+	BACKGROUND-COLOR: #b2cce5; /*#FF9900;*/
+	FONT-WEIGHT: bold;
+	COLOR: #FFFFFF;
+}
+
+TD.titlerow /* for column headers in a table */
+{
+	BACKGROUND-COLOR: #b2cce5;
+	FONT-WEIGHT: bold;
+	COLOR: #FFFFFF;
+}
+
+
+.itemTitleLink{FONT-WEIGHT: bold; FONT-SIZE: 12px;}
+
+.code 
+{
+	FONT-FAMILY: courier new; 
+	FONT-SIZE: xx-small;
+}
+
+.comment 
+{
+	COLOR: green
+}
+
+.marked 
+{ 
+	COLOR: #0000dd;
+}
+
+.insertTag
+{
+	color:Navy;
+	cursor:hand;
+	font-weight:bold;
+}
+
+.headerHref
+{
+	FONT-WEIGHT:bold; 
+	FONT-SIZE:small; 
+	COLOR:#000066;
+}
+
+.vsheaderHref
+{
+	FONT-WEIGHT:bold; 
+	FONT-SIZE:medium; 
+	COLOR:#000066;
+}
+
+.master
+{
+	background: #ffffee;
+}
+
+.scroll{
+	overflow-y:auto;
+	overflow-x:auto;
+	background: #ffffff;
+	FONT-FAMILY: Verdana;
+    FONT-SIZE: x-small;
+}
+
+
+.samplecode_yel { background-color:yellow;}
+.kw
+{
+	color: blue;
+}
+
+.com
+{
+	color: green;
+}
+
+.str
+{
+	color: darkcyan;
+}
+
+.lineQuote
+{
+	color: #338822;
+}
+
+.tagline
+{
+	color: brown;
+	text-indent: 5mm;
+	padding-top: 5mm;
+	FONT-SIZE: 10px; 
+}
+
+td.c
+{
+	font-family: 'courier','courier new', 'courier cyr','courier new cyr';
+	background-color: #EEEEEE;
+	color: black;
+	margin: 0px;
+	padding: 0px 0px;
+}
+
+/*** RSS Feed Button ***/
+.standardsButton
+{
+    border:1px solid;
+    border-color:#ffc8a4 #7d3302 #3f1a01 #ff9a57;
+    padding:0px 3px 0px 3px;
+    font:bold 10px verdana,sans-serif; 
+    color:#FFFFFF; 
+    background-color:#ff6600;
+    text-decoration:none;
+    margin:0px;
+    vertical-align:middle;   
+}
+.standardsButton:link
+{
+    border:1px solid;
+    border-color:#ffc8a4 #7d3302 #3f1a01 #ff9a57;
+    padding:0px 3px 0px 3px;
+    font:bold 10px verdana,sans-serif; 
+    color:#FFFFFF; 
+    background-color:#ff6600;
+    text-decoration:none;
+    margin:0px;
+    vertical-align:middle;   
+}
+.standardsButton:hover
+{
+    border:1px solid;
+    border-color:#ffc8a4 #7d3302 #3f1a01 #ff9a57;
+    padding:0px 3px 0px 3px;
+    font:bold 10px verdana,sans-serif; 
+    color:#FFFFFF; 
+    background-color:#ff6600;
+    text-decoration:none;
+    margin:0px;
+    vertical-align:middle;
+}
+.standardsButton:visited
+{
+    border:1px solid;
+    border-color:#ffc8a4 #7d3302 #3f1a01 #ff9a57;
+    padding:0px 3px 0px 3px;
+    font:bold 10px verdana,sans-serif; 
+    color:#FFFFFF; 
+    background-color:#ff6600;
+    text-decoration:none;
+    margin:0px;
+    vertical-align:middle;
+}
+.rssFeedLink
+{
+	text-decoration:none;
+	BORDER: #b2cce5 1px solid;
+	BACKGROUND-COLOR: #2952a3;
+	font:bold 10px verdana,sans-serif; 
+	COLOR: #ffffff;
+	padding:0px 3px 0px 3px;
+	margin:0px;
+	vertical-align:middle;
+}
+.rssFeedLink:link
+{
+	text-decoration:none;
+	BORDER: #b2cce5 1px solid;
+	BACKGROUND-COLOR: #2952a3;
+	font:bold 10px verdana,sans-serif; 
+	COLOR: #ffffff;  
+	padding:0px 3px 0px 3px;
+	margin:0px;
+	vertical-align:middle;
+}
+.rssFeedLink:hover
+{
+	text-decoration:none;
+	BORDER: #b2cce5 1px solid;
+	BACKGROUND-COLOR: #2952a3;
+	font:bold 10px verdana,sans-serif; 
+	COLOR: #ffffff;
+	padding:0px 3px 0px 3px;
+	margin:0px;
+	vertical-align:middle;
+}
+.rssFeedLink:visited
+{	
+	text-decoration:none;
+	BORDER: #b2cce5 1px solid;
+	BACKGROUND-COLOR: #2952a3;
+	font:bold 10px verdana,sans-serif; 
+	COLOR: #ffffff;
+	padding:0px 3px 0px 3px;
+	margin:0px;
+	vertical-align:middle;
+}
+
+pre.inlineCode
+{
+	width: 500px;
+	OVERFLOW:auto;
+	OVERFLOW-X: expression((document.getElementsByTagName('html')[0].offsetWidth + 8) > 800 ? 'visible' : 'auto');
+	OVERFLOW-Y: visible;
+	FONT-SIZE: 90%;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+}
+pre.sampleCode {
+	BORDER: #b2cce5 1px solid;
+	PADDING: 15px; 
+	FONT-SIZE: 90%; 
+	width: 500px;
+	OVERFLOW:auto;
+	OVERFLOW-X: expression((document.getElementsByTagName('html')[0].offsetWidth + 8) > 800 ? 'visible' : 'auto');
+	OVERFLOW-Y: visible;
+	BACKGROUND-COLOR: #f3f7fb;
+	FONT-SIZE: 90%;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; 
+}
+
+img#RSSLink
+{
+	float: right;
+	margin: 5px 20px;
+}
+/*
+p
+{
+    margin: 0em 0em 0em 0em;
+}
+*/
+a img
+{
+	border-width: 0px;
+}
+
+blockquote
+{
+	background: #f3f7fb;
+	border-left: 6px #b2cce5 solid;
+	padding:  5px 0px 0px 15px;
+	margin: 10px 10px 0px 10px;
+}
+
+blockquote blockquote
+{
+	border-left: 3px #b2cce5 solid;
+	padding:  5px 0px 5px 5px;
+}
+.loginBox
+{
+	FONT-SIZE: 100%; 
+}
+
+.img-shadow {
+  float:left;
+  /*background: url('/images/shadowAlpha.png') no-repeat bottom right !important;
+  background: url('/images/shadow.gif') no-repeat bottom right;*/
+  margin: 10px 0 0 10px !important;
+  margin: 10px 0 0 5px;
+  }
+
+.img-shadow img {
+  display: block;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #a9a9a9;
+  margin: -6px 6px 6px -6px;
+  padding: 4px;
+  } 
+div.error 
+{
+	border: #e50d2e 2px solid;
+	background-image: url('error000.gif');
+	background-repeat:repeat;
+}
+div.message {
+	margin: 10px 0px 0px 0px; 
+	border-right-style: none; 
+	border-left-style: none;
+}
+div.message p {
+	font-weight: bold; 
+	margin: 6px 12px 6px 12px;
+}
+img.itemDiscussMarkIcon
+{
+	position:relative;
+	top:4px;
+}
+
+div.contentdiv
+{
+	padding:10px 20px 20px 30px
+}

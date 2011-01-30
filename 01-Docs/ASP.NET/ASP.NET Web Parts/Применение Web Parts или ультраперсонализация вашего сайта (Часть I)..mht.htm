@@ -1,0 +1,624 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<html>
+	<head>
+<title>Применение Web Parts или ультраперсонализация вашего сайта (Часть I).</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251;charset=windows-1251" />
+<link rel="stylesheet" type="text/css" href="%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/Default0.css"/>
+<link href="http://www.GotDotNet.ru/rss/rss.rss?sectionID=41&pageID=378957" type="application/rss+xml" rel="alternate" title="ASP.NET"/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.GotDotNet.ru/LearnDotNet/ASPNET/rsd.ashx"/>
+<link title="GotDotNet.ru/ASPNET" rel="search" type="application/opensearchdescription+xml" href="OpenSearchDescription.ashx" />
+<meta name="verify-v1" content="RTN6Oq6Xb39ZNNefDTPGP0QAKR2QY82/qPoPihsIs+Q=" />
+<meta name="KEYWORDS" content="Применение,Web,Parts,ультраперсонализация,вашего,сайта,Часть,Данная,статья,описывает,основы,работы,технологии,которая,стала,доступна,начиная,ASP.NET,версии,2.0,Прочитав,данную,статью,получите,представление,правильно,создавать,предоставлять"/>
+<meta name="DESCRIPTION" content="Применение Web Parts или ультраперсонализация вашего сайта (Часть I). Данная статья описывает основы работы технологии Web Parts, которая стала доступна, начиная с ASP.NET версии 2.0. Прочитав данную статью, вы получите представление, как правильно с"/>
+<meta name="PAGETYPE" content="ASPNET.StarterKit.Communities.Articles.Article"/>
+<meta http-equiv="Page-Exit" content="progid:DXImageTransform.Microsoft.Fade(duration=0)" />
+<meta name="WT.sp" content="_gotdotnet_ru_" />
+<link rel="SHORTCUT ICON" href="%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/favicon0.ico"/>
+</head>
+<body marginheight="0" marginwidth="0" leftmargin="0" rightmargin="0" class="pageBody">
+<form name="PageForm" method="post" action="" id="PageForm">
+<input type="hidden" name="__VIEWSTATE" value="dDwyMTQxMjc4NDIxO3Q8O2w8aTwyPjs+O2w8dDw7bDxpPDA+Oz47bDx0PDtsPGk8OD47PjtsPHQ8O2w8aTwwPjs+O2w8dDw7bDxpPDA+Oz47bDx0PDtsPGk8MTA+O2k8MTE+Oz47bDx0PDtsPGk8MD47PjtsPHQ8O2w8aTwwPjs+O2w8dDxwPHA8bDxWaXNpYmxlOz47bDxvPGY+Oz4+Oz47Oz47Pj47Pj47dDw7bDxpPDA+Oz47bDx0PDtsPGk8MD47PjtsPHQ8O2w8aTwwPjs+O2w8dDxwPHA8bDxUb3RhbFJlY29yZHM7Q3VycmVudFBhZ2U7UmVjb3Jkc1BlclBhZ2U7TnVtSXRlbXM7PjtsPGk8ND47aTwxPjtpPDIwPjtpPDQ+Oz4+Oz47bDxpPDE+O2k8Mz47aTw1PjtpPDc+Oz47bDx0PDtsPGk8MD47PjtsPHQ8O2w8aTw1Pjs+O2w8dDxwPHA8bDxDb250ZW50UGFnZUlES2V5O0F1dGhvcjs+O2w8aTwzODA1ODg+O0tvc3Rlbjs+Pjs+Ozs+Oz4+Oz4+O3Q8O2w8aTwwPjs+O2w8dDw7bDxpPDU+Oz47bDx0PHA8cDxsPENvbnRlbnRQYWdlSURLZXk7QXV0aG9yOz47bDxpPDQ4MjI2Nj47Y2hlZXp5Oz4+Oz47Oz47Pj47Pj47dDw7bDxpPDA+Oz47bDx0PDtsPGk8NT47PjtsPHQ8cDxwPGw8Q29udGVudFBhZ2VJREtleTtBdXRob3I7PjtsPGk8NDk5NzQwPjtWYXNpbF8yMDA2Oz4+Oz47Oz47Pj47Pj47dDw7bDxpPDA+Oz47bDx0PDtsPGk8NT47PjtsPHQ8cDxwPGw8Q29udGVudFBhZ2VJREtleTtBdXRob3I7PjtsPGk8NTcwNDIzPjtkem9uZTs+Pjs+Ozs+Oz4+Oz4+Oz4+Oz4+Oz4+Oz4+Oz4+Oz4+Oz4+Oz4+Oz4+Oz4+O2w8X2N0bDA6X2N0bDA6X2N0bDA6Y2hrUGVyc2lzdDs+Ps3mEKMWa+xFl3T/ZuA4JhCQ+U/C" />
+
+<SCRIPT language="JavaScript" src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/smenu000.js'></SCRIPT>
+
+
+<script type="text/javascript">
+	var gDomain = "m.webtrends.com";
+	var gDcsId = "dcs0gcx1f100004bjlbslq2j8_6e2o";
+	var gTrackEvents = 1;
+	var gFpc = "WT_FPC";
+	var gOffsite = false;
+	if (document.cookie.indexOf(gFpc + "=") == -1) {
+	document.write("<scr" + "ipt type='text/javascript' src='" + "http" + (window.location.protocol.indexOf('https:') == 0 ? 's' : '') + "://" + gDomain + "/" + gDcsId + "/wtid.js" + "'> </scr" + "ipt>");
+	}
+</script>
+<script type="text/javascript" src="%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/wt000000.js"></script>
+<noscript>
+	<img alt="" id="DCSIMG" width="1" height="1" src="http://m.webtrends.com/ dcs0gcx1f100004bjlbslq2j8_6e2o/njs.gif?dcsuri=/nojavascript&WT.js=No">
+</noscript>
+
+
+
+<IMG height="3" alt="" src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer00.gif' width="1" border="0" /><BR/>
+<TABLE cellSpacing="0" cellPadding="0" width="100%" border="0">
+	<TR vAlign="top">
+		<TD width="100%">
+			<TABLE cellSpacing="0" cellPadding="0" width="100%" border="0">
+				<TR>
+					<TD bgColor="#b2cce5" height="63">
+						<TABLE onmouseover="try{mclose();}catch(e){}" height="89" cellSpacing="0" cellPadding="0" width="100%" border="0">
+							<TR>
+								<td width="174" valign="top"><a href="http://www.gotdotnet.ru/" id="_ctl0_headlink"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/up_corne.gif' alt="на первую страницу" width="174" height="78" border="0"></a></td>
+								
+								<TD align=left width=100%>
+									<TABLE cellSpacing="0" cellPadding="0" border="0">
+										<TR>
+											<TD align=left width="1"><IMG height="45" alt="" hspace="17" src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/header_v.gif' width="1" border="0"></TD>
+											<td width=100% align=left>
+												<TABLE cellSpacing="0" cellPadding="0" border="0">
+													<TR>
+														<!-- - - - - - - - - <Поиск> - - - - - - - - - //-->
+														<TD><input name="_ctl0:txtSearch" type="text" id="_ctl0_txtSearch" class="Form_Field" /></TD>
+														<TD><IMG height="1" alt="" src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer00.gif' width="10" border="0"></TD>
+														<TD><input type="submit" name="_ctl0:btnLogin" value="Искать" id="_ctl0_btnLogin" class="Form_Button" /></TD>
+														<!-- - - - - - - - - </Поиск> - - - - - - - - - //-->
+														<!--<TD><nobr><a href="http://contest2005.gotdotnet.ru/default.aspx">contest2005</a>&nbsp;&nbsp;<a href="http://www.gotdotnet.ru/default.aspx">www.gotdotnet.ru</a></nobr></TD>-->
+													</TR>
+												</TABLE>
+											</td>
+										</TR>
+									</TABLE>
+								</td>
+								<TD align="right">
+									
+									
+<!-- Start:	ASPNET.StarterKit.Communities.Login	-->
+<!-- Skin	Path: /communities/common/themes/cruise/skins/contentskins/users_login.ascx -->
+<span class="UserLogin">
+	<table width="100%" cellspacing="0" cellpadding="0" border="0">
+		<tr>
+			<TD width="1"><IMG height="45" alt="" hspace="17" src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/header_w.gif' width="1" border="0"></TD>
+			<td align=right>
+				<table cellspacing="1" cellpadding="1" border="0">
+					<tr>
+						<td>Логин</td>
+						<td>&nbsp;<input name="_ctl0:_ctl0:_ctl0:txtUsername" type="text" size="10" id="_ctl0__ctl0__ctl0_txtUsername" class="Form_Field" onkeydown="javascript:if(13==event.keyCode){document.getElementById('_ctl0__ctl0__ctl0_txtPassword').focus(); return false;}" /></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Пароль</td>
+						<td>&nbsp;<input name="_ctl0:_ctl0:_ctl0:txtPassword" type="password" size="10" id="_ctl0__ctl0__ctl0_txtPassword" class="Form_Field" onkeydown="javascript:if(13==event.keyCode){document.getElementById('_ctl0__ctl0__ctl0_btnLogin').click(); return false;}" /></td>
+						<td><input type="submit" name="_ctl0:_ctl0:_ctl0:btnLogin" value="Вход" id="_ctl0__ctl0__ctl0_btnLogin" class="Form_Button" /></td>
+					</tr>
+						<td colspan=3 nowrap>
+							<input id="_ctl0__ctl0__ctl0_chkPersist" type="checkbox" name="_ctl0:_ctl0:_ctl0:chkPersist" /><label for="_ctl0__ctl0__ctl0_chkPersist">Помнить меня</label>
+							&nbsp;|&nbsp;<a id="_ctl0__ctl0__ctl0_lnkRegister" href="http://www.gotdotnet.ru/LearnDotNet/ASPNET/Users_Register.aspx" style="color: #2952a3; text-decoration: underline;font-size: 11px;">Регистрация</a>
+							&nbsp;|&nbsp;<a id="_ctl0__ctl0__ctl0_lnkPasswordReminder" title="Напоминание пароля" href="http://www.gotdotnet.ru/LearnDotNet/ASPNET/Users_PasswordReminder.aspx" style="color: #2952a3; text-decoration: underline;font-size: 11px;">Забыли?</a>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=3>
+							
+							
+							
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+</span>
+<!-- End: ASPNET.StarterKit.Communities.Login -->
+
+									
+								</TD>
+								<TD width="1"><IMG height="1" alt="" src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer00.gif' width="10" border="0"></TD>
+							</TR>
+							
+						</TABLE>
+					</TD>
+				</TR>
+				<TR>
+						<TD bgColor="#f1f8ff"><IMG height="1" alt="" src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer00.gif' width="1" border="0" /></TD>
+				</TR>
+				<TR>
+					<TD>
+					<!-- - - - - - - - - <Меню> - - - - - - - - - //-->
+						
+<!-- Start:	ASPNET.StarterKit.Communities.SectionMenu	-->
+<!-- Skin	Path: /communities/common/themes/cruise/skins/controlskins/sections_sectionmenu.ascx -->
+<span id="_ctl0_sectionMenu"><TABLE cellSpacing="0" cellPadding="0" width="100%" border="0"><TR><TD class="topmenu" bgColor="#4682b4"><table cellspacing="0" cellpadding="0" border="0"><tr><td class="topmenu"><div id="mmenu1" onclick="noClose=1"><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl1_lnkSection" onmouseover="mopen(1)" href="http://www.gotdotnet.ru/News/default.aspx" style="padding:2px;">Новости</a></nobr></b><br><div style="display:none; POSITION:absolute; BACKGROUND-COLOR:#4682b4" id="menu1" onmouseout="mclosetime()" onmouseover="mcancelclosetime()"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="1" height="10" border="0"><br><table cellspacing="0" cellpadding="0" border="0" bgcolor="white"><tr><td><table cellspacing="1" cellpadding="10" border="0"><tr><td class="submenu" bgColor="#4682b4"><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl1_ChildSections__ctl1_lnkChildSection" href="http://www.gotdotnet.ru/News/SiteNews/default.aspx">Новости сайта</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl1_ChildSections__ctl2_lnkChildSection" href="http://www.gotdotnet.ru/News/Events/default.aspx">События</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl1_ChildSections__ctl3_lnkChildSection" href="http://www.gotdotnet.ru/News/MSNews/default.aspx">Новости Microsoft</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl1_ChildSections__ctl4_lnkChildSection" href="http://www.gotdotnet.ru/News/DevNews/default.aspx">Новости от разработчиков</a></nobr></b><br></td></tr></table></td></tr></table></div></div></td><td><span style="background-color:white;"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width=1 height=18 border=0 align="absmiddle"></span></td><td class="topmenu"><div id="mmenu2" onclick="noClose=2"><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl3_lnkSection" onmouseover="mopen(2)" href="http://www.gotdotnet.ru/LearnDotNet/default.aspx" style="padding:2px;">Статьи</a></nobr></b><br><div style="display:none; POSITION:absolute; BACKGROUND-COLOR:#4682b4" id="menu2" onmouseout="mclosetime()" onmouseover="mcancelclosetime()"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="1" height="10" border="0"><br><table cellspacing="0" cellpadding="0" border="0" bgcolor="white"><tr><td><table cellspacing="1" cellpadding="10" border="0"><tr><td class="submenu" bgColor="#4682b4"><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl3_ChildSections__ctl1_lnkChildSection" href="http://www.gotdotnet.ru/LearnDotNet/DotNet30/default.aspx">.Net Framework 3.0</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl3_ChildSections__ctl2_lnkChildSection" href="http://www.gotdotnet.ru/LearnDotNet/NETFramework/default.aspx">.Net Framework</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl3_ChildSections__ctl3_lnkChildSection" href="http://www.gotdotnet.ru/LearnDotNet/ASPNET/default.aspx">ASP.NET</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl3_ChildSections__ctl4_lnkChildSection" href="http://www.gotdotnet.ru/LearnDotNet/ADONET/default.aspx">ADO.NET</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl3_ChildSections__ctl5_lnkChildSection" href="http://www.gotdotnet.ru/LearnDotNet/VBNET/default.aspx">VB.NET</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl3_ChildSections__ctl6_lnkChildSection" href="http://www.gotdotnet.ru/LearnDotNet/CSharp/default.aspx">C#</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl3_ChildSections__ctl7_lnkChildSection" href="http://www.gotdotnet.ru/LearnDotNet/Mobility/default.aspx">Mobility</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl3_ChildSections__ctl8_lnkChildSection" href="http://www.gotdotnet.ru/LearnDotNet/XMLWebServices/default.aspx">Web Services</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl3_ChildSections__ctl9_lnkChildSection" href="http://www.gotdotnet.ru/LearnDotNet/WinForms/default.aspx">Windows Forms </a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl3_ChildSections__ctl10_lnkChildSection" href="http://www.gotdotnet.ru/LearnDotNet/Algorithms/default.aspx">Алгоритмы на .NET</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl3_ChildSections__ctl11_lnkChildSection" href="http://www.gotdotnet.ru/LearnDotNet/Misc/default.aspx">Разное</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl3_ChildSections__ctl12_lnkChildSection" href="http://www.gotdotnet.ru/LearnDotNet/ArticlesCompetition/default.aspx">Архив конкурса статей</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl3_ChildSections__ctl13_lnkChildSection" href="http://www.gotdotnet.ru/LearnDotNet/Announces/default.aspx">Анонсы компаний</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl3_ChildSections__ctl14_lnkChildSection" href="http://www.gotdotnet.ru/LearnDotNet/IIS/default.aspx">Internet Information Server</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl3_ChildSections__ctl15_lnkChildSection" href="http://www.gotdotnet.ru/LearnDotNet/Silverlight/default.aspx">Silverlight</a></nobr></b><br></td></tr></table></td></tr></table></div></div></td><td><span style="background-color:white;"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width=1 height=18 border=0 align="absmiddle"></span></td><td class="topmenu"><div id="mmenu3" onclick="noClose=3"><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl5_lnkSection" onmouseover="mopen(3)" href="http://www.gotdotnet.ru/DotNet/default.aspx" style="padding:2px;">Используем .NET</a></nobr></b><br><div style="display:none; POSITION:absolute; BACKGROUND-COLOR:#4682b4" id="menu3" onmouseout="mclosetime()" onmouseover="mcancelclosetime()"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="1" height="10" border="0"><br><table cellspacing="0" cellpadding="0" border="0" bgcolor="white"><tr><td><table cellspacing="1" cellpadding="10" border="0"><tr><td class="submenu" bgColor="#4682b4"><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl5_ChildSections__ctl1_lnkChildSection" href="http://www.gotdotnet.ru/DotNet/FAQ/default.aspx">Часто задаваемые вопросы</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl5_ChildSections__ctl2_lnkChildSection" href="http://www.gotdotnet.ru/DotNet/Student/default.aspx">Студентам</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl5_ChildSections__ctl3_lnkChildSection" href="http://www.gotdotnet.ru/DotNet/Books/default.aspx">Книги</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl5_ChildSections__ctl4_lnkChildSection" href="http://www.gotdotnet.ru/DotNet/Vocabulary/default.aspx">Словарь терминов</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl5_ChildSections__ctl5_lnkChildSection" href="http://www.gotdotnet.ru/DotNet/AskExpert/default.aspx">Архив чатов</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl5_ChildSections__ctl6_lnkChildSection" href="http://www.gotdotnet.ru/DotNet/UsefulLinks/default.aspx">Полезные ссылки</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl5_ChildSections__ctl7_lnkChildSection" href="http://www.gotdotnet.ru/DotNet/ASPNET20Gallery/default.aspx">Галерея сайтов ASP.NET 2.0</a></nobr></b><br></td></tr></table></td></tr></table></div></div></td><td><span style="background-color:white;"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width=1 height=18 border=0 align="absmiddle"></span></td><td class="topmenu"><div id="mmenu4" onclick="noClose=4"><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl7_lnkSection" onmouseover="mopen(4)" href="http://www.gotdotnet.ru/Downloads/default.aspx" style="padding:2px;">Файлы</a></nobr></b><br><div style="display:none; POSITION:absolute; BACKGROUND-COLOR:#4682b4" id="menu4" onmouseout="mclosetime()" onmouseover="mcancelclosetime()"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="1" height="10" border="0"><br><table cellspacing="0" cellpadding="0" border="0" bgcolor="white"><tr><td><table cellspacing="1" cellpadding="10" border="0"><tr><td class="submenu" bgColor="#4682b4"><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl7_ChildSections__ctl1_lnkChildSection" href="http://www.gotdotnet.ru/Downloads/Examples/default.aspx">Примеры</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl7_ChildSections__ctl2_lnkChildSection" href="http://www.gotdotnet.ru/Downloads/AspNetStarterKits/default.aspx">ASP.NET Starter Kits</a></nobr></b><br></td></tr></table></td></tr></table></div></div></td><td><span style="background-color:white;"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width=1 height=18 border=0 align="absmiddle"></span></td><td class="topmenu"><div id="mmenu5" onclick="noClose=5"><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl9_lnkSection" onmouseover="mopen(5)" href="http://www.gotdotnet.ru/Hosting/default.aspx" style="padding:2px;">Пробный хостинг</a></nobr></b><br></div></td><td><span style="background-color:white;"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width=1 height=18 border=0 align="absmiddle"></span></td><td class="topmenu"><div id="mmenu6" onclick="noClose=6"><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl11_lnkSection" onmouseover="mopen(6)" href="http://www.gotdotnet.ru/Student/default.aspx" style="padding:2px;">Студентам</a></nobr></b><br><div style="display:none; POSITION:absolute; BACKGROUND-COLOR:#4682b4" id="menu6" onmouseout="mclosetime()" onmouseover="mcancelclosetime()"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="1" height="10" border="0"><br><table cellspacing="0" cellpadding="0" border="0" bgcolor="white"><tr><td><table cellspacing="1" cellpadding="10" border="0"><tr><td class="submenu" bgColor="#4682b4"><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl11_ChildSections__ctl1_lnkChildSection" href="http://www.gotdotnet.ru/Student/News/default.aspx">Новости</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl11_ChildSections__ctl2_lnkChildSection" href="http://www.gotdotnet.ru/Student/ImagineCup/default.aspx">Imagine Cup</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl11_ChildSections__ctl3_lnkChildSection" href="http://www.gotdotnet.ru/Student/Conference/default.aspx">Конференции</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl11_ChildSections__ctl4_lnkChildSection" href="http://www.gotdotnet.ru/Student/Forums/default.aspx">Студ. форумы</a></nobr></b><br></td></tr></table></td></tr></table></div></div></td><td><span style="background-color:white;"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width=1 height=18 border=0 align="absmiddle"></span></td><td class="topmenu"><div id="mmenu7" onclick="noClose=7"><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl13_lnkSection" onmouseover="mopen(7)" href="http://www.gotdotnet.ru/Channel9/default.aspx" style="padding:2px;">Channel 9</a></nobr></b><br></div></td><td><span style="background-color:white;"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width=1 height=18 border=0 align="absmiddle"></span></td><td class="topmenu"><div id="mmenu8" onclick="noClose=8"><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl15_lnkSection" onmouseover="mopen(8)" href="http://www.gotdotnet.ru/UserGroups/default.aspx" style="padding:2px;">UserGroups</a></nobr></b><br></div></td><td><span style="background-color:white;"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width=1 height=18 border=0 align="absmiddle"></span></td><td class="topmenu"><div id="mmenu9" onclick="noClose=9"><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl17_lnkSection" onmouseover="mopen(9)" href="http://www.gotdotnet.ru/DevDays/default.aspx" style="padding:2px;">Дни Разработчика</a></nobr></b><br></div></td><td><span style="background-color:white;"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width=1 height=18 border=0 align="absmiddle"></span></td><td class="topmenu"><div id="mmenu10" onclick="noClose=10"><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl19_lnkSection" onmouseover="mopen(10)" href="http://www.gotdotnet.ru/About/default.aspx" style="padding:2px;">О сайте</a></nobr></b><br><div style="display:none; POSITION:absolute; BACKGROUND-COLOR:#4682b4" id="menu10" onmouseout="mclosetime()" onmouseover="mcancelclosetime()"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="1" height="10" border="0"><br><table cellspacing="0" cellpadding="0" border="0" bgcolor="white"><tr><td><table cellspacing="1" cellpadding="10" border="0"><tr><td class="submenu" bgColor="#4682b4"><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl19_ChildSections__ctl1_lnkChildSection" href="http://www.gotdotnet.ru/About/GDNCommunityProjects/default.aspx">Проекты сообщества</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl19_ChildSections__ctl2_lnkChildSection" href="http://www.gotdotnet.ru/About/RulesUse/default.aspx">Правила использования</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl19_ChildSections__ctl3_lnkChildSection" href="http://www.gotdotnet.ru/About/PolicyProtection/default.aspx">Политика защиты</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl19_ChildSections__ctl4_lnkChildSection" href="http://www.gotdotnet.ru/About/CodeBehaviour/default.aspx">Кодекс поведения</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl19_ChildSections__ctl5_lnkChildSection" href="http://www.gotdotnet.ru/About/SignInHelp/default.aspx">Трудности со входом на сайт</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl19_ChildSections__ctl6_lnkChildSection" href="http://www.gotdotnet.ru/About/SearchHelp/default.aspx">Язык поисковых запросов</a></nobr></b><br></td></tr></table></td></tr></table></div></div></td><td><span style="background-color:white;"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width=1 height=18 border=0 align="absmiddle"></span></td><td class="topmenu"><div id="mmenu11" onclick="noClose=11"><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_lnkSection" onmouseover="mopen(11)" href="http://www.gotdotnet.ru/Forums/default.aspx" style="padding:2px;">Форумы</a></nobr></b><br><div style="display:none; POSITION:absolute; BACKGROUND-COLOR:#4682b4" id="menu11" onmouseout="mclosetime()" onmouseover="mcancelclosetime()"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="1" height="10" border="0"><br><table cellspacing="0" cellpadding="0" border="0" bgcolor="white"><tr><td><table cellspacing="1" cellpadding="10" border="0"><tr><td class="submenu" bgColor="#4682b4"><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl1_lnkChildSection" href="http://www.gotdotnet.ru/Forums/AllForums/default.aspx">Темы из всех форумов</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl2_lnkChildSection" href="http://www.gotdotnet.ru/Forums/AllOpenTopics/default.aspx">Вопросы без ответов</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl3_lnkChildSection" href="http://www.gotdotnet.ru/Forums/Common/default.aspx">Общий форум</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl4_lnkChildSection" href="http://www.gotdotnet.ru/Forums/Data/default.aspx">Работа с данными</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl5_lnkChildSection" href="http://www.gotdotnet.ru/Forums/XML/default.aspx">Работа с XML</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl6_lnkChildSection" href="http://www.gotdotnet.ru/Forums/Web/default.aspx">ASP.NET</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl7_lnkChildSection" href="http://www.gotdotnet.ru/Forums/Windows/default.aspx">WinForms</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl8_lnkChildSection" href="http://www.gotdotnet.ru/Forums/SharePoint/default.aspx">WSS и Sharepoint Portal</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl9_lnkChildSection" href="http://www.gotdotnet.ru/Forums/IIS7/default.aspx">Пробный хостинг на IIS7</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl10_lnkChildSection" href="http://www.gotdotnet.ru/Forums/MSDNTranslation/default.aspx">Перевод MSDN</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl11_lnkChildSection" href="http://www.gotdotnet.ru/Forums/Job/default.aspx">Работа</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl12_lnkChildSection" href="http://www.gotdotnet.ru/Forums/SiteDiscuss/default.aspx">Обсуждение нашего сайта</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl13_lnkChildSection" href="http://www.gotdotnet.ru/Forums/VS2005/default.aspx">Visual Studio 2005</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl14_lnkChildSection" href="http://www.gotdotnet.ru/Forums/Mobile/default.aspx">Windows Mobile</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl15_lnkChildSection" href="http://www.gotdotnet.ru/Forums/UserGroup/default.aspx">Форум User Groups</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl16_lnkChildSection" href="http://www.gotdotnet.ru/Forums/Chats/default.aspx">Чаты на GotDotNet</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl17_lnkChildSection" href="http://www.gotdotnet.ru/Forums/legal/default.aspx">Юридические вопросы</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl18_lnkChildSection" href="http://www.gotdotnet.ru/Forums/Office/default.aspx">Office System </a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl19_lnkChildSection" href="http://www.gotdotnet.ru/Forums/ServerForum/default.aspx">Windows Server System </a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl20_lnkChildSection" href="http://www.gotdotnet.ru/Forums/Media/default.aspx">Windows Media </a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl21_lnkChildSection" href="http://www.gotdotnet.ru/Forums/Blogs/default.aspx">Блоги</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl22_lnkChildSection" href="http://www.gotdotnet.ru/Forums/Chat/default.aspx">Чаты</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl23_lnkChildSection" href="http://www.gotdotnet.ru/Forums/Dynamics/default.aspx">Microsoft Dynamics</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl24_lnkChildSection" href="http://www.gotdotnet.ru/Forums/StudForums/default.aspx">Студ. форумы</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl25_lnkChildSection" href="http://www.gotdotnet.ru/Forums/Design/default.aspx">Архитектура приложений</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl26_lnkChildSection" href="http://www.gotdotnet.ru/Forums/DotNet3.0/default.aspx">.Net Framework 3.x</a></nobr></b><br><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl21_ChildSections__ctl27_lnkChildSection" href="http://www.gotdotnet.ru/Forums/Beginners/default.aspx">Форум для начинающих</a></nobr></b><br></td></tr></table></td></tr></table></div></div></td><td><span style="background-color:white;"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width=1 height=18 border=0 align="absmiddle"></span></td><td class="topmenu"><div id="mmenu12" onclick="noClose=12"><b><nobr><a id="_ctl0_sectionMenu__ctl0_Sections__ctl23_lnkSection" onmouseover="mopen(12)" href="http://www.gotdotnet.ru/Vacancies/default.aspx" style="padding:2px;">Вакансии</a></nobr></b><br></div></td></tr></table></td></tr></table>
+</span>
+<!-- End: ASPNET.StarterKit.Communities.SectionMenu -->
+
+						
+					<!-- - - - - - - - - </Меню> - - - - - - - - - //-->
+					</TD>
+				</TR>
+			</TABLE>
+		</TD>
+		
+		<TD width="1" background='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/right_pu.gif'><IMG height="1" alt="" src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer00.gif' width="10" border="0" /></TD>
+		<TD bgColor="#f5f5f5">
+			<!-- - - - - - - - - <Авторизация> - - - - - - - - - //-->
+			
+<!-- Start:	ASPNET.StarterKit.Communities.SignUp	-->
+<!-- Skin	Path: /communities/common/themes/cruise/skins/contentskins/users_signup.ascx -->
+<span>
+<input name="back_url" id="back_url" type="hidden" value="http://gotdotnet.demo.metric.ru/Forums/default.aspx" style="display:none" />
+
+<table id="_ctl0__ctl1__ctl0_pnlLogIn" cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td>
+	
+	<br><TABLE cellSpacing="0" cellPadding="0" width="100%" border="0">
+		<TR>
+			<TD><IMG height="1" alt="" src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="127" border="0"></TD>
+		</TR>
+		<TR>
+			<TD height="100%" align="center">
+				<span id="_ctl0__ctl1__ctl0_lblIntroText"></span><A HREF="http://login.live.com/login.srf?lc=1049&id=21985&ru=http%3a%2f%2fwww.gotdotnet.ru%2fLearnDotNet%2fASPNET%2f378957.aspx&tw=3600&kv=4&ct=1254857889&ems=1&ver=2.1.6000.1&rn=384il2Ut&tpf=e6876e31c6becd202f4ff5a5dcbeed2e"><IMG SRC="%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/signin00.gif" CLASS="PassportSignIn" BORDER="0" ALT="Windows Live ID" ID="idSI"/></A>
+			</TD>
+		</TR>
+		<tr><td align="center"><br><p/>&nbsp;<a href="http://www.gotdotnet.ru/About/SignInHelp/Default.aspx" title="Трудности с авторизацией на сайте">Если авторизация не работает</a></td></tr>
+	</TABLE>
+
+</td></tr></table></span>
+<!-- End: ASPNET.StarterKit.Communities.SignUp -->
+
+			<!-- - - - - - - - - </Авторизация> - - - - - - - - - //-->
+		</TD>
+		
+	</TR>
+</TABLE>
+
+<!-- - - - - - - - - <Менюшка> - - - - - - - - - //-->
+
+<TABLE cellSpacing="0" cellPadding="0" width="100%" border="0">
+	<TR>
+		<TD bgColor="#a1afbe"><IMG height="1" alt="" src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer00.gif' width="1" border="0" /></TD>
+	</TR>
+	<TR>
+		<TD background='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/header_s.gif'><IMG height="12" alt="" src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer00.gif' width="20" border="0"></TD>
+	</TR>
+</TABLE>
+<!-- - - - - - - - - </Менюшка> - - - - - - - - - //-->
+
+<TABLE cellSpacing="0" cellPadding="0" width="100%" border="0">
+	<TR vAlign="top">
+		<TD width="100%">
+			<!-- - - - - - - - - <WorkPlace> - - - - - - - - - //-->
+			
+			
+<!-- Start:	ASPNET.StarterKit.Communities.BreadCrumb_Menu	-->
+<!-- Skin	Path: /communities/common/themes/cruise/skins/controlskins/breadcrumb_menu.ascx -->
+<span id="_ctl0_breadCrumb_Menu">
+<TABLE cellSpacing="0" cellPadding="0" width="100%" border="0">
+	<TR>
+		<TD background='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/horpunkt.gif'><IMG height="1" alt="" src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="1" border="0"></TD>
+	</TR>
+	<TR>
+		<TD bgColor="#f3f7fb" height="21"><IMG height="4" alt="" src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="1" border="0"><BR>
+			<TABLE cellSpacing="0" cellPadding="0" width="100%" border="0">
+				<TR>
+					<TD width="1"><IMG height="10" alt="" src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="15" border="0"></TD>
+					<TD width="100%"><A href="http://www.gotdotnet.ru/default.aspx"><IMG height="9" alt="на первую страницу" src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/ico_home.gif' width="12" border="0"></A><span class="BreadCrumb">&nbsp;<img border="0" src="%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/arrow_ri.gif" />&nbsp;<a href="http://www.gotdotnet.ru/LearnDotNet/default.aspx">Статьи</a>&nbsp;<img border="0" src="%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/arrow_ri.gif" />&nbsp;<a class="BreadCrumb_CurrentCrumb" href="http://www.gotdotnet.ru/LearnDotNet/ASPNET/default.aspx">ASP.NET</a></span></TD>
+				</TR>
+			</TABLE>
+			<IMG height="4" alt="" src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="1" border="0"></TD>
+	</TR>
+	<TR>
+		<TD background='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/horpunkt.gif'><IMG height="1" alt="" src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="1" border="0"></TD>
+	</TR>
+</TABLE>
+<img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="1" height="3" alt="" border="0"><br></span>
+<!-- End: ASPNET.StarterKit.Communities.BreadCrumb_Menu -->
+
+			
+			
+<!-- Start:	ASPNET.StarterKit.Communities.Articles.Article	-->
+<!-- Skin	Path: /communities/common/themes/cruise/skins/contentskins/articles_article.ascx -->
+<span>
+<TABLE cellSpacing="0" cellPadding="0" width="100%" border="0">
+	<TR vAlign="top">
+		<TD><IMG height="3" alt="" src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="15" border="0"></TD>
+		<TD width="100%">
+			<table width="100%" cellspacing="0" cellpadding="11" class="Article_Table">
+				<tr>
+					<td class="Article_IntroCell">
+						<div align="right">
+							
+						</div>
+						<br>
+						<a class="Article_Title">Применение Web Parts или ультраперсонализация вашего сайта (Часть I).</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="Article_IntroCell">
+						Автор: <a href="http://www.gotdotnet.ru/LearnDotNet/ASPNET/Users_ShowProfile.aspx?user=C...R...a...S...H" href="Users_ShowProfile.aspx?user=C...R...a...S...H">C...R...a...S...H</a>, 
+						<span class="dateCreated">опубликовано: 29.09.2006 16:35</span>
+						<br>
+						<br>
+						<span class="Article_BriefDescription">Данная статья описывает основы работы технологии Web Parts, которая стала доступна, начиная с ASP.NET версии 2.0. Прочитав данную статью, вы получите представление, как правильно создавать Web Parts, и предоставлять пользователю инструменты для настройки внешнего вида вашего сайта.
+
+Так как работа с Web Parts довольно обширная тема, было решено разбить ее на несколько частей. Данная часть является вводной и описывает основы работы с Web Parts.</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="Article_BodyCell">
+						<span class="Article_FullDescription" style="margin:0px;"><H1><A name="_toc147205578">Применение </A>Web Parts или ультраперсонализация вашего сайта (Часть I).</H1><br/><H2><A name="_toc147205579">Основы работы с </A>Web Parts</H2><br/><P class="paragraph" style="text-align:right" align="right"><SPAN class="subsectionheaderchar"><SPAN style="FONT-SIZE:12pt">Авторы:</SPAN></SPAN> <SPAN class="subsectionheaderchar"><I><SPAN style="FONT-SIZE:12pt;COLOR:windowtext">Егоров Никита (C…R…a…S…H)</SPAN></I></SPAN><br/><SPAN class="subsectionheaderchar"><I><SPAN style="FONT-SIZE:12pt;COLOR:windowtext">Красильников Михаил</SPAN></I></SPAN><br/><B><I><SPAN style="FONT-SIZE:14pt">LUXOFT</SPAN></I></B><br/><P class="paragraph" style="text-align:right" align="right"><B><I><SPAN style="FONT-SIZE:14pt"></SPAN></I></B>&nbsp;<br/><H3><A name="_toc147205580">Содержание</A></H3><SPAN class="msohyperlink"><A href="">Применение Web Parts или ультраперсонализация вашего сайта&nbsp; (Часть I).</A></SPAN><br/><SPAN class="msohyperlink">&nbsp;&nbsp;&nbsp; <A href="">Основы работы с Web Parts</A></SPAN><br/>&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; <A href="">Содержание</A><br/>&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; <A href="">Введение</A><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <A href="">О Web Parts</A><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <A href="">Основные виды Web Parts компонентов</A><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <A href="">Создание пользовательского элемента управления</A><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <A href="">Создание базы данных</A><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <A href="">Структура созданной базы данных</A><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <A href="">Настройка web.config веб-сайта</A><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <A href="">Создание Web Parts</A><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <A href="">Создание каталога Web Parts.</A><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <A href="">Создание возможности изменения внешнего вида Web Parts.</A><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <A href="">Основные свойства объектов Web Parts</A><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <A href="">Заключение</A><br/><H3><A name="_toc147205581">Введение</A></H3>Данная статья описывает основы работы технологии Web Parts, которая стала доступна, начиная с ASP.NET версии 2.0. Прочитав данную статью, вы получите представление, как правильно создавать Web Parts, и предоставлять пользователю инструменты для настройки внешнего вида вашего сайта.<br/>Так как работа с Web Parts довольно обширная тема, было решено разбить ее на несколько частей. Данная часть является вводной и описывает основы работы с Web Parts.<br/><H3><A name="_toc147205582">О </A>Web Parts</H3>Web Parts (веб части) - это набор элементов управления, предназначенный для создания веб-сайтов. Web Parts предоставляют пользователям замечательную возможность - изменять свое содержимое, поведение и отображение не посредственно в браузере без участия разработчика.<br/>Использование Web Parts позволяет пользователю выполнять следующие действия:<br/><UL><br/><LI>Настраивать содержимое страниц: добавление новых Web Parts на страницу, удаление, скрытие и минимизация;</LI><br/><LI>Настраивать расположение Web Parts: перемещение Web Parts из одной зоны в другую, изменение внешнего вида;</LI><br/><LI>Настраивать связи между собой. Например, настроить посторенние диаграммы на основе данных определенной Web Parts.</LI><br/><LI>Редактировать внутренние свойства Web Parts. Например, установить количество строк выводимых на одной странице Grid View и при каждом входе, отпадёт надобность в&nbsp; повторении этой операции.</LI></UL><br/><H3><A name="_toc147205583">Основные виды </A>Web Parts компонентов</H3>Для работы с Web Parts применяются специализированные элементы управления. Основные из них представлены в таблице 1<br/><P class="msocaption"><EM>Таблица 1</EM><br/><TABLE class="msotablegrid" style="border-right:medium none;border-top:medium none;border-left:medium none;border-bottom:medium none;border-collapse:collapse" cellspacing="0" cellpadding="0" border="1"><TBODY><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:windowtext 1pt solid;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:239.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319">Название</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:windowtext 1pt solid;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:239.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">Описание</TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:239.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">WebPartManager</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:239.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">Компонент управляющий работай всех Web Parts элементов управления. Данный компонент необходимо располагать на странице, где используются Web Parts и он должен быть единственный на данной странице. </TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:239.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">WebPartZone</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:239.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">Зона, внутри которой находиться объекты Web Part, на странице, данных зон может быть одна и более.</TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:239.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">CatalogZone</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:239.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">Зона, которая содержит CatalogPart. Используется для создания каталога Web Parts, из которого пользователь может добавлять Web Parts на страницу.</TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:239.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">DeclarativeCatalogPart</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:239.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">Содержит элементы, которые пользователь может добавить на страницу. Другие элементы, определенные в данном элементе, не видны на&nbsp; страницу по умолчанию.</TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:239.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">PageCatalogPart</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:239.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">Содержит элементы, которые&nbsp; были расположены на странице, но пользователь их по какой то причине скрыл.</TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:239.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">EditorZone</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:239.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">Зона, которая содержит элементы EditorPart. Эта зона и ее элементы позволяют пользователям редактировать и персонализировать элементы управления на странице.</TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:239.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">AppearanceEditorPart</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:239.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">Элемент позволяющий редактировать свойства WebPart: текст заголовка, высоты, ширины, и т.д.</TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:239.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">BehaviorEditorPart</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:239.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">Элемент позволяющий редактировать свойства WebParts отвечающие за возможность закрытия, светования или перемещение данного элемента. Данный элемент редактирует свойства, которые будут видны всем пользователям.</TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:239.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">LayoutEditorPart</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:239.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">Элемент позволяющий редактировать свойства WebParts, которые отвечают за то, в какой зоне находится WebPart и как WebPart отображается (свернуто либо развернуто).</TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:239.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">PropertyGridEditorPart</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:239.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">Элемент позволяющий редактировать свойства WebParts, ранее помеченные как <B>WebBrowsable.</B></TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:239.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">ConnectionsZone</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:239.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">Содержит WebPartConnection элементы, которые отвечают за связь между несколькими WebParts.</TD></TR></TBODY></TABLE><br/><H3><A name="_toc147205584">Создание пользовательского элемента управления</A><br/></H3><br/><H4>Создание веб-сайта</H4>Первым шагом при создании Web Parts, будет создание веб-сайта. Для этого откроем Visual Studio 2005 и в меню File-&gt;New выберем пункт Web Site. В появившемся окне выберем шаблон ASP.NET Web Site (рис. 1), введем путь, где будет находиться веб-сайт (на рисунке указан путь <I>c:\</I><I>WebPart_</I><I>I</I>)&nbsp; и нажмем OK. <br/><IMG height="207" src="http://www.gotdotnet.ru/learndotnet/aspnet/1588.jpg" width="312"><br/><P class="msocaption"><EM>Рисунок 1</EM><br/>Теперь, что бы начать работу c Web Parts, необходимо создать пользовательские элементы управления, которые буду содержать необходимый набор обычных элементов управления. Это необходимо, потому что элемент Web Part, который находится внутри WebPartZone (см. таблицу 1), может содержать только один элемент управления. То есть, если добавить в WebPartZone несколько элементов управления (например: кнопку и текстовое поле), то для каждого из них будет создан свой элемент Web Part.<br/>Добавим в проект WebUserControl и назовем его ucNews.ascx (рис. 2).<br/><IMG height="210" src="http://www.gotdotnet.ru/learndotnet/aspnet/1589.jpg" width="312"><br/><EM>Рисунок 2</EM><br/><P class="msocaption"><br/>Исходный код элемента управления<br/><pre class="sampleCode""><span style="background-color: #FFEE62;">&lt;%@ Control Language="C#" AutoEventWireup="true" CodeFile="ucNews.ascx.cs" Inherits="ucNews" %&gt;</span><br/><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">asp:GridView</span> <span style="color: #ff0000;">ID</span><span style="color: #0000ff;">="GridView1"</span> <span style="color: #ff0000;">runat</span><span style="color: #0000ff;">="server"</span> <span style="color: #ff0000;">AutoGenerateColumns</span><span style="color: #0000ff;">="False"</span> <span style="color: #ff0000;">ShowHeader</span><span style="color: #0000ff;">="False"</span><span style="color: #0000ff;">&gt;</span><br/>    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">Columns</span><span style="color: #0000ff;">&gt;</span><br/>        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">asp:HyperLinkField</span> <span style="color: #ff0000;">DataNavigateUrlFields</span><span style="color: #0000ff;">="Url"</span> <span style="color: #ff0000;">DataTextField</span><span style="color: #0000ff;">="Name"</span> <span style="color: #0000ff;">/&gt;</span><br/>    <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">Columns</span><span style="color: #0000ff;">&gt;</span><br/><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">asp:GridView</span><span style="color: #0000ff;">&gt;</span><br/> <br/>using System;<br/>using System.Collections.Generic;<br/>using System.Web.UI;<br/> <br/>public partial class ucNews : UserControl<br/>{<br/>    #region Events<br/>    protected void Page_Load(object sender, EventArgs e)<br/>    {<br/>        if (!IsPostBack)<br/>        {<br/>            List<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">Urls</span><span style="color: #0000ff;">&gt;</span> array = new List<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">Urls</span><span style="color: #0000ff;">&gt;</span>();<br/>            array.Add(new Urls("GotDotNet.RU", "http://www.gotdotnet.ru"));<br/>            array.Add(new Urls("ASP.NET Maina", "http://www.aspnetmaina.com"));<br/>            array.Add(new Urls("MSDN", "http://msdn.microsoft.com/"));<br/>            GridView1.DataSource = array;<br/>            GridView1.DataBind();<br/>        }<br/>    }<br/> <br/>    #endregion<br/>    #region Proxy class<br/>    internal class Urls<br/>    {<br/>        #region Private<br/>        private string name;<br/>        private string url;<br/>        #endregion<br/> <br/>        #region Constructor<br/>        public Urls(string name, string url)<br/>        {<br/>            Url = url;<br/>            Name = name;<br/>        }<br/>        #endregion<br/> <br/>        #region Property<br/>        public string Url<br/>        {<br/>            get { return url; }<br/>            set { url = value; }<br/>        }<br/>        public string Name<br/>        {<br/>            get { return name; }<br/>            set { name = value; }<br/>        }<br/>        #endregion<br/>    }<br/>    #endregion<br/>}<br/></pre><br/><H3><A name="_toc147205585">Создание базы данных</A></H3>ASP.NET предоставляет ещё одну замечательную возможность - хранение индивидуальных настроек каждого пользователя. Настройки хранятся в базе данных и могут восстанавливаться их при повторных входах пользователя. Данная база данных имеет определенную структуру, понятную ASP.NET. Разработчики .NET Framework 2.0 позаботились об этом и создали утилиту под названием <I>aspnet_regsql.exe</I>. Данная утилита находится в папке <I>drive</I>:\WINDOWS\Microsoft.NET\Framework\<I>versionNumbe.</I> <br/>После запуска утилиты ASP.NET SQL Server Setup Wizard, в появившемся окне нажимаем кнопку «Next &gt;». На следующем шаге мастера, выбираем пункт Configure SQL Server for application service (рис. 3) для того чтобы настроить базу данных SQL Server для хранения информации о персонализации интерфейса. <br/><P class="name"><IMG height="293" src="http://www.gotdotnet.ru/learndotnet/aspnet/1577.jpg" width="378"><br/><EM>Рисунок 3</EM><br/><P class="name"><br/>На следующем шаге мастер предоставляет нам возможность выбрать сервер и базу данных, где будет храниться информации (рис. 4). Если оставить в место имени базы данных &lt;default&gt;, то будет создана база данных с названием aspnetdb.<br/><P class="name"><IMG height="293" src="http://www.gotdotnet.ru/learndotnet/aspnet/1578.jpg" width="378"><br/><EM>Рисунок 4</EM><br/>Далее мастер просит подтвердить создание базы данных (рис. 5)<br/><IMG height="293" src="http://www.gotdotnet.ru/learndotnet/aspnet/1579.jpg" width="378"><br/><EM>Рисунок 5</EM><br/>Нажимаем «Next &gt;» и мастер отобразит результаты создания базы данных (рис. 6).<br/><IMG height="293" src="http://www.gotdotnet.ru/learndotnet/aspnet/1580.jpg" width="378"><br/><P class="msocaption"><br/><EM>Рисунок 6</EM><br/>Нажимаем «Finish». На этом, создание базы данных, для хранения информации о персонализации завершено.<br/><H3><A name="_toc147205586">Структура созданной базы данных</A></H3>Созданная при помощи утилиты <I>aspnet_regsql.exe </I>база данных имеет следующую структуру, показанную на рисунке 7.<br/><IMG height="404" src="http://www.gotdotnet.ru/learndotnet/aspnet/1581.jpg" width="444"><br/><P class="msocaption"><br/><EM>Рисунок 7</EM><br/>В созданной базе данных всего 11 таблиц, из них создаваемому веб-сайту понадобятся лишь 6:<br/><TABLE class="msotablegrid" style="border-right:medium none;border-top:medium none;margin-left:36pt;border-left:medium none;border-bottom:medium none;border-collapse:collapse" cellspacing="0" cellpadding="0" border="1"><TBODY><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:windowtext 1pt solid;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:264.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="352">Название таблицы</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:windowtext 1pt solid;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:178.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="238"><P class="paragraph">Описание</TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:264.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="352"><P class="paragraph">aspnet_Applications</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:178.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="238"><P class="paragraph">Таблица для хранения информации о веб-приложениях, которые используют эту базу данных</TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:264.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="352"><P class="paragraph">aspnet_Paths</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:178.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="238"><P class="paragraph">Таблица, содержащая информацию о путях к страницам которые используют Web Parts компоненты</TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:264.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="352"><P class="paragraph">aspnet_PersonalizationAllUsers</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:178.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="238"><P class="paragraph">Таблица для хранения настроек Web Parts общих для всех пользователей</TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:264.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="352"><P class="paragraph">aspnet_PersonalizationPerUser</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:178.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="238"><P class="paragraph">Таблица для хранения индивидуальных настроек Web Parts пользователей</TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:264.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="352"><P class="paragraph">aspnet_SchemaVersions</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:178.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="238"><P class="paragraph">Таблица с настройками базы данных</TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:264.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="352"><P class="paragraph">aspnet_Users</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:178.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="238"><P class="paragraph">Таблица содержащая общую информацию о пользователях веб-сайта</TD></TR></TBODY></TABLE><br/>Остальные таблицы предназначены для хранения данных, которые используются в таких функциях как:<br/><UL><br/><LI>Membership</LI><br/><LI>Role management</LI><br/><LI>Profile</LI><br/><LI>Web events</LI></UL><br/><H3><A name="_toc147205587">Настройка </A>web.config веб-сайта</H3>Для того чтобы веб-сайт понимал, где находится хранилище настроек пользователя (ранее созданное нами), необходимо указать на него в конфигурационном файле web.config.<br/>Если в созданном проекта еще нет файла web.config, то необходимо его создать используя меню File-&gt;New-&gt;File (рис. 8).<br/><IMG height="242" src="http://www.gotdotnet.ru/learndotnet/aspnet/1582.jpg" width="360"><br/><P class="msocaption"><br/><EM>Рисунок 8</EM><br/><P class="msocaption"><br/>После создания файла web.config в него необходимо внести следующие изменения:<br/>В разделе &lt;configuration&gt; создать раздел содержащий строку подключения к базе данных настроек пользователя:<br/><pre class="sampleCode"">  &lt;connectionStrings&gt;<br/>    &lt;add name=<span style="color: #A31515;">"WebPartDB"</span> providerName=<span style="color: #A31515;">"System.Data.SqlClient"</span><br/>        connectionString=<span style="color: #A31515;">"Data Source=CRASH\NICK2005;Initial Catalog=aspnetdb;Integrated Security=True"</span>/&gt;<br/>  &lt;/connectionStrings&gt;<br/></pre><br/>После создания строки подключения необходимо создать провайдера данных для Web Parts. Для этого в разделе &lt;system.web&gt; файла web.config, необходимо создать раздел &lt;webParts&gt;, в котором будут содержаться настройки провайдера данных для Web Parts. Обратите внимание на параметр connectionStringName. Он, как раз, и указывает на нашу базу данных настроек пользователя.<br/><pre class="sampleCode"">    &lt;webParts&gt;<br/>      &lt;personalization&gt;<br/>        &lt;providers &gt;<br/>          &lt;add name=<span style="color: #A31515;">"WebPartProvider"</span> connectionStringName=<span style="color: #A31515;">"WebPartDB"</span> <br/>              type=<span style="color: #A31515;">"System.Web.UI.WebControls.WebParts.SqlPersonalizationProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"</span>/&gt;<br/>        &lt;/providers&gt;<br/>      &lt;/personalization&gt;<br/>    &lt;/webParts&gt;<br/></pre><br/>Общий вид файла web.config:<br/><pre class="sampleCode"">&lt;?xml version=<span style="color: #A31515;">"1.0"</span>?&gt;<br/>&lt;configuration&gt;<br/>  &lt;connectionStrings&gt;<br/>    &lt;add name=<span style="color: #A31515;">"WebPartDB"</span> providerName=<span style="color: #A31515;">"System.Data.SqlClient"</span> connectionString=<span style="color: #A31515;">"Data Source=CRASH\NICK2005;Initial Catalog=aspnetdb;Integrated Security=True"</span>/&gt;<br/>  &lt;/connectionStrings&gt;<br/>  &lt;system.web&gt;<br/>        &lt;compilation debug=<span style="color: #A31515;">"true"</span> /&gt;<br/>        &lt;authentication mode=<span style="color: #A31515;">"Windows"</span> /&gt;<br/>    &lt;webParts&gt;<br/>      &lt;personalization&gt;<br/>        &lt;providers &gt;<br/>          &lt;add name=<span style="color: #A31515;">"WebPartProvider"</span> connectionStringName=<span style="color: #A31515;">"WebPartDB"</span><br/>              type=<span style="color: #A31515;">"System.Web.UI.WebControls.WebParts.SqlPersonalizationProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"</span>/&gt;<br/>        &lt;/providers&gt;<br/>      &lt;/personalization&gt;<br/>    &lt;/webParts&gt;<br/>  &lt;/system.web&gt;<br/>&lt;/configuration&gt;<br/></pre><br/>Всё необходимое для создания WebParts у нас есть. Приступим к созданию самих Web Parts.<br/><H3><A name="_toc147205588">Создание</A> Web Parts</H3>Добавим на страницу default.aspx (которая создалась в нашем проекте по умолчанию) элемент управления WebPartManager и в свойстве Personalization-ProviderName укажем имя определенного в файле web.config провайдера данных “WebPartProvider”.<br/>Создадим на странице таблицу и несколько элементов WebPartZone (рис. 9).<br/><IMG height="111" src="http://www.gotdotnet.ru/learndotnet/aspnet/1583.jpg" width="229"><br/><P class="msocaption"><br/><EM>Рисунок 9</EM><br/>После создания зон, в них можно поместить элементы управления. Поместим в WebPartZone1 созданный ранее пользовательский элемент управления ucNews и, к примеру, элемент управления FileUpload, а в webPartZone2 элемент управления Calendar.<br/>Запустим проект на выполнение. После запуска в браузере должны содержаться 3 элемента управления (рис. 10).<br/><IMG height="274" src="http://www.gotdotnet.ru/learndotnet/aspnet/1584.jpg" width="331"><br/><EM>Рисунок 10</EM><br/>Обратите внимание, что у каждого элемента управления на веб-странице появился заголовок и меню (треугольник в правом верхнем углу). Все это создалось автоматически без написания, какого либо кода. Автоматически добавленное меню позволит свернуть, развернуть или скрыть Web Part. И когда пользователь зайдет на веб-страницу в следующий раз, все настройки Web Parts сохранятся.<br/>Исходный код страницы:<br/><pre class="sampleCode"">&lt;%@ Page Language=<span style="color: #A31515;">"C#"</span> AutoEventWireup=<span style="color: #A31515;">"true"</span> CodeFile=<span style="color: #A31515;">"Default.aspx.cs"</span> Inherits=<span style="color: #A31515;">"_Default"</span> %&gt;<br/>&lt;%@ Register Src=<span style="color: #A31515;">"ucNews.ascx"</span> TagName=<span style="color: #A31515;">"ucNews"</span> TagPrefix=<span style="color: #A31515;">"uc1"</span> %&gt;<br/>&lt;!DOCTYPE html PUBLIC <span style="color: #A31515;">"-//W3C//DTD XHTML 1.0 Transitional//EN"</span> <span style="color: #A31515;">"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"</span>&gt;<br/>&lt;html xmlns=<span style="color: #A31515;">"http://www.w3.org/1999/xhtml"</span>&gt;<br/>&lt;head runat=<span style="color: #A31515;">"server"</span>&gt;<br/>    &lt;title&gt;Untitled Page&lt;/title&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>    &lt;form id=<span style="color: #A31515;">"form1"</span> runat=<span style="color: #A31515;">"server"</span>&gt;<br/>        &lt;div&gt;<br/>            &lt;asp:WebPartManager ID=<span style="color: #A31515;">"WebPartManager1"</span> runat=<span style="color: #A31515;">"server"</span>&gt;<br/>                &lt;Personalization ProviderName=<span style="color: #A31515;">"WebPartProvider"</span> /&gt;<br/>            &lt;/asp:WebPartManager&gt;<br/>            &lt;table&gt;<br/>                &lt;tr&gt;<br/>                    &lt;td&gt;<br/>                        &lt;asp:WebPartZone ID=<span style="color: #A31515;">"WebPartZone1"</span> runat=<span style="color: #A31515;">"server"</span>&gt;<br/>                            &lt;ZoneTemplate&gt;<br/>                                &lt;uc1:ucNews ID=<span style="color: #A31515;">"UcNews1"</span> runat=<span style="color: #A31515;">"server"</span> Title=<span style="color: #A31515;">"Новости"</span> /&gt;<br/>                                &lt;asp:FileUpload ID=<span style="color: #A31515;">"FileUpload1"</span> runat=<span style="color: #A31515;">"server"</span> Title=<span style="color: #A31515;">"Загрузка"</span> /&gt;<br/>                            &lt;/ZoneTemplate&gt;<br/>                        &lt;/asp:WebPartZone&gt;<br/>                    &lt;/td&gt;<br/>                    &lt;td&gt;<br/>                        &lt;asp:WebPartZone ID=<span style="color: #A31515;">"WebPartZone2"</span> runat=<span style="color: #A31515;">"server"</span>&gt;<br/>                            &lt;ZoneTemplate&gt;<br/>                                &lt;asp:Calendar ID=<span style="color: #A31515;">"Calendar1"</span> runat=<span style="color: #A31515;">"server"</span> Title=<span style="color: #A31515;">"Календарь"</span>&gt;&lt;/asp:Calendar&gt;<br/>                            &lt;/ZoneTemplate&gt;<br/>                        &lt;/asp:WebPartZone&gt;<br/>                    &lt;/td&gt;<br/>                &lt;/tr&gt;<br/>            &lt;/table&gt;<br/>        &lt;/div&gt;<br/>    &lt;/form&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;<br/></pre><br/>Обратите внимание на свойство Title, которое появилось у всех элементов управления. Данное свойство унаследовано от WebPart и отвечает за текст, который будет отображаться в заголовке элемента WebPart слева от меню.<br/><H3><A name="_toc147205589">Создание каталога </A>Web Parts.</H3>После того как мы расположили наши элементы управления внутри зоны, они могут быть свернуты, развернуты или спрятаны. Теперь нам необходимо дать пользователям возможность не только скрывать элементы управления, но так же перемещать их из одной зоны в другую, и выбирать, необходимы пользователю Web Parts из каталога.<br/>Для этого добавим на форму элемент управления CatalogZone и поместим в него элемент управления PageCatalogPart.<br/>Что бы позволить пользователю входить в режим работы с каталогом Web Parts добавим на форму DropDownList (именно на форму, а не в WebPartZone), назовем его ddlWebPartState и установим свойство AutoPostBack в true.<br/>Исходный код страницы:<br/><pre class="sampleCode"">&lt;%@ Page Language=<span style="color: #A31515;">"C#"</span> AutoEventWireup=<span style="color: #A31515;">"true"</span> CodeFile=<span style="color: #A31515;">"Default.aspx.cs"</span> Inherits=<span style="color: #A31515;">"_Default"</span> %&gt;<br/>&lt;%@ Register Src=<span style="color: #A31515;">"ucNews.ascx"</span> TagName=<span style="color: #A31515;">"ucNews"</span> TagPrefix=<span style="color: #A31515;">"uc1"</span> %&gt;<br/>&lt;!DOCTYPE html PUBLIC <span style="color: #A31515;">"-//W3C//DTD XHTML 1.0 Transitional//EN"</span> <span style="color: #A31515;">"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"</span>&gt;<br/>&lt;html xmlns=<span style="color: #A31515;">"http://www.w3.org/1999/xhtml"</span>&gt;<br/>&lt;head runat=<span style="color: #A31515;">"server"</span>&gt;<br/>    &lt;title&gt;Работа с Web Parts&lt;/title&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>    &lt;form id=<span style="color: #A31515;">"form1"</span> runat=<span style="color: #A31515;">"server"</span>&gt;<br/>        &lt;div&gt;<br/>            &lt;asp:WebPartManager ID=<span style="color: #A31515;">"WebPartManager1"</span> runat=<span style="color: #A31515;">"server"</span>&gt;<br/>                &lt;Personalization ProviderName=<span style="color: #A31515;">"WebPartProvider"</span> /&gt;<br/>            &lt;/asp:WebPartManager&gt;<br/>            &lt;asp:DropDownList ID=<span style="color: #A31515;">"ddlWebPartState"</span> runat=<span style="color: #A31515;">"server"</span> AutoPostBack=<span style="color: #A31515;">"True"</span> OnSelectedIndexChanged=<span style="color: #A31515;">"ddlWebPartState_SelectedIndexChanged"</span>&gt;<br/>            &lt;/asp:DropDownList&gt;<br/>            &lt;table&gt;<br/>                &lt;tr&gt;<br/>                    &lt;td&gt;<br/>                        &lt;asp:WebPartZone ID=<span style="color: #A31515;">"WebPartZone1"</span> runat=<span style="color: #A31515;">"server"</span>&gt;<br/>                            &lt;ZoneTemplate&gt;<br/>                                &lt;uc1:ucNews ID=<span style="color: #A31515;">"UcNews1"</span> runat=<span style="color: #A31515;">"server"</span> Title=<span style="color: #A31515;">"Новости"</span> /&gt;<br/>                                &lt;asp:FileUpload ID=<span style="color: #A31515;">"FileUpload1"</span> runat=<span style="color: #A31515;">"server"</span> Title=<span style="color: #A31515;">"Загрузка"</span> /&gt;<br/>                            &lt;/ZoneTemplate&gt;<br/>                        &lt;/asp:WebPartZone&gt;<br/>                    &lt;/td&gt;<br/>                    &lt;td&gt;<br/>                        &lt;asp:WebPartZone ID=<span style="color: #A31515;">"WebPartZone2"</span> runat=<span style="color: #A31515;">"server"</span>&gt;<br/>                            &lt;ZoneTemplate&gt;<br/>                                &lt;asp:Calendar ID=<span style="color: #A31515;">"Calendar1"</span> runat=<span style="color: #A31515;">"server"</span> Title=<span style="color: #A31515;">"Календарь"</span>&gt;&lt;/asp:Calendar&gt;<br/>                            &lt;/ZoneTemplate&gt;<br/>                        &lt;/asp:WebPartZone&gt;<br/>                    &lt;/td&gt;<br/>                &lt;/tr&gt;<br/>            &lt;/table&gt;<br/>        &lt;/div&gt;<br/>        &lt;asp:CatalogZone ID=<span style="color: #A31515;">"CatalogZone1"</span> runat=<span style="color: #A31515;">"server"</span>&gt;<br/>            &lt;ZoneTemplate&gt;<br/>                &lt;asp:PageCatalogPart ID=<span style="color: #A31515;">"PageCatalogPart1"</span> runat=<span style="color: #A31515;">"server"</span> /&gt;<br/>            &lt;/ZoneTemplate&gt;<br/>        &lt;/asp:CatalogZone&gt;<br/>    &lt;/form&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;<br/></pre>После этого добавим следующий код в файл Default.aspx.cs<pre class="sampleCode""><span style="color: #0000ff;">using</span> System;<br/><span style="color: #0000ff;">using</span> System.Web.UI;<br/><span style="color: #0000ff;">using</span> System.Web.UI.WebControls.WebParts;<br/> <br/><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">partial</span> <span style="color: #0000ff;">class</span> _Default : Page <br/>{<br/>    <span style="color: #0000ff;">protected</span> <span style="color: #0000ff;">void</span> Page_Load(<span style="color: #0000ff;">object</span> sender, EventArgs e)<br/>    {<br/>        <span style="color: #0000ff;">if</span>(!IsPostBack)<br/>        {<br/>            <span style="color: #008000;">//Цикл который позволяет определить доступные режимы отображения Web Parts</span><br/>            <span style="color: #0000ff;">foreach</span> (WebPartDisplayMode displayMode <span style="color: #0000ff;">in</span> WebPartManager1.SupportedDisplayModes)<br/>              ddlWebPartState.Items.Add(displayMode.Name);<br/>        }<br/>    }<br/>    <span style="color: #0000ff;">protected</span> <span style="color: #0000ff;">void</span> ddlWebPartState_SelectedIndexChanged(<span style="color: #0000ff;">object</span> sender, EventArgs e)<br/>    {<br/>        WebPartDisplayMode displayMode;<br/>        <span style="color: #008000;">//Определяем выбранный режим отображения</span><br/>        displayMode = WebPartManager1.SupportedDisplayModes[ddlWebPartState.SelectedValue];<br/>        <span style="color: #008000;">//Устанавливаем режим отображения</span><br/>        WebPartManager1.DisplayMode = displayMode;<br/>    }<br/>}<br/></pre><br/>Запустим проект на выполнение. После загрузки страницы в браузере, выберем в выпадающем списке пункт Catalog и на экране отобразиться каталог Web Parts, при помощи которого пользователь может скрывать/показывать и перемещаться Web Parts между зонами (рис. 11).<br/><IMG height="404" src="http://www.gotdotnet.ru/learndotnet/aspnet/1585.jpg" width="310"><br/><P class="msocaption"><br/><EM>Рисунок 11</EM><br/>Так же в выпадающем списке появился, есть пункт Design, выбрав этот пункт, пользователь сможет перемещать Web Parts между зонами при помощи мыши.<br/><H3><A name="_toc147205590">Создание возможности изменения внешнего вида </A>Web Parts.</H3>Что бы пользователь имел возможность не только скрывать и перемещать Web Parts между зонами, а так же имел возможность настраивать их внешний вид, необходимо на страницу добавить элемент управления EditorZone и поместить в него элементы управления AppearanceEditorPart и LayoutEditorPart.<br/>Запустим проект на выполнение.<br/>Теперь в выпадающем списке появилось новое значение Edit. Оно позволяет выполнять настройку внешнего вида Web Parts.<br/>Если выбрать данный пункт, а также, в меню Web Part (правая верхняя часть заголовка), выбрать Edit (рис. 12), то на экране будет отображаться возможность редактирования свойств выбранного Web Part (рис. 13).<br/><IMG height="360" src="http://www.gotdotnet.ru/learndotnet/aspnet/1586.jpg" width="276"><br/><P class="msocaption"><br/><EM>Рисунок 12</EM><br/><IMG height="457" src="http://www.gotdotnet.ru/learndotnet/aspnet/1587.jpg" width="409"><br/><EM>Рисунок 13</EM><br/><H3><A name="_toc147205591">Основные свойства объектов </A>Web Parts</H3>У всех элементов, с которыми приходится встречаться, работая с Web Parts довольно большое количество разнообразных свойств и что бы их всех описать необходимо, написать книгу. Вот основные из них, которые, по моему мнению, являются наиболее важными.<br/>Основные свойства и методы класса WebPartManager:<br/><TABLE class="msotablegrid" style="border-right:medium none;border-top:medium none;border-left:medium none;border-bottom:medium none;border-collapse:collapse" cellspacing="0" cellpadding="0" border="1"><TBODY><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:windowtext 1pt solid;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:239.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319">Название</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:windowtext 1pt solid;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:239.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">Описание</TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:239.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">DisplayMode</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:239.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">Получает и устанавливает текущее представление Web Parts на экране пользователя.</TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:239.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">SupportedDisplayModes</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:239.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">Коллекция доступных представлений Web Parts</TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:239.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">WebParts</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:239.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">Коллекция всех Web Parts на странице</TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:239.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">Zones</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:239.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">Коллекция всех WebPartZone на странице</TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:239.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">AddWebPart</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:239.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">Метод добавления Web Parts на страницу</TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:239.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">CloseWebPart</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:239.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">Скрытие Web Parts с экрана пользователя</TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:239.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">DeleteWebPart</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:239.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">Полное удаление Web Parts со страницы</TD></TR></TBODY></TABLE><br/>Основные свойства и методы класса GenericWebPart (к этому классу приводятся все элементы управления расположенные внутри WebPartZone):<br/><TABLE class="msotablegrid" style="border-right:medium none;border-top:medium none;border-left:medium none;border-bottom:medium none;border-collapse:collapse" cellspacing="0" cellpadding="0" border="1"><TBODY><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:windowtext 1pt solid;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:239.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319">Название</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:windowtext 1pt solid;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:239.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">Описание</TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:239.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">AllowClose</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:239.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">Свойство, отвечающее за возможность закрыть Web Part.</TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:239.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">AllowEdit</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:239.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">Свойство, отвечающее за возможность редактировать свойства Web Part.</TD></TR><TR><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:windowtext 1pt solid;width:239.25pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">AllowMinimize</TD><TD style="border-right:windowtext 1pt solid;padding-right:5.4pt;border-top:medium none;padding-left:5.4pt;padding-bottom:0cm;border-left:medium none;width:239.3pt;padding-top:0cm;border-bottom:windowtext 1pt solid" valign="top" width="319"><P class="paragraph">Свойство, отвечающее за возможность свернуть Web Part.</TD></TR></TBODY></TABLE><br/><H3><A name="_toc147205592">Заключение</A></H3>Web Parts очень мощная технология, которая позволяет пользователю вашего сайта максимально эффективно использовать ресурсы которые вы ему предоставляете. При этом разработчик, добавляя такую функциональность веб-сайту, делает это декларативно. Ему не приходится писать огромное количество кода, потому что за него все это делает .NET Framework 2.0.<br/>В этой статье я показал основы работы с Web Parts. Показал, как просто и быстро можно создать настраиваемый пользовательский интерфейс. В следующей части стати я хочу рассказать, как предоставить пользователю более богатый функционал настройки интерфейса веб-сайта с использованием Web Parts. Мы добавим возможность пользователю редактировать различные внутренние свойства Web Parts (например, количество строк выводимых в GridView). Так же я расскажу, как можно настроить автоматическое взаимодействие между Web Parts.<br/><H4>Ссылки</H4><br/><UL><br/><LI><A href="http://msdn.microsoft.com/">http://msdn.microsoft.com/</A></LI><br/><LI>Professional ASP.NET 2.0 B. Evjen, S. Hanselman, F. Muhammad, S. Sivakumar, D. Rader</LI><br/><LI>Pro ASP.NET 2.0 in C# 2005 M. MacDonald, M. Szpuszta</LI></UL></span>
+						<br>
+						<p/>
+						<span class="Article_FullDescription"></span>
+						<br>
+						<br>
+					</td>
+				</tr>
+			</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr valign="top">
+					<td width="100%">
+						<table disabled="disabled" class="rating">
+	<tr>
+
+	</tr><tr>
+		<td>Средний рейтинг: <img src="%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/Rating30.gif" border="0" alt="Среднее значение: 3"></td>
+	</tr>
+</table>
+						<span class="Event_AuxText">Оценок: 13</span>
+					</td>
+					<td nowrap bgcolor="#f5f5f5">
+						<table border="0" cellspacing="10" cellpadding="0">
+							<tr>
+								<td nowrap>
+									<table>
+	<tr>
+		<td nowrap="nowrap"><a href="http://www.gotdotnet.ru/LearnDotNet/ASPNET/Comments_AddComment.aspx?id=378957">Добавить комментарий</a></td>
+	</tr>
+</table>
+							
+								</td>
+							</tr>
+						</table>
+					</td>				</tr>
+				<tr>
+					<td colspan="2"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="1" height="1" alt="" border="0"></td>
+				</tr>
+				<tr>
+					<td><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="1" height="1" alt="" border="0"></td>
+					<td bgcolor="#a1afbe"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="1" height="1" alt="" border="0"></td>
+				</tr>
+			</table>
+			<table width="100%" cellspacing="0" cellpadding="11">
+				<tr>
+					<td>
+						<div class="Content">
+							<p>
+								
+<!-- Start:	ASPNET.StarterKit.Communities.Samples	-->
+<!-- Skin	Path: /communities/common/themes/cruise/skins/controlskins/samples_displaysamples.ascx -->
+<span></span>
+<!-- End: ASPNET.StarterKit.Communities.Samples -->
+
+							<p>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<p/>
+			<table width="100%" cellspacing="0" cellpadding="11">
+				<tr>
+					<td>
+						<div class="Content">
+							<p>
+								
+<!-- Start:	ASPNET.StarterKit.Communities.Comments	-->
+<!-- Skin	Path: /communities/common/themes/cruise/skins/controlskins/comments_displaycomments.ascx -->
+<span><span id="_ctl0__ctl2__ctl0__ctl10__ctl0_CommentList"><a name='380588'></a><p>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td bgcolor="#b2cce5">
+				<table width="100%" border="0" cellspacing="5" cellpadding="0">
+					<tr>
+						<td>
+							<span id="_ctl0__ctl2__ctl0__ctl10__ctl0_CommentList__ctl1__ctl0_Itemtitle1" class="Comments_ListTitle">Маленкое замечание</span>
+							<br>
+							Отправлено <a href="http://www.gotdotnet.ru/LearnDotNet/ASPNET/Users_ShowProfile.aspx?user=Kosten" class="Comments_ListAuthorLink" href="Users_ShowProfile.aspx?user=Kosten">Kosten</a>, 
+							<span class="Comments_ListDateCreated">04.10.2006 08:46</span>
+		
+		
+		
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td bgcolor="#eaf1f8"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="127" height="1" alt="" border="0"></td>
+		</tr>
+		<tr>
+			<td bgcolor="#a1afbe">
+				<table width="100%" border="0" cellspacing="1" cellpadding="5">
+					<tr>
+						<td bgcolor="#ffffff">
+							<p><span id="_ctl0__ctl2__ctl0__ctl10__ctl0_CommentList__ctl1__ctl0_Itemcommenttext1" class="Comments_ListBriefDescription">Уважаемые авторы, рис.3 не грузится.</span></p>
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td bgcolor="#a1afbe"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="1" height="1" alt="" border="0"></td>
+								</tr>
+							</table>
+							<br>
+							[<span id="_ctl0__ctl2__ctl0__ctl10__ctl0_CommentList__ctl1__ctl0_Itemcommentreply1" class="Comments_ListLinkReply" FormatText="[{0}]"><a href="http://www.gotdotnet.ru/LearnDotNet/ASPNET/Comments_AddComment.aspx?id=380588&ReturnUrl=378957.aspx">Ответить</a></span>]<br>
+							<table id="_ctl0__ctl2__ctl0__ctl10__ctl0_CommentList__ctl1__ctl0_Itemcommentrating1" disabled="disabled" class="itemRating">
+	<tr>
+		<td>Средний рейтинг: <img src="%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/Rating30.gif"></td>
+	</tr>
+</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</p>
+<p>
+<a name='482266'></a><p>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td bgcolor="#b2cce5">
+				<table width="100%" border="0" cellspacing="5" cellpadding="0">
+					<tr>
+						<td>
+							<span id="_ctl0__ctl2__ctl0__ctl10__ctl0_CommentList__ctl3__ctl0_Itemtitle1" class="Comments_ListTitle">Здорово!!!</span>
+							<br>
+							Отправлено <a href="http://www.gotdotnet.ru/LearnDotNet/ASPNET/Users_ShowProfile.aspx?user=cheezy" class="Comments_ListAuthorLink" href="Users_ShowProfile.aspx?user=cheezy">cheezy</a>, 
+							<span class="Comments_ListDateCreated">23.06.2007 03:25</span>
+		
+		
+		
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td bgcolor="#eaf1f8"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="127" height="1" alt="" border="0"></td>
+		</tr>
+		<tr>
+			<td bgcolor="#a1afbe">
+				<table width="100%" border="0" cellspacing="1" cellpadding="5">
+					<tr>
+						<td bgcolor="#ffffff">
+							<p><span id="_ctl0__ctl2__ctl0__ctl10__ctl0_CommentList__ctl3__ctl0_Itemcommenttext1" class="Comments_ListBriefDescription">Спасибо! Мне, как новичку,&nbsp;очень помогло! Жду продолжения... =)</span></p>
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td bgcolor="#a1afbe"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="1" height="1" alt="" border="0"></td>
+								</tr>
+							</table>
+							<br>
+							[<span id="_ctl0__ctl2__ctl0__ctl10__ctl0_CommentList__ctl3__ctl0_Itemcommentreply1" class="Comments_ListLinkReply" FormatText="[{0}]"><a href="http://www.gotdotnet.ru/LearnDotNet/ASPNET/Comments_AddComment.aspx?id=482266&ReturnUrl=378957.aspx">Ответить</a></span>]<br>
+							<table id="_ctl0__ctl2__ctl0__ctl10__ctl0_CommentList__ctl3__ctl0_Itemcommentrating1" disabled="disabled" class="itemRating">
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</p>
+<p>
+<a name='499740'></a><p>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td bgcolor="#b2cce5">
+				<table width="100%" border="0" cellspacing="5" cellpadding="0">
+					<tr>
+						<td>
+							<span id="_ctl0__ctl2__ctl0__ctl10__ctl0_CommentList__ctl5__ctl0_Itemtitle1" class="Comments_ListTitle">Не соединяется с базой</span>
+							<br>
+							Отправлено <a href="http://www.gotdotnet.ru/LearnDotNet/ASPNET/Users_ShowProfile.aspx?user=Vasil_2006" class="Comments_ListAuthorLink" href="Users_ShowProfile.aspx?user=Vasil_2006">Vasil_2006</a>, 
+							<span class="Comments_ListDateCreated">29.08.2007 12:41</span>
+		
+		
+		
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td bgcolor="#eaf1f8"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="127" height="1" alt="" border="0"></td>
+		</tr>
+		<tr>
+			<td bgcolor="#a1afbe">
+				<table width="100%" border="0" cellspacing="1" cellpadding="5">
+					<tr>
+						<td bgcolor="#ffffff">
+							<p><span id="_ctl0__ctl2__ctl0__ctl10__ctl0_CommentList__ctl5__ctl0_Itemcommenttext1" class="Comments_ListBriefDescription">Подскажите что должно быть в Дата Сурс?<br/> <br/>     <br/>    <br/>  </span></p>
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td bgcolor="#a1afbe"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="1" height="1" alt="" border="0"></td>
+								</tr>
+							</table>
+							<br>
+							[<span id="_ctl0__ctl2__ctl0__ctl10__ctl0_CommentList__ctl5__ctl0_Itemcommentreply1" class="Comments_ListLinkReply" FormatText="[{0}]"><a href="http://www.gotdotnet.ru/LearnDotNet/ASPNET/Comments_AddComment.aspx?id=499740&ReturnUrl=378957.aspx">Ответить</a></span>]<br>
+							<table id="_ctl0__ctl2__ctl0__ctl10__ctl0_CommentList__ctl5__ctl0_Itemcommentrating1" disabled="disabled" class="itemRating">
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</p>
+<p>
+<a name='570423'></a><p>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td bgcolor="#b2cce5">
+				<table width="100%" border="0" cellspacing="5" cellpadding="0">
+					<tr>
+						<td>
+							<span id="_ctl0__ctl2__ctl0__ctl10__ctl0_CommentList__ctl7__ctl0_Itemtitle1" class="Comments_ListTitle">web parts</span>
+							<br>
+							Отправлено <a href="http://www.gotdotnet.ru/LearnDotNet/ASPNET/Users_ShowProfile.aspx?user=dzone" class="Comments_ListAuthorLink" href="Users_ShowProfile.aspx?user=dzone">dzone</a>, 
+							<span class="Comments_ListDateCreated">18.07.2008 13:45</span>
+		
+		
+		
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td bgcolor="#eaf1f8"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="127" height="1" alt="" border="0"></td>
+		</tr>
+		<tr>
+			<td bgcolor="#a1afbe">
+				<table width="100%" border="0" cellspacing="1" cellpadding="5">
+					<tr>
+						<td bgcolor="#ffffff">
+							<p><span id="_ctl0__ctl2__ctl0__ctl10__ctl0_CommentList__ctl7__ctl0_Itemcommenttext1" class="Comments_ListBriefDescription">OPERA неправильно показывает </span></p>
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td bgcolor="#a1afbe"><img src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer01.gif' width="1" height="1" alt="" border="0"></td>
+								</tr>
+							</table>
+							<br>
+							[<span id="_ctl0__ctl2__ctl0__ctl10__ctl0_CommentList__ctl7__ctl0_Itemcommentreply1" class="Comments_ListLinkReply" FormatText="[{0}]"><a href="http://www.gotdotnet.ru/LearnDotNet/ASPNET/Comments_AddComment.aspx?id=570423&ReturnUrl=378957.aspx">Ответить</a></span>]<br>
+							<table id="_ctl0__ctl2__ctl0__ctl10__ctl0_CommentList__ctl7__ctl0_Itemcommentrating1" disabled="disabled" class="itemRating">
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</p></span><p/>
+</span>
+<!-- End: ASPNET.StarterKit.Communities.Comments -->
+
+							<p>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<p/>
+ 		</TD>
+	</TR>
+</TABLE></span>
+<!-- End: ASPNET.StarterKit.Communities.Articles.Article -->
+
+			<!-- - - - - - - - - </WorkPlace> - - - - - - - - - //-->
+ 		</TD>
+ 		<!-- - - - - - - - - <RightColumn> - - - - - - - - - //-->
+			
+		<!-- - - - - - - - - </RightColumn> - - - - - - - - - //-->
+	</TR>
+</TABLE><!-- - - - - - - - - <Footer> - - - - - - - - - //-->
+<TABLE cellSpacing="0" cellPadding="0" width="100%" border="0">
+	<TR>
+		<TD bgColor="#a1afbe"><IMG height="1" alt="" src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer00.gif' width="1" border="0"></TD>
+	</TR>
+	<TR>
+		<TD bgColor="#f1f8ff"><IMG height="1" alt="" src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer00.gif' width="1" border="0"></TD>
+	</TR>
+	<TR>
+		<TD bgColor="#b2cce5" height="63">
+			<TABLE cellSpacing="0" cellPadding="0" width="100%" border="0">
+				<TR>
+					<TD width="1"><IMG height="1" alt="" src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer00.gif' width="15" border="0"></TD>
+					<TD width="50%"><A href="http://www.gotdotnet.ru/Documents/ToU/default.aspx"><FONT face=Verdana size=1>Правила использования</FONT></A><FONT face=Verdana size=1> | </FONT><A href="http://www.gotdotnet.ru/Documents/Privacy/default.aspx"><FONT face=Verdana size=1>Политика защиты</FONT></A><FONT face=Verdana size=1> | </FONT><A href="http://www.gotdotnet.ru/Documents/Codex/Default.aspx"><FONT face=Verdana size=1>Кодекс поведения</FONT></A><FONT face=Verdana size=1><BR> <a href="http://www.metric.ru/"  target=_blank>Создание сайта - Metric</a><br><a href="http://www.parking.ru/" target=_blank>Хостинг на Parking.ru</a></font></td>
+					<TD align="right" width="50%">
+						<!--COUNTERS-->
+						<!--begin of Rambler's Top100 code -->
+						<a href="http://top100.rambler.ru/top100/">
+						<img src="http://counter.rambler.ru/top100.cnt?410831" alt="" width=1 height=1 border=0></a>
+						<!--end of Top100 code--> 
+						<!--Rating@Mail.ru COUNTER-->
+						<script language="JavaScript"><!--
+						d=document;a='';a+=';r='+escape(d.referrer)
+						js=10//--></script><script language="JavaScript1.1"><!--
+						a+=';j='+navigator.javaEnabled()
+						js=11//--></script><script language="JavaScript1.2"><!--
+						s=screen;a+=';s='+s.width+'*'+s.height
+						a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+						js=12//--></script><script language="JavaScript1.3"><!--
+						js=13//--></script><script language="JavaScript"><!--
+						d.write('<a href="http://top.mail.ru/jump?from=315284"'+
+						' target=_top><img src="http://top.list.ru/counter'+
+						'?id=315284;t=210;js='+js+a+';rand='+Math.random()+
+						'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=88></a>')
+						if(js>11)d.write('<'+'!-- ')//--></script><noscript><a
+						target=_top href="http://top.mail.ru/jump?from=315284"><img
+						src="http://top.list.ru/counter?js=na;id=315284;t=210"
+						border=0 height=31 width=88
+						alt="Рейтинг@Mail.ru"></a></noscript><script language="JavaScript"><!--
+						if(js>11)d.write('--'+'>')//--></script>
+						<!--/COUNTER-->
+
+						<!-- HotLog -->
+						<script language="javascript">
+						hotlog_js="1.0";
+						hotlog_r=""+Math.random()+"&s=71692&im=105&r="+escape(document.referrer)+"&pg="+
+						escape(window.location.href);
+						document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");
+						</script><script language="javascript1.1">
+						hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script>
+						<script language="javascript1.2">
+						hotlog_js="1.2";
+						hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+
+						(((navigator.appName.substring(0,3)=="Mic"))?
+						screen.colorDepth:screen.pixelDepth)</script>
+						<script language="javascript1.3">hotlog_js="1.3"</script>
+						<script language="javascript">hotlog_r+="&js="+hotlog_js;
+						document.write("<a href='http://click.hotlog.ru/?71692' target='_top'><img "+
+						" src='http://hit4.hotlog.ru/cgi-bin/hotlog/count?"+
+						hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script>
+						<noscript><a href=http://click.hotlog.ru/?71692 target=_top><img
+						src="http://hit4.hotlog.ru/cgi-bin/hotlog/count?s=71692&im=105" border=0
+						width="88" height="31" alt="HotLog"></a></noscript>
+						<!-- /HotLog -->
+
+						<!--begin of Top100 logo-->
+						<a href="http://top100.rambler.ru/top100/">
+						<img src="%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/w2000000.gif" alt="Rambler's Top100" width=88 height=31 border=0></a>
+						<!--end of Top100 logo -->
+					</TD>
+					<TD width="1"><IMG height="1" alt="" src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer00.gif' width="10" border="0" /></TD>
+					<TD width="1"><IMG height="1" alt="" src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer00.gif' width="10" border="0" /></TD>
+				</TR>
+			</TABLE>
+		</TD>
+	</TR>
+	<TR>
+		<TD bgColor="#f1f8ff"><IMG height="1" alt="" src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer00.gif' width="1" border="0"></TD>
+	</TR>
+	<TR>
+		<TD bgColor="#a1afbe"><IMG height="1" alt="" src='%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/spacer00.gif' width="1" border="0"></TD>
+	</TR>
+</TABLE><!-- - - - - - - - - </Footer> - - - - - - - - - //-->
+</form>
+<script src="%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/urchin00.js" type="text/javascript"></script>
+<script type="text/javascript">
+	_uacct = "UA-2928281-3";
+	urchinTracker();
+</script>
+<script language="javascript" type="text/javascript" src="%1F%40и%3Cе%3Dе%3Dие%20Web%20Parts%20и%3Bи%20у%3Bьт%40а%3Fе%40с%3E%3Dа%3Bизация%20вашег%3E%20сайта%20%28%27асть%20I%29..mht_files/msAnalyt.js"></script>
+<script language="javascript" type="text/javascript">
+    msAnalytics.ProfileId = 'C864';
+    msAnalytics.TrackPage();
+</script>
+	</body>
+</html>
+<!-- This document saved from http://www.gotdotnet.ru/LearnDotNet/ASPNET/378957.aspx -->
