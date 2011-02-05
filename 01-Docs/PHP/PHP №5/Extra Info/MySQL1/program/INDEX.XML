@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<!DOCTYPE page [
+<!ENTITY nbsp "&#160;">
+<!ENTITY пробел "&#160;">
+<!ENTITY shy "&#173;">
+<!ENTITY перенос "&#173;">
+]>
+
+<?xml:stylesheet type="text/xsl" href="../common/layout.xsl" ?>
+
+<Урок xmlns="x-schema:Schema.xml" название="Visual C++ и MFC"  следующий="section0.xml">
+<h1>PHP &amp; MySQL </h1>
+
+
+<h3>PHP &amp; MySQL </h3>
+<ol>
+<li><a href="section00.xml">Установка и настройка MySQL-server</a></li>
+<li><a href="section0.xml">Введение в MySQL. Обзор основных возможностей и недостатков</a></li>
+<li><a href="section01.xml">Особенности синтаксиса языка SQL в СУБД MySQL. Функции.</a></li>
+<li><a href="section02.xml">Особенности синтаксиса языка SQL в СУБД MySQL. Операторы.</a></li>
+<li><a href="HomeTask.xml">Домашнее задание</a></li>
+</ol>
+
+</Урок>

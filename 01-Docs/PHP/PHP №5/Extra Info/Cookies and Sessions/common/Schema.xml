@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
+	<AttributeType name="файл" dt:type="string" />
+	<AttributeType name="положение" dt:type="string" />
+	<AttributeType name="стиль" dt:type="string" />
+	<AttributeType name="класс" dt:type="string" />
+	<AttributeType name="подсказка" dt:type="string" />
+	<AttributeType name="тип" dt:type="string" />
+	<AttributeType name="следующий" dt:type="string" />
+	<AttributeType name="предыдущий" dt:type="string" />
+	<AttributeType name="название" dt:type="string" />
+	<AttributeType name="уровень" dt:type="int" />
+
+	<ElementType name="рисунок" content="empty">
+		<attribute type="файл" />
+	</ElementType>
+
+	<ElementType name="абзац" content="mixed" model="closed">
+		<element type="рисунок" />
+	</ElementType>
+
+	<ElementType name="заголовок" content="mixed" model="closed">
+		<attribute type="уровень" />
+	</ElementType>
+
+	<ElementType name="стиль" content="mixed" model="closed">
+		<attribute type="класс" />
+	</ElementType>
+
+	<ElementType name="код" content="mixed" model="closed" />
+
+	<ElementType name="ссылка" content="mixed">
+		<attribute type="файл" />
+		<attribute type="подсказка" />
+		<element type="рисунок" />
+	</ElementType>
+
+	<ElementType name="список" content="eltOnly">
+		<attribute type="тип" />
+		<element type="абзац" />
+	</ElementType>
+
+	<ElementType name="Урок" content="eltOnly">
+		<attribute type="следующий" />
+		<attribute type="предыдущий" />
+		<attribute type="название" />
+		<element type="абзац" />
+		<element type="список" />
+		<element type="заголовок" />
+	</ElementType>
+
+</Schema>

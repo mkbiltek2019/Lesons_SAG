@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<!DOCTYPE page [
+<!ENTITY nbsp "&#160;">
+<!ENTITY пробел "&#160;">
+<!ENTITY shy "&#173;">
+<!ENTITY перенос "&#173;">
+]>
+
+<?xml:stylesheet type="text/xsl" href="../common/layout.xsl" ?>
+
+<Урок xmlns="x-schema:Schema.xml" название="Практический пример"  предыдущий="section09.xml" следующий="HomeTask.xml">
+
+
+<h2><font color="#800000">Практический пример</font></h2>
+
+<p>
+Итак, после прочтения эпопеи о файлах, логично было бы подкрепить приобретенные
+знания добротным (полезным) примером.
+</p>
+<p>
+В качестве такого примера мы рассмотрим создание приложения, реализующего
+простейший редактор текстовых файлов (в приведенном ниже примере подразумевается,
+что текстовые файлы имеют расширение *.txt, но при небольших изменениях кода можно
+будет работать и с файлами с другими расширениями). 
+</p>
+<p>
+Что же должно уметь наше приложение? Прежде всего, приложение должно поддерживать
+открытие существующих файлов, а также сохранение измененных файлов как в текущем
+файле, так и в других файлах. Пользователь также имеет возможность создавать и 
+сохранять собственные файлы. И, в завершение, наше приложение будет отображать
+информацию об открытых, созданных и измененных файлах.
+</p>
+<p>
+Внешний вид приложения представлен на рисунке
+</p>
+<image src="6.png" alt="Внешний вид приложения"></image>
+<p>
+На форме представлены следующие кнопки: Open - открытие файла, Save - сохранение
+изменений в текущем файле, Save As - сохранение в другом файле, Exit (она же
+переименованная кнопка OK) - выход из программы. Кроме того, на форме находятся
+два текстовых поля: левое - поле для ввода и отображения текста, правое - для
+отображения информации о файле.
+</p>
+<p>
+Набор стилей для левого поля:
+</p>
+<image src="7.png" alt="Набор стилей для левого поля:"></image>
+<p>
+Набор стилей для правого поля:
+</p>
+<image src="8.png" alt="Набор стилей для правого поля:"></image>
+<p>
+Теперь, когда подготовительные действия завершены, можно переходить
+непосредственно к реализации. Напоминаем, что здесь описывются только файлы,
+которые относятся к диалоговому окну, то есть файлы, которые подвергались
+изменениям. Рабочий проект для данного примера находится в данном уроке в 
+каталоге ..\program\Files\
+</p>
+<strong>FilesDlg.h</strong>
+<pre>
+// FilesDlg.h : header file
+
+#if !defined(AFX_FILESDLG_H__7EE8F606_7B59_11D5_BB2A_8690941CBF7A__INCLUDED_)
+#define AFX_FILESDLG_H__7EE8F606_7B59_11D5_BB2A_8690941CBF7A__INCLUDED_
+
+#if _MSC_VER > 1000
+#pragma once
+#endif // _MSC_VER > 1000
+
+/////////////////////////////////////////////////////////////////////////////
+// CFilesDlg dialog
+
+class CFilesDlg : public CDialog
+{
+// Construction
+public:
+<strong>
+   void FillFileStatus();  // Функция, получающая статус файла
+   CString m_FileTitle;    // Переменная, хранящая имя файла
+   CString m_FilePath;     // Переменная, хранящая полный путь к файлу     
+</strong>
+   CFilesDlg(CWnd* pParent = NULL); // standard constructor
+
+// Dialog Data
+   //{{AFX_DATA(CFilesDlg)
+   enum { IDD = IDD_FILES_DIALOG };
+   CEdit m_ViewCtrl;        // Объект класса CEdit
+   CString  m_View;         // Переменная для работы с текстом
+   CString  m_Status;       // Переменная для работы со статусом
+   //}}AFX_DATA
+
+   // ClassWizard generated virtual function overrides
+   //{{AFX_VIRTUAL(CFilesDlg)
+   protected:
+   virtual void DoDataExchange(CDataExchange* pDX);   // DDX/DDV support
+   //}}AFX_VIRTUAL
+
+// Implementation
+protected:
+   HICON m_hIcon;
+
+   // Generated message map functions
+   //{{AFX_MSG(CFilesDlg)
+   virtual BOOL OnInitDialog();
+   afx_msg void OnSysCommand(UINT nID, LPARAM lParam);
+   afx_msg void OnPaint();
+   afx_msg HCURSOR OnQueryDragIcon();
+<strong>   afx_msg void OnOpenFile();         // Открытие файла
+   afx_msg void OnSaveAsFile();       // Сохранение в другой файл
+   afx_msg void OnSaveFile();         // Сохранение в текущий файл
+   afx_msg void OnSetfocusStatus();   // Обработка установки фокуса
+   afx_msg void OnClose();            // Обработка закрытия диалога
+   virtual void OnOK();               // Обработка закрытия диалога</strong>
+   //}}AFX_MSG
+   DECLARE_MESSAGE_MAP()
+};
+
+//{{AFX_INSERT_LOCATION}}
+
+#endif 
+</pre>
+<strong>FilesDlg.cpp</strong>
+<pre>
+// FilesDlg.cpp : implementation file
+//
+
+#include "stdafx.h"
+#include "Files.h"
+#include "FilesDlg.h"
+
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#undef THIS_FILE
+static char THIS_FILE[] = __FILE__;
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+// CAboutDlg dialog used for App About
+
+class CAboutDlg : public CDialog
+{
+public:
+   CAboutDlg();
+
+// Dialog Data
+   //{{AFX_DATA(CAboutDlg)
+   enum { IDD = IDD_ABOUTBOX };
+   //}}AFX_DATA
+
+   // ClassWizard generated virtual function overrides
+   //{{AFX_VIRTUAL(CAboutDlg)
+   protected:
+   virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
+   //}}AFX_VIRTUAL
+
+// Implementation
+protected:
+   //{{AFX_MSG(CAboutDlg)
+   //}}AFX_MSG
+   DECLARE_MESSAGE_MAP()
+};
+
+CAboutDlg::CAboutDlg() : CDialog(CAboutDlg::IDD)
+{
+   //{{AFX_DATA_INIT(CAboutDlg)
+   //}}AFX_DATA_INIT
+}
+
+void CAboutDlg::DoDataExchange(CDataExchange* pDX)
+{
+   CDialog::DoDataExchange(pDX);
+   //{{AFX_DATA_MAP(CAboutDlg)
+   //}}AFX_DATA_MAP
+}
+
+BEGIN_MESSAGE_MAP(CAboutDlg, CDialog)
+   //{{AFX_MSG_MAP(CAboutDlg)
+      // No message handlers
+   //}}AFX_MSG_MAP
+END_MESSAGE_MAP()
+
+/////////////////////////////////////////////////////////////////////////////
+// CFilesDlg dialog
+
+CFilesDlg::CFilesDlg(CWnd* pParent /*=NULL*/)
+   : CDialog(CFilesDlg::IDD, pParent)
+{
+   //{{AFX_DATA_INIT(CFilesDlg)
+   m_View = _T("");
+   m_Status = _T("");
+   //}}AFX_DATA_INIT
+   m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
+<strong>
+    m_FileTitle = ""; // Начальная инициализация
+    m_FilePath = "";  // Начальная инициализация</strong>
+}
+
+void CFilesDlg::DoDataExchange(CDataExchange* pDX)
+{
+   CDialog::DoDataExchange(pDX);
+   //{{AFX_DATA_MAP(CFilesDlg)<strong>
+   DDX_Control(pDX, IDC_View, m_ViewCtrl);
+   DDX_Text(pDX, IDC_View, m_View);
+   DDX_Text(pDX, IDC_Status, m_Status);</strong>
+   //}}AFX_DATA_MAP
+}
+
+BEGIN_MESSAGE_MAP(CFilesDlg, CDialog)
+   //{{AFX_MSG_MAP(CFilesDlg)
+   ON_WM_SYSCOMMAND()
+   ON_WM_PAINT()
+   ON_WM_QUERYDRAGICON()<strong>
+   ON_BN_CLICKED(IDC_Open, OnOpenFile)
+   ON_BN_CLICKED(IDC_SaveAs, OnSaveAsFile)
+   ON_BN_CLICKED(IDC_Save, OnSaveFile)
+   ON_EN_SETFOCUS(IDC_Status, OnSetfocusStatus)
+   ON_WM_CLOSE()</strong>
+   //}}AFX_MSG_MAP
+END_MESSAGE_MAP()
+
+/////////////////////////////////////////////////////////////////////////////
+// CFilesDlg message handlers
+
+BOOL CFilesDlg::OnInitDialog()
+{
+   CDialog::OnInitDialog();
+
+   // Add "About..." menu item to system menu.
+
+   // IDM_ABOUTBOX must be in the system command range.
+   ASSERT((IDM_ABOUTBOX &amp; 0xFFF0) == IDM_ABOUTBOX);
+   ASSERT(IDM_ABOUTBOX &lt; 0xF000);
+
+   CMenu* pSysMenu = GetSystemMenu(FALSE);
+   if (pSysMenu != NULL)
+   {
+      CString strAboutMenu;
+      strAboutMenu.LoadString(IDS_ABOUTBOX);
+      if (!strAboutMenu.IsEmpty())
+      {
+         pSysMenu->AppendMenu(MF_SEPARATOR);
+         pSysMenu->AppendMenu(MF_STRING, IDM_ABOUTBOX, strAboutMenu);
+      }
+   }
+
+   SetIcon(m_hIcon, TRUE);       // Set big icon
+   SetIcon(m_hIcon, FALSE);      // Set small icon
+   
+   // TODO: Add extra initialization here
+   
+   return TRUE;  // return TRUE  unless you set the focus to a control
+}
+
+void CFilesDlg::OnSysCommand(UINT nID, LPARAM lParam)
+{
+   if ((nID &amp; 0xFFF0) == IDM_ABOUTBOX)
+   {
+      CAboutDlg dlgAbout;
+      dlgAbout.DoModal();
+   }
+   else
+   {
+      CDialog::OnSysCommand(nID, lParam);
+   }
+}
+
+// If you add a minimize button to your dialog, you will need the code below
+//  to draw the icon.  For MFC applications using the document/view model,
+//  this is automatically done for you by the framework.
+
+void CFilesDlg::OnPaint() 
+{
+   if (IsIconic())
+   {
+      CPaintDC dc(this); // device context for painting
+
+      SendMessage(WM_ICONERASEBKGND, (WPARAM) dc.GetSafeHdc(), 0);
+
+      // Center icon in client rectangle
+      int cxIcon = GetSystemMetrics(SM_CXICON);
+      int cyIcon = GetSystemMetrics(SM_CYICON);
+      CRect rect;
+      GetClientRect(&amp;rect);
+      int x = (rect.Width() - cxIcon + 1) / 2;
+      int y = (rect.Height() - cyIcon + 1) / 2;
+
+      // Draw the icon
+      dc.DrawIcon(x, y, m_hIcon);
+   }
+   else
+   {
+      CDialog::OnPaint();
+   }
+}
+
+HCURSOR CFilesDlg::OnQueryDragIcon()
+{
+   return (HCURSOR) m_hIcon;
+}
+<strong>
+void CFilesDlg::OnOpenFile() 
+{
+    // Если текст был изменен, то перед открытием нового 
+    // файла предлагается сохранить изменения
+    if(m_ViewCtrl.GetModify())
+    {
+        if(MessageBox("Do you want to save the file?", "Warning", MB_YESNO 
+           | MB_ICONQUESTION) == IDYES)
+           OnSaveFile();
+    }
+
+    // Создается объект стандартного файлового диалогового окна
+    // Этот будет диалог для открытия файлов с расширением *.txt
+    // по умолчанию. Также задается: имя по умолчанию, которое
+    // хранит переменная m_FileTitle; флаги, предписывающие
+    // обязательное наличие файла (явно) и обязательное наличие
+    // заданного пути (неявно), сокрытие флажка для  открытия 
+    // файлов с атрибутом только чтение; фильтр по файлам с 
+    // расширением *.txt
+    CFileDialog OpenDialog(true, "txt", m_FileTitle, 
+                           OFN_FILEMUSTEXIST |
+                           OFN_HIDEREADONLY,  
+                           "Text Files (*.txt)|*.txt||");
+    
+    // Отображение файлового диалога
+    if(OpenDialog.DoModal() == IDOK)
+    {
+        // Открытие файла по заданному пути на чтение
+        CStdioFile fOpen(OpenDialog.GetPathName(), CFile::modeRead);
+        
+        // Сохранение имени файла
+        m_FileTitle = OpenDialog.GetFileTitle();
+        // Сохранение пути к файлу
+        m_FilePath = OpenDialog.GetPathName();
+        // Вспомагательная строка
+        CString s;
+        // Очистка строки
+        m_View.Empty();
+        
+        // Организация построчного чтения текста, пока не будет
+        // достигнут конец файла
+        while(fOpen.ReadString(s))
+        {
+            m_View += s;
+            m_View += "\r\n";
+        }
+        // Отображение файла
+        UpdateData(false);
+        // Закрытие файла
+        fOpen.Close();
+        // Вызов функции получения статуса файла 
+        FillFileStatus();
+    }
+}
+
+void CFilesDlg::OnSaveAsFile() 
+{
+    // Обновление переменных
+    UpdateData(true);
+    // Если текста нет - выход    
+    if(m_View.IsEmpty())
+    {
+        MessageBox("Text is not found", "Warning", MB_ICONINFORMATION);
+        return;
+    }
+    
+    // Создается объект стандартного файлового диалогового окна
+    // Этот будет диалог для сохранения файлов с расширением *.txt
+    // по умолчанию. Также задается: флаги, предписывающие
+    // обязательное наличие заданного пути, сокрытие флажка для 
+    // открытия файлов с атрибутом только чтение, вызов окна 
+    // сообщения с просьбой потвердить перезапись существующего файла;
+    // фильтр по файлам с расширением *.txt
+    CFileDialog SaveAsDialog(false, "txt", NULL, 
+                             OFN_PATHMUSTEXIST | 
+                             OFN_HIDEREADONLY  |
+                             OFN_OVERWRITEPROMPT,
+                             "Text Files (*.txt)|*.txt||");
+    
+    // Отображение файлового диалога
+    if(SaveAsDialog.DoModal() == IDOK)
+    {
+        // Создание файла по заданному пути и открытие
+        // его на запись в двоичном режиме
+        CStdioFile fSaveAs(SaveAsDialog.GetPathName(), 
+                           CFile::modeCreate |
+                           CFile::modeWrite  |
+                           CFile::typeBinary);
+        // Сохранение текста в файл
+        fSaveAs.WriteString(m_View);
+        // Сохранение пути к файлу
+        m_FilePath = SaveAsDialog.GetPathName();
+        // Сброс флага модификации текста
+        m_ViewCtrl.SetModify(false);
+        // Закрытие файла
+        fSaveAs.Close();
+        // Вызов функции получения статуса файла
+        FillFileStatus();
+    }  
+}
+
+void CFilesDlg::OnSaveFile() 
+{
+    // Обновление переменных
+    UpdateData(true);
+    // Если текста нет - выход
+    if(m_View.IsEmpty())
+    {
+        MessageBox("Text is not found", "Warning", MB_ICONINFORMATION);
+        return;
+    }
+    
+    // Если путь на задан вызывается функция OnSaveAsFile
+    if(m_FilePath.IsEmpty())
+    {
+        OnSaveAsFile();
+        return;
+    }
+
+    // Обработка исключительных ситуаций
+    try
+    {
+        // Создание файла по заданному пути и открытие
+        // его на запись в двоичном режиме
+        CStdioFile fSave(m_FilePath, CFile::modeCreate |
+                                     CFile::modeWrite  | 
+                                     CFile::typeBinary);
+        // Сохранение текста в файл
+        fSave.WriteString(m_View);
+        // Сброс флага модификации текста
+        m_ViewCtrl.SetModify(false);
+        // Закрытие файла
+        fSave.Close();
+        // Вызов функции получения статуса файла
+        FillFileStatus();
+    }
+    catch(CFileException *ex)
+    {
+        // Если файл не найден
+        // (наприме, удален другим процессом)
+        if(ex->m_cause == CFileException::fileNotFound)
+            MessageBox("File is not found", "Error", MB_ICONHAND);
+        // Если файл не доступен
+        // (например, у него установлен атрибут только чтение)
+        else if(ex->m_cause == CFileException::accessDenied)
+            MessageBox("Access denied", "Error", MB_ICONHAND);
+    }
+}
+
+void CFilesDlg::FillFileStatus()
+{
+    // объект структуры CFileStatus
+    CFileStatus FileStatus;
+    // Вызов статической функции получения статуса файла
+    CStdioFile::GetStatus(m_FilePath, FileStatus);
+    
+    // Очистка строки
+    m_Status.Empty();
+    m_Status += "Created:\r\n";
+    // Определение времени создания файла
+    m_Status += FileStatus.m_ctime.Format("%d.%m.%y   %H:%M:%S");
+    m_Status += "\r\nLast modified:\r\n";
+    // Определение времени последней модификации файла
+    m_Status += FileStatus.m_mtime.Format("%d.%m.%y   %H:%M:%S");
+    m_Status += "\r\nAttributes:\r\n";
+    
+    // Копирование байта атрибутов
+    BYTE attr = FileStatus.m_attribute;
+    // Проверка атрибутов файла
+    if(attr == 0)
+        m_Status += "Normal";
+    if(attr &amp; 0x01)
+        m_Status += "R  ";
+    if(attr &amp; 0x02)
+        m_Status += "H  ";
+    if(attr &amp; 0x04)
+        m_Status += "S  ";
+    if(attr &amp; 0x08)
+        m_Status += "V  ";
+    if(attr &amp; 0x10)
+        m_Status += "D  ";
+    if(attr &amp; 0x20)
+        m_Status += "A  ";
+
+    // Вывод статуса
+    UpdateData(false);
+}
+
+void CFilesDlg::OnSetfocusStatus() 
+{
+    // Перевод фокуса на другое "текстовое поле"
+    m_ViewCtrl.SetFocus(); 
+}
+
+void CFilesDlg::OnClose() 
+{
+    // Если текст был изменен, то перед закрытием приложения 
+    // с помощью "крестика", клавиши ESCAPE или комбинации Alt+F4
+    // предлагается сохранить изменения
+    if(m_ViewCtrl.GetModify())
+    {
+        if(MessageBox("Do you want to save the file?", "Warning", MB_YESNO 
+            | MB_ICONQUESTION) == IDYES)
+            OnSaveFile();
+    }
+    
+   CDialog::OnClose();
+}
+
+void CFilesDlg::OnOK() 
+{
+    // Если текст был изменен, то перед закрытием приложения 
+    // с помощью кнопки Exit (она же переименованная кнопка OK)
+    // предлагается сохранить изменения
+    if(m_ViewCtrl.GetModify())
+    {
+        if(MessageBox("Do you want to save the file?", "Warning", MB_YESNO 
+            | MB_ICONQUESTION) == IDYES)
+            OnSaveFile();
+    }
+    
+   CDialog::OnOK();
+}</strong>
+</pre>
+</Урок>

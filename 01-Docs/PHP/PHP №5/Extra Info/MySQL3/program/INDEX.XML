@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<!DOCTYPE page [
+<!ENTITY nbsp "&#160;">
+<!ENTITY пробел "&#160;">
+<!ENTITY shy "&#173;">
+<!ENTITY перенос "&#173;">
+]>
+
+<?xml:stylesheet type="text/xsl" href="../common/layout.xsl" ?>
+
+<Урок xmlns="x-schema:Schema.xml" название="SQL"  следующий="section02.xml">
+<h1>MySQL. Администрирование и безопасность</h1>
+<ol>
+<li><a href="section02.xml">Безопасность.</a></li>
+<li><a href="section03.xml">Управление пользовательскими учетными записями</a></li>
+<li><a href="section04.xml">Как минимизировать риск при работе с таблицами разрешений</a></li>
+<li><a href="section05.xml">Анализ функций РНР для работы с ODBC-функциями</a></li>
+<li><a href="section06.xml">Анализ функций РНР для работы с MySQL</a></li>
+<li><a href="section07.xml">Практический пример</a></li>
+<li><a href="HomeTask.xml">Домашнее задание</a></li>
+</ol>
+
+</Урок>

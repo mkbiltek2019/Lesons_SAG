@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<!DOCTYPE page [
+<!ENTITY nbsp "&#160;">
+<!ENTITY пробел "&#160;">
+<!ENTITY shy "&#173;">
+<!ENTITY перенос "&#173;">
+]>
+
+<?xml:stylesheet type="text/xsl" href="../common/layout.xsl" ?>
+
+<Урок xmlns="x-schema:Schema.xml" название="Домашнее задание" предыдущий="section06.xml" следующий="index.xml" copyright="© 2001 Андрей Тендюк, Алексей Туманов, Григорий Ящук.">
+
+<h2><font color="maroon">Домашнее задание</font></h2>
+<p>
+<ol>
+<li>
+
+</li>
+<li>
+</li>
+</ol>
+</p>
+</Урок>

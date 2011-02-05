@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<!DOCTYPE page [
+<!ENTITY nbsp "&#160;">
+<!ENTITY пробел "&#160;">
+<!ENTITY shy "&#173;">
+<!ENTITY перенос "&#173;">
+]>
+
+<?xml:stylesheet type="text/xsl" href="../common/layout.xsl" ?>
+
+<Урок xmlns="x-schema:Schema.xml" название="Использование расширенного комбинированного списка"  предыдущий="section06.xml" следующий="section08.xml">
+
+<h2><font color="#800000">Использование расширенного комбинированного списка</font></h2>
+
+<p>
+Итак, наша с Вами задача разобраться как использовать расширенный комбинированный список на практике. 
+Конечным результатом нашей работы должно стать приложение, использующее расширенный комбинированный список (смотри рисунок). Для того чтобы показать удивительный внутренний мир "комбобокса" подгрузим в него рисунки. 
+</p>
+<center><img src="cbe7.png" width="404" height="204"></img></center>
+<p><b><center><small><small>Вот что у нас должно получиться.</small></small></center></b></p>
+<p>
+Итак, создадим приложение, базирующееся на диалоговом окне. Перейдем в ресурсы и бросим на диалоговую форму расширенный комбинированный список (Если Вы до сих пор не знаете где его найти, загляните в предыдущий раздел). Откроем окно свойств и установим для нашего списка стиль Drop List так, как показано на рисунке. Комбинацией клавиш Ctrl+R добавим к нашему проекту несколько новых ресурсов, а именно, 16 bmp-картинок.
+</p>
+
+<center><img src="cbe8.png" width="332" height="184"></img></center>
+
+<p>
+Перейдем к закладке ClassView. Правой кнопкой мыши щелкнем на имени класса CExtendedCBDlg и выберем пункт Add Member Variable...(добавить поле класса)
+</p>
+
+<center><img src="cbe10.png" width="256" height="149"></img></center>
+
+<p>
+И укажем тип <b>CImageList*</b>  и имя переменной <b>m_pImageList;</b>.
+</p>
+
+<center><img src="cbe11.png" width="366" height="175"></img></center>
+
+<p>
+Перейдем в метод <b>OnInitDialog</b> класса диалогового окна и введем код выделенный жирным шрифтом (смотри описание файла реализации).
+</p>
+
+<p>
+Обратите внимание, что наше список изображений у нас динамический. А раз выделили под него память, то необходимо ее и освободить. Создадим обработчик Снова пра заверешния приложения. Правой кнопкой щелкнем на имени класса диалогового окна, но, на этот раз, выберем пункт Add Windows Message Handler...
+</p>
+
+<center><img src="cbe13.png" width="185" height="57"></img></center>
+
+<p>
+В появивщемся диалоговом окне выберем сообщение WM_CLOSE и нажмем кнопку Add and Edit.
+</p>
+
+<center><img src="cbe14.png" width="482" height="423"></img></center>
+
+<p>
+В созданном обработчике сообщения WM_CLOSE мы можем освободить динамическую память, занимаемую  списком изображений. Вот и все. Ниже приведен заголовочный файл и файл реализации описаного выше проекта. Исходный код, Вы можете найти в rar-архиве в каталоге program.
+</p>
+
+<p>
+Заголовочный файл. Все изменения внесенные "руками" выделены жирным текстом.
+</p>
+
+<pre>
+// ExtendedCBDlg.h : header file
+//
+
+#if !defined(AFX_EXTENDEDCBDLG_H__BCF53116_90A4_4C07_B458_4C18A1EE4EB8__INCLUDED_)
+#define AFX_EXTENDEDCBDLG_H__BCF53116_90A4_4C07_B458_4C18A1EE4EB8__INCLUDED_
+
+#if _MSC_VER > 1000
+#pragma once
+#endif // _MSC_VER > 1000
+
+/////////////////////////////////////////////////////////////////////////////
+// CExtendedCBDlg dialog
+
+class CExtendedCBDlg : public CDialog
+{
+// Construction
+
+<b>CImageList* m_pImageList;</b>
+public:
+   CExtendedCBDlg(CWnd* pParent = NULL);  // standard constructor
+
+// Dialog Data
+   //{{AFX_DATA(CExtendedCBDlg)
+   enum { IDD = IDD_EXTENDEDCB_DIALOG };
+      // NOTE: the ClassWizard will add data members here
+   //}}AFX_DATA
+
+   // ClassWizard generated virtual function overrides
+   //{{AFX_VIRTUAL(CExtendedCBDlg)
+   protected:
+   virtual void DoDataExchange(CDataExchange* pDX);   // DDX/DDV support
+   //}}AFX_VIRTUAL
+
+// Implementation
+protected:
+   HICON m_hIcon;
+
+   // Generated message map functions
+   //{{AFX_MSG(CExtendedCBDlg)
+   virtual BOOL OnInitDialog();
+   afx_msg void OnSysCommand(UINT nID, LPARAM lParam);
+   afx_msg void OnPaint();
+   afx_msg HCURSOR OnQueryDragIcon();
+<b>   afx_msg void OnClose();</b>
+   //}}AFX_MSG
+   DECLARE_MESSAGE_MAP()
+};
+
+//{{AFX_INSERT_LOCATION}}
+// Microsoft Visual C++ will insert additional declarations immediately before the previous line.
+
+#endif // !defined(AFX_EXTENDEDCBDLG_H__BCF53116_90A4_4C07_B458_4C18A1EE4EB8__INCLUDED_)
+</pre>
+
+<p>
+Ну и, непосредственно, сама реализиация.
+</p>
+
+<pre>
+// ExtendedCBDlg.cpp : implementation file
+//
+
+#include "stdafx.h"
+#include "ExtendedCB.h"
+#include "ExtendedCBDlg.h"
+
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#undef THIS_FILE
+static char THIS_FILE[] = __FILE__;
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+// CAboutDlg dialog used for App About
+
+class CAboutDlg : public CDialog
+{
+public:
+   CAboutDlg();
+
+// Dialog Data
+   //{{AFX_DATA(CAboutDlg)
+   enum { IDD = IDD_ABOUTBOX };
+   //}}AFX_DATA
+
+   // ClassWizard generated virtual function overrides
+   //{{AFX_VIRTUAL(CAboutDlg)
+   protected:
+   virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
+   //}}AFX_VIRTUAL
+
+// Implementation
+protected:
+   //{{AFX_MSG(CAboutDlg)
+   //}}AFX_MSG
+   DECLARE_MESSAGE_MAP()
+};
+
+CAboutDlg::CAboutDlg() : CDialog(CAboutDlg::IDD)
+{
+   //{{AFX_DATA_INIT(CAboutDlg)
+   //}}AFX_DATA_INIT
+}
+
+void CAboutDlg::DoDataExchange(CDataExchange* pDX)
+{
+   CDialog::DoDataExchange(pDX);
+   //{{AFX_DATA_MAP(CAboutDlg)
+   //}}AFX_DATA_MAP
+}
+
+BEGIN_MESSAGE_MAP(CAboutDlg, CDialog)
+   //{{AFX_MSG_MAP(CAboutDlg)
+      // No message handlers
+   //}}AFX_MSG_MAP
+END_MESSAGE_MAP()
+
+/////////////////////////////////////////////////////////////////////////////
+// CExtendedCBDlg dialog
+
+CExtendedCBDlg::CExtendedCBDlg(CWnd* pParent /*=NULL*/)
+   : CDialog(CExtendedCBDlg::IDD, pParent)
+{
+   //{{AFX_DATA_INIT(CExtendedCBDlg)
+      // NOTE: the ClassWizard will add member initialization here
+   //}}AFX_DATA_INIT
+   // Note that LoadIcon does not require a subsequent DestroyIcon in Win32
+   m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
+   <b>m_pImageList=NULL;</b>
+}
+
+void CExtendedCBDlg::DoDataExchange(CDataExchange* pDX)
+{
+   CDialog::DoDataExchange(pDX);
+   //{{AFX_DATA_MAP(CExtendedCBDlg)
+      // NOTE: the ClassWizard will add DDX and DDV calls here
+   //}}AFX_DATA_MAP
+}
+
+BEGIN_MESSAGE_MAP(CExtendedCBDlg, CDialog)
+   //{{AFX_MSG_MAP(CExtendedCBDlg)
+   ON_WM_SYSCOMMAND()
+   ON_WM_PAINT()
+   ON_WM_QUERYDRAGICON()
+<b>   ON_WM_CLOSE()</b>
+   //}}AFX_MSG_MAP
+END_MESSAGE_MAP()
+
+/////////////////////////////////////////////////////////////////////////////
+// CExtendedCBDlg message handlers
+
+BOOL CExtendedCBDlg::OnInitDialog()
+{
+   CDialog::OnInitDialog();
+
+   // Add "About..." menu item to system menu.
+
+   // IDM_ABOUTBOX must be in the system command range.
+   ASSERT((IDM_ABOUTBOX &amp; 0xFFF0) == IDM_ABOUTBOX);
+   ASSERT(IDM_ABOUTBOX &lt; 0xF000);
+
+   CMenu* pSysMenu = GetSystemMenu(FALSE);
+   if (pSysMenu != NULL)
+   {
+      CString strAboutMenu;
+      strAboutMenu.LoadString(IDS_ABOUTBOX);
+      if (!strAboutMenu.IsEmpty())
+      {
+         pSysMenu->AppendMenu(MF_SEPARATOR);
+         pSysMenu->AppendMenu(MF_STRING, IDM_ABOUTBOX, strAboutMenu);
+      }
+   }
+
+   // Set the icon for this dialog.  The framework does this automatically
+   //  when the application's main window is not a dialog
+   SetIcon(m_hIcon, TRUE);       // Set big icon
+   SetIcon(m_hIcon, FALSE);      // Set small icon
+<b>   
+   //начнем...
+   //получим указатель на элемент управления расширенный комбинированный список
+
+   CComboBoxEx* pBox=(CComboBoxEx*) GetDlgItem(IDC_COMBOBOXEX1);
+   //теперь пора подумать и о веселых картинках...
+   
+   //создали список изображений и адрес запомнили в указателе m_pImageList
+   m_pImageList=new CImageList();
+   
+
+   ///////////////////////////////////////////////////////////////////////////
+   
+   m_pImageList->Create(52,15,ILC_COLOR4,16,0);
+
+   CBitmap bitmap;
+   for (int nID =IDB_BITMAP1; nID &lt;=IDB_BITMAP15; nID++)
+   {
+      bitmap.LoadBitmap(nID);
+      m_pImageList->Add(&amp;bitmap, ILC_COLOR4);
+      bitmap.DeleteObject();
+   }
+
+   
+   //Обрадуем расширенный комбинированный список тем,
+   //что у него появились "веселые картинки"
+   pBox->SetImageList(m_pImageList);
+
+   
+   //ну а теперь дела за элементами списка, для этого необходимо
+   //обратиться к структуре COMBOBOXEXITEM 
+   //полей много, все в MSDN, а мы используем только то, что нам необходимо.
+   //итак... 
+   COMBOBOXEXITEM itemEx;
+   char* sCombo[]={"Первый", "Второй", "Третий", "Четвертый", "Пятый", "Шестой", "Седьмой", "Восьмой", "Девятый", "Десятый", "Одинадцатый", "Двенадцатый", "Тринадцатый", "Четырнадцатый", "Пятнадцатый"};
+   for (nID =IDB_BITMAP1; nID &lt;=IDB_BITMAP15; nID++)  // загружаем все в ComboBoxEx
+   {
+      itemEx.mask=CBEIF_IMAGE|CBEIF_TEXT|CBEIF_SELECTEDIMAGE;//|CBEIF_INDENT;//разрешить отступ в списке
+      itemEx.iItem=nID-IDB_BITMAP1;
+      itemEx.iImage=nID-IDB_BITMAP1;
+      itemEx.iSelectedImage=nID-IDB_BITMAP1;
+      itemEx.pszText=sCombo[nID-IDB_BITMAP1];
+      //itemEx.iIndent=nID-IDB_BITMAP1;//установить отступ в списке
+      pBox->InsertItem(&amp;itemEx);
+      //P.S. Попробуйте разкоментировать код
+      //связанный с отступом и посмотрите результат
+   }
+   
+   //в принципе все, 
+   //выберем только двенадцатый элемент списка
+   //как? Через GetComboBoxCtrl() выходи на обыкновенный 
+   //комбинированный список, а дальше все как обычно...
+   pBox->GetComboBoxCtrl()->SetCurSel(11);
+   ///////////////////////////////////////////////////////////////////////////
+</b>  
+   return TRUE;  // return TRUE  unless you set the focus to a control
+}
+
+void CExtendedCBDlg::OnSysCommand(UINT nID, LPARAM lParam)
+{
+   if ((nID &amp; 0xFFF0) == IDM_ABOUTBOX)
+   {
+      CAboutDlg dlgAbout;
+      dlgAbout.DoModal();
+   }
+   else
+   {
+      CDialog::OnSysCommand(nID, lParam);
+   }
+}
+
+// If you add a minimize button to your dialog, you will need the code below
+//  to draw the icon.  For MFC applications using the document/view model,
+//  this is automatically done for you by the framework.
+
+void CExtendedCBDlg::OnPaint() 
+{
+   if (IsIconic())
+   {
+      CPaintDC dc(this); // device context for painting
+
+      SendMessage(WM_ICONERASEBKGND, (WPARAM) dc.GetSafeHdc(), 0);
+
+      // Center icon in client rectangle
+      int cxIcon = GetSystemMetrics(SM_CXICON);
+      int cyIcon = GetSystemMetrics(SM_CYICON);
+      CRect rect;
+      GetClientRect(&amp;rect);
+      int x = (rect.Width() - cxIcon + 1) / 2;
+      int y = (rect.Height() - cyIcon + 1) / 2;
+
+      // Draw the icon
+      dc.DrawIcon(x, y, m_hIcon);
+   }
+   else
+   {
+      CDialog::OnPaint();
+   }
+}
+
+// The system calls this to obtain the cursor to display while the user drags
+//  the minimized window.
+HCURSOR CExtendedCBDlg::OnQueryDragIcon()
+{
+   return (HCURSOR) m_hIcon;
+}
+<b>
+void CExtendedCBDlg::OnClose() 
+{
+   delete m_pImageList;//хороший тон
+   CDialog::OnClose();
+}</b>
+</pre>
+
+</Урок>

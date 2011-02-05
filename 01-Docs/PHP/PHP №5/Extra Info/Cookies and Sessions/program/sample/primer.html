@@ -1,0 +1,20 @@
+<html>
+<head>
+</head>
+<body>
+<h2>Выберите картинку, которую Вы хотите поместить в базу данных:</h2>
+
+<form action="primer.php" method="post" enctype="multipart/form-data">
+
+<!--определим максимальную верхнюю границу для загружаемых файлов
+Это необходимо сделать раньше объявления элемента FILE-->
+<input type="hidden" name="MAX_FILE_SIZE" value=1024>
+
+<!-- создаем элемент управления FILE с именем ufile-->
+<input type="File" name="ufile"><br><br>
+
+<input type="Submit">
+</form>
+
+</body>
+</html>

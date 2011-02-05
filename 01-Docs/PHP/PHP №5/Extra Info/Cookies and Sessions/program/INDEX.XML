@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<!DOCTYPE page [
+<!ENTITY nbsp "&#160;">
+<!ENTITY пробел "&#160;">
+<!ENTITY shy "&#173;">
+<!ENTITY перенос "&#173;">
+]>
+
+<?xml:stylesheet type="text/xsl" href="../common/layout.xsl" ?>
+
+<Урок xmlns="x-schema:Schema.xml" название="Visual C++ и MFC"  следующий="section01.xml">
+<h1>PHP</h1>
+
+<ol>
+<li><a href="section01.xml">Cookies</a></li>
+<li><a href="section02.xml">Сессии</a></li>
+<li><a href="section03.xml">Практический пример</a></li>
+<li><a href="section04.xml">Загрузка клиентом файлов на сервер</a></li>
+<li><a href="section05.xml">Загрузка изображений в базу данных</a></li>
+<li><a href="section06.xml">Практический пример</a></li>
+<li><a href="HomeTask.xml">Домашнее задание</a></li>
+</ol>
+
+</Урок>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<!DOCTYPE page [
+<!ENTITY nbsp "&#160;">
+<!ENTITY пробел "&#160;">
+<!ENTITY shy "&#173;">
+<!ENTITY перенос "&#173;">
+]>
+
+<?xml:stylesheet type="text/xsl" href="../common/layout.xsl" ?>
+
+<Урок xmlns="x-schema:Schema.xml" название="Внешние Функции" 
+предыдущий="section02.xml" следующий="hometask.xml">
+<h1 style="color:maroon">Внешние Функции</h1>
+<p>В компьютерной индустрии многие вещи между собой взаимосвязаны.Вы будете приятно 
+удивлены вы можете совместить С++ и InterBase.Их синтезом являются - Внешние Функции 
+( External Function ).Также их называют UDF.Теперь познакомимся с этим понятием подробней.</p>
+<p>UDF - это функция написанная на любом языке программирования, который позволяет создать 
+библиотеку.Процесс написания UDF состоит в следующем:</p>
+<ol>
+<li>Пишется программа на любом языке программирования, который позволяет создать 
+библиотеку.Функции, написанные с помощью Java  не поддерживаются.</li>
+<li>Программа( в дальнейшем функция ) компилируется и подключается к файлу динамической 
+библиотеки ( файл с расширением dll).</li>
+<li>Используя запрос DECLARE EXTERNAL FUNCTION необходимо зарегистрировать каждую UDF в 
+каждой базе в которой она понадобится. </li>
+</ol>
+<h2 style="color:maroon">Основные правила написания UDF:</h2>
+<p>
+UDF может принимать до 10 параметров и естественно возвращать только одно значение.В функции
+ можно использовать стандартные типы данных языка на котором вы пишете UDF.Самое главное, чтобы 
+ у них имелись аналоги в типах данных InterBase.Также можно передавать в качестве параметра и 
+ использовать внутри UDF , типы данных InterBase.В этом случае необходимо подключить в вашу программу 
+ файл ibase.h .Все параметры внутрь функции передаются по ссылке.Внешняя функция должна обьявляться с помощью 
+ спецификатора __stdcall. Например:</p>
+ <pre> 
+ int* __stdcall test( int *p){
+  
+ }
+</pre>
+<p>Процесс компиляции UDF тоже достаточно кропотлив.В первую очередь необходимо подключить в 
+программу файл ibase.h если используются типы данных InterBase.Если внутри UDF есть вызовы стандартных 
+функций InterBase, то тогда нужно прилинковать к программе библиотеку gds32.dll.При компиляции программы в
+Visual C++ нужно также включить в программу с помощью include файл ib_util.h.А также 
+прилинковать к проекту файл ib_util_ms.lib. После создания библиотеки её  можно использовать 
+в InterBase.Для этого надо задекларировать ту функцию, которую мы будем использовать.Делается это
+с помощью запроса DECLARE EXTERNAL FUNCTION.Синтаксис запроса:</p>
+<pre>
+DECLARE EXTERNAL FUNCTION name [ datatype | CSTRING (int)
+[, datatype | CSTRING ( int) ...]]
+RETURNS { datatype [BY VALUE] | CSTRING ( int)} [FREE_IT]
+[RETURNS PARAMETER n]
+ENTRY_POINT ' entryname'
+MODULE_NAME ' modulename';
+
+Пояснение параметров:
+name - имя UDF для использования внутри SQL - запросов.Может отличаться от настоящего 
+имени функции.Настоящее имя указывается в качестве значения параметра ENTRY_POINT.
+datatype - тип данных параметров функции или возвращаемого значения.
+RETURNS - определяет значение возвращаемое функцией.
+'entryname'  - настоящее имя функции.
+'modulename' - название библиотеки, где находиться функция.
+Подробности использования других параметров смотрите в документации по InterBase.
+Пример:
+
+DECLARE EXTERNAL FUNCTION ABS
+DOUBLE PRECISION
+RETURNS DOUBLE BY VALUE
+ENTRY_POINT 'fn_abs' MODULE_NAME 'ib_udf';
+
+Более полную информацию по созданию UDF смотрите в документации к InterBase.
+</pre>
+<p>Мы пока что не будем заниматься созданием собственных UDF.C InterBase поставляется библиотека 
+написанных функций, которые наиболее часто требуются для работы.Она располагается в 
+файле ib_udf.dll.Данный файл обычно находится по пути interbase_home/lib, где interbase_home - папка 
+в которой находится 
+InterBase.Напомним любую функцию UDF перед использованием нужно подключить.Делается это с 
+помощью DECLARE EXTERNAL FUNCTION.Существует возможность облегчить себе жизнь.В директории 
+interbase_home/examples/udf лежит файл-скрипт ib_udf.sql.Загрузите его в isql и выполните его.
+В случае успеха вы зарегистрируете все стандартные UDF функции.Пример листинга из файла ib_udf.sql:
+</p>
+<pre>
+/*****************************************
+ *
+ *	a b s
+ *
+ *****************************************
+ *
+ * Functional description:
+ * 	Returns the absolute value of a 
+ * 	number.  
+ *
+ *****************************************/
+DECLARE EXTERNAL FUNCTION abs 
+DOUBLE PRECISION
+RETURNS DOUBLE PRECISION BY VALUE
+ENTRY_POINT 'IB_UDF_abs' MODULE_NAME 'ib_udf';
+</pre>
+<p>В этом примере регистрируется функция abs. После этого её можно использовать в SQL - запросах.
+Давайте, познакомимся со стандартными UDF-функциями.</p>
+<pre>
+abs
+Возвращает модуль числа.Пример регистрации:
+DECLARE EXTERNAL FUNCTION ABS
+DOUBLE PRECISION
+RETURNS DOUBLE PRECISION BY VALUE
+ENTRY_POINT ’IB_UDF_abs’ MODULE_NAME ’ib_udf’;
+
+acos
+Возвращает арккосинус числа от -1 до 1, если число находится за границами 
+возвращает 0 .Пример регистрации:
+DECLARE EXTERNAL FUNCTION ACOS
+DOUBLE PRECISION
+RETURNS DOUBLE PRECISION BY VALUE
+ENTRY_POINT ’IB_UDF_acos’ MODULE_NAME ’ib_udf’;
+
+ascii_char
+Возвращает ASCII-символ соответствующий переданному значению.Пример регистрации:
+DECLARE EXTERNAL FUNCTION ASCII_VAL
+CHAR(1)
+RETURNS INTEGER BY VALUE
+ENTRY_POINT ’IB_UDF_ascii_val’ MODULE_NAME ’ib_udf’;
+
+asin
+Возвращает арксинус числа от -1 до 1, если число находится за границами 
+возвращает 0 .Пример регистрации:
+DECLARE EXTERNAL FUNCTION ASIN
+DOUBLE PRECISION
+RETURNS DOUBLE PRECISION BY VALUE
+ENTRY_POINT ’IB_UDF_asin’ MODULE_NAME ’ib_udf’;
+
+atan
+Возвращает арктангенс числа .Пример регистрации:
+DECLARE EXTERNAL FUNCTION ATAN
+DOUBLE PRECISION
+RETURNS DOUBLE PRECISION BY VALUE
+ENTRY_POINT ’IB_UDF_atan’ MODULE_NAME ’ib_udf’;
+
+atan2
+Возвращает арктангенс первого параметра деленного на второй параметр.
+Пример регистрации: 
+DECLARE EXTERNAL FUNCTION ATAN2
+DOUBLE PRECISION, DOUBLE PRECISION
+RETURNS DOUBLE PRECISION BY VALUE
+ENTRY_POINT ’IB_UDF_atan2’ MODULE_NAME ’ib_udf’;
+
+bin_and
+Возвращает результат операции двоичное И (AND) на основании 2-х введенных 
+параметров.
+Пример регистрации: 
+DECLARE EXTERNAL FUNCTION BIN_AND
+INTEGER, INTEGER
+RETURNS INTEGER BY VALUE
+ENTRY_POINT ’IB_UDF_bin_and’ MODULE_NAME ’ib_udf’;
+
+bin_or
+Возвращает результат операции двоичное ИЛИ (OR) на основании 2-х введенных 
+параметров.
+Пример регистрации: 
+DECLARE EXTERNAL FUNCTION BIN_OR
+INTEGER, INTEGER
+RETURNS INTEGER BY VALUE
+ENTRY_POINT ’IB_UDF_bin_or’ MODULE_NAME ’ib_udf’;
+
+bin_xor
+Возвращает результат операции двоичное исключающее ИЛИ (XOR) на основании 2-х введенных 
+параметров.
+Пример регистрации: 
+DECLARE EXTERNAL FUNCTION BIN_XOR
+INTEGER, INTEGER
+RETURNS INTEGER BY VALUE
+ENTRY_POINT ’IB_UDF_bin_xor’ MODULE_NAME ’ib_udf’;
+
+ceiling
+Возвращает значение типа double, представленное целым,которое больше или равно введеному
+значению.
+Пример регистрации: 
+DECLARE EXTERNAL FUNCTION CEILING
+DOUBLE PRECISION
+RETURNS DOUBLE PRECISION BY VALUE
+ENTRY_POINT ’IB_UDF_ceiling’ MODULE_NAME ’ib_udf’;
+
+cos
+Возвращает косинус числа.
+Пример регистрации: 
+DECLARE EXTERNAL FUNCTION COS
+DOUBLE PRECISION
+RETURNS DOUBLE PRECISION BY VALUE
+ENTRY_POINT ’IB_UDF_cos’ MODULE_NAME ’ib_udf’;
+
+div
+Делит два введеных числа.
+Возвращает результат деления.
+Пример регистрации: 
+DECLARE EXTERNAL FUNCTION DIV
+INTEGER, INTEGER
+RETURNS DOUBLE PRECISION BY VALUE
+ENTRY_POINT ’IB_UDF_div’ MODULE_NAME ’ib_udf’;
+
+ln
+Возвращает натуральный логарифм числа.
+DECLARE EXTERNAL FUNCTION LN
+DOUBLE PRECISION
+RETURNS DOUBLE PRECISION BY VALUE
+ENTRY_POINT ’IB_UDF_ln’ MODULE_NAME ’ib_udf’;
+
+lower
+Возвращает введенную строку в нижнем регистре.
+Работает только с ASCII - символами.
+DECLARE EXTERNAL FUNCTION lower
+CSTRING(80)
+RETURNS CSTRING(80) FREE_IT
+ENTRY_POINT ’IB_UDF_lower’ MODULE_NAME ’ib_udf’;
+
+ltrim
+Убирает пробелы вначале строки (имеются ввиду лидирующие пробелы).
+Возвращает преобразованную строку.
+DECLARE EXTERNAL FUNCTION LTRIM
+CSTRING(80)
+RETURNS CSTRING(80) FREE_IT
+ENTRY_POINT ’IB_UDF_ltrim’ MODULE_NAME ’ib_udf’;
+
+pi
+Возвращет число Пи.
+DECLARE EXTERNAL FUNCTION PI
+RETURNS DOUBLE PRECISION BY VALUE
+ENTRY_POINT ’IB_UDF_pi’ MODULE_NAME ’ib_udf’;	
+
+rand
+Возвращает случайное число в диапозоне от 0 до 1. В качестве
+начальной точки для генератора случайных чисел берется  текущее время.
+DECLARE EXTERNAL FUNCTION rand
+RETURNS DOUBLE PRECISION BY VALUE
+ENTRY_POINT ’IB_UDF_rand’ MODULE_NAME ’ib_udf’;
+
+rtrim
+Убирает пробелы в конце строки.
+Возвращает преобразованную строку.
+DECLARE EXTERNAL FUNCTION RTRIM
+CSTRING(80)
+RETURNS CSTRING(80) FREE_IT
+ENTRY_POINT ’IB_UDF_rtrim’ MODULE_NAME ’ib_udf’;
+
+sqrt
+Возвращает квадратный корень числа.
+DECLARE EXTERNAL FUNCTION SQRT
+DOUBLE PRECISION
+RETURNS DOUBLE PRECISION BY VALUE
+ENTRY_POINT ’IB_UDF_sqrt’ MODULE_NAME ’ib_udf’;
+
+strlen
+Возвращает длину строки.
+DECLARE EXTERNAL FUNCTION STRLEN
+CSTRING(32767)
+RETURNS INTEGER BY VALUE
+ENTRY_POINT ’IB_UDF_strlen’ MODULE_NAME ’ib_udf’;
+
+substr
+SUBSTR(s,m,n) возвращает подстроку в s начиная с позиции m и заканчивая n.
+DECLARE EXTERNAL FUNCTION SUBSTR
+CSTRING(80), SMALLINT, SMALLINT
+RETURNS CSTRING(80) FREE_IT
+ENTRY_POINT ’IB_UDF_substr’ MODULE_NAME ’ib_udf’;
+
+За более подробной информацией о функциях обращайтесь к документации по InterBase.
+Здесь были представлены не все функции UDF. 
+</pre>
+<p>Итак, а как же все-таки пользоваться этими функциями.Предположим вы зарегистрировали их
+в вашей базе.Пример:</p>
+<pre>
+select substr(secname,1,4)
+from people
+Используется для того чтобы выделить подстроку.
+
+select secname
+from people
+where strlen(secname)>6
+Показывает все фамилии в которых количество букв больше 6
+ 
+ 
+</pre>
+<p>UDF - это безусловно одно из достоинств InterBase.</p>
+</Урок>

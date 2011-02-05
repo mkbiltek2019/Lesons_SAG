@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<!DOCTYPE page [
+<!ENTITY nbsp "&#160;">
+<!ENTITY пробел "&#160;">
+<!ENTITY shy "&#173;">
+<!ENTITY перенос "&#173;">
+]>
+
+<?xml:stylesheet type="text/xsl" href="../common/layout.xsl" ?>
+
+<Урок xmlns="x-schema:Schema.xml" название="SQL"  следующий="section01.xml">
+<h1>MySQL. Проверка и восстановление баз данных</h1>
+<ol>
+<li><a href="section01.xml">Файлы журналов </a></li>
+<li><a href="section02.xml">Поддержка и восстановление баз данных</a></li>
+<li><a href="section03.xml">Проверка таблиц на наличие ошибок</a></li>
+<li><a href="section04.xml">Резервирование и копирование баз данных. Общие поятия</a></li>
+<li><a href="section05.xml">Методы резервирования</a></li><li><a href="section06.xml">Восстановление таблиц</a></li>
+</ol>
+
+</Урок>
