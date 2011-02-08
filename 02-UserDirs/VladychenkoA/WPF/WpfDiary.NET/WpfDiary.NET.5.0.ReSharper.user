@@ -1,0 +1,332 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:App.xaml" caret="0" fromTop="0" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:App.xaml.cs" caret="1210" fromTop="10" />
+      <File id="d:Прочие файлы/f:Form1.cs/l:D!?Учебная?13НС-1СПр?02-UserDirs?VladychenkoA?WCF?CurrencyConverter1?CurrencyConverterClient?Form1.cs" caret="227" fromTop="0" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Task.cs" caret="1167" fromTop="8" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Tasks.cs" caret="200" fromTop="7" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:WpfSingleInstance.cs" caret="3842" fromTop="9" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:ListTask.cs" caret="1166" fromTop="22" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml.cs" caret="10210" fromTop="4" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="8093" fromTop="6" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="6364" fromTop="18" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="8004" fromTop="22" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="11435" fromTop="11" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="8004" fromTop="17" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="8004" fromTop="21" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="8263" fromTop="20" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="8004" fromTop="18" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="13249" fromTop="5" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="14187" fromTop="6" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="14200" fromTop="6" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="15552" fromTop="18" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml.cs" caret="10553" fromTop="15" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="13496" fromTop="19" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="8494" fromTop="16" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="7841" fromTop="18" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="13215" fromTop="19" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="11815" fromTop="13" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="8091" fromTop="9" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="8732" fromTop="13" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="8802" fromTop="13" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="9206" fromTop="22" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="13970" fromTop="22" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="5310" fromTop="24" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="9041" fromTop="8" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="9273" fromTop="13" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml.cs" caret="3826" fromTop="16" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="860" fromTop="7" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="9774" fromTop="12" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml.cs" caret="10690" fromTop="23" />
+      <File id="4AFBD025-1F60-4BC8-9A65-0680DBB133F7/f:Window1.xaml" caret="8251" fromTop="10" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="Row1" priority="0" />
+      <Item value="GridLength`0" priority="1" />
+      <Item value="GridLengthConverter`0" priority="0" />
+      <Item value="new" priority="25" />
+      <Item value="Grid2" priority="0" />
+      <Item value="Star" priority="0" />
+      <Item value="txtDate" priority="2" />
+      <Item value="e" priority="1" />
+      <Item value="Calendar" priority="0" />
+      <Item value="private" priority="16" />
+      <Item value="DateTime`0" priority="2" />
+      <Item value="string" priority="18" />
+      <Item value="public" priority="17" />
+      <Item value="_date" priority="3" />
+      <Item value="value" priority="5" />
+      <Item value="get" priority="3" />
+      <Item value="return" priority="6" />
+      <Item value="set" priority="4" />
+      <Item value="_title" priority="3" />
+      <Item value="_content" priority="3" />
+      <Item value="_status" priority="3" />
+      <Item value="_comment" priority="3" />
+      <Item value="Task`0" priority="30" />
+      <Item value="null" priority="8" />
+      <Item value="Convert`0" priority="2" />
+      <Item value="date" priority="1" />
+      <Item value="title" priority="0" />
+      <Item value="content" priority="1" />
+      <Item value="comment" priority="1" />
+      <Item value="status" priority="1" />
+      <Item value="List" priority="2" />
+      <Item value="List&lt;Task&gt;" priority="1" />
+      <Item value="ListTask`0" priority="3" />
+      <Item value="task" priority="49" />
+      <Item value="TaskList" priority="1" />
+      <Item value="_taskList" priority="14" />
+      <Item value="fileName" priority="2" />
+      <Item value="Task" priority="6" />
+      <Item value="txtTitle" priority="1" />
+      <Item value="txtContent" priority="3" />
+      <Item value="txtStatus" priority="2" />
+      <Item value="txtComment" priority="1" />
+      <Item value="_task" priority="0" />
+      <Item value="Tasks" priority="3" />
+      <Item value="protected" priority="1" />
+      <Item value="Tasks`0" priority="2" />
+      <Item value="foreach" priority="1" />
+      <Item value="list" priority="0" />
+      <Item value="listTask" priority="0" />
+      <Item value="Add`0" priority="0" />
+      <Item value="ListTask" priority="4" />
+      <Item value="tasks" priority="1" />
+      <Item value="lt" priority="16" />
+      <Item value="ListView" priority="14" />
+      <Item value="TextRange`0" priority="0" />
+      <Item value="XmlNode`0" priority="0" />
+      <Item value="doc" priority="0" />
+      <Item value="void" priority="2" />
+      <Item value="Load`0" priority="5" />
+      <Item value="Loaded" priority="0" />
+      <Item value="ListView_Loaded`0" priority="0" />
+      <Item value="Microsoft" priority="0" />
+      <Item value="VisualBasic" priority="0" />
+      <Item value="Information`0" priority="0" />
+      <Item value="CompilerServices" priority="0" />
+      <Item value="Interaction`0" priority="0" />
+      <Item value="MessageBeep`0" priority="0" />
+      <Item value="DllImport" priority="0" />
+      <Item value="Beep`0" priority="0" />
+      <Item value="MessageBeep1`0" priority="0" />
+      <Item value="BeepFlag`0" priority="0" />
+      <Item value="OK" priority="0" />
+      <Item value="override" priority="1" />
+      <Item value="StartupEventArgs`0" priority="0" />
+      <Item value="WpfSingleInstance`0" priority="0" />
+      <Item value="base" priority="3" />
+      <Item value="Application`0" priority="0" />
+      <Item value="this" priority="1" />
+      <Item value="ListViewItem`0" priority="2" />
+      <Item value="sender" priority="0" />
+      <Item value="as" priority="2" />
+      <Item value="ListView`0" priority="0" />
+      <Item value="MessageBox`0" priority="0" />
+      <Item value="lvi" priority="1" />
+      <Item value="FlowDocument" priority="1" />
+      <Item value="Block`0" priority="1" />
+      <Item value="int" priority="4" />
+      <Item value="index" priority="2" />
+      <Item value="FlowDocument`0" priority="0" />
+      <Item value="para" priority="0" />
+      <Item value="fd" priority="1" />
+      <Item value="using" priority="0" />
+      <Item value="if" priority="1" />
+      <Item value="comboBox1" priority="1" />
+      <Item value="ok" priority="1" />
+      <Item value="process" priority="1" />
+      <Item value="close" priority="1" />
+      <Item value="total" priority="1" />
+      <Item value="lbOk" priority="1" />
+      <Item value="lbPr" priority="1" />
+      <Item value="lbCl" priority="1" />
+      <Item value="lbTo" priority="1" />
+      <Item value="lbcm3" priority="0" />
+      <Item value="taskcm3" priority="2" />
+      <Item value="forr" priority="0" />
+      <Item value="index2" priority="0" />
+      <Item value="index3" priority="0" />
+      <Item value="EnterSound" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.RowDefinition">
+      <Item value="Height" priority="1" />
+      <Item value="MaxHeight" priority="0" />
+      <Item value="ActualHeight" priority="0" />
+      <Item value="SetValue`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.GridLength">
+      <Item value="Auto" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.GridLengthConverter">
+      <Item value="StandardValuesCollection`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.Grid">
+      <Item value="RowDefinitions" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.RowDefinitionCollection">
+      <Item value="Indexer" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.TextBox">
+      <Item value="Text" priority="9" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Windows.Controls.Calendar">
+      <Item value="SelectedDate" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Nullable`1">
+      <Item value="Value" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="ToShortDateString`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToDateTime`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="ElementAt`1" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.Linq.XElement">
+      <Item value="Value" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WpfDiary.NET.Task">
+      <Item value="Date" priority="12" />
+      <Item value="Title" priority="4" />
+      <Item value="Content" priority="4" />
+      <Item value="Status" priority="4" />
+      <Item value="Comment" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add`0" priority="0" />
+      <Item value="Clear`0" priority="0" />
+      <Item value="Count" priority="2" />
+      <Item value="RemoveAt`0" priority="0" />
+      <Item value="Insert`0" priority="0" />
+      <Item value="Sort`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.RichTextBox">
+      <Item value="Document" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Documents.FlowDocument">
+      <Item value="Blocks" priority="1" />
+      <Item value="ContentStart" priority="0" />
+      <Item value="ContentEnd" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Documents.BlockCollection">
+      <Item value="Clear`0" priority="0" />
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WpfDiary.NET.ListTask">
+      <Item value="TaskList" priority="8" />
+      <Item value="WriteXmlFile`0" priority="2" />
+      <Item value="LoadXmlFile`0" priority="0" />
+      <Item value="Append`0" priority="0" />
+      <Item value="Sort`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.ListView">
+      <Item value="Items" priority="8" />
+      <Item value="SelectedItem" priority="5" />
+      <Item value="SelectedItems" priority="0" />
+      <Item value="SelectedIndex" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.ItemCollection">
+      <Item value="Add`0" priority="0" />
+      <Item value="Clear`0" priority="0" />
+      <Item value="Remove`0" priority="0" />
+      <Item value="Indexer" priority="2" />
+      <Item value="Insert`0" priority="0" />
+      <Item value="RemoveAt`0" priority="0" />
+      <Item value="IndexOf`0" priority="1" />
+      <Item value="GetItemAt`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Documents.TextRange">
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.XmlDocument">
+      <Item value="CreateElement`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.VisualBasic.Interaction">
+      <Item value="Beep`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@WpfDiary.NET.Window1+BeepFlag">
+      <Item value="MB_OK" priority="0" />
+      <Item value="MB_ICONHAND" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@WpfDiary.NET.WpfSingleInstance">
+      <Item value="Make`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Windows.Controls.Ribbon.RibbonWindow">
+      <Item value="OnClosed`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WpfDiary.NET.App">
+      <Item value="MainWindow" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Window">
+      <Item value="Close`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Application">
+      <Item value="OnStartup`0" priority="0" />
+      <Item value="Exit" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@WpfDiary.NET.App">
+      <Item value="Current" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.IList">
+      <Item value="Indexer" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.MessageBox">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.ListViewItem">
+      <Item value="Content" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="ToString`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Documents.Block">
+      <Item value="SetTextAlignment`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Documents.Paragraph">
+      <Item value="Inlines" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Documents.InlineCollection">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.ComboBox">
+      <Item value="SelectedItem" priority="1" />
+      <Item value="Items" priority="0" />
+      <Item value="SelectedIndex" priority="0" />
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.Label">
+      <Item value="Content" priority="8" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.MediaElement">
+      <Item value="Play`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

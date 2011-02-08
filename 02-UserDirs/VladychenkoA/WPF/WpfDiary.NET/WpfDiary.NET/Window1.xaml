@@ -1,0 +1,315 @@
+﻿<r:RibbonWindow x:Class="WpfDiary.NET.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/wpf/2008/toolkit"
+    xmlns:r="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary" 
+    xmlns:l="clr-namespace:WpfDiary.NET"            
+    Title="Дневник" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen" 
+    Icon="images\badge.png" Height="600" Width="900" Loaded="RibbonWindow_Loaded" >
+    <r:RibbonWindow.Resources>
+       
+        <ResourceDictionary>
+            <r:RibbonCommand x:Key="QATButton" CanExecute="RibbonCommand_CanExecute" LabelTitle="Сохранить" LabelDescription="Сохранить" ToolTipTitle="Сохранить" ToolTipDescription="Нажмите здесь, чтобы сохранить в файл" SmallImageSource="Images\save.png" LargeImageSource="Images\save.png" />
+            <r:RibbonCommand x:Key="MenuItem1" CanExecute="RibbonCommand_CanExecute" LabelTitle="Открыть" LabelDescription="Выберите файл заданий" ToolTipTitle="Открыть" ToolTipDescription="Нажмите здесь, чтобы открыть файл заданий" SmallImageSource="Images\horn32.png" LargeImageSource="Images\horn32.png" />
+            <r:RibbonCommand x:Key="MenuItem2" CanExecute="RibbonCommand_CanExecute" LabelTitle="Просмотр" LabelDescription="Просмотр в стандартном виде" ToolTipTitle="Просмотр" ToolTipDescription="Нажмите здесь, чтобы просмотреть в стандартном виде" SmallImageSource="Images\fire32.png" LargeImageSource="Images\fire32.png" />
+            <r:RibbonCommand x:Key="MenuItem3" CanExecute="RibbonCommand_CanExecute" LabelTitle="Просмотр заданий" LabelDescription="Просмотр заданий" ToolTipTitle="Просмотр заданий" ToolTipDescription="Нажмите здесь, чтобы просмотреть все задания" SmallImageSource="images\pillow32.png" LargeImageSource="images\pillow32.png" />
+            <r:RibbonCommand x:Key="MenuItem4" CanExecute="RibbonCommand_CanExecute" LabelTitle="Редактирование" LabelDescription="Редактирование" ToolTipTitle="Редактирование заданий" ToolTipDescription="Нажмите здесь, чтобы редактировать задания" SmallImageSource="Images\toothpaste32.png" LargeImageSource="Images\toothpaste32.png" />
+            <r:RibbonCommand x:Key="MenuItem5" CanExecute="RibbonCommand_CanExecute" LabelTitle="Сохранить" LabelDescription="Сохранить в файл" ToolTipTitle="Сохранить" ToolTipDescription="Нажмите здесь, чтобы сохранить в файл" SmallImageSource="Images\save.png" LargeImageSource="Images\save.png" />
+            <r:RibbonCommand x:Key="MenuItem6" CanExecute="RibbonCommand_CanExecute" LabelTitle="Выход" LabelDescription="Нажмите здесь, чтобы закрыть программу" ToolTipTitle="Выход" ToolTipDescription="Нажмите здесь, чтобы закрыть программу" SmallImageSource="Images\coffin32.png" LargeImageSource="Images\coffin32.png"/>
+            <r:RibbonCommand x:Key="HomeButton1" CanExecute="RibbonCommand_CanExecute" LabelTitle="Сортировать" LabelDescription="Calc This!" ToolTipTitle="Сортировать" ToolTipDescription="Нажмите здесь, чтобы отсортировать список заданий по дате" SmallImageSource="Images\Image00121.png" LargeImageSource="Images\Image00121.png" />
+            <r:RibbonCommand x:Key="HomeButton2" CanExecute="RibbonCommand_CanExecute" LabelTitle="Очистить" LabelDescription="Нажмите здесь, чтобы очистить" ToolTipTitle="Очистить" ToolTipDescription="Нажмите здесь, чтобы очистить область заданий" SmallImageSource="Images\M005.png" LargeImageSource="Images\M005.png" />
+            <r:RibbonCommand x:Key="HomeButton3" CanExecute="RibbonCommand_CanExecute" LabelTitle="Обновить" LabelDescription="Нажмите здесь, чтобы обновить" ToolTipTitle="Обновить" ToolTipDescription="Нажмите здесь, чтобы обновить список заданий" SmallImageSource="Images\Image00333.png" LargeImageSource="Images\Image00333.png" />
+            <r:RibbonCommand x:Key="Enter" CanExecute="RibbonCommand_CanExecute" LabelTitle="Вход" LabelDescription="Вход" ToolTipTitle="Вход" ToolTipDescription="Нажмите здесь, чтобы прослушать вход" SmallImageSource="Images\AllDay.ru_Mediacenter.png" LargeImageSource="Images\AllDay.ru_Mediacenter.png" />
+            <r:RibbonCommand x:Key="Exits" CanExecute="RibbonCommand_CanExecute" LabelTitle="Выход" LabelDescription="Выход" ToolTipTitle="Выход" ToolTipDescription="Нажмите здесь, чтобы прослушать выход" SmallImageSource="Images\AllDay.ru_Mediacenter.png" LargeImageSource="Images\AllDay.ru_Mediacenter.png" />
+            <r:RibbonCommand x:Key="Startup" CanExecute="RibbonCommand_CanExecute" LabelTitle="Включение" LabelDescription="Включение" ToolTipTitle="Включение" ToolTipDescription="Нажмите здесь, чтобы прослушать включение" SmallImageSource="Images\save.png" LargeImageSource="Images\save.png" />
+            <r:RibbonCommand x:Key="Shutdown" CanExecute="RibbonCommand_CanExecute" LabelTitle="Выключение" LabelDescription="Выключение" ToolTipTitle="Выключение" ToolTipDescription="Нажмите здесь, чтобы прослушать выключение " SmallImageSource="Images\AlphaDistaIcon20.png" LargeImageSource="Images\AlphaDistaIcon20.png" />
+            <r:RibbonCommand x:Key="Call" CanExecute="RibbonCommand_CanExecute" LabelTitle="Звонок" LabelDescription="Звонок" ToolTipTitle="Звонок" ToolTipDescription="Нажмите здесь, чтобы прослушать звоннок" SmallImageSource="Images\save.png" LargeImageSource="Images\save.png" />
+            <!-- Uncomment below for Office 2007 Blue -->
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/RibbonControlsLibrary;component/Themes/Office2007Blue.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <!-- Uncomment below for Office 2007 Silver -->
+            <!--<ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/RibbonControlsLibrary;component/Themes/Office2007Silver.xaml" />
+            </ResourceDictionary.MergedDictionaries>-->
+            <!-- Uncomment below for Office 2007 Black -->
+            <!--<ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/RibbonControlsLibrary;component/Themes/Office2007Black.xaml" />
+            </ResourceDictionary.MergedDictionaries>-->
+            
+        </ResourceDictionary>
+        
+    </r:RibbonWindow.Resources>
+    <r:RibbonWindow.Triggers>
+        <EventTrigger RoutedEvent="Button.MouseEnter" SourceName="HomeButton1">
+            <EventTrigger.Actions>
+                <SoundPlayerAction Source="ding.wav"/>
+            </EventTrigger.Actions>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="Button.MouseEnter" SourceName="HomeButton2">
+            <EventTrigger.Actions>
+                <SoundPlayerAction Source="ding.wav"/>
+            </EventTrigger.Actions>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="Button.MouseEnter" SourceName="HomeButton3">
+            <EventTrigger.Actions>
+                <SoundPlayerAction Source="ding.wav"/>
+            </EventTrigger.Actions>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="HomeButton1">
+
+            <EventTrigger.Actions>
+                <SoundPlayerAction Source="tada.wav"/>
+            </EventTrigger.Actions>
+
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="HomeButton2">
+            <EventTrigger.Actions>
+                <SoundPlayerAction Source="speech_on.wav"/>
+            </EventTrigger.Actions>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="HomeButton3">
+            <EventTrigger.Actions>
+                <SoundPlayerAction Source="notify.wav"/>
+            </EventTrigger.Actions>
+        </EventTrigger>
+        
+        <!--<EventTrigger RoutedEvent="Button.MouseEnter" SourceName="TabMedia">
+            <EventTrigger.Actions>
+                <SoundPlayerAction Source="chord.wav"/>
+            </EventTrigger.Actions>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="Button.MouseEnter" SourceName="Home">
+            <EventTrigger.Actions>
+                <SoundPlayerAction Source="chord.wav"/>
+            </EventTrigger.Actions>
+        </EventTrigger>-->
+
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="Enter">
+            <EventTrigger.Actions>
+                <SoundPlayerAction Source="WindowsLogonSound.wav"/>
+            </EventTrigger.Actions>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="Button.Click" SourceName="Exits">
+            <EventTrigger.Actions>
+                <SoundPlayerAction Source="WindowsLogoffSound.wav"/>
+            </EventTrigger.Actions>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="Button.Click" SourceName="Startup">
+            <EventTrigger.Actions>
+                <SoundPlayerAction Source="WindowsStartup.wav"/>
+            </EventTrigger.Actions>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="Button.Click" SourceName="Shutdown">
+            <EventTrigger.Actions>
+                <SoundPlayerAction Source="WindowsShutdown.wav"/>
+            </EventTrigger.Actions>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="Button.Click" SourceName="Call">
+            <EventTrigger.Actions>
+                <SoundPlayerAction Source="ringout.wav"/>
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </r:RibbonWindow.Triggers>
+    <DockPanel>
+        <r:Ribbon DockPanel.Dock="Top" Title="Персональный ежедневник" x:Name="mainRibbon">
+            <r:Ribbon.QuickAccessToolBar>
+                <r:RibbonQuickAccessToolBar>
+                    <r:RibbonButton Name="SaveAll" Command="{StaticResource QATButton}" Click="SaveAll_Click"/>
+                    <!--<r:RibbonButton Command="{StaticResource MediaEject}" r:RibbonQuickAccessToolBar.Placement="InCustomizeMenu" />-->
+                </r:RibbonQuickAccessToolBar>
+            </r:Ribbon.QuickAccessToolBar>
+            <r:Ribbon.ApplicationMenu>
+                <r:RibbonApplicationMenu>
+                    <r:RibbonApplicationMenu.Command>
+                        <r:RibbonCommand LabelTitle="Кнопка Дневник" LabelDescription="Щелкните здесь для вывода списка возможных действий" ToolTipTitle="Кнопка Дневник " ToolTipDescription="Щелкните здесь для вывода списка возможных действий"  SmallImageSource="Images\badge32.png" LargeImageSource="Images\badge32.png"/>
+                    </r:RibbonApplicationMenu.Command>
+                    <r:RibbonApplicationMenuItem Command="{StaticResource MenuItem1}" Click="RibbonApplicationMenuItem_Click_5">
+                        <TextBlock Text="Открыть XML"   />
+                        <TextBlock Text="Открыть SQL" />                        
+                    </r:RibbonApplicationMenuItem>
+                    <r:RibbonApplicationMenuItem Command="{StaticResource MenuItem2}" Click="RibbonApplicationMenuItem_Click_4"/>
+                    <r:RibbonApplicationMenuItem Command="{StaticResource MenuItem3}" Click="RibbonApplicationMenuItem_Click_3"/>
+                    <r:RibbonApplicationMenuItem Command="{StaticResource MenuItem4}" Click="RibbonApplicationMenuItem_Click_1"/>
+                    <r:RibbonApplicationMenuItem Command="{StaticResource MenuItem5}" Click="RibbonApplicationMenuItem_Click_2"/>
+                    <r:RibbonApplicationMenuItem Name="Exit" Command="{StaticResource MenuItem6}" Click="RibbonApplicationMenuItem_Click"/>
+                    <r:RibbonApplicationMenu.RecentItemList>
+                        <Rectangle Height="240" />
+                    </r:RibbonApplicationMenu.RecentItemList>  
+                </r:RibbonApplicationMenu>
+            </r:Ribbon.ApplicationMenu>
+            <r:RibbonTab Name="Home" Label="Главная">
+                <r:RibbonGroup>
+                    <r:RibbonGroup.Command>
+                        <r:RibbonCommand LabelTitle="Управление" />
+                    </r:RibbonGroup.Command>
+                    <r:RibbonGroup.GroupSizeDefinitions>
+                        <r:RibbonGroupSizeDefinitionCollection>
+                            <r:RibbonGroupSizeDefinition>
+                                <r:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />
+                                <r:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />
+                                <r:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />
+                            </r:RibbonGroupSizeDefinition>
+                        </r:RibbonGroupSizeDefinitionCollection>
+                    </r:RibbonGroup.GroupSizeDefinitions>
+                    <r:RibbonButton Name="HomeButton1" Command="{StaticResource HomeButton1}" Click="RibbonButton_Click_2" />
+                    <r:RibbonButton Name="HomeButton2" Command="{StaticResource HomeButton2}" Click="RibbonButton_Click" />
+                    <r:RibbonButton  Name="HomeButton3" Command="{StaticResource HomeButton3}" Click="RibbonButton_Click_1" />
+                </r:RibbonGroup>
+                
+            </r:RibbonTab>
+            <r:RibbonTab Name="TabMedia" Label="Медиа">
+                
+                <r:RibbonGroup>
+                    <r:RibbonGroup.Command>
+                        <r:RibbonCommand LabelTitle="Образцы медиа" />
+                    </r:RibbonGroup.Command>
+                    <!--<r:RibbonControlGroup>-->
+                        <r:RibbonButton Name="Enter" Command="{StaticResource Enter}" Click="Enter_Click"/>
+                        <r:RibbonButton  Name="Exits" Command="{StaticResource Exits}" />
+                        <r:RibbonButton Name="Startup" Command="{StaticResource Startup}" />
+                        <r:RibbonButton Name="Shutdown" Command="{StaticResource Shutdown}" />
+                        <r:RibbonButton Name="Call"  Command="{StaticResource Call}" />                       
+                    <!--</r:RibbonControlGroup>-->
+                </r:RibbonGroup>
+            </r:RibbonTab>
+        </r:Ribbon>
+        <Grid x:Name="Grid1" Background="AliceBlue">
+           
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="230*" MinWidth="180"/>
+                <ColumnDefinition Width="648*" MinWidth="500"/>
+            </Grid.ColumnDefinitions>
+            <GridSplitter Grid.Column="0" Grid.RowSpan="1" HorizontalAlignment="Right" VerticalAlignment="Stretch" Background="Blue" ShowsPreview="False" Width="2"/>
+            <Grid Grid.ColumnSpan="1" HorizontalAlignment="Stretch" MaxWidth="950">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200*"/>
+                    <RowDefinition Height="150*"/>
+                    <RowDefinition Height="150*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Column="0" Grid.Row="0">
+                    <toolkit:Calendar Name="Calendar" HorizontalAlignment="Center" VerticalAlignment="Center" SelectedDatesChanged="Calendar_SelectedDatesChanged">
+
+                    </toolkit:Calendar>
+                </Grid>
+                <MediaElement x:Name="EnterSound" Source="WindowsLogonSound.wav" LoadedBehavior="Manual"/>
+                <Grid Grid.Column="0" Grid.Row="1">
+                    <Grid.RowDefinitions>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="25*"/>                   
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Content="Последние:" HorizontalAlignment="Center" Foreground="Blue" FontSize="16"></Label>
+                    <Label Grid.Row="1" Name="lbcm3" Width="430" HorizontalAlignment="Left"/>
+                    <Label Grid.Row="2" Name="lbcm2" Width="430" HorizontalAlignment="Left"/>
+                    <Label Grid.Row="3" Name="lbcm1" Width="430" HorizontalAlignment="Left"/>
+                </Grid>
+                
+                <Grid Grid.Column="0" Grid.Row="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25*"/>
+                        <RowDefinition Height="25*"/>
+                        <RowDefinition Height="25*"/>
+                        <RowDefinition Height="25*"/>
+                        <RowDefinition Height="25*"/>
+                    </Grid.RowDefinitions>
+                    <Label  Grid.Row="0"  Content="Статистика:" HorizontalAlignment="Center" Foreground="Blue" FontSize="16"/>
+                    <Label Name="lbOk" Grid.Row="1" Foreground="Green" Content="Выполнено:" Loaded="lbOk_Loaded" />
+                    <Label Name="lbPr" Grid.Row="2" Foreground="OrangeRed" Content="Выполняется:" Loaded="lbPr_Loaded" />
+                    <Label Name="lbCl" Grid.Row="3" Foreground="Red" Content="Отменено:" Loaded="lbCl_Loaded" />
+                    <Label Name="lbTo" Grid.Row="4" Foreground="Black" Content="Всего:" Loaded="lbTo_Loaded" />
+                </Grid>
+                <GridSplitter Grid.Row="1" Grid.ColumnSpan="1"
+                              HorizontalAlignment="Stretch"
+                              VerticalAlignment="Top"
+                              Background="Blue"
+                              ShowsPreview="False"
+                              Height="2"/>
+                <GridSplitter Grid.Row="2" Grid.ColumnSpan="1"
+                              HorizontalAlignment="Stretch"
+                              VerticalAlignment="Top"
+                              Background="Blue"
+                              ShowsPreview="False"
+                              Height="2"/>
+            </Grid>
+            <Grid  Name="Grid2" Grid.Column="2" HorizontalAlignment="Stretch" MaxWidth="1300">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition  Height="250*"/>
+                    <RowDefinition  Height="250*"/>
+                </Grid.RowDefinitions>
+                <ListView Name="ListView" Grid.Row="0" Loaded="ListView_Loaded"  ItemsSource="{Binding tasks}" SelectionChanged="ListView_SelectionChanged" SelectedIndex="0">
+                          <ListView.View>
+                           <GridView AllowsColumnReorder="True" ColumnHeaderToolTip="Информация">
+                                <GridViewColumn DisplayMemberBinding="{Binding Path=Date}"
+                                            Header="Дата" Width="80"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding Path=Title}"
+                                            Header="Заголовок" Width="120"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding Path=Content}"
+                                            Header="Содержание" Width="600"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding Path=Status}"
+                                            Header="Статус" Width="80"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding Path=Comment}"
+                                            Header="Кометарий" Width="190"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+                <Grid Name="Grid3" Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition  Height="30*"/>
+                        <RowDefinition  Height="30*"/>
+                        <RowDefinition  Height="100*"/>
+                        <RowDefinition  Height="30*"/>
+                        <RowDefinition  Height="30*"/>
+                        <RowDefinition  Height="30*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="500*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Content="Дата"  Grid.Column="0" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
+                    <TextBox  Name="txtDate" Grid.Row="0" Grid.Column="1" Width="900" Height="25" HorizontalAlignment="Left"  />
+                    <Label Grid.Row="1" Grid.Column="0" Content="Заголовок" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBox Name="txtTitle" Grid.Row="1" Grid.Column="1" Width="900"  Height="25" HorizontalAlignment="Left"/>
+                    <Label Grid.Row="2" Grid.Column="0" Content="Содержание" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <RichTextBox Name="txtContent" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" ></RichTextBox>
+                    <Label Grid.Row="3" Grid.Column="0" Content="Статус" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBox Name="txtStatus"  Grid.Column="1" Grid.Row="3" Width="200" Height="25" HorizontalAlignment="Left" Loaded="txtStatus_Loaded" />
+                    <ComboBox Grid.Column="1" Grid.Row="3"   Name="comboBox1" Width="120" Height="25" HorizontalAlignment="Center" SelectionChanged="comboBox1_SelectionChanged" Text="" SelectedIndex="0">
+                        <ComboBoxItem>Выполнено</ComboBoxItem>
+                        <ComboBoxItem>Отменено</ComboBoxItem>
+                        <ComboBoxItem>Выполняется</ComboBoxItem>
+                    </ComboBox>
+                    <Label Grid.Row="4" Grid.Column="0" Content="Кометарий" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBox Name="txtComment" Grid.Column="1" Grid.Row="4" Width="900" Height="25" HorizontalAlignment="Left"/>
+                    <Button  Name="buttonAppend"  Grid.Column="1" Grid.Row="5" Content="Добавить" HorizontalAlignment="Left" Width="60" Height="25" Click="buttonAppend_Click" ToolTip="Нажмите чтобы добавить задачу" ></Button>
+                    <Button Name="buttonSave" Grid.Column="1" Grid.Row="5" Content="Сoхранить изменения" HorizontalAlignment="Center" Width="135" Height="25" Click="buttonSave_Click" ToolTip="Нажмите чтобы сoхранить изменения"></Button>
+                    <Button Name="buttonClear" Grid.Column="1" Grid.Row="5" Content="Очистить" HorizontalAlignment="Right" Width="65" Height="25" Click="buttonClear_Click" ToolTip="Нажмите чтобыо очистить поля редактирования"></Button>
+                   
+                </Grid>
+                <GridSplitter Grid.Row="1" Grid.ColumnSpan="1"
+                              HorizontalAlignment="Stretch"
+                              VerticalAlignment="Top"
+                              Background="Blue"
+                              ShowsPreview="False"
+                              Height="2"/>
+            </Grid>
+        </Grid>
+        <!--<RichTextBox Height="auto" Width="auto">
+            <FlowDocument>
+                <Paragraph>
+                    <Hyperlink NavigateUri="http://www.renevo.com">RenEvo Software &amp; Designs</Hyperlink>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>-->
+    </DockPanel>
+    </r:RibbonWindow>
