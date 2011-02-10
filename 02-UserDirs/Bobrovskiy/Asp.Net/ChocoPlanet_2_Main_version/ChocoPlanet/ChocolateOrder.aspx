@@ -1,11 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master"
-    AutoEventWireup="true" CodeBehind="ChocolateOrder.aspx.cs" 
+    AutoEventWireup="true" CodeBehind="ChocolateOrder.aspx.cs"
+    EnableEventValidation="false" 
     Inherits="ChocoPlanet.ChocolateOrder" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+
    <div>
    <asp:Label runat="server" ID="label">Оберіть категорію продуктів :</asp:Label>
     <asp:DropDownList 
@@ -45,10 +47,12 @@
 
             <asp:TemplateColumn HeaderText=" ">
                <ItemTemplate>
-                  <asp:HyperLink id="hlDetails"
-                       Text="Details"
-                       NavigateUrl="#"
-                       runat="server"/>
+                   <asp:LinkButton ID="btnAdd" 
+                        runat="server" 
+                        CommandName="Edit"
+                        CommandArgument='<%# Eval("ProductId") %>' 
+                        OnCommand="btnAddToBasket"
+                        Text="Додати до кошика" />                   
                </ItemTemplate>
             </asp:TemplateColumn>
            

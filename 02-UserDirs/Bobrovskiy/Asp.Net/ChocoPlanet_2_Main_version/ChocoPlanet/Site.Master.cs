@@ -13,5 +13,11 @@ namespace ChocoPlanet
         {
             
         }
+
+        protected void OnLogOutAction(object sender, LoginCancelEventArgs e)
+        {
+            //destroy basket
+
+        }
     }
 }

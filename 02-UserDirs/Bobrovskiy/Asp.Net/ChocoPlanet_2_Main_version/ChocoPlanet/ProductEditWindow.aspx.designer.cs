@@ -85,15 +85,6 @@ namespace ChocoPlanet {
         protected global::System.Web.UI.WebControls.TextBox tbPrice;
         
         /// <summary>
-        /// ftbePrice control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.FilteredTextBoxExtender ftbePrice;
-        
-        /// <summary>
         /// Label2 control.
         /// </summary>
         /// <remarks>

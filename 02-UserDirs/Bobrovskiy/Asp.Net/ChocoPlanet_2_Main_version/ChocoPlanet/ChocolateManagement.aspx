@@ -62,6 +62,11 @@
                     PostBackUrl="~/ProductEditWindow.aspx"
                     Text="Додати новий продукт" />
         </p>
+        <p>
+            <asp:Button runat="server"                                        
+                    PostBackUrl="/Manager/BasketList.aspx"
+                    Text="Переглянути  список кошиків" />
+        </p>
    </div>
     <asp:ObjectDataSource 
                 runat="server" 

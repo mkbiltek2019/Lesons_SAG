@@ -1,7 +1,37 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="History.aspx.cs" Inherits="ChocoPlanet.History" %>
+﻿<%@ Page Title="" 
+    Language="C#" 
+    MasterPageFile="~/Site.Master"
+    AutoEventWireup="true" 
+    CodeBehind="History.aspx.cs" 
+    Inherits="ChocoPlanet.History" %>
+
+<%@ Register assembly="CustomExtenders" 
+             namespace="CustomExtenders" 
+             tagprefix="cc1" %>
+
+<%@ Register 
+    Assembly="AjaxControlToolkit" 
+    Namespace="AjaxControlToolkit" 
+    TagPrefix="ajaxToolkit" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+
+ <ajaxToolkit:ToolkitScriptManager ID="ScriptManager2"  EnablePartialRendering="true" runat="server" />	
+       <cc1:DisabledButtonExtender 
+                    ID="TextBox1_DisabledButtonExtender" 
+                    runat="server" 
+                    DisabledText="Save" 
+                    Enabled="True" 
+                    TargetButtonID="btnSave" 
+                    TargetControlID="tbText">
+      </cc1:DisabledButtonExtender>
+  <div>
+                <asp:TextBox ID="tbText" runat="server" TextMode="SingleLine" Text=""></asp:TextBox> 
+             <%-- <button id="btnSave" runat="server"> sdfsdf</button>--%>
+                <asp:Button ID="btnSave" runat="server" Text="Save*" />
+    </div>
 
         <h2>
             Chocolate history.

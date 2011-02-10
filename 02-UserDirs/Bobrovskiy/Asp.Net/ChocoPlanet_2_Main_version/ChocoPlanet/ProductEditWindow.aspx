@@ -4,8 +4,6 @@
          AutoEventWireup="true" 
          CodeBehind="ProductEditWindow.aspx.cs" 
          Inherits="ChocoPlanet.ProductEditWindow" %>
-<%@Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" tagPrefix="ajax" %>
-
 <asp:Content ID="Content1" 
              ContentPlaceHolderID="HeadContent" 
              runat="server">
@@ -36,11 +34,6 @@
                 
         <p><asp:Label runat="server" ID="lPrice">Ціна:</asp:Label>
            <asp:TextBox runat="server" ID="tbPrice" TextMode="SingleLine"></asp:TextBox>
-
-           <ajax:FilteredTextBoxExtender runat="server" ID="ftbePrice" 
-                TargetControlID="tbPrice"
-                FilterType="Numbers" 
-                ValidChars="+-=/*()." />
         </p>
 
         <p><asp:Label ID="Label2" runat="server" >Дата розміщення:</asp:Label>

@@ -45,8 +45,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoryController.cs" />
-    <Compile Include="ProductController.cs" />
+    <Compile Include="Managers\BasketItemModel.cs" />
+    <Compile Include="Managers\BasketsManager.cs" />
+    <Compile Include="Managers\UserOrderManager.cs" />
+    <Compile Include="Order\OrderBasketController.cs" />
+    <Compile Include="Product_Category\CategoryController.cs" />
+    <Compile Include="Order\UserOrderController.cs" />
+    <Compile Include="Order\OrderStateController.cs" />
+    <Compile Include="Order\OrderStatusController.cs" />
+    <Compile Include="Product_Category\ProductController.cs" />
     <Compile Include="Utilities\DateTimeUtility.cs" />
     <Compile Include="Utilities\ImageLoader.cs" />
     <Compile Include="my_Old_not_used\Model.cs" />

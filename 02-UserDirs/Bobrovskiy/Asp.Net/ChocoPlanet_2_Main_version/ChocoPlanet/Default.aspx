@@ -1,44 +1,20 @@
 ﻿<%@ Page Title="Home Page" Language="C#" 
          MasterPageFile="~/Site.master" AutoEventWireup="true"
          CodeBehind="Default.aspx.cs" Inherits="ChocoPlanet._Default" %>
-<%@Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" tagPrefix="ajax" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 </asp:Content>
 
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-   <div id="outerFrame"> 
-        <div id="headerFrame">
-            <h1>Авторизація</h1>
-        </div>
+  
+    
+   <div>
+   <asp:Label runat="server" ID="label1">Most wanted...</asp:Label>
+    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl = "/Not_used/SlideShow.aspx" Text="SlideShow"/>
 
-        <div id="avatarFrame">
-        </div>
-
-        <div id="loginPasswordOutterFrame">
-            <div id="logonPasswordInnerFrame">
-                <fieldset>
-                    <p>
-                        <asp:Label ID="lLogin" runat="server" Text="Логін:" />
-                        <asp:TextBox runat="server" ID="tbLogin" TextMode="SingleLine" />
-                    </p>
-                    <p>
-                        <asp:Label ID="lPassword" runat="server" Text="Пароль:" />
-                        <asp:TextBox runat="server" ID="tbPassword" TextMode="Password" />
-
-                        <ajax:CalendarExtender runat="server" TargetControlID="tbPassword" 
-                         TodaysDateFormat="dd/MM/yyyy"/>
-                    </p>
-                    <p>
-                        <asp:Button runat="server" ID="btnLogin" Text="Увійти" />
-                    </p>
-                </fieldset>
-            </div>
-            <p>
-               <asp:HyperLink runat="server" NavigateUrl="RegistrationWebForm.aspx">Реєстрація</asp:HyperLink> | 
-               <asp:HyperLink runat="server" NavigateUrl="#">Відновлення паролю</asp:HyperLink>
-            </p>
-        </div>
-   </div>
+    </div>
+    
+      
+     
     
 </asp:Content>

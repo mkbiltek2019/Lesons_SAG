@@ -41,8 +41,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstraction\IDataProvider.cs" />
-    <Compile Include="Fakes\CategoryDataProviderFake.cs" />
-    <Compile Include="Fakes\ProductDataProviderFakes.cs" />
+    <Compile Include="Fakes\Order\BasketDataProviderFake.cs" />
+    <Compile Include="Fakes\Product_Category\CategoryDataProviderFake.cs" />
+    <Compile Include="Fakes\Order\OrderStateDataProviderFake.cs" />
+    <Compile Include="Fakes\Order\OrderStatusDataProviderFake.cs" />
+    <Compile Include="Fakes\Order\UserOrderDataProviderFake.cs" />
+    <Compile Include="Fakes\Product_Category\ProductDataProviderFakes.cs" />
     <Compile Include="ServiceLocator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChocoPlanet.DataAccess", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChocoPlanet.Model", "ChocoPlanet.Model\ChocoPlanet.Model.csproj", "{90D2F19B-6C63-41C8-A633-745F2E6CA9F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomExtenders", "CustomExtenders\CustomExtenders.csproj", "{2242FE15-94B4-41F3-8CCB-D3189EC446B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,16 @@ Global
 		{90D2F19B-6C63-41C8-A633-745F2E6CA9F1}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{90D2F19B-6C63-41C8-A633-745F2E6CA9F1}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{90D2F19B-6C63-41C8-A633-745F2E6CA9F1}.Release|x86.ActiveCfg = Release|Any CPU
+		{2242FE15-94B4-41F3-8CCB-D3189EC446B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2242FE15-94B4-41F3-8CCB-D3189EC446B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2242FE15-94B4-41F3-8CCB-D3189EC446B4}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2242FE15-94B4-41F3-8CCB-D3189EC446B4}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2242FE15-94B4-41F3-8CCB-D3189EC446B4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2242FE15-94B4-41F3-8CCB-D3189EC446B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2242FE15-94B4-41F3-8CCB-D3189EC446B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2242FE15-94B4-41F3-8CCB-D3189EC446B4}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2242FE15-94B4-41F3-8CCB-D3189EC446B4}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2242FE15-94B4-41F3-8CCB-D3189EC446B4}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
