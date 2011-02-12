@@ -5,7 +5,17 @@
               content="text/html; charset=windows-1251" />
 
 <body>
-   
+   <?php
+        function btnStringFormat_Click()
+        {
+           $_POST[lblResultStringFormat] = "Salo";
+        }
+
+        function StringFormat()
+        {
+
+        }
+   ?>
     <form action="result.php" method="post" >
     
        <table border="1">
@@ -53,10 +63,14 @@
                        value="5,8" /></td>
             <td><input name="productQuantity6" type="text" /></td>
         </tr>
-        <tr><td><input type="submit" name="submit_button" value="Результат"/></td></tr>
+        <tr><td><input type="submit" name="submit_button" id="submit_button" value="Результат"/></td></tr>
     </table>
     </form>
+   
 
-
+<fieldset>
+    <a href="stringFormat.php">Go to StringFormat function -->></a>
+</fieldset>
+    
 </body>
 </html>
