@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="486e83b0-9878-4049-97c0-6fb56a242699" name="Default" comment="" />
-    <ignored path="Functions.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path="Functions.iws" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +27,7 @@
       <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="9" selection-start="0" selection-end="1006" vertical-scroll-proportion="0.3372244">
+            <state line="36" column="0" selection-start="1006" selection-end="1006" vertical-scroll-proportion="1.0889679">
               <folding />
             </state>
           </provider>
@@ -78,6 +78,7 @@
     </navigator>
     <panes>
       <pane id="Favorites" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -88,7 +89,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -130,18 +130,18 @@
       </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method>
-        <option name="FtpUpload" enabled="false" />
-        <option name="ValidateXdebugSetup" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
       <JSDebuggerConfigurationSettings>
         <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
       <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method>
+        <option name="FtpUpload" enabled="false" />
+        <option name="ValidateXdebugSetup" enabled="true" />
+      </method>
     </configuration>
     <list size="2">
       <item index="0" class="java.lang.String" itemvalue="PHP Console.index.php" />
@@ -195,7 +195,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1288" height="980" extended-state="6" />
+    <frame x="-4" y="-4" width="1288" height="756" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -267,7 +267,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="9" selection-start="0" selection-end="1006" vertical-scroll-proportion="0.3372244">
+        <state line="36" column="0" selection-start="1006" selection-end="1006" vertical-scroll-proportion="1.0889679">
           <folding />
         </state>
       </provider>
