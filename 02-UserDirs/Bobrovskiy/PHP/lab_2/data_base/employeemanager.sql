@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Час створення: Лют 26 2011 р., 05:56
+-- Час створення: Бер 02 2011 р., 10:55
 -- Версія сервера: 5.5.8
 -- Версія PHP: 5.3.5
 
@@ -18,6 +18,8 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 -- БД: `employeemanager`
 --
+CREATE DATABASE `employeemanager` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `employeemanager`;
 
 -- --------------------------------------------------------
 
@@ -25,23 +27,24 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- Структура таблиці `department`
 --
 
+DROP TABLE IF EXISTS `department`;
 CREATE TABLE IF NOT EXISTS `department` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(200) CHARACTER SET latin1 NOT NULL,
   PRIMARY KEY (`id`),
   KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=10 ;
 
 --
 -- Дамп даних таблиці `department`
 --
 
 INSERT INTO `department` (`id`, `name`) VALUES
-(1, 'IT'),
 (2, 'QA'),
 (3, 'Management'),
 (4, 'Deployment'),
-(5, 'Help Desk');
+(5, 'Help Desk'),
+(9, 'IT');
 
 -- --------------------------------------------------------
 
@@ -49,24 +52,26 @@ INSERT INTO `department` (`id`, `name`) VALUES
 -- Структура таблиці `employee`
 --
 
+DROP TABLE IF EXISTS `employee`;
 CREATE TABLE IF NOT EXISTS `employee` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `departmentid` int(11) NOT NULL,
-  `peopleid` int(11) NOT NULL,
   `positionid` int(150) NOT NULL,
+  `name` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=14 ;
 
 --
 -- Дамп даних таблиці `employee`
 --
 
-INSERT INTO `employee` (`id`, `departmentid`, `peopleid`, `positionid`) VALUES
-(1, 3, 1, 6),
-(2, 2, 2, 5),
-(3, 1, 2, 5),
-(4, 2, 1, 5);
+INSERT INTO `employee` (`id`, `departmentid`, `positionid`, `name`) VALUES
+(1, 3, 6, 'Ivan'),
+(2, 2, 5, 'Vasul'),
+(3, 0, 0, 'Petro'),
+(4, 9, 7, 'Taras'),
+(13, 3, 5, 'retw');
 
 -- --------------------------------------------------------
 
@@ -74,6 +79,7 @@ INSERT INTO `employee` (`id`, `departmentid`, `peopleid`, `positionid`) VALUES
 -- Структура таблиці `employeeposition`
 --
 
+DROP TABLE IF EXISTS `employeeposition`;
 CREATE TABLE IF NOT EXISTS `employeeposition` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) CHARACTER SET latin1 NOT NULL,
@@ -88,31 +94,3 @@ INSERT INTO `employeeposition` (`id`, `name`) VALUES
 (5, 'worker'),
 (6, 'manager'),
 (7, 'security');
-
--- --------------------------------------------------------
-
---
--- Структура таблиці `people`
---
-
-CREATE TABLE IF NOT EXISTS `people` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(150) CHARACTER SET latin1 NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=36 ;
-
---
--- Дамп даних таблиці `people`
---
-
-INSERT INTO `people` (`id`, `name`) VALUES
-(1, 'Ivan'),
-(2, 'Vasyl'),
-(3, 'Petro'),
-(4, 'qwerty'),
-(5, 'qwery2'),
-(6, 'qwreertyttut4'),
-(7, 'qwreertyttut4'),
-(34, 'asdfdfg'),
-(35, 'erty');
