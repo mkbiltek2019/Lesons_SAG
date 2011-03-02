@@ -1,0 +1,50 @@
+ 
+1) конфігурація севера:
+   платформа: Microsoft Windows
+   
+   програмне забезпечення:
+   веб сервер: Apache не менше 2.2
+   сервер бази даних: Mysql Server не менше 5.0
+   інтерпретатор серверних  скриптів: Php не менше версії 5.0,
+   оболочка для роботи з базою даних: phpmysqladmin
+   
+   сервер для передачі даних: ftp, клієнт для роботи з FTP filezilla
+   безкоштовний фреймворк codeigniter 2.0
+// ------------------
+   для підйому WAMP на локальній машині встановлюємо
+   пакет XAMPP плюс NETBEANS або phpStorm або CodeLobster
+  
+2) Документація по  фреймворку codeigniter на сайті
+   http://code-igniter.ru/
+   http://codeigniter.com/user_guide/
+   http://codeigniter.com/forums/viewforum/58/
+   http://video.derekallard.com/      http://rakibulislam.wordpress.com/2007/11/07/codeigniter-tutorailsample-application-links/
+http://www.phpandstuff.com/articles/codeigniter-with-doctrine-sample-code-screencast
+   http://flexigrid.eyeviewdesign.com/index.php/flexigrid/example
+   http://www.ntchosting.com/php/frameworks/codeigniter/
+   http://www.gotphp.com/codeigniter-file-upload-and-email-example/54438/
+   http://www.sencha.com/learn/Tutorial:ExtJs_CodeIgniter
+   
+   Дороблю домашку заллю можна буде подивитись.
+
+3) документація по Mysql РОСІЙСЬКА http://www.mysql.ru/docs/
+   phpmysqladmin --> http://php-myadmin.ru/doc/ 
+
+4) php
+   http://www.php.net/
+   http://www.php.com.ua/
+
+5) apache
+   http://httpd.apache.org/docs/2.2/
+   http://php-myadmin.ru/learning/instrument-apache.html
+
+6) xampp 
+   http://www.apachefriends.org/en/xampp.html
+
+7) netbeans 
+   http://netbeans.org/
+   http://netbeans.org/index_ru.html
+
+8) CRUD - http://www.ifadey.com/2010/07/crud-using-jquery-and-codeigniter-iii/
+
+
