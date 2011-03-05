@@ -45,7 +45,7 @@ code {
 </head>
 <body>
 
-<h1>Welcome to CodeIgniter!</h1>
+<!--<h1>Welcome to CodeIgniter!</h1>
 
 <p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
 
@@ -58,7 +58,9 @@ code {
 <p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
 
 
-<p><br />Page rendered in {elapsed_time} seconds</p>
+<p><br />Page rendered in {elapsed_time} seconds</p>-->
+
+<a href='<?= base_url()."login" ?>' >Login</a>
 
 <!-- здесь будет выведен hello world который будет передан из контроллера -->
 <p><?php echo $helloMessage; ?></p>

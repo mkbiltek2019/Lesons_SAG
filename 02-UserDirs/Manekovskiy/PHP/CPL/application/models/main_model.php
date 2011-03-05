@@ -7,7 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
  
-class index_model extends CI_Model {
+class main_model extends CI_Model {
     function getAllProducts()
     {
         $query = $this -> db -> get("Products");
