@@ -10,9 +10,6 @@
 class authentication_model extends CI_Model {
     function validate_user(array $options)
     {
-        if($this->required(array("userEmail", "userPassword"), $options))
-            return false;
-
         $testUser = "test@test.com";
         $testPassword = md5("test");
 
