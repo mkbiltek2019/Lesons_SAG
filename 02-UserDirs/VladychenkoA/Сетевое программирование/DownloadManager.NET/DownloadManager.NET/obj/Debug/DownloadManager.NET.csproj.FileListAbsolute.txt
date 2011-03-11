@@ -1,0 +1,21 @@
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Сетевое программирование\DownloadManager.NET\DownloadManager.NET\bin\Debug\DownloadManager.NET.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Сетевое программирование\DownloadManager.NET\DownloadManager.NET\bin\Debug\DownloadManager.NET.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Сетевое программирование\DownloadManager.NET\DownloadManager.NET\obj\Debug\ResolveAssemblyReference.cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Сетевое программирование\DownloadManager.NET\DownloadManager.NET\obj\Debug\DownloadManager.NET.Form1.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Сетевое программирование\DownloadManager.NET\DownloadManager.NET\obj\Debug\DownloadManager.NET.Properties.Resources.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Сетевое программирование\DownloadManager.NET\DownloadManager.NET\obj\Debug\DownloadManager.NET.csproj.GenerateResource.Cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Сетевое программирование\DownloadManager.NET\DownloadManager.NET\obj\Debug\DownloadManager.NET.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Сетевое программирование\DownloadManager.NET\DownloadManager.NET\obj\Debug\DownloadManager.NET.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Сетевое программирование\DownloadManager.NET\DownloadManager.NET\obj\Debug\DownloadManager.NET.About.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Сетевое программирование\DownloadManager.NET\DownloadManager.NET\obj\Debug\DownloadManager.NET.Form2.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Сетевое программирование 1\DownloadManager.NET\DownloadManager.NET\obj\Debug\DownloadManager.NET.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Сетевое программирование 1\DownloadManager.NET\DownloadManager.NET\obj\Debug\DownloadManager.NET.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Сетевое программирование 1\DownloadManager.NET\DownloadManager.NET\bin\Debug\DownloadManager.NET.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Сетевое программирование 1\DownloadManager.NET\DownloadManager.NET\bin\Debug\DownloadManager.NET.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Сетевое программирование 1\DownloadManager.NET\DownloadManager.NET\obj\Debug\ResolveAssemblyReference.cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Сетевое программирование 1\DownloadManager.NET\DownloadManager.NET\obj\Debug\DownloadManager.NET.About.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Сетевое программирование 1\DownloadManager.NET\DownloadManager.NET\obj\Debug\DownloadManager.NET.Form1.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Сетевое программирование 1\DownloadManager.NET\DownloadManager.NET\obj\Debug\DownloadManager.NET.Form2.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Сетевое программирование 1\DownloadManager.NET\DownloadManager.NET\obj\Debug\DownloadManager.NET.Properties.Resources.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Сетевое программирование 1\DownloadManager.NET\DownloadManager.NET\obj\Debug\DownloadManager.NET.csproj.GenerateResource.Cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\Сетевое программирование 1\DownloadManager.NET\DownloadManager.NET\bin\Debug\DownloadManager.NET.exe.config
