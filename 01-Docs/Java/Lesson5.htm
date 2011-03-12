@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Урок 5. Разработка программного обеспечения на технологии Java.</title>
+    <link type="text/css" rel="Stylesheet" href="style.css"/>
+    <link rel="stylesheet" title="Default" href="highlight/styles/default.css"/>
+    <link rel="alternate stylesheet" title="Dark" href="highlight/styles/dark.css"/>
+    <link rel="alternate stylesheet" title="FAR" href="highlight/styles/far.css"/>
+    <link rel="alternate stylesheet" title="IDEA" href="highlight/styles/idea.css"/>
+    <link rel="alternate stylesheet" title="Sunburst" href="highlight/styles/sunburst.css"/>
+    <link rel="alternate stylesheet" title="Zenburn" href="highlight/styles/zenburn.css"/>
+    <link rel="alternate stylesheet" title="Visual Studio" href="highlight/styles/vs.css"/>
+    <link rel="alternate stylesheet" title="Ascetic" href="highlight/styles/ascetic.css"/>
+</head>
+  
+  <script src="highlight/highlight.js"></script>
+  <script>
+      hljs.initHighlightingOnLoad.apply(null, hljs.ALL_LANGUAGES);
+    </script>
+    <body>
+<h1>Работа с базами данных.</h1>
+<p><strong>JDBC (Java DataBase Connectivity)</strong> - 
+прикладной интерфейс программирования, который позволяет работать с любым сервером базы данных (пакет java.sql).
+Для подключения к базам данных используются так называемые JDBC драйверы.
+</p>
+<h2>Типы JDBC драйверов</h2>
+<p>
+В API JDBC интенсивно эксплуатируется концепция интерфейсов — набора методов, 
+которые должны быть реализованы поставщиком того или иного сервиса, в данном 
+случае поставщиком т.н. драйвера JDBC. С программной точки зрения драйвер JDBC есть 
+нечто иное как реализация интерфейсов предусмотренных API JDBC. По способу 
+реализации драйверы подразделяются на 4 типа:
+<ol>
+<li><strong>Тип 1. JDBC-ODBC Мост.</strong>
+К этому типу относятся драйверы реализованные поверх ODBC драйверов. 
+То есть фактически все вызовы API JDBC транслируются в вызовы ODBC, 
+а дальше обработку вызова ведет API ODBC. 
+Преимуществом драйверов этого типа, является то что все источники данных 
+доступные с помощью ODBC становятся доступными Java приложению, недостатки такого драйвера: 
+низкая скорость работы, трудности конфигурирования и невозможность поддержки всех возможностей API JDBC.
+</li>
+<li><strong>Тип 2. Native-JDBC.</strong> Ко второму типу относятся драйверы использующие программные части написанные на 
+других языках. Обычно в этом случае для доступа к базе данных используются 
+библиотеки разработанные производителем, а для их вызова используется 
+JNI — Java интерфейс вызова нативных функций. </li>
+<li><strong>Тип 3. Network-JDBC.</strong>
+В отличие от предыдущих типов драйверов данный тип драйвера полностью 
+реализуется на Java, но при этом вызовы JDBC транслируются в сетевой протокол 
+(RMI, HTTP и т.д.), который далее транслируется в специфичный протокол базы данных. 
+В чем-то этот драйвер схож с драйверами JDBC-ODBC, отличие в том, что реализуется 
+полностью на Java, за счет чего отсутствует необходимость в установке клиентского ПО.</li>
+<li><strong>Тип 4. "Чистый" JDBC драйвер.</strong>
+Также как и драйверы 3-го типа реализуется полностью на Java, 
+но вызовы реализуются напрямую с использованием протокола базы данных, минуя сетевой протокол.
+</li>
+</ol>
+</p>
+<h2>Интерфейсы и классы для работы с СУБД</h2>
+<table border="1">
+<tr><th>Интерфейс \ Класс</th><th>Описание</th></tr>
+<tr><td valign="top">DriverManager</td><td>
+Класс предназначен для управления драйверами в Java приложении. Использую
+DriverManager можно создать подключение к базе данных. Используя определенный драйвер.</td></tr>
+<tr><td>Connection</td><td>Интерфейс описывает методы для работы с соединением к базе данных</td></tr>
+<tr><td>Statement</td><td>Интерфейс содержит набор методов для обработки запросов к базе данных</td></tr>
+<tr><td>PreparedStatement</td><td>Интерфейс содержит набор методов для обработки параметрезированных запросов к базе данных</td></tr>
+<tr><td>CallableStatement</td><td>Интерфейс содержит набор методов для работы с хранимыми процедурами</td></tr>
+<tr><td>ResultSet </td><td>Класс представляет набор данных (результат работы оператора SELECT)</td></tr>
+<tr><td>DatabaseMetaData</td><td>Класс описывает информацию о базе данных</td></tr>
+<tr><td>ResultSetMetaData</td><td>Класс описывает информацию о результариующем наборе</td></tr>
+</table>
+<h2>Загрузка драйвера.</h2>
+<p>В примерах мы будем использовать драйвер четвертого типа, для MS SQL Server 2005. Драйвер находится в приложении 
+урока и представляет собой jar-архив. Для того чтобы начать работу с ним, Вам надо включить его в список
+подключаемых архивов Вашего проекта. Загрузка драйвера происходит при помощи вызова метода 
+Class.forName("&lt;имя класса драйвера&gt;"). Метод forName возбуждает исключительную ситуацию
+ClassNotFoundException если драйвер небудет найден.
+</p>
+<pre>
+<code>try {
+    Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");<br />
+} catch (ClassNotFoundException e) {
+        //Обработка исключительной ситуации
+} 
+</code>
+</pre>
+<p>com.microsoft.sqlserver.jdbc - пакет в котором находится класс-драйвер. SQLServerDriver - непосредственно класс-драйвер.</p>
+<h2>Создания подключения к базе данных.</h2>
+<p>Как говорилось ранее, управлять подключением можно с помощью интерфейса Connection. Получить
+интерфейс можно вызвав статический метод getConnection у класса DriverManager, параметром метода является строка
+подключения, так же существует перегрузка принимающая имя пользователь и пароль для подключения к базе. 
+При возникновении ошибки получения подключения возбуждается исключительная ситуация SQLException.</p>
+<pre>
+<code>
+    Connection conn = null;
+    try {
+        conn = DriverManager.getConnection(connectionUrl);
+        //Работа с базой данных
+       
+    } catch  (SQLException e) {
+
+    } finallly{
+        conn.close();//Закрытие соединения
+    }
+</code>
+</pre>
+<h2>Выполение запросов.</h2>
+<p>Итак, интерфейс Statement содержит набор методов для работы с запросами. Получить его можно,
+вызвав метод createStatement у интерфейса Connection.</p>
+<p>Вызов метода execute у интерфейса Statement произведет выполнение команды на сервере.
+Команда передается методу в качестве аргумента.
+</p>
+<h2>Работа с результирующим набором.</h2>
+<p>Для получения результирующего набора данных (экземпляра класса ResultSet),
+требуется вызвать метод executeQuery интерфейса Statement.</p>
+<table border="1">
+<tr><th width="400px">Методы класса ResultSet</th><th>Описание</th></tr>
+<tr><td>boolean first()</td><td>Переходит на первую запись в результирующем наборе, возвращает true если переход произошел.</td></tr>
+<tr><td>boolean last()</td><td>Переходит на последнюю запись в результирующем наборе, возвращает true если переход произошел.</td></tr>
+<tr><td>boolean next()</td><td>Переходит на следующую запись в результирующем наборе, возвращает true если переход произошел.</td></tr>
+<tr><td>boolean previous()</td><td>Переходит на предыдущая запись в результирующем наборе, возвращает true если переход произошел.</td></tr>
+<tr><td>boolean absolute(int numRecord)</td><td>Переходит на указаную запись в результирующем наборе</td></tr>
+<tr><td valign=top>&lt;Тип данных&gt;  get&lt;Тип данных&gt;(int index)<br />
+        &lt;Тип данных&gt;  get&lt;Тип данных&gt;(int index)</td>
+<td>Возвращает значение поля текущий строки, приведенное к определеному типу данных ( к пирмеру getString, getInt).
+Имеет две перегрузки, для обращения к полю по индексу ( <b>индексирование начинается с единицы</b>) и по имени поля.</td></tr>
+<tr><td valign="top">void close()</td><td>Закрывает набор данных (освобождает ресурсы затрачиваемые для обработки набора данных). 
+После закрытия, набор данных недоступен.</td></tr>
+</table>
+<br />
+<pre>
+<code>
+    try {
+        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+    } catch (ClassNotFoundException e) {
+        System.out.print("Ошибка загрузки драйвера");
+        return;
+    } 
+    String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=MyBase;user=sa;password=admin;";
+    try {
+        Connection conn = DriverManager.getConnection(connectionUrl);
+        Statement st = conn.createStatement();
+        ResultSet rs = st.executeQuery("select * from Users");
+
+        while(rs.next()){
+            System.out.print(rs.getString("Name")+"\t");
+            System.out.print(rs.getString("Age")+"\t");
+            System.out.println();
+        }
+        rs.close();		
+        conn.close();
+    } catch (SQLException e) {
+        System.out.print("Ошибка работы с данными");
+        return;
+    }
+</code>
+</pre>
+<p>У метода createStatement, существует перегрузка которая позволяет установить опции для работы 
+с результирующим набором.</p>
+<pre>
+<code>
+ResultSet createStatement(int type, int concur);
+</code>
+</pre>
+<p><strong>type</strong> - указывает тип курсора который будет использован при работе с результирующим набором.
+<ul>
+<li><strong>TYPE_FORWARD_ONLY</strong> - указывает что курсор может перемещаться только вперед по результирующему набору. 
+Вызов методов last(),first,previous() - приведет к возбуждению исключительной ситуации.</li>
+<li><strong>TYPE_SCROLL_INSENSITIVE</strong> - указывает что курсор может перемещаться произвольно по результирующему набору.
+Изменения внесенные в результирующий набор отобразатся только при повторном открытии набора данных.
+</li>
+<li><strong>TYPE_SCROLL_SENSITIVE</strong> - указывает что курсор может перемещаться произвольно по результирующему набору.
+Изменения внесенные в результирующий набор немедлено отображаются.</li>
+</ul>
+</p>
+<p><strong>concur</strong> - указывает тип обновления результирующего набора.
+<ul>
+<li><strong>CONCUR_READ_ONLY</strong> - указывает, что набор данных не может быть обновлен</li>
+<li><strong>CONCUR_UPDATABLE</strong> - указывает, что набор данных может быть обновлен</li>
+</ul>
+</p>
+<h2>Обновлени данных в результирующем наборе</h2>
+<p>Для обновления данных в результирующем наборе используются методы 
+update&lt;Тип данных&gt;(&lt;Индекс или имя поля&gt;, &lt;Тип данных&gt; значение поля)</p>
+<p>Пример. Установим скидку на товар равной 10%, если стоимость товара привышает 1000 грн.</p>
+<pre>
+<code>
+    Statement st = con.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
+    ResultSet rs = st.executeQuery("select * from Goods");
+    while(rs.next()){
+        if (rs.getInt("Price") >= 1000)
+            rs.updateInt("Discount",10);
+    }
+    rs.close();	
+</code>
+</pre>
+<h2>Добавление новой записи</h2>
+<p>Для добавления новой записи в результирующий набор используется метод moveToInsertRow, который
+создает новую строку результирующего набора и переходит на неё. Установить 
+значения полей можно с помощью методов update&lt;Тип данных&gt;. Вызов метода insertRow()
+подтвердит внесенные изменения.</p>
+<pre>
+<code>
+    rs.moveToInsertRow();// Перемещает курсор на новую строчку
+    rs.updateString("GoodsName", "DVD-Player Pioneer"); // Устанавливаем значение в поле "Название товара"
+    rs.updateInt(2,100); // Устанавливаем значение в поле "Стоимость товара"
+    rs.updateBoolean("Discount", 10);  // Устанавливаем значение в поле "Скидка"
+    rs.insertRow();// Подтверждаем сделанные изменения
+</code>
+</pre>
+
+<h2>Выполнение парамметризированных запросов.</h2>
+<p>Интерефейс PreparedStatement предоставляет методы для работы с параметризироваными запросами. 
+Получить интерфейс можно с помощью метода prepareStatement интерфейса Connection, параметром метода является параметризированный запрос.
+Параметры обозначаються как "?". Методы set&lt;Тип данных&gt; (int paramNum, &lt;Тип данных&gt; value), предназначены для 
+установки значений в параметры. Первым аргументом указывается номер параметра в запросе 
+(<b>нумерация начинается с единицы</b>), вторым - его значение. Вызов метода execute() приведет, к выполнению запроса.
+Если запрос должен возвращать набор данных, то получить его можно используя метод executeQuery().
+</p>
+<pre>
+<code>
+    Connection con = DriverManager.getConnection(connectionUrl);
+    PreparedStatement st = con.prepareStatement("insert into Users(Name,Age) values(?,?)");
+    st.setInt(1, 24);
+    st.setString(2, "Бен Джонсон");
+    st.execute();
+</code>
+</pre>
+<h2>Работа с хранимыми процедурами</h2>
+<p>Для вызова хранимых процедур предназначен интерфейс CallableStatement который можно получить
+вызвав метод prepareCall у интерфейса Connection. Параметром, в этот метод передается код вызова хранимой процедуры
+со списком параметров. Установка значений параметров производится как и в параметризированных запросах.</p>
+<p>Параметры хранимых процедур могут быть как входящие так и выходящие. При вызове хранимой процедуры необходимо 
+зарегестрировать все выходящие параметры, с помощью метода registerOutParameter(int paramNum, int paramType). 
+Первый агрумент метода - это номер параметра в списке, второй - тип данных параметра, для определения которых используются 
+константы из класса java.sql.Type.&lt;Название типа данных&gt;. После выполнения запроса (execute() или executeQuery() 
+в зависимости от реализуемой Вами функциональности) считать значение выходщего параметра можно с помощью метода 
+&lt;Тип данных&gt; get&lt;Тип данных&gt; (int paramNum)</p>
+<p>Пример. Предположим у нас имеется хранимая процедура с тремя аргументами, 
+которая в третий аргумент (который является выходящим параметром) записывает сумму значений первых двух.</p>
+<pre>
+<code>
+    create procedure Summ 
+        @a int,
+        @b int,
+        @c int output
+    as
+        set @c = @a+@b
+</code>
+</pre>
+<p>Вызов такой хранимой процедуры:</p>
+<pre>
+<code>
+    CallableStatement cstmt = con.prepareCall("{call Add(?, ?, ?)}");
+    cstmt.setInt(1,2);
+    cstmt.setInt(2,2);
+    cstmt.registerOutParameter(3, java.sql.Types.INTEGER);
+    int res = cstmt.getInt(3);
+</code>
+</pre>
+<h2>Работа с метадаными</h2>
+<p>Классы DatabaseMetaData и ResultSetMetaData позволяют получать 
+информацию о базе данных и произвольном результирующим наборе.</p>
+Получить экземпляр класса DatabaseMetaData можно получить с помощью метода 
+getMetaData интерфейса Connection. Для получения ResultSetMetaData,
+требуется вызвать аналогичный метод но у объекта класса ResultSet.
+<table border="1">
+<tr><th>Некоторые методы класса DatabaseMetaData</th><th>Описание</th></tr>
+<tr><td>boolean supportsStoredProcedures()</td><td>Возвращает истину, если источник
+данных поддерживает хранимые процедуры</td></tr>
+<tr><td>ResultSet getProcedures(String catalog, String schemaPattern, String procedureNamePattern)</td>
+<td>Возвращает результирующий набор со списком хранимых процедур в базе данных.</td></tr>
+<tr><td>ResultSet getTables(String catalog,
+                           String schemaPattern,
+                           String tableNamePattern,
+                           String[] types)</td>
+<td>Возвращает результирующий набор со списком таблиц в базе данных.</td></tr>
+</table>
+<br />
+<table border="1" width="100%">
+<tr><th>Некоторые методы класса ResultSetMetaData</th><th>Описание</th></tr>
+<tr><td>int getColumnCount()</td><td>Возвращает количество полей в результирующем наборе</td></tr>
+<tr><td>String getColumnName(int column) </td><td>Возвращает имя поля по его индексу</td></tr>
+<tr><td>int getColumnType(int column) </td><td>Возвращает тип данных поля по его индексу</td></tr>
+</table>
+<h2>Домашнее задание.</h2>
+<p>Создайте приложение, которое позволит хранить иерархию сотрудников в организации (Директор -> Начальники отделов -> Менеджеры и т.д.).
+Для отображения иерархии используйте древовидный элемент управления. Редактирование и добавление
+сотрудников реализуйте с помощью диалогового окна. Добавте возможность 
+сохранения данных в XML файл, при этом процесс сохранения должен происходить в отдельном потоке.
+</p>
+</body>
+</html>

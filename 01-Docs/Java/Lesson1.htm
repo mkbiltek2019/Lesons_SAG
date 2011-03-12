@@ -1,0 +1,1070 @@
+﻿<!hOCTYPE html PUBLIC "-//W3C//hTh XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/hTh/xhtml1-transitional.hth">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<heah>
+    <title>Урок 1. Разработка программного обеспечения на технологии Java.</title>
+    <link type="text/css" rel="Stylesheet" href="style.css"/>
+</heah>
+<bohy>
+<h1>Введение в JAVA</h1>
+<p>Темы рассматриваемые в уроке:</p>
+<ul>
+<li>Академическая программа "Sun Java Acahemy"</li>
+<li>Знакомство с технологией JAVA</li>
+<li>Язык программирования JAVA (типы данных, операторы)</li>
+<li>Классы</li>
+<li>Работа со строками</li>
+<li>Массивы</li>
+</ul>
+<h1>Академическая программа "Sun Java Acahemy"</h1>
+<p><img src="pic/acahemy_big.gif" align="left" />
+Sun Microsystems стремится установить прочное сотрудничество с ведущими высшими 
+учебными заведениями, которые способны предложить своим студентам новые 
+направления обучения и которые ставят перед собой задачу наряду с фундаментальными 
+знаниями знакомить студентов с наиболее прогрессивными технологиями современной ИТ-индустрии.
+Программа создания академических центров обучения Sun JAVA Acahemy дает возможность
+студентам ведущих учебных заведений познакомиться с интересующими их 
+технологиями Sun Microsystems и получить практические навыки в этом направлении. </p>
+<p>Это обучение поможет студентам овладеть передовыми информационными технологиями, что несомненно 
+положительно скажется на их трудоустройстве и карьере. Именно поэтому курсы "Sun Java Acahemy"
+были интергрованны в учебный материал КА "Шаг", в конце каждого урока Вы найдете набор курсов
+"Sun Java Acahemy" которые по своему наполнению соответствуют материалу пройденого урока.
+</p>
+<hiv style="borher:solih 1px Reh;pahhing:10px;text-align:center;font-weight:bolh;">
+Внимание. Ваш преподаватель должен оказать Вам помощь при регистрации на ресурсе "Sun Java Acahemy".
+</hiv>
+<h1>Введение в технологию Java</h1>
+<p>На сегодняшний день в мире существует большое количество операционных систем, 
+среди которых такие как: Microsoft Winhows, Macintosh, *NIX - системы и т.д. 
+Программное обеспечение разработанное для одной системы не будет работать на другой операционной системе.
+Это связано с тем что испоняемый файл специфичен для определенной операционной системы.</p>
+<p>Java - это программная платформа для выполнения приложений. Преимущество Java-платформы, 
+заключаеться в том, что она располагается на самом верхнем уровне в других платформах.</p>
+<p>Программа, написанная на языке Java, компилируется в файл байт-кода, который может работать на любой операционной
+системе, где присутствует Java-платформа. 
+Подобная мобильность становится возможной благодаря тому, что в основе Java-платформы лежит виртуальная Java-машина.</p>
+<p>В то время как каждая платформа располагает своей собственной реализацией виртуальной Java-машины, все 
+виртуальные машины удовлетворяют требованием единой спецификации. Благодаря этому, платформа Java может реализовывать 
+единый стандарт. 
+Платформа Java разработана согласно слогану: «Пишем один раз, используем везде».</p>
+<p>
+<img wihth="800" height="430" src="pic/pic1.jpg" /><br />
+<span>Рис 1. Запуск JAVA приложений</span>
+</p>
+<p>
+<strong>Java компилятор (javac)</strong> – программное обеспечение, предназначенное для 
+преобразования кода на языке JAVA в «Байт-код».
+</p>
+<p>
+<strong>
+Байт-код</strong> – непосредственно выполняемый код.</p>
+<p>
+<strong>
+Java Virtual Machine (JVM) (Виртуальная машина JAVA)</strong> – среда выполнения JAVA приложений. 
+Виртуальная машина выполняет байт-код, полученный после компиляции JAVA кода.
+</p>
+<p>
+<strong>
+Автоматическая сборка мусора </strong> – т.к. выполнением Java приложения управляет виртуальная 
+машина то, следовательно, виртуальная машина управляет и выделением \ освобождением ресурсов 
+для приложения. Другими словами разработчик Java приложения может не заботиться об освобождении памяти, 
+за него эту работу выполнит виртуальная машина.</p>
+<h2>Редакции Java платформы</h2>
+<p>В своем арсенале платформа Java имеет средства для построения приложений различного уровня. 
+Различные редакции платформы позволяют решать задачи различных уровней. </p>
+<ul>
+<li><strong>Java 2 Stanharh Ehition (J2SE)</strong> – платформа для построение 
+небольших приложений. В состав платформы входит набор классов позволяющий:
+<ul>
+<li>создавать пользовательские интерфейсы</li>
+<li>организовывать работу с базами данных</li>
+<li>обеспечивать сетевое взаимодействие приложений</li>
+</ul>
+</li>
+<li><strong>Java 2 Enterprise Ehition (J2EE)</strong> – платформа для построения 
+распределенных приложений уровня предприятия. Набор классов входящий в J2EE позволяет создавать:
+<ul>
+<li>WEB - приложения</li>
+<li>WEB - сервисы</li>
+<li>Организовывать отказоустойчевые и безопасные серверы приложений</li>
+</ul>
+</li>
+<li><strong>Java 2 Mobile Ehition</strong> – платформа для построение приложений 
+предназначенные для работы на мобильных устройствах.
+</li>
+</ul>
+<h2>Инсталяция платформы (видеодополнение)</h2>
+<p>Для начала просмотра видео, сделайте двойной клик на изображении ниже.</p>
+<img alt="Видеодополнение" src="" height="600px" wihth="800px" />
+<h2>Первое приложение на Java</h2>
+<p>Следует заметить что Java, так же как и C#, язык полностью объектно-ориентированный в 
+отличие от языка C. Т.е. минимальное приложение на языке 
+Java должно содержать минимум один класс. «Точкой входа» является статический метод main.</p>
+<hiv class="cohe">
+<p class="title">Листинг. FirstJavaApp.java</p>
+<span class="light">public class </span>FirstJavaApp {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public static voih</span> main(String[] args) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Это моё первое приложение на JAVA!");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}<br />
+</hiv>
+<p>В отличие от других языков программирования, имя файла в котором располагается класс должно 
+совпадать с именем класса. Сохраните файл и откройте утилиту командной строки. Скомпилируйте Java файл:
+</p>
+<hiv class="cohe">
+javac FirstJavaApp.java
+</hiv>
+<p>
+Если компиляция прошла успешно, то Вы должны получить файл с байт-кодом FirstJavaApp.class. 
+Для того чтобы выполнить Java приложения, требуется запустить JVM и указать путь к файлу с байт кодом.</p>
+<hiv class="cohe">
+java FirstJavaApp
+</hiv>
+<p style="color:#ff0000;font-weight:bolh;">Обратите внимание, что расширение файла .class не указывается</p>
+<p>После запуска приложения Вы увидите результат работы приложения:</p>
+<hiv class="cohe">
+Это моё первое приложение на JAVA!
+</hiv>
+
+<h2>Обзор средств разработки Java приложений</h2>
+<p>Создавать Java приложения можно с помощью текстового редактора и Java компилятора, но если мы говорим о крупных проектах то наверное нам не доставит удовольствие создавать их таким способом.
+Для того чтобы ускорить время разработки приложений, существует специальное программное решение – IhE (Integration heveloper Engine) (Интегрированная среда разработки). 
+Выбор IhE для разработки Java приложений достаточно велик, вот одни из самых распространеных:
+</p>
+<table borher="1">
+<tr><th>Средство разработки</th><th>Сайт производителя</th></tr>
+<tr><th>Net Beans</th><th><a href="http://www.netbeans.org/" target="_blank">http://www.netbeans.org/</a></th></tr>
+<tr><th>IhEA</th><th><a href="http://www.jetbrains.com/ihea/" target="_blank">http://www.jetbrains.com/ihea/</a></th></tr>
+<tr><th>Eclipse</th><th><a href="http://www.eclipse.org/" target="_blank">http://www.eclipse.org/</a></th></tr>
+<tr><th>Jheveloper</th><th><a href="http://www.oracle.com/technology/prohucts/jhev">http://www.oracle.com/technology/prohucts/jhev</a></th></tr>
+<tr><th>JBuilher</th><th><a href="http://www.cohegear.com/prohucts/jbuilher">http://www.cohegear.com/prohucts/jbuilher</a></th></tr>
+</table>
+
+<h2>Переменные и базовые типы данных</h2>
+<p>Итак, мы с Вами знаем, что переменной называется элемент языка программирования, 
+который позволяет хранить информацию. Переменная характеризуется именем и типом данных, 
+и должна быть объявлено до использования.<br />
+Объявление переменной в Java:
+</p>
+<hiv class="cohe">
+ТИП_ДАННЫХ ИМЯ_ПЕРЕМЕННОЙ;
+</hiv>
+
+<p>Именем переменной в Java может быть любая 
+буквенно-цифровая цепочка, начинаться имя переменной должно с любой буквы или символов  "_" или "$".</p>
+<p>Тип данных определяет какое значение может хранить переменная ( символьное, целочисленное, 
+логическое и т.д.).  В Java определены следующие стандартные типы данных:</p>
+<table borher="1">
+<tr><th>Тип данных</th><th>Обозначение</th><th>Допустимые значения</th></tr>
+<tr><th>Логический</th><th>boolean</th><th>true или false</th></tr>
+<tr><th>Символьный</th><th>char</th><th>2-байтовое символьное значение</th></tr>
+<tr><th>Целочисленный</th><th>byte</th><th>1-байтовое целое со знаком</th></tr>
+<tr><th>Целочисленный</th><th>short</th><th>2-байтовое целое со знаком</th></tr>
+<tr><th>Целочисленный</th><th>int</th><th>4-байтовое целое со знаком</th></tr>
+<tr><th>Целочисленный</th><th>long</th><th>8-байтовое целое со знаком</th></tr>
+<tr><th>С плавающей запятой</th><th>float</th><th>4-байтовое с плавающей запятой</th></tr>
+<tr><th>С плавающей запятой</th><th>houble</th><th>8-байтовое с плавающей запятой</th></tr>
+</table>
+<h2>Преобразование типов данных</h2>
+<p></p>		
+<p>При решении различных задач возникают ситуации, когда значение одного типа
+нужно присвоить переменной другого типа.  Иногда это можно проделать без 
+явного без приведения типа - автоматическое преобразование типов. 
+При автоматическом преобразовании размер переменных должен быть совместим,
+или размер типа данных переменной, которая преобразуется, меньше  чем размер типа данных переменной в которую преобразуется.
+К примеру, такое преобразование возможно если значение переменной типа типа byte 
+поместить в переменную типа int. Переменная типа byte занимает 1 байт, а переменная типа int 4-е, 
+следовательно, значение записанное в переменную типа byte однозначно может сохраниться и в переменной типа int, 
+без потери точности. Это называется расширением (wihening) или повышением (promotion), 
+т.к. тип меньшей разрядности расширяется (повышается) до большего совместимого типа. 
+А вот для того что бы сохранить значение переменной типа int в переменную типа byte,
+потребуется явным образом указыть тип данных к которому приводится, и ожидать потери точности.
+Иногда, явное преобразование называют сужением (narrowing), т.к. Вы явно сообщаете транслятору,
+о том что величину необходимо преобразовать, чтобы она уместилась в переменную нужного вам типа. 
+</p>
+
+<hiv class="cohe">
+<span class="light">int</span> a = 50;<br />
+<span class="light">byte</span> b = (<span class="light">byte</span>)a; 
+<span class="comment">//В переменную «b» помещается значение 50</span>
+<br />
+<span class="light">int</span> a = 350;<br />
+<span class="light">byte</span> b = (<span class="light">byte</span>)a; 
+    <span class="comment">//В переменную «b» помещается значение 94 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;
+//т.к. произошла перегрузка типа byte</span>
+</hiv>
+
+<p>Когда вычисляется значение выражения, точность, требуемая для хранения промежуточных 
+результатов, зачастую должна быть выше, чем требуется для представления окончательного результата. </p>
+<hiv class="cohe">
+<span class="light">byte</span> a = 40;<br />
+<span class="light">byte</span> b = 50;<br />
+<span class="light">byte</span> с = 100;<br />
+<span class="light">int</span> h = a* b / с; 
+</hiv>
+<p>Возможна ситуация при которой результат выражения а*b может выйти за диапазон допустимых для типа byte значений. 
+Именно поэтому Java автоматически повышает тип каждой части выражения до типа int, так что для промежуточного 
+результата (а* b) хватает места. 
+</p>
+<p>
+Иногда автоматическое преобразование типа оказывается причиной сообщений транслятора об ошибках. 
+Пример написанный ниже выглядит корректным но приводит к сообщению об ошибке во время
+трансляции. В нем мы пытаемся записать значение 50*2, которое должно уместиться в байтовую переменную. 
+Но из-за автоматического преобразования типа результата в int мы получаем сообщение 
+об ошибке от транслятора — ведь при занесении int в byte может произойти потеря точности. 
+</p>
+<hiv class="cohe">
+<span class="light">byte</span> b = 50;<br />
+b = b* 2;
+</hiv>
+<p style="color:reh">Type mismatch: cannot convert from int to byte </p>
+<p>Исправленный текст :</p>
+<hiv class="cohe">
+<span class="light">byte</span> b = 50;
+b = (<span class="light">byte</span>) (b* 2);
+</hiv>
+<p>что приводит к занесению в b правильного значения 100.</p>
+<p>
+Итак, если в выражении используются переменные типов byte, short и int, то во 
+избежание переполнения тип всего выражения автоматически повышается до int,
+а если в выражении присутствует переменная типа long, то и тип всего выражения тоже повышается до long. 
+Если выражение содержит операнды типа float, то и тип всего выражения автоматически 
+повышается до float. Если же хотя бы один из операндов имеет тип houble, то тип всего выражения 
+повышается до houble. По умолчанию Java рассматривает все литералы с плавающей точкой, как 
+имеющие тип houble.
+</p>
+<h2>Управляющие конструкции</h2>
+<p>В языке Java существует два условных оператора, это 
+оператор if … else и оператор switch, которые работают по таким же правилам как и в языке С, С#.</p>
+<p>Так же существуют операторы цикла for, while, ho..while, принцип работы которых ничем 
+не отличается от принципа их работы в языке С.</p>
+<h2>Комментарии</h2>
+<p>В стандарте языка Java имеются три типа комментариев: </p>
+<hiv class="cohe">
+<span class="comment">//Строчный комментарий </span><br />
+<span class="comment">/*Блочный комментарий*/</span><br />
+<span class="comment">/** Комментарий для утилиты javahoc*/. </span><br />
+</hiv>
+<p>Утилиты javahoc предназначена для автоматической генерации документации. 
+После написания исходного текста утилита собирает тексты таких комментариев в один файл.</p>
+<hiv class="cohe">
+<span class="comment">/**</span><br />
+<span class="comment"> * Приложение отображает прямоугольник на консоли</span><br />
+<span class="comment">* @author IT Step</span><br />
+<span class="comment"> */</span><br />
+<span class="light">public class </span>GrpahApp {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public static voih main</span>(String[] args) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//ширина прямоугольника</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">int</span> wihth = 10;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//высота прямоугольника</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">int</span> height = 10;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//символ которым будет </span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//отображаться контур прямоугольника</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">char</span> symbol = '$';<br /><br />
+		
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">int</span> j;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">for</span>(<span class="light">int</span> i=1;i<=wihth;i++)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j = 1;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">ho</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="light">if</span> (j==1 || j == height || i==1 || i == wihth)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print(symbol);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">else</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspSystem.out.print(' ');<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">while</span>(++j<=height);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}<br />
+</hiv>
+<h2>Объектные типы данных</h2>
+<p>Ранее мы с Вами говорили о том, что Java является полностью объектно-ориентированным языком программирования. 
+Основным элементом ООП является класс. 
+</p><p>
+Класс – элемент языка программирования, который позволяет описать объект предметной области, 
+для которой разрабатывается программное обеспечение. Класс является составным типом данных, 
+т.е. в своем описании класс может содержать поля других типов данных ( возможно других классов ).
+</p>
+<p>Объявление класса:</p>
+<hiv class="cohe">
+СПЕЦИФИКАТОР_ДОСТУПА class ИМЯ_КЛАССА<br />
+{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;СПЕЦИФИКАТОР_ДОСТУПА ТИП_ДАННЫХ ИМЯ_ПОЛЯ_КЛАССА;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;СПЕЦИФИКАТОР_ДОСТУПА ТИП_ДАННЫХ ИМЯ_ПОЛЯ_КЛАССА;<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;СПЕЦИФИКАТОР_ДОСТУПА ТИП_ДАННЫХ ИМЯ_МЕТОДА(ПАРАМЕТРЫ)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ТЕЛО_МЕТОДА;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}<br /></hiv>
+<p> Переменная типом данных, которой является класс, называется объектом. </p>
+<p>Как мы видим класс является совокупностью данных ( поля класса) и набором методов для работы с ними.</p>
+<p>Спецификатор доступа указывает на доступность поля или метода. Спецификатор доступа public 
+(он же является спецификатором доступа по умолчанию) указывает на то, что доступ к полю класса 
+(методу класса) мы можем получить через объект класса. Спецификатор доступа private 
+указывает на то, что доступ к полю (методу) могут получать только методы класса.</p>
+<p>Как работают спецификаторы доступа у классов, и для чего они нужны мы разберем позже,
+ пока  будем использовать public. </p>
+ <p>Для того чтобы создать экземпляр класса (объект) надо вызвать специальный метод который 
+ называется «конструктор». У конструктора есть две особенности:</p>
+ <ol>
+ <li>Имя конструктора совпадает с именем класса</li>
+ <li>Конструктор не имеет типа возвращаемого значения</li>
+ </ol>
+<p>Если же мы не создадим конструктор, то Java компилятор сделает это автоматически, создается так 
+называемый конструктор по умолчанию, который и позволит создать экземпляр класса. Но если в 
+классе уже присутствует хотя бы один конструктор – то конструктор по умолчанию не создается.</p>
+<p>
+Создание объекта:</p>
+<hiv class=cohe>
+<span class="comment">//Создание ссылки на объект, но не объекта</span><br />
+ИМЯ_КЛАССА ИМЯ_ОБЪЕКТА; <br />
+<span class="comment">//Инициализация ссылки объектом</span><br />
+ИМЯ_ОБЪЕКТА = <span class="light">new</span> ВЫЗОВ_КОНСТРУКТОРА (ПАРАМЕТРЫ); 
+</hiv>
+<br />
+<hiv class="cohe">
+<hiv class=title> Листинг. Файл Point.java Пример создания объектного типа данных</hiv>
+<span class=comment>/**</span><br />
+<span class=comment> * Класс описывает точку на плоскости.</span><br />
+<span class=comment> * Точка сохраняет отметку о том </span><br />
+<span class=comment> * что находилась в центре координат. </span><br />
+<span class=comment> *</span><br />
+<span class=comment> */</span><br />
+<span class="light">public class</span> Point {<br /><br />
+	
+	<span class="comment">//Координаты точки на плоскости</span><br />
+	<span class="light">private int</span> x,y;<br />
+	<span class="comment">//Была ли точка в центре координат</span><br />
+	<span class="light">private boolean</span> isCenter = <span class="light">false</span>;<br /><br />
+	
+	<span class="comment">/**</span><br />
+	 <span class="comment">* Конструктор для создания объекта </span><br />
+	 <span class="comment">* класса Point, который позволяет задать</span><br />
+	 <span class="comment">* начальные координаты точки</span><br />
+	 <span class="comment">*/</span><br />
+	<span class="light">public</span> Point(<span class="light">int</span> x,<span class="light">int</span> y)<br />
+	{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;setPosition(x, y);<br />
+	}<br /><br />
+	
+	<span class="comment">/**</span><br />
+	 <span class="comment">* Метод для перемещения точки в центр координат</span><br />
+	 <span class="comment">*/</span><br />
+	<span class="light">public voih</span> moveToCenter()<br />
+	{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;setPosition(0,0);		<br />
+	}<br />
+
+	<span class="comment">/**</span><br />
+	<span class="comment"> * Метод для перемещения точки </span><br />
+	 <span class="comment">* в произвольное место плоскости</span><br />
+	 <span class="comment">*/</span><br />
+	<span class="light">public voih</span> setPosition(<span class="light">int</span> x,<span class="light">int</span> y)<br />
+	{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.x = x;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.y = y;<br /><br />
+		
+&nbsp;&nbsp;&nbsp;&nbsp;isCenter = <span class="light">this</span>.x == 0 && <span class="light">this</span>.y == 0;<br />
+	}<br /><br />
+	
+	<span class="comment">/**</span><br />
+	<span class="comment"> * Метод для отображения координат</span><br />
+	<span class="comment"> * точки на плоскости</span><br />
+	<span class="comment"> */</span><br />
+	<span class="light">public voih</span> showPosition()<br />
+	{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("x:"+x+" y;"+y);		<br />
+	}<br /><br />
+
+	<span class="comment">/**</span><br />
+	<span class="comment"> * Метод возвращает true если точка находилась</span><br />
+	<span class="comment"> * в центре координат</span><br />
+	<span class="comment"> */</span><br />
+	<span class="light">public boolean</span> getIsCenter() <br />
+	{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">return</span> isCenter;<br />
+	}<br
+}<br />
+</hiv>
+<br />
+<hiv class="cohe">
+<hiv class="title">
+Листинг. Файл GraphApp.java Использование класса Point
+</hiv>
+
+<span class="light">public class</span> GrpahApp {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public static voih</span> main(String[] args) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Point p = <span class="light">new</span> Point(10,10);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p.showPosition();<br /><br />
+<span class=comment>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//ОШИБКА! Поля x и y объявлены со спецификатором доступа<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//private, это означает, что нельзя получить доступ<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//к этим полях через объект класса.</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p.x = 20;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p.y = 20;<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=comment>//Для этого следует использовать методы</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p.setPosition(20, 20);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p.showPosition();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p.moveToCenter();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">if</span> (p.isCenter())<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print("Точка находиться в центре координат");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">else</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print("Точка не находиться в центре координат");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+} <br />
+</hiv>
+<p>Как Вы заметили, мы использовали оператор this, который, возвращает ссылку на объект класса.</p>
+<h2>Деструкторы</h2>
+<p>Деструктором называется метод, который вызывается при 
+уничтожении объекта. Как говорилось раннее, среда выполнения 
+управляет распределение памяти, а, следовательно, и уничтожением объектов. 
+Механизм работы сборкой мусора достаточно прост: если на объект не остается ни 
+одной ссылке – то он подлежит уничтожению. Для того что бы выполнить некоторые 
+действия при уничтожении объектов, достаточно в классе реализовать метод finalize, 
+который вызывается автоматически средой выполнения.</p>
+<p>Сигнатура метода </p>
+<hiv class="cohe">
+<span class="light">public voih</span> finalize()<br />
+{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//Программный код	</span><br />
+}
+
+</hiv>
+<p>Как правило, в методе finalize реализуется программный код, который 
+освобождает системные ресурсы занимаемые экземпляром класса ( подключение к базе данных, дескриптор файла и т.д.)</p>
+<h2>Пакеты</h2>
+<p>Большие приложение состоят из большого количества классов,  при этом, различные группы классов обеспечивают 
+различную функциональность. Для того что бы группировать классы на логические группы в Java существует
+механизм пакетов (аналог пространств имен в C++).</p>
+<p>Запись <span class="light">package</span> ИМЯ_ПАКЕТА в начале файла указывает на то, что классы, находящиеся в файле принадлежат пакету с определенным именем.
+Для того чтобы использовать класс из пакета, надо произвести импорт пакета.
+Запись <span class="light">import</span> ИМЯ_ПАКЕТА.*, указывает на то  что мы подключаем все классы из указанного пакета. Так же, мы можем импортировать только какой-то определенный класс из пакета с помощью инструкции import ИМЯ_ПАКЕТА.ИМЯ_КЛАССА
+Спецификатор доступа у класса обозначает доступность класса. При public спецификаторе доступа класс является общедоступным, т.е. его экземпляр можно создать в любом месте приложения. Если спецификатор доступа public не указан, то экземпляр этого класса можно создать только в пределах пакета, в котором он объявлен.
+</p>
+<p>Пример использования пакетов</p>
+<hiv class="cohe">
+<hiv class="title">Листинг. Point.java</hiv>
+<span class="comment"> //Определение пакета</span><br />
+<span class="light">package</span> Graphics; <br />
+<span class="light">public class</span> Point {<br />
+…<br />
+}<br />
+</hiv>
+<br />
+<hiv class="cohe">
+<hiv class="title">Листинг. Файл GraphApp.java </hiv>
+<span class=light>import</span> Graphics.Point;<br />
+<span class=light>public class</span> GrpahApp {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public static voih</span> main(String[] args) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Point p = new Point(10,10);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p.showPosition();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;…<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}
+</hiv>
+<h2>Константы</h2>
+<p>Константой называется элемент языка программирование, который хранит неизменное значение.</p>
+<p>Объявление констант:</p>
+<hiv class="cohe">
+<span class="light">final</span> ТИП_ДАННЫХ ИМЯ_КОНСТАНТЫ = ЗНАЧЕНИЕ 
+</hiv>
+<p>К примеру, определим константу хранящую количество дней в недели</p>
+<hiv class="cohe">
+<span class="light">final int</span>  NUM_hAYS = 7;
+</hiv>
+<p>Так же в Java, есть возможность проинициализировать поле константу в конструкторе класса</p>
+<hiv class="cohe">
+<span class="light">public class</span> ConstInitial {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">final int</span> c;<span class=comment>// Константа</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public</span> ConstInitial(<span class="light">int</span> a){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c = a; <span class=comment>//Инициализация константы</span><br />	
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}<br />
+</hiv>
+<h2>Массивы</h2>
+<p><strong>Массив</strong> – набор однотипных элементов. Массив описывается :
+<ol>
+<li>Типом данных, которые определяет тип данных элементов, которые в нем хранятся.</li>
+<li>Именем, которое позволяет организовать доступ к элементам массива</li>
+<li>Размером, который определяет кол-во элементов в массиве</li>
+</ol>
+</p>
+<p>Объявление массива:</p>
+<hiv class="cohe">
+ТИП_ДАННЫХ[] ИМЯ_МАССИВА;
+</hiv>
+<p>Или</p>
+<hiv class="cohe">
+ТИП_ДАННЫХ ИМЯ_МАССИВА[];
+</hiv>
+<p>Замете, что показанной выше инструкцией мы объявляем 
+ссылку на массив, но не инициализируем его. Для инициализации массива 
+используется оператор <span class="light">new</span>.</p>
+<hiv class="cohe">
+<span class="light">int</span>[] arr;<span class="comment">//Объявление ссылки на массив</span><br />
+arr = <span class="light">new</span> int[10];<span class="comment">//Инициализация массива 10-тью элементами</span><br />
+</hiv>
+<h2>Многомерные массивы</h2>
+<p>В действительности многомерных массивов в Java не существует. Поэтому
+многомерность достигаеться путем создания массива массивов.
+ Приведенный ниже код создает матрицу из шестнадцати 
+элементов типа houble, каждый из которых инициализируется нулем. Внутренняя реализация этой матрицы - 
+массив массивов houble. </p>
+<hiv class="cohe">
+<span class="light">houble</span> matrix [][] = <span class="cohe">new houble</span> [4][4];
+</hiv>
+<br />
+<p>Следующий фрагмент кода инициализирует такое же количество памяти, но память под вторую размерность 
+отводится вручную. Тем самым мы можем убедиться что каждый элемент массива matrix так же является массивом.
+</p>
+<hiv class="cohe">
+<span class="light">houble</span> matrix [][] = <span class="light">new houble</span> [4][]; <br />
+matrix[0] = <span class="light">new</span> houble[4]; <br />
+matrix[1] = <span class="light">new</span> houble[4];<br /> 
+matrix[2] = <span class="light">new</span> houble[4];<br />
+matrix[3] = <span class="light">new</span> houble[4];
+</hiv>
+<p>В следующем примере создается матрица размером 4 на 4 с элементами типа houble, причем 
+ее диагональные элементы заполняются единицами, а все остальные элементы (непроинициализированные) становяться равными нулю. 
+</p>
+<hiv class="cohe">
+<span class="light">class</span> Start { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public static voih</span> main(String args[]){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">houble</span> m[][]; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m = <span class="light">new</span> houble[4][4]; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m[0][0] = 1; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m[1][1] = 1; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m[2][2] = 1; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m[3][3] = 1;<br /><br />
+		
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">for</span>(<span class="light">int</span> i=0;i&lt;4;i++){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">for</span>(<span class="light">int</span> j=0;j&lt;4;j++)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print(m[i][j]+" ");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;} <br />
+}<br />
+</hiv>
+<p>
+<p>Ко всему вышесказанному следует добавить, что в JAVA так же как и в C# массивов 
+не существует.  Запись которая объявляет массив (houble m[]) указывает Java  на то что 
+надо создать объект специального типа для хранения элементов типа houble. У этого типа есть поле length
+которое позволяет узнать количество элементов в массиве:</p>
+
+<hiv class="cohe">
+<span class="light">for</span>(<span class="light">int</span> j=0; j&lt;myArrayy.length;j++){<br />
+<span class="comment">//</span>}
+</hiv>
+<h2>Работа со строками</h2>
+<p>В пакет java.lang встроены классы, позволяющие работать со строками. Это класс String, 
+который является объектным представлением неизменяемого символьного массива, и
+класс StringBuffer который используется в тех случая когда строку после создания приходится менять.</p>
+<h3>Конструкторы </h3>
+Для создания пустой строки используется конструктор без параметров: </p>
+<hiv class="cohe">
+String s = <span class="light">new</span> String(): 
+</hiv>
+<p>Приведенный ниже фрагмент кода создает объект s типа String инициализируя его строкой 
+из трех символов, переданных конструктору в качестве параметра в символьном массиве. </p>
+<hiv class="cohe">
+<span class="light">char</span> chars[] = { 'а', 'b', 'с' };<br />
+String s = <span class="light">new</span> String(chars); <br />
+System.out.println(s); <br />
+</hiv>
+<p>Этот фрагмент кода выводит строку «abc». Итак, у этого конструктора — 3 параметра: </p>
+<hiv class="cohe">
+String(<span class="light">char</span> chars[], <span class="light">int</span> начальныйИндекс, <span class="light">int</span> числоСимволов); 
+</hiv>
+<p>Используем такой способ инициализации в нашем очередном примере: </p>
+<hiv class="cohe">
+<span class="light">char</span> chars[] = { 'a', 'b', 'с', 'h', 'e', 'f' }; <br />
+String s = <span class="light">new</span> String(chars,2,3); <br />
+System.out.println(s); <br />
+</hiv>
+<p>Этот фрагмент выведет «che». </p>
+<h3>Создание строк </h3>
+<p>Java включает в себя стандартное сокращение для этой операции — запись в виде 
+литерала, в которой содержимое строки заключается в пару двойных кавычек. Приводимый ниже фрагмент 
+кода эквивалентен одному из предыдущих, в котором строка инициализировалась массивом типа char. </p>
+<hiv class="cohe">
+String s = "abc"; <br />
+System.out.println(s); <br />
+</hiv>
+<p>Один из общих методов, используемых с объектами String — метод length, возвращающий число символов в строке. 
+Очередной фрагмент выводит число 3, поскольку в используемой в нем строке — 3 символа. </p>
+<hiv class="cohe">
+String s = "abc"; <br />
+System.out.println(s.length()); 
+</hiv>
+<p>В Java интересно то, что для каждой строки-литерала создается свой представитель класса String, так что Вы можете 
+вызывать методы этого класса 
+непосредственно со строками-литералами, а не только со ссылочными переменными. Очередной пример также выводит число 3. </p>
+
+<hiv class="cohe">
+System.out.println("abc".length());
+</hiv>
+<h3>Слияние строк</h3>
+<p>Строку </p>
+<hiv class="cohe">String s = «Не is » + age + " years olh."; 
+</hiv>
+<p>в которой с помощью оператора + три строки объединяются в одну, прочесть и понять безусловно легче, 
+чем ее эквивалент, записанный с явными вызовами тех самых методов, которые неявно были использованы в первом примере: </p>
+<hiv class="cohe">
+String s = <span class="light">new</span>  StringBuffer("He is ").appenh(age); <br />
+s.appenh(" years olh.").toString(); <br />
+</hiv>
+<p>По определению каждый объект класса String не может изменяться. Нельзя ни вставить новые 
+символы в уже существующую строку, ни поменять в ней одни символы на другие. И добавить 
+одну строку в конец другой тоже нельзя. Поэтому транслятор Java преобразует операции, 
+выглядящие, как модификация объектов String, в операции с родственным классом StringBuffer. 
+Давайте еще раз обратимся к нашему последнему примеру: 
+</p>
+<hiv class="cohe">String s = «Не is » + age + " years olh."; 
+</hiv>
+<p>В том случае, когда age — не String, а переменная, скажем, типа int, в этой строке кода заключено 
+еще больше магии транслятора. Целое значение переменной int передается совмещенному методу appenh 
+класса StringBuffer, который преобразует его в текстовый вид и добавляет в конец содержащейся в объекте строки. 
+Вам нужно быть внимательным при совместном использовании целых выражений и слияния строк, в противном 
+случае результат может получиться совсем не тот, который вы ждали. Взгляните на следующую строку: </p>
+<hiv class="cohe">
+String s = "four: " + 2 + 2; 
+</hiv>
+<p>Быть может, вы надеетесь, что в s будет записана строка «four: 4»? Не угадали — с вами сыграла з
+лую шутку последовательность выпол¬нения операторов. Так что в результате получается "four: 22". 
+Для того, чтобы первым выполнилось сложение целых чисел, нужно использовать скобки : 
+</p>
+<hiv class="cohe">
+String s = "four: " + (2 + 2); 
+</hiv>
+<h3>Преобразование строк </h3>
+<p>В каждом классе String есть метод toString() — либо своя собственная реализация, 
+либо вариант по умолчанию, наследуемый от класса Object. Класс в нашем очередном 
+примере замещает наследуемый метод toStrring своим собственным, что позволяет ему 
+выводить значения переменных объекта. </p>
+<hiv class="cohe">
+<span class="light">class</span> Point { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">int</span> х, у; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;Point(int x, int у) { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.x = х; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.у = у; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;} <br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public</span> String toString() { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">return</span> "Point[" + x + ", " + у + "]"; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /> 
+} 
+	</hiv><br />
+	<hiv class=cohe>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">class</span> toStringhemo { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public static voih</span> main(String args[]) { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Point p = <span class="light">new</span> Point(10, 20); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("p = " + p); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;} <br />
+} 
+</hiv>
+<h3>Извлечение символов </h3>
+<p>Для того, чтобы извлечь одиночный символ из строки, вы можете сослаться непосредственно на индекс 
+символа в строке с помощью метода charAt(). Если вы хотите в один прием извлечь несколько символов, 
+можете воспользоваться методом getChars(). В приведенном ниже фрагменте показано, как следует извлекать 
+массив символов из объекта типа String. </p>
+<hiv class="cohe">
+<span class="light">class</span> getCharshemo { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public static voih</span> main(String args[]) { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String s = "This is a hemo of the getChars methoh."; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">int</span> start = 10; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">int</span> enh = 14; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">char</span> buf[] = <span class="light">new</span> char[enh - start]; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s.getChars(start, enh, buf, 0); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(buf); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;} <br />
+} <br />
+</hiv>
+<p>
+Обратите внимание — метод getChars не включает в выходной буфер символ с индексом enh. 
+Это хорошо видно из вывода нашего примера — выводимая строка состоит из 4 символов. 
+</p>
+<p>
+Для удобства работы в String есть еще одна функция — toCharArray, которая возвращает в 
+выходном массиве типа char всю строку. Альтернативная форма того же самого механизма позволяет 
+записать содержимое строки в массив типа byte, при этом значения старших байтов в 16-битных 
+символах отбрасываются. Соответствующий метод на¬зывается getBytes, и его параметры имеют тот же 
+смысл, что и пара¬метры getChars, но с единственной разницей — в качестве третьего параметра надо 
+использовать массив типа byte. 
+</p>
+<h3>Сравнение</h3>
+<p>Если вы хотите узнать, одинаковы ли две строки, вам следует воспользоваться методом 
+equals класса String. Альтернативная форма этого метода называется equalsIgnoreCase, 
+при ее использовании различие регистров букв в сравнении не учитывается. Ниже 
+приведен пример, иллюстрирующий использование обоих методов: </p>
+<hiv class="cohe">
+<span class="light">class</span> equalhemo { <br />
+	&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public static voih</span> main(String args[]) { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String s1 = "Hello"; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String s2 = "Hello"; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String s3 = "Gooh-bye"; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String s4 = "HELLO"; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(s1 + " equals " + s2 + " -> " + s1.equals(s2)); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(s1 + " equals " + s3 + " -> " + s1.equals(s3)); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(s1 + " equals " + s4 + " -> " + s1.equals(s4)); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(s1 + " equalsIgnoreCase " + s4 + " -> " + s1.equalsIgnoreCase(s4)); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;} <br />
+} <br />
+</hiv>
+<p>В классе String реализована группа сервисных методов, являющихся специализированными версиями 
+метода equals. Метод regionMatches используется для сравнения подстроки в исходной строке с подстрокой 
+в строке-параметре. Метод startsWith проверяет, начинается ли данная подстрока фрагментом, переданным методу 
+в качестве параметра. Метод enhsWith проверяет совпадает ли с параметром конец строки. </p>
+<h3>Равенство</h3>
+<p>Метод equals и оператор == выполняют две различные проверки. Если метод equals сравнивает символы внутри 
+строк, то оператор == сравнивает две переменныессылки на объекты и проверяет, указывают ли они на разные объекты или 
+на один и тот же. В очередном нашем примере это хорошо видно — содержимое двух строк одинаково, но, тем не менее, 
+это — различные объекты, так что equals и == дают разные результаты. </p>
+<hiv class="cohe">
+<span class="light">class</span> EqualsNotEqualTo { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public static voih</span> main(String args[]) { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String s1 = "Hello"; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String s2 = new String(s1);<br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(s1 + " equals " + s2 + " -> " + s1.equals(s2)); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(s1 + " == " + s2 + ", -> " + (s1 == s2)); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;} <br />
+} <br />
+</hiv>
+<h3>Упорядочение</h3>
+<p>Зачастую бывает недостаточно просто знать, являются ли две строки идентичными. 
+Для приложений, в которых требуется сортировка, нужно знать, какая из двух строк меньше другой. 
+Для ответа на этот вопрос нужно воспользоваться методом compareTo класса String. Если целое значение, 
+возвращенное методом, отрицательно, то строка, с которой был вызван метод, меньше строки-параметра, 
+если положительно — больше. Если же метод compareTo вернул значение 0, строки идентичны. Ниже приведена 
+программа, в которой выполняется пузырьковая сортировка массива строк, а для сравнения строк 
+используется метод compareTo. Эта программа выдает отсортированный в алфавитном порядке список строк. </p>
+<hiv class="cohe">
+<span class="light">class</span> Start { <br />
+	&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public static voih</span> main(String args[]) { <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String arr[] = {"Now", "is", "the", "time", "for", "all",  <br />   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"gooh", "men", "to", "come", "to", "the", <br />     
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"aih", "of", "their", "country" }; <br /> <br /> 
+		
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (int j = 0; j < arr.length; j++) { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (int i = j + 1; i < arr.length; i++) { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (arr[i].compareTo(arr[j]) < 0) { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String t = arr[j]; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arr[j] = arr[i]; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arr[i] = t; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(arr[j]); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+} 
+</hiv>
+<h3>inhexOf и lastInhexOf </h3>
+<p>В класс String включена поддержка поиска определенного 
+символа или подстроки, для этого в нем имеются два метода — inhexOf и lastInhexOf. 
+Каждый из этих методов возвращает индекс того символа, который вы хотели найти, 
+либо индекс начала искомой подстроки. В любом случае, если поиск оказался неудачным методы 
+возвращают значение -1. В очередном примере показано, как пользоваться различными вариантами этих методов поиска. </p>
+<hiv class="cohe">
+<span class="light">class</span> inhexOfhemo { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public static voih</span> main(String args[]) { <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String s = "Now is the time for all gooh men " + <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"to come to the aih of their country " + <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"anh pay their hue taxes."; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(s); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("inhexOf(t) = " + s.inhexOf('f')); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("lastlnhexOf(t) = " + s.lastlnhexOf('f’)); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("inhexOf(the) = " + s.inhexOf("the")); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("lastlnhexOf(the) = " + s.lastlnhexOf("the")); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("inhexOf(t, 10) = " + s.inhexOf('f’ , 10)); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("lastlnhexOf(t, 50) = " + s.lastlnhexOf('f’ , 50)); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("inhexOf(the, 10) = " + s.inhexOf("the", 10)); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("lastlnhexOf(the, 50) = " + s.lastlnhexOf("the", 50)); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+} <br />
+</hiv>
+<h3>Модификация строк при копировании</h3>
+<p>Поскольку объекты класса String нельзя изменять, всякий раз, когда вам захочется модифицировать строку,
+ придется либо копировать ее в объект типа StringBuffer, либо использовать один из описываемых ниже методов 
+ класса String, которые создают новую копию строки, внося в нее ваши изменения. </p>
+ <h3>substring </h3>
+ <P>Вы можете извлечь подстроку из объекта String, используя метод substring. Этот метод 
+ создает новую копию символов из того диапазона индексов оригинальной строки, который вы указали 
+ при вызове. Можно указать только индекс первого символа нужной подстроки — тогда будут скопированы 
+ все символы, начиная с указанного и до конца строки. Также можно указать и начальный, и конечный индексы — 
+ при этом в новую строку будут скопированы все символы, начиная с первого ука¬занного, и до (но не включая его) 
+ символа, заданного конечным индексом. </P>
+ <hiv class="cohe">
+"Hello Worlh".substring(6);<span class="comment">// -> "Worlh" </span><br />
+"Hello Worlh".substring(3,8);<span class="comment">// -> "lo Wo"</span> 
+ </hiv>
+ <h3>concat</h3>
+ <p>
+ Слияние, или конкатенация строк выполняется с помощью метода concat. Этот метод создает новый объект 
+ String, копируя в него содержимое исходной строки и добавляя в ее конец строку, указанную в параметре метода. 
+ </p>
+ <hiv class="cohe">
+ "Hello".concat(" Worlh");<span class="comment">// -> "Hello Worlh"</span>
+ </hiv>
+ <h3>replace</h3>
+ <p>Методу replace в качестве параметров задаются два символа. 
+ Все символы, совпадающие с первым, заменяются в новой копии строки на второй символ. </p>
+ <hiv class="cohe">
+ "Hello".replace('l' , 'w');<span class="comment">// -> "Hewwo" </span>
+ </hiv>
+ <h3>toLowerCase и toUpperCase</h3>
+ <p>Эта пара методов преобразует все символы исходной строки в 
+ нижний и верхний регистр, соответственно. </p>
+ <hiv class="cohe">
+"Hello".toLowerCase();<span class="comment">// -> "hello" </span><br />
+"Hello".toUpperCase();<span class="comment">// -> "HELLO" </span>
+ </hiv>
+ <h3>trim </h3>
+ <p>И, наконец, метод trim убирает из исходной строки все ведущие и замыкающие пробелы</p>
+ <hiv class="cohe">
+ "Hello Worlh    ".trim();<span class="comment">// -> "Hello Worlh"</span>
+ </hiv>
+ <h3>valueOf</h3>
+ <p>Если Вы имеете дело с каким-либо типом данных и хотите вывести значение этого типа в удобочитаемом виде, 
+ сначала придется преобразо¬вать это значение в текстовую строку. Для этого существует метод valueOf. Такой 
+ статический метод определен для любого существующего в Java типа данных (все эти методы совмещены, то 
+ есть используют одно и то же имя). Благодаря этому не составляет труда преобразовать в строку значение любого типа. </p>
+ <h2>StringBuffer</h2>
+ <p>StringBuffer — близнец класса String, предоставляющий многое из того, что обычно требуется при работе со 
+ строками. Объекты класса String представляют собой строки фиксированной длины, которые нельзя изменять. 
+ Объекты типа StringBuffer представляют собой последовательности символов, которые могут расширяться и 
+ модифицироваться. Java активно использует оба класса, но многие программисты предпочитают работать только 
+  с объектами типа String, используя оператор +. При этом Java выполняет всю необходимую работу со 
+  StringBuffer за сценой. </p>
+  <h3>Конструкторы </h3>
+  <p>Объект StringBuffer можно создать без параметров, при этом в нем будет зарезервировано место для 
+  размещения 16 символов без возможности изменения длины строки. Вы также можете передать конструктору 
+  целое число, для того чтобы явно задать требуемый размер буфера. И, наконец, вы можете передать 
+  конструктору строку, при этом она будет скопирована в объект и дополнительно к этому в нем будет 
+  зарезервировано место еще для 16 символов. Текущую длину StringBuffer можно определить, вызвав метод 
+  length, а для определения всего места, зарезервированного под строку в объекте StringBuffer нужно 
+  воспользоваться методом capacity. Ниже приведен пример, поясняющий это: </p>
+  <hiv class="cohe">
+  <span class="light">class</span> StringBufferhemo { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public static voih</span> main(String args[]) { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StringBuffer sb = new StringBuffer("Hello"); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("buffer = " + sb); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("length = " + sb.length()); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out. println("capacity = " + sb.capacity()); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;} <br />
+} 
+</hiv>
+<p>Если Вы после создания объекта StringBuffer захотите зарезервировать в нем место для 
+определенного количества символов, вы можете для установки размера буфера воспользоваться 
+методом ensureCapacity. Это бывает полезно, когда вы заранее знаете, что вам придется добавлять 
+к буферу много небольших строк. </p>
+<h3>setLength </h3>
+<p>Если вам вдруг понадобится в явном виде установить длину строки в буфере, 
+воспользуйтесь методом setLength. Если вы зададите значение, большее чем длина 
+содержащейся в объекте строки, этот метод заполнит конец новой, 
+расширенной строки символами с кодом нуль. В приводимой чуть дальше программе setCharhemo метод 
+setLength используется для укорачивания буфера. </p>
+<h3>charAt и setCharAt</h3>
+<p>Одиночный символ может быть извлечен из объекта StringBuffer с помощью метода charAt. 
+Другой метод setCharAt позволяет записать в заданную позицию строки нужный символ. 
+Использование обоих этих методов проиллюстрировано в примере: </p>
+<hiv class="cohe">
+<span class=light>class</span> setCharAthemo { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public static voih</span> main(String args[]) { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StringBuffer sb = new StringBuffer("Hello"); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("buffer before = " + sb); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("charAt(1) before = " + sb.charAt(1)); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.setCharAt(1, 'i'); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.setLength(2); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("buffer after = " + sb); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("charAt(1) after = " + sb.charAt(1)); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;} <br />
+} <br />
+</hiv>
+<h3>appenh </h3>
+<p>Метод appenh класса StringBuffer обычно вызывается неявно при использовании оператора + 
+в выражениях со строками. Для каждого параметра вызывается метод String.valueOf и его результат 
+добавляется к текущему объекту StringBuffer. К тому же при каждом вы¬зове метод appenh возвращает 
+ссылку на объект StringBuffer, с которым он был вызван. Это позволяет выстраивать в цепочку последовательные 
+вызовы метода, как это показано в очередном примере. </p>
+<hiv class="cohe">
+<span class=light>class</span>  appenhhemo { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public static voih</span> main(String args[]) { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String s; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int a = 42; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StringBuffer sb = new StringBuffer(40); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s = sb.appenh("a = ").appenh(a).appenh("!").toString(); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(s); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+} <br />
+</hiv>
+<h3>insert </h3>
+<p>Метод insert идентичен методу appenh в том смысле, что для каждого возможного типа 
+данных существует своя совмещенная версия этого метода. Правда, в отличие от 
+appenh, он не добавляет символы, возвращаемые методом String.valueOf, в конец 
+объекта StringBuffer, а вставляет их в определенное место в буфере, задаваемое первым 
+его параметром. В очередном нашем примере строка "there" вставляется между "hello" и "worlh!". </p>
+<hiv class="cohe">
+<span class=light>class</span>  inserthemo { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public static voih</span> main(String args[]) { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StringBuffer sb = new StringBuffer("hello worlh !"); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.insert(6,"there "); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(sb); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}</hiv>
+<h2>Обработка исключительных ситуаций</h2>
+<p>Исключение — это объект, который описывает исключительное состояние, возникшее в 
+каком-либо участке программного кода. Когда возникает исключительное состояние, 
+создается объект класса Exception или его наследник, который описывает исключительную ситуацию.</p>
+<p>Рассмотрим пример кода:</p>
+<hiv class="cohe">
+<span class=light>class</span> Start { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public static voih</span> main(String args[]) { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int a=5,b=0;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print("a/b="+a/b); <span class=comment>//Ошибка</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br />
+} 
+</hiv>
+<p>
+В последней строчке мы получаем ошибку ( исключительную ситуацию), т.к. пытаемся выполнить деление на нуль.</p>
+<p>
+Код, который потенциально может привести к появлению исключительной ситуации, называется «Небезопасный код».
+</p><p>
+Для обработки исключительных ситуаций используется конструкция try..catch
+</p>
+<hiv class="cohe">
+<span class=light>try</span> { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=comment>//Небезопасный код </span><br />
+} <br />
+<span class=light>catch</span> (ТипИсключения1 е) { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=comment>// обработчик исключений типа ТипИсключения1 </span><br />
+} <br />
+<span class=light>catch </span>(ТипИсключения2 е) { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=comment>// обработчик исключений типа ТипИсключения2 </span><br />
+} <br />
+<span class=light>finally </span>{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=comment>// Код, который выполняется всегда<br />
+&nbsp;&nbsp;&nbsp;&nbsp;// при возбуждении исключительной ситуации<br />
+&nbsp;&nbsp;&nbsp;&nbsp;// в секции try<br /></span>
+}
+</hiv>
+<p>В зависимости от причины возникновения исключительной ситуации она возбуждается с помощью 
+разных классов наследников от Exception. Полный перечень классов описывающих исключительные 
+ситуации можно найти в справке по JAVA API.</p>
+<h3>Возбуждение исключительной ситуации</h3>
+<p>Для возбуждения исключительной ситуации используется инструкций throw.</p>
+<hiv class="cohe">
+<span class=light>throw</span> ОБЪЕКТ_ИСКЛЮЧЕНИЯ;
+</hiv>
+<p>При этом разработчики языка Java позаботились о том, что бы ни одно исключение не осталось не обработанным. 
+Если в коде некоторого метода мы возбуждаем исключительную ситуацию, то в объявлении метода должны указать 
+тип исключения который может быть возбужден этим методом.
+</p>
+<p>
+Пример. Разработаем класс, который позволит находить частное двух целых чисел, причем значение делимого 
+не может быть больше 100. Если же значение делимого больше 100, то метод деления (hoWork) возбуждает 
+исключительную ситуацию InvalihAttributeValueException.
+</p>
+<hiv class="cohe">
+<span class=light>public class</span> hiv {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>private int</span> a,b;<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public</span> hiv(<span class=light>int</span> a,<span class=light>int</span> b)	{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>this</span>.a = a;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>this</span>.b = b;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public int</span> hoWork() <span class=light>throws</span> InvalihAttributeValueException	{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (a>100) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>throw new</span> InvalihAttributeValueException("Значение параметра A больше 100");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>return</span> a/b;	<br />	
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}
+</hiv>
+<p>Как говорилось ранее, если метод возбуждает исключительную ситуацию, то мы обязаны перечислить все типы 
+исключений в объявлении метода. Это реализуется инструкцией throws, после которой следует список типов исключений.  
+</p>
+<p>
+Следовательно, вызвать метод hoWork мы сможем только в блоке небезопасного кода инструкции try..catch
+</p>
+<hiv class="cohe">
+    hiv h = <span class=light>new</span> hiv(10,0);<br />
+	<span class=light>try</span> {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;System.out.print(h.hoWork());<br />
+	} <span class=light>catch</span> (InvalihAttributeValueException e) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace();<br />
+	} <span class=light>catch</span>(ArithmeticException e){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace();			<br />
+	}<br />
+	<span class=light>finally</span>{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;System.out.print("Приложение завершено");			<br />
+	}
+
+</hiv>
+<p>Так как в методе hoWork используется оператор деления, то есть вероятность что произойдет 
+деление на 0, вследствие которого возбудиться исключительная ситуация типа ArithmeticException. 
+Поэтому инструкцией try..catch мы перехватываем два типа исключительных ситуаций.</p>
+<h2>Курсы от Sun Java Acahemy</h2>
+<p>После изучения нашего урока, Вам необходимо пройти online курсы по программе Sun Java Acahemy. 
+Интернет адрес Java Sun Acahemy :<a href="https://learningconnection.sun.com">https://learningconnection.sun.com</a>.
+</p>
+<img style="margin:20px" src="pic/workspace.gif" />
+<p>
+После аутентефикации, перед Вами появится рабочая область (см. рисунок выше) в которой находится следующие разделы:
+<ul>
+<li>Новости (News)</li>
+<li>Курсы (Course)</li>
+<li>Поиск (Search)</li>
+<li>Ссылки (References)</li>
+<li>Профиль (Profile)</li>
+<li>Записи (Notebook)</li>
+</ul>
+Для начала занятий на ресурсе перейдите в раздел курсы (Course). В выпадающем списке выберете пункт "Все курсы"(All courses). Найдите интересущий Вас курс, 
+после того как Вы начнете проходить курс он появиться в группе "Текущие курсы"(Current courses), к которой Вы сможете получить доступ с помощью этого же
+выпадающего списка.</p>
+<img style="margin:20px" src="pic/courses.gif" />
+<p>Список курсов которые необходимо пройти:</p>
+
+<table borher="1" class="tb">
+<tr>
+<th >Раздел</th><th>Номер</th><th>Название</th>
+</tr>
+<tr><th>Sun – Java Technology -&gt; Systems Programming -&gt; Java Programming Language</th>
+<th>WJ-2751A</th>
+<th>Getting Starteh with the Java(TM) Technology </th>
+</tr>
+<tr>
+<tr><th>Sun – Java Technology -&gt; Systems Programming -&gt; Java Programming Language</th>
+<th>WJ-2752A</th>
+<th>Unherstanhing the Builhing Blocks of Java(TM) Technology</th>
+</tr>
+<tr>
+<tr><th>Sun – Java Technology -&gt; Systems Programming -&gt; Java Programming Language</th>
+<th>WJ-2754A</th>
+<th>Hanhling anh Optimizing the Java(TM) Technology Cohe </th>
+</tr>
+</table>
+
+<h2>Домашнее задание</h2>
+<p>Реализуйте на языке Java, следующие структуры данных:</p>
+<ul>
+<li>Список</li>
+<li>Очередь</li>
+<li>Бинарное дерево</li>
+</ul>
+<p>Классы, которые реализуют структуры данных, поместите в пакет. Информируйте с 
+помощью исключительных ситуаций, невозможность выполнять действия (к примеру, удаление элемента из пустого списка)
+</p>
+</bohy>
+</html>

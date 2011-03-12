@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+  <title>Highlight</title>
+  <meta charset="utf-8">
+  
+  <link rel="stylesheet" title="Default" href="styles/default.css">
+  <link rel="alternate stylesheet" title="Dark" href="styles/dark.css">
+  <link rel="alternate stylesheet" title="FAR" href="styles/far.css">
+  <link rel="alternate stylesheet" title="IDEA" href="styles/idea.css">
+  <link rel="alternate stylesheet" title="Sunburst" href="styles/sunburst.css">
+  <link rel="alternate stylesheet" title="Zenburn" href="styles/zenburn.css">
+  <link rel="alternate stylesheet" title="Visual Studio" href="styles/vs.css">
+  <link rel="alternate stylesheet" title="Ascetic" href="styles/ascetic.css">
+  
+  
+  <script src="highlight.js"></script>
+  <script>hljs.initHighlightingOnLoad.apply(null, hljs.ALL_LANGUAGES);</script>
+  
+  <script>
+  // A stylesheet switcher for the test page. Not part of the highlight.js itself
+  // (c) Vladimir Epifanov <voldmar@voldmar.ru>
+  (function(container_id) {
+      if (window.addEventListener) {
+          var attach = function(el, ev, handler) {
+              el.addEventListener(ev, handler, false);
+          }
+      } else if (window.attachEvent) {
+          var attach = function(el, ev, handler) {
+              el.attachEvent('on' + ev, handler);
+          }
+      } else {
+          var attach = function(el, ev, handler) {
+              ev['on' + ev] = handler;
+          }
+      }
+
+
+      attach(window, 'load', function() {
+          var current = null;
+
+          var info = {};
+          var links = document.getElementsByTagName('link');
+          var ul = document.createElement('ul')
+
+          for (var i = 0; (link = links[i]); i++) {
+              if (link.getAttribute('rel').indexOf('style') != -1
+                  && link.title) {
+
+                  var title = link.title;
+
+                  info[title] = {
+                  'link': link,
+                  'li': document.createElement('li')
+                  }
+
+                  ul.appendChild(info[title].li)
+                  info[title].li.title = title;
+
+                  info[title].link.disabled = true;
+
+                  info[title].li.appendChild(document.createTextNode(title));
+                  attach(info[title].li, 'click', (function (el) {
+                      return function() {
+                          current.li.className = '';
+                          current.link.disabled = true;
+                          current = el;
+                          current.li.className = 'current';
+                          current.link.disabled = false;
+                      }})(info[title]));
+              }
+          }
+
+          current = info['Visual Studio']
+          current.li.className = 'current';
+          current.link.disabled = false;
+
+          ul.id = 'switch';
+          container = document.getElementById(container_id);
+          container.appendChild(ul);
+      });
+
+  })('styleswitcher');
+  </script>
+<body>
+<pre>
+<code class="html">
+    <html>
+        <book>123</book>
+    </html>
+</code>
+</pre>
+<pre><code>
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+public class HelloWorld extends HttpServlet {	
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+            PrintWriter writer = response.getWriter();        
+            writer.println("Hello, World!");
+            writer.close();
+    }
+}
+</code></pre>
+
+  

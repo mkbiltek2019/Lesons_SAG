@@ -1,0 +1,330 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Урок 7. Разработка программного обеспечения на технологии Java.</title>
+   <link type="text/css" rel="Stylesheet" href="style.css"/>
+    
+    <link rel="stylesheet" title="Default" href="highlight/styles/default.css"/>
+    <!-- <link rel="alternate stylesheet" title="Dark" href="highlight/styles/dark.css"/>
+    <link rel="alternate stylesheet" title="FAR" href="highlight/styles/far.css"/>
+    <link rel="alternate stylesheet" title="IDEA" href="highlight/styles/idea.css"/>
+    <link rel="alternate stylesheet" title="Sunburst" href="highlight/styles/sunburst.css"/>
+    <link rel="alternate stylesheet" title="Zenburn" href="highlight/styles/zenburn.css"/>
+    <link rel="alternate stylesheet" title="Visual Studio" href="highlight/styles/vs.css"/>
+    <link rel="alternate stylesheet" title="Ascetic" href="highlight/styles/ascetic.css"/>
+    -->
+</head>
+      <script type="text/javascript" src="highlight/highlight.js"></script>
+    <script type="text/javascript">
+        hljs.initHighlightingOnLoad('java','xml','sql');
+    </script>
+<body>
+<h1>Разработка распределенных приложений в JAVA</h1>
+<h2>Технология Enterprise Java Beans</h2>
+<p>В предыдущих уроках мы знакомились с технологией JavaBeans, которая позволяла
+строить хорошие компонентные модели и использовать их во многих приложениях. 
+Продолжением технологии JavaBeans является технология Enterprise Java Beans. 
+Концептуальным отличием является то что Bean-ы в EJB распологаются удаленно (на других серверах)
+ от приложений которые их используют.</p>
+ <div style="text-align:center">
+ <img src="pic\EJB.gif" />
+ </div>
+ <p>Итак технология EJB позволяет нам строить распределенные приложения. 
+Теперь перейдем к процессу создания EJB компонента, но для начала рассмотри 
+основные части технологии EJB.</p>
+<ul>
+<li><strong>EJB-компонент(The Enterprise JavaBeans component)</strong> - 
+это JavaBean (написанный по всем требованиям спецификации Sun Microsystem),
+который размещен внутри EJB-контейнер, а EJB-контейнер в свою очередь
+размещен внутри EJB-сервера.
+</li>
+<li><strong>EJB-контейнер (The Enterprise JavaBeans container)</strong> - 
+это среда выплнения EJB-компонента. EJB-контейнер обеспечивает различные функции
+для обеспечения работоспособности EJB-компонента (урпавление ресурсами, настраиваемость и т.д.)
+</li>
+<li><strong>EJB-объект (EJB-object)</strong> - это объект на стороне клиента, который 
+позволяет обращатся к удаленному EJB-компоненту.
+</li>
+</ul>
+ <div style="text-align:center">
+ <img src="pic\EJB Model.gif" />
+ </div>
+   <h3>J2EE сервера</h3>
+  <p>На сегодняшний момент в мире существует большое количество серверов с поддержкой EJB-контейнеров. Наиболее популярные:</p>
+  <ul>
+  <li>JBoss</li>
+  <li>BEA Weblogic</li>
+  <li>GlassFish</li>
+  <li>OpenEJB (догрузка к Tomcat)</li>
+  <li>BEA</li>
+  </ul>
+  <p> Мы бы Вам рекомендовали использовать JBoss, он легок в установке и конфигурации. Достаточно скачать последнюю стабильную версию
+  сервера  и установит переменную окружения JBOSS_DIST
+  </p>
+ <h2>Виды Bean-ов</h2>
+ <p>Сущетсвует два вида Enterprise Bean. Это сессионые Bean-ы (session bean) и Bean-ы 
+ сущности (entity bean).
+ </p>
+ <ul>
+ <li><strong>Session bean</strong> - EJB-компонетны которые "живут" в пределах одной клиентской сессии.
+ Ярким представлением такого Bean-а служит компонент описывающей "тележку заказов" в интерент магазине.
+ "Тележка" создается когда пользователь заходит в интерент магазин и уничтожается при выходе пользователя из магазина.</li>
+ <li><strong>Entity bean</strong> - EJB-компонетны описывающий какой-то бизнес объект, к примеру один заказ в интеренет
+ магазине. Как правило этот вид компонентов описывает какие-то постоянные данные (запись из базы данных и т.д.)</li>
+  </ul>
+  <h2>Создание Enterprise Bean</h2>
+  <p>Итак, для создания Bean-ов приложение должно подключится к EJB-серверу и отправить запрос на создание
+  компонета (на стороне сервера этим занимается EJB-контейнер). Ответом на этот запрос, происходит созданием EJB-Объекта на стороне клиента, чей интерфейс совпадает
+  с интерфейсом EJB-компонента на стороне сервера. Пользователь работая с EJB-Объектом перенаправляет вызовы
+  к EJB-компоненту, из-за это часто EJB-Объекты называют прокси-объекты или объекты посредники.</p>
+  <p>Теперь перейдем непосредственно к прграммированию EJB. Для того чтобы создать Bean, обязательно
+  создать два интерфейса и один класс:</p>
+  <ul>
+  <li><strong>Интерфейс бизнес методов</strong> - это интерфейс который определяет какие бизнес методы
+  содержит Bean. Данный интерфейс обязательно должен быть наследником интерфейса EJBObject.</li>
+  <li><strong>Класс Bean </strong> - класс который содержит реализацию бизнес-методов интерфейса, для
+  созданиия <i>session bean</i> в классе необходимо реализовать интрефейс SessionBean</li>
+  <li><strong>Домашний интерфейс</strong> - который позволяет создавать Enterprise Bean-ы. Этот интерфейс
+  должен наследоватся от интерфейса EJBHome</li>
+  </ul>
+  <p style="color:Red">В примерах этого урока, мы небудем использовать какую либо среду разработки, а
+  создадим проект с помощью компилятора командной строки.</p>
+  <p>Итак структура нашего проекта имеет такой вид:</p>
+  <ul>
+  <li>com
+    <ul><li>calc
+            <ul>
+            <li>Calculator.java</li>
+            <li>CalculatorHome.java</li>
+            <li>CalculatorBean.java</li>
+            </ul>
+    </li></ul>
+    
+   <li>META-INF
+    <ul>
+    <li>ejb-jar.xml</li>
+    <li>jboss.xml</li>
+    </ul>
+    </li>
+   </ul>
+   <p>Итак создадим простой Bean (распределенный калькулятор). Интерфейс Calculator
+  описывает единственный бизнес-метод, который возвращает сумму двух целых чисел.
+  </p>
+  <pre>
+  <code>
+    package com.calc;
+
+    import javax.ejb.EJBObject;
+    import java.rmi.RemoteException;
+
+    public interface Calculator extends EJBObject {
+        public int summ(int a,int b) throws RemoteException;
+    }
+  </code>
+  </pre>
+  <p>Создаем объект, реализующий функциональность Bean-a</p>  
+  <pre>
+  <code>
+    package com.calc;
+
+    import java.rmi.RemoteException;
+    import javax.ejb.SessionBean;
+    import javax.ejb.SessionContext;
+
+    public class CalculatorBean implements SessionBean{
+        public int sum(int a,int b){
+            return a*b;
+        }
+
+        public void ejbCreate(){}
+
+        public void ejbPostCreate(){}
+
+        public void ejbRemove(){}
+
+        public void ejbActivate(){}
+
+        public void ejbPassivate(){}
+
+        public void setSessionContext(SessionContext sc){}
+}
+  </code>
+  </pre>
+  <p>Обратите внимание что класс CalculatorBean не реализует интерфейс Calculator, 
+  а в точности повторяет его методы.</p>
+  <p>Создание домашнего интерфейса</p>
+  <pre>
+  <code>
+    package com.calc;
+
+    import java.io.Serializable;
+    import java.rmi.RemoteException;
+    import javax.ejb.CreateException;
+    import javax.ejb.EJBHome;
+
+    public interface CalculatorHome extends EJBHome {
+	    Calculator create() throws RemoteException, CreateException;
+    }
+  </code>
+  </pre>
+  <p>Как и говорилось ранее домашний интерфейс наследуется от интерфейса EJBHome и
+  содержит метод для создания Enterprise Bean-a.</p>
+  <h3>Java Naming and Directory Interface (JNDI)</h3>
+  <p><strong>Java Naming and Directory Interface (JNDI) </strong> - это Java API который
+  предоставляет классы для поиска Java-объектов в директория, под директориями SUN имеет ввиду любые
+  доступные хранилища java-классов: 
+  </p>
+  <ul>
+  <li>Локальный файловые системы</li>
+  <li>Файловые системы WEB серверов</li>
+  <li>Файловые системы серверов приложений</li>
+  </ul>
+  <p>JNDI активно используется в EJB, именно с помощью JNDI клиентское приложение
+  "ищет" на сервере приложения требуемый класс.</p>
+  <p>Клиентское приложение</p>
+  <pre>
+  <code>
+    import javax.naming.InitialContext;
+    import javax.naming.Context;
+    import javax.rmi.PortableRemoteObject;
+
+    import com.calc.Calculator;
+    import com.calc.CalculatorHome;
+
+    import java.util.Properties;
+
+    public class CalculatorClient{
+        public static void main(String[] args){     
+	        
+            Properties props = new Properties();
+
+            //Настройки для JNDI
+            props.put(Context.INITIAL_CONTEXT_FACTORY, "org.jnp.interfaces.NamingContextFactory");
+            props.put(Context.PROVIDER_URL, "localhost:1099");
+            
+            try{
+                //Создаем конекст для поиска, в свойствах мы
+                //определили что поискт будет происходить по адресу "localhost:1099"
+                InitialContext jndiContext = new InitialContext(props);
+                System.out.println("Получение контекста");
+         
+                //Производим поиск EJB интерфейса
+                Object ref  = jndiContext.lookup("calc/Calculator");
+                System.out.println("Получение ссылки на Home интерфейс");
+         
+                // Получаем ссылку на его home-интерфейс
+                CalculatorHome home = (CalculatorHome)
+                PortableRemoteObject.narrow(ref, CalculatorHome.class);
+         
+                // Создаем объект Calculator с помощью home-интерфейса
+                Calculator calculator = home.create();
+                int a = calculator.summ(10,10);
+
+                System.out.println("Sum="+a);
+            }
+            catch(Exception e){
+                System.out.println(e.toString());
+            }
+        }
+    }
+  </code>
+  </pre>
+  <h3>Конфигурирование EJB объекта</h3>
+  <p>В каталоге META-INF создадим конфигурационный файл ejb-jsr.xml, который будет содержать
+  описание Bean-ов в приложении.
+  </p>
+  <pre>
+  <code>
+    &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+    &lt;ejb-jar&gt;
+        &lt;description&gt;JBoss Calculator Sample Application&lt;/description&gt;
+        &lt;display-name&gt;Calculator EJB&lt;/display-name&gt;
+        &lt;enterprise-beans&gt;
+            &lt;session&gt;
+                &lt;ejb-name&gt;Calculator&lt;/ejb-name&gt;
+                &lt;home&gt;com.calc.CalculatorHome&lt;/home&gt;
+                &lt;remote&gt;com.calc.Calculator&lt;/remote&gt;
+                &lt;ejb-class&gt;com.calc.CalculatorBean&lt;/ejb-class&gt;
+                &lt;session-type&gt;Stateless&lt;/session-type&gt;
+                &lt;transaction-type&gt;Bean&lt;/transaction-type&gt;
+            &lt;/session&gt;
+        &lt;/enterprise-beans&gt;
+    &lt;/ejb-jar>
+  </code>
+  </pre>
+  <ul>
+  <li><strong>description</strong>- описание проекта</li>
+  <li><strong>display-name</strong>- имя проекта, так как и описания является исключительно справочной информацией</li>
+  <li><strong>enterprise-beans</strong>- секция для описание Bean-ов приложения</li>
+  <li><strong>session</strong>- секция для описания одного сессионого Bean-а</li>
+  <li><strong>ejb-name</strong>- название компонента</li>
+  <li><strong>home</strong>- путь к домашнему интерфейсу Bean-a</li>
+  <li><strong>remote</strong>- путь к интерфейсу Bean-a</li>
+  <li><strong>ejb-class</strong>- непосредственно сам класс Bean-a</li>
+  <li><strong>session-type</strong>- сохраняет ли Bean состояние между вызовами в сесии ("stateless" (без хранения состояния) и "stateful" (с сохранением состояния) </li>
+  <li><strong>transaction-type</strong>- уровень поддержки транзакции</li>
+  </ul>
+  <p>Файл конфигурации jboss.xml специфичен только для сервера JBoss, и определяет путь к EJB-компоненту
+  который будет использовать JNDI. В приведенном ниже файле мы определили путь "calc/Calculator" для компонетна "Calculator".
+  </p>
+  <pre>
+  <code>
+    &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+    &lt;jboss&gt;
+        &lt;enterprise-beans&gt;
+            &lt;session&gt;
+                &lt;ejb-name&gt;Calculator&lt;/ejb-name&gt;
+                &lt;jndi-name&gt;calc/Calculator&lt;/jndi-name&gt;
+            &lt;/session&gt;
+        &lt;/enterprise-beans&gt;
+    &lt;/jboss>
+  </code>
+  </pre>
+  <p>Итак, наш проект готов к сборке, теперь нам предстоит скомпилировать исходных код, разместить компонент на сервере и
+  конечно запустить клиентское приложение.</p>
+  <ol>
+    <li>Компилирование EJB-компонента
+    <pre>
+    <code>
+        %JAVA_HOME%\bin\javac -classpath %JBOSS_DIST%\client\jboss-j2ee.jar; com\calc\*.java 
+    </code>
+    </pre>
+    </li>
+    <li>Создание JAR Архива
+    <pre>
+    <code>
+        %JAVA_HOME%\bin\jar cf Сalculator.jar com\calc\*.class META-INF\*
+    </code>
+    </pre>
+    </li>
+    <li>Развертывание EJB-компонента на сервере. Скопируйте архив Calculator.jar в каталог %JBOSS_DIST%\server\default\deploy    
+    </li>
+    <li>Скомпилируйте клиентское приложение
+    <pre>
+    <code>
+    %JAVA_HOME%\bin\javac -classpath %JBOSS_DIST%\client\jboss-j2ee.jar; CalculatorClient.java 
+    </code>
+    </pre>
+    </li>
+    <li>Стартуйте сервер
+    <pre>
+    <code>
+    %JBOSS_DIST%\bin\run.bat
+    </code>
+    </pre>
+    </li>
+    <li>Запустите клиентское приложение
+    <pre>
+    <code>
+    %JAVA_HOME%\bin\java -classpath %JBOSS_DIST%\lib\jboss-common.jar;%JBOSS_DIST%\client\jboss-j2ee.jar;%JBOSS_DIST%\client\jbossall-client.jar;%JBOSS_DIST%\client\jnp-client.jar; CalculatorClient
+    </code>
+    </pre>
+    </li>
+  </ol>
+  <h3>
+  Домашнее задание
+  </h3>  
+  <p>В предыдущем уроке Вы разрабатывали интернет магазин. В существующем проекте реализуйте карзину покупателя
+  как EJB-компонент</p>
+</body>
+</html>

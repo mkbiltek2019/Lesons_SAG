@@ -1,0 +1,591 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Урок 6. Разработка программного обеспечения на технологии Java.</title>
+   <link type="text/css" rel="Stylesheet" href="style.css"/>
+    
+    <link rel="stylesheet" title="Default" href="highlight/styles/default.css"/>
+    <!-- <link rel="alternate stylesheet" title="Dark" href="highlight/styles/dark.css"/>
+    <link rel="alternate stylesheet" title="FAR" href="highlight/styles/far.css"/>
+    <link rel="alternate stylesheet" title="IDEA" href="highlight/styles/idea.css"/>
+    <link rel="alternate stylesheet" title="Sunburst" href="highlight/styles/sunburst.css"/>
+    <link rel="alternate stylesheet" title="Zenburn" href="highlight/styles/zenburn.css"/>
+    <link rel="alternate stylesheet" title="Visual Studio" href="highlight/styles/vs.css"/>
+    <link rel="alternate stylesheet" title="Ascetic" href="highlight/styles/ascetic.css"/>
+    -->
+</head>
+      <script type="text/javascript" src="highlight/highlight.js"></script>
+    <script type="text/javascript">
+        hljs.initHighlightingOnLoad('java','xml','sql');
+    </script>
+<body>
+<h1>Разработка WEB пирложений с использованием Java</h1>
+<h1>Введение</h1>
+<p>Возможность создавать серверные компоненты, которые могут обрабатывать запросы по протоколу HTTP, 
+позволила JAVA разработчикам быстро строить  распределенные приложения. Как мы знаем для того что бы
+обработать HTTP запрос, требуется WEB-сервер а для того  что бы выполнять JAVA приложения требуется 
+JVM. Следовательно серверные компоненты Java должны "крутится" в среде, которая является и WEB-сервером
+и JVM, такая среда называется "контейнер сервлетов". Наиболее распростроненный на данный момент является 
+Apache Tomcat, о котором мы будем говорить чуть позже. Но существуют и другие : IBM WebSphere, 
+BEA WebLogic, Jigsaw и т.д.).</p>
+<h2>Установка и настройка Apache Tomcat</h2>
+<ol>
+<li>Итак, посетив сайт <a href="http://tomcat.apache.org">http://tomcat.apache.org</a>, скачайте одну из стабильный (не Beta)
+версий сервера Tomcat, на момент написание урока это версия Apache Tomcat 5.5.27. Распакуйте скачаный архив на файловую систему.</li>
+<li>Настройте переменные окружения CATALINA_HOME (должна содержать путь к корню сервера) и 
+JAVA_HOME (содержит путь к директории с JDK)</li>
+<li>Зайдите в каталог и запустите сервер файлом startup.bat (соответственно файл shutdown.bat останавливает работу сервера).
+После запуска, появляется консольное окно в котором отображается трейс загрузки компонентов сервера. При успешном запуске
+сервера окно не закрывается и в нём отображается информация о времени запуска сервера. 
+<p style="color:Red;font-weight:bold">Сервер Apache Tomcat может не стартавать если:
+<ul>
+<li>Неправельно заданны переменные окружения</li>
+<li>Скачанный релиз сервера несовместим с установленной версией JDK</li>
+<li>Порт 8080 Вашего компьютера заблокирован брандмауэром или занят другим приложением (Apache, IIS)</li>
+</ul>
+</p>
+</li>
+<li>Если сервер успешно стартанул, запустите браузер и введите в адрессную строку http://127.0.0.1:8080/. 
+Вы увидете страницу приветсвия сервера.</li>
+<li>Теперь займемся созданием собственного WEB-приложения. Зайдите в "&lt;корневой каталог сервера&gt; \ webapps". 
+Каталог "webapps" содержит WEB-приложения находящиеся на сервере. Создайте каталог javaweb (имя каталога является 
+именем Вашего WEB-приложения, далее в уроках мы будем ссылатся на него), и разместите в нём файл index.html с каким-либо
+контентом. Обратитеся по адресу http://127.0.0.1:8080/javaweb, Вам отобразится содержимое Вашей html страницы.</li>
+</ol>
+<h3>Пакеты для работы с WEB</h3>
+<ul>
+<li><strong>javax.servlet</strong> базовый обобщенный пакет сервлетов</li>
+<li><strong>javax.servlet.http</strong> специализированные расширения для web-страниц</li>
+<li><strong>javax.sevlet.jsp </strong> классы для создания JSP-страниц</li>
+<li><strong>javax.sevlet.jsp.tagetxt</strong> специализированные расширения классов JSP- страниц
+которые позволяют создавать пользовательские библиотеки тегов</li>
+</ul>
+<h2>Сервлеты</h2>
+<p>Сервлетом называется класс имеющий возможность обрабатывать HTTP запросы. 
+Класс сервлета должен реализовывать интерфейс Servlet. Интерфейс Servlet имеет описание трех методов:</p>
+
+<ul>
+<li><strong>init(ServletConfig config)</strong> вызывается при инициализации сервелта</li>
+<li><strong>destroy()</strong> вызывается перед выгрузкой сервлета</li>
+<li><strong>service(ServletRequest req, ServletResponse res)</strong> вызывается каждый раз при вызове сервлета</li>
+</ul>
+
+<p>Так же, в Java существует класс предназначены специально для ответов на HTTP запросы (get и post). Это класс 
+HttpServlet, в добавок к вышеописаным методам он имеет следующие:</p>
+<ul>
+<li><strong>void doGet (HttpServletRequest request,
+HttpServletResponse response) throws ServletException,
+IOException;</strong> метод для обработки GET запросов<br />
+<li><strong>void doPost (HttpServletRequest request,
+HttpServletResponse response) throws ServletException,
+IOException;</strong> метод для обработки POST запросов<br />
+</li>
+</ul>
+
+<p>Интерфейсы HttpServletRequest, HttpServletResponse отвечают за HTTP-запрос и HTTP-ответ соответствено. Другими словами,
+с помощью интерфейса HttpServletRequest мы можем обрабатыва запросы пользователей ( параметры, заголовки запросов и т.д.), а
+с помощью интерфейса HttpServletResponse вырабатывается HTTP-ответ пользователю ( HTML или XML код, отправка различного контента)</p>
+<p>Пример простого сервлета</p>
+<pre><code>
+    import java.io.*;
+    import javax.servlet.*;
+    import javax.servlet.http.*;
+
+    public class HelloWorld extends HttpServlet {	
+        public void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+                PrintWriter writer = response.getWriter();        
+                writer.println("Hello, World!");
+                writer.close();
+        }
+    }
+    
+</code></pre>
+<p>Методом getWriter интерфейса HttpServletResponse, мы получаем выходной поток 
+WEB сервера в который записываем отправляемую клиенту информацию. После вывода информации в обязательном порядке
+поток должен быть закрыт (метод close).</p>
+<h3>Хостинг сервлетов</h3>
+<p>Ниже приведена последовательность действий которая позволи Вам разместить на сервере свой сервлет.</p>
+<ol>
+<li>Скомпилируйте класс HelloWorld.</li>
+<li>Создайте в каталоге javaweb подкаталог "WEB-INF", в котором разместите каталог "classes".
+В каталог "classes" разместите файл HelloWorld.class.
+<p>Итак, мы с Вами разместили класс сервлета в каталоге сервера. Но этого недостаточно. Нам понадобится создать 
+конфигурационный файл (XML документ) в котором должна находится декларация сервелтов на нашем хосте.</p></li>
+<li>В каталоге WEB-INF создайте файл web.xml ( это и есть наш конфигурационный файл)
+<p>Стурктура web.xml</p>
+<pre>
+<code class="xml">
+    &lt;web-app&gt;
+      &lt;servlet&gt;
+        &lt;servlet-name&gt; ИМЯ СЕРВЛЕТА &lt;/servlet-name&gt;
+        &lt;servlet-class&gt; НАЗВАНИЕ КЛАССА РЕАЛИЗУЕЩЕГО СЕРВЛЕТ &lt;/servlet-class&gt;
+      &lt;/servlet&gt;
+      
+      &lt;servlet-mapping&gt;
+        &lt;servlet-name&gt; ИМЯ СЕРВЛЕТА &lt;/servlet-name&gt;
+        &lt;url-pattern&gt; URL СЕРВЛЕТА ОТНОСИТЕЛЬНО ИМЕНИ ХОСТА &lt;/url-pattern&gt;
+      &lt;/servlet-mapping&gt;
+    &lt;/web-app&gt;
+    
+</code>
+</pre>
+<p>Итак, наш файл конфигурации будет иметь вид</p>
+<pre>
+<code class="xml">
+    &lt;web-app&gt;
+      &lt;servlet&gt;
+        &lt;servlet-name&gt;hello&lt;/servlet-name&gt;
+        &lt;servlet-class&gt;HelloWorld&lt;/servlet-class&gt;
+      &lt;/servlet&gt;
+      
+      &lt;servlet-mapping&gt;
+        &lt;servlet-name&gt;hello&lt;/servlet-name&gt;
+        &lt;url-pattern&gt;/hello&lt;/url-pattern&gt;
+      &lt;/servlet-mapping&gt;
+    &lt;/web-app&gt;
+    
+</code>
+</pre>
+<p>Файлом конфигурации мы определили, что наше WEB-приложение содержит сервлет с логическим именем "hello",
+функциональность которого реализована в классе HelloWorld, и получить доступ к нему можно обратившись
+по URL /hello относительно адресса хоста (т.е. http://127.0.0.1:8080/javaweb/hello)</p>
+</li>
+</ol>
+<h4>Жизненный цикл сервлета</h4>
+<p>Пришло время разобратся немного больше в том как сервер обрабатывает сервлеты. Всем сервлетам присущен 
+один и тот же жизненый цикл:
+<ul>
+<li><strong>Инициализация сервлета</strong> происходит при первом обращении к нему клиентом и сопровождается
+вызовом метода init(). Сервлет загружается в память сервера и существует 
+там до момента выгрузки.</li>
+<li><strong>Обслуживание запросов</strong></li>
+<li><strong>Выгрузка сервлета</strong> происходит при выключении сервера, или при выгрузке "вручную" 
+с помощью утилиты администратора. При выгрузке, сервлет-контейнер вызывает метод destroy у сервлета.</li>
+</ul>
+Другими словами, сервлет загружается в оперативную память при первом обращении. Следовательно в коде написанном 
+ниже при пятом обращении к сервлету значение в переменной var будет равно 5-ти.
+<pre>
+<code>
+    import java.io.*;
+    import javax.servlet.*;
+    import javax.servlet.http.*;
+
+    public class LifeCycleServletTest extends HttpServlet {
+	    int var = 1;
+
+	    public void doGet(HttpServletRequest request, HttpServletResponse response)
+		    throws ServletException, IOException{
+			    PrintWriter writer = response.getWriter();
+			    writer.println("Var = "+var++);
+			    writer.close();
+	    }
+    }
+
+</code>
+</pre>
+</p>
+<h4>Обработка параметров HTTP запроса</h4>
+<p>Как ранее говорилось интерфейс HttpServletRequest описывает HTTP-запрос. Для того что бы получить параметр
+HTTP запроса нужно использовать метод getParameter(String name), который в качестве аргумента принимает 
+название параметра запроса. Если такого параметра несуществуют то возвращается null.</p>
+<p>Рассмотрим пример WEB приложения, реализуещее функциональность калькулятора. На странице index.html
+будет находится форма для ввода значений. А сервлет Calculator будет вычислять сумму значениий, отправленых ему 
+POST запросом.</p>
+<p>index.html. Содержит форму с полями</p>
+<pre><code>
+&lt;html&gt;
+&lt;body&gt;
+&lt;form method=post action="http://127.0.0.1:8080/MyFirstProject/calc"&gt;
+Input A:&lt;input type="text" name="paramA"/&gt;
+Input B:&lt;input type="text" name="paramB"/&gt;
+&lt;input type="submit" /&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Сервлет Calculator, который вычисляет значение. Обратите внимание что метод отправки данных
+из формы - POST. Следовательно обрабатывать запрос к сервлету мы будем в методе doPost</p>
+<pre><code>
+    import java.io.*;
+    import javax.servlet.*;
+    import javax.servlet.http.*;
+
+    public class Calculator extends HttpServlet {
+        public void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+                int a = Integer.parseInt(request.getParameter("paramA"));
+                int b = Integer.parseInt(request.getParameter("paramB"));
+
+                PrintWriter writer = response.getWriter();
+                writer.println("Post"+a+"+"+b+"="+(a+b));
+                writer.close();
+        }
+    }    
+</code>
+</pre>
+<h3>Организация сессионной работы в сервлетах</h3>
+<p>За объект сесии в сервлетах отвечает интерфейс HttpSession, который можно получить 
+из интерфейса HttpServletRequest, вызовом метода getSession(). Метод имеет две перегрузки,
+одна из них не принимает параметра а вторая в качестве параметра принимает переменную булевого типа данных.
+Указав значени true параметру, мы указываем среде выполнения создать объект-сессии если он не существует.
+Вызов метода с параметром false идентичен вызову метода без параметра, который возвращает объект сесии если 
+он существует, в противном случае null.</p>
+<p>Рассмотрим пример сервлета, который производит аутентефикацию 
+и записывает информацию о аутентефицированном пользователе в сессионную переменную.</p>
+<pre>
+<code>
+    import java.io.*;
+    import javax.servlet.*;
+    import javax.servlet.http.*;
+
+    public class AuthServlet extends HttpServlet {
+    	
+	    public void doPost(HttpServletRequest request, HttpServletResponse response)
+	    throws ServletException, IOException{
+			    String userName = request.getParameter("userName").toString();
+			    String userPwd = request.getParameter("userPwd").toString();
+    			
+			    User user = Authenteficate(userName,userPwd);
+    			
+			    if (user!=null){
+				    HttpSession session = request.getSession(true);
+    				
+				    //Записываем в сессию эуземпляр класса User
+				    //который определят текущего пользователя в системе
+		            session.setAttribute("currentUser", user);
+			    }	
+    			
+			    //Код отображающий ошибку аутентефикации
+	    }
+
+	    //Метод обращается к базе данных и проверяет имя пользователя и пароль
+	    private User Authenteficate(String userName, String userPwd) {
+		    User user = null;	
+		    //Код обращения к базе данных
+		    return user;
+	    }
+    }
+
+</code>
+</pre>
+<p>Следовательно экземляр класса User, который описывает аутентефицированного пользователя
+можно получить обратившись к сессионной переменной.</p>
+<pre>
+<code>
+    //Получаем объект сесии
+    HttpSession session = request.getSession();
+
+    //Получаем экземпляр класса User из сессионной переменной
+    User user = (User) session.getAttribute("currentUser");
+		        
+</code>
+</pre>
+<h3>Организация работы с файлами предпочтения (cookies)</h3>
+<p><strong>Cookie (файлы предпочтения) -</strong> это даныые хранящиеся на стороне клиента. Для получения доступа к ним из
+сервлета достаточно вызвать метод getCookies() интерфейса HttpServletRequest. Который возвращает массив экземляров 
+класса Cookie. Собстенно класс Cookie и описывает одну запись в файле предпочтения</p>
+<pre>
+<code>
+    Cookie cookies[] = request.getCookies();
+
+</code>
+</pre>
+<p>Методы класса Cookie</p>
+<table border="1">
+<tr><th>Метод</th><th>Описание</th></tr>
+<tr><td>void setValue(String newValue)</td><td>Устанавливает значение у cookie</td></tr>
+<tr><td>String getValue()</td><td>Возвращает значение cookie</td></tr>
+<tr><td>String getName()</td><td>Возвращает имя cookie</td></tr>
+<tr><td>vois setMaxAge(int age)</td><td>Устанавливает время чкркз которое cookie удаляются(в секундах).
+по умолчанию, cookie являются сессионными, т.е. удаляются после закрытия окна браузера.
+</td></tr>
+</table>
+<p>Для добавления cookie, используется метод addCookie интерфейса HttpServletResponse.
+</p>
+<pre>
+<code>
+    Cookie cookie = new Cookie( &lt;название cookie&gt;, &lt;значение cookie&gt; );
+    response.addCookie(cookie);
+    
+</code>
+</pre>
+<p>Немного модифицируем сервлет аутентефикации из предыдущего примера. Дадим пользователю
+возможность сохранять имя пользователя в браузере.</p>
+<p>Сервлет отображающий страницу аутентефикации</p>
+<pre>
+<code class="java">
+    import java.io.IOException;
+    import java.io.PrintWriter;
+    import javax.servlet.ServletException;
+    import javax.servlet.http.*;
+
+    public class StartServlet extends HttpServlet {
+        public static String COOKIE_USER_NAME = "userName";
+    	
+        public void doGet(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+            PrintWriter writer = response.getWriter();
+            String userName = "";
+    		
+            Cookie cookies[] =  request.getCookies();
+    		
+            if (cookies !=  null){
+                for (int i=0;i&lt;cookies.length;i++){
+				    if (cookies[i].getName().equalsIgnoreCase(COOKIE_USER_NAME)){
+					    userName = cookies[i].getValue();
+					    break;
+                    }
+                }
+            }
+    		
+            writer.println("&lt;html&gt;&lt;body&gt;&lt;form action='auth' method='POST'&gt;&lt;table&gt;");
+            writer.println("&lt;tr&gt;&lt;td&gt;User Name&lt;/td&gt;&lt;td&gt;&lt;input type='text' name='userName' value='"+userName+"'/&gt;&lt;/td&gt;&lt;/tr&gt;");
+            writer.println("&lt;tr&gt;&lt;td&gt;Password&lt;/td&gt;&lt;td&gt;&lt;input type='password' name='userPwd'/&gt;&lt;/td&gt;&lt;/tr&gt;");
+            writer.println("&lt;tr&gt;&lt;td&gt;Save me&lt;/td&gt;&lt;td&gt;&lt;input type='checkbox' name='savePwd'/&gt;&lt;/td&gt;&lt;/tr&gt;");
+            writer.println("&lt;tr&gt;&lt;td&gt;&nbsp;&lt;/td&gt;&lt;td&gt;&lt;input type='submit'/&gt;&lt;/td&gt;&lt;/tr&gt;");
+            writer.println("&lt;/form&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;");
+            writer.close();
+            }
+    }
+    
+</code>
+</pre>
+<pre>
+<code>
+    import java.io.*;
+    import javax.servlet.*;
+    import javax.servlet.http.*;
+
+    public class AuthServlet extends HttpServlet {
+	    public void doPost(HttpServletRequest request, HttpServletResponse response)
+	    throws ServletException, IOException{
+			    String userName = request.getParameter("userName").toString();
+			    String userPwd = request.getParameter("userPwd").toString();
+    			
+			    if (request.getParameter("savePwd") != null)
+			    {
+				    Cookie cookie = new Cookie(StartServlet.COOKIE_USER_NAME,userName);
+				    cookie.setMaxAge(3600);
+				    response.addCookie(cookie);
+			    }
+    			
+			    User user = Authenteficate(userName,userPwd);
+    			
+			    if (user!=null){
+				    HttpSession session = request.getSession(true);
+		            session.setAttribute("currentUser", user);
+			    }	
+			    else{
+			        PrintWriter writer = request.getWriter();
+			        writer.println("Ошибка аутентефикации");
+			        writer.close();
+			    }
+	    }
+
+        private User Authenteficate(String userName, String userPwd) {
+            User user = null;	
+            //Обращение к базе данных для аутентефикации пользователя
+            return user;
+        }
+    }
+    
+</code>
+</pre>
+<h2>Java Server Page (JSP)</h2>
+<p>Java Server Pages (JSP) так же как и сервлеты
+ является технологией Java 2 Platform Enterprise Edition (J2EE) для создания приложений, 
+ генерирующих динамическое web-содержимое - HTML, XHTML и XML. </p>
+ <p>Динамическое содержимое страницы получается путем внедрения JSP директив в код HTML разметки.</p>
+ <p>Существует набор директив, каждая из которых отвечает за определенную функциональность:</p>
+ <table>
+ <tr>   <td>&lt;%= ...... %&gt;</td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;Вывод значений</td>
+ </tr>
+ <tr><td>&lt;% ...... %&gt;</td><td>&nbsp;&nbsp;&nbsp;&nbsp;Java код</td></tr>
+ <tr><td>&lt;%! ...... %&gt;</td><td>&nbsp;&nbsp;&nbsp;&nbsp;Декларация кода. Объявление методов.</td></tr>
+ </table>
+ <p>Простой пример JSP страницы.</p>
+  <pre><code>
+ &lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;Hello World&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;h1&gt;Hello World&lt;/h1&gt;
+  Сегодня : &lt;%= new java.util.Date().toString() %&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+ <h3>Хостинг JSP файлов</h3>
+ <p>Хостинг JSP файлов на порядок легче чем хостинг сервлетов. Создав JSP файл Вам достаточно разместить его 
+ в каталог на сервере. К примеру, после того как разместите файл HelloWorld.jsp в каталоге javaweb, 
+ Вы сможете обратится к нему по адрессу  http://127.0.0.1:8080/javaweb/HelloWorld.jsp</p>
+ <p>Во время обращения к JSP странице, она регенерируется не во что инное как в класс сервлета, который потом выпоняется
+ контейнером сервлетов. Следовательно смело можно сказать что JSP является надстройкой над технологией сервлетов. Следовательно
+ в коде JSP страницы нам доступны экземпляры интерфейсов HttpServletResponse и HttpServletRequest, а работа с сессиями и cookie
+ ничем не отличается от работы с ними в сервлетах.</p>
+ <h3>Java Beans</h3>
+ <p><strong>Java Beans</strong> - классы написаные на языке Java по определенным правилам, выполняющее некоторые 
+ функциональные действия под управлением пользовательского интерфейса. Спецификация Sun Microsystem определяет что 
+ Java приложение должно состоять из набора таких классов, а реализация класса должна соответствовать 
+ следующим требованиям:
+ <ul>
+ <li>Класс должен иметь открытый конструктор по умолчанию. Наличие такого конструктора позволяет различным инструментам
+ создавать экземпляр класса</li>
+ <li>Доступ к полям класса должен осуществлятся по средствам методов get\set</li>
+ <li>Класс должен быть сериализируемый. Что позволяет сохранять и востанавливать состояния класса в различных системах.</li>
+ <li>Класс не должен содержать методов обработки событий</li>
+ </ul>
+</p>
+<p>Пример простого beans</p>
+<pre>
+<code>  
+    // Класс реализовывает интерфейс java.io.Serializable
+    // Который позволяет сериализировать экземпляр класса
+    public class PersonBean implements java.io.Serializable {
+        private String name;
+        private int age;
+
+        //Открытый конструктор по умолчанию
+        public PersonBean() {
+        }
+
+        // get\set методы для доступа к поялм
+        public String getName() {
+            return this.name;
+        }
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public int getAge() {
+            return (this.age);
+        }
+        public void setAge(int age) {
+            this.age = age;
+        }
+    }
+</code>
+</pre>
+<p>В качестве примера создадим галерею, Bean будет предоставлять JSP странице пути к файлам, а страница в 
+свою очередь будет "отображать" файл</p>
+
+<pre>
+<code>
+package com.gallery;
+
+public class GalleryBean {
+
+	String[] urls = {"Autumn Leaves.jpg","Creek.jpg","Desert Landscape.jpg",
+						"Dock.jpg","Forest Flowers.jpg","Forest.jpg",
+						"Frangipani Flowers.jpg","Garden.jpg","Green Sea Turtle.jpg",
+						"Humpback Whale.jpg","Oryx Antelope.jpg","Toco Toucan.jpg",
+						"Tree.jpg","Waterfall.jpg","Winter Leaves.jpg"};
+	int currentUrl;
+	
+	public GalleryBean(){
+		moveFirst();
+	}	
+	
+	public String getNextUrl(){
+		String str = urls[currentUrl];
+		currentUrl++;
+		if (currentUrl == urls.length)
+			currentUrl = 0;
+		
+		return str;
+	}
+	
+	public void moveFirst(){
+		currentUrl = 0;
+	}
+}
+</code>
+</pre>
+Подключается Bean к JSP странице тегом &lt;jsp:useBean&gt;
+<table border="1">
+<tr>
+<td colspan="2">Аттрибуты тега jsp:useBean</td>
+</tr>
+<tr>
+<td>id</td>
+<td>Идентфикатор Bean-а на JSP странице</td>
+</tr>
+<tr>
+<td>class</td>
+<td>Полный путь к классу Bean-a (с учетом всех пакетов)</td>
+</tr>
+<tr>
+<td valign=top>scope</td>
+<td>Область видимости Bean-a, может принимать значения :
+<ul>
+<li><strong>session</strong> - Bean является сессионый, т.е. экземпляр класса Bean-a создается один раз при первом обращении
+в сесии к Bean-у</li>
+<li><strong>request</strong> - Bean создается на момент запроса к странице.</li>
+</ul>
+</td>
+</tr>
+</table>
+<p>Код JSP страницы, к которой подключен Bean. При запросе к странице у Bean-а вызывается метод getNextUrl(),
+который возвращает путь к следующему изображению в галереи.
+</p>
+<pre>
+<code>
+&lt;jsp:useBean id="gallery" class="com.gallery.GalleryBean" scope="session" /&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;img src="&lt;%= gallery.getNextUrl() %&gt;" /&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+<p style="color:Red">Обратите внимание что наш Bean находится в пакете com.gallery. 
+Следовательно на хосте он должен быть размещен по пути <strong>WEB_INF\classes\com\gallery\GalleryBean.class</strong></p>
+<h3>
+Немного больше о JSP тегах
+</h3>
+<p>Для облегчения разработки приложений с использованием JSP, были разработаны ряд тегов.</p>
+
+<table border="1">
+<tr>
+<td>Тэг</td><td>Описание</td>
+</tr>
+<tr>
+<td>jsp:include</td><td>Позволяет включать содержимое в страницу из других страниц
+</td>
+</tr>
+<tr>
+<td>jsp:forward</td><td>Позволяет делать переход с JSP страницы на другой ресурс</td>
+</tr>
+<tr>
+<td>jsp:param</td><td>Позволяет добавлять параметры при переходе с JSP страницы</td>
+</tr>
+</table>
+
+<p>Пример использование jsp:incule, аттрибутом page задается ресурс, аттрибут flush по спецификации 
+JSP 1.1 следуте устанавливать в true. Код описанный ниже, делает включение  html разметки из файла
+menu.html в JSP страницу.</p>
+<pre>
+<code>
+&lt;jsp:include page="menu.html" flush="true"/&gt;
+</code>
+</pre>
+
+<p>Пример использование jsp:forward. Перейдем на страницу Colors.jsp а качестве параметров передадим
+два значения background и foreground, значения передаются тегом jsp:param
+</p>
+<pre>
+<code>
+&lt;jsp:forward page="Colors.jsp"&gt;
+    &lt;jsp:param name="background" value="Red" /&gt;
+    &lt;jsp:param name="foreground" value="Yellow" /&gt;
+&lt;/jsp:forward&gt;
+</code>
+</pre>
+<h3>Домашнее задание</h3>
+<p>Реализуйте интернет-магазин. Пользователи интернет магазина, имееют возможность 
+просматривать каталог товаров, делать заказы, для оплаты заказов используют расчтеные карты.
+Проверку правильности номера расчетной карты реализуйте с помощью JAVA - Beans.
+</p>
+</body>
+</html>

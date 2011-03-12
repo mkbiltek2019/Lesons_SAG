@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{821F1C4D-2375-48F9-9E8F-7BAA9D954310}"
+	ProjectSection(SolutionItems) = preProject
+		Lesson1.htm = Lesson1.htm
+		Lesson2.htm = Lesson2.htm
+		Lesson3.htm = Lesson3.htm
+		Lesson4.htm = Lesson4.htm
+		Lesson5.htm = Lesson5.htm
+		Lesson6.htm = Lesson6.htm
+		Lesson7.htm = Lesson7.htm
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{C7699D21-08EB-496A-B666-E066C8009884}"
+	ProjectSection(SolutionItems) = preProject
+		style.css = style.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pic", "pic", "{56662B6D-FC29-4680-A155-1E35396F2CE5}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\Konstantin.Demishev\Desktop\EJB.gif = C:\Users\Konstantin.Demishev\Desktop\EJB.gif
+		pic\pic1.jpg = pic\pic1.jpg
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,823 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Урок 4. Разработка программного обеспечения на технологии Java.</title>
+       <link type="text/css" rel="Stylesheet" href="style.css"/>
+    
+    <link rel="stylesheet" title="Default" href="highlight/styles/default.css"/>
+    <!-- <link rel="alternate stylesheet" title="Dark" href="highlight/styles/dark.css"/>
+    <link rel="alternate stylesheet" title="FAR" href="highlight/styles/far.css"/>
+    <link rel="alternate stylesheet" title="IDEA" href="highlight/styles/idea.css"/>
+    <link rel="alternate stylesheet" title="Sunburst" href="highlight/styles/sunburst.css"/>
+    <link rel="alternate stylesheet" title="Zenburn" href="highlight/styles/zenburn.css"/>
+    <link rel="alternate stylesheet" title="Visual Studio" href="highlight/styles/vs.css"/>
+    <link rel="alternate stylesheet" title="Ascetic" href="highlight/styles/ascetic.css"/>
+    -->
+</head>
+      <script type="text/javascript" src="highlight/highlight.js"></script>
+    <script type="text/javascript">
+        hljs.initHighlightingOnLoad('java','xml','sql');
+    </script>
+<body>
+<h1>Создание пользовательского графического интерфейса.</h1>
+<p>Библиотека классов JAVA содержит большой набор классов, для построения
+пользовательских интерфейсов. Существует два набора классов, это классы библиотеки AWT (Abstract Window Toolkit) 
+находящиеся в пакете java.awt. И классы библиотеки Swing, которые размещены в пакете javax.swing. 
+Swing предоставляет более гибкие интерфейсные компоненты, чем 
+более ранняя библиотека AWT. В отличии от AWT, компоненты Swing разработаны для одинаковой 
+кросс-платформенной работы, в то время как компоненты AWT повторяют интерфейс исполняемой 
+платформы без изменений. Компоненты Swing поддерживают специфические динамически подключаемые виды 
+и поведения (англ. plugable look-and-feel), благодаря которому возможна адаптация к графическому 
+интерфейсу платформы (т. е. к компоненту можно динамически подключить другой, специфический для 
+операционной системы, в том числе и созданный программистом вид и поведение). Так как
+библиотека классов Swing является более новой чем AWT, то на ней мы и остановимся. Для того что бы
+не путатся в классах, разработчики библиотеки Swing снабдили их специальных префиксом J&lt;Название класса&gt;
+(к примеру, название класса который описывает кнопку в AWT - Button, в Swing - JButton)
+</p>
+<h2>Динамически подключаемые виды (Look and Feel)</h2>
+<p>
+Библиотека классов Swing имеет набор подключаемых видов которые позволяют изменять
+отображения элементов управления в приложении. В библиотеку включено три вида:
+<ul>
+<li>MetalLookAndFeel</li>
+<li>WindowsLookAndFeel</li>
+<li>MotifLookAndFeel</li>
+</ul>
+<p>Пример метода который менять вид отображения в зависимости от параметра:</p>
+<pre><code>
+public void setLookAndFeel(int type)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;String laf= "";
+&nbsp;&nbsp;&nbsp;&nbsp;switch(type){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 1: laf = "com.sun.java.swing.plaf.windows.WindowsLookAndFeel";
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 2: laf = "javax.swing.plaf.metal.MetalLookAndFeel";
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 3: laf = "com.sun.java.swing.plaf.motif.MotifLookAndFeel";
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;try {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//Изменяем менеджер
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UIManager.setLookAndFeel(laf);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//Обновляем пользовательский интерфейс
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SwingUtilities.updateComponentTreeUI(this);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;catch(Exception e){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace();
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}
+</code></pre>
+</p>
+<h2>Элементы управления</h2>
+<p>Все классы библиотеки Swing являются наследниками соответствующих классов библиотеки AWT.
+Следовательно можно смело заявить что Swing является оболочкой для библиотеки AWT.
+Базовым классом для всех элементов управления в библиотеке Swing является класс JComponent который в свою очередь 
+на следуется от класса Component из библиотеки AWT. Класс  Component содержит 
+набор методов для управления отображением элемента управления.
+</p>
+<table border="1">
+<tr><th>Метод</th><th>Описание</th></tr>
+<tr><td>setBackground(Color c)</td><td>Устанавливает цвет фона элемента управления</td></tr>
+<tr><td>setBounds(int x, int y, int width, int height)</td><td>Устанавливает координаты левого верхнего угла элемента управления (x,y) и его размеры (width,height)</td></tr>
+<tr><td>setBounds(Rectangle r)</td><td>Перегрузка предыдущего метода принимающая параметр типа Rectangle (описывает прямоугольную область)</td></tr>
+<tr><td>setCursor(Cursor cursor)</td><td>Устанавливает вид курсора на элементе управления</td></tr>
+<tr><td>setFocusable(boolean focusable) </td><td>Устанавливает фокус на элемент управления</td></tr>
+<tr><td>setForeground(Color c)</td><td>Устанавливает цвет шрифта у элемента управления</td></tr>
+<tr><td>setLocation(int x, int y) </td><td>Устанавливает координаты левого верхнего угла элемента управления</td></tr>
+<tr><td>setLocation(Point p) </td><td>Перегрузка предыдущего метода принимающая параметр типа Point (описывает точку на плоскости)</td></tr>
+<tr><td>setSize(int width, int height) </td><td>Устанавливает размер элемента управления</td></tr> 
+<tr><td>setSize(Dimension d) </td><td>Перегрузка предыдущего метода принимающая параметр типа Dimension (описывает размер)</td></tr>
+
+<tr><td>Color getBackground()</td><td>Возвращает цвет фона элемента управления</td></tr>
+<tr><td>Rectangle getBounds()  </td><td>Возвращает область которую занимает элемент управления</td></tr>
+<tr><td> Cursor getCursor() </td><td>Возвращает вид курсора над элементом управления</td></tr>
+<tr><td>Color getForeground()  </td><td>Возвращает цвет шрифта элемента управления</td></tr>
+<tr><td>int getHeight()  </td><td>Возвращает высоту элемента управления</td></tr>
+<tr><td>Point getLocation()  </td><td>Возвращает координаты левого верхнего угла элемента управления</td></tr>
+<tr><td> Container getParent() </td><td>Возвращает родительский элемент управления</td></tr>
+<tr><td> Dimension getSize()  </td><td>Возвращает размеры элемента управления</td></tr>
+<tr><td>int getWidth()  </td><td>Возвращает ширину элемента управления</td></tr>
+<tr><td>int getX() </td><td>Возвращает координату Х левого верхнего угла элемента управления</td></tr>
+<tr><td>int getY()  </td><td>Возвращает координату Y левого верхнего угла элемента управления</td></tr>
+</table>
+<h2>Менеджер слоев</h2>
+<p>Класс JPanel пакета Swing представляет собой в чистом виде контейнер, предназначенный для размещения 
+внутри себя других элементов, в том числе и других панелей. Все, что помещено в панель, можно рассматривать 
+как группу никогда не расстающихся друзей. Если панель переместить или удалить, то та же участь постигнет 
+и всех ее жителей. Панели - очень удобное средство для организации сложных GUI-интерфейсов, содержащих 
+большое количество управляющих элементов, которые можно объединять в функциональные группы и потом 
+размещать в удобном месте приложения.</p>
+<p>По умолчанию сами панели визуально никак не проявляют себя на экране, кроме цвета непрозрачного 
+по умолчанию фона (background). Однако к ним можно добавить видимую рамку (с заголовком или без). 
+Класс JPanel имеет метод paint(), который позволяет рисовать в поле панели все, что пожелает пользователь. 
+Панель можно сделать прозрачной, вызвав ее метод setOpaque(false). 
+Для добавления компонентов в панель используется метод add().</p>
+<p>С панелями (и другими контейнерами) тесно связано использование специальных классов, 
+так называемых менеджеров расположения (layout managers), которые позволяют автоматически определять 
+местоположение и размеры компонентов внутри панели. Существует несколько типов менеджеров расположения, 
+каждый из которых растягивает (сжимает) и раскидывает добавляемые в панель элементы по определенному правилу. 
+В Java используются следующие типы менеджеров расположения:</p>
+<ul>
+    <li><strong>BorderLayout</strong> - предназначен для расположения 5-ти элементов, располагающихся, 
+    соответственно, в центре панели и по 4-м сторонам света (запад, восток, север, юг). 
+    Часто используется для приложений, выводящих основную информацию в центре, а боковые 
+    полосы использующих для различного рода кнопочек или строк состояния. Размеры каждой из этих 
+    5-ти частей задаются автоматически пропорционально размеру панели.</li>
+    <li><strong>FlowLayout</strong> - самый примитивный менеджер, который располагает, последовательно добавляемые 
+    элементы друг за другом в одну строчку с переносом на следующую, если уже не хватает места. 
+    Размеры элементов автоматически растягиваются так, чтобы заполнить всю панель.</li>
+    <li><strong>GridLayout</strong> - решеточный менеджер, располагающий элементы в виде таблицы с 
+    заданным пользователем числом строк и столбцов. Размеры всех ячеек при этом одинаковые, а размер 
+    добавляемых элементов подгоняется под размер ячейки.</li>
+    <li><strong>GridBagLayout</strong> - более "умный" решеточный менеджер, позволяющий, задавать индивидуальные свойства 
+    каждой ячейки (размер, поля), а также объединять несколько ячеек для расположения какого-нибудь большого элемента.</li>
+    <li><strong>CardLayout</strong> - менеджер, который располагает элементы в виде колоды карт, при этом виден 
+    на экране только последний. Размер каждого элемента растягивается на всю панель. Для последовательного 
+    просмотра (открытия) каждого элемента используются его методы next() и previous().</li>
+    <li><strong>BoxLayout</strong> - аналог FlowLayout, но располагающий элементы в направлении задаваемом 
+    пользователем (X-горизонталь или Y-вертикаль). В отличие от GridLayout, здесь каждый элемент 
+    может занимать ячейку различного размера. Этот менеджер используется в основном для специального 
+    контейнера типа Box, имеющегося только в Swing (а все предыдущие имеются также и в AWT).</li> 
+</ul>
+<p>В Swing введено еще несколько специальных типов контейнеров, аналогичных JPanel, 
+но предназначенных для узкоспециальных целей.</p>
+<ul>
+    <li><strong>JScrollPane</strong> - контейнерный класс, который применяет автоматически горизонтальную 
+    и/или вертикальную прокрутку (scrolling) единственного дочернего компонента. 
+    Пользователь может устанавливать специфическое поведение полос прокрутки. Для этого контейнера используется 
+    специальный менеджер расположения ScrollPaneLayout.</li>
+    <li><strong>JViewport</strong> - контейнерный класс, представляющий собой некий "глазок видеокамеры", через 
+    который можно просматривать содержащуюся в контейнере информацию. Также имеет средства прокрутки и специфический 
+    менеджер расположения ViewportLayout. </li>
+</ul>
+<p>По умолчанию для всякой вновь создаваемой панели устанавливается менеджер FlowLayout, 
+но пользователь может назначить любой другой с помощью метода панели setLayout(). 
+Существуют ситуации, когда использование менеджеров расположения нежелательно, например, 
+когда требуется задать конкретный размер элемента и его конкретное положение внутри панели. 
+Для этого следует применить детерминированный подход и отменить менеджер путем вызова setLayout(null), 
+затем использовать методы setSize() и setLocation() для каждого из добавляемых компонентов. При этом 
+смешивать в рамках одной панели детерминированный подход с использованием менеджеров расположения нельзя, 
+нужно использовать какой-либо один способ. </p>
+<h2>Создание окон</h2>
+<p>Класс JFrame - представляет функциональность окна, в котором происходит строительство пользовательского
+интерфейса. Основные методы класса JFrame</p>
+<table border="1">
+<tr><th>Метод</th><th>Описание</th></tr>
+<tr><td>setVisible(boolean isShow)</td><td>Показывает или прячет окно</td></tr>
+<tr><td>setSize(int width,int height)</td><td>Устанавливает размеры окна</td></tr>
+<tr><td valign=top>setDefaultCloseOperation(int operation)</td><td>Определяет какая операция должна произойти 
+при закрытии окна. Может принимать значения:
+<ul>
+<li><strong>DO_NOTHING_ON_CLOSE</strong> - никаких действий не происходит</li>
+<li><strong>HIDE_ON_CLOSE</strong> - окно прячется</li>
+<li><strong>DISPOSE_ON_CLOSE</strong> - окно прячется и уничтожается</li>
+<li><strong>EXIT_ON_CLOSE</strong> - при закрытии окна приложение заканчивает свою работу</li>
+</ul>
+</td></tr>
+</table>
+<h2>Простые элементы управления</h2>
+<table border="1">
+<tr><th>Класс</th><th>Элемент управления</th></tr>
+<tr><td>JButton</td><td>Кнопка</td></tr>
+<tr><td>JLabel</td><td>Метка</td></tr>
+<tr><td valign=top>JTextField</td><td>Простое текстовое поле. Установить текст в поле можно с помощью метода setText(), а для
+считывания введеного текста используется метод getText() </td></tr>
+<tr><td>JCheckBox</td><td>Элемент выбора. Установить/снять "флажок" можно с помощью метода setSelected, а получить состояние элемента управления с
+помощью метода isSelected</td></tr>
+<tr><td>JRadioButton</td><td>Элемент выбора. Группировать которые можно с помощью класса ButtonGroup</td></tr>
+</table>
+
+<p>Пример создания окна с элементами управления</p>
+<pre><code>
+import java.awt.*;
+import javax.swing.*;
+
+public class MainForm extends JFrame {
+
+&nbsp;&nbsp;&nbsp;&nbsp;public MainForm(){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//Отключение менеджера слоев. 			
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//Позиционировать элементы на форме, будем самостоятельно 			
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.setLayout(null);
+		
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.setSize(new Dimension(270,100));
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//Создание метки
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JLabel label = new JLabel("Введите имя");
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label.setLocation(10,10);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label.setSize(80,10);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//Создание текстового поля		
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JTextField field = new JTextField(30);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;field.setLocation(100,10);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;field.setSize(130,20);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//Создание кнопки				
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JButton button = new JButton("OK");
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button.setLocation(130,30);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button.setSize(100, 20);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//Добавление елементов управления на форму				
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.add(label);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.add(button);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.add(field);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+	
+&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {
+		
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MainForm form = new MainForm();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form.setTitle("Заголовок окна");
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form.setVisible(true);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}
+</code></pre>
+<p>Результат работы программы</p>
+<img src="pic/simple.png" />
+<h2>Обработка событий</h2>
+<p>Каждый раз, когда пользователь нажимает на клавиши или делает какие-либо манипуляции с мышью, происходит событие. 
+Любой объект может быть оповещен об этом событии. Для этого надо реализовать соответствующий интерфейс 
+к объекту и зарегистрироваться как "слушатель события" (event listener). Swing компоненты могут генерировать 
+много видов событий. Вот некоторые из них:</p>
+<table border="1">
+<tr><th>Действие, генерирующее событие</th><th>Интерфейс</th></tr>
+<tr><td>Пользователь нажимает на кнопку, нажимает клавишу Enter после ввода текста или выбирает пункт меню.</td><td>ActionListener</td></tr>
+<tr><td>Пользователь закрывает окно</td><td>WindowListener</td></tr>
+<tr><td>Пользователь нажимает кнопки мыши, когда курсор находится поверх объекта.</td><td>MouseListener</td></tr>
+<tr><td>Пользователь двигает курсор на компоненте</td><td>MouseMotionListener</td></tr>
+<tr><td>Компонент становится видимым</td><td>ComponentListener</td></tr>
+<tr><td>Компонент получает фокус ввода от клавиатуры</td><td>FocusListener</td></tr>
+<tr><td>Изменяется выбор в таблице или списке</td><td>ListSelectionListener</td></tr>
+</table>
+
+<pre><code>
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class MainForm extends JFrame {
+&nbsp;&nbsp;&nbsp;&nbsp;private JTextField field;
+	
+&nbsp;&nbsp;&nbsp;&nbsp;//Класс реализующий интерфейс ActionListener
+&nbsp;&nbsp;&nbsp;&nbsp;//для обработки события нажатия на кнопку
+&nbsp;&nbsp;&nbsp;&nbsp;private class ButtonAdapter implements ActionListener{
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void actionPerformed(ActionEvent arg) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JOptionPane.showMessageDialog(null,field.getText());
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;public MainForm(){
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//Отключение менеджера слоев. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//Позиционировать элементы на форме, будем самостоятельно 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.setLayout(null);
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.setSize(new Dimension(270,100));
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//Создание метки
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JLabel label = new JLabel("Введите имя");
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label.setLocation(10,10);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label.setSize(80,10);
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//Создание текстового поля
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;field = new JTextField(30);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;field.setLocation(100,10);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;field.setSize(130,20);
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//Создание кнопки
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JButton button = new JButton("OK");
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button.setLocation(130,30);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button.setSize(100, 20);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//Подписка на событие нажатия
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button.addActionListener(new ButtonAdapter());
+        
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//Добавление элементов управления на форму
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.add(label);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.add(button);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.add(field);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+
+&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MainForm form = new MainForm();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form.setTitle("Заголовок окна");
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form.setVisible(true);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+} 
+</code></pre>   
+<h2>Модель-Представление-Контроллер</h2>
+<p>Шаблон проектирования Модель-Представление-Контроллер (Model-View-Controller) (MVC) описывает
+разделение приложения или часть приложения на три составляющие:
+<ul>
+<li>Модель - это объект, хранящий набор данных для работы с приложением</li>
+<li>Представление - это визуальное отображение модели</li>
+<li>Контроллер - это программный код который воздействует на модель</li>
+</ul>
+Каждый компонент библиотеки Swing реализован по шаблону MVC. Если роль этого шаблона, 
+при использовании простых элементов управления, невелика, то приемущество использование его 
+при работе со сложными элементами управления, очевидна. У нас появляется возможность 
+создавать собственные 
+модели хранения для данных которые отображаются элементом управления, 
+это позволяет отделать данные от представления.
+Каждый класс который описывает элемент управления
+в библиотеки Swing имеет метод getModel() который возвращает текущую модель для элемента управления.
+Как правило, модели содержат методы для работы с данными отображаемыми элементом 
+управления (добавление, редактирование, удаление и прочие). Если неопределить модель для 
+элемента управления, то она создается автоматически. Библиотека классов Swing содержит набор
+моделей по умолчанию для каждого элемента управления, так называемые Default-модели.</p>
+<h2>Списочные элементы управления</h2>
+<p>В библиотеки Swing присутствуют два класса которые позволяют создавать списочные элементы управления, 
+JComboBox - описывает функциональность выпадающего списка и класс JList - представляет обычный список.
+</p>
+<p>Пример создания проcтого списка, отображающий города</p>
+<pre><code>
+class CityComboBoxModel implements ComboBoxModel{
+    ArrayList city = new ArrayList();
+    int selItem = 0;
+		
+    CityComboBoxModel(){
+        city.add("New Youk");
+        city.add("Dallas");
+        city.add("Sietle");			
+    }
+	
+    public Object getSelectedItem() {
+        return city.get(selItem);
+    }
+
+    public void setSelectedItem(Object arg0) {
+        selItem = city.indexOf(arg0);			
+    }
+
+    public void addListDataListener(ListDataListener arg0) {
+	}
+
+	public Object getElementAt(int arg0) {
+        return city.get(arg0);
+    }
+
+    public int getSize() {
+        return city.size();
+    }
+
+    public void removeListDataListener(ListDataListener arg0) {
+    }		
+}
+</code></pre>    
+<pre>
+<code>
+    JComboBox box = new JComboBox();
+    box.setModel(new CityComboBoxModel());
+    this.add(box);
+    
+</code>
+</pre>                                                                                                                                                                                                                                         
+<table border="1">
+<tr>
+<th>Методы класса JList</th><th>Описание</th>
+</tr>
+<tr><td>setSelectionMode(int mode)</td>
+<td>Устанавливает вид выбора элементов списка. Может принимать значение:
+<ul>
+<li><strong>ListSelectionModel.SINGLE_SELECTION</strong> - позволяет выбирать только 
+один элемент из списка.</li>
+<li><strong>ListSelectionModel.SINGLE_INTERVAL_SELECTION</strong> - позвояет выбирать несколько
+элементов из списка расположеных рядом.</li>
+<li><strong>ListSelectionModel.MULTIPLE_INTERVAL_SELECTION</strong> -позвояет выбирать несколько
+элементов из списка несмотря на их расположение.</li>
+</ul>
+</td></tr>
+<tr><td>setSelectedIndex(int index)</td><td>Устанавливает выделение на элемент с 
+указанным индексом</td></tr>
+<tr><td>setSelectedIndices(int[] indices)</td><td>Устанавливает выделение на 
+элементы с указаными индексами</td></tr>
+<tr><td>int getSelectedIndex()</td><td>Возврщает индекс выбраного элемета</td></tr>
+<tr><td>int[] getSelectedIndices()</td><td>Возвращает индексы выбраных элементов</td></tr>
+<tr><td>Object getSelectedValue()</td><td>Возвращает выбраный элемент как объект *</td></tr>
+<tr><td>Object[] getSelectedValues()</td><td>Возвращает выбраные элементы как объекты *</td></tr>
+</table>
+<pre><code>
+* - обратите внимание на то, что метод модели addElement, в качестве параметра принимает объект.
+Затем у этого объекта вызывается метод toString и полученая строка отображается
+как элемент списка. Такая модель программирования очень удобна тем что в модели элемента
+управления можно хранить бизнес объекты, остается только правильно переопределить метод toString()
+</code></pre>
+<p>Как говорилось ранее класс JComboBox представляет выпадающий список. В отличии от
+обыкновенного списка, у выпадающего можно выбрать только один элемент. Так же, у нас есть
+возможность создавать выпадающие списки с редактируемым текстовм полем.</p>
+<table border="1">
+<tr><th>Методы класса JComboBox</th><th>Описание</th></tr>
+<tr><td>int getSelectedIndex()</td><td>Возврщает индекс выбраного элемета</td></tr>
+<tr><td>setSelectedIndex(int index)</td><td>Устанавливает выделение на элемент с 
+указанным индексом</td></tr>
+<tr><td>Object getSelectedItem()</td><td>Возвращает выбраный элемент как объект</td></tr>
+<tr><td>setEditable(boolean isEdit)</td><td>Разрешает \ Запрещает редактировать текст в тектовом поле. 
+Если тектовое поле выпадающего списка доступно для редактирования, то метод getSelectedIndex 
+возвращает -1. A метод getSelectedItem возвращает строку с текстом, введеным в текстовое поле.</td></tr>
+</table>
+<h2>Элемент управления "Ползунок"</h2>
+<p>Ползунок позволяет пользователю выбрать некоторое число из 
+диапазона доступных значений м наглядно представив этот диапазон. Против 
+наглядности у ползунка есть один недостаток он занимает достаточно много места на форме.</p>
+<p>В библиотеки классов Swing ползунок описывается классом JSlider и один из конструкторов ползунка имеет вид:</p>
+<pre><code>
+JSlider(int orientation, //ориентация ползунка (HORIZONTAL или VERTICAL)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int min,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//минимальное значение на ползунке
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int max,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//максимальное значение на ползунке
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int value)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//текущее значение на ползунке
+</code></pre>
+<table border="1">
+<tr><th>Методы класса JSlider</th><th>Описание</th></tr>
+<tr><td>setOrientation(int orient)</td><td>Устанавливает ориентацию ползунка</td></tr>
+<tr><td>int getOrientation()</td><td>Возвращает ориентацию ползунка</td></tr>
+<tr><td>setValue(int value)</td><td>Устанавливает текущее значение на ползунке</td></tr>
+<tr><td>int getValue()</td><td>Возвращает значение установленое на ползунке</td></tr>
+<tr><td>setMinimum(int min)</td><td>Устанавливает минимальное значение на ползунке</td></tr>
+<tr><td>int getMinimun()</td><td>Возвращает минимальное значение на ползунке</td></tr>
+<tr><td>setMaximum(int max)</td><td>Устанавливает максимальное значение на ползунке</td></tr>
+<tr><td>int getMaximum()</td><td>Возвращает максимальное значение на ползунке</td></tr>
+<tr><td>setMajorTickSpacing(int num)</td><td>Устанавливает расстояние, через которое будут выводится большие деления</td></tr>
+<tr><td>int getMajorTickSpacing()</td><td>Возвращает растояние, через которое выводятся большие деления</td></tr>
+<tr><td>setMinorTickSpacing(int num)</td><td>Устанавливает расстояние, через которое будут выводится маленькие деления</td></tr>
+<tr><td>int getMinorTickSpacing()</td><td>Возвращает растояние, через которое выводятся маленькие деления</td></tr>
+<tr><td>setPaintTicks(boolean isPaint)</td><td>Включает \ Отключает отрисовку делений</td></tr>
+<tr><td>boolean getPaintTicks()</td><td>Возвращает состояние отрисовки делений</td></tr>
+<tr><td>setPaintLabels(boolean isPaint)</td><td>Включает \ Отключает отрисовку значений под большими деления</td></tr>
+<tr><td>boolean getPaintLabels()</td><td>Возвращает состояние отрисовки значений</td></tr>
+<tr><td>setSnapToTicks(boolean isSnap)</td><td>Включает \ Отключает залипание ползунка у делений</td></tr>
+<tr><td>boolean getSnapToTicks()</td><td>Возвращает состояние залипаний</td></tr>
+</table>
+<h2>Элемент управления "Состояние прогресса"</h2>
+<p>Индикатор прогресса в библиотеки Swing описывается классом JProgressBar. Один из конструкторов класса
+принимает два целочисленых параметра, которые являются минимальным и максимальный значение 
+на индикаторе. Использую метод setValue Вы можете установить индикатор в определенное состояния,
+а получить текущее состояние можно с помощью метода getValue.</p>
+<p>Приер демонстрирующий работу "ползунка" и progress bar-a. Изменяя положение
+ползунка, изменяется значение в progress bar-e. (Обратите внимание на добавления слушателя
+к ползунку, в этом месте мы применили так называемые анонимные классы, в частности создали 
+экземпляр класса, который реализовывает интерфейс ChangeListener)</p>
+<pre><code>
+public class MainForm <span class ="light">extends JFrame {
+&nbsp;&nbsp;&nbsp;&nbsp;JProgressBar bar;
+	
+&nbsp;&nbsp;&nbsp;&nbsp;public MainForm(){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();
+        
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.setLayout(null);
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bar = new JProgressBar(50,150);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bar.setBounds(110,160,200,20);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.add(bar);
+        
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JSlider slider = new JSlider(JSlider.HORIZONTAL, 50, 150, 50); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;slider.setMajorTickSpacing(20); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;slider.setMinorTickSpacing(5); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;slider.setPaintTicks(true); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;slider.setPaintLabels(true); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;slider.setSnapToTicks(true);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;slider.setBounds(110,200,200,45);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;slider.addChangeListener(new ChangeListener(){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void stateChanged(ChangeEvent arg0) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bar.setValue(((JSlider)arg0.getSource()).getValue());	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}}); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.add(slider);        
+&nbsp;&nbsp;&nbsp;&nbsp;}
+
+&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(Math.random());
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MainForm form = new MainForm();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form.setVisible(true);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+} 
+</code></pre>
+<h2>Расширеные текстовые поля</h2>
+<h3>Поля для ввода пароля</h3>
+<p>Класс JPasswordField представляет поля для ввода пароля. С помощью методов
+getText и setText можно управлять текстом который находится в поле.</p>
+<h2>Разделение окна (сплиттер)</h2>
+<p>Класс JSplitPane представляет контейнер состоящий из двух панелей с разделителем.
+Конструкто класса принимает значение JSplitPane.VERTICAL_SPLIT для вертикального
+разделения или JSplitPane.HORIZONTAL_SPLIT (значение по умолчачнию) для горизонтального
+разделения. Методы setLeftComponent и setRightComponent устанавливают элемент
+управления в левую ( верхнюю для вертикального разделения) и правую (нижнюю) панель.
+С помощью метода setOneTouchExpandable, на раздилитель можно добавить
+дополнительные кнопки для быстрого сварачивания\разворачивания панелей.
+</p>
+<p>Ниже описан пример, который создает разделитель, в левой части
+которго находится древовидный элемент управления а в правой табица</p>
+<pre><code>
+JSplitPane split = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
+split.setLeftComponent(new JTree());
+split.setRightComponent(newJTable());
+split.setOneTouchExpandable(true);
+        
+this.add(split);
+</code></pre>
+<h2>Закладки</h2>
+<p>Панель с закладками представляется классом JTabbedPane. Один из конструкторов класса, принимает 
+параметр который указывает направление закладок.</p>
+<table border="1">
+<tr><th>Значение параметра</th><th>Описание</th></tr>
+<tr><td>JTabbedPane.TOP</td><td>Закладки располагаются вверху элемента управления</td></tr>
+<tr><td>JTabbedPane.BOTTOM</td><td>Закладки располагаются внизу элемента управления</td></tr>
+<tr><td>JTabbedPane.LEFT</td><td>Закладки располагаются с лево от  элемента управления</td></tr>
+<tr><td>JTabbedPane.RIGHT</td><td>Закладки располагаются с право от элемента управления</td></tr>
+</table>
+<p>Метод add(String tabCaption,Component cmp) - добавляет новую закладку к элементу управления.
+Первым параметром передается название закладки, вторым - компонет отображаемый на закладке, как
+правило это контейнерный компонент, содержащие содержимое закладки.
+</p>
+<pre><code>
+JPanel panel1 = new JPanel();
+JPanel panel2 = new JPanel();
+
+panel1.add(new JButton("Кнопка на panel 1 в tab 1"));
+panel2.add(new JButton("Button на panel 2 в tab 2"));
+
+JTabbedPane jtp = new JTabbedPane();
+
+jtp.add("Tab 1", panel1);
+jtp.add("Tab 2", panel2);
+
+jtp.setBounds(300,300,200,200);
+
+this.add(jtp);
+</code></pre>
+<h2>Панель управления</h2>
+<p>Панель управления описывается классом JToolBar, конструктор класса принимает в качестве параметра 
+название панели инструментов. Метод add добавляет в панель инструментов элементы управления. 
+С помощью метода addSeparator, в панель инструментов можно поместить разделитель, с помощью которого, 
+как правило, разделяют группы элементов на функциональные блоки.</p>
+<pre><code>
+JToolBar tool = new JToolBar("My tool bar");
+tool.add(new JButton("Add Record"));
+tool.addSeparator();
+tool.add(new JButton("Delete Record"));
+
+this.add(tool,BorderLayout.PAGE_START);
+</code></pre>
+<h2>Меню</h2>
+<p>Главное меню формы описывается классом JMenuBar, каждый пункт главного меню классом 
+JMenu, а элемент меню классом JMenuItem. JRadioButtonMenuItem создает пункт меню в виде элемента выбора.</p>
+<pre><code>
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.event.*;
+
+public class MainForm extends JFrame {
+
+public MainForm(){
+&nbsp;&nbsp;&nbsp;&nbsp;super();
+&nbsp;&nbsp;&nbsp;&nbsp;//Создание элементов управления
+
+&nbsp;&nbsp;&nbsp;&nbsp;//Создание меню
+&nbsp;&nbsp;&nbsp;&nbsp;JMenuBar menuBar = new JMenuBar();
+
+&nbsp;&nbsp;&nbsp;&nbsp;JMenu file = new JMenu("Файл");
+&nbsp;&nbsp;&nbsp;&nbsp;JMenu view = new JMenu("Вид");
+
+&nbsp;&nbsp;&nbsp;&nbsp;JMenuItem itemClose = new JMenuItem("Выход");
+&nbsp;&nbsp;&nbsp;&nbsp;itemClose.addActionListener(new ActionListener(){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void actionPerformed(ActionEvent arg0) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.exit(0);				
+&nbsp;&nbsp;&nbsp;&nbsp;}});
+
+&nbsp;&nbsp;&nbsp;&nbsp;file.add(itemClose);
+
+&nbsp;&nbsp;&nbsp;&nbsp;JMenuItem item1 = new JRadioButtonMenuItem("Windows Look & Feel");
+&nbsp;&nbsp;&nbsp;&nbsp;JMenuItem item2 = new JRadioButtonMenuItem("Metal Look & Feel");
+&nbsp;&nbsp;&nbsp;&nbsp;JMenuItem item3 = new JRadioButtonMenuItem("Motif Look & Feel");
+
+&nbsp;&nbsp;&nbsp;&nbsp;view.add(item1);
+&nbsp;&nbsp;&nbsp;&nbsp;view.add(item2);
+&nbsp;&nbsp;&nbsp;&nbsp;view.add(item3);
+
+&nbsp;&nbsp;&nbsp;&nbsp;ButtonGroup bg = new ButtonGroup();
+&nbsp;&nbsp;&nbsp;&nbsp;bg.add(item1);
+&nbsp;&nbsp;&nbsp;&nbsp;bg.add(item2);
+&nbsp;&nbsp;&nbsp;&nbsp;bg.add(item3);
+
+&nbsp;&nbsp;&nbsp;&nbsp;item1.addActionListener(new ActionListener(){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void actionPerformed(ActionEvent arg0) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setLookAndFeel(1);			
+&nbsp;&nbsp;&nbsp;&nbsp;}});
+
+&nbsp;&nbsp;&nbsp;&nbsp;item2.addActionListener(new ActionListener(){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void actionPerformed(ActionEvent arg0) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setLookAndFeel(2);			
+&nbsp;&nbsp;&nbsp;&nbsp;}});
+
+&nbsp;&nbsp;&nbsp;&nbsp;item3.addActionListener(new ActionListener(){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void actionPerformed(ActionEvent arg0) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setLookAndFeel(3);			
+&nbsp;&nbsp;&nbsp;&nbsp;}});
+
+&nbsp;&nbsp;&nbsp;&nbsp;menuBar.add(file);
+&nbsp;&nbsp;&nbsp;&nbsp;menuBar.add(view);
+&nbsp;&nbsp;&nbsp;&nbsp;//Устанавливаем меню на форму
+&nbsp;&nbsp;&nbsp;&nbsp;this.setJMenuBar(menuBar);       
+}
+
+public void setLookAndFeel(int type)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;String laf= "";
+&nbsp;&nbsp;&nbsp;&nbsp;switch(type){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 1: laf = "com.sun.java.swing.plaf.windows.WindowsLookAndFeel";
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 2: laf = "javax.swing.plaf.metal.MetalLookAndFeel";
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 3: laf = "com.sun.java.swing.plaf.motif.MotifLookAndFeel";
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;try {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//Изменяем менеджер
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UIManager.setLookAndFeel(laf);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//Обновляем пользовательский интерфейс
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SwingUtilities.updateComponentTreeUI(this);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;catch(Exception e){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace();
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}
+
+public static void main(String[] args) {
+&nbsp;&nbsp;&nbsp;&nbsp;MainForm form = new MainForm();
+&nbsp;&nbsp;&nbsp;&nbsp;form.setVisible(true);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+} 
+</code></pre>
+<h3>Контекстное меню</h3>
+<p>Контекстное меню описывается классом JPopupMenu. Для отображение меню используется метод
+show(Component с,int x,int y). В качестве первого параметра передается компонент на котором 
+отображается меню, второй и третий параметр задают координаты левого верхнего угла меню относительно компонента.
+</p>
+<h2>Древовидный элемент управления</h2>
+<p>Древовмдный элемент управления описывается классом JTree. Модель по умолчанию реализуется
+классом DefaultTreeModel, а узел дерева классом DefaultMutableTreeNode.</p>
+<p>Пример создания дерева</p>
+<pre><code>
+DefaultMutableTreeNode goodsNode = new DefaultMutableTreeNode("Товары");
+DefaultMutableTreeNode laptopNode = new DefaultMutableTreeNode("Ноутбуки");
+DefaultMutableTreeNode padNode = new DefaultMutableTreeNode("КПК");
+DefaultMutableTreeNode mobileNode = new DefaultMutableTreeNode("Мобильные телефоны");
+
+DefaultTreeModel model = new DefaultTreeModel(goodsNode);
+
+JTree tree = new JTree(model);
+goodsNode.add(laptopNode);
+goodsNode.add(padNode);
+goodsNode.add(mobileNode); 
+
+tree.addMouseListener(new MouseListener(){
+&nbsp;&nbsp;&nbsp;&nbsp;public void mouseClicked(MouseEvent me) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JPopupMenu menu = new JPopupMenu();
+				
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JMenuItem itemCollapse = new JMenuItem("Свернуть");
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JMenuItem itemExpand = new JMenuItem("Развернуть");
+				
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;itemCollapse.addActionListener(new ActionListener(){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void actionPerformed(ActionEvent ae) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tree.collapseRow(0);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}});
+				
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;itemExpand.addActionListener(new ActionListener(){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void actionPerformed(ActionEvent ae) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tree.expandRow(0);							
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}});
+				
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;menu.add(itemCollapse);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;menu.add(itemExpand);
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;menu.show(tree,me.getX(),me.getY());
+&nbsp;&nbsp;&nbsp;&nbsp;}
+
+&nbsp;&nbsp;&nbsp;&nbsp;public void mouseEntered(MouseEvent me) {
+&nbsp;&nbsp;&nbsp;&nbsp;}
+
+&nbsp;&nbsp;&nbsp;&nbsp;public void mouseExited(MouseEvent me) {
+&nbsp;&nbsp;&nbsp;&nbsp;}
+
+&nbsp;&nbsp;&nbsp;&nbsp;public void mousePressed(MouseEvent me) {
+&nbsp;&nbsp;&nbsp;&nbsp;}
+
+&nbsp;&nbsp;&nbsp;&nbsp;public void mouseReleased(MouseEvent me) {
+}});
+</code></pre>
+<h2>Табличный элемент управления</h2>
+<p>Табличный элемент управления описывается классом JTable. Базовым классом для моделей таблицы
+является класс AbstractTableModel.</p>
+<p>Пример показывающий работу с таблицей.</p>
+<pre>
+<code>
+public class UsersTableModel extends AbstractTableModel {
+
+	class User{
+		int age;
+		String name;
+		String post;
+		User(String name,int age,String post){
+			this.name = name;
+			this.age = age;
+			this.post = post;
+		}
+	}
+	Vector&lt;String&gt; columns = new Vector&lt;String&gt;();
+	Vector&lt;User&gt; items = new Vector&lt;User&gt;();
+	
+	public UsersTableModel(){
+		columns.add("Name");
+		columns.add("Age");
+		columns.add("Post");
+		
+		items.add(new User("James Liplou",25,"Manager"));
+		items.add(new User("Oystein Skjesol",45,"Administrator"));
+		items.add(new User("Tom Johns",35,"Manager"));
+		
+		fireTableRowsInserted(0, 1);
+	}
+	
+	public void addTableModelListener(TableModelListener arg0) {
+	}
+
+	public Class getColumnClass(int c) {
+		 return getValueAt(0, c).getClass();
+	}
+
+	public int getColumnCount() {
+		return columns.size();
+	}
+
+	public String getColumnName(int index) {
+		return columns.get(index);
+	}
+
+	public int getRowCount() {
+		return items.size();
+	}
+
+	public Object getValueAt(int arg0, int arg1) {
+		User user = items.get(arg0);
+		Object res = null;
+		if(arg1==0)
+			res = user.name;
+		
+		if(arg1==1)
+			res = user.age;
+		
+		if(arg1==2)
+			res = user.post;
+
+		return res;
+	}
+
+	public boolean isCellEditable(int arg0, int arg1) {
+		return true;
+	}
+
+	public void removeTableModelListener(TableModelListener arg0) {
+	}
+
+	public void setValueAt(Object arg0, int arg1, int arg2) {
+		User user = items.get(arg1); 
+		if(arg2==0)
+			user.name= arg0.toString();
+		
+		if(arg2==1)
+			user.age= Integer.parseInt(arg0.toString());
+		
+		if(arg2==2)
+			user.post= arg0.toString();
+	}
+}
+</code>
+</pre>
+<pre>
+<code>
+// Метод класса наследника JFrame, 
+// для создание таблицы на форме
+public void createUserTable(){
+	JTable table = new JTable();
+	table.setModel(new UsersTableModel());
+	table.setSelectionMode(DefaultListSelectionModel.SINGLE_SELECTION);
+	this.setLayout(new BorderLayout());
+	this.add(table.getTableHeader(), BorderLayout.PAGE_START);
+	this.add(table, BorderLayout.CENTER);
+}
+</code>
+</pre>
+
+<p>Обратите внимание что заголок таблицы можно размещать отдельно от самой таблицы. Что 
+позволяет достаточно гибко строить пользовательский интерфейс.</p>
+
+<h2>Диалоги</h2>
+<h3>Диалог выбора файла</h3>
+<p>Класс JFileChooser представляет диалог для выбора файла. Методы showOpenDialog и showSaveDialog 
+открывают диалог для открытия и сохранения файла соответственно, а метод showDialog открывает диалог для
+других действий. Метод getSelectedFile() возвращает выбранный файл в ввиде 
+экземпляра класса File. Установить директорию которая будет отображатся по умолчанию в диалоге,
+можно с помощью конструктора класса, передав в качестве параметра путь к директории. Или
+используя метод setCurrentDirectory().</p>
+<h3>Диалог выбора цвета</h3>
+<p>Класс JColorChooser представляет диалог для выбора цвета.
+</p></body>
+</html>

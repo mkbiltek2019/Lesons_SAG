@@ -1,0 +1,1307 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+        <title>Урок 2. Разработка программного обеспечения на технологии Java.</title>
+    <link type="text/css" rel="Stylesheet" href="style.css"/>
+</head>
+<body>
+<h1>Объектно-ориентированное программирование в JAVA</h1>
+<p>Темы рассматриваемые в уроке:</p>
+<ul>
+<li>Наследование</li>
+<li>Полиморфизм</li>
+<li>Абстрактные классы</li>
+<li>Интерфейсы</li>
+<li>Утилиты</li>
+<li>Настраиваемые типы</li>
+</ul>
+<hr/>
+<p>Объектно-ориентированное программи́рование (ООП) — парадигма программирования,
+основной особеностью которой, является то что предметная область в разрабатываемом
+приложении описывается объектами, которые взаимодействуют между собой. Из предыдущего
+урока Вы знаете что объектом называется экземпляр класса.
+Так же Вам известно что в основе ООП, лежат три понятия:
+</p>
+<ul>
+<li>Наследование (Inheritance) </li>
+<li>Инкапсуляция (Encapsulation) </li>
+<li>Полиморфизм (Polymorphism) </li>
+</ul>
+<h2>Наследование</h2>
+<p>Наследованием называется возможность создавать  класс путем расширения 
+функциональности другого класса, с сохранением свойств и методов 
+класса-предка (прародителя, иногда его называют суперклассом) .
+Набор классов, связанных отношением наследования, называют иерархией. </p>
+<p>Для того что бы расширить функциональность класса используется ключевое слово extends.</p>
+<div class="code">
+<span class=light>class</span> A <span class=light>extends</span> B<br />
+{<br />
+<span class=comment>//определение класса а</span><br />
+}<br />
+</div>
+<p>Из курса по С++ Вы знаете что доступ к полям и методам 
+базового класса зависит от спецификаторов доступа. Такая же ситуация и в Java:</p>
+<table border="1">
+<tr><th>Спецификатор доступа в суперклассе</th><th>Доступ</th></tr>
+<tr><td>private</td><td>Доступ к полям и методам со спецификатором private, класс наследник не имеет</td></tr>
+<tr><td>protected</td><td>Поля и методы со спецификатором protected доступны только в методах класса наследника</td></tr>
+<tr><td>public</td><td>Доступ к полям и методом со спецификатором public можно получить через объект производного класса</td></tr>
+</table>
+<p>
+Со ссылкой <span class="light">this</span> мы уже знакомились, а вот что бы <b>явно</b> указать обращение к методу 
+или полю суперкласса необходимо использовать ключевое слово <span class="light">super</span>.
+</p>
+<p>
+Рассмотри пример наследования, реализуем класс студент и класс аспирант, аспирант 
+отличается от студента наличием некой научной работы.
+</p>
+<div class="code">
+<span class="comment">
+/*<br />
+ * Класс описывает студента<br />
+ */<br />
+ </span>
+<span class="light">public class</span> Student {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//ФИО студента</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">private</span> String fullName;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//Возраст студента</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">private int</span> age;<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public</span> String getFullName() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">return</span> fullName;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public void</span> setFullName(String fullName) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.fullName = fullName;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public int</span> getAge() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">return</span> age;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public void</span> setAge(<span class="light">int</span> age) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.age = age;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public </span> Student(String fullName, int age) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.fullName = fullName;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.age = age;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+<span class="comment">
+&nbsp;&nbsp;&nbsp;&nbsp;/*<br />
+&nbsp;&nbsp;&nbsp;&nbsp;* Возвращает строковое представление<br />
+&nbsp;&nbsp;&nbsp;&nbsp;* класса Student<br />
+&nbsp;&nbsp;&nbsp;&nbsp;*/</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public </span> String toString(){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">return</span> fullName+" "+age;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}
+</div><br />
+<div class="code">
+<span class="comment">
+/*<br />
+ * Класс описывает аспиранта,<br />
+ * Аспиарнтом - называеться студент<br />
+ * выполняющий некоторую научную работу<br />
+ */</span><br />
+<span class="light">public class</span> Aspirant <span class="light">extends</span> Student {<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=comment>//Название научной работы</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>private</span> String workName;<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public</span> Aspirant(String fullName, <span class=light>int</span> age, String workName) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=comment>//Вызов конструктора супер класса</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>super</span>(fullName, age);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>this</span>.workName = workName;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public</span> String getWorkName() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>return</span> workName;<br />
+	}<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public void</span> setWorkName(String workName) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>this</span>.workName = workName;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public</span> String toString(){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>return super</span>.toString() <span class=comment> //Вызов метода суперкласса</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+" "+workName;		<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}<br />
+</div><br />
+<div class="code">
+
+Student student = <span class="light">new</span> Student ("Иванов Константин Евгеньевич",22);<br />
+System.out.println(student.toString());<br /><br />
+		
+Aspirant apsirant = <span class="light">new</span> Aspirant("Сидоров Константин Сергеевич ",28,"Исследование объектно-реляционных баз данных");<br />
+System.out.println(apsirant.toString());<br /><br />
+		
+<span class="comment">//Пример использования позднего связывания в JAVA</span><br />
+Student student1 = <span class="light">new</span> Aspirant ("Петров Сергей Сергеевич",22,"Исследование объектно-реляционных баз данных");<br /><br />
+
+System.out.println(student1.toString());<br /><br />
+
+<span class="comment">
+// Происходит преобразование переменной типа <br />
+// Student к строке. Неявным образом вызывается <br />
+// метод toString</span><br />
+System.out.println(student); 
+</div>
+<p>Вызов конструкторов в иерархии происходит начиная с базового класса и заканчивая последним классом наследником.</p>
+<p>Немного больше о наследовании. Дело в том, что  все классы неявным образом наследуются 
+от класса Object по мере изучения нашего курса, мы будем более детально рассматривать его методы.</p>
+
+<table border="1">
+<tr><td>Object clone()</td><td>Создает копию (клон) объекта</td></tr>
+<tr><td>boolean equals(Object obj)</td><td>Сравнивает два объекта, и возвращает истину, если они равны</td></tr>
+<tr><td>void finalize()</td><td>Вызывается средой выполнения при уничтожении объекта</td></tr>
+<tr><td>int hashCode()</td><td>Представляет объект целым числом. Может использовать для идентификации объектов в приложении.</td></tr>
+<tr><td>String toString()</td><td>Возвращает строковое представление объекта. Так же метод вызывается при преобразовании переменной объектного типа данных к строке</td></tr>
+</table>
+<p>В отличии от языка C++ в Java нет возможности реализовывать множественое наследование. Но класс, помимо супер 
+класса, может реализовывать неограниченный набор интерфейсов (интерфейсы рассматриваются позже)</p>
+<h2>Полиморфизм</h2>
+<p>Полиморфизмом называется взаимозаменяемость объектов имеющих одинаковый набор методов. Достигается полиморфизм
+созданием метода в классе наследнике, сигнатура  которого совпадает с методом в супер классе.
+Замете что в строчке System.out.println(student1.toString()); вызвался метод  toString 
+класса  Aspirant, а не Student. Произошло это из-за переопределения метода toString(). 
+Другими словами, вызывается метод объекта который находится в памяти, а не объекта ссылки.
+</p>
+<h2>Финализация</h2>
+<p>Финализация – термин присущий только Java программам. Финализацией называют 
+запрет на дальнейшие использования элемента языка. Ранее мы сталкивались с финализацией 
+в теме «константы», добавляя ключевое слово final к переменной (полю классы),  
+мы запрещали изменять её значение. Другими словами мы её финализировали. Так же 
+ключевое слово final можно применять к методам суперкласса, что приводит к запрету на 
+переопределение это метода в классе наследнике, а использование ключевое слово final 
+совместно с объявлением класса, запрещает наследовать класс.</p>
+
+<p>Пример. Создадим иерархию наследования из двух классов, и финализируем некоторые методы.</p>
+
+<div class="code">
+<span class=light>public class</span> First {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>void</span> method1(){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("class First method1");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=comment>// Указывая ключевое слово final,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;// мы запрещаем переопределение этого <br />
+&nbsp;&nbsp;&nbsp;&nbsp;// метода в классе наследнике</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>final void</span> method2(){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("class First method2");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}<br />
+<span class=comment> 
+// Обозначая класс финализацией мы <br />
+// запрещаем его использование в качестве<br />
+// суперкласса<br />
+</span>
+
+<span class=light>final public class</span> Second <span class=light>extends</span> First {<br />
+<span class=comment> 	
+&nbsp;&nbsp;&nbsp;&nbsp;// Мы можем переопределить только method1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;// т.к. он не объявлен в суперклассе как финальный</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>void</span> method1() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("class Second method1");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+</div>
+<h2>Статические поля и методы</h2>
+<p>Объявляя  поле класса, мы декларируем то, что каждый экземпляр класса будет иметь 
+такое поле. Но, у нас есть возможность создавать поля и методы, которые будут являться общими для 
+всех экземпляров класса. Такие поля называются статическими. Создается такое поле с 
+помощью спецификатора <span class="light">static</span> .</p>
+<p>К примеру, создадим класс, 
+который будет считать количество своих экземпляров. В классе сделаем статическую 
+переменную (счетчик) count  и будем инкрементировать её в конструкторе класса и 
+декрементировать в деструкторе. Так же создадим статический метод, который будет 
+возвращать значение переменной счетчика.</p>
+<div class="code">
+<span class=light> public class</span> Ball {<br /><br />
+
+<span class=comment>
+&nbsp;&nbsp;&nbsp;&nbsp;/*<br />
+&nbsp;&nbsp;&nbsp;&nbsp;* Сатическое поле для хранения кол-ва<br />
+&nbsp;&nbsp;&nbsp;&nbsp;* существующих экземпляров класса  <br />
+&nbsp;&nbsp;&nbsp;&nbsp;*/<br />
+</span>	
+
+&nbsp;&nbsp;&nbsp;&nbsp; <span class="light">private static int</span> count =0;<br /><br />
+<span class=comment>	
+&nbsp;&nbsp;&nbsp;&nbsp;/*<br />
+&nbsp;&nbsp;&nbsp;&nbsp;* Метод возвращает кол-ва<br />
+&nbsp;&nbsp;&nbsp;&nbsp;* существующих экземпляров класса<br />
+&nbsp;&nbsp;&nbsp;&nbsp;*/</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">static int</span> getCountInstance(){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="light">return</span> count;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+		
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">private</span> String color = "none";<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public</span> Ball(String color){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.color = color;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//Увеличиваем значение счетчика</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count++;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">protected void</span> finalize()  {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("ASD");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//Уменьшаем значение счетчика</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count--;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}<br />
+</div>
+<h2>Абстрактны классы</h2>
+<p>Иногда, при проектировании объектной модели, создается ситуация при которой 
+мы четко можем выделить некий суперкласс, но нет возможности реализовать некоторые 
+методы в нём, т.к. реализация этих методов в классах наследниках существенно различается. 
+Ярким примером является иерархия транспортных средств. Мы можем выделить некий суперкласс 
+«Транспортное средство» и два класса наследника «Самолет» и «Пароход». Каждому транспортному 
+средству присущий метод «Движение», но движение самолета и парохода различно по 
+своей природе ( а следовательно и в нашей реализации объектной модели так же должно быть 
+различно).  Следовательно, рождается два вопроса:</p>
+<ul>
+<li>Что  должен содержать в своем теле метод «Движение» класса «Транспортное средство» ? </li>
+<li>Нужна ли возможность создавать класс «Транспортное средство» в нашем приложении имеющий 
+неполную функциональность (частично описывающий объект предметной области)  ?</li>
+</ul>
+<p>На первый вопрос можно смело ответить «незнаем». По поводу второго, ответ однозначно «нет». 
+Ситуация сложилась патовая, с одной стороны нам бы не помешал суперкласс, 
+общий для нашей объектной модели, а с другой стороны класс который частично реализовывает 
+функциональность нам однозначно не нужен.
+Решить нашу проблему помогут абстрактные классы.</p>
+<p>Абстрактным называется класс, содержащий хотя бы один абстрактный метод.</p>
+<p>Абстрактным называется метод, не содержащий реализации, другими словами 
+метод в классе существует (тип возвращаемого значение, имя, параметры) а его тело отсутствует.</p>
+<p>
+Следовательно, если мы имеем метод без реализации то создать экземпляр такого класса не 
+можем, т.к. вызвать такой метод невозможно.
+</p>
+<p>Рассмотрим пример. Иерархия классов описывающих фигуры. Базовым классом для всех фигур является класс Shape, 
+который содержит поле color, хранящее цвет фигуры. Так же в классе определен метод draw(), который является
+абстрактным, т.к. когда говорим о фигуре мы понятия не имеем как она выглядит. Классы наслденики Rectangle(Прямоугольник) 
+и Circle(Круг) переопределяют абстрактный метод draw, в котором собственно и реализовывают  отрисовку круга и прямоугольника.</p>
+<div class="code">
+<span class="light">public abstract class</span> Shape{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">protected</span> String color = "red";<br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public abstract void</span> draw();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public</span> Shape(String color){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.color = color;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}<br />
+</div><br />
+<div class="code">
+<span class="light">public class</span> Circle <span class="light">extends</span> Shape{<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">protected int</span> x,y,r;<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public</span> Circle(<span class="light">int</span> x, <span class="light">int</span> y, <span class="light">int</span> r,String color) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">super</span>(color);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.x = x;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.y = y;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.r = r;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;} <br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public void</span> draw() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Drawing circle(x="+x+", y="+y+", radius="+r+", color="+super.color+")");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}<br />
+</div><br />
+<div class="code">
+<span class="light">public class</span> Rectangle <span class="light">extends</span> Shape{<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">protected int</span> x,y,x1,y1;<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public</span> Rectangle(<span class="light">int</span> x, <span class="light">int</span> y, <span class="light">int</span> x1,<span class="light">int</span> y1,String color) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">super</span>(color);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.x = x;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.y = y;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.x1 = x1;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.y1 = y1;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;} <br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public void</span> draw() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Drawing rectangle(x="+x+", y="+y+", x1="+x1+", y1="+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y1+" color="+super.color+")");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}
+</div><p>Пример использования иерархии</p>
+<div class="code">
+		Shape s[] = new Shape[3];<br />
+		s[0] = <span class="light">new</span> Circle(10,10,5,"black");<br />
+		s[1] = <span class="light">new</span> Rectangle(10,10,50,50,"yellow");<br />
+		s[2] = <span class="light">new</span> Circle(10,10,5,"green");<br /><br />
+		
+		<span class="light">for</span>(<span class="light">int</span> i=0;i&lt;s.length;i++)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;s[i].draw();<br />
+</div>
+<h2>Интерфейсы</h2>
+<p><strong>Интерфейс</strong> — это элемент языка программирования который, специфицирует набор
+услуг, предоставляемых классом. Другими словами интерфейс - это элемент языка программирования
+который содержит описание методов, но не содержит их реализацию.
+Объявление интерфейсов очень похоже на упрощенное объявление классов.
+Оно начинается с заголовка. Сначала указываются модификаторы. Интерфейс может быть объявлен 
+как public и тогда он будет доступен для общего использования, либо модификатор доступа может 
+не указываться, в этом случае интерфейс доступен только для типов своего пакета. 
+Модификатор abstract для интерфейса не требуется, поскольку все интерфейсы являются абстрактными. 
+Его можно указать, но делать этого не рекомендуется, чтобы не загромождать код.
+Далее записывается ключевое слово interface и имя интерфейса.
+После этого может следовать ключевое слово extends и список интерфейсов, от 
+которых будет наследоваться объявляемый интерфейс. Родительских типов может быть 
+много, главное, чтобы не было повторений и чтобы отношение наследования не 
+образовывало циклической зависимости.
+</p>
+<div class="code">
+<span class=light> public interface</span> Drawable <span class=light>extends</span> Colorable, Resizable {<br />
+}<br />
+</div>
+<p>
+Тело интерфейса состоит из объявления элементов, то есть полей-констант 
+и абстрактных методов. Все поля интерфейса должны быть public final static
+, так что эти модификаторы указывать необязательно и даже нежелательно, 
+чтобы не загромождать код. Поскольку поля объявляются финальными, необходимо их сразу инициализировать.
+</p>
+<div class="code">
+<span class=light>public interface</span> Directions {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">int</span> RIGHT=1;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">int</span> LEFT=2;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">int</span> UP=3;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">int</span> DOWN=4;<br />
+}
+</div>
+<p>
+Все методы интерфейса являются public abstract и эти модификаторы также необязательны.
+</p>
+<div class=code>
+<span class=light>public interface</span> Moveable {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">void</span> moveRight();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">void</span> moveLeft();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">void</span> moveUp();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">void</span> moveDown();<br />
+}
+</div>
+<p>Каждый класс может реализовывать любые доступные интерфейсы. При этом в классе должны быть 
+реализованы все абстрактные методы, появившиеся при наследовании от интерфейсов или родительского 
+класса, чтобы новый класс мог быть объявлен неабстрактным.</p>
+<p>
+Если из разных интерфейсов наследуются методы с одинаковой сигнатурой, то достаточно 
+один раз описать реализацию, и она будет применяться для всех методов. Однако 
+если у них различное возвращаемое значение, то возникает конфликт:
+</p>
+<div class="code">
+<span class=light>interface</span> A {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>int</span> getValue();<br />
+}<br/><br/>
+
+<span class=light>interface</span> B {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>double</span> getValue();<br />
+}
+</div>
+<p>Пример</p>
+<div class="code">
+<span class=light>public interface</span> Moveable {<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>int</span> defaultX = 0, defaultY=0;<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>void</span> moveRight();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>void</span> moveLeft();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>void</span> moveUp();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>void</span> moveDown();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>void</span> moveToDefaultPosition();<br />
+}<br /><br />
+
+<span class=light>public class</span> Circle <span class=light>extends</span> Shape <span class=light>implements</span> Moveable {<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>protected int</span> x,y,r;<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public</span> Circle(<span class=light>int</span> x, <span class=light>int</span> y, <span class=light>int</span> r,String color) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>super</span>(color);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>this</span>.x = x;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>this</span>.y = y;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>this</span>.r = r;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public void </span>draw() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Drawing circle(x="+x+", y="+y+", radius="+r+", color="+super.color+")");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public void</span> moveDown() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y=-1;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public void</span> moveLeft() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x=-1;<br />
+	}<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public void</span> moveRight() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x+=1;<br />
+	}<br /><br />
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public void</span>  moveUp() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y+=1;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public void</span> moveToDefaultPosition() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x = defaultX;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y = defaultY;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}
+</div>
+<h2>Вложенные классы (Subclassing)</h2>
+<p>Подклассом (subclass) – называется класс, объявленный внутри другого класса. Подклассы используются:</p>
+<ul>
+<li>При реализации класса со сложной логикой работы. Возможна ситуация в которой Вам понадобятся 
+некоторые вспомогательные классы (для расчетов, специфического вывода информации и т.д.). 
+Что бы «не засорять» проект служебными классами, как правила их реализуют в виде подклассов.</li>
+<li>Для реализации класса помощника, который позволяет управлять экземпляром другого класса.</li>
+</ul>
+<img src="pic/subclass.jpg" />
+<p>Подкласс имеет доступ ко всем полям внешнего класса, а так же спецификатор 
+доступа который определяет, может ли быть доступен нам экземпляр подкласса за пределами внешнего класса.</p>
+<p>Объявление подкласса:
+</p>
+<div class="code">
+<span class=light>СПЕЦИФИКАТОР_ДОСТУПА class</span> ИМЯ_ВНЕШНЕГО_КЛАССА {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>СПЕЦИФИКАТОР_ДОСТУПА class</span> ИМЯ_ПОДКЛАССА_КЛАССА<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{<br /><br />
+		
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}<br />
+</div>
+<p>Спецификатор доступа подкласса определяет доступность класса за пределами внешнего. 
+Спецификатор доступа private указывает на то, что доступ к полям и методам внутреннего 
+класса имеет только внешний класс, а спецификаторы public и protected указывают что доступ 
+к полям и методам может получить любой класс программы.
+Так же следует отметить, что наличие спецификатора доступа private запрещает 
+использовать подкласс  в классах наследниках внешнего.
+</p>
+<h3>Создание экземпляра подкласса</h3>
+<p>Создание подкласса во внешнем классе ничем не отличается от создания 
+обычного экземпляра класса, а вот создание подкласса «из вне» происходит 
+несколько иначе. Т.к. подкласс объявлен внутри другого то, для того что бы 
+создать экземпляр подкласса вначале надо создать объект внешнего класса,
+ а затем через него создать объект подкласса. При этом между классами устанавливается связь «Внешний класс» -> «Подкласс», другими словами созданный подкласс будет иметь доступ к полям и методам того внешнего класса от которого был порожден.
+Создание объекта подкласса «из вне», происходит следующим образом:
+</p>
+
+<div class="code">
+ИМЯ_ВНЕШНЕГО_КЛАССА.ИМЯ_ВНУТРЕНЕГО_КЛАССА ИМЯ_ОБЪЕКТА =  ИМЯ_ОБЪЕКТА_ВНЕШНЕГО_КЛАССА.<span class="light">new</span> КОНСТРУКТОР_ВНУТРЕНЕГО_КЛАССА;
+</div>
+<p>Пример</p>
+<div class="code">
+<span class=light>public class</span> Outer {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>private int</span> field = 0;<br /><br />
+	
+	<span class=comment>
+&nbsp;&nbsp;&nbsp;&nbsp;/*<br />
+&nbsp;&nbsp;&nbsp;&nbsp;* Класс для управления полем внешнего класса<br />
+&nbsp;&nbsp;&nbsp;&nbsp;*/<br /></span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>class</span> Inner{<br />
+
+<span class=comment>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/*<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Метод устанавливает значение внешнего класса<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/<br /></span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public void</span> setField(<span class=light>int</span> f){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;field = f;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+		
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public void</span> showField(){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(field);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}<br /><br />
+</div><br />
+<div class=code>
+<span class=light>class</span> Start { <br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public static void</span> main(String args[]) { <br /><br />
+		
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Outer out = <span class="light">new</span> Outer();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out.showField();<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Outer.Inner in = out.<span class=light>new</span> Inner();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in.setField(1);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out.showField();<br /><br />
+		
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Outer.Inner in2= out.<span class=light>new</span> Inner();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in2.setField(2);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out.showField();<br /><br />
+		
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Outer out2 = <span class=light>new</span> Outer();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out2.showField();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Outer.Inner in3 = out2.<span class=light>new</span> Inner();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in3.setField(1);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out2.showField();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;} <br />
+}
+</div>
+<p>Объекты in и in2 созданы через объект out, следовательно, они могут получать 
+доступ к полям и методам класса out. Объект in3 создан через экземпляр класса out2, 
+т.е. in3 может получить доступ к полям и методам объекта out2.</p>
+<h2>Утилиты</h2>
+<p>Библиотека языка JAVA включает в себя набор вспомогательных классов, широко используемых в других 
+встроенных пакетах Java. Эти классы расположены в пакетах java.lang и java.util. Они используются 
+для работы с набором объектов, взаимодействия с системными функциями низкого уровня, для работы с 
+математическими функциями, генерации случайных чисел, работы с Ыдатами и временем. </p>
+<h3>Простые оболочки для типов</h3>
+<p>Как вы уже знаете, Java использует встроенные примитивные типы данных, например, 
+int и char. Эти типы данных не принадлежат к классовой иерархии Java. Они передаются методам по значению, 
+передать их по ссылке невозможно. По этой причине для каждого примитивного типа в Java реализован специальный класс.</p>
+
+<h3>Number</h3>
+<p>Класс Number является абстрактным, и предназначен для работы 
+со стандартными скалярными типами: — long, int, float и double.
+Класс имеет набор методов для доступа к содержимому объекта, которые возвращают (возможно округленное) значение 
+объекта в виде значения каждого из примитивных типов:</p>
+<ul>
+<li>doubleValue() - возвращает содержимое объекта в виде значения типа double.</li>
+<li>floatValue() - возвращает значение типа float.</li>
+<li>intValue() - возвращает значение типа int</li>
+<li>longValue() - возвращает значение типа long</li>
+</ul>
+
+<h3>Double и Float</h3>
+<p><strong>Double и Float</strong> — наследники класса Number. Кроме методов унаследованных  от
+класса Number, эти классы содержат специальные методы для работы с типами float и double.
+ У каждого из классов есть конструкторы, позволяющие инициализировать 
+объекты значениями типов double и float, кроме того, для удобства пользователя, эти 
+объекты можно инициализировать и объектом типа String, содержащим текстовое представление вещественного числа. 
+Приведенный ниже пример иллюстрирует создание представителей класса Double с помощью обоих конструкторов.</p>
+<div class="code">
+<span class="light">class</span> DoubleDemo {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public static void</span> main(String args[]) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Double d1 = new Double(3.14159);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Double d2 = new Double("314159E-5");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(d1 + " = " + d2 + " -> " + d1.equals(d2));<br />
+&nbsp;&nbsp;&nbsp;&nbsp;} <br />
+}
+</div>
+Как Вы можете видеть из результата работы этой программы, метод equals возвращает значение true, 
+а это означает, что оба использованных в примере конструктора создают идентичные объекты класса Double.
+
+<h3>Бесконечность и NaN</h3>
+<p>Для чисел с плавоющей запятой есть два специальных значения, 
+которые трактуются специальным образом: бесконечность и NaN (Not a Number — неопределенность). 
+Класс Double содержит методы для проверки этих условий, причем методы сущетсвуют в двух видах, в виде статических
+методов и в веде обычных методов. Статическим методам, значение передается в качестве аргументов,
+ну а обыный метод вызывается у объекта типа Double.</p>
+<ul>
+<li>(статический)islnfinite(d) возвращает true, если абсолютное значение указанного числа типа double бесконечно велико</li>
+<li>islnfinite() возвращает true, если абсолютное значение числа, хранящегося в данном объекте Double, бесконечно велико</li>
+<li>(статический) isNaN(d) возвращает true, если значение указанного числа типа double неопределено</li>
+<li>isNaN() возвращает true, если значение числа, хранящегося в данном объекте Double, неопределено</li>
+</ul>
+<p>В прмере создаются два объекта типа Double, один с бесконечным, другой с неопределенным значением.</p>
+<div class="code">
+<span class="light">class</span> InfNaN {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public static void</span> main(String args[]) { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Double d1 = <span class="light">new</span> Double(1/0.);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Double d2 = <span class="light">new</span> Double(0/0.);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(d1 + ": " + d1.isInfinite() + ", " + d1.isNaN());<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(d2 + ": " + d2.isInfinite() + ", " + d2.isNaN());<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /> 
+}
+</div>
+<p>Результат работы программы:</p>
+<div class=code>
+Infinity: true, false<br />
+NaN: false, true
+</div>
+<h3>Integer и Long</h3>
+<p>Класс Integer — класс наследник Number, для чисел типов int, short и byte, a класс Long — соответственно для типа long. 
+Помимо наследуемых методов своего суперкласса Number, классы Integer и Long содержат методы для разбора 
+текстового представления чисел, и наоборот, для представления чисел в виде текстовых строк. 
+Различные варианты этих методов позволяют указывать основание (систему счисления), используемую 
+при преобразовании. Обычно используются двоичная, восьмеричная, десятичная и шестнадцатиричная системы счисления.</p>
+<ul>
+<li>parseInt(String) преобразует текстовое представление целого числа, содержащееся в переменной String, в значение типа int. Если строка не содержит представления целого числа,
+ записанного в допустимом формате, Вы получите исключение NumberFormatException. </li>
+<li>parseInt(String, radix) аналог предыдущего метода за исключением того что Вы можете указывать основание, отличное от 10.
+ </li>
+<li>toString(int) преобразует переданное в качестве параметра целое число в текстовое представление в десятичной системе.</li>
+<li>toString(int, radix) преобразует переданное в качестве первого параметра целое число в текстовое представление 
+в задаваемой вторым параметром системе счисления. </li>
+</ul>
+<h3>Character</h3>
+<p>Character — простой класс-оболочка типа char. У него есть несколько полезных статических методов, с помощью которых 
+можно выполнять над символом различные проверки и преобразования.</p>
+<ul>
+<li>isLowerCase(char ch) возвращает true, если символ-параметр принадлежит нижнему регистру (имеется в виду не просто 
+диапазон a-z, но и символы нижнего регистра в кодировках, отличных от ISO-Latin-1). </li>
+<li>isUpperCase(char ch) делает то же самое в случае символов верхнего регистра.</li>
+<li>isDigit(char ch) и isSpace(char ch) возвращают true для цифр и пробелов, соответственно. </li>
+<li>toLowerCase(char ch) и toupperCase(char ch) выполняют преобразования символов из верхнего в нижний регистр и обратно. </li>
+</ul>
+<h3>Boolean</h3>	
+<p>Класс Boolean — это очень тонкая оболочка вокруг логических значений, она бывает полезна лишь в тех случаях, 
+когда тип boolean требуется передавать по ссылке, а не по значению.</p>
+<h3>Перечисления</h3>
+<p>В Java для хранения групп однородных данных имеются массивы. Они очень полезны при использовании 
+простых моделей доступа к данным. Перечисления же предлагают более совершенный объектно-ориентированный путь 
+для хранения наборов данных сходных типов. Перечисления используют свой собственный механизм резервирования 
+памяти, и их размер может увеличиваться динамически. У них есть интерфейсные методы для выполнения итераций и для просмотра. 
+Их можно индексировать чем-нибудь более полезным, нежели простыми целыми значениями.</p>
+<h3>Интерфейс Enumeration</h3>
+<p>Enumeration — простой интерфейс, позволяющий вам обрабатывать элементы любой коллекции объектов. В нем задается два метода. 
+Первый из них — метод hasMoreElements, возвращающий значение типа boolean. Он возвращает значение true, если в перечислении еще 
+остались элементы, и false, если у данного элемента нет следующего. Второй метод — nextElement — возвращает обобщенную ссылку на 
+объект класса Object, которую, прежде чем использовать, нужно преобразовать к реальному типу содержащихся в коллекции объектов.</p>
+<p>Ниже приведен пример, в котором используется класс Enum, реализующий перечисление объектов класса Integer, и класс 
+EnumerateDemo, создающий объект типа Enum, выводящий все значения перечисления. Обратите внимание на то, что в 
+объекте Enum не содержится реальных данных, он просто возвращает последовательность создаваемых им объектов Integer.</p>
+<div class=code>
+<span class="light">import</span> java.util.Enumeration;<br />
+<span class="light">class</span> Enum <span class="light">implements</span> Enumeration {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">private int</span> count = 0;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">private boolean</span> more = true;<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public boolean</span> hasMoreElements() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">return</span> more;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+<span class="light">public</span> Object nextElement() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;count++;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">if</span> (count > 4) more = false;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">return new</span> Integer(count);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /> 
+}<br />
+
+<span class="light">class</span> EnumerateDemo {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public static void</span> main(String args[]) { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enumeration enum = <span class="light">new</span> Enum();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">while</span> (enum.hasMoreElements()) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(enum.nextElement());<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /> 
+}
+</div>
+<h3>Vector</h3>
+<p>Vector — это способный увеличивать число своих элементов массив ссылок на объекты. Внутри себя Vector реализует стратегию 
+динамического расширения, позволяющую минимизировать неиспользуемую память и количество операций по выделению памяти. 
+Объекты можно либо записывать в конец объекта Vector с помощью метода addElement, либо вставлять в 
+указанную индексом позицию методом insertElementAt. Вы можете также записать в Vector массив объектов, для этого нужно воспользоваться методом 
+copyInto. После того, как в Vector записана коллекция объектов, можно найти в ней индивидуальные элементы с помощью методов Contains, indexOf и 
+lastIndexOf. Кроме того методы еlеmentAt, firstElement и lastElement позволяют извлекать объекты из нужного положения в объекте Vector.</p>
+<h3>Stack</h3>
+<p>Stack — подкласс класса Vector, который реализует простой механизм типа “первым вошел — первым вышел" (FIFO). В дополнение к стандартным 
+методам своего родительского класса, Stack предлагает метод push для помещения элемента в вершину стека и pop для извлечения из него верхнего 
+элемента. С помощью метода peek вы можете получить верхний элемент, не удаляя его из стека. Метод empty служит для проверки стека на наличие 
+элементов — он возвращает true, если стек пуст. Метод search ищет заданный элемент в стеке, возвращая количество операция pop, которые требуются 
+для того чтобы перевести искомый элемент в вершину стека. Если заданный элемент в стеке отсутствует, этот метод возвращает -1.
+Ниже приведен пример программы, которая создает стек, заносит в него несколько объектов типа Integer, а затем извлекает их.
+</p>
+<div class=code>
+<span class="light">import</span> java.util.Stack;<br />
+<span class="light">import</span> java.util.EmptyStackException; <br /><br />
+<span class="light">class</span> StackDemo {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">static void</span> showpush(Stack st, <span class="light">int</span> a) { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;st.push(new Integer(a));<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("push(" + a + ")");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("stack: " + st);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">static void</span> showpop(Stack st) { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print("pop -> ");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Integer a = (Integer) st.pop();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(a);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("stack: " + st);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public static void</span> main(String args[]) {<br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stack st = <span class="light">new</span> Stack();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("stack: " + st);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;showpush(st, 42);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;showpush(st, 66);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;showpush(st, 99);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;showpop(st);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;showpop(st);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;showpop(st);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">try</span> {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;showpop(st);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">catch</span> (EmptyStackException e) { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("empty stack");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}
+</div>
+<p>Ниже приведен результат, полученный при запуске этой программы. Обратите внимание на то, что обработчик исключений реагирует на 
+попытку извлечь данные из пустого стека. Благодаря этому мы можем аккуратно обрабатывать ошибки такого рода.</p>
+<div class=code>
+stack: []<br />
+push(42)<br />
+stack: [42]<br />
+push(66)<br />
+stack: [42, 66]<br />
+push(99)<br />
+stack: [42, 66, 99]<br />
+pop -> 99<br />
+stack: [42, 66]<br />
+pop -> 66<br />
+stack: [42]<br />
+pop -> 42<br />
+stack: []<br />
+pop -> empty stack<br />
+</div>
+<h3>Dictionary</h3>
+<p>Dictionary (словарь) — абстрактный класс, представляющий собой хранилище информации типа “ключ-значение”. Ключ — это имя, по которому 
+осуществляется доступ к значению. Имея ключ и значение, вы можете записать их в словарь методом put(key, value). Для получения значения 
+по заданному ключу служит метод get(key). И ключи, и значения можно получить в форме перечисления (объект Enumeration) методами keys и elements. 
+Метод size возвращает количество пар “ключ-значение”, записанных в словаре, метод isEmpty возвращает true, если словарь пуст. Для удаления ключа 
+и связанного с ним значения предусмотрен метод remove(key).</p>
+<h3>HashTable</h3>
+<p>HashTable — это подкласс Dictionary, являющийся конкретной реализацией словаря. Представителя класса HashTable можно использовать 
+для хранения произвольных объектов, причем для индексации в этой коллекции также годятся любые объекты. Наиболее часто HashTable 
+используется для хранения значений объектов, ключами которых служат строки (то есть объекты типа String). В очередном нашем примере в 
+HashTable хранится информация об автомобиле.</p>
+<div class=code>
+<span class="light">import</span> java.util.Dictionary;<br />
+<span class="light">import</span> java.util.Hashtable;<br /><br />
+<span class="light">class</span> HTDemo {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public static void</span> main(String args[]) { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hashtable ht = <span class="light">new</span> Hashtable();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ht.put("brand", "Opel");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ht.put("mark", "Corsa");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ht.put("engine", "1.2 ecotec");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ht.put("price", new Double(95000));<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show(ht);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">static void</span> show(Dictionary d) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Brand: " + d.get("brand"));<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Mark: " + d.get("mark"));<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Engine: " + d.get("engine"));<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Price: " + d.get("price"));<br />
+&nbsp;&nbsp;&nbsp;&nbsp;} <br />
+}
+</div>
+<h3>Properties</h3>
+<p>Properties — подкласс HashTable, в который для удобства использования добавлено несколько методов, позволяющих получать 
+значения, которые, возможно, не определены в таблице. В методе getProperty вместе с именем можно указывать значение по умолчанию:</p>
+<div class=code>
+getРrореrtу("имя","значение_по_умолчанию");
+</div>
+<p>При этом, если в таблице свойство "имя" отсутствует, метод вернет "значение_по_умолчанию". Кроме того, при создании нового объекта этого 
+класса конструктору в качестве параметра можно передать другой объект Properties, при этом его содержимое будет использоваться в качестве 
+значений по умолчанию для свойств нового объекта. Объект Properties в любой момент можно записать либо считать из потока — 
+объекта Stream (потоки будут обсуждаться в следующих уроках). Ниже приведен пример, в котором создаются и впоследствии считываются некоторые свойства:</p>
+<div class=code>
+<span class="light">import</span> java.util.Properties;<br /><br />
+<span class="light">class</span> PropDemo {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">static</span> Properties prop = <span class="light">new</span> Properties();<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public static void</span> main(String args[]) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prop.put("Brand", "put brand here");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prop.put("Mark", "put mark here");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prop.put("Engine", "engine not set");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Properties book = <span class="light">new</span> Properties(prop);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;book.put("Brand", "Opel");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;book.put("Mark", "Corsa");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Brand: " +book.getProperty("Brand"));<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Mark: " +book.getProperty("Mark"));<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Engine: " +book.getProperty("Engine"));<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("other: " +book.getProperty("other", "???"));<br />
+&nbsp;&nbsp;&nbsp;&nbsp;} <br />
+}
+</div>
+<p>Здесь мы создали объект prop класса Properties, содержащий три значения по умолчанию для полей Title, 
+Author и isbn. После этого мы создали еще один объект Properties с именем book, в который мы поместили реальные 
+значения для полей Title и Author. В следующих трех строках примера мы вывели результат, возвращенный методом getProperty 
+для всех трех имеющихся ключей. В четвертом вызове getProperty стоял несуществующий ключ “еаn”. Поскольку этот ключ 
+отсутствовал в объекте book и в объекте по умолчанию prop, метод getProperty выдал нам указанное в его вызове значение по умолчанию, то есть “???”:
+</p>
+<div class=code>
+Brand: Opel<br />
+Mark: Corsa<br />
+Engine: engine not set<br />
+other: ???
+</div>
+<h3>StrinsTokenizer</h3>
+<p>Обработка текста часто подразумевает разбиение текста на последовательность лексем - слов (tokens). Класс StringTokenizer предназначен 
+для такого разбиения, часто называемого лексическим анализом или сканированием. Для работы StringTokenizer требует входную строку и строку 
+символов-разделителей. По умолчанию в качестве набора разделителей используются обычные символы-разделители: пробел, табуляция, перевод 
+строки и возврат каретки. После того, как объект StringTokenizer создан, для последовательного извлечения лексем из входной строки используется 
+его метод nextToken. Другой метод — hasMoreTokens — возвращает true в том случае, если в строке еще остались неизвлеченные лексемы. StringTokenizer 
+также реализует интерфейс Enumeration, а это значит, что вместо методов hasMoreTokens и nextToken вы можете использовать методы hasMoreElements и 
+nextElement, соответственно.</p>
+<p>Ниже приведен пример, в котором для разбора строки вида "ключ=значение" создается и используется объект StringTokenizer. 
+Пары "ключ=значение" разделяются во входной строке двоеточиями.</p>
+<div class=code>
+<span class="light">import</span> java.util.StringTokenizer;<br />
+<span class="light">class</span> STDemo {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">static</span> String in = "Brand=Opel:" + "Mark=Corsa:" + "Engine=1.2 ecotec";<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public static void</span> main(String args[]) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StringTokenizer st = <span class="light">new</span> StringTokenizer(in, "=:");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">while</span> (st.hasMoreTokens()) { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String key = st.nextToken();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String val = st.nextToken();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(key + "\t" + val);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+} 
+<br />}
+</div>
+<h3>Runtime</h3>
+<p>Класс Runtime инкапсулирует интерпретатор Java. Вы не можете создать нового представителя этого класса, но можете, 
+вызвав его статический метод, получить ссылку на работающий в данный момент объект Runtime. Обычно апплеты (JAVA приложения загруженые через WEB и 
+выполняемые в окне браузера) и другие 
+непривелигированные программы не могут вызвать ни один из методов этого класса, не возбудив при этом исключения SecurityException. 
+Одна из простых вещей, которую вы можете проделать с объектом Runtime — его останов, для этого достаточно вызвать метод exit(int code).</p>
+<h3>Управление памятью</h3>
+<p>Хотя Java и представляет собой систему с автоматической сборкой мусора, вы для проверки эффективности своего кода можете захотеть узнать, 
+каков размер “кучи” и как много в ней осталось свободной памяти. Для получения этой информации нужно воспользоваться методами totalMemory и freeMemory</p>.
+<div class="code" style="border: solid 1px #ff0000">
+ВНИМАНИЕ!<br />
+При необходимости Вы можете "вручную" запустить сборщик мусора, вызвав метод gc. Если вы хотите оценить, сколько памяти требуется для 
+работы вашему коду, лучше всего сначала вызвать gc, затем freeMemory, получив тем самым оценку свободной памяти, доступной в системе. 
+Запустив после этого свою программу и вызвав freeMemory внутри нее, вы увидите, сколько памяти использует ваша программа.
+</div>
+<h3>Выполнение других программ</h3>
+<p>В безопасных средах вы можете использовать Java для выполнения других полновесных процессов в своей многозадачной операционной 
+системе. Несколько форм метода ехес позволяют задавать имя программы и ее параметры. </p>
+<p>В очередном примере используется специфичный для Windows вызов ехес, запускающий процесс notepad — простой 
+текстовый редактор. В качестве параметра редактору передается имя одного из исходных файлов Java. Обратите внимание — 
+ехес автоматически преобразует в строке-пути символы "/" в разделители пути в Windows — "\".</p>
+<div class=code>
+<span class="light">class</span> ExecDemo {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public static void</span> main(String args[]) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Runtime r = Runtime.getRuntime();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Process p = null;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String cmd[] = { "notepad", "/java/src/java/lang/Runtime.java" };<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">try</span> {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p = r.exec(cmd);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <span class="light">catch</span> (Exception e) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("error executing " + cmd[0]);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;} <br />
+}</div>
+<h3>System</h3>
+<p>Класс System содержит любопытную коллекцию глобальных функций и переменных. В большинстве примеров этой книге для операций вывода мы использовали 
+метод System.out.println(). Метод currentTimeMillis возвращает текущее системное время в виде миллисекунд, прошедших с 1 января 1970 года. 
+Метод arraycopy можно использовать для быстрого копирования массива любого типа из одного места в памяти в другое. Ниже приведен пример 
+копирования двух массивов с помощью этого метода. </p>
+<div class=code>
+<span class="light">class</span> ACDemo {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">static</span> byte a[] = { 65, 66, 67, 68, 69, 70, 71, 72, 73, 74 };<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">static</span> byte b[] = { 77, 77, 77, 77, 77, 77, 77, 77, 77, 77 };<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public static void</span> main(String args[]) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("a = " + new String(a, 0));<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("b = " + new String(b, 0));<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.arraycopy(a, 0, b, 0, a.length);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("a = " + new String(a, 0));<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("b = " + new String(b, 0));<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.arraycopy(a, 0, a, 1, a.length - 1);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.arraycopy(b, 1, b, 0, b.length - 1);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("a = " + new String(a, 0));<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("b = " + new String(b, 0));<br />
+&nbsp;&nbsp;&nbsp;&nbsp;} <br />
+}</div>
+<p>Как вы можете заключить из результата работы этой программы, копирование можно выполнять в любом направлении, используя 
+в качестве источника и приемника один и тот же объект.</p>
+<div class = code>
+а = ABCDEFGHIJ<br />
+b = ММММММММММ<br />
+а = ABCDEFGHIJ<br />
+b = ABCDEFGHIJ<br />
+а = AABCDEFGHI<br />
+b = BCDEFGHIJJ<br />
+</div>
+<h3>Свойства окружения</h3>
+<p>Исполняющая среда Java предоставляет доступ к переменным окружения через представителя класса 
+Properties (описанного ранее в этой главе), с которым можно работать с помощью метода System.getProperty. 
+Для получения полного списка свойств можно вызвать метод System.getProperties()</p>
+
+<table border="1">
+<tr><th>Имя</th><th>Значение</th></tr>
+<tr><td>java.version</td><td>Версия интерпретатора Java</td></tr>
+<tr><td>java.vendor	</td><td>Строка идентификатора, заданная разработчиком</td></tr>
+<tr><td>java.vendor.url</td><td>URL разработчика</td></tr>
+<tr><td>java.class.version</td><td>Версия Java API </td></tr>
+<tr><td>java.class.path	</td><td>Значение переменной CLASSPATH</td></tr>
+<tr><td>java.home</td><td>Каталог, в котором инсталлирована среда Java</td></tr>
+<tr><td>java.compiler</td><td>Компилятор JIT</td></tr>
+<tr><td>os.name	</td><td>Название операционной системы</td></tr>
+<tr><td>os.arch</td><td>Архитектура компьютера, на котором выполняется программа</td></tr>
+<tr><td>os.version</td><td>Версия операционной системы Web-узла</td></tr>
+<tr><td>file.separator</td><td>Зависящие от платформы разделители файлов (/ или \)</td></tr>
+<tr><td>path.separator</td><td>Зависящие от платформы разделители пути (: или ;)</td></tr>
+<tr><td>line.separator</td><td>Зависящие от платформы разделители строк (\n или \r\n)</td></tr>
+<tr><td>user.name</td><td>Имя текущего пользователя</td></tr>
+<tr><td>user.home</td><td>Домашний каталог пользователя</td></tr>
+<tr><td>user.dir</td><td>Текущий рабочий каталог</td></tr>
+<tr><td>user.language</td><td>2-символьный код языка для местности по умолчанию</td></tr>
+<tr><td>user.region</td><td>2-символьный код страны для местности по умолчанию</td></tr>
+<tr><td>user.timezone</td><td>Временной пояс по умолчанию</td></tr>
+<tr><td>user.encoding</td><td>Кодировка сиволов для местности по умолчанию</td></tr>
+<tr><td>user.encoding.pkg</td><td>Пакет, содержащий конверторы для преобразования символов из местной кодировки в Unicode</td></tr>
+<tr><td></td><td></td></tr>
+</table>
+<h2>Настраиваемые типы(Generic types)</h2>
+<p>Настраиваемым типом называется класс который описывает логику работу на не описывает 
+типы данных, с которыми происходят действия. Настраиваемые типы в Java, являются аналогами 
+шаблонных классов в C++.</p>
+<p>Создание настраиваемого типа данных</p>
+<div class="code">
+<span class=light>class</span> ИМЯ_КЛАССА &lt;псевдотип 1, псевдотип 2,…, псевдотип N&gt; <br />
+{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;ТЕЛО_КЛАССА<br />
+}
+</div>
+<p>Пример. Настраиваемый тип данных хранящий пару значений</p>
+<div class="code">
+<span class=light>public class</span> Pair &lt;T,T2&gt;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;T v1;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;T2 v2;<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;Pair(T v1,T2 v2)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>this</span>.v1 = v1;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>this</span>.v2 = v2;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public</span> T getV1() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>return</span> v1;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public void</span> setV1(T v1) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>this</span>.v1 = v1;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public</span> T2 getV2() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return</span> v2;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public void</span> setV2(T2 v2) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this</span>.v2 = v2;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}
+</div>
+<h2>Ограничения в настраиваемых типах</h2>
+<p>Создавая настраиваемый тип, мы можем создавать ограничения на псевдотипы, к примеру, 
+может определить псевдотип который должен реализовывать определенный интерфейс или 
+быть наследником какого-то класса.
+К примеру, перепишем наш класс Pair таким образом, что бы объект псевдотипа T обязательно 
+реализовывал интерфейс Moveable.
+</p>
+<div class="code">
+<span class=light>public class</span> Pair &lt; T <span class=light>extends</span> Moveable,T2 &gt; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;T v1;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;T2 v2;<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;Pair(T v1,T2 v2)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>this</span>.v1 = v1;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>this</span>.v2 = v2;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public</span> T getV1() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>return</span> v1;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public void</span> setV1(T v1) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>this</span>.v1 = v1;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public</span> T2 getV2() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>return</span> v2;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>public void</span> setV2(T2 v2) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=light>this</span>.v2 = v2;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}<br />
+</div>
+<p>Создание объектов настраиваемого типа</p>
+<div class=code>
+ИМЯ_КЛАССА&lt;ОПРЕДЕЛЕНИЕ_ТИПОЗАМЕНИТЕЛЕЙ&gt; ИМЯ_ОБЪЕКТА = <span class=light>new</span> ИМЯ_КЛАССА&lt;ОПРЕДЕЛЕНИЕ_ТИПОЗАМЕНИТЕЛЕЙ&gt;(ПАРАМЕТРЫ_КОНСТРУКТОРА);
+</div>
+<br />
+<div class=code>
+Pair&lt;Circle,Integer&gt; pair = <span class=light>new</span> Pair&lt;Circle,Integer&gt;(<span class=light>new</span> Circle(10,100,100,"blue"),4);
+</div>
+<h2>Настраиваемые контейнеры</h2>
+<p>Рассмотри пример</p>
+<div class="code">
+Vector v = <span class="light">new</span> Vector();<br />
+v.add(10);<br />
+v.add("Hello");<br /><br />
+        
+Integer a = (Integer)v.get(1);<br />
+</div>
+<p>В последней строчке кода мы получаем исключительную ситуацию java.lang.ClassCastException, из-за того 
+что неможем преобразовать значение типа String в значение типа Integer. Для того что бы избегать 
+подобных ситуаций в Java используют настраиваемые контейнеры (так же они известны как типизируемые контейнры),
+при создании которых явным образом
+указывается тип данных который будет помещатся в контейнер.
+</p>
+<div class="code">
+Vector&lt;Integer&gt; v = <span class="light">new</span> Vector&lt;Integer&gt;();<br />
+v.add(10);<br />
+<span class="comment">/* Ошибка на этапе компиляции, т.к. контейнер <br />может хранить только целочисленные значения */</span><br />
+v.add("Hello");
+        
+Integer a = (Integer)v.get(1);<br />
+</div>
+<p>Набор настраиваемых контейнеров достаточно велик. 
+Все контейнеры которые рассматривалисб выше, существуют в виде настраиваемых контейнеров.</p>
+
+<h2>Практический пример</h2>
+<p>Разработаем объектную модель описывающею работу банка (Клиенты, Счета, Операции над счетами). <br />
+Классы приложения:</p>
+<table border="1" style="vertical-align:top">
+<tr><th>Название</th><th>Описание</th></tr>
+<tr>
+<td  style="vertical-align:top">Bank</td><td>Класс описывающий банк. Содержит коллекции для хранения клиентов, счетов, операций над счетами.</td></tr>
+<tr>
+<td  style="vertical-align:top">Account</td><td>Класс описывающий счет в банке. Конструктор этого класса имеет спецификатор доступа private, 
+для того чтобы запретить создание экземпляра класса (нельзя создать счет вне банка, другими словами созданный счет в обязательном 
+порядке должен принадлежать банку). Создать счет можно с помощью метода createAccount класса Bank, метод создает счет и размещает его в коллекции счетов. 
+Если счет будет создаваться для существующего клиента, то повторно объект клиента (см. ниже) создаваться небудет</td>
+</tr>
+<tr>
+<td style="vertical-align:top">Client</td>
+<td>Класс описывающий клиента банка</td>
+</tr>
+<tr><td style="vertical-align:top">Operation</td><td>Абстрактный класс, который является базовым классом над всеми операциями банка, имеет поле amount которое хранит
+количество денежных средств учавствующее в операции и абстрактный метод doWork, который выполняет оперцию</td></tr>
+<tr><td style="vertical-align:top">AccountOperation</td><td>Класс который реализуют операцию перемещения денежных средств по счету, наследник класса Operation</td></tr>
+<tr><td style="vertical-align:top">CrossAccountOperation</td><td>Класс который реализуют операцию перемещения денежных средств между счетами, наследник класса Operation</td></tr>
+<tr><td style="vertical-align:top">OperationException</td><td>Класс который описывает исключительную ситуацию, которая может возникнуть при выполнении операции</td></tr>
+</table><br />
+<div class="code">
+<div class="title">Листинг. Класс Bank</div>
+
+<span class="light">package</span> BankSystem;<br /><br />
+
+<span class="light">import</span> java.util.*;<br /><br />
+
+<span class="light">public class</span> Bank{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">private static int</span> accountNum = 1;<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public class</span> Account{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">private double</span> balance;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">private final</span> String number;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">private</span> Client client;<br /><br />
+		
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public</span> Account(Client client,<span class="light">double</span> startBalance){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>(client);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;balance = startBalance;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+		
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public</span> Account(Client client){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.client = client;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;balance = 0;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number = "Acc "+accountNum++;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public double</span> getBalance() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">return</span> balance;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public void</span> setBalance(<span class="light">double</span> balance) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.balance = balance;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+		
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public</span> String toString(){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">return</span> "Счет № "+accountNum+" Владелец:"+client.toString()+" Баланс:"+balance;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">private</span> Vector&lt;Client&gt; clients = <span class="light">new</span> Vector&lt;Client&gt;();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">private</span> Vector&lt;Account&gt; accounts = <span class="light">new</span> Vector&lt;Account&gt;();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">private</span> Vector&lt;Operation&gt; operations = <span class="light">new</span> Vector&lt;Operation&gt;();<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public void</span> addOperation(Operation operation){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;operations.add(operation);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public void</span> runOperations( ){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">for</span> (<span class="light">int</span> i=0; i&lt;operations.size(); i++){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">try</span>	{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;operations.get(i).doWork();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<span class="light">catch</span>(OperationException ex){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(ex.getMessage());<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;operations.clear();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}	<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public</span> Bank.Account createAccount(String clientName,String passport,<span class="light">double</span> initialBalance){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Client cl = <span class=light>null</span>;<br /><br />
+		
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">for</span> (<span class="light">int</span> i=0;i&lt;clients.size();i++)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">if</span> (clients.get(i).getPassport() == passport){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cl = clients.get(i);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">break;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">if</span> (cl == <span class="light">null</span>)	{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cl = new Client(clientName, passport);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clients.add(cl);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Account acc= <span class="light">new</span> Account(cl,initialBalance);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;accounts.add(acc);<br /><br />
+		
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">return</span> acc;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public</span> Bank.Account createAccount(String clientName,String passport){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">return</span> createAccount(clientName,passport,0);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public</span> String toString(){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StringBuilder builder = <span class="light">new</span> StringBuilder("Состояния счетов\n-------------------------\n");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">for</span> (<span class="light">int</span> i=0; i &lt; accounts.size(); i++){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;builder.append(accounts.get(i));<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;builder.append("\n");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+		
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">return</span> builder.toString();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}
+</div><br />
+<div class="code">
+<div class="title">Листинг. Класс Client</div>
+<span class="light">package</span> BankSystem;<br /><br />
+
+<span class="light">public class</span> Client{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">private</span> String passport;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">private</span> String name;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">private</span> Bank.Account account;<br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public</span> Client(String name, String passport){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.passport = passport;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.name = name;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public</span> String getPassport() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">return</span> passport;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public</span> String getName() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">return</span> name;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public</span> String toString(){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">return</span> this.name+" "+this.passport; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}
+</div><br />
+<div class="code">
+<div class="title">Листинг. Класс Operation</div>
+<span class="light">package</span> BankSystem;<br /><br />
+
+<span class="comment">/**<br />
+ * Абстрактный класс, который описывает <br />
+ * банковскую операцию<br />
+ */</span><br />
+<span class="light">public abstract class</span> Operation{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//Денежные средства в банковской операции </span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">protected double</span> amount;<br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//Выполняет банковскую операцию</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public abstract void</span> doWork( ) <span class="light">throws</span> OperationException;<br />
+}
+</div><br />
+<div class="code">
+<div class="title">Листинг. Класс AccountOperation</div>
+<span class="light">package</span> BankSystem;<br />
+
+<span class="comment">/**<br />
+ * Операция перемещения денежных<br />
+ * средств по счету<br />
+  */</span><br />
+<span class="light">public class</span> AccountOperation <span class="light">extends</span> Operation{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;//Счет учавствующий в операции<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">private</span> Bank.Account account;<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public</span> AccountOperation(Bank.Account account, double amount)	{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.account = account;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.amount = amount;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public void</span> doWork() <span class="light">throws</span> OperationException {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">double</span> balance = account.getBalance();<br /><br />
+		
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">double</span> result = balance + amount ;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">if</span> (result < 0)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">throw new</span> OperationException("Недостаточно денежных средств на счете "+account);<br /><br />
+		
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;account.setBalance(result);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}
+</div><br />
+<div class="code">
+<div class="title">Листинг. Класс CrossAccountOperation</div>
+
+<span class="light">package</span> BankSystem;<br /><br />
+
+<span class="comment">/**<br />
+ * Операция перемещения денежных<br />
+ * средств между счетами<br />
+  */</span><br />
+<span class="light">public class</span> CrossAccountOperation <span class="light">extends</span> Operation{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//Счет с которого уходят денежные средства</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">private</span> Bank.Account outAccount;<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//Счет на который поступают денежные средства</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">private</span> Bank.Account inAccount;<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public</span> CrossAccountOperation(Bank.Account inAccount,Bank.Account outAccount,<span class="light">double</span> amount){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.inAccount = inAccount;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.outAccount = outAccount;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super.amount = amount;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public void</span> doWork() <span class="light">throws</span> OperationException{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">double</span> balance  = outAccount.getBalance();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">if</span> (balance < amount)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">throw new</span> OperationException("Недостаточно денежных средств на счете "+outAccount);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inAccount.setBalance(balance+amount);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;outAccount.setBalance(balance-amount);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}
+</div><br />
+<div class="code">
+<div class="title">Листинг. Пример работы с объектной моделью</div> 
+<span class="light">package</span> BankSystem;
+
+<span class="light">public class</span> Banking {<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public static void</span> main(String[] args) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bank bank = new Bank();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bank.Account acc = bank.createAccount("Иванов", "АК123456");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bank.Account acc1 = bank.createAccount("Петров", "АЕ123456",50);<br />
+		
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AccountOperation oper = <span class="light">new</span> AccountOperation(acc,100);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CrossAccountOperation oper2 = new CrossAccountOperation(acc,acc1,10);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bank.addOperation(oper);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bank.addOperation(oper2);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bank.runOperations();<br /><br />
+		
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print(bank);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}
+</div>
+<h2>Домашнее задание</h2>
+Домашнее задание этого урока строится на практическом примере описаном выше. 
+<ol>
+<li>Создайте класс Tree&lt;T&gt; (настраиваемое бинарное дерево) и используйте его для хранения клиентов банка 
+(вместо Vector).Обратите внимание что код приведеный ниже  работать небудет, т.к. Java-компилятор незнает как сравнить 
+две переменные неизвестного типа. Для того что реализовать сравнение в классе дерева воспользуйтесь стандартным интерфейсом 
+Comparator (более детальную информацию смотрите в Java документации).<br />
+<div class="code">
+<span class="light">class</span> GenericTest&lt;T&gt;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;T a,b;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;GenericTest(T a,T b){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.a = a;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.b = b;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+		
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public boolean</span> aIsGrant(){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">return</span> a&gt;b;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}</div><br /></li>
+<li>Необходимо логировать ошибки происходящие во время банковских операций. Ошибка должна хранится в виде (Дата, Сообщение). 
+Разработайте объектную модель которая позволит хранить ошибки. При создании модели, обратите внимание на то что 
+неплохобы было добавлять информацию об ошибках с любого места программы. Таким образом унифицировать процесс обработки ошибок.</li>
+</ol>
+</body>
+</html>

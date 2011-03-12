@@ -1,0 +1,571 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Урок 3. Разработка программного обеспечения на технологии Java.</title>
+    <link type="text/css" rel="Stylesheet" href="style.css"/>
+</head>
+<body>
+<h1>Работы с системой ввода-вывода и вычислительными потоками</h1>
+<h2>Система ввода-вывода</h2>
+<p>Классы для организации ввода-вывода данных в приложение, располагаются в пакете java.io. 
+Единственным классом который позволяет работать с файловой системой напрямую, является класс File. 
+Экземпляр класса File, можно ассоциировать с файлом или директорией, после чего, использовать методы классы
+для получения информации о директории или файле, а так же создавать новые объекты файловой системы.</p>
+<p>Некоторые методы класса файл (за полным списком методов, обратитесь к документации) :</p>
+<table border="1">
+<tr><th>Метод</th><th>Описание</th></tr>
+<tr><td>getName()</td><td>Возвращает имя файла или директории</td></tr>
+<tr><td>getPath()</td><td>Возвращает относительный путь к файлу или директории</td></tr>
+<tr><td>getAbsolutePath()</td><td>Возвращает абсолютный путь к файлу или директории</td></tr>
+<tr><td>exists()</td><td>Возвращает истину если объект файловой системы существует</td></tr>
+<tr><td>isDirectory()</td><td>Возвращает истину если объектом файловой системы является директория</td></tr>
+<tr><td>isFile()</td><td>Возвращает истину если объектом файловой системы является файл</td></tr>
+<tr><td>lastModified()</td><td>Возвращает дату последней модификации</td></tr>
+<tr><td>length()</td><td>Возвращает размер файла в байтах</td></tr>
+<tr><td>renameTo(File file)</td><td>Переименовывает или перемещает файл</td></tr>
+<tr><td>createNewFile()</td><td>Создает новый файл</td></tr>
+</table>
+<p>Рассмотрим пример работы с файловой системой, создадим файл, после чего переместим его в другой каталог.</p>
+<div class="code">
+<span class=comment>
+    	// Создаем объект File, ссылающийся на файл one.txt<br />
+    	// Обратите внимание, что на данном этапе создается<br />
+    	// связь между объектом файловой системы и экземпляром класса File,<br />
+    	// если объект файловой системы не существует, то он НЕ СОЗДАЕТСЯ</span><br />
+    	File file = <span class="light">new</span> File("c:\\one.txt");<br /><br />
+
+    <span class="comment">// Вызываем метод createNewFile, для <br />
+    	// создания файла</span><br />
+    	file.createNewFile();<br />
+    	
+    	<span class="comment">// Создаем объект File, ссылающийся на файл one.txt</span><br />
+    	File file2 = new File("D:\\two.txt");<br />
+    	
+    	<span class="comment">// Перемещаем файл c:\\one.txt в файл D:\\two.txt</span><br />
+    	file.renameTo(file2);
+</div>
+<h2>Потоки ввода\вывода</h2>
+<p>Для начала дадим определение потока. Потоком называется последовательность данных, которая
+перемещается от источника (поток для ввода) к получателю (поток для вывода).
+</p>
+<p>Потоки разделяют на байтовые и строковые, разница между ними в том что, для байтовых минимальные 
+размер информации которым они оперируют - один байт, а для строковых один символ ( т.е. два байта).
+Также, потоки делятся, на потоки чтения и записи. Как для байтовых, так и для символьных потоков
+существуют пары базовых классов, и набор классов наследников которые реализовывают дополнительную функциональность.
+</p>
+<h4>Классы потоков</h4>
+<table border="1">
+<tr><th>&nbsp;</th><th>Байтовые</th><th>Строковые</th></tr>
+<tr><td valign="top">Базовые классы потоков</td><td>InputStream<br />OutputStream</td><td>Reader<br />Writer</td></tr>
+<tr><td valign="top">Фильтрованные потоки</td><td>FilterInputStream<br />FilterOutputStream</td><td>FilterReader<br />FilterWriter</td></tr>
+<tr><td valign="top">Буферизированные потоки</td><td>BufferedInputStream<br/>BufferedOutputStream</td><td>BufferedReader<br />BufferedWriter</td></tr>
+<tr><td valign="top">Канальные потоки</td><td>PipedInputStream<br />PipedOutputStream</td><td>PipedReader<br />PipedWriter</td></tr>
+<tr><td valign="top">Потоки для работы с фалами</td><td>FileInputStream<br />FileOutputStream</td><td>FileReader<br />FileWriter</td></tr>
+</table>
+<p>Как Вы заметили, существует еще одно разделение потоков, это разделение по функциональности. Потоки делятся на:
+<ul>
+<li><strong>Фильтрованные потоки</strong>, позволяющие применять различные фильтры к информации которая читается или пишется в поток.
+Такие потоки могут объединятся в цепочки, реализующие сложный фильтр.</li>
+<li><strong>Буферизированные потоки</strong> позволяют избегать необходимость доступа к файловой системе при выполнении каждой
+операции чтения или записи.</li>
+<li><strong>Канальные потоки</strong> позволяют создавать пары потоков в которых один поток пишет а другой читает.</li>
+<li><strong>Файловые потоки</strong> позволяют работать с фалами как в двоичном так и текстовом виде.</li>
+</ul>
+</p>
+<p>Итак, рассмотрим класс InputStream. Класс является абстрактным, а следовательно экземпляр этого класса
+мы создать неможен. Но объект класса наследника (FilterInputStream,BufferedInputStream и т.д.) 
+мы можем привести к типу InputStream.</p>
+<table border="1">
+<tr><th>Метод</th><th>Описание</th></tr>
+<tr><td>read()</td><td>Возвращает представление очередного доступного символа во входном потоке в виде целого.</td></tr>
+<tr><td>read(byte b[])</td><td>Вычитывает b.length байтов из входного потока в массив b. Возвращает количество байтов, в действительности прочитанных из потока.</td></tr>
+<tr><td>read(byte b[], int off, int len)</td><td>Вычитывает len байтов, расположив их в массиве b, начиная с элемента off. Возвращает количество реально прочитанных байтов.</td></tr>
+<tr><td>skip(long n)</td><td> Пропускает во входном потоке n байт. Возвращает количество пропущенных байтов.</td></tr>
+<tr><td>available()</td><td> Возвращает количество байт, доступных для чтения в настоящий момент.</td></tr>
+<tr><td>mark(int readlimit)</td><td>Ставит метку в текущей позиции входного потока, которую можно будет использовать до тех пор, пока из потока не будет прочитано readlimit байтов.</td></tr>
+<tr><td>reset()</td><td> возвращает указатель потока на установленную ранее метку.</td></tr>
+<tr><td>markSupported()</td><td> Возвращает true, если данный поток поддерживает операции mark/reset.</td></tr>
+<tr><td>close()</td><td> Закрывает источник ввода. Последующие попытки чтения из этого потока приводят к возбуждению IOException.</td></tr>
+</table>
+<p>Класс OutputStream:</p>
+<table border="1">
+<tr><th>Метод</th><th>Описание</th></tr>
+<tr><td>write(int b)</td><td>Записывает один байт в выходной поток. Обратите внимание — аргумент этого метода имеет тип int, что позволяет вызывать write, передавая ему выражение, при этом не нужно выполнять приведение его типа к byte.</td></tr>
+<tr><td>write(byte b[])</td><td>Записывает в выходной поток весь указанный массив байтов.</td></tr>
+<tr><td>write(byte b[], int off, int len)</td><td>Записывает в поток часть массива — len байтов, начиная с элемента b[off].</td></tr>
+<tr><td>flush()</td><td>Очищает выходные буферы, завершая операцию вывода.</td></tr>
+<tr><td>close()</td><td>Закрывает выходной поток. Последующие попытки записи в этот поток будут возбуждать IOException.</td></tr>
+</table>
+<p>Пример работы с потоками, копирование данных из файла "C:\\one.txt" в файл "D:\\two.txt"</p>
+<div class ="code">
+    <span class="comment">//Объекты свзяаные с файлами на диске</span><br />
+    File file = new File("c:\\one.txt");<br />
+    File file2 = new File("D:\\two.txt");<br /><br />
+    	
+    <span class="comment">//Буфер для чтения</span><br />	
+    <span class="light">char</span> buffer[] = <span class="light">new char</span>[255];<br /><br />
+    	
+    <span class="light">try</span> {<br />
+        <span class="comment">//Создание потока для чтения</span><br />
+&nbsp;&nbsp;&nbsp;FileReader rdr = <span class="light">new</span> FileReder(file);<br />
+    	
+    	<span class="comment">//Создание потока для записи</span><br />
+&nbsp;&nbsp;&nbsp;FileWriter wrt = <span class="light">new</span> FileWriter(file2);<br /><br />
+    	
+&nbsp;&nbsp;&nbsp;while(rdr.read(buffer)!=-1){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wrt.write(buffer);<br />
+&nbsp;&nbsp;&nbsp;}<br />
+    	
+&nbsp;&nbsp;&nbsp;rdr.close();<br />
+&nbsp;&nbsp;&nbsp;wrt.close();<br />
+    } <span class="light">catch</span> (IOException e) {<br />
+	&nbsp;&nbsp;&nbsp;System.out.print("Ошибка чтения/записи");<br />
+	}<br />
+</div>
+<p>После того как мы ознакомились с основными приципами работы с потоками, 
+давайте перейдем к рассмотрению потоков с дополнительной функциональностью.</p>
+<h2>Фильтрованные потоки</h2>
+<p>Как говорилось ранее - это потоки позволяющие применять набор фильтров к обрабатываемой информации. Рассмотрим пример, 
+в котором создадим фильтрованный поток, позволяющий считывать данные с текстового документа, и преобразовывать их в заглавные буквы.</p>
+<div class="code">
+<span class="light">import</span> java.io.FilterReader;<br />
+<span class="light">import</span> java.io.Reader;<br />
+<span class="light">import</span> java.io.IOException;<br />
+
+<span class="light">public class</span> UpperCaseConvertor <span class="light">extends</span> FilterReader {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public</span> UpperCaseConvertor(Reader reader) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">super</span>(reader);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public int</span> read() <span class="light">throws</span> IOException {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">int</span> c = <span class="light">super</span>.read();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">return</span> (c == -1 ? c : Character.toUpperCase((char)c));<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public int</span> read(<span class="light">char</span>[] buf, <span class="light">int</span> offset, <span class="light">int</span> count) <span class="light">throws</span> IOException {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">int</span> nread = <span class="light">super</span>.read(buf, offset, count);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">int</span> last = offset + nread;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">for</span> (<span class="light">int</span> i = offset; i < last; i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;buf[i] = Character.toUpperCase(buf[i]);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">return</span> nread;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}
+</div>
+<br /><br />
+<div class="code">
+<span class="light">import</span> java.io.StringReader;<br />
+<span class="light">import</span> java.io.FilterReader;<br />
+<span class="light">import</span> java.io.IOException;<br /><br />
+
+<span class="light">public class</span> UpperCaseConvertorTest {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public static void</span> main(String[] args) <span class="light">throws</span> IOException {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;StringReader src = <span class="light">new</span> StringReader(args[0]);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;FilterReader f   = <span class="light">new</span> UpperCaseConvertor(src);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">int</span> c;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">while</span> ((c = f.read()) != -1)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print((char)c);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;System.out.println();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}<br />
+
+</div>
+<p>Итак, мы создали класс наследник от FilterReader,и перегрузили метод read который считанные символы переводит в верхний регистр с помощью
+метода toUpperCase класса Character.</p>
+<h2>Буферизированные потоки</h2>
+<p>Для повышения быстродействия приложения, при считывании с внешних устройств данные зачастую буферизируют.
+Это позволяет сократить количество обращений к файловой системе, т.к. на уровне файловой системы чтение происходит не побайтово, а буферизированно.
+Для буферизации данных служат классы BufferedInputStream и BufferedOutputStream для работы с бинарными данными, 
+и классы BufferedReader, BufferedWriter для работы с текстовыми данными. 
+Классы содержат массивы, которые служат буфером для обрабатываемых данных. То 
+есть когда байты из потока считываются либо пропускаются (метод skip()), сначала заполняется буферный массив, 
+причем, из надстраиваемого потока загружается сразу много байт, чтобы не требовалось обращаться к нему 
+при каждой операции read или skip. Также класс BufferedInputStream добавляет поддержку методов mark() и reset(). Эти методы 
+определены еще в классе InputStream, но там их реализация по умолчанию возбуждает исключение IOException. Метод mark() 
+запоминает точку во входном потоке, а вызов метода reset() приводит к тому, что все байты, полученные 
+после последнего вызова mark(), будут считываться повторно, прежде, чем новые байты начнут поступать из надстроенного входного потока.
+BufferedOutputStream предоставляет возможность производить многократную запись небольших блоков данных без обращения к 
+устройству вывода при записи каждого из них. Сначала данные записываются во внутренний буфер. Непосредственное обращение к 
+устройству вывода и, соответственно, запись в него, произойдет, когда буфер заполнится. Инициировать передачу содержимого буфера 
+на устройство вывода можно и явным образом, вызвав метод flush(). Так же буфер освобождается перед закрытием потока. При этом 
+будет закрыт и надстраиваемый поток. </p>
+<p>Проведем небольшой эксперимент. Произведем чтение из файла используя обычный поток и буферизированный.</p>
+<div class="code">
+<span class="light">try</span> {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;String fileName = "d:\\file1";<br />
+&nbsp;&nbsp;&nbsp;&nbsp;InputStream inStream = <span class="light">null</span>;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;OutputStream outStream = <span class="light">null</span>;<br /><br />
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//Записываем в файл некоторое количество байт</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;long timeStart = System.currentTimeMillis();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;outStream = <span class="light">new</span> FileOutputStream(fileName);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;outStream = <span class="light">new</span> BufferedOutputStream(outStream);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">for</span>(<span class="light">int</span> i=1000000; --i>=0;) {<br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;outStream.write(i);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">long</span> time = System.currentTimeMillis() - timeStart;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Время записи: " + time + " миллисекунд");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;outStream.close();<br /><br />
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//Определяем время считывания без буферизации</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;timeStart = System.currentTimeMillis();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;inStream = new FileInputStream(fileName);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">while</span>(inStream.read()!=-1){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;time = System.currentTimeMillis() - timeStart;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;inStream.close();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("На чтение затрачено: " + (time) + " миллисекунд");<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//Определяем время считывания с буферизацией</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;timeStart = System.currentTimeMillis();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;inStream = <span class="light">new</span> FileInputStream(fileName);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;inStream = <span class="light">new</span> BufferedInputStream(inStream);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">while</span>(inStream.read()!=-1){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;time = System.currentTimeMillis() - timeStart;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;inStream.close();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("На буферизированное чтение затрачено: " + (time) + " миллисекунд");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;} <span class="light">catch</span> (IOException e) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("IOException: " + e.toString());<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;} 
+</div>
+<p>Результат работы</p>
+<div class="code">
+Время записи: 252 миллисекунд<br />
+На чтение затрачено: 6716 миллисекунд<br />
+На буферизированное чтение затрачено 29 миллисекунд<br />
+</div>
+<p>Невооруженным глазом видно, что прирост производительности при использовании буферизированных потоков на лицо.</p>
+<h2>Потоки, размещаемые в оперативной памяти</h2>
+<p>В библиотеке классов Java есть три класса, специально предназначенных для создания потоков в оперативной памяти. 
+Это классы ByteArrayOutputStream, ByteArrayInputStream</p>
+<h3>Класс ByteArrayOutputStream</h3>
+<p>Класс ByteArrayOutputStream является наследником класса OutputStream. В нем имеется два конструктора:</p>
+<div class=code>
+<span class="light">public</span> ByteArrayOutputStream();<br />
+<span class="light">public</span> ByteArrayOutputStream(<span class="light">int</span> size);
+</div>
+<p>Первый из этих конструкторов создает выходной поток в оперативной памяти с начальным размером буфера, 
+равным 32 байта. Второй позволяет указать необходимый размер буфера.<br />
+Методы класса ByteArrayOutputStream определены методы:
+<table border="1">
+<tr><th width="300">Метод</th><th>Описание</th></tr>
+<tr><td>void reset();</td><td>Сбрасывает счетчик байт, записанных в выходной поток. Если данные, 
+записанные в поток вам больше не нужны, вы можете вызвать этот метод и использовать память, выделенную для 
+потока, для записи других данных.</td></tr>
+<tr><td>int size()</td><td>Определить количество байт данных, записанных в поток</td></tr>
+<tr><td>byte[] toByteArray();</td><td>Позволяет скопировать данные, записанные в поток, в массив байт. Этот метод
+ возвращает адрес созданного для этой цели массива.</td></tr>
+<tr><td>void writeTo (OutputStream out);</td><td>Копирует содержимое данного потока в другой выходной поток, ссылка на который передается методу через параметр</td></tr>
+</table>
+</p>
+<h3> Класс ByteArrayInputStream</H3>
+<p>С помощью класса ByteArrayInputStream вы можете создать входной поток на базе массива байт, 
+расположенного в оперативной памяти. В этом классе определено два конструктора:</P>
+<div class=code>
+<span class="light">public</span> ByteArrayInputStream(<span class="light">byte</span> buf[]);<br />
+<span class="light">public</span> ByteArrayInputStream(<span class="light">byte</span> buf[], <span class="light">int</span> offset, <span class="light">int</span> length);<br />
+</div>
+<p>Первый конструктор получает через единственный параметр ссылку на массив, который будет использован для создания входного потока. 
+Второй позволяет дополнительно указать смещение offset и размер области памяти length, которая будет использована для создания потока.</p>
+
+<table border="1">
+<tr><th width="300">Метод</th><th>Описание</th></tr>
+<tr><td>int available()</td><td>Возвращает количество доступных для чтения байт</td></tr>
+<tr><td>void reset()</td><td>Сбрасывает счетчик байт</td></tr>
+</table>
+<p>Так же, класс имеет реализацию методов read и skip, которые работают так же как и у всех потоков чтения.</p>
+<h2>Сериализация объектов</h2>
+<p>Преобразование объекта в последовательность байт называют сериализация. Поскольку сериализованный объект – это последовательность байт, которую 
+можно легко сохранить в файл, передать по сети и т.д., то и объект затем можно восстановить 
+на любой машине, вне зависимости от того, где проводилась сериализация.</p>
+<p>Для того, чтобы сериализировать объект, класс, от которого он порожден, 
+должен реализовывать интерфейс java.io.Serializable. В этом интерфейсе отсутствуют определения методов, а 
+нужен он лишь для указания того, что объекты класса могут быть сериализированны. 
+При попытке сериализовать объект, не имеющий такого интерфейса, будет 
+возбуждена исключительная ситуация java.io.NotSerializableException.</p>
+<p>Классы ObjectInputStream и ObjectOutputStream, позволяют сериализировать \ десериализировать объекты.
+Для того, чтобы сериализировать объект, нужен выходной поток  OutputStream, в который будет 
+записываться сгенерированная последовательность байт. 
+Этот поток передается в конструктор ObjectOutputStream. Затем вызовом метода writeObject() объект 
+сериализуется и записывается в выходной поток. Например:
+</p>
+<div class="code">
+ByteArrayOutputStream os = <span class="light">new</span> ByteArrayOutputStream();<br />
+Object objSave = <span class="light">new</span> Integer(1);<br />
+ObjectOutputStream oos = <span class="light">new</span> ObjectOutputStream(os);<br />
+oos.writeObject(objSave);<br />
+</div>
+<p>Результат сериализации Вы можете увидеть вызвав метод toByteArray():</p>
+<div class=code>byte[] bArray = os.toByteArray(); </div>
+<p>А чтобы восстановить объект, его нужно десериализовать из этого массива:</p>
+<div class="code">
+ByteArrayInputStream is = <span class="light">new</span> ByteArrayInputStream(bArray);<br />
+ObjectInputStream ois = <span class="light">new</span> ObjectInputStream(is);<br />
+Object objRead = ois.readObject();
+</div>
+<p>Теперь можно убедиться, что восстановленный объект идентичен исходному:</p>
+<div class=code>
+
+System.out.println("readed object is: " + objRead.toString());<br />
+System.out.println("Object equality is: " + (objSave.equals(objRead)));<br />
+System.out.println("Reference equality is: " + (objSave==objRead));
+</div>
+<p>Результатом выполнения приведенного выше кода будет:</p>
+<div class=code>
+readed object is: 1<br />
+Object equality is: true<br />
+Reference equality is: false <br />
+</div>
+<p>Обратите внимание что восстановленный объект не совпадает с исходным, но по значению они равны.</p>
+<p>Сериализацию, активно используют для сохранения \ востонавления состояния объекта. Как правило состояния объекта 
+описывается значениями его полей. Для того что бы объект мог быть успешно десериализирован у него должен присутствовать 
+конструктор по умолчанию. Т.к. десериализация - это процесс создания объекта ( а неотъемлемая часть процесса создания 
+объекта - есть вызов конструктора) и заполнения его полей значениями.</p>
+<p>Иногда в объектах существуют поля которые не требуют сериализации, определив перечень таких полей можно 
+увеличить производительность Вашего приложения. К примеру, Если сериализованный объект передается по сети, то 
+исключение такого поля из сериализации позволяет уменьшить нагрузку на сеть. Итак рекомендуется не сериализировать:
+<ul>
+<li>Поля которые хранят временные данные, и требуются при различных расчетах.</li>
+<li>Поля значения которых можно получить на основе значений других полей, к примеру в классе Заказ с полями "количество товара", 
+"цена за единицу", "сумма заказа". Поле "сумма заказа" является вычисляемым ("количество товара" X  "цена за единицу"),
+сериализация \ десириализация этого поля займет больше времени чем вычисление.</li>
+<li>Поля хранящие конфиденциальную информацию ( пароль, и т.д.). Для таких полей следует разработать отдельный механизм передачи,
+возможно основанный на сериализации. Для того чтобы исключиться поле из списка сериализируемых, следует
+установить спецификатор transient.</li>
+</ul>
+<div class="code">
+<span class="light">class</span> Order <span class="light">implements</span> java.io.Serializable {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">private int</span> amount;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">private double</span> price;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">private transient double</span> total;<br />
+}
+</div></p>
+<p>В приведенном выше классе, поле total исключается из списка сериализируемых.</p>
+</ul>
+</p>
+<h2>Граф сериализации</h2>
+<p><img src="pic/graph.jpg" align="right">До этого мы рассматривали объекты, которые имеют поля лишь примитивных типов. Если же сериализуемый объект 
+ссылается на другие объекты, их также необходимо сохранить (записать в поток байт), а при десериализации – восстановить. 
+Эти объекты, в свою очередь, также могут ссылаться на следующие объекты. При этом важно, что если 
+несколько ссылок указывают на один и тот же объект, то этот объект должен быть сериализован лишь однажды, а 
+при восстановлении все ссылки должны вновь указывать на него одного. Например, сериализуемый объект A ссылается 
+на объекты B и C, каждый из которых, в свою очередь, ссылается на один и тот же объект D (см рис.). После десериализации не 
+должно возникать ситуации, когда B ссылается на D1, а C – на D2, где D1 и D2 – равные, но все же различные объекты.
+Для организации такого процесса стандартный механизм сериализации строит граф, включающий в себя все участвующие объекты 
+и ссылки между ними. Если очередная ссылка указывает на некоторый объект, сначала проверяется – нет ли такого объекта в 
+графе. Если есть – объект второй раз не сериализуется. Если нет – новый объект добавляется в граф.
+При построении графа может встретиться объект, порожденный от класса, не реализующего интерфейс Serializable. В 
+этом случае сериализация прерывается, генерируется исключение java.io.NotSerializableException. </p>
+<h2>Потоки выполнения.</h2>
+<p>Итак, в этом разделе мы рассмотрим как устроено многопоточное программирование в JAVA. 
+В JAVA существует два способа создания вычислительных потоков (с помощью наследования от специальных классов и с
+помощью реализации интерфейса), каждый из которых имеет свои 
+достоинства и недостатки.</p>
+<h3>Класс Thread</h3>
+<p>Поток выполнения в Java представляется экземпляром класса Thread. Для того, чтобы 
+создать свой поток выполнения, необходимо пронаследоваться от этого класса и переопределить метод run().</p>
+<div class=code>
+<span class="light">public class</span> CalcThread <span class="light">extends</span> Thread {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">int</span> start,end;<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;CalcThread(<span class="light">int</span> start,<span class="light">int</span> end){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.start = start;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.end = end;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public void</span> run(){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">int</span> sum= 0;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">for</span>(<span class="light">int</span> i= start; i<=end; i++)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum+=i;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Сумма чисел на интервале "+start+" - "+end+" = "+ sum);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}
+</div> 	<p>
+Метод run() содержит программный код, который будет выполнятся в новом потоке. Чтобы запустить его, необходимо 
+создать экземпляр класса-наследника и вызвать унаследованный метод start(), который сообщает виртуальной 
+машине, что требуется запустить новый поток исполнения и начать выполнять в нем метод run().
+</p>	
+<div class="code">
+CalcThread t = <span class="light">new</span> CalcThread(10,100);<br />
+t.start(); <br />
+</div>
+<h3>Интерфейс Runnable</h3>     
+<p>Описанный подход имеет один недостаток. Поскольку в Java множественное наследование отсутствует, 
+требование наследоваться от Thread может привести к конфликту. Если еще раз посмотреть на приведенный 
+выше пример, станет понятно, что наследование производилось только с целью переопределения метода run(). 
+Поэтому предлагается более простой способ создать свой поток исполнения. Достаточно реализовать интерфейс Runnable, 
+в котором объявлен только один метод – уже знакомый void run(). Перепишем пример, приведенный выше, с помощью этого интерфейса:
+</p>
+<div class="code">
+<span class="light">public class</span> CalcRunnable <span class="light">implements</span> Runnable  {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">int</span> start,end;<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;CalcRunnable(<span class="light">int</span> start,<span class="light">int</span> end){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.start = start;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">this</span>.end = end;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public void</span> run(){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">int</span> sum= 0;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">for</span>(<span class="light">int</span> i= start; i<=end; i++)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum+=i;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Сумма чисел на интервале "+start+" - "+end+" = "+ sum);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}<br />
+</div>
+<p>Также незначительно меняется процедура запуска потока: </p>   
+<div class=code>
+Runnable r = <span class="light">new</span> CalcRunnable(10,100);<br />
+Thread t = <span class="light">new</span> Thread(r);<br />
+t.start(); <br />
+</div>      
+<p>Если раньше объект, представляющий сам поток выполнения, и объект с методом run(), реализующим 
+необходимую функциональность, были объединены в одном экземпляре класса MyThread, то теперь они разделены. 
+Какой из двух подходов удобней, решается в каждом конкретном случае. 
+Следует заметить, что Runnable не является полной заменой классу Thread, поскольку создание и 
+запуск самого потока исполнения возможно только через метод Thread.start().</p>
+</body>
+<h3>Работа с приоритетами</h3>
+<p>Для работы с приоритетами в Java, у класса Thread существуют два метода:
+<ul>
+<li><strong>getPriority()</strong> - возвращает приоритет потока</li>
+<li><strong>setPriority(int priority)</strong> - устанавливает приоритет потока</li>
+</ul>
+Значения, определяющие приоритет потока хранятся в константах MIN_PRIORITY (минимальный приоритет), 
+MAX_PRIORITY (максимальный приоритет), NORM_PRIORITY (нормальный приоритет).
+</p>
+<p>Для начала просмотра видео, сделайте двойной клик на изображении ниже.</p>
+<div class="code">
+<strong>Дополнительная информация к видеодополнениям.</strong><br />
+<ol>
+<li>Каждому потоку который создается, автоматически назначается имя. Мы можем назначать имена потокам
+самостоятельно, используя соответствующий конструктор. Получить имя потока можно с помощью метода getName() </li>
+<li>Статическим метод currentThread() класса Thread, возвращает текущий выполняемый поток.</li>
+</ol>
+</div><br />
+<img alt="Видеодополнение" src="" height="600px" width="800px" />
+<h2>Прерывание выполнения потоков</h2>
+<p>В текущей версии Java не предусмотрено никакого способа принудительного прекращения работы потока. 
+Вместо этого применяется метод interrupt, который запрашивает о возможности прекращения работы потока. 
+Это значит, что метод run
+должен периодически проверять, не следует ли ему прекратить выполнение:</p>
+<div class="code">
+<span class="light">public void</span> run(){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">while</span> (нет запроса на прекращение работы и есть какая-то работа){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//выполнение какой-то работы</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}
+</div>
+<p>С помощью метода interrupted() мы можем проверить был ли вызван метод interrupt.</p>
+<div class="code">
+<span class="light">public void</span> run(){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">while</span> (!interrupted()){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//выполнение какой-то работы</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}</div>
+<p>Как известно, работа потока выполняется не постоянно, а иногда приостанавливается, 
+чтобы дать возможность другим потокам решать свои задачи. Когда выполнение потока 
+приостановлено, он не может проверить, следует ли завершить работу, и 
+для этого применяется исключительная ситуация InterruptedException. Когда для
+блокированного объекта вызывается метод interrupt, работа блокирующего вызова
+(метода sleep или wait) завершается, и управление передается обработчику исключительной ситуации InterruptedException.</p>
+
+<div class="code">
+<span class="light">public void</span> run(){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">try</span>{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">while</span> (!interrupted()){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//выполнение какой-то работы</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<span class="light">catch</span>(InterruptedException ex){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//обработка исключительной ситуации</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}</div>
+
+<h2>Синхронизация потоков</h2>
+<p>В многопоточной модели программирования, очень часто встречается ситуация когда, два или более потоков
+начинают работать с одним ресурсов (массивом, файлом и т.д.). В следствии чего предугадать развязку 
+"состязаний" глядя в исходный код становится практически невозможно. Для того что бы разограничить доступ к ресурсу
+используется механизм синхронизации потоков, который основан на принципах блокировки объекта. Объект блокируется
+таким образом, что доступ к нему в один момент времени может получить только один поток.</p>
+<div class="code">
+<span class="light">synchronized</span> (some_object) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//Код приложения, который работает с объектом</span><br />
+} 
+</div>
+<H1>Cинхронизация потоков (видеодополнение)</H1>
+<p>Для начала просмотра видео, сделайте двойной клик на изображении ниже.</p>
+<img alt="Видеодополнение" src="" height="600px" width="800px" />
+<p>В Java существует возможность создавать не только
+синхронизированные участки кода но и синхронизированные методы. Если метод объекта является синхронизированным то
+в один момент времени с ним может работать только один поток, ограничение доступа к методу регулируется на уровне объекта, 
+а если метод является статическим то ограничение доступа происходит на уровне класса. К примеру реализуем код из 
+видеодополнения через синхронизированный метод (для этого укажем спецификатор synchronized при объявлении метода)</p>
+<div class="code">
+<span class="light">public class</span> ThreadSyncTest <span class="light">implements</span> Runnable {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">private static</span> ThreadSyncTest obj = new ThreadSyncTest();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public synchronized void</span> someFunctionality() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">for</span> (<span class="light">int</span> i=0; i<3; i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(Thread.currentThread().getName()+" "+i);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public void</span> run() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj.someFunctionality();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">public static void</span> main(String s[]) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">for</span> (<span class="light">int</span> i=0; i<3; i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light">new</span> Thread(<span class="light">new</span> ThreadSyncTest(), "Thread-"+i).start();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+} <br />
+</div>
+<h1>Группы потоков</h1>
+<p>В некоторых программах содержится довольно много потоков. В этом случае имеет 
+смысл разбить их на функциональные категории. Допустим, что в Web-броузере
+несколько потоков пытаются загрузить несколько изображений с Web-сервера. Если
+пользователь нажимает кнопку Stop (чтобы прервать загрузку текущей страницы), то
+было бы удобно прервать выполнение одновременно всех потоков загрузки изображений. 
+В языке Java предусмотрен механизм создания так называемой группы потоков
+(threadgroup) для одновременной работы с несколькими потоками.
+Для создания группы применяется следующий конструктор:</p>
+<div class=code>
+ThreadGroup myGroup = <span class="light">new</span> ThreadGroup("DownloadsThread");
+</div>
+<p>
+Строковый аргумент конструктора ThreadGroup идентифицирует группу и поэтому должен быть уникальным. 
+Потоки добавляются в группу за счет указания группы в конструкторе потока, как показано ниже.</p>
+<div class=code>
+Thread t = <span class="light">new</span> Thread(myGroup, threadName);
+</div>
+<p>Для проверки наличия выполняемых потоков в группе запущенных потоков применяется метод activeCount.</p>
+<div class=code>
+<span class="light">if</span> (myGroup.activeCount() == 0){<br />
+<span class="comment">// все потоки в группе g остановлены</span><br />
+}
+</div>
+<p>
+Для прерывания всех потоков в группе достаточно вызвать метод interrupt для
+объекта-группы.</p>
+<div class=code>
+myGroup.interrupt(); <span class=comment> // прерывает все потоки в группе myGroup</span>
+</div>
+<p>
+Группы потоков могут содержать дочерние подгруппы. По умолчанию новая группа потоков становится дочерней по отношению 
+к текущей, но в конструкторе можно явно указать имя родительской группы. Методы activeCount и interrupt 
+относятся ко всем потокам группы и ее дочерним подгруппам.
+Замечательное свойство групп потоков заключается в том, что группа может послать
+уведомление, если поток был остановлен в результате возникновения исключительной
+ситуации. Для обработки этой исключительной ситуации необходимо создать дочерний 
+класс на основе класса ThreadGroup и переопределить метод uncaughtException.
+После чего можно заменить выполняемые по умолчанию действия (т.е. вывод состояния 
+стека в стандартный поток ошибок) какими-то более сложными действиями, например, 
+записать ошибки в файл или вывести их в диалоговом окне.
+</p>
+<h2>Домашнее задание</h2>
+К домашнему заданию из предыдущего урока реализуйте в классе который логирует ошибки, автосохранение ошибок в файл.
+К примеру, если размер буфера который содержит ошибки превышает 30-ть записей то, эту информацию необходимо дописать 
+в файл и очистить буфер. Реализуйте это в виде трех отдельных потоков, каждый из которых записывает по 10-ть сообщений.
+При этом объедините потоки в одну группу.
+</body>
+</html>
