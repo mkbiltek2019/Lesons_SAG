@@ -37,12 +37,12 @@
                 	<div class="r"></div>
                 	<ul class="art-menu">
                 		<li>
-                			<a href="#" class="active"><span class="l"></span><span class="r"></span><span class="t">Home</span></a>
+                			<a href="<?base_url()?>home" class="active"><span class="l"></span><span class="r"></span><span class="t">Главная</span></a>
                 		</li>
                 		<li>
-                			<a href="#"><span class="l"></span><span class="r"></span><span class="t">Menu Item</span></a>
+                			<a href="<?base_url()?>products"><span class="l"></span><span class="r"></span><span class="t">Продукция</span></a>
                 			<ul>
-                				<li><a href="#">Menu Subitem 1</a>
+                				<li><a href="#">Шоколад</a>
                 					<ul>
                 						<li><a href="#">Menu Subitem 1.1</a></li>
                 						<li><a href="#">Menu Subitem 1.2</a></li>
@@ -54,7 +54,7 @@
                 			</ul>
                 		</li>		
                 		<li>
-                			<a href="#"><span class="l"></span><span class="r"></span><span class="t">About</span></a>
+                			<a href="<?base_url()?>home"><span class="l"></span><span class="r"></span><span class="t">О компании</span></a>
                 		</li>
                 	</ul>
                 </div>
@@ -68,36 +68,36 @@
                                             <!-- block-content -->
                                                             <ul class="art-vmenu">
                                                             	<li>
-                                                            		<a href="page.html?i1"><span class="l"></span><span class="r"></span><span class="t">Home</span></a>
+                                                            		<a href="<?base_url()?>home"><span class="l"></span><span class="r"></span><span class="t">Главная</span></a>
                                                             	</li>
                                                             	<li>
-                                                            		<a href="page.html?i2"><span class="l"></span><span class="r"></span><span class="t">News</span></a>
+                                                            		<a href="<?base_url()?>home"><span class="l"></span><span class="r"></span><span class="t">Новости</span></a>
                                                             				<ul>
-                                                            			<li><a href="page.html?">Top 10</a></li>
+                                                            			<li><a href="page.php?">Top 10</a></li>
                                                             		</ul>
                                                             	</li>
                                                             	<li class="active">
-                                                            		<a class="active" href="page.html?i3"><span class="l"></span><span class="r"></span><span class="t">Menu Item</span></a>
+                                                            		<a class="active" href="<?base_url()?>products"><span class="l"></span><span class="r"></span><span class="t">Продукция</span></a>
                                                             		<ul class="active">
-                                                            			<li><a href="page.html?i3s1">Subitem 1</a></li>
-                                                            			<li><a href="page.html" class="active">Subitem 2</a></li>
-                                                            			<li><a href="page.html?i3s3">Subitem 3</a></li>
+                                                            			<li><a href="page.php?i3s1">Шоколад 1</a></li>
+                                                            			<li><a href="page.php" class="active">Subitem 2</a></li>
+                                                            			<li><a href="page.php?i3s3">Subitem 3</a></li>
                                                             		</ul>
                                                             	</li>
                                                             	<li>
-                                                            		<a href="page.html?i4"><span class="l"></span><span class="r"></span><span class="t">Video</span></a>
+                                                            		<a href="page.php?i4"><span class="l"></span><span class="r"></span><span class="t">Video</span></a>
                                                             	</li>
                                                             	<li>
-                                                            		<a href="page.html?i5"><span class="l"></span><span class="r"></span><span class="t">Archive</span></a>
+                                                            		<a href="page.php?i5"><span class="l"></span><span class="r"></span><span class="t">Archive</span></a>
                                                             		<ul>
                                                             			<li><a href="page.html?i5s1">2008</a>
                                                             				<ul>
-                                                            					<li><a href="page.html?i5s1s1">January</a></li>
-                                                            					<li><a href="page.html?i5s1s2">February</a></li>
-                                                            					<li><a href="page.html?i5s1s3">March</a></li>
+                                                            					<li><a href="page.php?i5s1s1">January</a></li>
+                                                            					<li><a href="page.php?i5s1s2">February</a></li>
+                                                            					<li><a href="page.php?i5s1s3">March</a></li>
                                                             				</ul>
                                                             			</li>
-                                                            			<li><a href="page.html?i5s2">2007</a>
+                                                            			<li><a href="page.php?i5s2">2007</a>
                                                             				<ul>
                                                             					<li><a href="page.html?i5s2s1">January</a></li>
                                                             					<li><a href="page.html?i5s2s2">February</a></li>
@@ -117,10 +117,10 @@
                                                             		<a href="page.html?i6"><span class="l"></span><span class="r"></span><span class="t">Forum</span></a>
                                                             	</li>
                                                             	<li>
-                                                            		<a href="page.html?i7"><span class="l"></span><span class="r"></span><span class="t">About</span></a>
+                                                            		<a href="<?base_url()?>home"><span class="l"></span><span class="r"></span><span class="t">О компании</span></a>
                                                             	</li>
                                                             	<li>
-                                                            		<a href="page.html?i8"><span class="l"></span><span class="r"></span><span class="t">Contact</span></a>
+                                                            		<a href="<?base_url()?>home"><span class="l"></span><span class="r"></span><span class="t">Контакты</span></a>
                                                             	</li>
                                                             </ul>
                                             <!-- /block-content -->
@@ -134,7 +134,7 @@
                             <div class="art-block">
                                 <div class="art-block-body">
                                             <div class="art-blockheader">
-                                                 <div class="t">Newsletter</div>
+                                                 <div class="t">Рассылка</div>
                                             </div>
                                             <div class="art-blockcontent">
                                                 <div class="art-blockcontent-body">
@@ -144,7 +144,7 @@
                                                             <span class="art-button-wrapper">
                                                             	<span class="l"> </span>
                                                             	<span class="r"> </span>
-                                                            	<input class="art-button" type="submit" name="search" value="Subscribe" />
+                                                            	<input class="art-button" type="submit" name="search" value="Подписаться" />
                                                             </span>
                                                             
                                                             </form></div>
@@ -211,11 +211,11 @@
                                                 <div class="art-blockcontent-body">
                                             <!-- block-content -->
                                                             <div>
-                                                                  <img src="<?php echo base_url();?>images/contact.jpg" alt="an image" style="margin: 0 auto;display:block;width:95%" />
+                                                                  <img src="<?php echo base_url();?>styles/images/contact.jpg" alt="an image" style="margin: 0 auto;display:block;width:95%" />
                                                             <br />
-                                                            <b>Company Co.</b><br />
-                                                            Las Vegas, NV 12345<br />
-                                                            Email: <a href="mailto:info@company.com">info@company.com</a><br />
+                                                            <b>ChocoPlanet Company.</b><br />
+                                                            Virne, Ukraine 12345<br />
+                                                            Email: <a href="mailto:info@chocoplanet.com">info@chocoplanet.com</a><br />
                                                             <br />
                                                             Phone: (123) 456-7890 <br />
                                                             Fax: (123) 456-7890
@@ -235,25 +235,35 @@
                             <div class="art-post-inner art-article">
                                             <div class="art-postmetadataheader">
                                                 <h2 class="art-postheader">
-                                                    <img src="<?php echo base_url();?>images/postheadericon.png" width="26" height="26" alt="postheadericon" />
-                                                    Welcome
+                                                    <img src="<?php echo base_url();?>styles/images/family.bmp" width="300" height="200" alt="family" />
+                                                    Добро пожаловать
                                                 </h2>
                                             </div>
                                             <div class="art-postcontent">
                                                 <!-- article-content -->
                                                 
                                                 
-                                                <p>Lorem ipsum dolor sit amet,
-                                                <a href="#" title="link">link</a>, <a class="visited" href="#" title="visited link">visited link</a>,
-                                                 <a class="hover" href="#" title="hovered link">hovered link</a> consectetuer
-                                                adipiscing elit. Quisque sed felis. Aliquam sit amet felis. Mauris semper,
-                                                velit semper laoreet dictum, quam diam dictum urna, nec placerat elit nisl
-                                                in quam. Etiam augue pede, molestie eget, rhoncus at, convallis ut, eros.</p>
+                                                <p>Наша шоколадная продукция будет не заменима<br/>
+                                                   когда Вы хотите сделать оригинальный подарок,<br/>
+                                                   при этом вкусный и эксклюзивный,<br/>
+                                                   связанный с определённым событием или человеком!</p>
+                                                <p>
+                                                    Наша шоколадная продукция идеально подойдёт<br/>
+                                                    для детских праздников и юбилеев,<br/>
+                                                    дней рождений и именин,<br/>
+                                                    свадеб и холостяцких вечеринок,<br/>
+                                                    корпоративов и встрече Нового года.</p>
+                                                <p>
+                                                    Наша шоколадная продукция можёт быть<br/>
+                                                    прекрасным подарком кому угодно<br/>
+                                                    к любой праздничной дате<br/>
+                                                    или как символ расположения !!!
+                                                </p>
                                                 <p>
                                                 	<span class="art-button-wrapper">
                                                 		<span class="l"> </span>
                                                 		<span class="r"> </span>
-                                                		<a class="art-button" href="javascript:void(0)">Read more...</a>
+                                                		<a class="art-button" href="javascript:void(0)">Читать больше...</a>
                                                 	</span>
                                                 </p>
                                                 <div class="cleared"></div>
@@ -262,7 +272,7 @@
                                                 		<div class="art-layout-cell">
                                                       <div class="overview-table-inner">
                                                 	      <h4>Support</h4>
-                                                						  <img src="<?php echo base_url();?>images/01.png" width="55px" height="55px" alt="an image" class="image" />
+                                                						  <img src="<?php echo base_url();?>styles/images/01.png" width="55px" height="55px" alt="an image" class="image" />
                                                 						  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                                                 						  Quisque sed felis. Aliquam sit amet felis. Mauris semper,
                                                 						  velit semper laoreet dictum, quam diam dictum urna. </p>
@@ -271,7 +281,7 @@
                                                 		<div class="art-layout-cell">
                                                     <div class="overview-table-inner">
                                                 		  <h4>Development</h4>
-                                                						  <img src="<?php echo base_url();?>images/02.png" width="55px" height="55px" alt="an image" class="image" />
+                                                						  <img src="<?php echo base_url();?>styles/images/02.png" width="55px" height="55px" alt="an image" class="image" />
                                                 						  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                                                 						  Quisque sed felis. Aliquam sit amet felis. Mauris semper,
                                                 						  velit semper laoreet dictum, quam diam dictum urna. </p>
@@ -281,7 +291,7 @@
                                                     <div class="overview-table-inner">
                                                 		  <h4>Strategy</h4>
                                                 
-                                                						  <img src="<?php echo base_url();?>images/03.png" width="55px" height="55px" alt="an image" class="image" />
+                                                						  <img src="<?php echo base_url();?>styles/images/03.png" width="55px" height="55px" alt="an image" class="image" />
                                                 						  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                                                 						  Quisque sed felis. Aliquam sit amet felis. Mauris semper,
                                                 						  velit semper laoreet dictum, quam diam dictum urna. </p>
@@ -303,7 +313,7 @@
                             <div class="art-post-inner art-article">
                                             <div class="art-postmetadataheader">
                                                 <h2 class="art-postheader">
-                                                    <img src="<?php echo base_url();?>images/postheadericon.png" width="26" height="26" alt="postheadericon" />
+                                                    <img src="<?php echo base_url();?>styles/images/postheadericon.png" width="26" height="26" alt="postheadericon" />
                                                     Text, <a href="#" rel="bookmark" title="Permanent Link to this Post">Link</a>, <a class="visited" href="#" rel="bookmark" title="Visited Hyperlink">Visited</a>, <a class="hovered" href="#" rel="bookmark" title="Hovered Hyperlink">Hovered</a>
                                                 </h2>
                                             </div>
@@ -383,7 +393,7 @@
                         <div class="art-footer-text">
                             <p><a href="#">Contact Us</a> | <a href="#">Terms of Use</a> | <a href="#">Trademarks</a>
                                 | <a href="#">Privacy Statement</a><br />
-                                Copyright &#169; 2011 ---. All Rights Reserved.</p>
+                                Copyright &#169; 2011 ChocoPlanet Company. All Rights Reserved.</p>
                         </div>
                 		<div class="cleared"></div>
                     </div>
