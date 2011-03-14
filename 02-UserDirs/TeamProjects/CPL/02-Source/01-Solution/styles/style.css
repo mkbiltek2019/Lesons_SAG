@@ -18,7 +18,7 @@ body
   padding: 0;
   color: #0F252A;
   background-color: #C4C2A1;
-  background-image: url("/images/page_t.jpg");
+  background-image: url("images/page_t.jpg");
   background-repeat: repeat;
   background-attachment: scroll;
   background-position: top left;
@@ -200,7 +200,7 @@ table.position
 {
   width: 42px;
   height: 42px;
-  background-image: url("/images/sheet_s.png");
+  background-image: url("images/sheet_s.png");
 }
 
 .art-sheet-tl
@@ -236,7 +236,7 @@ table.position
   left: 21px;
   right: 21px;
   height: 42px;
-  background-image: url("/images/sheet_h.png");
+  background-image: url("images/sheet_h.png");
 }
 
 .art-sheet-tc
@@ -256,7 +256,7 @@ table.position
   top: 21px;
   bottom: 21px;
   width: 42px;
-  background-image: url("/images/sheet_v.png");
+  background-image: url("images/sheet_v.png");
 }
 
 .art-sheet-cr
@@ -315,7 +315,7 @@ div.art-header-jpeg
   left: 0;
   width: 888px;
   height: 300px;
-  background-image: url("/images/header.jpg");
+  background-image: url("images/header.jpg");
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -446,7 +446,7 @@ h1.art-logo-name, h1.art-logo-name a, h1.art-logo-name a:link, h1.art-logo-name 
 
 .art-menu ul
 {
-  background-image: url(../images/spacer.gif);
+  background-image: url(images/spacer.gif);
   padding: 10px 30px 30px 30px;
   margin: -10px 0 0 -30px;
 }
@@ -480,7 +480,7 @@ h1.art-logo-name, h1.art-logo-name a, h1.art-logo-name a:link, h1.art-logo-name 
   z-index: -1;
   top: 0;
   height: 24px;
-  background-image: url("/images/nav.png");
+  background-image: url("images/nav.png");
 }
 
 .art-nav .l
@@ -524,7 +524,7 @@ h1.art-logo-name, h1.art-logo-name a, h1.art-logo-name a:link, h1.art-logo-name 
   top: 0;
   z-index: -1;
   height: 72px;
-  background-image: url("/images/menuitem.png");
+  background-image: url("images/menuitem.png");
 }
 
 .art-menu a .l
@@ -608,7 +608,7 @@ h1.art-logo-name, h1.art-logo-name a, h1.art-logo-name a:link, h1.art-logo-name 
   margin:0 auto;
   width: 1px;
   height: 24px;
-  background-image: url("/images/menuseparator.png");
+  background-image: url("images/menuseparator.png");
 }
 /* end MenuSeparator */
 
@@ -622,7 +622,7 @@ h1.art-logo-name, h1.art-logo-name a, h1.art-logo-name a:link, h1.art-logo-name 
   width: 180px;
   overflow: hidden;
   line-height: 38px;
-  background-image: url("/images/subitem.png");
+  background-image: url("images/subitem.png");
   background-position: left top;
   background-repeat: repeat-x;
   border-width: 1px;
@@ -850,7 +850,7 @@ ul.art-vmenu a .r, ul.art-vmenu a .l
   top: 0;
   z-index: -1;
   height: 84px;
-  background-image: url("/images/vmenuitem.png");
+  background-image: url("images/vmenuitem.png");
 }
 
 ul.art-vmenu a .l
@@ -912,7 +912,7 @@ ul.art-vmenu ul a
   white-space: nowrap;
   height: 22px;
   overflow: visible;
-  background-image: url("/images/vsubitem.gif");
+  background-image: url("images/vsubitem.gif");
   background-position: 25px 0;
   background-repeat: repeat-x;
   padding-left: 38px;
@@ -1166,7 +1166,7 @@ ul.art-vmenu ul li li li li li a:hover, ul.art-vmenu ul li li li li li a:hover.a
   text-decoration: none;
   line-height: 1.25em;
   padding: 0 0 0 15px;
-  background-image: url("/images/blockcontentbullets.png");
+  background-image: url("images/blockcontentbullets.png");
   background-repeat: no-repeat;
 }
 
@@ -1258,7 +1258,7 @@ input, select, textarea, select
   height: 84px;
   margin: 0;
   padding: 0;
-  background-image: url("/images/button.png");
+  background-image: url("images/button.png");
 }
 
 .art-button-wrapper .l
@@ -1473,7 +1473,7 @@ pre
 
 .art-post ul>li
 {
-  background-image: url("/images/postbullets.png");
+  background-image: url("images/postbullets.png");
   background-repeat: no-repeat;
   padding-left: 15px;/* makes "ul li" not to align behind the image if they are in the same line */
   overflow-x: visible;
@@ -1499,7 +1499,7 @@ blockquote,
   margin: 10px 10px 10px 50px;
   padding: 5px 5px 5px 37px;
   background-color: #FBD46A;
-  background-image: url("/images/postquote.png");
+  background-image: url("images/postquote.png");
   background-position: left top;
   background-repeat: no-repeat;/* makes blockquote not to align behind the image if they are in the same line */
   overflow: auto;
@@ -1522,7 +1522,7 @@ blockquote,
   right:0;
   bottom:0;
   height:50px;
-  background-image: url("/images/footer_b.png");
+  background-image: url("images/footer_b.png");
 }
 
 
@@ -1533,7 +1533,7 @@ blockquote,
   left: 0;
   right: 0;
   bottom: 50px;
-  background-image: url("/images/footer_t.png");
+  background-image: url("images/footer_t.png");
   background-position: left bottom;
 }
 
@@ -1554,7 +1554,7 @@ blockquote,
 .art-rss-tag-icon
 {
   display: block;
-  background-image: url("/images/rssicon.png");
+  background-image: url("images/rssicon.png");
   background-position: center right;
   background-repeat: no-repeat;
   height: 32px;
