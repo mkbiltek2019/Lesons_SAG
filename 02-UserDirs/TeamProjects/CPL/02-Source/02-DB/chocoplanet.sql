@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Час створення: Бер 03 2011 р., 19:13
+-- Час створення: Бер 16 2011 р., 09:00
 -- Версія сервера: 5.5.8
 -- Версія PHP: 5.3.5
 
@@ -29,95 +29,67 @@ USE `chocoplanet`;
 
 CREATE TABLE IF NOT EXISTS `category` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;
 
 --
 -- Дамп даних таблиці `category`
 --
 
+INSERT INTO `category` (`id`, `name`) VALUES
+(1, 'Цукерки'),
+(2, 'Фігурки'),
+(3, 'Коробки'),
+(4, 'Ексклюзивний шоколад'),
+(5, 'Набори'),
+(6, 'Шоколадні тафлі');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблиці `imagepath`
+-- Структура таблиці `products`
 --
 
-CREATE TABLE IF NOT EXISTS `imagepath` (
+CREATE TABLE IF NOT EXISTS `products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
-
---
--- Дамп даних таблиці `imagepath`
---
-
-
--- --------------------------------------------------------
-
---
--- Структура таблиці `product`
---
-
-CREATE TABLE IF NOT EXISTS `product` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(350) COLLATE utf8_unicode_ci NOT NULL,
+  `imagename` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `categoryid` int(11) NOT NULL,
-  `imagepathid` int(11) NOT NULL,
-  `name` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
-  `price` decimal(10,0) NOT NULL,
-  `shotdescription` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
-  `longdescription` varchar(1500) COLLATE utf8_unicode_ci NOT NULL,
-  `thumbnail` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
-  `fullimage` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
-  `sellstartdate` date NOT NULL,
-  `sellenddate` date NOT NULL,
-  `vendorid` int(11) NOT NULL,
-  `ingredients` varchar(1500) COLLATE utf8_unicode_ci NOT NULL,
-  `listprice` decimal(10,0) NOT NULL,
-  `createdate` date NOT NULL,
+  `shortdescription` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `longdescription` varchar(2000) COLLATE utf8_unicode_ci NOT NULL,
+  `price` double NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=29 ;
 
 --
--- Дамп даних таблиці `product`
+-- Дамп даних таблиці `products`
 --
 
-
--- --------------------------------------------------------
-
---
--- Структура таблиці `productcomments`
---
-
-CREATE TABLE IF NOT EXISTS `productcomments` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `productid` int(11) NOT NULL,
-  `comment` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
-
---
--- Дамп даних таблиці `productcomments`
---
-
-
--- --------------------------------------------------------
-
---
--- Структура таблиці `vendor`
---
-
-CREATE TABLE IF NOT EXISTS `vendor` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `fullname` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
-  `address` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
-  `phones` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
-
---
--- Дамп даних таблиці `vendor`
---
-
+INSERT INTO `products` (`id`, `name`, `imagename`, `categoryid`, `shortdescription`, `longdescription`, `price`) VALUES
+(3, 'Бразилька біла', '01_brazilka_bila.png', 1, 'крапля білого шоколаду зі смакотою (цукатами та горіхами)', 'крапля білого шоколаду зі смакотою (цукатами та горіхами)', 6),
+(4, 'Вишнева аграфка', '04_vishneva_agrafka.png', 1, 'трюфель з легким вишневим кремом в чорному шоколаді', 'трюфель з легким вишневим кремом в чорному шоколаді', 5),
+(5, 'Класичний трюфель', '06_klasichniy_trufel.png', 1, 'ганаш з чорного шоколаду та вешків в какао', 'ганаш з чорного шоколаду та вешків в какао', 4),
+(6, 'Білий вельон', '07_bilyi_velyon.png', 1, 'ніжне суфле з чорного шоколаду на марципановій основі в білому шоколаді', 'ніжне суфле з чорного шоколаду на марципановій основі в білому шоколаді', 4),
+(7, 'Гратуляція', '09_gratulyaciya.png', 1, 'марципаново- кокосова начинка в чорному шоколаді', 'марципаново- кокосова начинка в чорному шоколаді', 4),
+(8, 'Бернардинка', '10_bernardinki.png', 1, 'ганаш на основі чорного шоколаду з відтінком ванілі в молочному та білому шоколаді ', 'ганаш на основі чорного шоколаду з відтінком ванілі в молочному та білому шоколаді ', 5),
+(9, 'Софі', '11_sofi.png', 1, 'ніжний горіховий крем з хрусткими карамельними крихтами в чорному шоколаді', 'ніжний горіховий крем з хрусткими карамельними крихтами в чорному шоколаді', 4),
+(10, 'Фрау Рузя', '12_frau_ruzya.png', 1, 'фісташково - горіховий марципан з волоським цільним горішком в молочному шоколаді ', 'фісташково - горіховий марципан з волоським цільним горішком в молочному шоколаді ', 4),
+(11, 'Котиня', 'Kotenya_cilne.png', 2, 'Котиня (чорне, біле, молочне)', 'Котиня (чорне, біле, молочне)', 15),
+(12, 'Курка цільна', 'Kurka_cila.png', 2, 'Курка цільна, велика (чорна, біла, молочна)', 'Курка цільна, велика (чорна, біла, молочна)', 38),
+(13, 'Курка пустотіла', 'Kurka_pustotila.png', 2, 'Курка пустотіла, велика (чорна, біла, молочна)', 'Курка пустотіла, велика (чорна, біла, молочна)', 25),
+(14, 'Ведмедик', 'Vedmedik.png', 2, 'Ведмедик (чорний, білий, молочний)', 'Ведмедик (чорний, білий, молочний)', 18),
+(15, 'Ведмежа з сердечком', 'Vedmezha_z_serdechkom.png', 2, 'Ведмежа з сердечком (чорне, біле, молочне)', 'Ведмежа з сердечком (чорне, біле, молочне)', 30),
+(16, 'Зайченя', 'Zaychenya.png', 2, 'Зайченя (чорне, біле, молочне)', 'Зайченя (чорне, біле, молочне)', 27),
+(17, 'Коробка рожева', 'box_1.png', 3, 'Коробка рожева. Вміст 9 цукерок', 'Коробка рожева. Вміст 9 цукерок', 45),
+(18, 'Коробка коричнева', 'box_2.png', 3, 'Коробка коричнева. Вміст 9 цукерок', 'Коробка коричнева. Вміст 9 цукерок', 45),
+(19, 'Коробка коричнева', 'box_3.png', 3, 'Коробка коричнева. Вміст 9 цукерок', 'Коробка коричнева. Вміст 9 цукерок', 45),
+(20, 'Труфеляда', 'trufelyada.png', 4, '16 штук в коробці', '16 штук в коробці', 88),
+(21, 'Львівське танго', 'tango.png', 4, 'чорнослив в шоколаді з лісовим горіхом ', 'чорнослив в шоколаді з лісовим горіхом ', 7),
+(22, 'Шоколадний Хлопець', 'choco_xlopchik.png', 4, ' ', ' ', 50),
+(23, 'Зайчик в горнятку', 'naborZaychik.png', 5, ' ', ' ', 55),
+(24, 'Великий набір', 'nabor1.png', 5, ' ', ' ', 250),
+(25, 'Великий набір', 'nabor2.png', 5, ' ', ' ', 250),
+(26, 'Білий шоколад', 'ratusha.png', 6, 'Вага 100 гр', ' ', 18),
+(27, 'Молочний шоколад', 'vali.png', 6, 'Вага 100 гр', ' ', 18),
+(28, 'Чорний шоколад', 'gogenberg.png', 6, 'Вага 100 гр', '', 18);

@@ -1,0 +1,46 @@
+Для правильної роботи накатити на базу дані
+ збережені процедури (скопіювати і виконати)
+..----------------------------------------
+
+1) Select product list by category id
+
+DELIMITER $$
+
+DROP PROCEDURE IF EXISTS getProductlistbycategoryid $$
+CREATE PROCEDURE getProductlistbycategoryid(IN categoryid int)
+BEGIN
+	SELECT  p.id as id, 
+		p.name as productname,                
+                p.price as price,
+                p.shortdescription as description,               
+                p.imagename imagename 
+        FROM 
+            products as p
+
+        WHERE   
+	    p.categoryid = categoryid;
+END $$
+
+DELIMITER ;
+
+
+2) select product by id
+
+DELIMITER $$
+
+DROP PROCEDURE IF EXISTS selectproductbyid $$
+CREATE PROCEDURE selectproductbyid (IN productid int)
+BEGIN
+	SELECT  p.id as id, 
+		p.name as productname,                
+                p.price as price,
+                p.shortdescription as description,               
+                p.imagename imagename 
+        FROM 
+            products as p
+
+        WHERE   
+	    p.id = productid;
+END $$
+
+DELIMITER ;
