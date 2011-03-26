@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="210d5157-f5e0-4c34-9358-6395d81a3ef3" name="manekovskiy@A1COMP1 2011-03-26 13:13:58" runUser="STEP\manekovskiy" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="5004994d-31e5-4c57-8d6e-7c87a6d20541">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="D:\MAS\13НС9-1С\02-UserDirs\Manekovskiy\Software Testing\GoogleCalculatorTests\TestResults" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="manekovskiy_A1COMP1 2011-03-26 13_13_58" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-03-26T13:13:58.4121238+02:00" queuing="2011-03-26T13:13:58.4121238+02:00" start="2011-03-26T13:13:58.4277484+02:00" finish="2011-03-26T13:14:50.8951552+02:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CodedUITestMethod1" storage="d:\mas\13нс9-1с\02-userdirs\manekovskiy\software testing\googlecalculatortests\bin\debug\googlecalculatortests.dll" id="f9262658-12ec-3d0f-ba5a-d3a1d4780f9c">
+      <Execution id="977d1a3a-b5ee-42f7-805e-c57adf8d518e" />
+      <TestMethod codeBase="D:/MAS/13НС9-1С/02-UserDirs/Manekovskiy/Software Testing/GoogleCalculatorTests/bin/Debug/GoogleCalculatorTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="GoogleCalculatorTests.CodedUITest1, GoogleCalculatorTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CodedUITestMethod1" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="f9262658-12ec-3d0f-ba5a-d3a1d4780f9c" executionId="977d1a3a-b5ee-42f7-805e-c57adf8d518e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="977d1a3a-b5ee-42f7-805e-c57adf8d518e" testId="f9262658-12ec-3d0f-ba5a-d3a1d4780f9c" testName="CodedUITestMethod1" computerName="A1COMP1" duration="00:00:51.9100343" startTime="2011-03-26T13:13:58.4433730+02:00" endTime="2011-03-26T13:14:50.7232846+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="977d1a3a-b5ee-42f7-805e-c57adf8d518e">
+      <Output>
+        <DebugTrace>W, 3824, 32, 2011/03/26, 13:13:59.224, 36989788810702, QTAgent32.exe, Value in en-US resource 'Развернуть' does not match the defaultvalue 'Maximize'
+W, 3824, 32, 2011/03/26, 13:13:59.224, 36989792066151, QTAgent32.exe, Value in en-US resource 'Восстановить' does not match the defaultvalue 'Restore'
+W, 3824, 32, 2011/03/26, 13:13:59.240, 36989844338273, QTAgent32.exe, Value in en-US resource 'Назад' does not match the defaultvalue 'Back'
+W, 3824, 32, 2011/03/26, 13:13:59.240, 36989845151152, QTAgent32.exe, Value in en-US resource 'Вперед' does not match the defaultvalue 'Forward'
+W, 3824, 32, 2011/03/26, 13:13:59.240, 36989845818952, QTAgent32.exe, Value in en-US resource 'Обновить (F5)' does not match the defaultvalue 'Refresh (F5)'
+W, 3824, 32, 2011/03/26, 13:13:59.240, 36989846488298, QTAgent32.exe, Value in en-US resource 'Остановить (Esc)' does not match the defaultvalue 'Stop (Esc)'
+W, 3824, 32, 2011/03/26, 13:13:59.240, 36989847132558, QTAgent32.exe, Value in en-US resource 'Адрес' does not match the defaultvalue 'Address'
+W, 3824, 32, 2011/03/26, 13:13:59.240, 36989847983329, QTAgent32.exe, Value in en-US resource 'Показать автозаполнение адресной строки' does not match the defaultvalue 'Show Address Bar Autocomplete'
+W, 3824, 32, 2011/03/26, 13:13:59.240, 36989848665145, QTAgent32.exe, Value in en-US resource 'Выбор файла для выгрузки' does not match the defaultvalue 'Choose file'
+W, 3824, 32, 2011/03/26, 13:13:59.255, 36989851745311, QTAgent32.exe, Value in en-US resource 'Фильтр Microsoft SmartScreen' does not match the defaultvalue 'Microsoft Phishing Filter'
+W, 3824, 32, 2011/03/26, 13:13:59.255, 36989853372591, QTAgent32.exe, Value in en-US resource 'Автозаполнение' does not match the defaultvalue 'AutoComplete'
+W, 3824, 32, 2011/03/26, 13:13:59.255, 36989855456904, QTAgent32.exe, Value in en-US resource 'Автозаполнение паролей' does not match the defaultvalue 'AutoComplete Passwords'
+E, 3824, 32, 2011/03/26, 13:13:59.255, 36989872209261, QTAgent32.exe, LoadLibrary() : Unable to find the resource 37382 from assembly C:\WINDOWS\system32\ru-RU\ieframe.dll.mui: Error1814
+W, 3824, 32, 2011/03/26, 13:13:59.255, 36989873793911, QTAgent32.exe, Value in en-US resource 'Сообщение с веб-страницы' does not match the defaultvalue 'Message from webpage'
+E, 3824, 32, 2011/03/26, 13:13:59.255, 36989874317283, QTAgent32.exe, LoadLibrary() : Unable to find the resource 41728 from assembly C:\WINDOWS\system32\ru-RU\ieframe.dll.mui: Error1814
+W, 3824, 32, 2011/03/26, 13:13:59.255, 36989875082058, QTAgent32.exe, Value in en-US resource 'Запрос пользователю' does not match the defaultvalue 'Explorer User Prompt'
+W, 3824, 32, 2011/03/26, 13:13:59.255, 36989875855121, QTAgent32.exe, Value in en-US resource 'Отмена' does not match the defaultvalue 'Cancel'
+W, 3824, 32, 2011/03/26, 13:13:59.255, 36989876534662, QTAgent32.exe, Value in en-US resource 'Закрыть' does not match the defaultvalue 'Close'
+W, 3824, 32, 2011/03/26, 13:13:59.255, 36989877280208, QTAgent32.exe, Value in en-US resource 'ОК' does not match the defaultvalue 'OK'
+W, 3824, 32, 2011/03/26, 13:13:59.255, 36989877958308, QTAgent32.exe, Value in en-US resource 'Предупреждение о безопасности' does not match the defaultvalue 'Security Warning'
+E, 3824, 32, 2011/03/26, 13:13:59.255, 36989878317107, QTAgent32.exe, LoadIEStrings() - Could not find user32 resource assembly in uk-UA or ru-RU
+W, 3824, 32, 2011/03/26, 13:13:59.552, 36990629530652, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: ControlType='Window' &amp;&amp; Name='http://www.microsoft.com/isapi/redir.dll?prd=ie&amp;pver=6&amp;ar=msnhome - Windows Internet Explorer' &amp;&amp; ClassName='IEFrame'
+\0
+E, 3824, 32, 2011/03/26, 13:13:59.552, 36990630110071, QTAgent32.exe, &lt;a class=failure&gt;Playback - {1} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;ControlType='Window' &amp;&amp; Name='http://www.microsoft.com/isapi/redir.dll?prd=ie&amp;pver=6&amp;ar=msnhome - Windows Internet Explorer' &amp;&amp; ClassName='IEFrame') (Указанный объект не найден.)
+\0&lt;/a&gt;
+E, 3824, 32, 2011/03/26, 13:13:59.646, 36990838555281, QTAgent32.exe, Playback - [IMAGE] C:\Documents and Settings\manekovskiy\Local Settings\Temp\UITestLogs\LastRun\RPF462.png
+\0
+W, 3824, 32, 2011/03/26, 13:13:59.646, 36990838933211, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 3824, 32, 2011/03/26, 13:13:59.662, 36990904466716, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: ControlType='Window' &amp;&amp; Name='http://www.microsoft.com/isapi/redir.dll?prd=ie&amp;pver=6&amp;ar=msnhome - Windows Internet Explorer' &amp;&amp; ClassName='IEFrame'
+\0
+E, 3824, 32, 2011/03/26, 13:13:59.662, 36990905015245, QTAgent32.exe, &lt;a class=failure&gt;Playback - {2} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;ControlType='Window' &amp;&amp; Name='http://www.microsoft.com/isapi/redir.dll?prd=ie&amp;pver=6&amp;ar=msnhome - Windows Internet Explorer' &amp;&amp; ClassName='IEFrame') (Указанный объект не найден.)
+\0&lt;/a&gt;
+E, 3824, 32, 2011/03/26, 13:13:59.755, 36991145129037, QTAgent32.exe, Playback - [IMAGE] C:\Documents and Settings\manekovskiy\Local Settings\Temp\UITestLogs\LastRun\RPF465.png
+\0
+W, 3824, 32, 2011/03/26, 13:13:59.755, 36991131903530, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 3824, 32, 2011/03/26, 13:14:00.052, 36991872035187, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: ControlType='Window' &amp;&amp; Name='http://www.microsoft.com/isapi/redir.dll?prd=ie&amp;pver=6&amp;ar=msnhome - Windows Internet Explorer' &amp;&amp; ClassName='IEFrame'
+\0
+E, 3824, 32, 2011/03/26, 13:14:00.052, 36991872564911, QTAgent32.exe, &lt;a class=failure&gt;Playback - {3} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;ControlType='Window' &amp;&amp; Name='http://www.microsoft.com/isapi/redir.dll?prd=ie&amp;pver=6&amp;ar=msnhome - Windows Internet Explorer' &amp;&amp; ClassName='IEFrame') (Указанный объект не найден.)
+\0&lt;/a&gt;
+E, 3824, 32, 2011/03/26, 13:14:00.146, 36992116270820, QTAgent32.exe, Playback - [IMAGE] C:\Documents and Settings\manekovskiy\Local Settings\Temp\UITestLogs\LastRun\RPF468.png
+\0
+W, 3824, 32, 2011/03/26, 13:14:00.146, 36992116895779, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+E, 3824, 32, 2011/03/26, 13:14:00.146, 36992121583268, QTAgent32.exe, Exception: System.Runtime.InteropServices.COMException
+	Message: Error HRESULT E_FAIL has been returned from a call to a COM component.
+	Stack Trace:    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+	BaseExceptionMessage: Error HRESULT E_FAIL has been returned from a call to a COM component.
+
+W, 3824, 32, 2011/03/26, 13:14:00.583, 36993192204774, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: ControlType='Window' &amp;&amp; Name='http://home.microsoft.com/ - Windows Internet Explorer' &amp;&amp; ClassName='IEFrame'
+\0
+E, 3824, 32, 2011/03/26, 13:14:00.583, 36993192729913, QTAgent32.exe, &lt;a class=failure&gt;Playback - {4} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;ControlType='Window' &amp;&amp; Name='http://home.microsoft.com/ - Windows Internet Explorer' &amp;&amp; ClassName='IEFrame') (Указанный объект не найден.)
+\0&lt;/a&gt;
+E, 3824, 32, 2011/03/26, 13:14:00.677, 36993432479367, QTAgent32.exe, Playback - [IMAGE] C:\Documents and Settings\manekovskiy\Local Settings\Temp\UITestLogs\LastRun\RPF46D.png
+\0
+W, 3824, 32, 2011/03/26, 13:14:00.677, 36993433041245, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 3824, 32, 2011/03/26, 13:14:00.693, 36993479185506, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: ControlType='Window' &amp;&amp; Name='http://home.microsoft.com/ - Windows Internet Explorer' &amp;&amp; ClassName='IEFrame'
+\0
+E, 3824, 32, 2011/03/26, 13:14:00.693, 36993479698902, QTAgent32.exe, &lt;a class=failure&gt;Playback - {5} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;ControlType='Window' &amp;&amp; Name='http://home.microsoft.com/ - Windows Internet Explorer' &amp;&amp; ClassName='IEFrame') (Указанный объект не найден.)
+\0&lt;/a&gt;
+E, 3824, 32, 2011/03/26, 13:14:00.787, 36993703900286, QTAgent32.exe, Playback - [IMAGE] C:\Documents and Settings\manekovskiy\Local Settings\Temp\UITestLogs\LastRun\RPF46E.png
+\0
+W, 3824, 32, 2011/03/26, 13:14:00.787, 36993704545101, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 3824, 32, 2011/03/26, 13:14:01.068, 36994404485887, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: ControlType='Window' &amp;&amp; Name='http://home.microsoft.com/ - Windows Internet Explorer' &amp;&amp; ClassName='IEFrame'
+\0
+E, 3824, 32, 2011/03/26, 13:14:01.068, 36994405035000, QTAgent32.exe, &lt;a class=failure&gt;Playback - {6} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;ControlType='Window' &amp;&amp; Name='http://home.microsoft.com/ - Windows Internet Explorer' &amp;&amp; ClassName='IEFrame') (Указанный объект не найден.)
+\0&lt;/a&gt;
+E, 3824, 32, 2011/03/26, 13:14:01.162, 36994626912427, QTAgent32.exe, Playback - [IMAGE] C:\Documents and Settings\manekovskiy\Local Settings\Temp\UITestLogs\LastRun\RPF470.png
+\0
+W, 3824, 32, 2011/03/26, 13:14:01.162, 36994627503311, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+E, 3824, 32, 2011/03/26, 13:14:01.162, 36994628650201, QTAgent32.exe, Exception: System.Runtime.InteropServices.COMException
+	Message: Error HRESULT E_FAIL has been returned from a call to a COM component.
+	Stack Trace:    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+	BaseExceptionMessage: Error HRESULT E_FAIL has been returned from a call to a COM component.
+
+W, 3824, 32, 2011/03/26, 13:14:01.458, 36995347481896, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: ControlType='Window' &amp;&amp; Name='http://www.msn.com/ - Windows Internet Explorer' &amp;&amp; ClassName='IEFrame'
+\0
+E, 3824, 32, 2011/03/26, 13:14:01.458, 36995348008786, QTAgent32.exe, &lt;a class=failure&gt;Playback - {7} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;ControlType='Window' &amp;&amp; Name='http://www.msn.com/ - Windows Internet Explorer' &amp;&amp; ClassName='IEFrame') (Указанный объект не найден.)
+\0&lt;/a&gt;
+E, 3824, 32, 2011/03/26, 13:14:01.537, 36995587167657, QTAgent32.exe, Playback - [IMAGE] C:\Documents and Settings\manekovskiy\Local Settings\Temp\UITestLogs\LastRun\RPF471.png
+\0
+W, 3824, 32, 2011/03/26, 13:14:01.537, 36995587779437, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 3824, 32, 2011/03/26, 13:14:01.568, 36995635645791, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: ControlType='Window' &amp;&amp; Name='http://www.msn.com/ - Windows Internet Explorer' &amp;&amp; ClassName='IEFrame'
+\0
+E, 3824, 32, 2011/03/26, 13:14:01.568, 36995636211933, QTAgent32.exe, &lt;a class=failure&gt;Playback - {8} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;ControlType='Window' &amp;&amp; Name='http://www.msn.com/ - Windows Internet Explorer' &amp;&amp; ClassName='IEFrame') (Указанный объект не найден.)
+\0&lt;/a&gt;
+E, 3824, 32, 2011/03/26, 13:14:01.646, 36995846498442, QTAgent32.exe, Playback - [IMAGE] C:\Documents and Settings\manekovskiy\Local Settings\Temp\UITestLogs\LastRun\RPF474.png
+\0
+W, 3824, 32, 2011/03/26, 13:14:01.646, 36995847131945, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 3824, 32, 2011/03/26, 13:14:01.974, 36996678184870, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: ControlType='Window' &amp;&amp; Name='http://www.msn.com/ - Windows Internet Explorer' &amp;&amp; ClassName='IEFrame'
+\0
+E, 3824, 32, 2011/03/26, 13:14:01.974, 36996678879661, QTAgent32.exe, &lt;a class=failure&gt;Playback - {9} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;ControlType='Window' &amp;&amp; Name='http://www.msn.com/ - Windows Internet Explorer' &amp;&amp; ClassName='IEFrame') (Указанный объект не найден.)
+\0&lt;/a&gt;
+E, 3824, 32, 2011/03/26, 13:14:02.083, 36996932459974, QTAgent32.exe, Playback - [IMAGE] C:\Documents and Settings\manekovskiy\Local Settings\Temp\UITestLogs\LastRun\RPF476.png
+\0
+W, 3824, 32, 2011/03/26, 13:14:02.083, 36996932846969, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+E, 3824, 32, 2011/03/26, 13:14:02.083, 36996933586473, QTAgent32.exe, Exception: System.Runtime.InteropServices.COMException
+	Message: Error HRESULT E_FAIL has been returned from a call to a COM component.
+	Stack Trace:    at Microsoft.VisualStudio.TestTools.UITest.Playback.Engine.IRPFPlayback.FindAllScreenElements(IScreenElement pScreenElementStart, String bstrQueryId, Object&amp; pvarResKeys, Int32 cResKeys, Int32 nMaxDepth, Object[]&amp; foundDescendants)
+   at Microsoft.VisualStudio.TestTools.UITest.Playback.ScreenElement.FindTopLevelWindowHelper(String queryId)
+	BaseExceptionMessage: Error HRESULT E_FAIL has been returned from a call to a COM component.
+
+W, 3824, 32, 2011/03/26, 13:14:03.646, 37000825238429, QTAgent32.exe, IEDOM : CreateDocumentEventHandler : Created OutProc EventSink
+W, 3824, 32, 2011/03/26, 13:14:32.255, 37072162325613, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:09.0622680 s
+W, 3824, 32, 2011/03/26, 13:14:32.817, 37073549615755, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:09.6247536 s
+W, 3824, 32, 2011/03/26, 13:14:33.364, 37074913233873, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:10.1716146 s
+W, 3824, 32, 2011/03/26, 13:14:44.723, 37103255990504, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:09.0622680 s
+W, 3824, 32, 2011/03/26, 13:14:45.285, 37104644083631, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:09.6247536 s
+W, 3824, 32, 2011/03/26, 13:14:45.832, 37106022506435, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:10.1716146 s
+W, 3824, 32, 2011/03/26, 13:14:46.379, 37107371896680, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:10.7184756 s
+W, 3824, 32, 2011/03/26, 13:14:46.926, 37108735212774, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:11.2653366 s
+W, 3824, 32, 2011/03/26, 13:14:47.535, 37110255245371, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:11.8746960 s
+W, 3824, 32, 2011/03/26, 13:14:47.754, 37110822450719, QTAgent32.exe, PERF WARNING: FindAllDescendents: took 806 ms. Expected it to take maximum 500 ms.
+W, 3824, 32, 2011/03/26, 13:14:47.785, 37110912151545, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:12.1246896 s
+W, 3824, 32, 2011/03/26, 13:14:48.192, 37111926590841, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:12.5309292 s
+W, 3824, 32, 2011/03/26, 13:14:48.207, 37111965211745, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:12.5465538 s
+W, 3824, 32, 2011/03/26, 13:14:48.223, 37111974882890, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:12.5621784 s
+W, 3824, 32, 2011/03/26, 13:14:48.285, 37112137377789, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:12.6246768 s
+W, 3824, 32, 2011/03/26, 13:14:48.285, 37112155313871, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:12.6246768 s
+W, 3824, 32, 2011/03/26, 13:14:48.645, 37113045800190, QTAgent32.exe, &lt;a class=success&gt;Playback - {10} [SUCCESS] SetValueAsEditBox "1+2" - "[Web]ControlType='Edit' &amp;&amp; TagName='INPUT' &amp;&amp; Id='' &amp;&amp; Name='q' &amp;&amp; LabeledBy='' &amp;&amp; Type='SINGLELINE' &amp;&amp; FilterCondition(Title='Пошук Google', Class='lst tiah', ControlDefinition='style="BORDER-BOTTOM: #999 1px solid; BO', TagInstance='5')"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 3824, 32, 2011/03/26, 13:14:48.754, 37113306357285, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:13.0934148 s
+W, 3824, 32, 2011/03/26, 13:14:48.801, 37113429614648, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:13.1402886 s
+W, 3824, 32, 2011/03/26, 13:14:49.395, 37114894749951, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:13.7340234 s
+W, 3824, 32, 2011/03/26, 13:14:49.535, 37115269346581, QTAgent32.exe, &lt;a class=success&gt;Playback - {11} [SUCCESS] MouseButtonClick - "[Web]ControlType='Button' &amp;&amp; TagName='INPUT' &amp;&amp; Id='' &amp;&amp; Name='' &amp;&amp; DisplayText='Пошук Google' &amp;&amp; FilterCondition(Type='button', Title='', Class='lsb', ControlDefinition='style="PADDING-BOTTOM: 0px; PADDING-LEFT', TagInstance='12')"
+\0&lt;/a&gt;
+W, 3824, 32, 2011/03/26, 13:14:50.707, 37118176214204, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 3824, 32, 2011/03/26, 13:14:50.707, 37118176476218, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

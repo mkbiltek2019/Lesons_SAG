@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="04da7a81-b092-4155-8809-9fca4cd46289" name="manekovskiy@A1COMP1 2011-03-26 13:29:39" runUser="STEP\manekovskiy" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="5004994d-31e5-4c57-8d6e-7c87a6d20541">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="D:\MAS\13НС9-1С\02-UserDirs\Manekovskiy\Software Testing\GoogleCalculatorTests\TestResults" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="manekovskiy_A1COMP1 2011-03-26 13_29_39" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-03-26T13:29:39.8233912+02:00" queuing="2011-03-26T13:29:39.8233912+02:00" start="2011-03-26T13:29:39.8390161+02:00" finish="2011-03-26T13:29:59.8232632+02:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CodedUITestMethod1" storage="d:\mas\13нс9-1с\02-userdirs\manekovskiy\software testing\googlecalculatortests\bin\debug\googlecalculatortests.dll" id="f9262658-12ec-3d0f-ba5a-d3a1d4780f9c">
+      <Execution id="e4c2af5f-2e51-4bca-ba50-4a97130c2f19" />
+      <TestMethod codeBase="D:/MAS/13НС9-1С/02-UserDirs/Manekovskiy/Software Testing/GoogleCalculatorTests/bin/Debug/GoogleCalculatorTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="GoogleCalculatorTests.CodedUITest1, GoogleCalculatorTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CodedUITestMethod1" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="f9262658-12ec-3d0f-ba5a-d3a1d4780f9c" executionId="e4c2af5f-2e51-4bca-ba50-4a97130c2f19" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="e4c2af5f-2e51-4bca-ba50-4a97130c2f19" testId="f9262658-12ec-3d0f-ba5a-d3a1d4780f9c" testName="CodedUITestMethod1" computerName="A1COMP1" duration="00:00:19.5874908" startTime="2011-03-26T13:29:39.8390161+02:00" endTime="2011-03-26T13:29:59.7920134+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e4c2af5f-2e51-4bca-ba50-4a97130c2f19">
+      <Output>
+        <DebugTrace>W, 3824, 56, 2011/03/26, 13:29:40.604, 39337276145441, QTAgent32.exe, Value in en-US resource 'Развернуть' does not match the defaultvalue 'Maximize'
+W, 3824, 56, 2011/03/26, 13:29:40.604, 39337279367099, QTAgent32.exe, Value in en-US resource 'Восстановить' does not match the defaultvalue 'Restore'
+W, 3824, 56, 2011/03/26, 13:29:40.620, 39337317145205, QTAgent32.exe, Value in en-US resource 'Назад' does not match the defaultvalue 'Back'
+W, 3824, 56, 2011/03/26, 13:29:40.620, 39337317953652, QTAgent32.exe, Value in en-US resource 'Вперед' does not match the defaultvalue 'Forward'
+W, 3824, 56, 2011/03/26, 13:29:40.620, 39337318621325, QTAgent32.exe, Value in en-US resource 'Обновить (F5)' does not match the defaultvalue 'Refresh (F5)'
+W, 3824, 56, 2011/03/26, 13:29:40.620, 39337319264440, QTAgent32.exe, Value in en-US resource 'Остановить (Esc)' does not match the defaultvalue 'Stop (Esc)'
+W, 3824, 56, 2011/03/26, 13:29:40.620, 39337319925617, QTAgent32.exe, Value in en-US resource 'Адрес' does not match the defaultvalue 'Address'
+W, 3824, 56, 2011/03/26, 13:29:40.620, 39337320770296, QTAgent32.exe, Value in en-US resource 'Показать автозаполнение адресной строки' does not match the defaultvalue 'Show Address Bar Autocomplete'
+W, 3824, 56, 2011/03/26, 13:29:40.620, 39337321457057, QTAgent32.exe, Value in en-US resource 'Выбор файла для выгрузки' does not match the defaultvalue 'Choose file'
+W, 3824, 56, 2011/03/26, 13:29:40.635, 39337335646823, QTAgent32.exe, Value in en-US resource 'Фильтр Microsoft SmartScreen' does not match the defaultvalue 'Microsoft Phishing Filter'
+W, 3824, 56, 2011/03/26, 13:29:40.635, 39337336877128, QTAgent32.exe, Value in en-US resource 'Автозаполнение' does not match the defaultvalue 'AutoComplete'
+W, 3824, 56, 2011/03/26, 13:29:40.635, 39337337670672, QTAgent32.exe, Value in en-US resource 'Автозаполнение паролей' does not match the defaultvalue 'AutoComplete Passwords'
+E, 3824, 56, 2011/03/26, 13:29:40.635, 39337338827426, QTAgent32.exe, LoadLibrary() : Unable to find the resource 37382 from assembly C:\WINDOWS\system32\ru-RU\ieframe.dll.mui: Error1814
+W, 3824, 56, 2011/03/26, 13:29:40.635, 39337340339526, QTAgent32.exe, Value in en-US resource 'Сообщение с веб-страницы' does not match the defaultvalue 'Message from webpage'
+E, 3824, 56, 2011/03/26, 13:29:40.635, 39337340856404, QTAgent32.exe, LoadLibrary() : Unable to find the resource 41728 from assembly C:\WINDOWS\system32\ru-RU\ieframe.dll.mui: Error1814
+W, 3824, 56, 2011/03/26, 13:29:40.635, 39337341623716, QTAgent32.exe, Value in en-US resource 'Запрос пользователю' does not match the defaultvalue 'Explorer User Prompt'
+W, 3824, 56, 2011/03/26, 13:29:40.635, 39337342402245, QTAgent32.exe, Value in en-US resource 'Отмена' does not match the defaultvalue 'Cancel'
+W, 3824, 56, 2011/03/26, 13:29:40.635, 39337343043308, QTAgent32.exe, Value in en-US resource 'Закрыть' does not match the defaultvalue 'Close'
+W, 3824, 56, 2011/03/26, 13:29:40.635, 39337343805766, QTAgent32.exe, Value in en-US resource 'ОК' does not match the defaultvalue 'OK'
+W, 3824, 56, 2011/03/26, 13:29:40.635, 39337344469465, QTAgent32.exe, Value in en-US resource 'Предупреждение о безопасности' does not match the defaultvalue 'Security Warning'
+E, 3824, 56, 2011/03/26, 13:29:40.635, 39337344822192, QTAgent32.exe, LoadIEStrings() - Could not find user32 resource assembly in uk-UA or ru-RU
+W, 3824, 56, 2011/03/26, 13:29:40.964, 39338187856291, QTAgent32.exe, Playback - [WARNING] Internal warning: Window Not Found: ControlType='Window' &amp;&amp; Name='Google - Windows Internet Explorer' &amp;&amp; ClassName='IEFrame'
+\0
+E, 3824, 56, 2011/03/26, 13:29:40.964, 39338188405720, QTAgent32.exe, &lt;a class=failure&gt;Playback - {1} [FAILED] Function ElementFetcher::FindScreenElement failed to locate UI element (Searching: ;ControlType='Window' &amp;&amp; Name='Google - Windows Internet Explorer' &amp;&amp; ClassName='IEFrame') (Указанный объект не найден.)
+\0&lt;/a&gt;
+E, 3824, 56, 2011/03/26, 13:29:41.057, 39338430226033, QTAgent32.exe, Playback - [IMAGE] C:\Documents and Settings\manekovskiy\Local Settings\Temp\UITestLogs\LastRun\RPF5DD.png
+\0
+W, 3824, 56, 2011/03/26, 13:29:41.057, 39338430580654, QTAgent32.exe, Playback - [WARNING] Internal warning: Couldn't find descendants that match QueryId
+\0
+W, 3824, 56, 2011/03/26, 13:29:46.385, 39351673819574, QTAgent32.exe, PERF WARNING: FindTopLevelWindowHelper::FindAllDescendents: took 5308 ms. Expected it to take maximum 500 ms.
+W, 3824, 56, 2011/03/26, 13:29:56.682, 39377360460539, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:09.0624420 s
+W, 3824, 56, 2011/03/26, 13:29:57.260, 39378786478278, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:09.6405633 s
+W, 3824, 56, 2011/03/26, 13:29:57.807, 39380165613593, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:10.1874348 s
+W, 3824, 56, 2011/03/26, 13:29:58.354, 39381529546569, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:10.7343063 s
+W, 3824, 56, 2011/03/26, 13:29:58.963, 39383049276127, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:11.3436774 s
+W, 3824, 56, 2011/03/26, 13:29:59.042, 39383268349093, QTAgent32.exe, PERF WARNING: FindAllDescendents: took 663 ms. Expected it to take maximum 500 ms.
+W, 3824, 56, 2011/03/26, 13:29:59.073, 39383323438423, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:11.4530517 s
+W, 3824, 56, 2011/03/26, 13:29:59.120, 39383470982817, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:11.4999264 s
+W, 3824, 56, 2011/03/26, 13:29:59.135, 39383509154317, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:11.5155513 s
+W, 3824, 56, 2011/03/26, 13:29:59.151, 39383536221397, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:11.5311762 s
+W, 3824, 56, 2011/03/26, 13:29:59.182, 39383611393252, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:11.5624260 s
+W, 3824, 56, 2011/03/26, 13:29:59.198, 39383630487849, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:11.5780509 s
+W, 3824, 56, 2011/03/26, 13:29:59.307, 39383925263656, QTAgent32.exe, &lt;a class=success&gt;Playback - {2} [SUCCESS] SetValueAsEditBox "1+2" - "[Web]ControlType='Edit' &amp;&amp; TagName='INPUT' &amp;&amp; Id='' &amp;&amp; Name='q' &amp;&amp; LabeledBy='' &amp;&amp; Type='SINGLELINE' &amp;&amp; FilterCondition(Title='Пошук Google', Class='lst tiah', ControlDefinition='style="BORDER-BOTTOM: #999 1px solid; BO', TagInstance='5')"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 3824, 56, 2011/03/26, 13:29:59.417, 39384195660478, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:11.7967995 s
+W, 3824, 56, 2011/03/26, 13:29:59.432, 39384208769035, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:11.8124244 s
+W, 3824, 56, 2011/03/26, 13:29:59.635, 39384738319407, QTAgent32.exe, &lt;a class=success&gt;Playback - {3} [SUCCESS] SendKeys "{Enter}" - "[Web]ControlType='Edit' &amp;&amp; TagName='INPUT' &amp;&amp; Id='' &amp;&amp; Name='q' &amp;&amp; LabeledBy='' &amp;&amp; Type='SINGLELINE' &amp;&amp; FilterCondition(Title='Пошук Google', Class='lst tiah', ControlDefinition='style="BORDER-BOTTOM: #999 1px solid; BO', TagInstance='5')"
+\0&lt;/a&gt;
+W, 3824, 56, 2011/03/26, 13:29:59.776, 39385081286065, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 3824, 56, 2011/03/26, 13:29:59.776, 39385081582049, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

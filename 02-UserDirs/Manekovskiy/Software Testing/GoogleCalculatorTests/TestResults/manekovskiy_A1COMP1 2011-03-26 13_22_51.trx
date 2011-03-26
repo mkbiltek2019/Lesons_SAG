@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="5cdb621d-f178-4365-8057-6da096f95000" name="manekovskiy@A1COMP1 2011-03-26 13:22:51" runUser="STEP\manekovskiy" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="5004994d-31e5-4c57-8d6e-7c87a6d20541">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="manekovskiy_A1COMP1 2011-03-26 13_22_51" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-03-26T13:22:51.5916289+02:00" queuing="2011-03-26T13:22:51.6072538+02:00" start="2011-03-26T13:22:51.6385036+02:00" finish="2011-03-26T13:23:05.6227891+02:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CodedUITestMethod1" storage="d:\mas\13нс9-1с\02-userdirs\manekovskiy\software testing\googlecalculatortests\bin\debug\googlecalculatortests.dll" id="f9262658-12ec-3d0f-ba5a-d3a1d4780f9c">
+      <Execution id="b9e72c07-eda0-426a-95e0-6178d5a874cb" />
+      <TestMethod codeBase="D:/MAS/13НС9-1С/02-UserDirs/Manekovskiy/Software Testing/GoogleCalculatorTests/bin/Debug/GoogleCalculatorTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="GoogleCalculatorTests.CodedUITest1, GoogleCalculatorTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CodedUITestMethod1" />
+      <Extension>Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute, Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Extension>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="f9262658-12ec-3d0f-ba5a-d3a1d4780f9c" executionId="b9e72c07-eda0-426a-95e0-6178d5a874cb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="b9e72c07-eda0-426a-95e0-6178d5a874cb" testId="f9262658-12ec-3d0f-ba5a-d3a1d4780f9c" testName="CodedUITestMethod1" computerName="A1COMP1" duration="00:00:13.5832982" startTime="2011-03-26T13:22:51.6541285+02:00" endTime="2011-03-26T13:23:05.5759144+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b9e72c07-eda0-426a-95e0-6178d5a874cb">
+      <Output>
+        <DebugTrace>W, 3824, 62, 2011/03/26, 13:22:52.419, 38319466557378, QTAgent32.exe, Value in en-US resource 'Развернуть' does not match the defaultvalue 'Maximize'
+W, 3824, 62, 2011/03/26, 13:22:52.435, 38319470134194, QTAgent32.exe, Value in en-US resource 'Восстановить' does not match the defaultvalue 'Restore'
+W, 3824, 62, 2011/03/26, 13:22:52.435, 38319505278272, QTAgent32.exe, Value in en-US resource 'Назад' does not match the defaultvalue 'Back'
+W, 3824, 62, 2011/03/26, 13:22:52.435, 38319506076276, QTAgent32.exe, Value in en-US resource 'Вперед' does not match the defaultvalue 'Forward'
+W, 3824, 62, 2011/03/26, 13:22:52.435, 38319506754543, QTAgent32.exe, Value in en-US resource 'Обновить (F5)' does not match the defaultvalue 'Refresh (F5)'
+W, 3824, 62, 2011/03/26, 13:22:52.450, 38319492448777, QTAgent32.exe, Value in en-US resource 'Остановить (Esc)' does not match the defaultvalue 'Stop (Esc)'
+W, 3824, 62, 2011/03/26, 13:22:52.450, 38319493609058, QTAgent32.exe, Value in en-US resource 'Адрес' does not match the defaultvalue 'Address'
+W, 3824, 62, 2011/03/26, 13:22:52.450, 38319494498157, QTAgent32.exe, Value in en-US resource 'Показать автозаполнение адресной строки' does not match the defaultvalue 'Show Address Bar Autocomplete'
+W, 3824, 62, 2011/03/26, 13:22:52.450, 38319495200581, QTAgent32.exe, Value in en-US resource 'Выбор файла для выгрузки' does not match the defaultvalue 'Choose file'
+W, 3824, 62, 2011/03/26, 13:22:52.450, 38319508999295, QTAgent32.exe, Value in en-US resource 'Фильтр Microsoft SmartScreen' does not match the defaultvalue 'Microsoft Phishing Filter'
+W, 3824, 62, 2011/03/26, 13:22:52.450, 38319510264252, QTAgent32.exe, Value in en-US resource 'Автозаполнение' does not match the defaultvalue 'AutoComplete'
+W, 3824, 62, 2011/03/26, 13:22:52.450, 38319511034982, QTAgent32.exe, Value in en-US resource 'Автозаполнение паролей' does not match the defaultvalue 'AutoComplete Passwords'
+E, 3824, 62, 2011/03/26, 13:22:52.450, 38319512190454, QTAgent32.exe, LoadLibrary() : Unable to find the resource 37382 from assembly C:\WINDOWS\system32\ru-RU\ieframe.dll.mui: Error1814
+W, 3824, 62, 2011/03/26, 13:22:52.450, 38319513706233, QTAgent32.exe, Value in en-US resource 'Сообщение с веб-страницы' does not match the defaultvalue 'Message from webpage'
+E, 3824, 62, 2011/03/26, 13:22:52.450, 38319514231444, QTAgent32.exe, LoadLibrary() : Unable to find the resource 41728 from assembly C:\WINDOWS\system32\ru-RU\ieframe.dll.mui: Error1814
+W, 3824, 62, 2011/03/26, 13:22:52.450, 38319514998195, QTAgent32.exe, Value in en-US resource 'Запрос пользователю' does not match the defaultvalue 'Explorer User Prompt'
+W, 3824, 62, 2011/03/26, 13:22:52.450, 38319515775510, QTAgent32.exe, Value in en-US resource 'Отмена' does not match the defaultvalue 'Cancel'
+W, 3824, 62, 2011/03/26, 13:22:52.450, 38319516443888, QTAgent32.exe, Value in en-US resource 'Закрыть' does not match the defaultvalue 'Close'
+W, 3824, 62, 2011/03/26, 13:22:52.450, 38319517183709, QTAgent32.exe, Value in en-US resource 'ОК' does not match the defaultvalue 'OK'
+W, 3824, 62, 2011/03/26, 13:22:52.450, 38319517857440, QTAgent32.exe, Value in en-US resource 'Предупреждение о безопасности' does not match the defaultvalue 'Security Warning'
+E, 3824, 62, 2011/03/26, 13:22:52.450, 38319518210563, QTAgent32.exe, LoadIEStrings() - Could not find user32 resource assembly in uk-UA or ru-RU
+W, 3824, 62, 2011/03/26, 13:23:02.763, 38345227963604, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:09.0624420 s
+W, 3824, 62, 2011/03/26, 13:23:03.325, 38346614630507, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:09.6249384 s
+W, 3824, 62, 2011/03/26, 13:23:03.872, 38347978386420, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:10.1718099 s
+W, 3824, 62, 2011/03/26, 13:23:04.482, 38349498302288, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:10.7811810 s
+W, 3824, 62, 2011/03/26, 13:23:04.560, 38349736976056, QTAgent32.exe, PERF WARNING: FindAllDescendents: took 665 ms. Expected it to take maximum 500 ms.
+W, 3824, 62, 2011/03/26, 13:23:04.591, 38349806398584, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:10.8905553 s
+W, 3824, 62, 2011/03/26, 13:23:04.638, 38349923842967, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:10.9374300 s
+W, 3824, 62, 2011/03/26, 13:23:04.654, 38349961942184, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:10.9530549 s
+W, 3824, 62, 2011/03/26, 13:23:04.669, 38350002990997, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:10.9686798 s
+W, 3824, 62, 2011/03/26, 13:23:04.700, 38350093082791, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:10.9999296 s
+W, 3824, 62, 2011/03/26, 13:23:04.716, 38350097020902, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:11.0155545 s
+W, 3824, 62, 2011/03/26, 13:23:04.872, 38350506237897, QTAgent32.exe, &lt;a class=success&gt;Playback - {1} [SUCCESS] SetValueAsEditBox "1+2" - "[Web]ControlType='Edit' &amp;&amp; TagName='INPUT' &amp;&amp; Id='' &amp;&amp; Name='q' &amp;&amp; LabeledBy='' &amp;&amp; Type='SINGLELINE' &amp;&amp; FilterCondition(Title='Пошук Google', Class='lst tiah', ControlDefinition='style="BORDER-BOTTOM: #999 1px solid; BO', TagInstance='5')"  &lt; Set via SendKeys &gt;
+\0&lt;/a&gt;
+W, 3824, 62, 2011/03/26, 13:23:04.997, 38350796772504, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:11.2811778 s
+W, 3824, 62, 2011/03/26, 13:23:05.029, 38350873218198, QTAgent32.exe, IEDOM : IsDocumentReadyForSearch : Document state State READYSTATE_COMPLETE : NCount 0 : NState False : NPercent : 100 : Ajax 0 : Timer True unchanged for 00:00:11.3280525 s
+E, 3824, 62, 2011/03/26, 13:23:05.341, 38351655345705, QTAgent32.exe, IEDOM : EnsureValid failed for html node: TABLE, 39
+E, 3824, 62, 2011/03/26, 13:23:05.341, 38351664382142, QTAgent32.exe, Exception: Microsoft.VisualStudio.TestTools.UITest.Extension.UITestControlNotAvailableException
+	Message: The web page could not be accessed. If the page is refreshing, please wait until the page refreshes and then perform actions on it.
+	Stack Trace:    at Microsoft.VisualStudio.TestTools.UITest.Extension.IE.DomNodeWrapper.EnsureValid()
+   at Microsoft.VisualStudio.TestTools.UITest.Extension.IE.BrowserHtmlNode.EnsureValid()
+   at Microsoft.VisualStudio.TestTools.UITest.Extension.IE.BrowserHtmlNode.Navigate(NavigateDirection direction)
+	BaseExceptionMessage: The web page could not be accessed. If the page is refreshing, please wait until the page refreshes and then perform actions on it.
+
+W, 3824, 62, 2011/03/26, 13:23:05.341, 38351667400042, QTAgent32.exe, Playback - [WARNING] Internal warning: Convertion of Web elements to MSAA is not supported in the current version
+\0
+W, 3824, 62, 2011/03/26, 13:23:05.388, 38351806892820, QTAgent32.exe, Playback -    &lt; [WARNING] Internal warning:  Can not compare UI elements if one of them is not MSAA element &gt;
+\0
+W, 3824, 62, 2011/03/26, 13:23:05.404, 38351811204324, QTAgent32.exe, Playback -    &lt; [WARNING] Internal warning:  Can not compare UI elements if one of them is not MSAA element &gt;
+\0
+W, 3824, 62, 2011/03/26, 13:23:05.404, 38351816016221, QTAgent32.exe, Playback -    &lt; [WARNING] Internal warning:  Can not compare UI elements if one of them is not MSAA element &gt;
+\0
+W, 3824, 62, 2011/03/26, 13:23:05.404, 38351805686900, QTAgent32.exe, Playback -    &lt; [WARNING] Internal warning:  Can not compare UI elements if one of them is not MSAA element &gt;
+\0
+W, 3824, 62, 2011/03/26, 13:23:05.404, 38351825719869, QTAgent32.exe, Playback -    &lt; [WARNING] Internal warning:  Can not compare UI elements if one of them is not MSAA element &gt;
+\0
+W, 3824, 62, 2011/03/26, 13:23:05.404, 38351830658866, QTAgent32.exe, Playback -    &lt; [WARNING] Internal warning:  Can not compare UI elements if one of them is not MSAA element &gt;
+\0
+W, 3824, 62, 2011/03/26, 13:23:05.404, 38351821038530, QTAgent32.exe, Playback -    &lt; [WARNING] Internal warning:  Can not compare UI elements if one of them is not MSAA element &gt;
+\0
+W, 3824, 62, 2011/03/26, 13:23:05.404, 38351840908518, QTAgent32.exe, Playback -    &lt; [WARNING] Internal warning:  Can not compare UI elements if one of them is not MSAA element &gt;
+\0
+W, 3824, 62, 2011/03/26, 13:23:05.404, 38351830305046, QTAgent32.exe, Playback -    &lt; [WARNING] Internal warning:  Can not compare UI elements if one of them is not MSAA element &gt;
+\0
+W, 3824, 62, 2011/03/26, 13:23:05.419, 38351836348201, QTAgent32.exe, Playback -    &lt; [WARNING] Internal warning:  Can not compare UI elements if one of them is not MSAA element &gt;
+\0
+W, 3824, 62, 2011/03/26, 13:23:05.419, 38351864062535, QTAgent32.exe, &lt;a class=success&gt;Playback - {2} [SUCCESS] SendKeys "{Enter}" - "[Web]ControlType='Edit' &amp;&amp; TagName='INPUT' &amp;&amp; Id='' &amp;&amp; Name='q' &amp;&amp; LabeledBy='' &amp;&amp; Type='SINGLELINE' &amp;&amp; FilterCondition(Title='Пошук Google', Class='lst tiah', ControlDefinition='style="BORDER-BOTTOM: #999 1px solid; BO', TagInstance='5')"
+\0&lt;/a&gt;
+W, 3824, 62, 2011/03/26, 13:23:05.560, 38352200478558, QTAgent32.exe, IEDOM : StopSession of the plugin called before StartSession
+W, 3824, 62, 2011/03/26, 13:23:05.560, 38352200722156, QTAgent32.exe, UIA : StopSession of the plugin called before StartSession
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

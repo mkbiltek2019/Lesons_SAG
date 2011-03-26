@@ -1,0 +1,5 @@
+D:\MAS\13НС9-1С\02-UserDirs\Manekovskiy\Software Testing\GoogleCalculatorTests\bin\Debug\GoogleCalculatorTests.dll
+D:\MAS\13НС9-1С\02-UserDirs\Manekovskiy\Software Testing\GoogleCalculatorTests\bin\Debug\GoogleCalculatorTests.pdb
+D:\MAS\13НС9-1С\02-UserDirs\Manekovskiy\Software Testing\GoogleCalculatorTests\obj\Debug\ResolveAssemblyReference.cache
+D:\MAS\13НС9-1С\02-UserDirs\Manekovskiy\Software Testing\GoogleCalculatorTests\obj\Debug\GoogleCalculatorTests.dll
+D:\MAS\13НС9-1С\02-UserDirs\Manekovskiy\Software Testing\GoogleCalculatorTests\obj\Debug\GoogleCalculatorTests.pdb
