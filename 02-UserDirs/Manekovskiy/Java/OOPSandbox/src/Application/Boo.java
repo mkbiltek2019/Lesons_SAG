@@ -9,7 +9,7 @@ package Application;
  *
  * @author user
  */
-public class Boo {
+public class Boo implements IFoo, IBar {
     @Override
     public String toString()
     {
@@ -25,5 +25,10 @@ public class Boo {
         }
         catch(Throwable e)
         { }
+    }
+
+    public void Do() {
+        // Как узнать от имени какого интерфейса вызвали метод?
+        System.out.println("Hello from IFoo.Do()");
     }
 }

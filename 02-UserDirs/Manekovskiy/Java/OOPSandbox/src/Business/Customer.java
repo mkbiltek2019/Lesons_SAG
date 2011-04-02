@@ -12,7 +12,7 @@ import DataAccess.ActiveRecord;
  * @author user
  */
 public class Customer extends ActiveRecord {
-    private BankAccount bankAccount;
+    private transient BankAccount bankAccount;
 
     public Customer(BankAccount bankAccount) {
         this.bankAccount = bankAccount;

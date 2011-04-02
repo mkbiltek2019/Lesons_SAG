@@ -9,8 +9,6 @@ package DataAccess;
 
 import Business.Abstraction.EntityBase;
 import java.util.ArrayList;
-import java.util.List;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 /**
  *

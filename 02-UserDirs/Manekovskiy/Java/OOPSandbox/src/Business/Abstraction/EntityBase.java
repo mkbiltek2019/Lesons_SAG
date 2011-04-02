@@ -4,12 +4,19 @@
  */
 package Business.Abstraction;
 
+import java.io.Serializable;
+
 /**
  *
  * @author user
  */
-public abstract class EntityBase implements IHaveIdentity {
+public abstract class EntityBase implements IHaveIdentity, Serializable {
     private int Id;
+
+    public EntityBase()
+    {
+        
+    }
 
     public EntityBase(int Id) {
         this.Id = Id;
