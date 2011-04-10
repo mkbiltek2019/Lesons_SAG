@@ -1,0 +1,8 @@
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\GdiDesk\GdiDesk\bin\Debug\GdiDesk.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\GdiDesk\GdiDesk\bin\Debug\GdiDesk.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\GdiDesk\GdiDesk\obj\Debug\ResolveAssemblyReference.cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\GdiDesk\GdiDesk\obj\Debug\GdiDesk.Form1.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\GdiDesk\GdiDesk\obj\Debug\GdiDesk.Properties.Resources.resources
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\GdiDesk\GdiDesk\obj\Debug\GdiDesk.csproj.GenerateResource.Cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\GdiDesk\GdiDesk\obj\Debug\GdiDesk.exe
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\GDI+\GdiDesk\GdiDesk\obj\Debug\GdiDesk.pdb

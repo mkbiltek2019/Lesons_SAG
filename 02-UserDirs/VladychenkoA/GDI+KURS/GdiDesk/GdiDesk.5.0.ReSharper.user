@@ -1,0 +1,95 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="EDD3E495-A63D-4CD4-A83C-FEEB26821082/f:Form1.Designer.cs" caret="3086" fromTop="8" />
+      <File id="EDD3E495-A63D-4CD4-A83C-FEEB26821082/f:Form1.cs" caret="1243" fromTop="9" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="EDD3E495-A63D-4CD4-A83C-FEEB26821082/f:Form1.cs" caret="485" fromTop="13" />
+      <File id="EDD3E495-A63D-4CD4-A83C-FEEB26821082/f:Form1.cs" caret="796" fromTop="15" />
+      <File id="EDD3E495-A63D-4CD4-A83C-FEEB26821082/f:Form1.cs" caret="817" fromTop="16" />
+      <File id="EDD3E495-A63D-4CD4-A83C-FEEB26821082/f:Form1.cs" caret="1390" fromTop="10" />
+      <File id="EDD3E495-A63D-4CD4-A83C-FEEB26821082/f:Form1.cs" caret="1390" fromTop="13" />
+      <File id="EDD3E495-A63D-4CD4-A83C-FEEB26821082/f:Form1.cs" caret="904" fromTop="12" />
+      <File id="EDD3E495-A63D-4CD4-A83C-FEEB26821082/f:Form1.cs" caret="1232" fromTop="16" />
+      <File id="EDD3E495-A63D-4CD4-A83C-FEEB26821082/f:Form1.cs" caret="817" fromTop="14" />
+      <File id="EDD3E495-A63D-4CD4-A83C-FEEB26821082/f:Form1.Designer.cs" caret="3086" fromTop="8" />
+      <File id="EDD3E495-A63D-4CD4-A83C-FEEB26821082/f:Form1.Designer.cs" caret="3286" fromTop="8" />
+      <File id="EDD3E495-A63D-4CD4-A83C-FEEB26821082/f:Form1.cs" caret="1365" fromTop="13" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="Application`0" priority="1" />
+      <Item value="Graphics`0" priority="2" />
+      <Item value="graphics" priority="4" />
+      <Item value="e" priority="2" />
+      <Item value="new" priority="3" />
+      <Item value="Point" priority="1" />
+      <Item value="Size" priority="0" />
+      <Item value="ClientSize" priority="1" />
+      <Item value="Pens`0" priority="0" />
+      <Item value="this" priority="0" />
+      <Item value="Image`0" priority="1" />
+      <Item value="image" priority="5" />
+      <Item value="soundPlayer" priority="1" />
+      <Item value="SoundPlayer" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.Application">
+      <Item value="Exit`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.PaintEventArgs">
+      <Item value="Graphics" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Graphics">
+      <Item value="CopyFromScreen`0" priority="0" />
+      <Item value="DrawLine`0" priority="0" />
+      <Item value="DrawImage`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Size">
+      <Item value="Width" priority="0" />
+      <Item value="Height" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Pens">
+      <Item value="Azure" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Graphics">
+      <Item value="FromHwnd`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GdiDesk.Form1">
+      <Item value="Handle" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Image">
+      <Item value="FromFile`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.MouseEventArgs">
+      <Item value="X" priority="0" />
+      <Item value="Y" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Image">
+      <Item value="Width" priority="1" />
+      <Item value="Height" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Media.SoundPlayer">
+      <Item value="Play`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
