@@ -1,0 +1,528 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ChocoPlanetDbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ChocoPlanetDbModelStoreContainer">
+          <EntitySet Name="Address" EntityType="ChocoPlanetDbModel.Store.Address" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Category" EntityType="ChocoPlanetDbModel.Store.Category" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Country" EntityType="ChocoPlanetDbModel.Store.Country" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Customer" EntityType="ChocoPlanetDbModel.Store.Customer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Order" EntityType="ChocoPlanetDbModel.Store.Order" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OrderItems" EntityType="ChocoPlanetDbModel.Store.OrderItems" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Product" EntityType="ChocoPlanetDbModel.Store.Product" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Status" EntityType="ChocoPlanetDbModel.Store.Status" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Address_Country" Association="ChocoPlanetDbModel.Store.FK_Address_Country">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="Address" EntitySet="Address" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Customer_Address" Association="ChocoPlanetDbModel.Store.FK_Customer_Address">
+            <End Role="Address" EntitySet="Address" />
+            <End Role="Customer" EntitySet="Customer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_Customer" Association="ChocoPlanetDbModel.Store.FK_Order_Customer">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_Status" Association="ChocoPlanetDbModel.Store.FK_Order_Status">
+            <End Role="Status" EntitySet="Status" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderItems_Order" Association="ChocoPlanetDbModel.Store.FK_OrderItems_Order">
+            <End Role="Order" EntitySet="Order" />
+            <End Role="OrderItems" EntitySet="OrderItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderItems_Product" Association="ChocoPlanetDbModel.Store.FK_OrderItems_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="OrderItems" EntitySet="OrderItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_Category" Association="ChocoPlanetDbModel.Store.FK_Product_Category">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="CountryId" Type="int" />
+          <Property Name="Town" Type="nchar" MaxLength="10" />
+          <Property Name="Stret" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nchar" MaxLength="10" />
+          <Property Name="Telefon" Type="nchar" MaxLength="10" />
+          <Property Name="AddressId" Type="int" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="StatusId" Type="int" />
+          <Property Name="CreateDate" Type="date" />
+          <Property Name="ModifayDate" Type="date" />
+          <Property Name="CustomerId" Type="int" />
+        </EntityType>
+        <EntityType Name="OrderItems">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="OrderId" Type="int" />
+          <Property Name="ProductId" Type="int" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="Price" Type="int" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Foto" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="Price" Type="int" Nullable="false" />
+          <Property Name="categoryID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Status">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nchar" MaxLength="20" />
+        </EntityType>
+        <Association Name="FK_Address_Country">
+          <End Role="Country" Type="ChocoPlanetDbModel.Store.Country" Multiplicity="0..1" />
+          <End Role="Address" Type="ChocoPlanetDbModel.Store.Address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Address">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Customer_Address">
+          <End Role="Address" Type="ChocoPlanetDbModel.Store.Address" Multiplicity="0..1" />
+          <End Role="Customer" Type="ChocoPlanetDbModel.Store.Customer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Customer">
+              <PropertyRef Name="AddressId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_Customer">
+          <End Role="Customer" Type="ChocoPlanetDbModel.Store.Customer" Multiplicity="0..1" />
+          <End Role="Order" Type="ChocoPlanetDbModel.Store.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="CustomerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_Status">
+          <End Role="Status" Type="ChocoPlanetDbModel.Store.Status" Multiplicity="0..1" />
+          <End Role="Order" Type="ChocoPlanetDbModel.Store.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Status">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="StatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderItems_Order">
+          <End Role="Order" Type="ChocoPlanetDbModel.Store.Order" Multiplicity="0..1" />
+          <End Role="OrderItems" Type="ChocoPlanetDbModel.Store.OrderItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderItems">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderItems_Product">
+          <End Role="Product" Type="ChocoPlanetDbModel.Store.Product" Multiplicity="0..1" />
+          <End Role="OrderItems" Type="ChocoPlanetDbModel.Store.OrderItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderItems">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_Category">
+          <End Role="Category" Type="ChocoPlanetDbModel.Store.Category" Multiplicity="1" />
+          <End Role="Product" Type="ChocoPlanetDbModel.Store.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="categoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ChocoPlanetDbModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ChocoPlanetDbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Address" EntityType="ChocoPlanetDbModel.Address" />
+          <EntitySet Name="Country" EntityType="ChocoPlanetDbModel.Country" />
+          <EntitySet Name="Customer" EntityType="ChocoPlanetDbModel.Customer" />
+          <EntitySet Name="Order" EntityType="ChocoPlanetDbModel.Order" />
+          <EntitySet Name="OrderItems" EntityType="ChocoPlanetDbModel.OrderItems" />
+          <EntitySet Name="Product" EntityType="ChocoPlanetDbModel.Product" />
+          <EntitySet Name="Status" EntityType="ChocoPlanetDbModel.Status" />
+          <AssociationSet Name="FK_Address_Country" Association="ChocoPlanetDbModel.FK_Address_Country">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="Address" EntitySet="Address" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Customer_Address" Association="ChocoPlanetDbModel.FK_Customer_Address">
+            <End Role="Address" EntitySet="Address" />
+            <End Role="Customer" EntitySet="Customer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_Customer" Association="ChocoPlanetDbModel.FK_Order_Customer">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_Status" Association="ChocoPlanetDbModel.FK_Order_Status">
+            <End Role="Status" EntitySet="Status" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderItems_Order" Association="ChocoPlanetDbModel.FK_OrderItems_Order">
+            <End Role="Order" EntitySet="Order" />
+            <End Role="OrderItems" EntitySet="OrderItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderItems_Product" Association="ChocoPlanetDbModel.FK_OrderItems_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="OrderItems" EntitySet="OrderItems" />
+          </AssociationSet>
+          <EntitySet Name="Category" EntityType="ChocoPlanetDbModel.Category" />
+          <AssociationSet Name="FK_Product_Category" Association="ChocoPlanetDbModel.FK_Product_Category">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="CountryId" Type="Int32" />
+          <Property Name="Town" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="Stret" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <NavigationProperty Name="Country" Relationship="ChocoPlanetDbModel.FK_Address_Country" FromRole="Address" ToRole="Country" />
+          <NavigationProperty Name="Customer" Relationship="ChocoPlanetDbModel.FK_Customer_Address" FromRole="Address" ToRole="Customer" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <NavigationProperty Name="Address" Relationship="ChocoPlanetDbModel.FK_Address_Country" FromRole="Country" ToRole="Address" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="Telefon" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="AddressId" Type="Int32" />
+          <NavigationProperty Name="Address" Relationship="ChocoPlanetDbModel.FK_Customer_Address" FromRole="Customer" ToRole="Address" />
+          <NavigationProperty Name="Order" Relationship="ChocoPlanetDbModel.FK_Order_Customer" FromRole="Customer" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="StatusId" Type="Int32" />
+          <Property Name="CreateDate" Type="DateTime" />
+          <Property Name="ModifayDate" Type="DateTime" />
+          <Property Name="CustomerId" Type="Int32" />
+          <NavigationProperty Name="Customer" Relationship="ChocoPlanetDbModel.FK_Order_Customer" FromRole="Order" ToRole="Customer" />
+          <NavigationProperty Name="Status" Relationship="ChocoPlanetDbModel.FK_Order_Status" FromRole="Order" ToRole="Status" />
+          <NavigationProperty Name="OrderItems" Relationship="ChocoPlanetDbModel.FK_OrderItems_Order" FromRole="Order" ToRole="OrderItems" />
+        </EntityType>
+        <EntityType Name="OrderItems">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="OrderId" Type="Int32" />
+          <Property Name="ProductId" Type="Int32" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="Price" Type="Int32" />
+          <NavigationProperty Name="Order" Relationship="ChocoPlanetDbModel.FK_OrderItems_Order" FromRole="OrderItems" ToRole="Order" />
+          <NavigationProperty Name="Product" Relationship="ChocoPlanetDbModel.FK_OrderItems_Product" FromRole="OrderItems" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Foto" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Price" Type="Int32" Nullable="false" />
+          <Property Name="categoryID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="OrderItems" Relationship="ChocoPlanetDbModel.FK_OrderItems_Product" FromRole="Product" ToRole="OrderItems" />
+          <NavigationProperty Name="Category" Relationship="ChocoPlanetDbModel.FK_Product_Category" FromRole="Product" ToRole="Category" />
+        </EntityType>
+        <EntityType Name="Status">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="20" Unicode="true" FixedLength="true" />
+          <NavigationProperty Name="Order" Relationship="ChocoPlanetDbModel.FK_Order_Status" FromRole="Status" ToRole="Order" />
+        </EntityType>
+        <Association Name="FK_Address_Country">
+          <End Role="Country" Type="ChocoPlanetDbModel.Country" Multiplicity="0..1" />
+          <End Role="Address" Type="ChocoPlanetDbModel.Address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Address">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Customer_Address">
+          <End Role="Address" Type="ChocoPlanetDbModel.Address" Multiplicity="0..1" />
+          <End Role="Customer" Type="ChocoPlanetDbModel.Customer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Customer">
+              <PropertyRef Name="AddressId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_Customer">
+          <End Role="Customer" Type="ChocoPlanetDbModel.Customer" Multiplicity="0..1" />
+          <End Role="Order" Type="ChocoPlanetDbModel.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="CustomerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_Status">
+          <End Role="Status" Type="ChocoPlanetDbModel.Status" Multiplicity="0..1" />
+          <End Role="Order" Type="ChocoPlanetDbModel.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Status">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="StatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderItems_Order">
+          <End Role="Order" Type="ChocoPlanetDbModel.Order" Multiplicity="0..1" />
+          <End Role="OrderItems" Type="ChocoPlanetDbModel.OrderItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderItems">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderItems_Product">
+          <End Role="Product" Type="ChocoPlanetDbModel.Product" Multiplicity="0..1" />
+          <End Role="OrderItems" Type="ChocoPlanetDbModel.OrderItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderItems">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Product" Relationship="ChocoPlanetDbModel.FK_Product_Category" FromRole="Category" ToRole="Product" />
+        </EntityType>
+        <Association Name="FK_Product_Category">
+          <End Type="ChocoPlanetDbModel.Category" Role="Category" Multiplicity="1" />
+          <End Type="ChocoPlanetDbModel.Product" Role="Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="categoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ChocoPlanetDbModelStoreContainer" CdmEntityContainer="ChocoPlanetDbEntities">
+          <EntitySetMapping Name="Address"><EntityTypeMapping TypeName="ChocoPlanetDbModel.Address"><MappingFragment StoreEntitySet="Address">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+            <ScalarProperty Name="Town" ColumnName="Town" />
+            <ScalarProperty Name="Stret" ColumnName="Stret" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Country"><EntityTypeMapping TypeName="ChocoPlanetDbModel.Country"><MappingFragment StoreEntitySet="Country">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Customer"><EntityTypeMapping TypeName="ChocoPlanetDbModel.Customer"><MappingFragment StoreEntitySet="Customer">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+            <ScalarProperty Name="AddressId" ColumnName="AddressId" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Order"><EntityTypeMapping TypeName="ChocoPlanetDbModel.Order"><MappingFragment StoreEntitySet="Order">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+            <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+            <ScalarProperty Name="ModifayDate" ColumnName="ModifayDate" />
+            <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="OrderItems"><EntityTypeMapping TypeName="ChocoPlanetDbModel.OrderItems"><MappingFragment StoreEntitySet="OrderItems">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+            <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+            <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+            <ScalarProperty Name="Price" ColumnName="Price" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Product"><EntityTypeMapping TypeName="ChocoPlanetDbModel.Product"><MappingFragment StoreEntitySet="Product">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="Foto" ColumnName="Foto" />
+            <ScalarProperty Name="Price" ColumnName="Price" />
+            <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Status"><EntityTypeMapping TypeName="ChocoPlanetDbModel.Status"><MappingFragment StoreEntitySet="Status">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Category">
+            <EntityTypeMapping TypeName="ChocoPlanetDbModel.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model">
+        <EntityTypeShape EntityType="ChocoPlanetDbModel.Address" Width="1.5" PointX="3" PointY="1.125" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChocoPlanetDbModel.Country" Width="1.5" PointX="0.75" PointY="1.375" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChocoPlanetDbModel.Customer" Width="1.5" PointX="5.25" PointY="1.125" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChocoPlanetDbModel.Order" Width="1.5" PointX="7.5" PointY="1" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChocoPlanetDbModel.OrderItems" Width="1.5" PointX="9.75" PointY="1" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChocoPlanetDbModel.Product" Width="1.5" PointX="7.5" PointY="8" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChocoPlanetDbModel.Status" Width="1.5" PointX="5.25" PointY="5.375" Height="1.5956835937499996" IsExpanded="true" />
+        <AssociationConnector Association="ChocoPlanetDbModel.FK_Address_Country" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.172841796875" />
+          <ConnectorPoint PointX="3" PointY="2.172841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="ChocoPlanetDbModel.FK_Customer_Address" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="2.2112939453125" />
+          <ConnectorPoint PointX="5.25" PointY="2.2112939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="ChocoPlanetDbModel.FK_Order_Customer" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="2.2112939453125" />
+          <ConnectorPoint PointX="7.5" PointY="2.2112939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="ChocoPlanetDbModel.FK_Order_Status" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="6.172841796875" />
+          <ConnectorPoint PointX="8.25" PointY="6.172841796875" />
+          <ConnectorPoint PointX="8.25" PointY="3.5571907552083317" />
+        </AssociationConnector>
+        <AssociationConnector Association="ChocoPlanetDbModel.FK_OrderItems_Order" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="2.1824446614583337" />
+          <ConnectorPoint PointX="9.75" PointY="2.1824446614583337" />
+        </AssociationConnector>
+        <AssociationConnector Association="ChocoPlanetDbModel.FK_OrderItems_Product" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="9.2785953776041659" />
+          <ConnectorPoint PointX="10.5" PointY="9.2785953776041659" />
+          <ConnectorPoint PointX="10.5" PointY="3.3648893229166674" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ChocoPlanetDbModel.Category" Width="1.5" PointX="5.25" PointY="8.5" Height="1.5956835937499996" />
+        <AssociationConnector Association="ChocoPlanetDbModel.FK_Product_Category" >
+          <ConnectorPoint PointX="6.75" PointY="9.297841796875" />
+          <ConnectorPoint PointX="7.5" PointY="9.297841796875" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
