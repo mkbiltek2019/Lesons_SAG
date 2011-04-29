@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ChocoPlanet.Models.Product>
+@using ChocoPlanet.HtmlHelpers
+<div id="categories">
+    @{Html.RenderAction("Menu", "Nav", new { highlightCategory = @ViewData["CurrentCategory"] });}
+</div>
+<div id="content">
+    <h2>
+        Каталог продукції:
+        @if (string.IsNullOrEmpty((string)ViewData["CurrentCategory"]))
+        {
+            <text> Вся продукція</text>
+        }
+        else
+        { @ViewData["CurrentCategory"] }
+    </h2>
+    <p>
+    </p>
+    <br />
+    <table>
+        <tr>
+            <th>
+                Назва
+            </th>
+            <th>
+                Описання
+            </th>
+            <th>
+                Фото
+            </th>
+            <th>
+                Ціна
+            </th>
+            <th>
+                Корзина
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td width="10%">
+                    @item.Name
+                </td>
+                <td width="0%">
+                    @item.Description
+                </td>
+                <td width="10%">
+                    <img src="@Url.Content(@item.Foto)" height="260px"/>
+                </td>
+                <td width="10%">
+                    @item.Price
+                </td>
+                <td>
+                    @using (Html.BeginForm("AddToCart", "Cart"))
+                    {
+                    
+                        @Html.Hidden("ID", item.ID)
+                        @Html.Hidden("returnUrl", ViewContext.HttpContext.Request.Url.PathAndQuery)
+                        <input type="submit" value="+Додати до корзини" />
+                    }
+                </td>
+            </tr>
+        }
+    </table>
+
+<div class="pager">
+    Page:
+    @Html.PageLinks((int)ViewData["CurrentPage"], (int)ViewData["TotalPages"], x => Url.Action("ProductCatalog", new { page = x, category = ViewData["CurrentCategory"] }))
+</div>
+</div>

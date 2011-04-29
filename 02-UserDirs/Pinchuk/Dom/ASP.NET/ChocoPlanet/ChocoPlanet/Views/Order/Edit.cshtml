@@ -1,0 +1,70 @@
+﻿@model ChocoPlanet.Models.Order
+@{
+    ViewBag.Title = "Edit";
+}
+<h2>
+    Edit</h2>
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>OrdersInfo</legend>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Status)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(m => m.StatusId, (IEnumerable<SelectListItem>)ViewData["Status"])
+            @Html.ValidationMessageFor(model => model.Status)
+        </div>        
+        <fieldset>
+            <legend>Данні отримувача</legend>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Customer.Name)
+            </div>
+            <div class="editor-field">
+            @Html.EditorFor(model => model.Customer.Name)
+            @Html.ValidationMessageFor(model => model.Customer.Name)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Customer.Telefon)
+            </div>
+            <div class="editor-field">
+            @Html.EditorFor(model => model.Customer.Telefon)
+            @Html.ValidationMessageFor(model => model.Customer.Telefon)
+            </div>
+
+        </fieldset>
+        <fieldset>
+            <legend>Адреса доставки</legend>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Customer.Address.Country)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Customer.Address.Country.Name)
+                @Html.ValidationMessageFor(model => model.Customer.Address.Country.Name)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Customer.Address.Town)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Customer.Address.Town)
+                @Html.ValidationMessageFor(model => model.Customer.Address.Town)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Customer.Address.Stret)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Customer.Address.Stret)
+                @Html.ValidationMessageFor(model => model.Customer.Address.Stret)
+            </div>
+        </fieldset>
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

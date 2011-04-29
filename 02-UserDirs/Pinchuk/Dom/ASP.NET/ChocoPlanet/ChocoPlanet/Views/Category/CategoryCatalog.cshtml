@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "ViewPage1";
+    Layout = "~/Views/Shared/_Security.cshtml";
+}
+
+@model IEnumerable<ChocoPlanet.Models.Category>
+
+@{
+    ViewBag.Title = "CategoryCatalog";
+}
+
+<h2>CategoryCatalog</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th></th>
+        <th>
+            Name
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |          
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { onclick = "return confirm('Ви впевнені що хочете видилити');"})
+        </td>
+        <td>
+            @item.Name
+        </td>
+    </tr>
+}
+
+</table>
+

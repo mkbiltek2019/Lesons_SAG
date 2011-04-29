@@ -1,0 +1,68 @@
+﻿@model ChocoPlanet.Models.Cart
+@{
+    ViewBag.Title = "Index";
+}
+<h2>
+    Корзина</h2>
+<table>
+    <tr>
+        <th>
+            Кількість
+        </th>
+        <th>
+            Продукти
+        </th>
+        <th>
+            Ціна
+        </th>
+        <th>
+            Разом
+        </th>
+        <th></th>
+    </tr>
+    <tbody>
+        @foreach (var line in Model.Lines)
+        {
+            <tr>
+                <td>
+                    @line.Quantity
+                </td>
+                <td>
+                    @line.Product.Name
+                </td>
+                <td>
+                    @line.Product.Price.ToString()
+                </td>
+                <td>
+                    @(line.Quantity * @line.Product.Price)
+                </td>
+                <td>
+                    @using (Html.BeginForm("RemoveFromCart", "Cart"))
+                    { 
+                        @Html.Hidden("ID", line.Product.ID)
+                        @Html.Hidden("returnUrl", ViewData["returnUrl"])
+                        <input type="submit" value="Видалити" />
+
+                    }
+                </td>
+            </tr>
+       
+        }
+    </tbody>
+    <tfoot >
+        <tr>
+            <td colspan="3" align="right"  >
+                Сума:
+            </td>
+            <td align="right">@Model.ComputerTotalValue()
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+<div id="menucontainer" align="center">
+    <ul id="menu">
+        <li><a class="actionButtons" href=@Html.Encode(ViewData["returnUrl"])>Продовжити покупку</a></li>
+        <li>@Html.ActionLink("Оформити замовлення","CheckOut")</li>
+    </ul>
+</div>

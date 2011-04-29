@@ -1,0 +1,15 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>
+    Фунції</h2>
+<div id="submenucontainer">
+    <ul id="submenu">
+        <li>@Html.ActionLink("Категорії", "CategoryCatalog", "Category")</li>
+       <li>@Html.ActionLink("Каталог продукції", "SecurityProductCatalog", "Product")</li>
+        @* <li>@Html.ActionLink("Про програму", "About", "Home")</li>
+        <li>@Html.ActionLink("Адміністрування", "ListOptions", "Administrator")</li>*@
+    </ul>
+</div>
+@RenderBody()
+

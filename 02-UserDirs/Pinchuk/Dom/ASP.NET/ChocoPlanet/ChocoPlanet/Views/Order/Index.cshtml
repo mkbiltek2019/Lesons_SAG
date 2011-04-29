@@ -1,0 +1,80 @@
+﻿@model IEnumerable<ChocoPlanet.Models.Order>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Замовлення</h2>
+
+
+<table>
+    <tr>
+        <th></th>
+        <th>
+           Номер
+        </th>
+        <th>
+            Статус замовлення
+        </th>
+        <th>
+            Дата створення
+        </th>
+        <th>
+            Дата редагування
+        </th>
+        <th>
+            Ім'я покупця
+        </th>
+        <th>
+            Телефон
+        </th>
+        <th>
+            Населений пункт
+        </th>
+        <th>
+            Вулиця
+        </th>
+        <th>
+            Країна
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.ID  }) |
+            @Html.ActionLink("Details", "Details", new {  id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { onclick = "return confirm('Ви впевнені що хочете видилити');" })
+        </td>
+        <td>
+            @item.ID
+        </td>
+        <td>
+            @item.Status.Name
+        </td>
+        <td>
+            @String.Format("{0:g}", item.CreateDate)
+        </td>
+        <td>
+            @String.Format("{0:g}", item.ModifayDate)
+        </td>
+        <td>
+            @item.Customer.Name
+        </td>
+        <td>
+            @item.Customer.Telefon
+        </td>
+        <td>
+            @item.Customer.Address.Town
+        </td>
+        <td>
+            @item.Customer.Address.Stret
+        </td>
+        <td>
+            @item.Customer.Address.Country.Name
+        </td>
+    </tr>
+}
+
+</table>
+

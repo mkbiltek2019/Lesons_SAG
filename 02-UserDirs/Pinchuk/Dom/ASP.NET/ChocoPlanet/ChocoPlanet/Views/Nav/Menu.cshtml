@@ -1,0 +1,10 @@
+﻿@model IEnumerable<ChocoPlanet.Controllers.NavLink>
+@foreach (var link in Model)
+{
+   <a href="@Url.RouteUrl(link.RouteValues)" class=@if(link.isSelected){@Html.Encode("selected")}
+                                                   else
+                                                   { @Html.Encode("nonselected")}>
+   
+   @link.Text</a>
+    
+}

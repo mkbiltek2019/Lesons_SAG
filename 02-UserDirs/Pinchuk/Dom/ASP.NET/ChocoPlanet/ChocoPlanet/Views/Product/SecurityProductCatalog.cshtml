@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ChocoPlanet.Models.Product>
+@{
+    ViewBag.Title = "ProductCatalog";
+    Layout = "~/Views/Shared/_Security.cshtml";
+}
+<h2>
+    ProductCatalog</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@using (@Ajax.BeginForm(new AjaxOptions { UpdateTargetId = "listProduct", OnSuccess = "ajaxOnSuccess", Confirm = "dsd" }))
+{
+    <p>
+        @Html.DropDownList("ID", null, "-= Примінити фільтр по категоріям =-", new { onchange = "this.form.submit();", onload = "this.form.submit();" })
+    </p>
+   
+    <br />
+    <div id="listProduct">
+        <table>
+            <tr>
+                <th>
+                </th>
+                <th>
+                    Назва
+                </th>
+                <th>
+                    Описання
+                </th>
+                <th>
+                    Фото
+                </th>
+                <th>
+                    Ціна
+                </th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td width="80px">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |                       
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { onclick = "return confirm('Ви впевнені що хочете видилити');" })
+                    </td>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.Description
+                    </td>
+                    <td>
+                        <img src="@Url.Content(@item.Foto)"  height="260px"  />
+                    </td>
+                    <td>
+                        @item.Price
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+}

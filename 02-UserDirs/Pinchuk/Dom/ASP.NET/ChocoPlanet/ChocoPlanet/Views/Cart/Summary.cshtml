@@ -1,0 +1,13 @@
+﻿@model ChocoPlanet.Models.Cart
+
+@if (Model.Lines.Count > 0)
+{
+    <div id="cart">
+        <span class="caption">
+        <b>Твоя корзина:</b>
+        @Model.Lines.Sum(x=>x.Quantity)товар(ів)
+        @Model.ComputerTotalValue()грн.
+        </span>
+        @Html.ActionLink("Переглянути", "Index", "Cart", new { returnUrl=Request.Url.PathAndQuery},null)
+    </div> 
+}
