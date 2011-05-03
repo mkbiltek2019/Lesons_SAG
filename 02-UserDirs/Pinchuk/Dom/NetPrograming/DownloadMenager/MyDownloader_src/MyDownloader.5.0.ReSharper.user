@@ -1,0 +1,28 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="18AE3994-8F48-49B1-AC63-342F70ED1135/d:UI/f:DownloadList.cs" caret="10419" fromTop="18" />
+      <File id="E763345E-6696-4C53-8764-47E4ABD67DEF/f:Downloader.cs" caret="0" fromTop="0" />
+      <File id="18AE3994-8F48-49B1-AC63-342F70ED1135/d:UI/f:NewDownloadForm.cs" caret="5176" fromTop="12" />
+    </RecentFiles>
+    <RecentEdits />
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

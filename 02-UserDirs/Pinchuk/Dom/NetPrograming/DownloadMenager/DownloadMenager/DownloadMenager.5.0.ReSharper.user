@@ -1,0 +1,103 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="BFFCA2A3-A06D-4A1B-89CF-A0967812980D/d:Properties/f:Resources.Designer.cs" caret="0" fromTop="0" />
+      <File id="BFFCA2A3-A06D-4A1B-89CF-A0967812980D/d:UI/f:AddDownloaddsWindow.Designer.cs" caret="7490" fromTop="24" />
+      <File id="BFFCA2A3-A06D-4A1B-89CF-A0967812980D/f:Program.cs" caret="0" fromTop="0" />
+      <File id="BFFCA2A3-A06D-4A1B-89CF-A0967812980D/d:UI/f:DownloadMaster.Designer.cs" caret="0" fromTop="0" />
+      <File id="BFFCA2A3-A06D-4A1B-89CF-A0967812980D/d:UI/f:AddDownloaddsWindow.cs" caret="495" fromTop="18" />
+      <File id="BFFCA2A3-A06D-4A1B-89CF-A0967812980D/d:UI/f:DownloadMaster.cs" caret="596" fromTop="8" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="BFFCA2A3-A06D-4A1B-89CF-A0967812980D/d:Properties/f:Resources.Designer.cs" caret="0" fromTop="0" />
+      <File id="BFFCA2A3-A06D-4A1B-89CF-A0967812980D/d:UI/f:DownloadMaster.cs" caret="1207" fromTop="15" />
+      <File id="BFFCA2A3-A06D-4A1B-89CF-A0967812980D/d:UI/f:DownloadMaster.Designer.cs" caret="9174" fromTop="181" />
+      <File id="BFFCA2A3-A06D-4A1B-89CF-A0967812980D/d:UI/f:DownloadMaster.Designer.cs" caret="10223" fromTop="181" />
+      <File id="BFFCA2A3-A06D-4A1B-89CF-A0967812980D/d:UI/f:AddDownloaddsWindow.Designer.cs" caret="7490" fromTop="24" />
+      <File id="BFFCA2A3-A06D-4A1B-89CF-A0967812980D/f:Program.cs" caret="0" fromTop="0" />
+      <File id="BFFCA2A3-A06D-4A1B-89CF-A0967812980D/d:UI/f:DownloadMaster.cs" caret="1194" fromTop="16" />
+      <File id="BFFCA2A3-A06D-4A1B-89CF-A0967812980D/d:UI/f:DownloadMaster.cs" caret="1207" fromTop="16" />
+      <File id="BFFCA2A3-A06D-4A1B-89CF-A0967812980D/d:UI/f:DownloadMaster.cs" caret="1133" fromTop="31" />
+      <File id="BFFCA2A3-A06D-4A1B-89CF-A0967812980D/d:UI/f:DownloadMaster.cs" caret="855" fromTop="24" />
+      <File id="BFFCA2A3-A06D-4A1B-89CF-A0967812980D/d:UI/f:DownloadMaster.cs" caret="357" fromTop="7" />
+      <File id="BFFCA2A3-A06D-4A1B-89CF-A0967812980D/d:UI/f:AddDownloaddsWindow.cs" caret="686" fromTop="23" />
+      <File id="BFFCA2A3-A06D-4A1B-89CF-A0967812980D/d:UI/f:AddDownloaddsWindow.cs" caret="663" fromTop="25" />
+      <File id="BFFCA2A3-A06D-4A1B-89CF-A0967812980D/d:UI/f:AddDownloaddsWindow.cs" caret="495" fromTop="18" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="AddDownloaddsForm`0" priority="1" />
+      <Item value="Application`0" priority="0" />
+      <Item value="new" priority="1" />
+      <Item value="AddDownloaddsWindow`0" priority="0" />
+      <Item value="MessageBox`0" priority="5" />
+      <Item value="dialogResult" priority="2" />
+      <Item value="OKCancel" priority="0" />
+      <Item value="result" priority="1" />
+      <Item value="DialogResult`0" priority="2" />
+      <Item value="if" priority="0" />
+      <Item value="this" priority="1" />
+      <Item value="switch" priority="0" />
+      <Item value="case" priority="1" />
+      <Item value="DialogResult" priority="1" />
+      <Item value="break" priority="2" />
+      <Item value="default" priority="0" />
+      <Item value="throw" priority="0" />
+      <Item value="Exception" priority="0" />
+      <Item value="exception" priority="1" />
+      <Item value="e" priority="2" />
+      <Item value="Close`0" priority="0" />
+      <Item value="OnClosing`0" priority="0" />
+      <Item value="OnFormClosed`0" priority="0" />
+      <Item value="null" priority="1" />
+      <Item value="DownloadMaster`0" priority="1" />
+      <Item value="None" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.Application">
+      <Item value="Run`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DownloadMenager.AddDownloaddsWindow">
+      <Item value="ShowDialog`0" priority="0" />
+      <Item value="Close`0" priority="0" />
+      <Item value="OnClosing`0" priority="0" />
+      <Item value="OnEnter`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
+      <Item value="Show`0" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DialogResult">
+      <Item value="GetTypeCode`0" priority="0" />
+      <Item value="Cancel" priority="0" />
+      <Item value="OK" priority="1" />
+      <Item value="Ignore" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.DialogResult">
+      <Item value="Cancel" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Exception">
+      <Item value="Message" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@DownloadMenager.DownloadMaster">
+      <Item value="ControlCollection`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
