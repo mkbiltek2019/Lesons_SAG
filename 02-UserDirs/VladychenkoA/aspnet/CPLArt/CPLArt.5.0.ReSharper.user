@@ -1,0 +1,112 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:DefaultHeader.ascx" caret="0" fromTop="0" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:DefaultMenu.ascx.cs" caret="0" fromTop="0" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:WebForm1.aspx.designer.cs" caret="0" fromTop="0" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:WebForm1.aspx.cs" caret="0" fromTop="0" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/d:design/f:MasterPage.master" caret="0" fromTop="0" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:About.aspx.cs" caret="0" fromTop="0" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:About.aspx.designer.cs" caret="0" fromTop="0" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:Chocolate.aspx.designer.cs" caret="504" fromTop="14" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:style.css" caret="0" fromTop="0" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:Contacts.aspx" caret="722" fromTop="2" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:FeedBack.aspx.designer.cs" caret="556" fromTop="13" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:FeedBack.aspx.cs" caret="456" fromTop="20" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:WebForm1.aspx" caret="0" fromTop="0" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:FeedBack.aspx" caret="165" fromTop="1" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:DefaultVerticalMenu.ascx" caret="1197" fromTop="17" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:History.aspx.designer.cs" caret="516" fromTop="17" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:Default.aspx.cs" caret="400" fromTop="19" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:DefaultMenu.ascx" caret="0" fromTop="0" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:Chocolate.aspx" caret="0" fromTop="0" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:Products.aspx" caret="1402" fromTop="24" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/d:design/f:Article.ascx" caret="0" fromTop="0" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:Web.config" caret="2415" fromTop="20" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:History.aspx" caret="4990" fromTop="71" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:News.aspx" caret="1442" fromTop="24" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:About.aspx" caret="1565" fromTop="5" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/d:design/f:Block.ascx" caret="0" fromTop="0" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:DefaultSidebar1.ascx" caret="1406" fromTop="7" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:ChocolateLogo.aspx" caret="3849" fromTop="11" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:Default.aspx" caret="1550" fromTop="0" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:DefaultVerticalMenu.ascx" caret="1197" fromTop="17" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:Default.aspx" caret="2549" fromTop="19" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:Products.aspx" caret="1402" fromTop="24" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:History.aspx" caret="2661" fromTop="14" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:History.aspx" caret="2092" fromTop="6" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:History.aspx" caret="2561" fromTop="12" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:History.aspx" caret="3243" fromTop="24" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:History.aspx" caret="4137" fromTop="22" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:History.aspx" caret="4990" fromTop="19" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:About.aspx" caret="4059" fromTop="24" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:About.aspx" caret="3996" fromTop="32" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:About.aspx" caret="3778" fromTop="16" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:About.aspx" caret="1565" fromTop="14" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:DefaultSidebar1.ascx" caret="1012" fromTop="10" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:DefaultSidebar1.ascx" caret="1271" fromTop="14" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:News.aspx" caret="6601" fromTop="19" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:News.aspx" caret="4531" fromTop="16" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:News.aspx" caret="1442" fromTop="8" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:DefaultSidebar1.ascx" caret="1869" fromTop="7" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:ChocolateLogo.aspx" caret="1647" fromTop="5" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:ChocolateLogo.aspx" caret="2495" fromTop="14" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:Default.aspx" caret="0" fromTop="0" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:ChocolateLogo.aspx" caret="3869" fromTop="18" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:ChocolateLogo.aspx" caret="4632" fromTop="22" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:DefaultSidebar1.ascx" caret="1406" fromTop="7" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:ChocolateLogo.aspx" caret="4330" fromTop="22" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:ChocolateLogo.aspx" caret="4592" fromTop="20" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:ChocolateLogo.aspx" caret="4068" fromTop="17" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:ChocolateLogo.aspx" caret="4030" fromTop="15" />
+      <File id="9F5E06C5-4C25-412C-9EAA-D6D038F66A73/f:ChocolateLogo.aspx" caret="3849" fromTop="11" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="using" priority="1" />
+      <Item value="System" priority="3" />
+      <Item value="ComponentModel.Design" priority="1" />
+      <Item value="string" priority="0" />
+      <Item value="if" priority="0" />
+      <Item value="TextBox`0" priority="0" />
+      <Item value="namespace" priority="0" />
+      <Item value="CPLArt" priority="0" />
+      <Item value="lbThanks" priority="0" />
+      <Item value="true" priority="3" />
+      <Item value="protected" priority="1" />
+      <Item value="Web" priority="1" />
+      <Item value="UI" priority="1" />
+      <Item value="WebControls" priority="1" />
+      <Item value="Label`0" priority="1" />
+      <Item value="lblThanks" priority="2" />
+      <Item value="private" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Empty" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.Label">
+      <Item value="Visible" priority="3" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

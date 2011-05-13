@@ -1,0 +1,5 @@
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ASP.NET\CPLArt\CPLArt\bin\CPLArt.dll
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ASP.NET\CPLArt\CPLArt\bin\CPLArt.pdb
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ASP.NET\CPLArt\CPLArt\obj\Debug\ResolveAssemblyReference.cache
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ASP.NET\CPLArt\CPLArt\obj\Debug\CPLArt.dll
+D:\Учебная\13НС-1СПр\02-UserDirs\VladychenkoA\ASP.NET\CPLArt\CPLArt\obj\Debug\CPLArt.pdb
