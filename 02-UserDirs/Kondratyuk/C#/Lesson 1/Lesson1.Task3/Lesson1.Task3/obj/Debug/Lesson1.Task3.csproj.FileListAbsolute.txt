@@ -1,0 +1,6 @@
+D:\0000\02-UserDirs\Kondratyuk\C#\Lesson 1\Lesson1.Task3\Lesson1.Task3\bin\Debug\Lesson1.Task3.exe.config
+D:\0000\02-UserDirs\Kondratyuk\C#\Lesson 1\Lesson1.Task3\Lesson1.Task3\bin\Debug\Lesson1.Task3.exe
+D:\0000\02-UserDirs\Kondratyuk\C#\Lesson 1\Lesson1.Task3\Lesson1.Task3\bin\Debug\Lesson1.Task3.pdb
+D:\0000\02-UserDirs\Kondratyuk\C#\Lesson 1\Lesson1.Task3\Lesson1.Task3\obj\Debug\Lesson1.Task3.csprojResolveAssemblyReference.cache
+D:\0000\02-UserDirs\Kondratyuk\C#\Lesson 1\Lesson1.Task3\Lesson1.Task3\obj\Debug\Lesson1.Task3.exe
+D:\0000\02-UserDirs\Kondratyuk\C#\Lesson 1\Lesson1.Task3\Lesson1.Task3\obj\Debug\Lesson1.Task3.pdb
